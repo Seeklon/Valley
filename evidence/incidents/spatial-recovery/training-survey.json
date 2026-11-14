@@ -1,0 +1,1136 @@
+[
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-0-overheating",
+    "layout_id": "soyuz-layout-0",
+    "incident_type": "overheating",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      3328,
+      3328
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.00530433654785,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-0-arc",
+    "layout_id": "soyuz-layout-0",
+    "incident_type": "arc",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6240,
+      6240
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.12221336364746,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-0-flaming",
+    "layout_id": "soyuz-layout-0",
+    "incident_type": "flaming",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6240,
+      6240
+    ],
+    "active": [
+      23,
+      111
+    ],
+    "temperature_max_c": 46.79202651977539,
+    "smoke_max_kg_m3": 3.336380541441031e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-0-smoldering",
+    "layout_id": "soyuz-layout-0",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6240,
+      6240
+    ],
+    "active": [
+      0,
+      1333
+    ],
+    "temperature_max_c": 24.817920684814453,
+    "smoke_max_kg_m3": 3.47240456903819e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-0-battery",
+    "layout_id": "soyuz-layout-0",
+    "incident_type": "battery",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6240,
+      6240
+    ],
+    "active": [
+      16,
+      130
+    ],
+    "temperature_max_c": 31.4457950592041,
+    "smoke_max_kg_m3": 0.00019377276476006955
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-1-overheating",
+    "layout_id": "soyuz-layout-1",
+    "incident_type": "overheating",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6600,
+      6600
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 21.629371643066406,
+    "smoke_max_kg_m3": 1.222346335261193e-09
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-1-arc",
+    "layout_id": "soyuz-layout-1",
+    "incident_type": "arc",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6600,
+      6600
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.00487518310547,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-1-flaming",
+    "layout_id": "soyuz-layout-1",
+    "incident_type": "flaming",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6600,
+      6600
+    ],
+    "active": [
+      49,
+      1895
+    ],
+    "temperature_max_c": 34.99894714355469,
+    "smoke_max_kg_m3": 2.329951894353144e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-1-smoldering",
+    "layout_id": "soyuz-layout-1",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6600,
+      6600
+    ],
+    "active": [
+      0,
+      126
+    ],
+    "temperature_max_c": 24.671396255493164,
+    "smoke_max_kg_m3": 7.15791029506363e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "soyuz-layout-1-battery",
+    "layout_id": "soyuz-layout-1",
+    "incident_type": "battery",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      6600,
+      6600
+    ],
+    "active": [
+      0,
+      837
+    ],
+    "temperature_max_c": 22.510400772094727,
+    "smoke_max_kg_m3": 9.618371223041322e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-0-overheating",
+    "layout_id": "habitat-layout-0",
+    "incident_type": "overheating",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.31304168701172,
+    "smoke_max_kg_m3": 9.832247863106325e-13
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-0-arc",
+    "layout_id": "habitat-layout-0",
+    "incident_type": "arc",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.00054359436035,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-0-flaming",
+    "layout_id": "habitat-layout-0",
+    "incident_type": "flaming",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      0,
+      313
+    ],
+    "temperature_max_c": 21.94666862487793,
+    "smoke_max_kg_m3": 2.4153994218067965e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-0-smoldering",
+    "layout_id": "habitat-layout-0",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      4304,
+      4304
+    ],
+    "active": [
+      0,
+      18
+    ],
+    "temperature_max_c": 20.07112693786621,
+    "smoke_max_kg_m3": 2.766684019661625e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-0-battery",
+    "layout_id": "habitat-layout-0",
+    "incident_type": "battery",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      0,
+      302
+    ],
+    "temperature_max_c": 21.474369049072266,
+    "smoke_max_kg_m3": 9.093613698496483e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-1-overheating",
+    "layout_id": "habitat-layout-1",
+    "incident_type": "overheating",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      19,
+      44
+    ],
+    "temperature_max_c": 46.70729064941406,
+    "smoke_max_kg_m3": 6.375664088409394e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-1-arc",
+    "layout_id": "habitat-layout-1",
+    "incident_type": "arc",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.03139305114746,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-1-flaming",
+    "layout_id": "habitat-layout-1",
+    "incident_type": "flaming",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      4304,
+      4304
+    ],
+    "active": [
+      0,
+      12
+    ],
+    "temperature_max_c": 20.79180145263672,
+    "smoke_max_kg_m3": 1.1006383147105225e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-1-smoldering",
+    "layout_id": "habitat-layout-1",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      0,
+      330
+    ],
+    "temperature_max_c": 21.556163787841797,
+    "smoke_max_kg_m3": 1.0586741154838819e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "habitat-layout-1-battery",
+    "layout_id": "habitat-layout-1",
+    "incident_type": "battery",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      8070,
+      8070
+    ],
+    "active": [
+      0,
+      61
+    ],
+    "temperature_max_c": 20.606821060180664,
+    "smoke_max_kg_m3": 2.028842209256254e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-0-overheating",
+    "layout_id": "cargo-layout-0",
+    "incident_type": "overheating",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      4224,
+      4224
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.00028419494629,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-0-arc",
+    "layout_id": "cargo-layout-0",
+    "incident_type": "arc",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7920,
+      7920
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.013809204101562,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-0-flaming",
+    "layout_id": "cargo-layout-0",
+    "incident_type": "flaming",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7920,
+      7920
+    ],
+    "active": [
+      13,
+      53
+    ],
+    "temperature_max_c": 31.084659576416016,
+    "smoke_max_kg_m3": 1.8646589523996226e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-0-smoldering",
+    "layout_id": "cargo-layout-0",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7920,
+      7920
+    ],
+    "active": [
+      0,
+      536
+    ],
+    "temperature_max_c": 21.672422409057617,
+    "smoke_max_kg_m3": 1.460555267840391e-05
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-0-battery",
+    "layout_id": "cargo-layout-0",
+    "incident_type": "battery",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7920,
+      7920
+    ],
+    "active": [
+      0,
+      3
+    ],
+    "temperature_max_c": 20.003765106201172,
+    "smoke_max_kg_m3": 1.3391776576554548e-07
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-1-overheating",
+    "layout_id": "cargo-layout-1",
+    "incident_type": "overheating",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7860,
+      7860
+    ],
+    "active": [
+      0,
+      289
+    ],
+    "temperature_max_c": 23.355087280273438,
+    "smoke_max_kg_m3": 4.153250756644411e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-1-arc",
+    "layout_id": "cargo-layout-1",
+    "incident_type": "arc",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7860,
+      7860
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.00916862487793,
+    "smoke_max_kg_m3": 1.1337676267654875e-13
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-1-flaming",
+    "layout_id": "cargo-layout-1",
+    "incident_type": "flaming",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7860,
+      7860
+    ],
+    "active": [
+      1,
+      1104
+    ],
+    "temperature_max_c": 25.15129852294922,
+    "smoke_max_kg_m3": 7.706022188358475e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-1-smoldering",
+    "layout_id": "cargo-layout-1",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7860,
+      7860
+    ],
+    "active": [
+      0,
+      21
+    ],
+    "temperature_max_c": 20.030170440673828,
+    "smoke_max_kg_m3": 1.1713478897945606e-06
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-1-battery",
+    "layout_id": "cargo-layout-1",
+    "incident_type": "battery",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7860,
+      7860
+    ],
+    "active": [
+      0,
+      265
+    ],
+    "temperature_max_c": 21.342531204223633,
+    "smoke_max_kg_m3": 7.232145890156971e-06
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-overheating-microg-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      19,
+      76
+    ],
+    "temperature_max_c": 40.213558197021484,
+    "smoke_max_kg_m3": 5.074205182609148e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-overheating-earth-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      35,
+      3388
+    ],
+    "temperature_max_c": 32.81877517700195,
+    "smoke_max_kg_m3": 2.0508625311776996e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      184,
+      436
+    ],
+    "temperature_max_c": 445.06707763671875,
+    "smoke_max_kg_m3": 0.0004907789407297969
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-overheating-earth-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      6442,
+      10621
+    ],
+    "temperature_max_c": 123.63009643554688,
+    "smoke_max_kg_m3": 0.00014157139230519533
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-02-arc-microg-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "arc",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.05706024169922,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-02-arc-earth-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "arc",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 21.228429794311523,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "arc",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      89,
+      250
+    ],
+    "temperature_max_c": 68.86162567138672,
+    "smoke_max_kg_m3": 8.304486254928634e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-arc-earth-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "arc",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      15,
+      4895
+    ],
+    "temperature_max_c": 43.19793701171875,
+    "smoke_max_kg_m3": 4.226086093694903e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "flaming",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      91,
+      226
+    ],
+    "temperature_max_c": 362.9471130371094,
+    "smoke_max_kg_m3": 0.0006449767388403416
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-flaming-earth-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "flaming",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      253,
+      6725
+    ],
+    "temperature_max_c": 44.965789794921875,
+    "smoke_max_kg_m3": 3.643975287559442e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-02-flaming-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "flaming",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      76,
+      192
+    ],
+    "temperature_max_c": 76.4907455444336,
+    "smoke_max_kg_m3": 0.00013597801444120705
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-02-flaming-earth-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "flaming",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      81,
+      5956
+    ],
+    "temperature_max_c": 38.83928680419922,
+    "smoke_max_kg_m3": 2.2857657313579693e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-smoldering-microg-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      23,
+      269
+    ],
+    "temperature_max_c": 35.09254837036133,
+    "smoke_max_kg_m3": 0.00030729518039152026
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-smoldering-earth-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      2,
+      4632
+    ],
+    "temperature_max_c": 25.42243003845215,
+    "smoke_max_kg_m3": 5.790583963971585e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      44,
+      227
+    ],
+    "temperature_max_c": 164.73863220214844,
+    "smoke_max_kg_m3": 0.0019202864496037364
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-smoldering-earth-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      3,
+      4010
+    ],
+    "temperature_max_c": 26.274566650390625,
+    "smoke_max_kg_m3": 7.497370825149119e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "battery",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      35,
+      250
+    ],
+    "temperature_max_c": 57.815120697021484,
+    "smoke_max_kg_m3": 0.0006632973672822118
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-02-battery-earth-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "battery",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      2,
+      4423
+    ],
+    "temperature_max_c": 26.046926498413086,
+    "smoke_max_kg_m3": 5.525332744582556e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-battery-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "battery",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      8,
+      241
+    ],
+    "temperature_max_c": 27.027008056640625,
+    "smoke_max_kg_m3": 0.00015050690853968263
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-battery-earth-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "battery",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      1,
+      4261
+    ],
+    "temperature_max_c": 25.229066848754883,
+    "smoke_max_kg_m3": 4.3700954847736284e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0003-electrical-03-overheating-microg-c0",
+    "layout_id": "procedural-0003",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44910,
+      44910
+    ],
+    "active": [
+      123,
+      233
+    ],
+    "temperature_max_c": 372.0600280761719,
+    "smoke_max_kg_m3": 0.0007810715469531715
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0003-electrical-03-overheating-earth-c0",
+    "layout_id": "procedural-0003",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44910,
+      44910
+    ],
+    "active": [
+      1209,
+      8551
+    ],
+    "temperature_max_c": 43.04606246948242,
+    "smoke_max_kg_m3": 3.4261480323038995e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0003-electrical-04-overheating-microg-c1",
+    "layout_id": "procedural-0003",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44910,
+      44910
+    ],
+    "active": [
+      0,
+      70
+    ],
+    "temperature_max_c": 22.76541519165039,
+    "smoke_max_kg_m3": 3.839069904643111e-06
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0003-electrical-04-overheating-earth-c1",
+    "layout_id": "procedural-0003",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44910,
+      44910
+    ],
+    "active": [
+      16,
+      5096
+    ],
+    "temperature_max_c": 27.94991111755371,
+    "smoke_max_kg_m3": 1.277744559047278e-05
+  }
+]

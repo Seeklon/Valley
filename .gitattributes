@@ -9,6 +9,7 @@
 data/sources/*.csv -text -whitespace
 data/sources/*.metadata.json -text -whitespace
 evidence/**/*.json -text -whitespace
+evidence/**/*.jsonl -text -whitespace
 evidence/**/*.xml -text -whitespace
 evidence/**/*.fds -text -whitespace
 tests/physics/evidence/*.json -text -whitespace

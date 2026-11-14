@@ -1,0 +1,284 @@
+{
+  "scope": "Immutable plan coverage; completion is reported separately in generation progress",
+  "dataset_id": "spatial-compact-v1",
+  "plan_sha256": "f97e89ad5f679ce7489e65a56e181124f0b10d966dc48d93aae2048bd8a662b1",
+  "design_sha256": "24eb39c35e00557e16b2c228b30af489a0af7c125ef265b40bc259452fd9aa18",
+  "layouts": 100,
+  "runs": 200,
+  "per_split": {
+    "train": {
+      "layouts": 60,
+      "runs": 120,
+      "structural_families": {
+        "perimeter": 10,
+        "central-island": 10,
+        "parallel-aisles": 10,
+        "staggered": 10,
+        "corner-banks": 10,
+        "radial-clusters": 10
+      },
+      "incident_types": {
+        "overheating": 24,
+        "arc": 24,
+        "flaming": 24,
+        "smoldering": 24,
+        "battery": 24
+      },
+      "gravity_g": {
+        "0.0001": 60,
+        "1.0": 60
+      },
+      "conditions": {
+        "airflow_m_s": {
+          "min": 0.059381,
+          "max": 0.396519
+        },
+        "oxygen_percent": {
+          "min": 18.076893,
+          "max": 23.922955
+        },
+        "ignition_power_w": {
+          "min": 516.85646,
+          "max": 2953.515191
+        },
+        "ignition_duration_s": {
+          "min": 1,
+          "max": 10
+        },
+        "duration_s": {
+          "min": 30,
+          "max": 30
+        },
+        "ambient_temperature_c": {
+          "min": 20,
+          "max": 20
+        },
+        "pressure_pa": {
+          "min": 101325,
+          "max": 101325
+        }
+      },
+      "room_dimensions_m": [
+        {
+          "min": 2.4511,
+          "max": 5.9606
+        },
+        {
+          "min": 3.2207,
+          "max": 5.9199
+        },
+        {
+          "min": 2.6558,
+          "max": 4.7732
+        }
+      ],
+      "objects_per_layout": {
+        "min": 6,
+        "max": 18
+      },
+      "substrate_counts": {
+        "insulation": 231,
+        "aluminium": 186,
+        "steel": 245
+      },
+      "coating_counts": {
+        "cellulose": 279,
+        "none": 119,
+        "pmma": 264
+      },
+      "thermal_thickness_m": {
+        "min": 0.000803,
+        "max": 0.007995
+      },
+      "mesh_cell_m": {
+        "min": 0.096293,
+        "max": 0.181937
+      },
+      "sample_shape": [
+        12,
+        16,
+        8
+      ]
+    },
+    "validation": {
+      "layouts": 20,
+      "runs": 40,
+      "structural_families": {
+        "cross-aisle": 10,
+        "split-bays": 10
+      },
+      "incident_types": {
+        "overheating": 8,
+        "arc": 8,
+        "flaming": 8,
+        "smoldering": 8,
+        "battery": 8
+      },
+      "gravity_g": {
+        "0.0001": 20,
+        "1.0": 20
+      },
+      "conditions": {
+        "airflow_m_s": {
+          "min": 0.055385,
+          "max": 0.39092
+        },
+        "oxygen_percent": {
+          "min": 18.322613,
+          "max": 23.976751
+        },
+        "ignition_power_w": {
+          "min": 683.180322,
+          "max": 2908.342887
+        },
+        "ignition_duration_s": {
+          "min": 1,
+          "max": 10
+        },
+        "duration_s": {
+          "min": 30,
+          "max": 30
+        },
+        "ambient_temperature_c": {
+          "min": 20,
+          "max": 20
+        },
+        "pressure_pa": {
+          "min": 101325,
+          "max": 101325
+        }
+      },
+      "room_dimensions_m": [
+        {
+          "min": 2.4195,
+          "max": 5.1767
+        },
+        {
+          "min": 3.2069,
+          "max": 5.9859
+        },
+        {
+          "min": 2.6724,
+          "max": 4.7809
+        }
+      ],
+      "objects_per_layout": {
+        "min": 7,
+        "max": 17
+      },
+      "substrate_counts": {
+        "aluminium": 75,
+        "steel": 77,
+        "insulation": 91
+      },
+      "coating_counts": {
+        "cellulose": 114,
+        "pmma": 84,
+        "none": 45
+      },
+      "thermal_thickness_m": {
+        "min": 0.000853,
+        "max": 0.007972
+      },
+      "mesh_cell_m": {
+        "min": 0.115037,
+        "max": 0.162612
+      },
+      "sample_shape": [
+        12,
+        16,
+        8
+      ]
+    },
+    "test": {
+      "layouts": 20,
+      "runs": 40,
+      "structural_families": {
+        "baffled": 10,
+        "double-island": 10
+      },
+      "incident_types": {
+        "overheating": 8,
+        "arc": 8,
+        "flaming": 8,
+        "smoldering": 8,
+        "battery": 8
+      },
+      "gravity_g": {
+        "0.0001": 20,
+        "1.0": 20
+      },
+      "conditions": {
+        "airflow_m_s": {
+          "min": 0.052606,
+          "max": 0.393959
+        },
+        "oxygen_percent": {
+          "min": 18.228944,
+          "max": 23.92599
+        },
+        "ignition_power_w": {
+          "min": 507.774124,
+          "max": 2794.076133
+        },
+        "ignition_duration_s": {
+          "min": 1,
+          "max": 10
+        },
+        "duration_s": {
+          "min": 30,
+          "max": 30
+        },
+        "ambient_temperature_c": {
+          "min": 20,
+          "max": 20
+        },
+        "pressure_pa": {
+          "min": 101325,
+          "max": 101325
+        }
+      },
+      "room_dimensions_m": [
+        {
+          "min": 2.4305,
+          "max": 5.8126
+        },
+        {
+          "min": 3.2038,
+          "max": 5.9315
+        },
+        {
+          "min": 2.6831,
+          "max": 4.7874
+        }
+      ],
+      "objects_per_layout": {
+        "min": 6,
+        "max": 15
+      },
+      "substrate_counts": {
+        "insulation": 62,
+        "steel": 55,
+        "aluminium": 51
+      },
+      "coating_counts": {
+        "pmma": 69,
+        "cellulose": 81,
+        "none": 18
+      },
+      "thermal_thickness_m": {
+        "min": 0.000831,
+        "max": 0.00795
+      },
+      "mesh_cell_m": {
+        "min": 0.106042,
+        "max": 0.171155
+      },
+      "sample_shape": [
+        12,
+        16,
+        8
+      ]
+    }
+  }
+}

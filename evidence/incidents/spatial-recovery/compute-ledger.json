@@ -1,0 +1,98 @@
+{
+  "schema_version": "spatial-recovery-compute-ledger-1",
+  "scope": "This bounded recovery experiment only; excludes previous campaigns and research/documentation time. Phase durations include validation, loading and I/O; they are not GPU kernel time or summed CPU core time.",
+  "budget_seconds": 3600,
+  "phases": [
+    {
+      "phase": "diagnostic",
+      "kind": "cuda_diagnostics",
+      "reported_seconds": 77.0139113999976,
+      "wrapper_seconds": 79.797084,
+      "completed_at": "2026-11-14T18:52:08.7201267Z",
+      "started_at": "2026-11-14T18:50:48.9230423Z",
+      "exit_code": 0,
+      "sources": {
+        "diagnostic-report.json": "5001532ddbcd51258d76767fd8809c43c91b7e7100e5b7733bf51c3d71270c12",
+        "diagnostic-exited.json": "512065a3738094ee3893039181b916fac25c813d0b96076ea5a685e29912a662"
+      }
+    },
+    {
+      "phase": "generation-100",
+      "kind": "fds_cpu",
+      "reported_seconds": 980.734,
+      "wrapper_seconds": 981.142999,
+      "completed_at": "2026-11-14T19:09:54.2337502Z",
+      "started_at": "2026-11-14T18:53:33.0907514Z",
+      "exit_code": 0,
+      "sources": {
+        "generation-100-progress.json": "394fb35c71f16d20e0eb1b0175a227b921e2b8f65bf060b455878f4a6994ca7d",
+        "generation-100-exited.json": "fa08019e93b00b67bdb105f25adae65be5700cbeb43ad3a336d5b70e229c6c2e"
+      }
+    },
+    {
+      "phase": "localization",
+      "kind": "cuda_diagnostics",
+      "reported_seconds": 74.94734820000303,
+      "wrapper_seconds": 77.93236,
+      "completed_at": "2026-11-14T19:13:08.3009946Z",
+      "started_at": "2026-11-14T19:11:50.3686349Z",
+      "exit_code": 0,
+      "sources": {
+        "localization-diagnostic-report.json": "79d1482cab12d557b397cc3bfc97dc45aabae35c332095da21f4ba48253fa30a",
+        "localization-exited.json": "a5231bdfb618d856f7b0b0d7d186c5301642e598b6aa931b0a3737d4a11b2294"
+      }
+    },
+    {
+      "phase": "generation-200",
+      "kind": "fds_cpu",
+      "reported_seconds": 1110.5,
+      "wrapper_seconds": 1110.948479,
+      "completed_at": "2026-11-14T19:32:44.2012532Z",
+      "started_at": "2026-11-14T19:14:13.2527741Z",
+      "exit_code": 0,
+      "sources": {
+        "generation-200-progress.json": "38e3c895d9ea3dfaf403af33d161c9cfea0406a8e55881f36fa640e2426108a1",
+        "generation-200-exited.json": "8fbe9a09024ee18bc84780752615e6e5ae7646e296a343a3c2f6fe7f74851234"
+      }
+    },
+    {
+      "phase": "training",
+      "kind": "cuda_training_and_evaluation",
+      "reported_seconds": 452.40271430000575,
+      "wrapper_seconds": 455.426595,
+      "completed_at": "2026-11-14T19:41:03.5540028Z",
+      "started_at": "2026-11-14T19:33:28.1274076Z",
+      "exit_code": 0,
+      "sources": {
+        "training-report.json": "6ed509d7c709983f9639e0c1299430a424b82943fae3856cc99ffa64bb714657",
+        "training-exited.json": "95346bcc23c0c1e71f8bda24689640473ba2d3315da0614081aacf4d82df476f"
+      }
+    },
+    {
+      "phase": "replay",
+      "kind": "cuda_inference",
+      "reported_seconds": 2.5786373000009917,
+      "wrapper_seconds": 5.862173,
+      "completed_at": "2026-11-14T19:41:44.1642422Z",
+      "started_at": "2026-11-14T19:41:38.3020694Z",
+      "exit_code": 0,
+      "sources": {
+        "replay-report.json": "6443427039f523e55212f1edeb5c2e10c2a370006f9f627fe0d0fed321e774eb",
+        "replay-exited.json": "3819077fc962dab0dcbe96fc5180f4e27bb444fc21d9657a868781b30eca466e"
+      }
+    }
+  ],
+  "reported_phase_seconds": 2698.1766112000073,
+  "wrapper_seconds": 2711.10969,
+  "elapsed_first_start_to_last_finish_seconds": 3055.2412,
+  "gaps_between_wrappers_seconds": 344.13151000000016,
+  "fds_generation_reported_seconds": 2091.234,
+  "diagnostics_training_replay_reported_seconds": 606.9426112000074,
+  "within_one_hour_even_including_gaps": true,
+  "final_compact_cases": 200,
+  "final_compact_layouts": 100,
+  "unique_new_fds_cases": 192,
+  "original_reused_cases": 8,
+  "no_additional_training_or_simulation_after_reserved_test": true,
+  "light_checks": "Unit tests, source review, local report aggregation and figure rendering excluded; some checks ran concurrently with generation."
+}

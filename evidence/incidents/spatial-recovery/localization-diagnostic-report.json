@@ -1,0 +1,2528 @@
+{
+  "scope": "Overfit on TRAINING cases, not generalisation or a deployable model",
+  "compute": {
+    "device": "cuda:0",
+    "device_name": "NVIDIA GeForce RTX 4070 Ti",
+    "total_memory_bytes": 12877955072,
+    "allocator_limit_bytes": 5368709120,
+    "memory_limit_basis": "PyTorch allocator; CUDA context/library overhead is additional",
+    "torch_version": "2.7.0+cu128",
+    "cuda_version": "12.8"
+  },
+  "elapsed_seconds": 74.94734820000303,
+  "budget_seconds": 300,
+  "cases": 6,
+  "baseline": {
+    "runs": 6,
+    "layouts": 2,
+    "per_layout": [
+      {
+        "layout_id": "cargo-layout-0",
+        "temperature_mae_c": 0.00040844598473691523,
+        "smoke_mae_kg_m3": 0.0,
+        "temperature_peak_error_c": 0.0138092041015625,
+        "smoke_peak_error_kg_m3": 0.0,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "encoded_selection_error": 0.0010129985166713595,
+        "fds_global_temperature_max_c_mae": 0.481049322312878,
+        "fds_global_temperature_mean_c_mae": 0.00021448443012852823,
+        "fds_global_smoke_mean_kg_m3_mae": 0.0,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "layout_id": "procedural-0000",
+        "temperature_mae_c": 0.20254155650443445,
+        "smoke_mae_kg_m3": 4.984780444003778e-07,
+        "temperature_peak_error_c": 199.88591384887695,
+        "smoke_peak_error_kg_m3": 0.0007604768718010746,
+        "hot_temperature_mae_c": 66.96313038404168,
+        "smoky_smoke_mae_kg_m3": 8.916217922277788e-05,
+        "encoded_selection_error": 2.280391201376915,
+        "fds_global_temperature_max_c_mae": 239.15607844937236,
+        "fds_global_temperature_mean_c_mae": 0.2002164163897114,
+        "fds_global_smoke_mean_kg_m3_mae": 3.519666725463189e-07,
+        "fds_global_heat_release_w_mae": 596.8690195456628
+      }
+    ],
+    "layout_balanced": {
+      "temperature_mae_c": 0.10147500124458568,
+      "smoke_mae_kg_m3": 2.492390222001889e-07,
+      "temperature_peak_error_c": 99.94986152648926,
+      "smoke_peak_error_kg_m3": 0.0003802384359005373,
+      "hot_temperature_mae_c": 66.96313038404168,
+      "smoky_smoke_mae_kg_m3": 8.916217922277788e-05,
+      "encoded_selection_error": 1.1407020999467932,
+      "fds_global_temperature_max_c_mae": 119.81856388584262,
+      "fds_global_temperature_mean_c_mae": 0.10021545040991997,
+      "fds_global_smoke_mean_kg_m3_mae": 1.7598333627315944e-07,
+      "fds_global_heat_release_w_mae": 298.4345097728314
+    },
+    "per_run": [
+      {
+        "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+        "layout_id": "procedural-0000",
+        "incident_type": "overheating",
+        "observations": 93868,
+        "temperature_mae_c": 0.6177860330233876,
+        "smoke_mae_kg_m3": 6.240260293370853e-07,
+        "temperature_peak_error_c": 425.06707763671875,
+        "smoke_peak_error_kg_m3": 0.0004907789407297969,
+        "hot_temperature_mae_c": 123.8088468261387,
+        "smoky_smoke_mae_kg_m3": 6.716171956634442e-05,
+        "hot_observations": 184,
+        "smoky_observations": 436,
+        "encoded_selection_error": 2.9007696509361267,
+        "fds_global_temperature_max_c_mae": 521.7217412764027,
+        "fds_global_temperature_mean_c_mae": 0.7259898647185294,
+        "fds_global_smoke_mean_kg_m3_mae": 7.197717148677687e-07,
+        "fds_global_heat_release_w_mae": 2231.00898373127
+      },
+      {
+        "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+        "layout_id": "procedural-0000",
+        "incident_type": "arc",
+        "observations": 93868,
+        "temperature_mae_c": 0.05166740984800256,
+        "smoke_mae_kg_m3": 6.073423189498865e-08,
+        "temperature_peak_error_c": 48.86162567138672,
+        "smoke_peak_error_kg_m3": 8.304486254928634e-05,
+        "hot_temperature_mae_c": 17.901489343536035,
+        "smoky_smoke_mae_kg_m3": 1.1370262252540898e-05,
+        "hot_observations": 89,
+        "smoky_observations": 250,
+        "encoded_selection_error": 1.4845625311136246,
+        "fds_global_temperature_max_c_mae": 91.17963895490092,
+        "fds_global_temperature_mean_c_mae": 0.051246273902154735,
+        "fds_global_smoke_mean_kg_m3_mae": 6.046611851445848e-08,
+        "fds_global_heat_release_w_mae": 101.68961436325505
+      },
+      {
+        "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+        "layout_id": "procedural-0000",
+        "incident_type": "flaming",
+        "observations": 93868,
+        "temperature_mae_c": 0.24643901371095342,
+        "smoke_mae_kg_m3": 4.252082620837934e-07,
+        "temperature_peak_error_c": 342.9471130371094,
+        "smoke_peak_error_kg_m3": 0.0006449767388403416,
+        "hot_temperature_mae_c": 107.69778423518925,
+        "smoky_smoke_mae_kg_m3": 8.827723249612945e-05,
+        "hot_observations": 91,
+        "smoky_observations": 226,
+        "encoded_selection_error": 2.4854167997837067,
+        "fds_global_temperature_max_c_mae": 249.1479243616904,
+        "fds_global_temperature_mean_c_mae": 0.1594369334559287,
+        "fds_global_smoke_mean_kg_m3_mae": 2.1695890708009928e-07,
+        "fds_global_heat_release_w_mae": 651.6464996337891
+      },
+      {
+        "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+        "layout_id": "procedural-0000",
+        "incident_type": "smoldering",
+        "observations": 93868,
+        "temperature_mae_c": 0.07132502903025746,
+        "smoke_mae_kg_m3": 1.0256923627039403e-06,
+        "temperature_peak_error_c": 144.73863220214844,
+        "smoke_peak_error_kg_m3": 0.0019202864496037364,
+        "hot_temperature_mae_c": 64.36195841702548,
+        "smoky_smoke_mae_kg_m3": 0.00021204862182152372,
+        "hot_observations": 44,
+        "smoky_observations": 227,
+        "encoded_selection_error": 2.5575320422649384,
+        "fds_global_temperature_max_c_mae": 201.71635744648594,
+        "fds_global_temperature_mean_c_mae": 0.037739907541582664,
+        "fds_global_smoke_mean_kg_m3_mae": 4.269843723896598e-07,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+        "layout_id": "procedural-0000",
+        "incident_type": "battery",
+        "observations": 93868,
+        "temperature_mae_c": 0.02549029690957107,
+        "smoke_mae_kg_m3": 3.5672933598208146e-07,
+        "temperature_peak_error_c": 37.815120697021484,
+        "smoke_peak_error_kg_m3": 0.0006632973672822118,
+        "hot_temperature_mae_c": 21.04557309831892,
+        "smoky_smoke_mae_kg_m3": 6.69530599773509e-05,
+        "hot_observations": 35,
+        "smoky_observations": 250,
+        "encoded_selection_error": 1.9736749827861786,
+        "fds_global_temperature_max_c_mae": 132.01473020738172,
+        "fds_global_temperature_mean_c_mae": 0.026669102330361644,
+        "fds_global_smoke_mean_kg_m3_mae": 3.3565224987960795e-07,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "cargo-layout-0-arc",
+        "layout_id": "cargo-layout-0",
+        "incident_type": "arc",
+        "observations": 16368,
+        "temperature_mae_c": 0.00040844598473691523,
+        "smoke_mae_kg_m3": 0.0,
+        "temperature_peak_error_c": 0.0138092041015625,
+        "smoke_peak_error_kg_m3": 0.0,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.0010129985166713595,
+        "fds_global_temperature_max_c_mae": 0.481049322312878,
+        "fds_global_temperature_mean_c_mae": 0.00021448443012852823,
+        "fds_global_smoke_mean_kg_m3_mae": 0.0,
+        "fds_global_heat_release_w_mae": 0.0
+      }
+    ],
+    "diagnostics": {
+      "hot": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 443,
+        "tn": 234577,
+        "recall": 0.0,
+        "precision": null,
+        "iou": 0.0
+      },
+      "smoky": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1389,
+        "tn": 233631,
+        "recall": 0.0,
+        "precision": null,
+        "iou": 0.0
+      }
+    },
+    "per_case_diagnostics": [
+      {
+        "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+        "hot": {
+          "tp": 0,
+          "fn": 184,
+          "fp": 0,
+          "tn": 45236
+        },
+        "smoky": {
+          "tp": 0,
+          "fn": 436,
+          "fp": 0,
+          "tn": 44984
+        }
+      },
+      {
+        "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+        "hot": {
+          "tp": 0,
+          "fn": 89,
+          "fp": 0,
+          "tn": 45331
+        },
+        "smoky": {
+          "tp": 0,
+          "fn": 250,
+          "fp": 0,
+          "tn": 45170
+        }
+      },
+      {
+        "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+        "hot": {
+          "tp": 0,
+          "fn": 91,
+          "fp": 0,
+          "tn": 45329
+        },
+        "smoky": {
+          "tp": 0,
+          "fn": 226,
+          "fp": 0,
+          "tn": 45194
+        }
+      },
+      {
+        "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+        "hot": {
+          "tp": 0,
+          "fn": 44,
+          "fp": 0,
+          "tn": 45376
+        },
+        "smoky": {
+          "tp": 0,
+          "fn": 227,
+          "fp": 0,
+          "tn": 45193
+        }
+      },
+      {
+        "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+        "hot": {
+          "tp": 0,
+          "fn": 35,
+          "fp": 0,
+          "tn": 45385
+        },
+        "smoky": {
+          "tp": 0,
+          "fn": 250,
+          "fp": 0,
+          "tn": 45170
+        }
+      },
+      {
+        "run_id": "cargo-layout-0-arc",
+        "hot": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 7920
+        },
+        "smoky": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 0,
+          "tn": 7920
+        }
+      }
+    ],
+    "selection_loss": 0.3699837954771645,
+    "localization_selection_error": 1.6407020999467932,
+    "per_incident_type": {
+      "overheating": {
+        "runs": 1,
+        "layouts": 1,
+        "per_layout": [
+          {
+            "layout_id": "procedural-0000",
+            "temperature_mae_c": 0.6177860330233876,
+            "smoke_mae_kg_m3": 6.240260293370853e-07,
+            "temperature_peak_error_c": 425.06707763671875,
+            "smoke_peak_error_kg_m3": 0.0004907789407297969,
+            "hot_temperature_mae_c": 123.8088468261387,
+            "smoky_smoke_mae_kg_m3": 6.716171956634442e-05,
+            "encoded_selection_error": 2.9007696509361267,
+            "fds_global_temperature_max_c_mae": 521.7217412764027,
+            "fds_global_temperature_mean_c_mae": 0.7259898647185294,
+            "fds_global_smoke_mean_kg_m3_mae": 7.197717148677687e-07,
+            "fds_global_heat_release_w_mae": 2231.00898373127
+          }
+        ],
+        "layout_balanced": {
+          "temperature_mae_c": 0.6177860330233876,
+          "smoke_mae_kg_m3": 6.240260293370853e-07,
+          "temperature_peak_error_c": 425.06707763671875,
+          "smoke_peak_error_kg_m3": 0.0004907789407297969,
+          "hot_temperature_mae_c": 123.8088468261387,
+          "smoky_smoke_mae_kg_m3": 6.716171956634442e-05,
+          "encoded_selection_error": 2.9007696509361267,
+          "fds_global_temperature_max_c_mae": 521.7217412764027,
+          "fds_global_temperature_mean_c_mae": 0.7259898647185294,
+          "fds_global_smoke_mean_kg_m3_mae": 7.197717148677687e-07,
+          "fds_global_heat_release_w_mae": 2231.00898373127
+        },
+        "diagnostics": {
+          "hot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 184,
+            "tn": 45236,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          },
+          "smoky": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 436,
+            "tn": 44984,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          }
+        }
+      },
+      "arc": {
+        "runs": 2,
+        "layouts": 2,
+        "per_layout": [
+          {
+            "layout_id": "cargo-layout-0",
+            "temperature_mae_c": 0.00040844598473691523,
+            "smoke_mae_kg_m3": 0.0,
+            "temperature_peak_error_c": 0.0138092041015625,
+            "smoke_peak_error_kg_m3": 0.0,
+            "hot_temperature_mae_c": null,
+            "smoky_smoke_mae_kg_m3": null,
+            "encoded_selection_error": 0.0010129985166713595,
+            "fds_global_temperature_max_c_mae": 0.481049322312878,
+            "fds_global_temperature_mean_c_mae": 0.00021448443012852823,
+            "fds_global_smoke_mean_kg_m3_mae": 0.0,
+            "fds_global_heat_release_w_mae": 0.0
+          },
+          {
+            "layout_id": "procedural-0000",
+            "temperature_mae_c": 0.05166740984800256,
+            "smoke_mae_kg_m3": 6.073423189498865e-08,
+            "temperature_peak_error_c": 48.86162567138672,
+            "smoke_peak_error_kg_m3": 8.304486254928634e-05,
+            "hot_temperature_mae_c": 17.901489343536035,
+            "smoky_smoke_mae_kg_m3": 1.1370262252540898e-05,
+            "encoded_selection_error": 1.4845625311136246,
+            "fds_global_temperature_max_c_mae": 91.17963895490092,
+            "fds_global_temperature_mean_c_mae": 0.051246273902154735,
+            "fds_global_smoke_mean_kg_m3_mae": 6.046611851445848e-08,
+            "fds_global_heat_release_w_mae": 101.68961436325505
+          }
+        ],
+        "layout_balanced": {
+          "temperature_mae_c": 0.02603792791636974,
+          "smoke_mae_kg_m3": 3.036711594749433e-08,
+          "temperature_peak_error_c": 24.43771743774414,
+          "smoke_peak_error_kg_m3": 4.152243127464317e-05,
+          "hot_temperature_mae_c": 17.901489343536035,
+          "smoky_smoke_mae_kg_m3": 1.1370262252540898e-05,
+          "encoded_selection_error": 0.742787764815148,
+          "fds_global_temperature_max_c_mae": 45.830344138606904,
+          "fds_global_temperature_mean_c_mae": 0.025730379166141633,
+          "fds_global_smoke_mean_kg_m3_mae": 3.023305925722924e-08,
+          "fds_global_heat_release_w_mae": 50.84480718162752
+        },
+        "diagnostics": {
+          "hot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 89,
+            "tn": 53251,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          },
+          "smoky": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 250,
+            "tn": 53090,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          }
+        }
+      },
+      "flaming": {
+        "runs": 1,
+        "layouts": 1,
+        "per_layout": [
+          {
+            "layout_id": "procedural-0000",
+            "temperature_mae_c": 0.24643901371095342,
+            "smoke_mae_kg_m3": 4.252082620837934e-07,
+            "temperature_peak_error_c": 342.9471130371094,
+            "smoke_peak_error_kg_m3": 0.0006449767388403416,
+            "hot_temperature_mae_c": 107.69778423518925,
+            "smoky_smoke_mae_kg_m3": 8.827723249612945e-05,
+            "encoded_selection_error": 2.4854167997837067,
+            "fds_global_temperature_max_c_mae": 249.1479243616904,
+            "fds_global_temperature_mean_c_mae": 0.1594369334559287,
+            "fds_global_smoke_mean_kg_m3_mae": 2.1695890708009928e-07,
+            "fds_global_heat_release_w_mae": 651.6464996337891
+          }
+        ],
+        "layout_balanced": {
+          "temperature_mae_c": 0.24643901371095342,
+          "smoke_mae_kg_m3": 4.252082620837934e-07,
+          "temperature_peak_error_c": 342.9471130371094,
+          "smoke_peak_error_kg_m3": 0.0006449767388403416,
+          "hot_temperature_mae_c": 107.69778423518925,
+          "smoky_smoke_mae_kg_m3": 8.827723249612945e-05,
+          "encoded_selection_error": 2.4854167997837067,
+          "fds_global_temperature_max_c_mae": 249.1479243616904,
+          "fds_global_temperature_mean_c_mae": 0.1594369334559287,
+          "fds_global_smoke_mean_kg_m3_mae": 2.1695890708009928e-07,
+          "fds_global_heat_release_w_mae": 651.6464996337891
+        },
+        "diagnostics": {
+          "hot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 91,
+            "tn": 45329,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          },
+          "smoky": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 226,
+            "tn": 45194,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          }
+        }
+      },
+      "smoldering": {
+        "runs": 1,
+        "layouts": 1,
+        "per_layout": [
+          {
+            "layout_id": "procedural-0000",
+            "temperature_mae_c": 0.07132502903025746,
+            "smoke_mae_kg_m3": 1.0256923627039403e-06,
+            "temperature_peak_error_c": 144.73863220214844,
+            "smoke_peak_error_kg_m3": 0.0019202864496037364,
+            "hot_temperature_mae_c": 64.36195841702548,
+            "smoky_smoke_mae_kg_m3": 0.00021204862182152372,
+            "encoded_selection_error": 2.5575320422649384,
+            "fds_global_temperature_max_c_mae": 201.71635744648594,
+            "fds_global_temperature_mean_c_mae": 0.037739907541582664,
+            "fds_global_smoke_mean_kg_m3_mae": 4.269843723896598e-07,
+            "fds_global_heat_release_w_mae": 0.0
+          }
+        ],
+        "layout_balanced": {
+          "temperature_mae_c": 0.07132502903025746,
+          "smoke_mae_kg_m3": 1.0256923627039403e-06,
+          "temperature_peak_error_c": 144.73863220214844,
+          "smoke_peak_error_kg_m3": 0.0019202864496037364,
+          "hot_temperature_mae_c": 64.36195841702548,
+          "smoky_smoke_mae_kg_m3": 0.00021204862182152372,
+          "encoded_selection_error": 2.5575320422649384,
+          "fds_global_temperature_max_c_mae": 201.71635744648594,
+          "fds_global_temperature_mean_c_mae": 0.037739907541582664,
+          "fds_global_smoke_mean_kg_m3_mae": 4.269843723896598e-07,
+          "fds_global_heat_release_w_mae": 0.0
+        },
+        "diagnostics": {
+          "hot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 44,
+            "tn": 45376,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          },
+          "smoky": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 227,
+            "tn": 45193,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          }
+        }
+      },
+      "battery": {
+        "runs": 1,
+        "layouts": 1,
+        "per_layout": [
+          {
+            "layout_id": "procedural-0000",
+            "temperature_mae_c": 0.02549029690957107,
+            "smoke_mae_kg_m3": 3.5672933598208146e-07,
+            "temperature_peak_error_c": 37.815120697021484,
+            "smoke_peak_error_kg_m3": 0.0006632973672822118,
+            "hot_temperature_mae_c": 21.04557309831892,
+            "smoky_smoke_mae_kg_m3": 6.69530599773509e-05,
+            "encoded_selection_error": 1.9736749827861786,
+            "fds_global_temperature_max_c_mae": 132.01473020738172,
+            "fds_global_temperature_mean_c_mae": 0.026669102330361644,
+            "fds_global_smoke_mean_kg_m3_mae": 3.3565224987960795e-07,
+            "fds_global_heat_release_w_mae": 0.0
+          }
+        ],
+        "layout_balanced": {
+          "temperature_mae_c": 0.02549029690957107,
+          "smoke_mae_kg_m3": 3.5672933598208146e-07,
+          "temperature_peak_error_c": 37.815120697021484,
+          "smoke_peak_error_kg_m3": 0.0006632973672822118,
+          "hot_temperature_mae_c": 21.04557309831892,
+          "smoky_smoke_mae_kg_m3": 6.69530599773509e-05,
+          "encoded_selection_error": 1.9736749827861786,
+          "fds_global_temperature_max_c_mae": 132.01473020738172,
+          "fds_global_temperature_mean_c_mae": 0.026669102330361644,
+          "fds_global_smoke_mean_kg_m3_mae": 3.3565224987960795e-07,
+          "fds_global_heat_release_w_mae": 0.0
+        },
+        "diagnostics": {
+          "hot": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 35,
+            "tn": 45385,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          },
+          "smoky": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 250,
+            "tn": 45170,
+            "recall": 0.0,
+            "precision": null,
+            "iou": 0.0
+          }
+        }
+      }
+    },
+    "evaluation_wall_seconds": 0.05169490000116639
+  },
+  "results": {
+    "historical": {
+      "metrics": {
+        "runs": 6,
+        "layouts": 2,
+        "per_layout": [
+          {
+            "layout_id": "cargo-layout-0",
+            "temperature_mae_c": 0.06545808072558189,
+            "smoke_mae_kg_m3": 2.297400239519493e-09,
+            "temperature_peak_error_c": 0.13986912903793325,
+            "smoke_peak_error_kg_m3": 1.7812957322157244e-08,
+            "hot_temperature_mae_c": null,
+            "smoky_smoke_mae_kg_m3": null,
+            "encoded_selection_error": 0.003866462502628565,
+            "fds_global_temperature_max_c_mae": 0.165115559611685,
+            "fds_global_temperature_mean_c_mae": 0.11039999640032712,
+            "fds_global_smoke_mean_kg_m3_mae": 3.8080475201442983e-10,
+            "fds_global_heat_release_w_mae": 2.470448472382115
+          },
+          {
+            "layout_id": "procedural-0000",
+            "temperature_mae_c": 0.3694481019408465,
+            "smoke_mae_kg_m3": 4.6715394966575093e-07,
+            "temperature_peak_error_c": 139.793438451594,
+            "smoke_peak_error_kg_m3": 0.0006811203074819901,
+            "hot_temperature_mae_c": 43.319814457076816,
+            "smoky_smoke_mae_kg_m3": 8.006064277920378e-05,
+            "encoded_selection_error": 1.1781018480658532,
+            "fds_global_temperature_max_c_mae": 157.345848248774,
+            "fds_global_temperature_mean_c_mae": 0.25166812837664065,
+            "fds_global_smoke_mean_kg_m3_mae": 2.4543443484212634e-07,
+            "fds_global_heat_release_w_mae": 635.2603934671943
+          }
+        ],
+        "layout_balanced": {
+          "temperature_mae_c": 0.2174530913332142,
+          "smoke_mae_kg_m3": 2.347256749526352e-07,
+          "temperature_peak_error_c": 69.96665379031597,
+          "smoke_peak_error_kg_m3": 0.0003405690602196561,
+          "hot_temperature_mae_c": 43.319814457076816,
+          "smoky_smoke_mae_kg_m3": 8.006064277920378e-05,
+          "encoded_selection_error": 0.5909841552842409,
+          "fds_global_temperature_max_c_mae": 78.75548190419283,
+          "fds_global_temperature_mean_c_mae": 0.18103406238848388,
+          "fds_global_smoke_mean_kg_m3_mae": 1.229076197970704e-07,
+          "fds_global_heat_release_w_mae": 318.8654209697882
+        },
+        "per_run": [
+          {
+            "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+            "layout_id": "procedural-0000",
+            "incident_type": "overheating",
+            "observations": 93868,
+            "temperature_mae_c": 0.6255065351989019,
+            "smoke_mae_kg_m3": 5.516256052690819e-07,
+            "temperature_peak_error_c": 337.1472506344644,
+            "smoke_peak_error_kg_m3": 0.0003660774727512039,
+            "hot_temperature_mae_c": 96.40433306973101,
+            "smoky_smoke_mae_kg_m3": 5.7625359031469544e-05,
+            "hot_observations": 184,
+            "smoky_observations": 436,
+            "encoded_selection_error": 1.563587725162506,
+            "fds_global_temperature_max_c_mae": 369.17960702983464,
+            "fds_global_temperature_mean_c_mae": 0.7963341073377853,
+            "fds_global_smoke_mean_kg_m3_mae": 5.519752772569935e-07,
+            "fds_global_heat_release_w_mae": 1876.8935712854238
+          },
+          {
+            "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+            "layout_id": "procedural-0000",
+            "incident_type": "arc",
+            "observations": 93868,
+            "temperature_mae_c": 0.34410477714358645,
+            "smoke_mae_kg_m3": 8.438513807039682e-08,
+            "temperature_peak_error_c": 42.54741197579927,
+            "smoke_peak_error_kg_m3": 8.188993649283395e-05,
+            "hot_temperature_mae_c": 12.835673207755718,
+            "smoky_smoke_mae_kg_m3": 1.086039972810271e-05,
+            "hot_observations": 89,
+            "smoky_observations": 250,
+            "encoded_selection_error": 1.1097669452428818,
+            "fds_global_temperature_max_c_mae": 65.60176172373914,
+            "fds_global_temperature_mean_c_mae": 0.06911025737789024,
+            "fds_global_smoke_mean_kg_m3_mae": 1.5606710408293823e-07,
+            "fds_global_heat_release_w_mae": 258.657271472941
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+            "layout_id": "procedural-0000",
+            "incident_type": "flaming",
+            "observations": 93868,
+            "temperature_mae_c": 0.35059157719871237,
+            "smoke_mae_kg_m3": 3.5745054985447455e-07,
+            "temperature_peak_error_c": 255.36387759834645,
+            "smoke_peak_error_kg_m3": 0.0005214333370211213,
+            "hot_temperature_mae_c": 73.43114749303996,
+            "smoky_smoke_mae_kg_m3": 7.094450422496619e-05,
+            "hot_observations": 91,
+            "smoky_observations": 226,
+            "encoded_selection_error": 0.9821808412671089,
+            "fds_global_temperature_max_c_mae": 113.4184885271512,
+            "fds_global_temperature_mean_c_mae": 0.22178033525570037,
+            "fds_global_smoke_mean_kg_m3_mae": 1.394232294833282e-07,
+            "fds_global_heat_release_w_mae": 297.77489656207274
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+            "layout_id": "procedural-0000",
+            "incident_type": "smoldering",
+            "observations": 93868,
+            "temperature_mae_c": 0.2582235079835686,
+            "smoke_mae_kg_m3": 9.582134319283173e-07,
+            "temperature_peak_error_c": 53.89574035720656,
+            "smoke_peak_error_kg_m3": 0.0017824465563584973,
+            "hot_temperature_mae_c": 21.902402335393226,
+            "smoky_smoke_mae_kg_m3": 0.0001948700121633939,
+            "hot_observations": 44,
+            "smoky_observations": 227,
+            "encoded_selection_error": 0.9586102366447449,
+            "fds_global_temperature_max_c_mae": 127.53885921116475,
+            "fds_global_temperature_mean_c_mae": 0.09977377654188883,
+            "fds_global_smoke_mean_kg_m3_mae": 2.2500392267312848e-07,
+            "fds_global_heat_release_w_mae": 375.17080646189373
+          },
+          {
+            "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+            "layout_id": "procedural-0000",
+            "incident_type": "battery",
+            "observations": 93868,
+            "temperature_mae_c": 0.2688141121794628,
+            "smoke_mae_kg_m3": 3.8409502320648403e-07,
+            "temperature_peak_error_c": 10.01291169215338,
+            "smoke_peak_error_kg_m3": 0.0006537542347862942,
+            "hot_temperature_mae_c": 12.02551617946417,
+            "smoky_smoke_mae_kg_m3": 6.600293874808657e-05,
+            "hot_observations": 35,
+            "smoky_observations": 250,
+            "encoded_selection_error": 1.276363492012024,
+            "fds_global_temperature_max_c_mae": 110.99052475198016,
+            "fds_global_temperature_mean_c_mae": 0.07134216536993845,
+            "fds_global_smoke_mean_kg_m3_mae": 1.5470264071424314e-07,
+            "fds_global_heat_release_w_mae": 367.80542155364014
+          },
+          {
+            "run_id": "cargo-layout-0-arc",
+            "layout_id": "cargo-layout-0",
+            "incident_type": "arc",
+            "observations": 16368,
+            "temperature_mae_c": 0.06545808072558189,
+            "smoke_mae_kg_m3": 2.297400239519493e-09,
+            "temperature_peak_error_c": 0.13986912903793325,
+            "smoke_peak_error_kg_m3": 1.7812957322157244e-08,
+            "hot_temperature_mae_c": null,
+            "smoky_smoke_mae_kg_m3": null,
+            "hot_observations": 0,
+            "smoky_observations": 0,
+            "encoded_selection_error": 0.003866462502628565,
+            "fds_global_temperature_max_c_mae": 0.165115559611685,
+            "fds_global_temperature_mean_c_mae": 0.11039999640032712,
+            "fds_global_smoke_mean_kg_m3_mae": 3.8080475201442983e-10,
+            "fds_global_heat_release_w_mae": 2.470448472382115
+          }
+        ],
+        "diagnostics": {
+          "hot": {
+            "tp": 392,
+            "fp": 1070,
+            "fn": 51,
+            "tn": 233507,
+            "recall": 0.8848758465011287,
+            "precision": 0.26812585499316005,
+            "iou": 0.2590879048248513
+          },
+          "smoky": {
+            "tp": 1347,
+            "fp": 7698,
+            "fn": 42,
+            "tn": 225933,
+            "recall": 0.9697624190064795,
+            "precision": 0.14892205638474296,
+            "iou": 0.14823374050841862
+          }
+        },
+        "per_case_diagnostics": [
+          {
+            "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+            "hot": {
+              "tp": 170,
+              "fn": 14,
+              "fp": 130,
+              "tn": 45106
+            },
+            "smoky": {
+              "tp": 394,
+              "fn": 42,
+              "fp": 473,
+              "tn": 44511
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+            "hot": {
+              "tp": 52,
+              "fn": 37,
+              "fp": 100,
+              "tn": 45231
+            },
+            "smoky": {
+              "tp": 250,
+              "fn": 0,
+              "fp": 3003,
+              "tn": 42167
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+            "hot": {
+              "tp": 91,
+              "fn": 0,
+              "fp": 197,
+              "tn": 45132
+            },
+            "smoky": {
+              "tp": 226,
+              "fn": 0,
+              "fp": 868,
+              "tn": 44326
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+            "hot": {
+              "tp": 44,
+              "fn": 0,
+              "fp": 238,
+              "tn": 45138
+            },
+            "smoky": {
+              "tp": 227,
+              "fn": 0,
+              "fp": 784,
+              "tn": 44409
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+            "hot": {
+              "tp": 35,
+              "fn": 0,
+              "fp": 405,
+              "tn": 44980
+            },
+            "smoky": {
+              "tp": 250,
+              "fn": 0,
+              "fp": 2570,
+              "tn": 42600
+            }
+          },
+          {
+            "run_id": "cargo-layout-0-arc",
+            "hot": {
+              "tp": 0,
+              "fn": 0,
+              "fp": 0,
+              "tn": 7920
+            },
+            "smoky": {
+              "tp": 0,
+              "fn": 0,
+              "fp": 0,
+              "tn": 7920
+            }
+          }
+        ],
+        "selection_loss": 0.15608443862165586,
+        "localization_selection_error": 0.9710772013513935,
+        "per_incident_type": {
+          "overheating": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 0.6255065351989019,
+                "smoke_mae_kg_m3": 5.516256052690819e-07,
+                "temperature_peak_error_c": 337.1472506344644,
+                "smoke_peak_error_kg_m3": 0.0003660774727512039,
+                "hot_temperature_mae_c": 96.40433306973101,
+                "smoky_smoke_mae_kg_m3": 5.7625359031469544e-05,
+                "encoded_selection_error": 1.563587725162506,
+                "fds_global_temperature_max_c_mae": 369.17960702983464,
+                "fds_global_temperature_mean_c_mae": 0.7963341073377853,
+                "fds_global_smoke_mean_kg_m3_mae": 5.519752772569935e-07,
+                "fds_global_heat_release_w_mae": 1876.8935712854238
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 0.6255065351989019,
+              "smoke_mae_kg_m3": 5.516256052690819e-07,
+              "temperature_peak_error_c": 337.1472506344644,
+              "smoke_peak_error_kg_m3": 0.0003660774727512039,
+              "hot_temperature_mae_c": 96.40433306973101,
+              "smoky_smoke_mae_kg_m3": 5.7625359031469544e-05,
+              "encoded_selection_error": 1.563587725162506,
+              "fds_global_temperature_max_c_mae": 369.17960702983464,
+              "fds_global_temperature_mean_c_mae": 0.7963341073377853,
+              "fds_global_smoke_mean_kg_m3_mae": 5.519752772569935e-07,
+              "fds_global_heat_release_w_mae": 1876.8935712854238
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 170,
+                "fp": 130,
+                "fn": 14,
+                "tn": 45106,
+                "recall": 0.9239130434782609,
+                "precision": 0.5666666666666667,
+                "iou": 0.5414012738853503
+              },
+              "smoky": {
+                "tp": 394,
+                "fp": 473,
+                "fn": 42,
+                "tn": 44511,
+                "recall": 0.9036697247706422,
+                "precision": 0.4544405997693195,
+                "iou": 0.43344334433443343
+              }
+            }
+          },
+          "arc": {
+            "runs": 2,
+            "layouts": 2,
+            "per_layout": [
+              {
+                "layout_id": "cargo-layout-0",
+                "temperature_mae_c": 0.06545808072558189,
+                "smoke_mae_kg_m3": 2.297400239519493e-09,
+                "temperature_peak_error_c": 0.13986912903793325,
+                "smoke_peak_error_kg_m3": 1.7812957322157244e-08,
+                "hot_temperature_mae_c": null,
+                "smoky_smoke_mae_kg_m3": null,
+                "encoded_selection_error": 0.003866462502628565,
+                "fds_global_temperature_max_c_mae": 0.165115559611685,
+                "fds_global_temperature_mean_c_mae": 0.11039999640032712,
+                "fds_global_smoke_mean_kg_m3_mae": 3.8080475201442983e-10,
+                "fds_global_heat_release_w_mae": 2.470448472382115
+              },
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 0.34410477714358645,
+                "smoke_mae_kg_m3": 8.438513807039682e-08,
+                "temperature_peak_error_c": 42.54741197579927,
+                "smoke_peak_error_kg_m3": 8.188993649283395e-05,
+                "hot_temperature_mae_c": 12.835673207755718,
+                "smoky_smoke_mae_kg_m3": 1.086039972810271e-05,
+                "encoded_selection_error": 1.1097669452428818,
+                "fds_global_temperature_max_c_mae": 65.60176172373914,
+                "fds_global_temperature_mean_c_mae": 0.06911025737789024,
+                "fds_global_smoke_mean_kg_m3_mae": 1.5606710408293823e-07,
+                "fds_global_heat_release_w_mae": 258.657271472941
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 0.20478142893458418,
+              "smoke_mae_kg_m3": 4.334126915495816e-08,
+              "temperature_peak_error_c": 21.343640552418602,
+              "smoke_peak_error_kg_m3": 4.0953874725078055e-05,
+              "hot_temperature_mae_c": 12.835673207755718,
+              "smoky_smoke_mae_kg_m3": 1.086039972810271e-05,
+              "encoded_selection_error": 0.5568167038727552,
+              "fds_global_temperature_max_c_mae": 32.88343864167541,
+              "fds_global_temperature_mean_c_mae": 0.08975512688910868,
+              "fds_global_smoke_mean_kg_m3_mae": 7.822395441747633e-08,
+              "fds_global_heat_release_w_mae": 130.56385997266153
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 52,
+                "fp": 100,
+                "fn": 37,
+                "tn": 53151,
+                "recall": 0.5842696629213483,
+                "precision": 0.34210526315789475,
+                "iou": 0.2751322751322751
+              },
+              "smoky": {
+                "tp": 250,
+                "fp": 3003,
+                "fn": 0,
+                "tn": 50087,
+                "recall": 1.0,
+                "precision": 0.0768521364893944,
+                "iou": 0.0768521364893944
+              }
+            }
+          },
+          "flaming": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 0.35059157719871237,
+                "smoke_mae_kg_m3": 3.5745054985447455e-07,
+                "temperature_peak_error_c": 255.36387759834645,
+                "smoke_peak_error_kg_m3": 0.0005214333370211213,
+                "hot_temperature_mae_c": 73.43114749303996,
+                "smoky_smoke_mae_kg_m3": 7.094450422496619e-05,
+                "encoded_selection_error": 0.9821808412671089,
+                "fds_global_temperature_max_c_mae": 113.4184885271512,
+                "fds_global_temperature_mean_c_mae": 0.22178033525570037,
+                "fds_global_smoke_mean_kg_m3_mae": 1.394232294833282e-07,
+                "fds_global_heat_release_w_mae": 297.77489656207274
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 0.35059157719871237,
+              "smoke_mae_kg_m3": 3.5745054985447455e-07,
+              "temperature_peak_error_c": 255.36387759834645,
+              "smoke_peak_error_kg_m3": 0.0005214333370211213,
+              "hot_temperature_mae_c": 73.43114749303996,
+              "smoky_smoke_mae_kg_m3": 7.094450422496619e-05,
+              "encoded_selection_error": 0.9821808412671089,
+              "fds_global_temperature_max_c_mae": 113.4184885271512,
+              "fds_global_temperature_mean_c_mae": 0.22178033525570037,
+              "fds_global_smoke_mean_kg_m3_mae": 1.394232294833282e-07,
+              "fds_global_heat_release_w_mae": 297.77489656207274
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 91,
+                "fp": 197,
+                "fn": 0,
+                "tn": 45132,
+                "recall": 1.0,
+                "precision": 0.3159722222222222,
+                "iou": 0.3159722222222222
+              },
+              "smoky": {
+                "tp": 226,
+                "fp": 868,
+                "fn": 0,
+                "tn": 44326,
+                "recall": 1.0,
+                "precision": 0.20658135283363802,
+                "iou": 0.20658135283363802
+              }
+            }
+          },
+          "smoldering": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 0.2582235079835686,
+                "smoke_mae_kg_m3": 9.582134319283173e-07,
+                "temperature_peak_error_c": 53.89574035720656,
+                "smoke_peak_error_kg_m3": 0.0017824465563584973,
+                "hot_temperature_mae_c": 21.902402335393226,
+                "smoky_smoke_mae_kg_m3": 0.0001948700121633939,
+                "encoded_selection_error": 0.9586102366447449,
+                "fds_global_temperature_max_c_mae": 127.53885921116475,
+                "fds_global_temperature_mean_c_mae": 0.09977377654188883,
+                "fds_global_smoke_mean_kg_m3_mae": 2.2500392267312848e-07,
+                "fds_global_heat_release_w_mae": 375.17080646189373
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 0.2582235079835686,
+              "smoke_mae_kg_m3": 9.582134319283173e-07,
+              "temperature_peak_error_c": 53.89574035720656,
+              "smoke_peak_error_kg_m3": 0.0017824465563584973,
+              "hot_temperature_mae_c": 21.902402335393226,
+              "smoky_smoke_mae_kg_m3": 0.0001948700121633939,
+              "encoded_selection_error": 0.9586102366447449,
+              "fds_global_temperature_max_c_mae": 127.53885921116475,
+              "fds_global_temperature_mean_c_mae": 0.09977377654188883,
+              "fds_global_smoke_mean_kg_m3_mae": 2.2500392267312848e-07,
+              "fds_global_heat_release_w_mae": 375.17080646189373
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 44,
+                "fp": 238,
+                "fn": 0,
+                "tn": 45138,
+                "recall": 1.0,
+                "precision": 0.15602836879432624,
+                "iou": 0.15602836879432624
+              },
+              "smoky": {
+                "tp": 227,
+                "fp": 784,
+                "fn": 0,
+                "tn": 44409,
+                "recall": 1.0,
+                "precision": 0.22453016815034618,
+                "iou": 0.22453016815034618
+              }
+            }
+          },
+          "battery": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 0.2688141121794628,
+                "smoke_mae_kg_m3": 3.8409502320648403e-07,
+                "temperature_peak_error_c": 10.01291169215338,
+                "smoke_peak_error_kg_m3": 0.0006537542347862942,
+                "hot_temperature_mae_c": 12.02551617946417,
+                "smoky_smoke_mae_kg_m3": 6.600293874808657e-05,
+                "encoded_selection_error": 1.276363492012024,
+                "fds_global_temperature_max_c_mae": 110.99052475198016,
+                "fds_global_temperature_mean_c_mae": 0.07134216536993845,
+                "fds_global_smoke_mean_kg_m3_mae": 1.5470264071424314e-07,
+                "fds_global_heat_release_w_mae": 367.80542155364014
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 0.2688141121794628,
+              "smoke_mae_kg_m3": 3.8409502320648403e-07,
+              "temperature_peak_error_c": 10.01291169215338,
+              "smoke_peak_error_kg_m3": 0.0006537542347862942,
+              "hot_temperature_mae_c": 12.02551617946417,
+              "smoky_smoke_mae_kg_m3": 6.600293874808657e-05,
+              "encoded_selection_error": 1.276363492012024,
+              "fds_global_temperature_max_c_mae": 110.99052475198016,
+              "fds_global_temperature_mean_c_mae": 0.07134216536993845,
+              "fds_global_smoke_mean_kg_m3_mae": 1.5470264071424314e-07,
+              "fds_global_heat_release_w_mae": 367.80542155364014
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 35,
+                "fp": 405,
+                "fn": 0,
+                "tn": 44980,
+                "recall": 1.0,
+                "precision": 0.07954545454545454,
+                "iou": 0.07954545454545454
+              },
+              "smoky": {
+                "tp": 250,
+                "fp": 2570,
+                "fn": 0,
+                "tn": 42600,
+                "recall": 1.0,
+                "precision": 0.08865248226950355,
+                "iou": 0.08865248226950355
+              }
+            }
+          }
+        },
+        "evaluation_wall_seconds": 0.29791839999961667
+      },
+      "epochs": 80,
+      "steps": 1920,
+      "history": [
+        {
+          "epoch": 1,
+          "training_loss": 0.1158224668353796,
+          "steps": 24
+        },
+        {
+          "epoch": 2,
+          "training_loss": 0.06964788710077603,
+          "steps": 48
+        },
+        {
+          "epoch": 3,
+          "training_loss": 0.07471214788901205,
+          "steps": 72
+        },
+        {
+          "epoch": 4,
+          "training_loss": 0.057646761680371125,
+          "steps": 96
+        },
+        {
+          "epoch": 5,
+          "training_loss": 0.06506949400581005,
+          "steps": 120
+        },
+        {
+          "epoch": 6,
+          "training_loss": 0.05818106246491273,
+          "steps": 144
+        },
+        {
+          "epoch": 7,
+          "training_loss": 0.05406729718411548,
+          "steps": 168
+        },
+        {
+          "epoch": 8,
+          "training_loss": 0.053607459764720665,
+          "steps": 192
+        },
+        {
+          "epoch": 9,
+          "training_loss": 0.05167861750944414,
+          "steps": 216
+        },
+        {
+          "epoch": 10,
+          "training_loss": 0.053794481416278156,
+          "steps": 240
+        },
+        {
+          "epoch": 11,
+          "training_loss": 0.054157815122259007,
+          "steps": 264
+        },
+        {
+          "epoch": 12,
+          "training_loss": 0.05057105551661355,
+          "steps": 288
+        },
+        {
+          "epoch": 13,
+          "training_loss": 0.05439820436408303,
+          "steps": 312
+        },
+        {
+          "epoch": 14,
+          "training_loss": 0.058314037383388494,
+          "steps": 336
+        },
+        {
+          "epoch": 15,
+          "training_loss": 0.05386036923446227,
+          "steps": 360
+        },
+        {
+          "epoch": 16,
+          "training_loss": 0.0664083247781188,
+          "steps": 384
+        },
+        {
+          "epoch": 17,
+          "training_loss": 0.05479258059640415,
+          "steps": 408
+        },
+        {
+          "epoch": 18,
+          "training_loss": 0.05583589669582175,
+          "steps": 432
+        },
+        {
+          "epoch": 19,
+          "training_loss": 0.054562660733144086,
+          "steps": 456
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.056346815158354324,
+          "steps": 480
+        },
+        {
+          "epoch": 21,
+          "training_loss": 0.05215588893333915,
+          "steps": 504
+        },
+        {
+          "epoch": 22,
+          "training_loss": 0.054441567037590885,
+          "steps": 528
+        },
+        {
+          "epoch": 23,
+          "training_loss": 0.05357893481688936,
+          "steps": 552
+        },
+        {
+          "epoch": 24,
+          "training_loss": 0.05599579965508181,
+          "steps": 576
+        },
+        {
+          "epoch": 25,
+          "training_loss": 0.05527767466135426,
+          "steps": 600
+        },
+        {
+          "epoch": 26,
+          "training_loss": 0.05291593661855182,
+          "steps": 624
+        },
+        {
+          "epoch": 27,
+          "training_loss": 0.05407754797391438,
+          "steps": 648
+        },
+        {
+          "epoch": 28,
+          "training_loss": 0.05259601965679192,
+          "steps": 672
+        },
+        {
+          "epoch": 29,
+          "training_loss": 0.051923927938090246,
+          "steps": 696
+        },
+        {
+          "epoch": 30,
+          "training_loss": 0.05205411482084957,
+          "steps": 720
+        },
+        {
+          "epoch": 31,
+          "training_loss": 0.05148304075393955,
+          "steps": 744
+        },
+        {
+          "epoch": 32,
+          "training_loss": 0.05347312677024295,
+          "steps": 768
+        },
+        {
+          "epoch": 33,
+          "training_loss": 0.05412373183385676,
+          "steps": 792
+        },
+        {
+          "epoch": 34,
+          "training_loss": 0.055357231394090274,
+          "steps": 816
+        },
+        {
+          "epoch": 35,
+          "training_loss": 0.06006163278863015,
+          "steps": 840
+        },
+        {
+          "epoch": 36,
+          "training_loss": 0.06300655190845848,
+          "steps": 864
+        },
+        {
+          "epoch": 37,
+          "training_loss": 0.05193647235476722,
+          "steps": 888
+        },
+        {
+          "epoch": 38,
+          "training_loss": 0.05514060290936161,
+          "steps": 912
+        },
+        {
+          "epoch": 39,
+          "training_loss": 0.05330773163797049,
+          "steps": 936
+        },
+        {
+          "epoch": 40,
+          "training_loss": 0.051926689661276115,
+          "steps": 960
+        },
+        {
+          "epoch": 41,
+          "training_loss": 0.051430883369175714,
+          "steps": 984
+        },
+        {
+          "epoch": 42,
+          "training_loss": 0.05221044316777908,
+          "steps": 1008
+        },
+        {
+          "epoch": 43,
+          "training_loss": 0.05297273053697103,
+          "steps": 1032
+        },
+        {
+          "epoch": 44,
+          "training_loss": 0.04946796024564214,
+          "steps": 1056
+        },
+        {
+          "epoch": 45,
+          "training_loss": 0.05227683953869726,
+          "steps": 1080
+        },
+        {
+          "epoch": 46,
+          "training_loss": 0.05034706113478427,
+          "steps": 1104
+        },
+        {
+          "epoch": 47,
+          "training_loss": 0.05341712872986035,
+          "steps": 1128
+        },
+        {
+          "epoch": 48,
+          "training_loss": 0.0536961052831935,
+          "steps": 1152
+        },
+        {
+          "epoch": 49,
+          "training_loss": 0.051716321781795055,
+          "steps": 1176
+        },
+        {
+          "epoch": 50,
+          "training_loss": 0.051030424113074936,
+          "steps": 1200
+        },
+        {
+          "epoch": 51,
+          "training_loss": 0.04866596239929398,
+          "steps": 1224
+        },
+        {
+          "epoch": 52,
+          "training_loss": 0.04845511409867969,
+          "steps": 1248
+        },
+        {
+          "epoch": 53,
+          "training_loss": 0.048255719368656476,
+          "steps": 1272
+        },
+        {
+          "epoch": 54,
+          "training_loss": 0.04913283703693499,
+          "steps": 1296
+        },
+        {
+          "epoch": 55,
+          "training_loss": 0.04149187025614083,
+          "steps": 1320
+        },
+        {
+          "epoch": 56,
+          "training_loss": 0.0456163327752923,
+          "steps": 1344
+        },
+        {
+          "epoch": 57,
+          "training_loss": 0.04420889554441803,
+          "steps": 1368
+        },
+        {
+          "epoch": 58,
+          "training_loss": 0.04875807282547208,
+          "steps": 1392
+        },
+        {
+          "epoch": 59,
+          "training_loss": 0.05478976969235292,
+          "steps": 1416
+        },
+        {
+          "epoch": 60,
+          "training_loss": 0.0470834944371341,
+          "steps": 1440
+        },
+        {
+          "epoch": 61,
+          "training_loss": 0.05044757436262444,
+          "steps": 1464
+        },
+        {
+          "epoch": 62,
+          "training_loss": 0.052857465372006925,
+          "steps": 1488
+        },
+        {
+          "epoch": 63,
+          "training_loss": 0.05243827888690349,
+          "steps": 1512
+        },
+        {
+          "epoch": 64,
+          "training_loss": 0.04784918422066969,
+          "steps": 1536
+        },
+        {
+          "epoch": 65,
+          "training_loss": 0.047630444244067704,
+          "steps": 1560
+        },
+        {
+          "epoch": 66,
+          "training_loss": 0.048534898146883484,
+          "steps": 1584
+        },
+        {
+          "epoch": 67,
+          "training_loss": 0.04998642899574608,
+          "steps": 1608
+        },
+        {
+          "epoch": 68,
+          "training_loss": 0.047634032899966566,
+          "steps": 1632
+        },
+        {
+          "epoch": 69,
+          "training_loss": 0.04544606560892943,
+          "steps": 1656
+        },
+        {
+          "epoch": 70,
+          "training_loss": 0.04633506020941746,
+          "steps": 1680
+        },
+        {
+          "epoch": 71,
+          "training_loss": 0.0520855551331705,
+          "steps": 1704
+        },
+        {
+          "epoch": 72,
+          "training_loss": 0.046182124606437155,
+          "steps": 1728
+        },
+        {
+          "epoch": 73,
+          "training_loss": 0.048719623653353965,
+          "steps": 1752
+        },
+        {
+          "epoch": 74,
+          "training_loss": 0.04725660971404674,
+          "steps": 1776
+        },
+        {
+          "epoch": 75,
+          "training_loss": 0.04534463908833762,
+          "steps": 1800
+        },
+        {
+          "epoch": 76,
+          "training_loss": 0.04542357431912226,
+          "steps": 1824
+        },
+        {
+          "epoch": 77,
+          "training_loss": 0.045671563261162694,
+          "steps": 1848
+        },
+        {
+          "epoch": 78,
+          "training_loss": 0.04507344726330808,
+          "steps": 1872
+        },
+        {
+          "epoch": 79,
+          "training_loss": 0.04255187934452099,
+          "steps": 1896
+        },
+        {
+          "epoch": 80,
+          "training_loss": 0.043961233565480345,
+          "steps": 1920
+        }
+      ]
+    },
+    "localized": {
+      "metrics": {
+        "runs": 6,
+        "layouts": 2,
+        "per_layout": [
+          {
+            "layout_id": "cargo-layout-0",
+            "temperature_mae_c": 0.23768662083709663,
+            "smoke_mae_kg_m3": 8.486268298551691e-10,
+            "temperature_peak_error_c": 0.470853262048724,
+            "smoke_peak_error_kg_m3": 1.5849402528727565e-08,
+            "hot_temperature_mae_c": null,
+            "smoky_smoke_mae_kg_m3": null,
+            "encoded_selection_error": 0.007996533997356892,
+            "fds_global_temperature_max_c_mae": 0.3095976815244565,
+            "fds_global_temperature_mean_c_mae": 0.31547587430554036,
+            "fds_global_smoke_mean_kg_m3_mae": 0.0,
+            "fds_global_heat_release_w_mae": 0.0
+          },
+          {
+            "layout_id": "procedural-0000",
+            "temperature_mae_c": 1.316348822665758,
+            "smoke_mae_kg_m3": 4.979350809787871e-07,
+            "temperature_peak_error_c": 189.71128091551455,
+            "smoke_peak_error_kg_m3": 0.0007598464918811679,
+            "hot_temperature_mae_c": 63.37868295707443,
+            "smoky_smoke_mae_kg_m3": 8.905075315555703e-05,
+            "encoded_selection_error": 1.9952384993433951,
+            "fds_global_temperature_max_c_mae": 116.37777978083281,
+            "fds_global_temperature_mean_c_mae": 0.6148510075240686,
+            "fds_global_smoke_mean_kg_m3_mae": 1.7207999612347342e-07,
+            "fds_global_heat_release_w_mae": 333.4548607200365
+          }
+        ],
+        "layout_balanced": {
+          "temperature_mae_c": 0.7770177217514274,
+          "smoke_mae_kg_m3": 2.4939185390432116e-07,
+          "temperature_peak_error_c": 95.09106708878164,
+          "smoke_peak_error_kg_m3": 0.00037993117064184827,
+          "hot_temperature_mae_c": 63.37868295707443,
+          "smoky_smoke_mae_kg_m3": 8.905075315555703e-05,
+          "encoded_selection_error": 1.001617516670376,
+          "fds_global_temperature_max_c_mae": 58.34368873117863,
+          "fds_global_temperature_mean_c_mae": 0.4651634409148045,
+          "fds_global_smoke_mean_kg_m3_mae": 8.603999806173671e-08,
+          "fds_global_heat_release_w_mae": 166.72743036001825
+        },
+        "per_run": [
+          {
+            "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+            "layout_id": "procedural-0000",
+            "incident_type": "overheating",
+            "observations": 93868,
+            "temperature_mae_c": 1.8744651746819638,
+            "smoke_mae_kg_m3": 6.221446885680671e-07,
+            "temperature_peak_error_c": 404.7362396210681,
+            "smoke_peak_error_kg_m3": 0.0004895615678698624,
+            "hot_temperature_mae_c": 117.5519966352539,
+            "smoky_smoke_mae_kg_m3": 6.694043284724476e-05,
+            "hot_observations": 184,
+            "smoky_observations": 436,
+            "encoded_selection_error": 2.3216353356838226,
+            "fds_global_temperature_max_c_mae": 141.72456901135993,
+            "fds_global_temperature_mean_c_mae": 0.7279967574378119,
+            "fds_global_smoke_mean_kg_m3_mae": 2.1317850031473496e-07,
+            "fds_global_heat_release_w_mae": 667.7446763817036
+          },
+          {
+            "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+            "layout_id": "procedural-0000",
+            "incident_type": "arc",
+            "observations": 93868,
+            "temperature_mae_c": 0.8048130205249172,
+            "smoke_mae_kg_m3": 6.108397975827272e-08,
+            "temperature_peak_error_c": 45.79645684447629,
+            "smoke_peak_error_kg_m3": 8.292231120353683e-05,
+            "hot_temperature_mae_c": 18.203273933655517,
+            "smoky_smoke_mae_kg_m3": 1.1370262252540898e-05,
+            "hot_observations": 89,
+            "smoky_observations": 250,
+            "encoded_selection_error": 1.4255798682570457,
+            "fds_global_temperature_max_c_mae": 40.09459436288812,
+            "fds_global_temperature_mean_c_mae": 0.5195795040018617,
+            "fds_global_smoke_mean_kg_m3_mae": 5.527595903674173e-08,
+            "fds_global_heat_release_w_mae": 101.68961436325505
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+            "layout_id": "procedural-0000",
+            "incident_type": "flaming",
+            "observations": 93868,
+            "temperature_mae_c": 1.2662586783168226,
+            "smoke_mae_kg_m3": 4.249104143428434e-07,
+            "temperature_peak_error_c": 333.18806939294376,
+            "smoke_peak_error_kg_m3": 0.0006444316500599862,
+            "hot_temperature_mae_c": 104.48060188557882,
+            "smoky_smoke_mae_kg_m3": 8.818016622380585e-05,
+            "hot_observations": 91,
+            "smoky_observations": 226,
+            "encoded_selection_error": 2.249078392982483,
+            "fds_global_temperature_max_c_mae": 178.04676559443675,
+            "fds_global_temperature_mean_c_mae": 0.6354467092993347,
+            "fds_global_smoke_mean_kg_m3_mae": 1.4564273686687954e-07,
+            "fds_global_heat_release_w_mae": 645.6874397408776
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+            "layout_id": "procedural-0000",
+            "incident_type": "smoldering",
+            "observations": 93868,
+            "temperature_mae_c": 1.5342969540387656,
+            "smoke_mae_kg_m3": 1.024566777227841e-06,
+            "temperature_peak_error_c": 131.9827806453808,
+            "smoke_peak_error_kg_m3": 0.0019192763256450209,
+            "hot_temperature_mae_c": 54.840761297508266,
+            "smoky_smoke_mae_kg_m3": 0.00021180984447684273,
+            "hot_observations": 44,
+            "smoky_observations": 227,
+            "encoded_selection_error": 2.087295562028885,
+            "fds_global_temperature_max_c_mae": 133.88607112640554,
+            "fds_global_temperature_mean_c_mae": 0.6196373860363487,
+            "fds_global_smoke_mean_kg_m3_mae": 2.3589022172888417e-07,
+            "fds_global_heat_release_w_mae": 200.3879864486897
+          },
+          {
+            "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+            "layout_id": "procedural-0000",
+            "incident_type": "battery",
+            "observations": 93868,
+            "temperature_mae_c": 1.1019102857663212,
+            "smoke_mae_kg_m3": 3.569695449969115e-07,
+            "temperature_peak_error_c": 32.8528580737038,
+            "smoke_peak_error_kg_m3": 0.0006630406046274335,
+            "hot_temperature_mae_c": 21.81678103337568,
+            "smoky_smoke_mae_kg_m3": 6.69530599773509e-05,
+            "hot_observations": 35,
+            "smoky_observations": 250,
+            "encoded_selection_error": 1.89260333776474,
+            "fds_global_temperature_max_c_mae": 88.13689880907371,
+            "fds_global_temperature_mean_c_mae": 0.5715946808449862,
+            "fds_global_smoke_mean_kg_m3_mae": 2.104125626701268e-07,
+            "fds_global_heat_release_w_mae": 51.76458666565657
+          },
+          {
+            "run_id": "cargo-layout-0-arc",
+            "layout_id": "cargo-layout-0",
+            "incident_type": "arc",
+            "observations": 16368,
+            "temperature_mae_c": 0.23768662083709663,
+            "smoke_mae_kg_m3": 8.486268298551691e-10,
+            "temperature_peak_error_c": 0.470853262048724,
+            "smoke_peak_error_kg_m3": 1.5849402528727565e-08,
+            "hot_temperature_mae_c": null,
+            "smoky_smoke_mae_kg_m3": null,
+            "hot_observations": 0,
+            "smoky_observations": 0,
+            "encoded_selection_error": 0.007996533997356892,
+            "fds_global_temperature_max_c_mae": 0.3095976815244565,
+            "fds_global_temperature_mean_c_mae": 0.31547587430554036,
+            "fds_global_smoke_mean_kg_m3_mae": 0.0,
+            "fds_global_heat_release_w_mae": 0.0
+          }
+        ],
+        "diagnostics": {
+          "hot": {
+            "tp": 161,
+            "fp": 5,
+            "fn": 282,
+            "tn": 234572,
+            "recall": 0.36343115124153497,
+            "precision": 0.9698795180722891,
+            "iou": 0.359375
+          },
+          "smoky": {
+            "tp": 380,
+            "fp": 47,
+            "fn": 1009,
+            "tn": 233584,
+            "recall": 0.2735781137508999,
+            "precision": 0.8899297423887588,
+            "iou": 0.2646239554317549
+          }
+        },
+        "per_case_diagnostics": [
+          {
+            "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+            "hot": {
+              "tp": 95,
+              "fn": 89,
+              "fp": 1,
+              "tn": 45235
+            },
+            "smoky": {
+              "tp": 195,
+              "fn": 241,
+              "fp": 2,
+              "tn": 44982
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+            "hot": {
+              "tp": 0,
+              "fn": 89,
+              "fp": 0,
+              "tn": 45331
+            },
+            "smoky": {
+              "tp": 0,
+              "fn": 250,
+              "fp": 18,
+              "tn": 45152
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+            "hot": {
+              "tp": 25,
+              "fn": 66,
+              "fp": 0,
+              "tn": 45329
+            },
+            "smoky": {
+              "tp": 55,
+              "fn": 171,
+              "fp": 0,
+              "tn": 45194
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+            "hot": {
+              "tp": 41,
+              "fn": 3,
+              "fp": 4,
+              "tn": 45372
+            },
+            "smoky": {
+              "tp": 130,
+              "fn": 97,
+              "fp": 0,
+              "tn": 45193
+            }
+          },
+          {
+            "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+            "hot": {
+              "tp": 0,
+              "fn": 35,
+              "fp": 0,
+              "tn": 45385
+            },
+            "smoky": {
+              "tp": 0,
+              "fn": 250,
+              "fp": 27,
+              "tn": 45143
+            }
+          },
+          {
+            "run_id": "cargo-layout-0-arc",
+            "hot": {
+              "tp": 0,
+              "fn": 0,
+              "fp": 0,
+              "tn": 7920
+            },
+            "smoky": {
+              "tp": 0,
+              "fn": 0,
+              "fp": 0,
+              "tn": 7920
+            }
+          }
+        ],
+        "selection_loss": 0.3399439526365313,
+        "localization_selection_error": 1.3564344671261002,
+        "per_incident_type": {
+          "overheating": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 1.8744651746819638,
+                "smoke_mae_kg_m3": 6.221446885680671e-07,
+                "temperature_peak_error_c": 404.7362396210681,
+                "smoke_peak_error_kg_m3": 0.0004895615678698624,
+                "hot_temperature_mae_c": 117.5519966352539,
+                "smoky_smoke_mae_kg_m3": 6.694043284724476e-05,
+                "encoded_selection_error": 2.3216353356838226,
+                "fds_global_temperature_max_c_mae": 141.72456901135993,
+                "fds_global_temperature_mean_c_mae": 0.7279967574378119,
+                "fds_global_smoke_mean_kg_m3_mae": 2.1317850031473496e-07,
+                "fds_global_heat_release_w_mae": 667.7446763817036
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 1.8744651746819638,
+              "smoke_mae_kg_m3": 6.221446885680671e-07,
+              "temperature_peak_error_c": 404.7362396210681,
+              "smoke_peak_error_kg_m3": 0.0004895615678698624,
+              "hot_temperature_mae_c": 117.5519966352539,
+              "smoky_smoke_mae_kg_m3": 6.694043284724476e-05,
+              "encoded_selection_error": 2.3216353356838226,
+              "fds_global_temperature_max_c_mae": 141.72456901135993,
+              "fds_global_temperature_mean_c_mae": 0.7279967574378119,
+              "fds_global_smoke_mean_kg_m3_mae": 2.1317850031473496e-07,
+              "fds_global_heat_release_w_mae": 667.7446763817036
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 95,
+                "fp": 1,
+                "fn": 89,
+                "tn": 45235,
+                "recall": 0.5163043478260869,
+                "precision": 0.9895833333333334,
+                "iou": 0.5135135135135135
+              },
+              "smoky": {
+                "tp": 195,
+                "fp": 2,
+                "fn": 241,
+                "tn": 44982,
+                "recall": 0.44724770642201833,
+                "precision": 0.9898477157360406,
+                "iou": 0.4452054794520548
+              }
+            }
+          },
+          "arc": {
+            "runs": 2,
+            "layouts": 2,
+            "per_layout": [
+              {
+                "layout_id": "cargo-layout-0",
+                "temperature_mae_c": 0.23768662083709663,
+                "smoke_mae_kg_m3": 8.486268298551691e-10,
+                "temperature_peak_error_c": 0.470853262048724,
+                "smoke_peak_error_kg_m3": 1.5849402528727565e-08,
+                "hot_temperature_mae_c": null,
+                "smoky_smoke_mae_kg_m3": null,
+                "encoded_selection_error": 0.007996533997356892,
+                "fds_global_temperature_max_c_mae": 0.3095976815244565,
+                "fds_global_temperature_mean_c_mae": 0.31547587430554036,
+                "fds_global_smoke_mean_kg_m3_mae": 0.0,
+                "fds_global_heat_release_w_mae": 0.0
+              },
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 0.8048130205249172,
+                "smoke_mae_kg_m3": 6.108397975827272e-08,
+                "temperature_peak_error_c": 45.79645684447629,
+                "smoke_peak_error_kg_m3": 8.292231120353683e-05,
+                "hot_temperature_mae_c": 18.203273933655517,
+                "smoky_smoke_mae_kg_m3": 1.1370262252540898e-05,
+                "encoded_selection_error": 1.4255798682570457,
+                "fds_global_temperature_max_c_mae": 40.09459436288812,
+                "fds_global_temperature_mean_c_mae": 0.5195795040018617,
+                "fds_global_smoke_mean_kg_m3_mae": 5.527595903674173e-08,
+                "fds_global_heat_release_w_mae": 101.68961436325505
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 0.5212498206810069,
+              "smoke_mae_kg_m3": 3.0966303294063947e-08,
+              "temperature_peak_error_c": 23.13365505326251,
+              "smoke_peak_error_kg_m3": 4.1469080303032784e-05,
+              "hot_temperature_mae_c": 18.203273933655517,
+              "smoky_smoke_mae_kg_m3": 1.1370262252540898e-05,
+              "encoded_selection_error": 0.7167882011272013,
+              "fds_global_temperature_max_c_mae": 20.202096022206288,
+              "fds_global_temperature_mean_c_mae": 0.41752768915370103,
+              "fds_global_smoke_mean_kg_m3_mae": 2.7637979518370865e-08,
+              "fds_global_heat_release_w_mae": 50.84480718162752
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 89,
+                "tn": 53251,
+                "recall": 0.0,
+                "precision": null,
+                "iou": 0.0
+              },
+              "smoky": {
+                "tp": 0,
+                "fp": 18,
+                "fn": 250,
+                "tn": 53072,
+                "recall": 0.0,
+                "precision": 0.0,
+                "iou": 0.0
+              }
+            }
+          },
+          "flaming": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 1.2662586783168226,
+                "smoke_mae_kg_m3": 4.249104143428434e-07,
+                "temperature_peak_error_c": 333.18806939294376,
+                "smoke_peak_error_kg_m3": 0.0006444316500599862,
+                "hot_temperature_mae_c": 104.48060188557882,
+                "smoky_smoke_mae_kg_m3": 8.818016622380585e-05,
+                "encoded_selection_error": 2.249078392982483,
+                "fds_global_temperature_max_c_mae": 178.04676559443675,
+                "fds_global_temperature_mean_c_mae": 0.6354467092993347,
+                "fds_global_smoke_mean_kg_m3_mae": 1.4564273686687954e-07,
+                "fds_global_heat_release_w_mae": 645.6874397408776
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 1.2662586783168226,
+              "smoke_mae_kg_m3": 4.249104143428434e-07,
+              "temperature_peak_error_c": 333.18806939294376,
+              "smoke_peak_error_kg_m3": 0.0006444316500599862,
+              "hot_temperature_mae_c": 104.48060188557882,
+              "smoky_smoke_mae_kg_m3": 8.818016622380585e-05,
+              "encoded_selection_error": 2.249078392982483,
+              "fds_global_temperature_max_c_mae": 178.04676559443675,
+              "fds_global_temperature_mean_c_mae": 0.6354467092993347,
+              "fds_global_smoke_mean_kg_m3_mae": 1.4564273686687954e-07,
+              "fds_global_heat_release_w_mae": 645.6874397408776
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 25,
+                "fp": 0,
+                "fn": 66,
+                "tn": 45329,
+                "recall": 0.27472527472527475,
+                "precision": 1.0,
+                "iou": 0.27472527472527475
+              },
+              "smoky": {
+                "tp": 55,
+                "fp": 0,
+                "fn": 171,
+                "tn": 45194,
+                "recall": 0.24336283185840707,
+                "precision": 1.0,
+                "iou": 0.24336283185840707
+              }
+            }
+          },
+          "smoldering": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 1.5342969540387656,
+                "smoke_mae_kg_m3": 1.024566777227841e-06,
+                "temperature_peak_error_c": 131.9827806453808,
+                "smoke_peak_error_kg_m3": 0.0019192763256450209,
+                "hot_temperature_mae_c": 54.840761297508266,
+                "smoky_smoke_mae_kg_m3": 0.00021180984447684273,
+                "encoded_selection_error": 2.087295562028885,
+                "fds_global_temperature_max_c_mae": 133.88607112640554,
+                "fds_global_temperature_mean_c_mae": 0.6196373860363487,
+                "fds_global_smoke_mean_kg_m3_mae": 2.3589022172888417e-07,
+                "fds_global_heat_release_w_mae": 200.3879864486897
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 1.5342969540387656,
+              "smoke_mae_kg_m3": 1.024566777227841e-06,
+              "temperature_peak_error_c": 131.9827806453808,
+              "smoke_peak_error_kg_m3": 0.0019192763256450209,
+              "hot_temperature_mae_c": 54.840761297508266,
+              "smoky_smoke_mae_kg_m3": 0.00021180984447684273,
+              "encoded_selection_error": 2.087295562028885,
+              "fds_global_temperature_max_c_mae": 133.88607112640554,
+              "fds_global_temperature_mean_c_mae": 0.6196373860363487,
+              "fds_global_smoke_mean_kg_m3_mae": 2.3589022172888417e-07,
+              "fds_global_heat_release_w_mae": 200.3879864486897
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 41,
+                "fp": 4,
+                "fn": 3,
+                "tn": 45372,
+                "recall": 0.9318181818181818,
+                "precision": 0.9111111111111111,
+                "iou": 0.8541666666666666
+              },
+              "smoky": {
+                "tp": 130,
+                "fp": 0,
+                "fn": 97,
+                "tn": 45193,
+                "recall": 0.5726872246696035,
+                "precision": 1.0,
+                "iou": 0.5726872246696035
+              }
+            }
+          },
+          "battery": {
+            "runs": 1,
+            "layouts": 1,
+            "per_layout": [
+              {
+                "layout_id": "procedural-0000",
+                "temperature_mae_c": 1.1019102857663212,
+                "smoke_mae_kg_m3": 3.569695449969115e-07,
+                "temperature_peak_error_c": 32.8528580737038,
+                "smoke_peak_error_kg_m3": 0.0006630406046274335,
+                "hot_temperature_mae_c": 21.81678103337568,
+                "smoky_smoke_mae_kg_m3": 6.69530599773509e-05,
+                "encoded_selection_error": 1.89260333776474,
+                "fds_global_temperature_max_c_mae": 88.13689880907371,
+                "fds_global_temperature_mean_c_mae": 0.5715946808449862,
+                "fds_global_smoke_mean_kg_m3_mae": 2.104125626701268e-07,
+                "fds_global_heat_release_w_mae": 51.76458666565657
+              }
+            ],
+            "layout_balanced": {
+              "temperature_mae_c": 1.1019102857663212,
+              "smoke_mae_kg_m3": 3.569695449969115e-07,
+              "temperature_peak_error_c": 32.8528580737038,
+              "smoke_peak_error_kg_m3": 0.0006630406046274335,
+              "hot_temperature_mae_c": 21.81678103337568,
+              "smoky_smoke_mae_kg_m3": 6.69530599773509e-05,
+              "encoded_selection_error": 1.89260333776474,
+              "fds_global_temperature_max_c_mae": 88.13689880907371,
+              "fds_global_temperature_mean_c_mae": 0.5715946808449862,
+              "fds_global_smoke_mean_kg_m3_mae": 2.104125626701268e-07,
+              "fds_global_heat_release_w_mae": 51.76458666565657
+            },
+            "diagnostics": {
+              "hot": {
+                "tp": 0,
+                "fp": 0,
+                "fn": 35,
+                "tn": 45385,
+                "recall": 0.0,
+                "precision": null,
+                "iou": 0.0
+              },
+              "smoky": {
+                "tp": 0,
+                "fp": 27,
+                "fn": 250,
+                "tn": 45143,
+                "recall": 0.0,
+                "precision": 0.0,
+                "iou": 0.0
+              }
+            }
+          }
+        },
+        "evaluation_wall_seconds": 0.2672706000012113
+      },
+      "epochs": 80,
+      "steps": 1920,
+      "history": [
+        {
+          "epoch": 1,
+          "training_loss": 0.23063293117771133,
+          "steps": 24
+        },
+        {
+          "epoch": 2,
+          "training_loss": 0.18818731740013592,
+          "steps": 48
+        },
+        {
+          "epoch": 3,
+          "training_loss": 0.18412620102365812,
+          "steps": 72
+        },
+        {
+          "epoch": 4,
+          "training_loss": 0.16710491520870063,
+          "steps": 96
+        },
+        {
+          "epoch": 5,
+          "training_loss": 0.15419754091029367,
+          "steps": 120
+        },
+        {
+          "epoch": 6,
+          "training_loss": 0.15966388835933887,
+          "steps": 144
+        },
+        {
+          "epoch": 7,
+          "training_loss": 0.169065114384931,
+          "steps": 168
+        },
+        {
+          "epoch": 8,
+          "training_loss": 0.14660056247246556,
+          "steps": 192
+        },
+        {
+          "epoch": 9,
+          "training_loss": 0.14574785735199436,
+          "steps": 216
+        },
+        {
+          "epoch": 10,
+          "training_loss": 0.15201728790739757,
+          "steps": 240
+        },
+        {
+          "epoch": 11,
+          "training_loss": 0.14416978968721297,
+          "steps": 264
+        },
+        {
+          "epoch": 12,
+          "training_loss": 0.13999656055174353,
+          "steps": 288
+        },
+        {
+          "epoch": 13,
+          "training_loss": 0.14745111314372883,
+          "steps": 312
+        },
+        {
+          "epoch": 14,
+          "training_loss": 0.16164827550916622,
+          "steps": 336
+        },
+        {
+          "epoch": 15,
+          "training_loss": 0.14808063935488464,
+          "steps": 360
+        },
+        {
+          "epoch": 16,
+          "training_loss": 0.12908869786188007,
+          "steps": 384
+        },
+        {
+          "epoch": 17,
+          "training_loss": 0.12821257083883716,
+          "steps": 408
+        },
+        {
+          "epoch": 18,
+          "training_loss": 0.1439802653369649,
+          "steps": 432
+        },
+        {
+          "epoch": 19,
+          "training_loss": 0.1265932008313636,
+          "steps": 456
+        },
+        {
+          "epoch": 20,
+          "training_loss": 0.14098730029590015,
+          "steps": 480
+        },
+        {
+          "epoch": 21,
+          "training_loss": 0.25991247677140766,
+          "steps": 504
+        },
+        {
+          "epoch": 22,
+          "training_loss": 0.20266951141465042,
+          "steps": 528
+        },
+        {
+          "epoch": 23,
+          "training_loss": 0.213490641862154,
+          "steps": 552
+        },
+        {
+          "epoch": 24,
+          "training_loss": 0.16259262979858452,
+          "steps": 576
+        },
+        {
+          "epoch": 25,
+          "training_loss": 0.17413259625641836,
+          "steps": 600
+        },
+        {
+          "epoch": 26,
+          "training_loss": 0.17451087667399812,
+          "steps": 624
+        },
+        {
+          "epoch": 27,
+          "training_loss": 0.16247019608918992,
+          "steps": 648
+        },
+        {
+          "epoch": 28,
+          "training_loss": 0.15329659079305,
+          "steps": 672
+        },
+        {
+          "epoch": 29,
+          "training_loss": 0.1412549843132082,
+          "steps": 696
+        },
+        {
+          "epoch": 30,
+          "training_loss": 0.13750795324126053,
+          "steps": 720
+        },
+        {
+          "epoch": 31,
+          "training_loss": 0.17097244099713862,
+          "steps": 744
+        },
+        {
+          "epoch": 32,
+          "training_loss": 0.17137107831270745,
+          "steps": 768
+        },
+        {
+          "epoch": 33,
+          "training_loss": 0.17094263830868942,
+          "steps": 792
+        },
+        {
+          "epoch": 34,
+          "training_loss": 0.16051559226794376,
+          "steps": 816
+        },
+        {
+          "epoch": 35,
+          "training_loss": 0.1765733826155257,
+          "steps": 840
+        },
+        {
+          "epoch": 36,
+          "training_loss": 0.17773457341827453,
+          "steps": 864
+        },
+        {
+          "epoch": 37,
+          "training_loss": 0.16755450196150276,
+          "steps": 888
+        },
+        {
+          "epoch": 38,
+          "training_loss": 0.15179473155876622,
+          "steps": 912
+        },
+        {
+          "epoch": 39,
+          "training_loss": 0.1347051656132357,
+          "steps": 936
+        },
+        {
+          "epoch": 40,
+          "training_loss": 0.12548016018958555,
+          "steps": 960
+        },
+        {
+          "epoch": 41,
+          "training_loss": 0.13248188043944537,
+          "steps": 984
+        },
+        {
+          "epoch": 42,
+          "training_loss": 0.12435023303712822,
+          "steps": 1008
+        },
+        {
+          "epoch": 43,
+          "training_loss": 0.12151909543511769,
+          "steps": 1032
+        },
+        {
+          "epoch": 44,
+          "training_loss": 0.13518806546150397,
+          "steps": 1056
+        },
+        {
+          "epoch": 45,
+          "training_loss": 0.17244001753473034,
+          "steps": 1080
+        },
+        {
+          "epoch": 46,
+          "training_loss": 0.1705350306066167,
+          "steps": 1104
+        },
+        {
+          "epoch": 47,
+          "training_loss": 0.17015855093357257,
+          "steps": 1128
+        },
+        {
+          "epoch": 48,
+          "training_loss": 0.1675961284998468,
+          "steps": 1152
+        },
+        {
+          "epoch": 49,
+          "training_loss": 0.1669749905808001,
+          "steps": 1176
+        },
+        {
+          "epoch": 50,
+          "training_loss": 0.1561835643524925,
+          "steps": 1200
+        },
+        {
+          "epoch": 51,
+          "training_loss": 0.11903539100247952,
+          "steps": 1224
+        },
+        {
+          "epoch": 52,
+          "training_loss": 0.10764008825644851,
+          "steps": 1248
+        },
+        {
+          "epoch": 53,
+          "training_loss": 0.10691966972210341,
+          "steps": 1272
+        },
+        {
+          "epoch": 54,
+          "training_loss": 0.10406823139379008,
+          "steps": 1296
+        },
+        {
+          "epoch": 55,
+          "training_loss": 0.10246723487766253,
+          "steps": 1320
+        },
+        {
+          "epoch": 56,
+          "training_loss": 0.11015943247928388,
+          "steps": 1344
+        },
+        {
+          "epoch": 57,
+          "training_loss": 0.11484539598071326,
+          "steps": 1368
+        },
+        {
+          "epoch": 58,
+          "training_loss": 0.1055574677263697,
+          "steps": 1392
+        },
+        {
+          "epoch": 59,
+          "training_loss": 0.10581161320312983,
+          "steps": 1416
+        },
+        {
+          "epoch": 60,
+          "training_loss": 0.12152315770379371,
+          "steps": 1440
+        },
+        {
+          "epoch": 61,
+          "training_loss": 0.12492823479179707,
+          "steps": 1464
+        },
+        {
+          "epoch": 62,
+          "training_loss": 0.10919721792969439,
+          "steps": 1488
+        },
+        {
+          "epoch": 63,
+          "training_loss": 0.10812102431534892,
+          "steps": 1512
+        },
+        {
+          "epoch": 64,
+          "training_loss": 0.10248004370886418,
+          "steps": 1536
+        },
+        {
+          "epoch": 65,
+          "training_loss": 0.10116277240578914,
+          "steps": 1560
+        },
+        {
+          "epoch": 66,
+          "training_loss": 0.09943039011753475,
+          "steps": 1584
+        },
+        {
+          "epoch": 67,
+          "training_loss": 0.10122526210939718,
+          "steps": 1608
+        },
+        {
+          "epoch": 68,
+          "training_loss": 0.09706621925191333,
+          "steps": 1632
+        },
+        {
+          "epoch": 69,
+          "training_loss": 0.09390118651402493,
+          "steps": 1656
+        },
+        {
+          "epoch": 70,
+          "training_loss": 0.09177461725840759,
+          "steps": 1680
+        },
+        {
+          "epoch": 71,
+          "training_loss": 0.09355270822222034,
+          "steps": 1704
+        },
+        {
+          "epoch": 72,
+          "training_loss": 0.09046936874316695,
+          "steps": 1728
+        },
+        {
+          "epoch": 73,
+          "training_loss": 0.09106279294679148,
+          "steps": 1752
+        },
+        {
+          "epoch": 74,
+          "training_loss": 0.0923637221295697,
+          "steps": 1776
+        },
+        {
+          "epoch": 75,
+          "training_loss": 0.09728347996844806,
+          "steps": 1800
+        },
+        {
+          "epoch": 76,
+          "training_loss": 0.09320950358523987,
+          "steps": 1824
+        },
+        {
+          "epoch": 77,
+          "training_loss": 0.09275767798535525,
+          "steps": 1848
+        },
+        {
+          "epoch": 78,
+          "training_loss": 0.08931459138855441,
+          "steps": 1872
+        },
+        {
+          "epoch": 79,
+          "training_loss": 0.09057284063310363,
+          "steps": 1896
+        },
+        {
+          "epoch": 80,
+          "training_loss": 0.09172672899698632,
+          "steps": 1920
+        }
+      ]
+    }
+  },
+  "recipe": {
+    "seed": 20261115,
+    "lr": 0.001,
+    "loss": "observed-region-balanced-smoothl1-1",
+    "localization_version": "historical-regression-soft-tversky-1",
+    "objectives": [
+      "historical",
+      "localized"
+    ],
+    "batch_size": 8,
+    "epochs_requested": 80
+  },
+  "source_sha256": {
+    "tools/remote/train_spatial.py": "78c51544cec48e41124a2ae2d2a2a14ca35d8c116486875b46b2c3b5408aa32f",
+    "backend/ignis/ml/spatial_network.py": "d03c25cc2aafd90c437222c83bd432bb227fb2fd53bd4100ceee8137b166f1b7",
+    "backend/ignis/ml/spatial_dataset.py": "882c00bada16e86ba6ddba69c22239f06bc199ac66151f7ed9dad8fe9c6629f6",
+    "backend/ignis/physics/compiler.py": "ea452085ae97276135c71c63171879695e635fbdc83836ccf44d8b8c2fb54a16",
+    "backend/ignis/physics/incidents.py": "5246f76018711f50d353abf317d5fd36a48632d7f8af6134d452ec0b6a9a05d4",
+    "backend/ignis/physics/materials.py": "13b2eaa4eca452bb296f6006f24251670dcce05f9cc53efd2b5bc7e46998ee48",
+    "tools/remote/recover_spatial.py": "d09bd7ccfd7e09199f14cd997924be4d77294ad60e6771043f1ef5d95103776b",
+    "backend/ignis/ml/spatial_training.py": "a4db8937de05582a67e9febe224caeef29be46c2022dd11c30ed45e2f6092c73"
+  }
+}

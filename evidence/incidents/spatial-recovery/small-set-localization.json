@@ -1,0 +1,128 @@
+[
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-overheating-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      184,
+      436
+    ],
+    "temperature_max_c": 445.06707763671875,
+    "smoke_max_kg_m3": 0.0004907789407297969
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-00-arc-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "arc",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      89,
+      250
+    ],
+    "temperature_max_c": 68.86162567138672,
+    "smoke_max_kg_m3": 8.304486254928634e-05
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-flaming-microg-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "flaming",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      91,
+      226
+    ],
+    "temperature_max_c": 362.9471130371094,
+    "smoke_max_kg_m3": 0.0006449767388403416
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-01-smoldering-microg-c1",
+    "layout_id": "procedural-0000",
+    "incident_type": "smoldering",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      44,
+      227
+    ],
+    "temperature_max_c": 164.73863220214844,
+    "smoke_max_kg_m3": 0.0019202864496037364
+  },
+  {
+    "dataset": "spatial-corpus-v1",
+    "run_id": "procedural-0000-electrical-02-battery-microg-c0",
+    "layout_id": "procedural-0000",
+    "incident_type": "battery",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45420,
+      45420
+    ],
+    "active": [
+      35,
+      250
+    ],
+    "temperature_max_c": 57.815120697021484,
+    "smoke_max_kg_m3": 0.0006632973672822118
+  },
+  {
+    "dataset": "incidents-v1",
+    "run_id": "cargo-layout-0-arc",
+    "layout_id": "cargo-layout-0",
+    "incident_type": "arc",
+    "sample_shape": [
+      8,
+      10,
+      4
+    ],
+    "observed": [
+      7920,
+      7920
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.013809204101562,
+    "smoke_max_kg_m3": 0.0
+  }
+]

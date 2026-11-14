@@ -162,4 +162,90 @@ jusqu’à 1 000. Son défaut de 200 dispositions donne 400 cas. Il sélectionne
 cas exactement identiques au plan initial pour permettre une réutilisation
 ultérieure après vérification. L’identité `spatial-compact-v1` exige ce dataset
 et une grille 12×16×8 ; elle ne remplace aucun modèle existant. Le plan est testé,
-mais aucune campagne compacte ni aucun entraînement correspondant n’a été lancé.
+et exécuté par `generate_compact_spatial.py`. Le premier lot de 100 cas sur
+50 dispositions, puis son extension à 200 cas sur 100 dispositions sont terminés ;
+192 cas ont été simulés et 8 réutilisés du corpus initial. Les deux lots sont
+conservés séparément. Les preuves de la reprise sont conservées dans
+[spatial-recovery](../evidence/incidents/spatial-recovery/). Cette génération
+n'active aucun modèle dans l'interface.
+
+## Reprise bornée et modèle `spatial-recovery-v1`
+
+`recover_spatial.py` conserve l'architecture et les cibles physiques, avec un
+apprentissage neuf sur le compact complet et les seules partitions **train**
+des deux jeux historiques. Les doublons exacts sont retirés et les signatures
+géométriques ne peuvent traverser les partitions. Les familles structurelles
+du compact restent séparées : six pour apprendre, deux pour choisir les poids,
+deux pour le test final. L'audit historique de 60 cas est un diagnostic de
+développement distinct ; il n'est jamais ajouté à l'entraînement.
+
+Les cibles et canaux statiques de ce lot borné sont conservés en RAM hôte.
+Les entrées complètes sont construites par minibatches de huit instants ; seize
+instants par cas sont tirés à chaque époque. Chaque disposition reçoit le même
+poids total. Les grilles historiques 8×10×4 et procédurales 12×16×8 sont traitées
+séparément, sans interpolation de labels. Seul `spatial-recovery-v1` accepte la
+liste explicite `supported_sample_shapes` enregistrée dans ses métadonnées ;
+les contrats de grille des anciens modèles restent stricts.
+
+Trois objectifs sont disponibles pour les diagnostics : historique, équilibré
+par région, et `localized`. Ce dernier ajoute à la régression historique
+0,25 fois une perte de support spatial Tversky/BCE. Les seuils restent ambiance
++5 °C et 10⁻⁷ kg/m³ ; ils servent au diagnostic et ne sont pas des seuils de
+danger. La sigmoïde interne n'est pas une probabilité calibrée d'incendie.
+La [recherche et les ablations](SPATIAL_RESEARCH.md) expliquent les choix.
+
+La sélection utilise le composite encodé historique, plus
+`0,5 × (1 − IoU_chaleur) + 0,5 × (1 − IoU_fumée)`, moyenné par cas puis
+disposition. Une union vide a une IoU de 1 pour cette sélection. Le taux
+d'apprentissage diminue après cinq évaluations sans amélioration, et l'arrêt
+anticipé intervient après vingt époques sans nouveau meilleur score. Le test
+est évalué seulement après sélection et rechargement des meilleurs poids.
+
+L'heure d'arrivée de fumée est le premier franchissement **échantillonné** du
+seuil, sur les points observés pendant tout l'horizon. Son erreur est calculée
+seulement lorsque simulation et prédiction franchissent le seuil. Les arrivées
+manquées, fausses arrivées et absences dans l'horizon sont comptées séparément :
+l'absence de franchissement reste censurée et n'est pas remplacée par 30 s.
+
+Le générateur compact utilise quatre solveurs FDS CPU mono-thread sous un même
+verrou de calcul. `--reuse-compact` copie et vérifie les cas d'un lot complet
+sans recalcul ni lien vers les fichiers sources. Le budget interrompt les
+solveurs au terme prévu, puis termine l'archivage ; cet éventuel dépassement
+est enregistré. Le trainer refuse un compact incomplet, exige CUDA et réserve
+120 s de son budget à l'évaluation et à la sauvegarde. Il publie dans un nouveau
+répertoire, refuse de remplacer une version existante et vérifie le résultat
+après rechargement par le chargeur public. Aucune activation UI automatique.
+
+### Résultat final du 14 novembre 2026
+
+L'essai a consommé 44 min 58 s de phases de calcul, 50 min 55 s avec les
+intervalles entre processus. L'entraînement final neuf sur RTX 4070 Ti a pris
+452,40 s, évaluation et publication comprises : 52 époques, époque 32 retenue
+sur validation. Les ablations équilibrée et `localized` ont été rejetées ;
+l'objectif final est la perte historique. La sélection inclut les IoU comme
+décrit ci-dessus, sans adaptation au test.
+
+Apprentissage effectif : 170 cas / 66 dispositions (120 compact, 30 ancien
+pilote et 20 ancien corpus après déduplication). Validation : 40 cas / 20
+dispositions. Test réservé : 40 cas / 20 dispositions, familles `baffled` et
+`double-island`. Le modèle figé a ensuite été relu sur les 60 diagnostics
+historiques, sans nouvelle simulation, et reste hors interface.
+
+| Test réservé | Rappel chaleur | Rappel fumée | Précision fumée |
+| --- | ---: | ---: | ---: |
+| Ensemble | 1,94 % | 87,09 % | 57,37 % |
+| Terre | 0,042 % | 87,63 % | 61,11 % |
+| Microgravité | 16,45 % | 71,99 % | 18,52 % |
+
+Ces mesures portent sur les points × instants observés aux seuils exploratoires,
+pas sur des incendies indépendants. La majorité des observations enfumées est
+terrestre. La MAE globale de température, 0,178 °C, est moins bonne que la
+référence ambiante (0,113 °C) ; celle des pics, 33,71 °C, ne s'améliore que
+faiblement (référence 35,86 °C). Le réseau reste proche de l'ambiance sur certains
+pics de plusieurs centaines de degrés. Il n'est pas validé pour une carte de
+risque ou une géométrie arbitraire.
+
+Le [bilan et les figures](../evidence/incidents/spatial-recovery/README.md)
+détaillent arrivée de fumée, faux positifs, erreurs physiques, relecture
+avant/après, limites et registre exact du calcul. Les sources entraînées et le
+modèle restent figés ; ce test désormais consulté ne sert pas à ajuster les poids.

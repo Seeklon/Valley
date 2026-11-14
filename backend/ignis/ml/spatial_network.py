@@ -20,7 +20,7 @@ from ignis.physics.materials import INERT_MATERIALS, MATERIALS, MODEL_VERSION
 
 FEATURE_VERSION = "incident-voxel-features-1"
 ARCHITECTURE_VERSION = "incident-unet3d-1"
-MODEL_IDS = ("spatial-pilot-v1", "spatial-corpus-v1", "spatial-compact-v1")
+MODEL_IDS = ("spatial-pilot-v1", "spatial-corpus-v1", "spatial-compact-v1", "spatial-recovery-v1")
 MATERIAL_IDS = tuple(sorted((*MATERIALS, *INERT_MATERIALS)))
 STATIC_CHANNELS = (
     "x_over_width",
@@ -415,7 +415,10 @@ class SpatialSurrogate:
 
     def predict_arrays(self, config: dict, manifest: dict, times, *, batch_size=4):
         shape, _, _, mask, _, _ = sampling_grid(manifest)
-        if list(shape) != self.metadata["sample_shape"]:
+        allowed_shapes = [self.metadata["sample_shape"]]
+        if self.metadata["id"] == "spatial-recovery-v1":
+            allowed_shapes = self.metadata.get("supported_sample_shapes", allowed_shapes)
+        if list(shape) not in allowed_shapes:
             raise ValueError("Sampling shape differs from training; no silent interpolation")
         if not 1 <= batch_size <= 8:
             raise ValueError("Spatial inference batch must be between 1 and 8")

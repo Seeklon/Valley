@@ -23,7 +23,6 @@ from ignis.ml.incidents import COMPILER_VERSION, GLOBAL_KEYS, INCIDENT_TYPES, fi
 from ignis.ml.spatial_dataset import load_spatial_case, read_spatial_index
 from ignis.ml.spatial_network import (
     FEATURE_VERSION,
-    MODEL_IDS,
     SpatialUNet,
     architecture,
     checkpoint,
@@ -543,7 +542,7 @@ def train(
     if output.exists():
         raise FileExistsError("Existing model is preserved; training will not overwrite it")
     if (
-        model_id not in MODEL_IDS
+        model_id not in MODEL_DATASETS
         or not 5 <= epochs <= 40
         or not 2 <= batch_size <= 8
         or not 2 <= patience <= 10
@@ -714,7 +713,7 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--home", type=Path, default=Path("E:/IGNIS-Valley-dev"))
     parser.add_argument("--dataset", type=Path)
-    parser.add_argument("--model-id", choices=MODEL_IDS, default="spatial-pilot-v1")
+    parser.add_argument("--model-id", choices=tuple(MODEL_DATASETS), default="spatial-pilot-v1")
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--patience", type=int, default=5)

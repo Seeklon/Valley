@@ -383,6 +383,29 @@ def model_metadata(shape=(8, 10, 4)):
     }
 
 
+def test_recovery_loader_accepts_only_declared_trained_grids(training, case, tmp_path):
+    _, config, manifest, _ = case
+    metadata = model_metadata((12, 16, 8))
+    metadata.update(id="spatial-recovery-v1", supported_sample_shapes=[[8, 10, 4], [12, 16, 8]])
+    output = tmp_path / "recovery-model"
+    training.publish(output, metadata, checkpoint(SpatialUNet(), metadata["id"]), {}, {})
+    loaded = SpatialSurrogate(output)
+    fields, _ = loaded.predict_arrays(config, manifest, [0.0, 1.0])
+    assert fields.shape == (2, 320, 2)
+    loaded.metadata["supported_sample_shapes"] = [[12, 16, 8]]
+    with pytest.raises(ValueError, match="Sampling shape"):
+        loaded.predict_arrays(config, manifest, [0.0, 1.0])
+    # Extra metadata must not silently broaden an old model's grid contract.
+    loaded.metadata.update(id="spatial-pilot-v1", supported_sample_shapes=[[8, 10, 4]])
+    with pytest.raises(ValueError, match="Sampling shape"):
+        loaded.predict_arrays(config, manifest, [0.0, 1.0])
+
+
+def test_original_trainer_refuses_recovery_entrypoint(training):
+    with pytest.raises(SystemExit):
+        training.parse_args(["--model-id", "spatial-recovery-v1"])
+
+
 def test_atomic_publication_safe_roundtrip_cpu_and_hash(training, case, tmp_path, monkeypatch):
     output = tmp_path / "model"
     metadata = model_metadata()

@@ -4,6 +4,36 @@
 livraison sur la branche `codex/ignis-3d-lab`. Lors d’une reprise, relire Git
 et `/api/health` pour connaître l’état actuel du code et du service.
 
+## Dernier essai spatial borné — terminé, modèle non activé
+
+Essai du 14 novembre terminé : **44 min 58 s de phases**, **50 min 55 s écoulées**,
+génération et entraînement compris. Ne pas lancer de calcul supplémentaire au
+nom de ce budget ni reprendre automatiquement les 20 000 cas. Le contrôle final
+à 19:49 UTC confirme zéro processus de calcul, deux API saines, campagne initiale
+**en pause à 64 cas**, anciens modèles préservés.
+
+Le compact final `E:/IGNIS-Valley-dev/datasets/spatial-compact-200-v1` contient
+200 cas / 100 dispositions : 192 nouveaux FDS et 8 réutilisés de l'ancien corpus.
+Le premier compact de 100 cas est conservé séparément. L'identifiant interne des
+deux datasets reste `spatial-compact-v1` ; consulter chemin et empreinte du plan.
+Entraînement CUDA neuf `spatial-recovery-v1` : 170 cas / 66 dispositions après
+réutilisation des seuls trains historiques, validation 40 cas / 20 dispositions,
+test réservé 40 cas / 20 dispositions. 52 époques, époque 32 retenue ; 7 min 32 s.
+Poids dans `E:/IGNIS-Valley-dev/runtime/models/spatial-recovery-v1`.
+
+Résultat insuffisant : rappel chaleur global 1,94 %. La fumée globale atteint
+87,09 % de rappel / 57,37 % de précision, mais la microgravité seule donne
+71,99 % / 18,52 %. Les pics restent sous-estimés. Aucune activation UI ; le
+parcours Prédiction conserve son modèle précédent exploratoire. Le test final
+est maintenant connu ; tout ajustement futur exige un autre test réservé.
+
+Lire le [bilan mesuré](evidence/incidents/spatial-recovery/README.md), le
+[registre de calcul](evidence/incidents/spatial-recovery/compute-ledger.json)
+et la [recherche ML](docs/SPATIAL_RESEARCH.md). Prochaine priorité proposée :
+supervision près des foyers et rareté des observations chaudes, avant davantage
+de génération uniforme. Les archives ont U/V/W ; les cibles actuelles n'utilisent
+que température/suie. Aucun nouvel apprentissage ni calcul lancé après le test.
+
 ## Parcours incidents et corpus spatial — travail du 14 novembre 2026
 
 La version de développement isolée est `E:/IGNIS-Valley-dev`, port 8766,
@@ -44,7 +74,7 @@ puis entraînement CUDA `spatial-corpus-v1`. Il refuse un corpus incomplet et
 respecte PAUSE/STOP avant le training ; chaque enfant possède son verrou de
 calcul, aucun verrou de calcul imbriqué. Ne pas relancer un poids existant.
 
-**Campagne continue lancée** sur Windows le 14 novembre. Journal détaché :
+**Campagne initialement lancée, désormais en pause à 64 cas**. Journal détaché :
 `E:/IGNIS-Valley-dev/runtime/training/study-735d5f67483b4030ad0140e05de7bb38/worker.log`.
 État léger : `datasets/spatial-corpus-v1/progress.json`, également accessible par
 `GET /api/incidents/campaign`. Le test navigateur a repris les deux premiers
