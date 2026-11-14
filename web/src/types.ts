@@ -77,6 +77,8 @@ export interface RunConfig {
   model_id?: string | null;
   mesh_cell_m?: number;
   sample_shape?: Vec3;
+  incident_type?: 'overheating' | 'arc' | 'flaming' | 'smoldering' | 'battery';
+  component_id?: string;
 }
 
 export interface Metric {

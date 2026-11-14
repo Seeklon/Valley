@@ -16,6 +16,8 @@ class ModelRegistry:
         for path in sorted(self.directory.glob("*/metadata.json")):
             try:
                 meta = json.loads(path.read_text(encoding="utf-8"))
+                if meta.get("id") == "incident-field-v1":
+                    continue  # Loaded by IncidentService with its geometry-aware contract.
                 from .surrogate import Surrogate
                 model = Surrogate.load(path.parent)
                 self.models[meta["id"]] = {"meta": meta, "predictor": model}

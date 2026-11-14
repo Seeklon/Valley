@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import { openTool } from './navigation.mjs';
 
 // This check uses the real API and GLB assets. It never installs route mocks.
 const baseUrl = process.env.IGNIS_BROWSER_URL ?? 'http://127.0.0.1:5173';
@@ -36,7 +37,7 @@ try {
   evidence.runtime = health;
   assert.ok(catalog.scenes.length > 0, 'A real scene catalogue is required.');
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
-  await page.getByRole('button', { name: 'Laboratoire', exact: true }).click();
+  await openTool(page, 'Laboratoire');
   await page.locator('#scene-select').selectOption(catalog.scenes[0].id);
   await page.locator('.viewport-loading').waitFor({ state: 'hidden' });
   assert.equal(await page.locator('canvas').count(), 1);
@@ -113,7 +114,7 @@ try {
     evidence.screenshots.push('ignis-interpretation-desktop.png');
   }
 
-  await page.getByRole('button', { name: 'Modèles', exact: true }).click();
+  await openTool(page, 'Modèles');
   const models = await (await page.request.get(`${baseUrl}/api/models`)).json();
   assert.equal(await page.locator('.model-card').count(), models.models.length);
   evidence.checks.push({
@@ -172,7 +173,7 @@ try {
   await page.screenshot({ path: path.join(artifacts, 'ignis-sources-desktop.png'), fullPage: true });
   evidence.screenshots.push('ignis-sources-desktop.png');
 
-  await page.getByRole('button', { name: 'Scènes', exact: true }).click();
+  await openTool(page, 'Scènes');
   assert.equal(await page.locator('.scene-card').count(), catalog.scenes.length);
   await page.getByRole('button', { name: 'Ouvrir le laboratoire' }).first().click();
   await page.locator('.viewport-loading').waitFor({ state: 'hidden' });

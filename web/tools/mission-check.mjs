@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import { openTool } from './navigation.mjs';
 
 // Real Windows records and trained models, without generated fixtures or new training.
 const baseUrl = (process.env.IGNIS_BROWSER_URL ?? 'http://127.0.0.1:5173').replace(/\/$/, '');
@@ -54,9 +55,12 @@ async function setTime(value) {
 
 try {
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
+  await openTool(page, 'Mission');
   await ready();
   assert.equal(
-    await page.getByRole('button', { name: 'Mission', exact: true }).getAttribute('aria-current'),
+    await page
+      .getByRole('button', { name: 'Mission', exact: true, includeHidden: true })
+      .getAttribute('aria-current'),
     'page',
   );
   assert.equal(await page.getByLabel('Environnement de mission').inputValue(), 'soyuz');
@@ -136,7 +140,7 @@ try {
     String(run.config.ignition_power_w),
   );
   record('laboratory_receives_the_displayed_replay_configuration');
-  await page.getByRole('button', { name: 'Mission', exact: true }).click();
+  await openTool(page, 'Mission');
   await ready();
 
   await page.getByRole('button', { name: 'Avant allumage', exact: true }).click();
@@ -169,7 +173,7 @@ try {
   await page.getByRole('button', { name: 'Paramètres & courbes détaillées', exact: true }).click();
   assert.equal(await page.locator('#prevention-current_a').inputValue(), '6');
   await page.locator('#prevention-horizon_s').fill('8');
-  await page.getByRole('button', { name: 'Mission', exact: true }).click();
+  await openTool(page, 'Mission');
   assert.equal(
     await page.getByRole('button', { name: 'Avant allumage', exact: true }).getAttribute('aria-pressed'),
     'true',

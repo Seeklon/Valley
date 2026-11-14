@@ -1,0 +1,11 @@
+{
+  "blender_version": "4.5.9 LTS",
+  "scene": "soyuz",
+  "components": 2,
+  "materials_and_thickness_preserved": true,
+  "all_sources_compiled": true,
+  "source_coordinates_tolerance_m": 1e-06,
+  "original_path": "E:/IGNIS-Valley-dev/app/scenes/generated/soyuz.blend",
+  "annotated_copy": "E:/IGNIS-Valley-dev/scenes/annotated/soyuz.blend",
+  "passed": true
+}

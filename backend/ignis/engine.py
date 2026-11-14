@@ -127,6 +127,9 @@ class FDSRunner:
         if progress:
             progress(0.97, "Lecture des mesures et contrôle du résultat.")
         result = parse_result(directory)
+        manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+        if manifest.get("incident"):
+            result["provenance"]["incident"] = manifest["incident"]
         result.setdefault("provenance", {}).update({
             "wall_time_s": round(time.monotonic() - started, 3),
             "threads": self.settings.omp_threads,
@@ -140,9 +143,10 @@ class FDSRunner:
 
 
 class Worker:
-    def __init__(self, settings: Settings, store: RunStore, catalog: dict, models):
+    def __init__(self, settings: Settings, store: RunStore, catalog: dict, models, incidents=None):
         self.settings, self.store, self.catalog, self.models = settings, store, catalog, models
         self.runner = FDSRunner(settings)
+        self.incidents = incidents
         self.stopping = threading.Event()
         self.thread = threading.Thread(target=self.loop, name="ignis-worker", daemon=True)
 
@@ -170,12 +174,16 @@ class Worker:
                 directory.mkdir(parents=True, exist_ok=True)
                 config = RunConfig.model_validate(run["config"])
                 scene = next(s for s in self.catalog["scenes"] if s["id"] == config.scene_id)
+                if config.incident_type:
+                    if self.incidents is None:
+                        raise ValueError("Le service des incidents n'est pas disponible.")
+                    scene = self.incidents.scene(config)
                 def cancel():
                     return self.stopping.is_set() or self.store.get(identifier)["cancel_requested"]
 
                 def progress(p, msg):
                     self.store.update(identifier, progress=p, message=msg)
-                write_json(directory / "config.json", config.model_dump(mode="json"))
+                write_json(directory / "config.json", config.physical_config())
                 write_json(directory / "scene.json", scene)
                 if cancel():
                     raise Cancelled()
@@ -184,9 +192,16 @@ class Worker:
                                              progress=progress, cancel=cancel)
                 else:
                     progress(0.25, "Prédiction avec les poids chargés.")
-                    result = self.models.predict(scene, config)
+                    result = (self.incidents.predict(config) if config.incident_type
+                              else self.models.predict(scene, config))
                     if cancel():
                         raise Cancelled()
+                    write_json(directory / "result.json", result)
+                if config.incident_type:
+                    self.incidents.complete(scene, config.physical_config(), result)
+                    if config.mode == "physics":
+                        manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+                        result["provenance"]["incident"] = manifest.get("incident")
                     write_json(directory / "result.json", result)
                 self.store.update(identifier, status="completed", progress=1,
                                   result_path=str(directory / "result.json"), message="Résultat disponible.")

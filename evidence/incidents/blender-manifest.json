@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "scene_id": "soyuz-incident-check",
+  "blender_version": "4.5.9 LTS",
+  "artifacts": [
+    {
+      "file": "soyuz-incident-check.blend",
+      "bytes": 3047918,
+      "sha256": "85e140e6652cae78c376fad37fda74062ef749f48808eb6bf558860cd959e340"
+    },
+    {
+      "file": "soyuz-incident-check.glb",
+      "bytes": 2080716,
+      "sha256": "c8d9032b43ed29c81fdb73923bcb4b4c1bf6cb0a0f339d282a7deec01b04df00"
+    },
+    {
+      "file": "catalog.json",
+      "bytes": 13759,
+      "sha256": "cb5acfc9ccdb72c0efd39b6ba878aa668862b4bb338fc4c972535e843d9d90cf"
+    }
+  ],
+  "verification": {
+    "annotation_validation": "passed",
+    "simulation_validation": "not_run",
+    "render_inspected": false
+  }
+}

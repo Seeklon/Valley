@@ -779,6 +779,9 @@ def build(scene, args):
     build_vents(scene)
     build_sensors(scene)
     build_proxies(scene)
+    if scene.get("incident_annotations"):
+        from annotate_incidents import annotate
+        annotate(scene)
     cameras = setup_studio(args, scene)
     args.output.mkdir(parents=True, exist_ok=True)
     blend_path = args.output / f"{scene['id']}.blend"

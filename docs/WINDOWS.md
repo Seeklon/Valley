@@ -4,6 +4,28 @@ Poste de calcul : Windows, Ryzen 7 3700X, 16 Go de RAM, RTX 4070 Ti de 12 Go. Le
 isolé dans `E:/IGNIS-Valley`. Le VPS conserve le code et les petites preuves ;
 les rendus, simulations et entraînements sont exécutés sur le PC.
 
+## Version de développement par point sensible
+
+La nouvelle version est isolée dans `E:/IGNIS-Valley-dev` et accessible à
+<https://desktop-m4hkr86.tail609f26.ts.net:8444> (local : port 8766).
+La version précédente reste sur 8443 / 8765. Les calculs et poids du développement
+ne remplacent pas les archives et modèles de la version précédente.
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:/IGNIS-Valley-dev/app/tools/windows/start-ignis.ps1 -Root E:/IGNIS-Valley-dev/app -Runtime E:/IGNIS-Valley-dev/runtime -Port 8766
+```
+
+Arrêt de cette instance uniquement :
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:/IGNIS-Valley-dev/app/tools/windows/stop-ignis.ps1 -Runtime E:/IGNIS-Valley-dev/runtime
+```
+
+La route Tailscale 8444 est indépendante des routes 443 et 8443. Le port est
+paramétrable avec `-Port` ; le défaut historique reste 8765.
+Lire [INCIDENTS.md](INCIDENTS.md) pour le nouveau parcours et
+[SPATIAL_CORPUS.md](SPATIAL_CORPUS.md) pour la génération en volume.
+
 ## Ouvrir et gérer l’application
 
 - Sur le PC : `http://127.0.0.1:8765`.
@@ -206,3 +228,33 @@ Les [limites de prévention](PREIGNITION.md) et le [protocole ML](PREVENTION_MOD
 doivent accompagner les démonstrations. Le navigateur automatisé peut tourner
 sur le poste de coordination contre l'URL Tailscale ; calcul et inférence
 restent exécutés sur Windows.
+
+## Corpus procédural et entraînement GPU
+
+Le [corpus spatial](SPATIAL_CORPUS.md) et le [U-Net 3D](SPATIAL_MODEL.md) utilisent
+le répertoire de développement. FDS produit les données sur CPU ; PyTorch
+effectue l'apprentissage sur CUDA. Le poste possède déjà PyTorch 2.7.0+cu128.
+La dépendance optionnelle Python `training` déclare la version PyTorch ; choisir
+la distribution CUDA adaptée au poste lors d'une nouvelle installation.
+
+Pour poursuivre la génération puis entraîner sur le corpus **entièrement achevé** :
+
+```powershell
+Set-Location E:/IGNIS-Valley-dev/app
+$env:PYTHONPATH='E:/IGNIS-Valley-dev/app/backend'
+& E:/IGNIS-Valley/.venv/Scripts/python.exe tools/remote/run_spatial_study.py --home E:/IGNIS-Valley-dev
+```
+
+Cette commande de console nécessite une session ouverte. L'exécution distante
+en cours est détachée via WMI ; consulter les journaux sous `runtime/training`
+et l'état sous `datasets/spatial-corpus-v1/progress.json` avant toute relance.
+Le verrou `runtime/spatial-study.lock` refuse un second orchestrateur.
+Le générateur possède son propre verrou et attend entre calculs si le poste
+effectue un autre travail IGNIS. La réserve disque est de 20 Gio.
+
+Le fichier `PAUSE` dans le dossier du corpus suspend entre deux calculs et avant
+le training ; l'interface peut l'ajouter ou le retirer. `STOP` termine le calcul
+FDS courant puis quitte sans lancer le training. Les cas achevés restent vérifiés
+et réutilisés à la reprise. Une fois l'entraînement commencé, ces marqueurs ne
+l'interrompent pas ; l'entraînement est borné à 20 époques avec arrêt anticipé.
+Un changement de source physique exige une nouvelle version de corpus.

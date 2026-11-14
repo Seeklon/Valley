@@ -15,6 +15,34 @@ from pathlib import Path
 BOUNDS = [5.6, 8.0, 3.2]
 
 
+def add_incident_annotations(scene):
+    """Explicit study assumptions kept separate from the original FDS pilot."""
+    electrical = {"rack_power", "rack_avionics", "rack_atmosphere", "console_control", "life_support"}
+    critical = {"rack_power", "rack_atmosphere", "life_support", "soyuz_console"}
+    components, surfaces = [], {}
+    for obj in scene["objects"]:
+        if obj["id"] in electrical or obj.get("visual_type") in {"soyuz_seat", "soyuz_console", "cargo"}:
+            surfaces[obj["id"]] = {"material_id": "pmma", "thickness_m": 0.002,
+                "provenance": "Revêtement combustible hypothétique de démonstration ; aucun matériau de vol qualifié."}
+        if obj["id"] not in electrical and obj["id"] != "soyuz_console":
+            continue
+        offsets = [-0.55, 0.55] if obj["id"] == "soyuz_console" else [0]
+        for index, offset in enumerate(offsets):
+            position = list(obj["center_m"])
+            position[0] += offset
+            position[2] += obj["size_m"][2] / 2
+            suffix = f"-{index + 1}" if len(offsets) > 1 else ""
+            components.append({"id": f"electrical-{obj['id']}{suffix}", "name": obj["name"] +
+                (" · circuit gauche" if index == 0 else " · circuit droit") if len(offsets) > 1 else obj["name"],
+                "object_id": obj["id"], "position_m": position, "face": 3,
+                "kind": "electrical_equipment", "critical": obj["id"] in critical,
+                "provenance": "Point d'incident hypothétique attaché au proxy de l'équipement ; source locale sur la face supérieure."})
+    scene["incident_annotations"] = {"version": 1, "components": components,
+        "surface_materials": surfaces, "critical_object_ids": sorted(critical & {o["id"] for o in scene["objects"]}),
+        "passage_sensor_ids": ["sensor_forward"] if scene["id"] != "soyuz" else [],
+        "provenance": "Hypothèses d'étude distinctes du pilote FDS initial ; les couleurs Blender ne définissent pas les propriétés physiques."}
+
+
 def item(object_id, name, role, material, center, size, **extra):
     return {
         "id": object_id,
@@ -169,6 +197,7 @@ def build_catalog():
             scene["presentation"]["camera_target_m"] = [1.5, 1.5, 1.15]
         scene["presentation"]["blender_file"] = f"{scene_id}.blend"
         scene["presentation"]["preview_image"] = f"{scene_id}-overview.png"
+        add_incident_annotations(scene)
         scenes.append(scene)
     return {"schema_version": 1, "materials": materials, "scenes": scenes}
 

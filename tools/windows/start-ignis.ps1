@@ -14,6 +14,7 @@ param(
     [string]$Fds = 'E:/IGNIS-Valley/tools/fds-6.11.1/firemodels/FDS6/bin/fds_openmp.exe',
     [string]$CodexExecutable = '',
     [ValidateRange(1, 8)][int]$Threads = 4,
+    [ValidateRange(1024, 65535)][int]$Port = 8765,
     [switch]$SmokeTest,
     [ValidateRange(10, 600)][int]$SmokeSeconds = 120
 )
@@ -76,8 +77,8 @@ try {
         # lifetime lock. A previous bootstrap may still be publishing it.
     }
     if (-not $SmokeTest) {
-        $listeners = @(Get-NetTCPConnection -State Listen -LocalPort 8765 -ErrorAction SilentlyContinue)
-        if ($listeners.Count -gt 0) { throw 'Port 8765 is already occupied; no process was stopped.' }
+        $listeners = @(Get-NetTCPConnection -State Listen -LocalPort $Port -ErrorAction SilentlyContinue)
+        if ($listeners.Count -gt 0) { throw "Port $Port is already occupied; no process was stopped." }
     }
 
     $token = [Guid]::NewGuid().ToString('N')
@@ -88,7 +89,7 @@ try {
     $stopPath = Join-Path $runDirectory 'stop.request'
     $heartbeatPath = Join-Path $runDirectory 'heartbeat.json'
     $configuration = @{
-        root = $Root; runtime = $Runtime; token = $token; kind = $kind
+        root = $Root; runtime = $Runtime; token = $token; kind = $kind; port = $Port
         log = $logPath; ready = $readyPath; stop = $stopPath; heartbeat = $heartbeatPath
         state = $statePath
         smoke_seconds = $SmokeSeconds
@@ -123,7 +124,7 @@ def write_json(path, value):
 from ignis.windows_process import current_process_identity, retain_process_ownership
 retain_process_ownership(Path(config['state']).with_name(config['kind'] + '-ownership.lock'))
 identity = current_process_identity()
-url = None if config['kind'] == 'smoke' else 'http://127.0.0.1:8765'
+url = None if config['kind'] == 'smoke' else 'http://127.0.0.1:' + str(config['port'])
 # Ownership is persisted by this detached process, even if SSH disappears before
 # Win32_Process.Create returns. stop-ignis never has to trust a PID by itself.
 previous = Path(config['state'])
@@ -148,7 +149,7 @@ try:
     else:
         import uvicorn
         server = uvicorn.Server(uvicorn.Config('ignis.api:create_app', factory=True,
-            host='127.0.0.1', port=8765, workers=1, log_level='info'))
+            host='127.0.0.1', port=config['port'], workers=1, log_level='info'))
         def watch_stop():
             while not stop.exists():
                 time.sleep(0.5)
@@ -189,7 +190,7 @@ sys.exit(exit_code)
     # process, which owns the FDS Job Object, rather than its launcher wrapper.
     $processInfo = Get-CimInstance Win32_Process -Filter "ProcessId=$([int]$ready.pid)"
     if ($null -eq $processInfo) { throw "The new process already exited. Inspect $logPath" }
-    $url = 'http://127.0.0.1:8765'
+    $url = "http://127.0.0.1:$Port"
     if ($SmokeTest) { $url = $null }
     $state = Get-Content -Raw -LiteralPath $statePath | ConvertFrom-Json
     if ($state.token -cne $token -or $state.pid -ne $ready.pid) {

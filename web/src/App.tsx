@@ -5,6 +5,7 @@ import {
   ArrowRight,
   Box,
   Check,
+  ChevronDown,
   ChevronRight,
   CircleDot,
   Cpu,
@@ -52,11 +53,14 @@ import InsightsPanel from './components/InsightsPanel';
 import { ModelConsistency } from './components/ModelDetails';
 import PreventionView from './components/PreventionView';
 import MissionView from './components/MissionView';
+import PropagationView from './components/PropagationView';
+import { EMPTY_PROPAGATION_SESSION } from './propagation';
+import type { PropagationSession } from './propagation';
 import type { PreventionSession } from './components/PreventionView';
 import type { Catalog, Field, Health, ModelInfo, Run, RunConfig, Source } from './types';
 
 const Viewport = lazy(() => import('./components/Viewport'));
-type Tab = 'mission' | 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
+type Tab = 'prediction' | 'simulation' | 'mission' | 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
 const fields: { id: Field; label: string; icon: typeof Box }[] = [
   { id: 'scene', label: 'Géométrie', icon: Box },
   { id: 'temperature', label: 'Température', icon: Thermometer },
@@ -88,7 +92,12 @@ function saveRunId(id: string): void {
 }
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>('mission');
+  const [tab, setTab] = useState<Tab>('prediction');
+  const [propagationSession, setPropagationSession] = useState<PropagationSession>(EMPTY_PROPAGATION_SESSION);
+  const toolsMenu = useRef<HTMLDetailsElement | null>(null);
+  useEffect(() => {
+    toolsMenu.current?.removeAttribute('open');
+  }, [tab]);
   const [preventionSession, setPreventionSession] = useState<PreventionSession | null>(null);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [health, setHealth] = useState<Health | null>(null);
@@ -377,16 +386,18 @@ export default function App() {
   else if (invalidPower) unavailableReason = 'La puissance résistive dépasse la limite de 10 kW.';
 
   return (
-    <div className={`app-shell ${tab === 'mission' ? 'mission-shell' : ''}`}>
+    <div
+      className={`app-shell ${['mission', 'prediction', 'simulation'].includes(tab) ? 'mission-shell' : ''}`}
+    >
       <header className="topbar">
         <a
           href="#"
           className="brand"
           onClick={(event) => {
             event.preventDefault();
-            setTab('mission');
+            setTab('prediction');
           }}
-          aria-label="IGNIS, revenir à la mission"
+          aria-label="IGNIS, revenir à la prédiction"
         >
           <span className="brand-mark">
             <Flame size={24} fill="currentColor" />
@@ -399,11 +410,8 @@ export default function App() {
         <nav className="main-nav" aria-label="Navigation principale">
           {(
             [
-              { id: 'mission', label: 'Mission', icon: Radar },
-              { id: 'prevention', label: 'Prévention', icon: ShieldCheck },
-              { id: 'lab', label: 'Laboratoire', icon: Activity },
-              { id: 'scenes', label: 'Scènes', icon: Box },
-              { id: 'models', label: 'Modèles', icon: Cpu },
+              { id: 'prediction', label: 'Prédiction', icon: Cpu },
+              { id: 'simulation', label: 'Simulation', icon: Flame },
               { id: 'sources', label: 'Sources NASA', icon: Database },
             ] as const
           ).map(({ id, label, icon: Icon }) => (
@@ -418,6 +426,59 @@ export default function App() {
               <span>{label}</span>
             </button>
           ))}
+          <details
+            className="tools-menu"
+            ref={toolsMenu}
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') {
+                toolsMenu.current?.removeAttribute('open');
+                toolsMenu.current?.querySelector('summary')?.focus();
+              }
+            }}
+          >
+            <summary
+              aria-label="Outils"
+              className={['mission', 'prevention', 'lab', 'scenes', 'models'].includes(tab) ? 'active' : ''}
+            >
+              <SlidersHorizontal size={15} />
+              <span>Outils</span>
+              <ChevronDown size={12} />
+            </summary>
+            <div>
+              {(
+                [
+                  { id: 'mission', label: 'Mission', hint: 'Relire les champs enregistrés', icon: Radar },
+                  {
+                    id: 'lab',
+                    label: 'Laboratoire',
+                    hint: 'Simulations et campagnes avancées',
+                    icon: Activity,
+                  },
+                  {
+                    id: 'prevention',
+                    label: 'Prévention',
+                    hint: 'Étude expérimentale avant allumage',
+                    icon: ShieldCheck,
+                  },
+                  { id: 'scenes', label: 'Scènes', hint: 'Bibliothèque des environnements', icon: Box },
+                  { id: 'models', label: 'Modèles', hint: 'Domaine et évaluations', icon: Cpu },
+                ] as const
+              ).map(({ id, label, hint, icon: Icon }) => (
+                <button
+                  key={id}
+                  aria-label={label}
+                  aria-current={tab === id ? 'page' : undefined}
+                  onClick={() => setTab(id)}
+                >
+                  <Icon size={16} />
+                  <span>
+                    <strong>{label}</strong>
+                    <small>{hint}</small>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </details>
         </nav>
         <div className="runtime-status">
           <span className={`connection-dot ${connected ? 'connected' : ''} ${loading ? 'pulse' : ''}`} />
@@ -455,6 +516,17 @@ export default function App() {
               Réessayer <RefreshCw size={13} />
             </button>
           </div>
+        )}
+        {(tab === 'prediction' || tab === 'simulation') && (
+          <PropagationView
+            page={tab}
+            scenes={scenes}
+            health={health}
+            connected={connected}
+            session={propagationSession}
+            onSessionChange={setPropagationSession}
+            onOpenSimulation={() => setTab('simulation')}
+          />
         )}
         {tab === 'mission' && (
           <MissionView

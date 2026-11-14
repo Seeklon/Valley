@@ -10,6 +10,17 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
+from .incidents import (
+    EMISSION_INCIDENTS,
+    INCIDENT_COMPILER_VERSION,
+    incident_metadata,
+    incident_ramp,
+    incident_surface_line,
+    locate_incident,
+    surface_arguments,
+    surface_measurement_position,
+    validate_incident_config,
+)
 from .materials import (
     INERT_MATERIALS,
     MATERIALS,
@@ -173,6 +184,7 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
     A nonempty run directory is not silently overwritten.
     """
     cfg = _validate_config(scene, config)
+    is_incident = validate_incident_config(cfg)
     bounds = _vec(scene.get("bounds_m"), "bounds_m", 0.2, 30.0)
     domain = [v for extent in bounds for v in (0.0, extent)]
     ijk = [_smooth_count(math.ceil(v / cfg["mesh_cell_m"] - 1e-9)) for v in bounds]
@@ -187,6 +199,11 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
         "Ventilation exchanges fresh ambient gas with external reservoirs; it is not a closed recirculating spacecraft HVAC loop.",
         "Soot is a prescribed reaction yield; CO toxicity, battery runaway, arcs and plasma are not modeled.",
     ]
+    if is_incident:
+        warnings[-1] = (
+            "Primary incident heat/emissions are prescribed equivalents; reaction soot yields are assumptions. "
+            "CO toxicity, battery electrochemistry, electrical circuits, arcs and plasma are not modeled."
+        )
     objects = []
     seen = set()
     for index, obj in enumerate(scene.get("objects", [])):
@@ -207,12 +224,25 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
         if any(abs(a - b) > 1e-7 for a, b in zip(original, snapped)):
             warnings.append(f"Object {oid}: proxy snapped to mesh; original and calculated bounds recorded.")
         material = cfg["material_id"] if obj["role"] == "fuel" else obj.get("material_id", "aluminium")
+        if is_incident:
+            material = obj.get("material_id", material)
         if material not in MATERIALS and material not in INERT_MATERIALS:
             raise ValueError(f"Object {oid}: unsupported physical material {material}")
-        if obj["role"] == "obstacle" and material in MATERIALS:
+        combustible = (
+            obj.get("combustible_material_id", material if obj["role"] == "fuel" else None)
+            if is_incident
+            else None
+        )
+        if (
+            is_incident
+            and (combustible is not None or obj["role"] == "fuel")
+            and combustible not in MATERIALS
+        ):
+            raise ValueError(f"Object {oid}: combustible_material_id must be pmma or cellulose")
+        if obj["role"] == "obstacle" and material in MATERIALS and not (is_incident and combustible):
             raise ValueError(f"Object {oid}: combustible material must explicitly use role=fuel")
         thickness = obj.get(
-            "thermal_thickness_m", MATERIALS.get(material, {}).get("default_thickness_m", 0.01)
+            "thermal_thickness_m", MATERIALS.get(combustible or material, {}).get("default_thickness_m", 0.01)
         )
         thickness = _finite(thickness, f"{oid}.thermal_thickness_m", 0.00005, 0.1)
         objects.append(
@@ -224,6 +254,7 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
                 "original_bounds_m": original,
                 "bounds_m": snapped,
                 "thermal_thickness_m": thickness,
+                **({"combustible_material_id": combustible} if is_incident else {}),
             }
         )
     for first, second in itertools.combinations(objects, 2):
@@ -231,27 +262,36 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
             raise ValueError(
                 f"Discretized proxies overlap: {first['id']} and {second['id']}; refine mesh or separate objects"
             )
-    fuel_objects = [o for o in objects if o["role"] == "fuel"]
-    if not fuel_objects and cfg["ignition_power_w"] > 0:
+    fuel_objects = (
+        [o for o in objects if o.get("combustible_material_id")]
+        if is_incident
+        else [o for o in objects if o["role"] == "fuel"]
+    )
+    if not is_incident and not fuel_objects and cfg["ignition_power_w"] > 0:
         raise ValueError("A source requires at least one role=fuel object")
-    source_position = _vec(
-        scene.get("source_position_m", [v / 2 for v in bounds]), "source_position_m", 0, 30
-    )
-    if any(source_position[a] > bounds[a] for a in range(3)):
-        raise ValueError("source_position_m is outside the compartment")
-    source = min(
-        fuel_objects,
-        key=lambda o: sum(
-            (
-                source_position[a]
-                - ((o["bounds_m"][2 * a] + o["bounds_m"][2 * a + 1]) / 2 if a < 2 else o["bounds_m"][5])
-            )
-            ** 2
-            for a in range(3)
-        ),
-        default=None,
-    )
-    for fuel in fuel_objects:
+    incident_source = None
+    if is_incident:
+        incident_source = locate_incident(scene, cfg, objects, spacing, bounds)
+        source = next(o for o in objects if o["id"] == incident_source["object_id"])
+    else:
+        source_position = _vec(
+            scene.get("source_position_m", [v / 2 for v in bounds]), "source_position_m", 0, 30
+        )
+        if any(source_position[a] > bounds[a] for a in range(3)):
+            raise ValueError("source_position_m is outside the compartment")
+        source = min(
+            fuel_objects,
+            key=lambda o: sum(
+                (
+                    source_position[a]
+                    - ((o["bounds_m"][2 * a] + o["bounds_m"][2 * a + 1]) / 2 if a < 2 else o["bounds_m"][5])
+                )
+                ** 2
+                for a in range(3)
+            ),
+            default=None,
+        )
+    for fuel in [] if is_incident else fuel_objects:
         if fuel["bounds_m"][5] >= bounds[2] - 1e-8:
             raise ValueError(f"Fuel {fuel['id']} has no exposed upper face")
         for other in objects:
@@ -335,6 +375,20 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
     # Exact mole-to-mass conversion for explicitly dry O2/N2 background.
     x_o2 = cfg["oxygen_percent"] / 100
     y_o2 = x_o2 * 31.9988 / (x_o2 * 31.9988 + (1 - x_o2) * 28.0134)
+    used_materials = []
+    if is_incident:
+        used_materials = sorted({o["combustible_material_id"] for o in fuel_objects})
+        if not used_materials or (
+            cfg["incident_type"] == "flaming" and not source.get("combustible_material_id")
+        ):
+            used_materials = sorted(set(used_materials) | {cfg["material_id"]})
+        species_lines = [
+            line for mid in used_materials for line in (fuel_species_line(mid, mid), reaction_line(mid, mid))
+        ]
+        if cfg["incident_type"] in EMISSION_INCIDENTS:
+            species_lines.append("&SPEC ID='SOOT' /")
+    else:
+        species_lines = [fuel_species_line(cfg["material_id"]), reaction_line(cfg["material_id"])]
     lines = [
         "! Generated by IGNIS. SI inputs; FDS heat release uses kW. See manifest.json.",
         "&HEAD CHID='ignis', TITLE='IGNIS exploratory compartment simulation' /",
@@ -343,8 +397,7 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
         f"&MISC TMPA={cfg['ambient_temperature_c']:.10g}, P_INF={cfg['pressure_pa']:.10g}, "
         f"GVEC=0.0,0.0,{-9.80665 * cfg['gravity_g']:.10g}, Y_O2_INFTY={y_o2:.12g}, "
         f"Y_CO2_INFTY=0.0, HUMIDITY=0.0, RND_SEED={cfg['seed']} /",
-        fuel_species_line(cfg["material_id"]),
-        reaction_line(cfg["material_id"]),
+        *species_lines,
         f"&DUMP DT_DEVC={cfg['sample_interval_s']:.10g}, DT_HRR={cfg['sample_interval_s']:.10g}, "
         "SMOKE3D=F, COLUMN_DUMP_LIMIT=F, SIG_FIGS=8 /",
     ]
@@ -357,28 +410,39 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
         lines.append(
             f"&SURF ID='LINER_{mid}', MATL_ID='INERT_{mid}', THICKNESS=0.01, BACKING='INSULATED'{extra} /"
         )
-    if cfg["source_model"] == "coupled_combustion":
+    if is_incident:
+        for mid in used_materials:
+            lines.extend(solid_material_lines(mid, mid))
+    elif cfg["source_model"] == "coupled_combustion":
         lines.extend(solid_material_lines(cfg["material_id"]))
 
     start = cfg["ignition_delay_s"]
     stop = min(start + cfg["ignition_duration_s"], cfg["duration_s"])
     active = source is not None and cfg["ignition_power_w"] > 0 and stop > start
-    ramp = []
+    ramp = incident_ramp(cfg) if is_incident else []
     if active:
-        epsilon = min(0.01, (stop - start) / 10)
-        ramp = (
-            [(0.0, 0.0), (start, 0.0), (start + epsilon, 1.0), (stop - epsilon, 1.0), (stop, 0.0)]
-            if start > 0
-            else [(0.0, 1.0), (stop - epsilon, 1.0), (stop, 0.0)]
-        )
-        # Merge duplicate t=0 without adding an artificial finite startup pulse.
-        ramp = sorted(dict(ramp).items())
+        if not is_incident:
+            epsilon = min(0.01, (stop - start) / 10)
+            ramp = (
+                [(0.0, 0.0), (start, 0.0), (start + epsilon, 1.0), (stop - epsilon, 1.0), (stop, 0.0)]
+                if start > 0
+                else [(0.0, 1.0), (stop - epsilon, 1.0), (stop, 0.0)]
+            )
+            # Merge duplicate t=0 without adding an artificial finite startup pulse.
+            ramp = sorted(dict(ramp).items())
         lines.extend(f"&RAMP ID='SOURCE_RAMP', T={t:.10g}, F={f:.10g} /" for t, f in ramp)
 
     source_area = None
     source_flux = None
     for obj in objects:
-        if obj["role"] == "fuel":
+        if is_incident:
+            base = obj["material_id"] if obj["material_id"] in INERT_MATERIALS else "aluminium"
+            sid = f"FUEL_{obj['fds_id']}" if obj.get("combustible_material_id") else f"TOP_{obj['fds_id']}"
+            lines.append(f"&SURF ID='{sid}', {surface_arguments(obj)} /")
+            lines.append(
+                f"&OBST ID='{obj['fds_id']}', XB={_num(obj['bounds_m'])}, SURF_IDS='{sid}','LINER_{base}','LINER_{base}' /"
+            )
+        elif obj["role"] == "fuel":
             area = (obj["bounds_m"][1] - obj["bounds_m"][0]) * (obj["bounds_m"][3] - obj["bounds_m"][2])
             target = obj is source and active
             flux = cfg["ignition_power_w"] / 1000 / area if target else 0
@@ -401,6 +465,13 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
             lines.append(
                 f"&OBST ID='{obj['fds_id']}', XB={_num(obj['bounds_m'])}, SURF_ID='LINER_{obj['material_id']}' /"
             )
+    if is_incident:
+        source_area = incident_source["area_m2"]
+        source_flux = cfg["ignition_power_w"] / 1000 / source_area if active else 0
+        lines.append(incident_surface_line(cfg, incident_source, source, active))
+        lines.append(
+            f"&VENT ID='INCIDENT_PATCH', XB={_num(incident_source['bounds_m'])}, IOR=3, SURF_ID='INCIDENT_SOURCE' /"
+        )
     for vent in vents:
         lines.append(f"&SURF ID='{vent['fds_id']}', VOLUME_FLOW={vent['volume_flow_m3_s']:.12g}, TAU_V=0.0 /")
         lines.append(f"&VENT XB={_num(vent['bounds_m'])}, SURF_ID='{vent['fds_id']}' /")
@@ -480,14 +551,24 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
             f"&DEVC ID='FLOW_{vent['fds_id']}', XB={_num(domain)}, QUANTITY='NORMAL VELOCITY', SURF_ID='{vent['fds_id']}', SPATIAL_STATISTIC='SURFACE INTEGRAL', TIME_AVERAGED=F /"
         )
     surface_devices = []
-    if cfg["source_model"] == "coupled_combustion":
+    if is_incident or cfg["source_model"] == "coupled_combustion":
         for obj in fuel_objects:
             box = obj["bounds_m"]
-            center = [(box[0] + box[1]) / 2, (box[2] + box[3]) / 2, box[5]]
+            center = (
+                surface_measurement_position(obj, objects, incident_source, cfg, spacing, bounds)
+                if is_incident
+                else [(box[0] + box[1]) / 2, (box[2] + box[3]) / 2, box[5]]
+            )
+            if center is None:
+                warnings.append(
+                    f"Object {obj['id']}: no exposed reactive upper-face cell remains for surface measurements."
+                )
+                continue
+            fuel_species = f"IGNIS_FUEL_{obj['combustible_material_id']}" if is_incident else "IGNIS_FUEL"
             prefix = f"SURFACE_{obj['fds_id']}"
             for suffix, quantity, extra in [
                 ("T", "WALL TEMPERATURE", ""),
-                ("M", "MASS FLUX", ", SPEC_ID='IGNIS_FUEL'"),
+                ("M", "MASS FLUX", f", SPEC_ID='{fuel_species}'"),
                 ("D", "WALL THICKNESS", ""),
                 ("Q", "NET HEAT FLUX", ""),
             ]:
@@ -499,7 +580,17 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
                     "object_id": obj["id"],
                     "fds_id": prefix,
                     "position_m": center,
-                    "measurement_basis": "one cell at upper-face center; not an area mean",
+                    "measurement_basis": "one exposed reactive upper-face cell; excludes prescribed burner/emitter; not an area mean"
+                    if is_incident
+                    else "one cell at upper-face center; not an area mean",
+                    **(
+                        {
+                            "combustible_material_id": obj["combustible_material_id"],
+                            "fuel_species_id": fuel_species,
+                        }
+                        if is_incident
+                        else {}
+                    ),
                 }
             )
     lines.append("&TAIL /")
@@ -519,7 +610,7 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
         "schema_version": 1,
         "engine": "FDS",
         "engine_version": ENGINE_VERSION,
-        "compiler_version": COMPILER_VERSION,
+        "compiler_version": INCIDENT_COMPILER_VERSION if is_incident else COMPILER_VERSION,
         "material_model_version": MODEL_VERSION,
         "chid": "ignis",
         "input_file": "ignis.fds",
@@ -577,6 +668,20 @@ def compile_case(scene: dict, config: dict, output_dir: Path) -> dict:
             "csv_bytes_uncompressed": estimated_csv_bytes,
         },
     }
+    if is_incident:
+        manifest["incident"] = incident_metadata(
+            cfg, incident_source, ramp, pulse_integral * cfg["ignition_power_w"]
+        )
+        manifest["source"].update(incident_source)
+        manifest["source"]["meaning"] = manifest["incident"]["meaning"]
+        manifest["materials"] = {mid: deepcopy(MATERIALS[mid]) for mid in used_materials}
+        warnings.append(
+            "Incident location is a single mesh-cell patch; shrinking the mesh changes its area and imposed flux. Compare mesh refinements before interpreting outcomes."
+        )
+        if cfg["incident_type"] in EMISSION_INCIDENTS:
+            warnings.append(
+                "Primary soot emission and boundary heat are prescribed independently of oxygen; this is not a smolder or battery reaction model."
+            )
     output_dir = Path(output_dir)
     if (output_dir / "ignis.fds").exists() or (output_dir / "manifest.json").exists():
         raise FileExistsError("Case inputs already exist; use a unique run directory")

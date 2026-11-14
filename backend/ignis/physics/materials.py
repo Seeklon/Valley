@@ -100,35 +100,47 @@ def material_catalog() -> list[dict]:
     return records
 
 
-def fuel_species_line(material_id: str) -> str:
+def _identifier(stem: str, namespace: str | None) -> str:
+    # Incident scenes keep independent gas/solid identities for each material.
+    # The absent namespace deliberately preserves legacy input bytes.
+    if namespace is None:
+        return stem
+    if not namespace or any(
+        c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_" for c in namespace
+    ):
+        raise ValueError("Material namespace must contain only ASCII letters, digits or underscores")
+    return f"{stem}_{namespace}"
+
+
+def fuel_species_line(material_id: str, namespace: str | None = None) -> str:
     m = MATERIALS[material_id]
     f = m["formula"]
     return (
-        "&SPEC ID='IGNIS_FUEL', "
+        f"&SPEC ID='{_identifier('IGNIS_FUEL', namespace)}', "
         f"C={f['C']}, H={f['H']}, O={f['O']}, "
         f"SPECIFIC_HEAT={m['gas_specific_heat_kj_kg_k']:.9g} /"
     )
 
 
-def reaction_line(material_id: str) -> str:
+def reaction_line(material_id: str, namespace: str | None = None) -> str:
     m = MATERIALS[material_id]
     return (
-        "&REAC ID='IGNIS_REACTION', FUEL='IGNIS_FUEL', "
+        f"&REAC ID='{_identifier('IGNIS_REACTION', namespace)}', FUEL='{_identifier('IGNIS_FUEL', namespace)}', "
         f"HEAT_OF_COMBUSTION={m['heat_of_combustion_kj_kg']:.9g}, "
         f"SOOT_YIELD={m['soot_yield']:.9g}, CO_YIELD=0.0 /"
     )
 
 
-def solid_material_lines(material_id: str) -> list[str]:
+def solid_material_lines(material_id: str, namespace: str | None = None) -> list[str]:
     m = MATERIALS[material_id]
     parts = [
-        "&MATL ID='IGNIS_SOLID'",
+        f"&MATL ID='{_identifier('IGNIS_SOLID', namespace)}'",
         f"DENSITY={m['density_kg_m3']:.9g}",
         f"CONDUCTIVITY={m['conductivity_w_m_k']:.9g}",
         f"SPECIFIC_HEAT={m['specific_heat_kj_kg_k']:.9g}",
         f"EMISSIVITY={m['emissivity']:.9g}",
         "N_REACTIONS=1",
-        "SPEC_ID='IGNIS_FUEL'",
+        f"SPEC_ID='{_identifier('IGNIS_FUEL', namespace)}'",
         f"NU_SPEC={1.0 - m['char_yield']:.9g}",
         f"HEAT_OF_REACTION={m['heat_of_reaction_kj_kg']:.9g}",
     ]
@@ -150,9 +162,9 @@ def solid_material_lines(material_id: str) -> list[str]:
         )
     lines = []
     if m["char_yield"]:
-        parts.extend(["MATL_ID='IGNIS_CHAR'", f"NU_MATL={m['char_yield']:.9g}"])
+        parts.extend([f"MATL_ID='{_identifier('IGNIS_CHAR', namespace)}'", f"NU_MATL={m['char_yield']:.9g}"])
         lines.append(
-            "&MATL ID='IGNIS_CHAR', DENSITY=500.0, CONDUCTIVITY=0.2, SPECIFIC_HEAT=1.0, EMISSIVITY=1.0 /"
+            f"&MATL ID='{_identifier('IGNIS_CHAR', namespace)}', DENSITY=500.0, CONDUCTIVITY=0.2, SPECIFIC_HEAT=1.0, EMISSIVITY=1.0 /"
         )
     lines.append(", ".join(parts) + " /")
     return lines

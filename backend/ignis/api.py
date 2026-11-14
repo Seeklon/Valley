@@ -15,6 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from .campaigns import CampaignConfig, Campaigns
 from .config import Settings
 from .engine import Worker
+from .incidents import IncidentService
 from .knowledge import InsightRequest, interpret
 from .locking import ProcessLock
 from .ml.registry import ModelRegistry
@@ -29,7 +30,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     catalog = json.loads(settings.catalog_path.read_text(encoding="utf-8"))
     models = ModelRegistry(settings.models_dir)
     store = RunStore(settings.runtime)
-    worker = Worker(settings, store, catalog, models)
+    incidents = IncidentService(settings, catalog["scenes"])
+    worker = Worker(settings, store, catalog, models, incidents)
     campaigns = Campaigns(settings.runtime / "campaigns", store, catalog["scenes"], settings.max_runs)
     prevention = PreventionService(settings, catalog["scenes"])
 
@@ -39,6 +41,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             store.recover_interrupted()
             models.load()
             prevention.load()
+            incidents.load()
             worker.start()
             try:
                 yield
@@ -48,6 +51,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app = FastAPI(title="IGNIS 3D", version="0.1.0", lifespan=lifespan)
     app.state.settings, app.state.store, app.state.models = settings, store, models
     app.state.prevention = prevention
+    app.state.incidents = incidents
     app.include_router(prevention_router(prevention))
 
     @app.get("/api/health")
@@ -60,6 +64,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                                  "campaigns": worker.runner.available,
                                  "insights": True,
                                  "prevention": True,
+                                 "incident_prediction": incidents.model is not None,
                                  "ignition_delay_prediction": prevention.ignition_model is not None,
                                  "source_models": source_models},
                 "disk_free_gb": round(shutil.disk_usage(settings.runtime).free / 1024**3, 2),
@@ -76,6 +81,41 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @app.get("/api/models")
     def model_list():
         return {"models": models.list()}
+
+    @app.get("/api/incidents/catalog")
+    def incident_catalog():
+        return incidents.catalog()
+
+    campaign_directory = settings.runtime.parent / "datasets/spatial-corpus-v1"
+
+    @app.get("/api/incidents/campaign")
+    def incident_campaign():
+        path = campaign_directory / "progress.json"
+        try:
+            progress = json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+        except (OSError, ValueError) as exc:
+            raise HTTPException(503, "Le suivi de campagne est momentanément indisponible.") from exc
+        return {"progress": progress, "pause_requested": (campaign_directory / "PAUSE").exists()}
+
+    @app.post("/api/incidents/campaign/pause")
+    def pause_incident_campaign(paused: bool):
+        if not (campaign_directory / "progress.json").exists():
+            raise HTTPException(404, "Aucune campagne de génération n'est disponible.")
+        marker = campaign_directory / "PAUSE"
+        if paused:
+            marker.write_text("Pause demandée depuis IGNIS ; terminer le calcul courant.\n", encoding="utf-8")
+        else:
+            marker.unlink(missing_ok=True)
+        return incident_campaign()
+
+    @app.post("/api/incidents/predict")
+    def predict_incidents(config: RunConfig):
+        try:
+            return incidents.predict_map(config)
+        except ValueError as exc:
+            raise HTTPException(422, str(exc)) from exc
+        except RuntimeError as exc:
+            raise HTTPException(409, str(exc)) from exc
 
     @app.post("/api/campaigns", status_code=202)
     def create_campaign(spec: CampaignConfig):
@@ -149,7 +189,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(503, "Le worker n’est pas disponible.")
         if config.mode == "physics" and not worker.runner.available:
             raise HTTPException(503, "FDS n’est pas installé ou configuré.")
-        if config.mode == "prediction":
+        if config.incident_type:
+            try:
+                incidents.validate(config)
+            except ValueError as exc:
+                raise HTTPException(422, str(exc)) from exc
+        elif config.mode == "prediction":
             try:
                 models.select(config, next(s for s in catalog["scenes"] if s["id"] == config.scene_id))
             except ValueError as exc:

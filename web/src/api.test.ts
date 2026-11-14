@@ -3,6 +3,18 @@ import { api } from './api';
 
 afterEach(() => vi.unstubAllGlobals());
 
+describe('pause de la campagne de scénarios', () => {
+  it.each([true, false])('transmet explicitement paused=%s sans créer de calcul', async (paused) => {
+    const response = { progress: null, pause_requested: paused };
+    const fetchMock = vi.fn<typeof fetch>().mockResolvedValue(new Response(JSON.stringify(response)));
+    vi.stubGlobal('fetch', fetchMock);
+    expect(await api.pauseIncidentCampaign(paused)).toEqual(response);
+    expect(fetchMock.mock.calls[0][0]).toBe(`/api/incidents/campaign/pause?paused=${paused}`);
+    expect(fetchMock.mock.calls[0][1]?.method).toBe('POST');
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+});
+
 describe('question facultative de l’interprétation préventive', () => {
   const response = {
     summary: 'Synthèse du serveur',

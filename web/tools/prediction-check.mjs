@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import { openTool } from './navigation.mjs';
 
 // Real preloaded models only. No network mocks, CFD or language-model request.
 const baseUrl = (process.env.IGNIS_BROWSER_URL ?? 'http://127.0.0.1:5173').replace(/\/$/, '');
@@ -90,11 +91,11 @@ try {
   evidence.runtime = health;
 
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
-  await page.getByRole('button', { name: 'Laboratoire', exact: true }).click();
+  await openTool(page, 'Laboratoire');
   await page.locator('#scene-select').selectOption(sceneId);
   await page.locator('.viewport-loading').waitFor({ state: 'hidden' });
   assert.equal(await page.locator('.asset-warning').count(), 0);
-  await page.getByRole('button', { name: 'Prédiction', exact: true }).click();
+  await page.locator('main').getByRole('button', { name: 'Prédiction', exact: true }).click();
   await page.getByRole('spinbutton', { name: /Source active/ }).fill('15');
   await page.getByRole('spinbutton', { name: /^Simulation/ }).fill('30');
   await setRange(page.getByRole('slider', { name: 'Oxygène', exact: true }), 21);
@@ -173,13 +174,13 @@ try {
   evidence.checks.push({ name: 'domain_rejection_in_browser_and_real_api', passed: true });
 
   await page.reload({ waitUntil: 'networkidle' });
-  await page.getByRole('button', { name: 'Laboratoire', exact: true }).click();
+  await openTool(page, 'Laboratoire');
   await page
     .locator('.execution-panel .job-status.completed')
     .filter({ hasText: scalarRun.id.slice(0, 8) })
     .waitFor();
   evidence.checks.push({ name: 'last_real_run_restored_after_reload', passed: true });
-  await page.getByRole('button', { name: 'Modèles', exact: true }).click();
+  await openTool(page, 'Modèles');
   assert.equal(await page.locator('.model-card').count(), models.length);
   for (const model of [spatial, scalar]) {
     const card = page

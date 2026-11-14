@@ -12,6 +12,7 @@ npm test
 npx playwright install chromium
 npm run test:browser
 npm run test:prediction
+npm run test:incidents
 node tools/prevention-check.mjs
 node tools/mission-check.mjs
 ```
@@ -23,7 +24,12 @@ Le serveur de développement utilise le port 5173 et transmet `/api` et
 
 ## Fonctionnalités
 
-- Accueil **Mission** en POV équipage : relecture spatiale enregistrée,
+- Accueil **Prédiction** sur Soyouz : carte des conséquences de départs alternatifs,
+  sélection du point et lecture des champs réellement prédits. **Simulation**
+  reçoit le scénario choisi et lance FDS uniquement sur action explicite.
+- Menu **Outils** : Mission, Laboratoire, Prévention, Scènes et Modèles.
+  Sources NASA reste accessible dans la navigation principale.
+- Vue **Mission** en POV équipage : relecture spatiale enregistrée,
   fumée douce et heatmap, contrôle temporel, échelle fixe sur tout le calcul,
   caméras orbite/dessus et panneau repliable. Voir `../docs/MISSION_VIEW.md`.
 - Mode **Avant allumage** et onglet Prévention : géométrie sans foyer,
@@ -31,10 +37,10 @@ Le serveur de développement utilise le port 5173 et transmet `/api` et
   d'échauffement avant feu, conclusions expérimentales classées et export ZIP.
 - Scènes issues de `/api/scenes`, GLB interactif, sélection par `object_id`,
   contrôle des éléments `userData.cutaway`, capteurs et point d'allumage.
-- Physique et prédiction via `POST /api/runs`, suivi non bloquant, annulation et
+- Dans le Laboratoire, physique et prédiction via `POST /api/runs`, suivi non bloquant, annulation et
   récupération du dernier essai après rechargement. Une interruption réseau ne
   relance jamais automatiquement un calcul.
-- Paramètres atmosphère, ventilation, matériau, source, gravité, puissance,
+- Paramètres du Laboratoire : atmosphère, ventilation, matériau, source, gravité, puissance,
   durée et seed. Le chauffage résistif I²R utilise exclusivement la combustion
   couplée ; les arcs et batteries ne sont pas couverts.
 - Champs réels de température, oxygène, fumée et vitesse, lecture temporelle,
@@ -47,6 +53,77 @@ Le serveur de développement utilise le port 5173 et transmet `/api` et
   annulation, lorsque le serveur annonce cette capacité.
 - États d'indisponibilité, erreur GLB avec proxy géométrique explicite, absence
   de mesure et contrôle de domaine sans faux résultats.
+
+## Prédiction des conséquences et simulation
+
+Le contrat typé est `src/propagation.ts`. `GET /api/incidents/catalog` fournit
+les familles de départ, les composants annotés, les valeurs initiales et la
+disponibilité du modèle de propagation. Les annotations sont des hypothèses
+physiques d'étude, sans prétendre reproduire le câblage réel de la cabine.
+Le champ facultatif `model.quality_note` est affiché en avertissement visible
+en tête du panneau Prédiction, sans bloquer l'exploration. Une disponibilité
+technique du modèle ne constitue pas une validation de sa précision.
+Les familles surchauffe, arc, flamme, feu couvant et batterie décrivent des
+sources équivalentes dont les limites sont fournies par le serveur.
+
+`POST /api/incidents/predict` reçoit un `RunConfig` et renvoie
+`{config, components:[{component_id,result,error}], model_id}`. Chaque composant
+représente un scénario alternatif. La couleur des points compare un critère
+explicite : pic de température, pic de fumée, équipements exposés ou équipements
+critiques exposés. Les limites d'affichage sont respectivement 20–600 °C,
+0–100 mg/m³, 0–10 et 0–5 équipements, avec saturation et gris pour les valeurs
+inconnues. Ce sont des échelles visuelles, distinctes des seuils d'exposition.
+Une exposition ne démontre ni un départ secondaire ni une probabilité de panne.
+
+La carte et le calcul physique partagent la configuration dans `App`. Une
+modification des conditions invalide l'affichage précédent ; une réponse tardive
+ne le restaure pas. Choisir un autre composant conserve la carte globale mais
+change les champs affichés. La page Simulation exige une correspondance de
+conditions **et** de composant avant d'afficher un résultat. « Simuler ce départ »
+transfère toutes les conditions et le site sélectionné, sans lancer de calcul.
+L'action « Calculer avec FDS » crée le job, puis permet le suivi, l'annulation
+et l'export via les endpoints `/api/runs` existants.
+
+`result.summary.consequences` contient les pics, volumes et décomptes
+d'exposition ainsi que leurs seuils et leur méthode. Les valeurs absentes ou
+nulles restent inconnues ; notamment un passage non annoté ne devient pas zéro
+passage exposé. Les marqueurs des résultats utilisent la position appliquée
+`provenance.incident.source.position_m`, après discrétisation, et conservent la
+position annotée dans les détails de provenance.
+
+Les champs de température, fumée et vitesse sont disponibles uniquement si le
+résultat les contient. Le rendu utilise `MissionViewport` : positions physiques,
+masques de validité, échelles de champ constantes dans le temps et interpolation
+visuelle entre observations réelles. Aucun ancien résultat du Laboratoire
+n'est automatiquement ouvert dans ces deux pages. Le modèle absent laisse la
+carte inconnue et conserve l'accès explicite au calcul physique.
+
+Les tests `src/propagation.test.ts` vérifient les limites de session, la
+conservation exacte des conditions, les valeurs manquantes, les positions
+effectivement appliquées et les échelles fixes. Les parcours navigateur
+historiques ouvrent leurs écrans par Outils ; ils ne constituent pas une
+validation du nouveau modèle de propagation.
+
+`npm run test:incidents` vérifie ce nouveau parcours sur le backend réel : modèle
+de propagation chargé, carte Soyouz, sélection du deuxième site, conservation
+exacte du scénario lors du transfert, puis **un nouveau calcul FDS** lancé
+explicitement jusqu'à sa complétion. Il contrôle les champs réellement présents,
+la lecture, les caméras, l'export ZIP, l'invalidation des résultats et les deux
+pages à 390 px. Aucun mock réseau ni entraînement n'est utilisé. Le rapport,
+les réponses et les captures sont écrits dans `artifacts/incidents/`.
+`IGNIS_BROWSER_URL` sélectionne le backend et `IGNIS_FDS_TIMEOUT_MS` borne
+l'attente du calcul (20 minutes par défaut). En cas d'échec pendant le calcul,
+le script demande seulement l'annulation du job qu'il a lui-même créé.
+
+Le panneau compact de campagne appelle `GET /api/incidents/campaign` toutes les
+10 secondes tant que les vues Prédiction ou Simulation sont ouvertes. Il reste
+absent si `progress` vaut `null`. Compteurs, état et estimation viennent du
+serveur : une barre remplie ou une estimation nulle ne déclare pas la campagne
+terminée. `POST /api/incidents/campaign/pause?paused=true|false` demande la pause
+après le calcul courant ou la reprise. Une pause demandée est distincte de la
+pause confirmée ; les états terminaux ne proposent pas de faux redémarrage.
+Une erreur temporaire conserve le dernier statut reçu et déclenche une nouvelle
+tentative automatique, sans action implicite sur les calculs.
 
 ## Contrats attendus
 
@@ -68,7 +145,8 @@ Voir `../docs/CONTRACTS.md` et `../docs/PREVENTION_API.md`. Contrats opérationn
   Le serveur conserve l'autorité sur le contrôle du domaine.
 - `/api/sources`: `{sources:[{id,name|title,url,description,doi,observations,...}]}`.
 - `/api/runs`: le contrat de `RunConfig` et les champs `ignition_kind`,
-  `current_a`, `resistance_ohm`, `model_id` facultatif. Le champ `progress` des
+  `current_a`, `resistance_ohm`, `model_id` facultatif. Les départs de propagation
+  ajoutent `incident_type` et `component_id`. Le champ `progress` des
   jobs est normalisé sur `[0,1]`.
 - `result.frames`: `shape:[nx,ny,nz]`, `bounds_m:[x,y,z]`, champs aplatis avec z
   variant le plus vite. Les scalaires acceptent `null`. `valid_mask:boolean[]`

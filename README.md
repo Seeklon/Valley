@@ -4,29 +4,51 @@ Application de recherche pour le challenge NASA **Flame in Freefall** : explorer
 des scènes 3D, comparer gravité terrestre et microgravité, générer des simulations
 reproductibles et consulter les observations expérimentales NASA pertinentes.
 
-La version livrée fonctionne sur le PC Windows de Thomas, avec **quatre modèles
-réellement entraînés et préchargés** : deux pour le transport FDS, un pour le
-délai d'allumage expérimental et un pour la température future simulée.
-L’interface et les calculs utilisent ce PC ;
-le VPS conserve le code et les preuves légères.
+Le parcours de développement est maintenant **Prédiction IA → Simulation par
+point sensible** : modèle 3D annoté, matériaux, ventilation et incident électrique
+localisé. Le risque affiché décrit les conséquences conditionnelles du départ.
+L’interface et les calculs utilisent le PC Windows ; le VPS conserve le code et
+les preuves légères. Aucun appel à Ollama.
 
 ## Ouvrir l’application
 
-- Sur le PC : <http://127.0.0.1:8765>.
-- Depuis le réseau Tailscale : <https://desktop-m4hkr86.tail609f26.ts.net:8443>.
+- **Développement actuel** : <https://desktop-m4hkr86.tail609f26.ts.net:8444>
+  (sur le PC : <http://127.0.0.1:8766>).
+- Version précédente conservée : <https://desktop-m4hkr86.tail609f26.ts.net:8443>.
 - Le PC doit être allumé, connecté à Tailscale et le service démarré.
 
 Après un redémarrage de Windows, lancer dans PowerShell :
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:/IGNIS-Valley/app/tools/windows/start-ignis.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:/IGNIS-Valley-dev/app/tools/windows/start-ignis.ps1 -Root E:/IGNIS-Valley-dev/app -Runtime E:/IGNIS-Valley-dev/runtime -Port 8766
 ```
 
 Le [guide Windows](docs/WINDOWS.md) décrit l’arrêt, les fichiers, la reconstruction,
 les commandes d’entraînement et les vérifications. Il n’y a pas de lancement
 automatique à l’ouverture de session.
 
-## Fonctionnalités livrées
+## Parcours actuel en développement
+
+- Deux pages centrées sur la scène 3D, avec POV, fumée et chaleur animées.
+- 17 points électriques annotés dans quatre scènes, dont Soyouz.
+- Cinq familles de départ, sources localisées et combustibles voisins réactifs.
+- Un modèle Extra Trees apprend les champs température/suie du pilote FDS, avec
+  évaluation séparée par disposition. Les domaines et inconnus restent visibles.
+- Un U-Net 3D de 834 486 paramètres a réellement été entraîné sur la RTX 4070 Ti
+  avec les 60 calculs pilotes. Ses résultats restent mitigés ; ce prototype
+  est conservé séparément et n'est pas activé dans l'interface.
+- La nouvelle campagne vise 1 000 géométries procédurales distinctes et 20 000
+  calculs FDS. Le compteur affiche uniquement les calculs effectivement achevés.
+- Le bouton **Simuler ce départ** transmet le point et les mêmes conditions à FDS.
+- Les observations NASA restent accessibles directement ; les anciens écrans
+  sont regroupés dans **Outils**.
+
+Voir [le fonctionnement et les limites](docs/INCIDENTS.md),
+[les profils physiques](docs/INCIDENT_PHYSICS.md) et
+[la campagne de scénarios](docs/SPATIAL_CORPUS.md), ainsi que
+[le réseau 3D et ses résultats GPU](docs/SPATIAL_MODEL.md).
+
+## Socle réutilisé et version précédente
 
 - **Vue mission immersive** : accueil dans la cabine Soyouz en POV équipage,
   fumée volumétrique colorée par température, lecture temporelle, caméras orbitale
@@ -61,7 +83,7 @@ automatique à l’ouverture de session.
 La [documentation de la vue mission](docs/MISSION_VIEW.md) décrit navigation,
 lecture, unités, provenance et limites du rendu.
 
-## Données et résultats mesurés
+## Résultats des modèles précédents
 
 Prévention : 26 points expérimentaux d'allumage extraits d'une publication
 complémentaire (pas des labels NASA), et 384 trajectoires électrothermiques

@@ -279,3 +279,12 @@ les transformations non évaluées de la collection masquée, reste conservé da
 `evidence/blender-roundtrip/initial/`. Les scripts de reproduction Windows sont
 `evidence/blender-roundtrip.py` et `evidence/blender-compare-contracts.py` ; le
 premier refuse d'écraser un paquet importé existant.
+
+## Composants et matériaux pour les incidents localisés
+
+Le contrat accepte désormais des points électriques `ignis_role="component"`,
+attachés explicitement à `source_object_id` sur sa face supérieure (`source_face=3`).
+Les propriétés `combustible_material_id`, `thermal_thickness_m`, `ignis_critical`
+et `ignis_passage` conservent les informations utiles aux conséquences de l'incident.
+Voir [INCIDENTS.md](INCIDENTS.md) pour les propriétés, limites et le parcours.
+L'export ne devine pas les propriétés thermiques à partir de l'apparence des objets.

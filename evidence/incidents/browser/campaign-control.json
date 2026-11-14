@@ -1,0 +1,460 @@
+{
+  "timestamp_utc": "2026-11-14T16:32:17.091Z",
+  "checks": 5,
+  "transitions": [
+    {
+      "step": "running_before_pause",
+      "value": {
+        "progress": {
+          "dataset_id": "spatial-corpus-v1",
+          "plan_sha256": "da78526edfae2550bd220236132c254cd66bd708946c969618f2c46aade361bd",
+          "state": "running",
+          "updated_at": "2026-11-14T16:31:27.709420+00:00",
+          "total_runs": 20000,
+          "completed_runs": 3,
+          "pending_runs": 19997,
+          "failed_runs": 0,
+          "total_layouts": 1000,
+          "completed_layouts": 0,
+          "total_structural_families": 10,
+          "completed_structural_families": 0,
+          "by_structural_family": {
+            "perimeter": {
+              "planned": 2000,
+              "completed": 3,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "cross-aisle": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "baffled": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "central-island": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "split-bays": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "double-island": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "parallel-aisles": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "staggered": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "corner-banks": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "radial-clusters": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            }
+          },
+          "current_run_id": "procedural-0000-electrical-01-overheating-earth-c1",
+          "current_run": {
+            "scene_id": "procedural-0000",
+            "layout_id": "procedural-0000",
+            "component_id": "electrical-01",
+            "incident_type": "overheating",
+            "gravity_g": 1
+          },
+          "by_split": {
+            "train": {
+              "planned": 12000,
+              "completed": 3,
+              "failed": 0
+            },
+            "validation": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "test": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            }
+          },
+          "by_incident_type": {
+            "overheating": {
+              "planned": 4000,
+              "completed": 3,
+              "failed": 0
+            },
+            "arc": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "flaming": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "smoldering": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "battery": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            }
+          },
+          "elapsed_s": 204.063,
+          "elapsed_basis": "persisted launcher time including pauses and compute-lock waits; excludes time while launcher stopped",
+          "estimated_remaining_s": 378909.8,
+          "estimate_basis": "completed FDS wall-time mean; excludes future pauses, failures and verification",
+          "mean_completed_run_s": 18.948333333333334,
+          "completed_this_session": 1,
+          "disk_free_gb": 110.33,
+          "disk_reserve_gb": 20,
+          "last_error": null
+        },
+        "pause_requested": false
+      }
+    },
+    {
+      "step": "paused_after_finishing_case",
+      "value": {
+        "progress": {
+          "dataset_id": "spatial-corpus-v1",
+          "plan_sha256": "da78526edfae2550bd220236132c254cd66bd708946c969618f2c46aade361bd",
+          "state": "paused",
+          "updated_at": "2026-11-14T16:32:12.264917+00:00",
+          "total_runs": 20000,
+          "completed_runs": 4,
+          "pending_runs": 19996,
+          "failed_runs": 0,
+          "total_layouts": 1000,
+          "completed_layouts": 0,
+          "total_structural_families": 10,
+          "completed_structural_families": 0,
+          "by_structural_family": {
+            "perimeter": {
+              "planned": 2000,
+              "completed": 4,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "cross-aisle": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "baffled": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "central-island": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "split-bays": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "double-island": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "parallel-aisles": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "staggered": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "corner-banks": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "radial-clusters": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            }
+          },
+          "current_run_id": null,
+          "current_run": null,
+          "by_split": {
+            "train": {
+              "planned": 12000,
+              "completed": 4,
+              "failed": 0
+            },
+            "validation": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "test": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            }
+          },
+          "by_incident_type": {
+            "overheating": {
+              "planned": 4000,
+              "completed": 4,
+              "failed": 0
+            },
+            "arc": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "flaming": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "smoldering": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "battery": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            }
+          },
+          "elapsed_s": 248.61,
+          "elapsed_basis": "persisted launcher time including pauses and compute-lock waits; excludes time while launcher stopped",
+          "estimated_remaining_s": 497560.5,
+          "estimate_basis": "completed FDS wall-time mean; excludes future pauses, failures and verification",
+          "mean_completed_run_s": 24.883,
+          "completed_this_session": 2,
+          "disk_free_gb": 110.325,
+          "disk_reserve_gb": 20,
+          "last_error": null
+        },
+        "pause_requested": true
+      }
+    },
+    {
+      "step": "resumed",
+      "value": {
+        "progress": {
+          "dataset_id": "spatial-corpus-v1",
+          "plan_sha256": "da78526edfae2550bd220236132c254cd66bd708946c969618f2c46aade361bd",
+          "state": "running",
+          "updated_at": "2026-11-14T16:32:14.318067+00:00",
+          "total_runs": 20000,
+          "completed_runs": 4,
+          "pending_runs": 19996,
+          "failed_runs": 0,
+          "total_layouts": 1000,
+          "completed_layouts": 0,
+          "total_structural_families": 10,
+          "completed_structural_families": 0,
+          "by_structural_family": {
+            "perimeter": {
+              "planned": 2000,
+              "completed": 4,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "cross-aisle": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "baffled": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "central-island": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "split-bays": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "double-island": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "parallel-aisles": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "staggered": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "corner-banks": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            },
+            "radial-clusters": {
+              "planned": 2000,
+              "completed": 0,
+              "failed": 0,
+              "planned_layouts": 100,
+              "completed_layouts": 0
+            }
+          },
+          "current_run_id": "procedural-0000-electrical-02-arc-microg-c0",
+          "current_run": {
+            "scene_id": "procedural-0000",
+            "layout_id": "procedural-0000",
+            "component_id": "electrical-02",
+            "incident_type": "arc",
+            "gravity_g": 0.0001
+          },
+          "by_split": {
+            "train": {
+              "planned": 12000,
+              "completed": 4,
+              "failed": 0
+            },
+            "validation": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "test": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            }
+          },
+          "by_incident_type": {
+            "overheating": {
+              "planned": 4000,
+              "completed": 4,
+              "failed": 0
+            },
+            "arc": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "flaming": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "smoldering": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            },
+            "battery": {
+              "planned": 4000,
+              "completed": 0,
+              "failed": 0
+            }
+          },
+          "elapsed_s": 250.672,
+          "elapsed_basis": "persisted launcher time including pauses and compute-lock waits; excludes time while launcher stopped",
+          "estimated_remaining_s": 497560.5,
+          "estimate_basis": "completed FDS wall-time mean; excludes future pauses, failures and verification",
+          "mean_completed_run_s": 24.883,
+          "completed_this_session": 2,
+          "disk_free_gb": 110.325,
+          "disk_reserve_gb": 20,
+          "last_error": null
+        },
+        "pause_requested": false
+      }
+    }
+  ],
+  "errors": []
+}

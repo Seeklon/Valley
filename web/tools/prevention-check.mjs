@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import { openTool } from './navigation.mjs';
 import * as THREE from 'three';
 
 // Real server, loaded models and GLB only. No fixtures, route mocks or CFD.
@@ -108,9 +109,11 @@ try {
   assert.ok(battery);
 
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
-  await page.getByRole('button', { name: 'Prévention', exact: true }).click();
+  await openTool(page, 'Prévention');
   assert.equal(
-    await page.getByRole('button', { name: 'Prévention', exact: true }).getAttribute('aria-current'),
+    await page
+      .getByRole('button', { name: 'Prévention', exact: true, includeHidden: true })
+      .getAttribute('aria-current'),
     'page',
   );
   await page.locator('#prevention-scene').waitFor();
@@ -323,9 +326,9 @@ try {
   record('mobile_prevention_has_no_horizontal_overflow');
 
   await page.setViewportSize({ width: 1600, height: 1150 });
-  await page.getByRole('button', { name: 'Laboratoire', exact: true }).click();
+  await openTool(page, 'Laboratoire');
   await page.locator('#scene-select').waitFor();
-  await page.getByRole('button', { name: 'Prévention', exact: true }).click();
+  await openTool(page, 'Prévention');
   await page.locator('#prevention-scene').waitFor();
   assert.equal(await page.locator('.frame-timestamp').count(), 0);
   assert.ok((await page.locator('.prevention-map-caption').textContent()).includes(outside.id.slice(0, 8)));

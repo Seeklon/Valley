@@ -4,7 +4,65 @@
 livraison sur la branche `codex/ignis-3d-lab`. Lors d’une reprise, relire Git
 et `/api/health` pour connaître l’état actuel du code et du service.
 
-## Vue mission immersive — 14 novembre 2026
+## Parcours incidents et corpus spatial — travail du 14 novembre 2026
+
+La version de développement isolée est `E:/IGNIS-Valley-dev`, port 8766,
+URL privée Tailscale `https://desktop-m4hkr86.tail609f26.ts.net:8444`.
+La version précédente et ses données restent dans `E:/IGNIS-Valley` sur 8443.
+
+L'accueil devient Prédiction, avec Simulation par point sensible et Sources NASA.
+Chaque incident sélectionne un composant annoté ; ses objets voisins gardent
+leurs matériaux combustibles. Cinq familles : surchauffe, arc thermique équivalent,
+feu déclaré, couvant et batterie équivalente. Aucun risque probabiliste n'est déduit.
+Les limites et inconnus sont visibles ; les anciens écrans restent sous Outils.
+
+Pilote réellement exécuté : 60 calculs FDS, 12 dispositions, train30/validation15/test15.
+ExtraTrees `incident-field-v1` entraîné CPU en109s. Les scores du test montrent
+qu'il ne surpasse pas la référence ambiante sur température moyenne de champ et
+HRR ; ne pas annoncer un modèle généraliste. Poids/données conservés sur Windows,
+métadonnées, résultats et preuves légères dans `evidence/incidents/`.
+
+Thomas a ensuite demandé beaucoup plus de diversité : nouveau corpus procédural
+cible1000 environnements ×20 cas =20000 FDS, dix familles structurelles, 1536 points.
+Il a aussi demandé à être prévenu au lancement effectif du trainingGPU. Le réseau
+est spatial3D (U-Net), pas un LLM ; voir les documents SPATIAL_*.
+Relire progress.json et les journaux avant d'affirmer l'avancement.
+Ne pas confondre cette cible avec des simulations déjà produites ni avec le pilote.
+
+**GPU réellement exécuté** le 14 novembre, premier pas à 16:10:29 UTC,
+fin à 16:12:20 UTC : RTX 4070 Ti, PyTorch 2.7.0+cu128, U-Net 834486 paramètres,
+20 époques, époque 19 retenue sur validation. Modèle `spatial-pilot-v1` dans
+le runtime dev, preuves `evidence/incidents/spatial-pilot/`. Thomas a été prévenu
+immédiatement après le premier backward/optimizer synchronisé.
+Le score composite test bat l'ambiance, mais température moyenne, suie moyenne
+et HRR restent moins bons ; surchauffe et arc régressent. Pas d'activation UI.
+Le parcours Prédiction utilise toujours `incident-field-v1`, clairement signalé
+comme exploratoire. Aucun des deux pilotes n'est un modèle généraliste validé.
+
+Le nouveau lanceur `tools/remote/run_spatial_study.py` enchaîne corpus complet
+puis entraînement CUDA `spatial-corpus-v1`. Il refuse un corpus incomplet et
+respecte PAUSE/STOP avant le training ; chaque enfant possède son verrou de
+calcul, aucun verrou de calcul imbriqué. Ne pas relancer un poids existant.
+
+**Campagne continue lancée** sur Windows le 14 novembre. Journal détaché :
+`E:/IGNIS-Valley-dev/runtime/training/study-735d5f67483b4030ad0140e05de7bb38/worker.log`.
+État léger : `datasets/spatial-corpus-v1/progress.json`, également accessible par
+`GET /api/incidents/campaign`. Le test navigateur a repris les deux premiers
+cas puis vérifié pause après le cas courant et reprise à quatre cas achevés,
+sans erreur JS. Ce compteur est historique ; relire l'état avant de le citer.
+À la reprise, supprimer un éventuel STOP explicitement et utiliser la même
+commande. Une fermeture du PC nécessite de relancer le job ; aucun démarrage
+automatique Windows n'est installé. Ne pas lancer un second orchestrateur.
+
+Validation de cette tranche : 299 tests Windows, puis 21 tests du trainer après
+l'ajout des empreintes source ; Ruff et vérification du diff réussis. Frontend :
+65 tests, build et formatage ; 12 contrôles navigateur incidents et 5 contrôles
+de campagne réels. Revue indépendante et résultats dans `evidence/incidents/`.
+Les deux premiers cas procéduraux ont été relus : 31 instants, 1536 points,
+archives gzip/ZIP vérifiées par SHA, six champs conservés. Les poids du pilote
+3D ont également été rechargés et exécutés en inférence CPU avec succès.
+
+## Version précédente : vue mission immersive — 14 novembre 2026
 
 L'accueil est maintenant **Mission** : POV équipage dans Soyouz, fumée douce
 colorée par température, couches fumée/température/ventilation, caméras orbite

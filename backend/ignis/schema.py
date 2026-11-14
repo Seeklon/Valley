@@ -25,9 +25,15 @@ class RunConfig(BaseModel):
     ignition_kind: Literal["thermal", "resistive"] = "thermal"
     current_a: float = Field(default=5, ge=0, le=100)
     resistance_ohm: float = Field(default=20, gt=0, le=1000)
+    incident_type: Literal["overheating", "arc", "flaming", "smoldering", "battery"] | None = None
+    component_id: str | None = Field(default=None, pattern=r"^[a-zA-Z0-9_-]{1,96}$")
 
     @model_validator(mode="after")
     def validate_constraints(self) -> "RunConfig":
+        if (self.incident_type is None) != (self.component_id is None):
+            raise ValueError("Un incident exige une famille et un équipement de départ.")
+        if self.incident_type and (self.source_model != "coupled_combustion" or self.ignition_kind != "thermal"):
+            raise ValueError("Un incident utilise son profil imposé et la combustion secondaire couplée.")
         if self.ignition_kind == "resistive" and self.source_model != "coupled_combustion":
             raise ValueError("L’allumage résistif exige la combustion couplée : I²R chauffe le solide.")
         if self.ignition_duration_s > self.duration_s:
@@ -39,7 +45,7 @@ class RunConfig(BaseModel):
         return self
 
     def physical_config(self) -> dict:
-        config = self.model_dump(mode="json")
+        config = self.model_dump(mode="json", exclude_none=True)
         if self.ignition_kind == "resistive":
             config["ignition_power_w"] = self.current_a**2 * self.resistance_ohm
         return config

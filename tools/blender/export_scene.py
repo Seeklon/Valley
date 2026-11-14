@@ -133,7 +133,7 @@ def catalog_from_scene(args):
     center, bounds = bounding_box(domain[0], matrices)
     if any(abs(c - size / 2) > 1e-5 for c, size in zip(center, bounds)):
         raise ValueError("The domain minimum corner must be [0,0,0] in physical metres")
-    objects, vents, sensors, sources = [], [], [], []
+    objects, vents, sensors, sources, components = [], [], [], [], []
     seen = set()
     for obj in physical.all_objects:
         if "ignis_role" not in obj and obj.type == "EMPTY":
@@ -156,6 +156,18 @@ def catalog_from_scene(args):
             objects.append({"id": object_id, "name": obj.get("ignis_name", obj.name), "role": role,
                             "material_id": material, "center_m": center, "size_m": size,
                             "proxy_kind": "explicit_axis_aligned_box"})
+            if "combustible_material_id" in obj:
+                fuel = str(obj["combustible_material_id"])
+                if fuel not in {"pmma", "cellulose"}:
+                    raise ValueError(f"{obj.name}: combustible_material_id must be pmma or cellulose")
+                objects[-1]["combustible_material_id"] = fuel
+            if "thermal_thickness_m" in obj:
+                thickness = float(obj["thermal_thickness_m"])
+                if not math.isfinite(thickness) or not .00005 <= thickness <= .1:
+                    raise ValueError(f"{obj.name}: thermal_thickness_m outside [.00005,.1] m")
+                objects[-1]["thermal_thickness_m"] = thickness
+            if "ignis_critical" in obj:
+                objects[-1]["critical"] = bool(obj["ignis_critical"])
         elif role in {"inlet", "outlet"}:
             point = position(obj, matrices)
             size = vector(required(obj, "ignis_size_m"), obj.name + " ignis_size_m")
@@ -182,6 +194,19 @@ def catalog_from_scene(args):
             point = position(obj, matrices)
             check_point(point, bounds, obj.name, strict=True)
             sensors.append({"id": object_id, "name": obj.get("ignis_name", obj.name), "position_m": point})
+            if obj.get("ignis_passage", False):
+                sensors[-1]["kind"] = "passage"
+        elif role == "component":
+            point = position(obj, matrices)
+            check_point(point, bounds, obj.name, strict=True)
+            if int(obj.get("source_face", 3)) != 3:
+                raise ValueError(f"{obj.name}: this incident adapter supports exposed upper faces (source_face=3)")
+            components.append({"id": object_id, "name": obj.get("ignis_name", obj.name),
+                "object_id": identifier(required(obj, "source_object_id"), obj.name),
+                "position_m": point, "face": 3,
+                "kind": str(obj.get("component_kind", "electrical_equipment")),
+                "critical": bool(obj.get("ignis_critical", False)),
+                "provenance": str(obj.get("ignis_provenance", args.provenance))})
         elif role == "source":
             point = position(obj, matrices)
             check_point(point, bounds, obj.name, strict=True)
@@ -197,6 +222,14 @@ def catalog_from_scene(args):
     if not any(o["role"] == "fuel" for o in objects):
         raise ValueError("Define at least one fuel proxy with an explicitly assigned material")
     solids = [o for o in objects if o["role"] in {"obstacle", "fuel"}]
+    for component in components:
+        parent = next((o for o in solids if o["id"] == component["object_id"]), None)
+        if parent is None:
+            raise ValueError(f"{component['id']}: source_object_id must reference a physical object")
+        component_position = component["position_m"]
+        if (abs(component_position[2] - parent["center_m"][2] - parent["size_m"][2]/2) > 1e-5
+                or any(abs(component_position[a]-parent["center_m"][a]) >= parent["size_m"][a]/2 for a in (0, 1))):
+            raise ValueError(f"{component['id']}: place the component inside the upper face of its object")
     for i, a in enumerate(solids):
         for b in solids[i + 1:]:
             if all(abs(x - y) < (s + t) / 2 - 1e-5 for x, y, s, t in zip(a["center_m"], b["center_m"], a["size_m"], b["size_m"])):
@@ -211,6 +244,7 @@ def catalog_from_scene(args):
              "description": args.description, "asset_url": f"/assets/scenes/{args.scene_id}.glb",
              "bounds_m": bounds, "coordinate_system": "right_handed_z_up", "units": "m",
              "objects": objects, "vents": vents, "sensors": sensors, "source_position_m": sources[0],
+             "components": components,
              "defaults": defaults,
              "provenance": {"kind": "user_imported_annotated_environment", "source_file": Path(bpy.data.filepath).name,
                             "geometry_source": args.provenance,

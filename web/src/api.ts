@@ -16,6 +16,8 @@ import type {
   PreventionInterpretation,
   PreventionResult,
 } from './prevention';
+import type { IncidentsCatalog, PropagationAssessment } from './propagation';
+import type { IncidentCampaign } from './incident-campaign';
 
 export class ApiError extends Error {
   constructor(
@@ -67,7 +69,18 @@ export const api = {
     const response = await request<Source[] | { sources: Source[] }>('/sources');
     return Array.isArray(response) ? response : (response.sources ?? []);
   },
-  launch: (config: RunConfig) => request<Run>('/runs', { method: 'POST', body: JSON.stringify(config) }),
+  launch: (config: RunConfig, signal?: AbortSignal) =>
+    request<Run>('/runs', { method: 'POST', body: JSON.stringify(config), signal }),
+  incidentsCatalog: (signal?: AbortSignal) => request<IncidentsCatalog>('/incidents/catalog', { signal }),
+  incidentCampaign: (signal?: AbortSignal) => request<IncidentCampaign>('/incidents/campaign', { signal }),
+  pauseIncidentCampaign: (paused: boolean, signal?: AbortSignal) =>
+    request<IncidentCampaign>(`/incidents/campaign/pause?paused=${paused}`, { method: 'POST', signal }),
+  predictIncidents: (config: RunConfig, signal?: AbortSignal) =>
+    request<PropagationAssessment>(
+      '/incidents/predict',
+      { method: 'POST', body: JSON.stringify(config), signal },
+      120_000,
+    ),
   runs: async (signal?: AbortSignal) => {
     const response = await request<{ runs: Run[] }>('/runs?limit=100', { signal });
     return response.runs;

@@ -11,7 +11,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test:browser": "node tools/browser-check.mjs",
-    "test:prediction": "node tools/prediction-check.mjs"
+    "test:prediction": "node tools/prediction-check.mjs",
+    "test:incidents": "node tools/incident-check.mjs"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.3.0",

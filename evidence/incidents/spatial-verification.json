@@ -1,0 +1,65 @@
+{
+  "timestamp_utc": "2026-11-14T16:22:59.792609+00:00",
+  "cases": [
+    {
+      "id": "procedural-0000-electrical-00-overheating-microg-c0",
+      "seconds": 8.672,
+      "shape": [
+        12,
+        16,
+        8
+      ],
+      "frames": 31,
+      "bytes": 3892951,
+      "files": {
+        "config.json": 512,
+        "fields.npz": 160656,
+        "ignis.fds": 962349,
+        "manifest.json": 178100,
+        "raw-fds.zip": 1357925,
+        "result.json.gz": 1229890,
+        "scene.json": 3519
+      },
+      "lossless_result_hash_verified": true,
+      "all_raw_member_hashes_verified": true,
+      "six_spatial_channels_preserved": true
+    },
+    {
+      "id": "procedural-0000-electrical-00-overheating-earth-c0",
+      "seconds": 28.485,
+      "shape": [
+        12,
+        16,
+        8
+      ],
+      "frames": 31,
+      "bytes": 4300745,
+      "files": {
+        "config.json": 509,
+        "fields.npz": 263974,
+        "ignis.fds": 962345,
+        "manifest.json": 178097,
+        "raw-fds.zip": 1515223,
+        "result.json.gz": 1377078,
+        "scene.json": 3519
+      },
+      "lossless_result_hash_verified": true,
+      "all_raw_member_hashes_verified": true,
+      "six_spatial_channels_preserved": true
+    }
+  ],
+  "pilot_checkpoint_cpu_inference": {
+    "model_id": "spatial-pilot-v1",
+    "field_shape": [
+      3,
+      320,
+      2
+    ],
+    "global_shape": [
+      3,
+      4
+    ],
+    "finite_gas_values": true,
+    "weights_sha256": "4ec8ff31251991f4330de235d47e9f6b4acbc6aad196cadf5379562e1b367386"
+  }
+}
