@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-11-14T17:13:43.9416246Z",
+  "state": "paused",
+  "completed_runs": 64,
+  "failed_runs": 0,
+  "active_fds_processes": 0,
+  "pause_requested": true
+}

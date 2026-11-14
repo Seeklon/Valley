@@ -1,0 +1,1124 @@
+{
+  "started_at": "2026-11-14T16:50:24.365499+00:00",
+  "completed_at": "2026-11-14T16:50:31.195753+00:00",
+  "scope": "Repeated inference on the existing held-out test set; no new independent validation",
+  "initial_condition": "t=0 forced ambient / zero soot; historical metrics include it; diagnostics exclude it",
+  "thresholds": {
+    "hot_temperature_above_ambient_c": 5,
+    "smoke_kg_m3": 1e-07
+  },
+  "reference": "FDS simulations, not real experiments; smoke target is soot mass concentration",
+  "aggregation": "Mean within each run, then equal-weight runs within layouts, then equal-weight layouts",
+  "diagnostic_aggregation": "Micro counts over observed point/time pairs for t>0; correlated, not independent samples",
+  "passed_integrity_checks": [
+    "dataset hashes",
+    "physical-layout separation",
+    "compiler reconstruction",
+    "CUDA forward hooks",
+    "finite gas outputs",
+    "solid masks",
+    "independent physical metrics",
+    "historical metrics reproduced",
+    "unchanged parameters",
+    "unchanged saved artifacts"
+  ],
+  "model_artifact_hashes": {
+    "dataset-snapshot.json": "dbbf5251d6e461aefe43a4cf18d9d223dbfe91b7da12bf5fd03bf5998c35e42e",
+    "evaluation.json": "850c9aaacc29493ba62bc4bf9ce3bcdd363ea46cc0d214d3c03b4ad6874a6efe",
+    "metadata.json": "1fd3a62096084a0227df590f83d1fee95930c00c4f23c1fa8fdba5d5b2737e27",
+    "weights.pt": "4ec8ff31251991f4330de235d47e9f6b4acbc6aad196cadf5379562e1b367386"
+  },
+  "source_sha256": {
+    "tools/remote/train_spatial.py": "1f896d2027d18941f161250564fda2b6882c6ddc4b9fa8853acd419b50f5e41c",
+    "backend/ignis/ml/spatial_network.py": "cc6be82276fb99ff75e00292d9ffb7cba71116c70b3ae65b6c0c9bcf2c2e1fc1",
+    "backend/ignis/ml/spatial_dataset.py": "882c00bada16e86ba6ddba69c22239f06bc199ac66151f7ed9dad8fe9c6629f6",
+    "backend/ignis/physics/compiler.py": "ea452085ae97276135c71c63171879695e635fbdc83836ccf44d8b8c2fb54a16",
+    "backend/ignis/physics/incidents.py": "5246f76018711f50d353abf317d5fd36a48632d7f8af6134d452ec0b6a9a05d4",
+    "backend/ignis/physics/materials.py": "13b2eaa4eca452bb296f6006f24251670dcce05f9cc53efd2b5bc7e46998ee48",
+    "tools/remote/verify_spatial.py": "9f10c4d14927efc2c85cab13c83f3fc38fd6cca0d9013cfe798dd5c260ed0198"
+  },
+  "device": "cuda:0",
+  "device_name": "NVIDIA GeForce RTX 4070 Ti",
+  "torch_version": "2.7.0+cu128",
+  "cuda_version": "12.8",
+  "cuda_forward_batches_including_warmup": 112,
+  "peak_allocated_bytes": 14702080,
+  "peak_reserved_bytes": 27262976,
+  "latency_basis": "Synchronized warm inference including geometry encoding and GPU/CPU transfers; excludes disk reads",
+  "total_inference_seconds": 0.40421649999552756,
+  "timings": [
+    {
+      "run_id": "crossflow-layout-0-overheating",
+      "frames": 31,
+      "seconds": 0.0327106000004278
+    },
+    {
+      "run_id": "crossflow-layout-0-arc",
+      "frames": 31,
+      "seconds": 0.026550200000201585
+    },
+    {
+      "run_id": "crossflow-layout-0-flaming",
+      "frames": 31,
+      "seconds": 0.026592099999106722
+    },
+    {
+      "run_id": "crossflow-layout-0-smoldering",
+      "frames": 17,
+      "seconds": 0.034693800000241026
+    },
+    {
+      "run_id": "crossflow-layout-0-battery",
+      "frames": 31,
+      "seconds": 0.027941599997575395
+    },
+    {
+      "run_id": "crossflow-layout-1-overheating",
+      "frames": 31,
+      "seconds": 0.026893000002019107
+    },
+    {
+      "run_id": "crossflow-layout-1-arc",
+      "frames": 31,
+      "seconds": 0.02753619999930379
+    },
+    {
+      "run_id": "crossflow-layout-1-flaming",
+      "frames": 17,
+      "seconds": 0.01735259999986738
+    },
+    {
+      "run_id": "crossflow-layout-1-smoldering",
+      "frames": 31,
+      "seconds": 0.027413499999966007
+    },
+    {
+      "run_id": "crossflow-layout-1-battery",
+      "frames": 31,
+      "seconds": 0.027890599998499965
+    },
+    {
+      "run_id": "crossflow-layout-2-overheating",
+      "frames": 31,
+      "seconds": 0.0276036999966891
+    },
+    {
+      "run_id": "crossflow-layout-2-arc",
+      "frames": 17,
+      "seconds": 0.017796299998735776
+    },
+    {
+      "run_id": "crossflow-layout-2-flaming",
+      "frames": 31,
+      "seconds": 0.027604500002780696
+    },
+    {
+      "run_id": "crossflow-layout-2-smoldering",
+      "frames": 31,
+      "seconds": 0.02780949999942095
+    },
+    {
+      "run_id": "crossflow-layout-2-battery",
+      "frames": 31,
+      "seconds": 0.027828300000692252
+    }
+  ],
+  "model": {
+    "runs": 15,
+    "layouts": 3,
+    "per_layout": [
+      {
+        "layout_id": "crossflow-layout-0",
+        "temperature_mae_c": 0.11500390338226496,
+        "smoke_mae_kg_m3": 8.264524789124516e-08,
+        "temperature_peak_error_c": 0.8660251407339373,
+        "smoke_peak_error_kg_m3": 3.3252344892205657e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.2944528589782347e-06,
+        "encoded_selection_error": 0.2985929936170578,
+        "fds_global_temperature_max_c_mae": 12.360737273753458,
+        "fds_global_temperature_mean_c_mae": 0.07551241726325411,
+        "fds_global_smoke_mean_kg_m3_mae": 4.885525613917761e-08,
+        "fds_global_heat_release_w_mae": 149.17345781539873
+      },
+      {
+        "layout_id": "crossflow-layout-1",
+        "temperature_mae_c": 0.11684792563549654,
+        "smoke_mae_kg_m3": 7.315603933689014e-08,
+        "temperature_peak_error_c": 1.616860803896087,
+        "smoke_peak_error_kg_m3": 7.202943400110313e-06,
+        "hot_temperature_mae_c": 5.934873614247377,
+        "smoky_smoke_mae_kg_m3": 3.0993897794964056e-06,
+        "encoded_selection_error": 0.4668475121259689,
+        "fds_global_temperature_max_c_mae": 20.10806316199371,
+        "fds_global_temperature_mean_c_mae": 0.06791577370784577,
+        "fds_global_smoke_mean_kg_m3_mae": 6.47424768565124e-08,
+        "fds_global_heat_release_w_mae": 116.29207682536148
+      },
+      {
+        "layout_id": "crossflow-layout-2",
+        "temperature_mae_c": 0.12329895740158774,
+        "smoke_mae_kg_m3": 9.988136886574838e-08,
+        "temperature_peak_error_c": 0.9060548038191392,
+        "smoke_peak_error_kg_m3": 7.447085033274367e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 2.7505201688177117e-06,
+        "encoded_selection_error": 0.3701260149478912,
+        "fds_global_temperature_max_c_mae": 14.337596790184728,
+        "fds_global_temperature_mean_c_mae": 0.06565371064608845,
+        "fds_global_smoke_mean_kg_m3_mae": 8.179997355789773e-08,
+        "fds_global_heat_release_w_mae": 218.27080184028628
+      }
+    ],
+    "layout_balanced": {
+      "temperature_mae_c": 0.1183835954731164,
+      "smoke_mae_kg_m3": 8.522755203129456e-08,
+      "temperature_peak_error_c": 1.1296469161497213,
+      "smoke_peak_error_kg_m3": 5.991754307535082e-06,
+      "hot_temperature_mae_c": 5.934873614247377,
+      "smoky_smoke_mae_kg_m3": 2.3814542690974507e-06,
+      "encoded_selection_error": 0.37852217356363926,
+      "fds_global_temperature_max_c_mae": 15.602132408643966,
+      "fds_global_temperature_mean_c_mae": 0.06969396720572944,
+      "fds_global_smoke_mean_kg_m3_mae": 6.513256885119592e-08,
+      "fds_global_heat_release_w_mae": 161.24544549368215
+    },
+    "per_run": [
+      {
+        "run_id": "crossflow-layout-0-overheating",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "overheating",
+        "observations": 16678,
+        "temperature_mae_c": 0.11380948419459784,
+        "smoke_mae_kg_m3": 2.6849486923988515e-08,
+        "temperature_peak_error_c": 0.040801498935675085,
+        "smoke_peak_error_kg_m3": 3.2184992496248547e-07,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.07206235826015472,
+        "fds_global_temperature_max_c_mae": 8.457812172755162,
+        "fds_global_temperature_mean_c_mae": 0.04289401857046723,
+        "fds_global_smoke_mean_kg_m3_mae": 6.030090903491211e-08,
+        "fds_global_heat_release_w_mae": 54.46179602524949
+      },
+      {
+        "run_id": "crossflow-layout-0-arc",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "arc",
+        "observations": 16678,
+        "temperature_mae_c": 0.10859103115402749,
+        "smoke_mae_kg_m3": 2.895990746722806e-08,
+        "temperature_peak_error_c": 0.4585227516517527,
+        "smoke_peak_error_kg_m3": 3.7528444186688483e-07,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.0837758332490921,
+        "fds_global_temperature_max_c_mae": 13.77079075879916,
+        "fds_global_temperature_mean_c_mae": 0.03549413302416742,
+        "fds_global_smoke_mean_kg_m3_mae": 5.986295785963005e-08,
+        "fds_global_heat_release_w_mae": 55.63703709716267
+      },
+      {
+        "run_id": "crossflow-layout-0-flaming",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "flaming",
+        "observations": 16678,
+        "temperature_mae_c": 0.10989998609984955,
+        "smoke_mae_kg_m3": 1.048023270580384e-07,
+        "temperature_peak_error_c": 2.5300405962721584,
+        "smoke_peak_error_kg_m3": 2.089910561265891e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 6.544179635990296e-07,
+        "hot_observations": 0,
+        "smoky_observations": 532,
+        "encoded_selection_error": 0.3364783748984337,
+        "fds_global_temperature_max_c_mae": 20.445757129082462,
+        "fds_global_temperature_mean_c_mae": 0.09007086534645102,
+        "fds_global_smoke_mean_kg_m3_mae": 1.3239825723938662e-08,
+        "fds_global_heat_release_w_mae": 407.1515502014708
+      },
+      {
+        "run_id": "crossflow-layout-0-smoldering",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "smoldering",
+        "observations": 9146,
+        "temperature_mae_c": 0.10384611506184101,
+        "smoke_mae_kg_m3": 2.9785447650092713e-08,
+        "temperature_peak_error_c": 0.31076582455255775,
+        "smoke_peak_error_kg_m3": 5.5916426179735745e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.5383857157983424e-06,
+        "hot_observations": 0,
+        "smoky_observations": 18,
+        "encoded_selection_error": 0.5019373670220375,
+        "fds_global_temperature_max_c_mae": 10.368252288451814,
+        "fds_global_temperature_mean_c_mae": 0.03919160773723321,
+        "fds_global_smoke_mean_kg_m3_mae": 3.781207175327447e-08,
+        "fds_global_heat_release_w_mae": 53.65657782993564
+      },
+      {
+        "run_id": "crossflow-layout-0-battery",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "battery",
+        "observations": 16678,
+        "temperature_mae_c": 0.13887290040100891,
+        "smoke_mae_kg_m3": 2.2282907035687812e-07,
+        "temperature_peak_error_c": 0.9899950322575428,
+        "smoke_peak_error_kg_m3": 8.247484900033992e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.690554897537332e-06,
+        "hot_observations": 0,
+        "smoky_observations": 408,
+        "encoded_selection_error": 0.498711034655571,
+        "fds_global_temperature_max_c_mae": 8.761074019678691,
+        "fds_global_temperature_mean_c_mae": 0.16991146163795168,
+        "fds_global_smoke_mean_kg_m3_mae": 7.306051632413275e-08,
+        "fds_global_heat_release_w_mae": 174.96032792317513
+      },
+      {
+        "run_id": "crossflow-layout-1-overheating",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "overheating",
+        "observations": 16678,
+        "temperature_mae_c": 0.10945572090576759,
+        "smoke_mae_kg_m3": 2.8258415674367426e-08,
+        "temperature_peak_error_c": 0.45294038769895195,
+        "smoke_peak_error_kg_m3": 3.7812052240928567e-07,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.08081035315990448,
+        "fds_global_temperature_max_c_mae": 12.500669187433825,
+        "fds_global_temperature_mean_c_mae": 0.03566472202872087,
+        "fds_global_smoke_mean_kg_m3_mae": 5.987337575013534e-08,
+        "fds_global_heat_release_w_mae": 55.615221419818866
+      },
+      {
+        "run_id": "crossflow-layout-1-arc",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "arc",
+        "observations": 16678,
+        "temperature_mae_c": 0.1083908587740601,
+        "smoke_mae_kg_m3": 2.4361451680510906e-08,
+        "temperature_peak_error_c": 0.37811804716747943,
+        "smoke_peak_error_kg_m3": 3.438875039761844e-07,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.07983461022377014,
+        "fds_global_temperature_max_c_mae": 12.967666655705663,
+        "fds_global_temperature_mean_c_mae": 0.03609654351736737,
+        "fds_global_smoke_mean_kg_m3_mae": 5.992653452058119e-08,
+        "fds_global_heat_release_w_mae": 55.47983363249691
+      },
+      {
+        "run_id": "crossflow-layout-1-flaming",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "flaming",
+        "observations": 9146,
+        "temperature_mae_c": 0.10759904479529758,
+        "smoke_mae_kg_m3": 3.308359874709838e-08,
+        "temperature_peak_error_c": 6.289278118919189,
+        "smoke_peak_error_kg_m3": 9.996185313344489e-06,
+        "hot_temperature_mae_c": 5.934873614247377,
+        "smoky_smoke_mae_kg_m3": 2.5046286975075273e-06,
+        "hot_observations": 3,
+        "smoky_observations": 17,
+        "encoded_selection_error": 0.7633906304836273,
+        "fds_global_temperature_max_c_mae": 51.63000618431873,
+        "fds_global_temperature_mean_c_mae": 0.05433636683164794,
+        "fds_global_smoke_mean_kg_m3_mae": 2.8032564257266912e-08,
+        "fds_global_heat_release_w_mae": 240.62024907065637
+      },
+      {
+        "run_id": "crossflow-layout-1-smoldering",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "smoldering",
+        "observations": 16678,
+        "temperature_mae_c": 0.14591951870996017,
+        "smoke_mae_kg_m3": 2.2691782013883868e-07,
+        "temperature_peak_error_c": 0.9584054514111742,
+        "smoke_peak_error_kg_m3": 8.759167302344611e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.7199145398564479e-06,
+        "hot_observations": 0,
+        "smoky_observations": 445,
+        "encoded_selection_error": 0.4690103530883789,
+        "fds_global_temperature_max_c_mae": 9.131359450550894,
+        "fds_global_temperature_mean_c_mae": 0.17009325836987924,
+        "fds_global_smoke_mean_kg_m3_mae": 6.025219713750257e-08,
+        "fds_global_heat_release_w_mae": 174.91552796454428
+      },
+      {
+        "run_id": "crossflow-layout-1-battery",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "battery",
+        "observations": 16678,
+        "temperature_mae_c": 0.11287448499239724,
+        "smoke_mae_kg_m3": 5.315891044363531e-08,
+        "temperature_peak_error_c": 0.0055620142836403375,
+        "smoke_peak_error_kg_m3": 1.6537356358477e-05,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 5.073626101125241e-06,
+        "hot_observations": 0,
+        "smoky_observations": 39,
+        "encoded_selection_error": 0.9411916136741638,
+        "fds_global_temperature_max_c_mae": 14.310614331959437,
+        "fds_global_temperature_mean_c_mae": 0.04338797779161339,
+        "fds_global_smoke_mean_kg_m3_mae": 1.1562771261707597e-07,
+        "fds_global_heat_release_w_mae": 54.82955203929105
+      },
+      {
+        "run_id": "crossflow-layout-2-overheating",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "overheating",
+        "observations": 16740,
+        "temperature_mae_c": 0.10855907241800217,
+        "smoke_mae_kg_m3": 2.7496546493970162e-08,
+        "temperature_peak_error_c": 0.06811653964697939,
+        "smoke_peak_error_kg_m3": 4.42685009136492e-07,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.07504265010356903,
+        "fds_global_temperature_max_c_mae": 9.912498794244684,
+        "fds_global_temperature_mean_c_mae": 0.03802628846151291,
+        "fds_global_smoke_mean_kg_m3_mae": 5.994949503422738e-08,
+        "fds_global_heat_release_w_mae": 55.42342262545531
+      },
+      {
+        "run_id": "crossflow-layout-2-arc",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "arc",
+        "observations": 9180,
+        "temperature_mae_c": 0.10354866018553746,
+        "smoke_mae_kg_m3": 2.403334421815292e-08,
+        "temperature_peak_error_c": 0.44400184975520673,
+        "smoke_peak_error_kg_m3": 3.4361550692804265e-07,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.07948175072669983,
+        "fds_global_temperature_max_c_mae": 13.431715425210465,
+        "fds_global_temperature_mean_c_mae": 0.03454428214101961,
+        "fds_global_smoke_mean_kg_m3_mae": 5.828090516185744e-08,
+        "fds_global_heat_release_w_mae": 53.9508356949023
+      },
+      {
+        "run_id": "crossflow-layout-2-flaming",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "flaming",
+        "observations": 16740,
+        "temperature_mae_c": 0.15499776833804552,
+        "smoke_mae_kg_m3": 1.720561113986172e-07,
+        "temperature_peak_error_c": 3.4269082642123543,
+        "smoke_peak_error_kg_m3": 3.236932306472615e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 6.948238399763041e-07,
+        "hot_observations": 0,
+        "smoky_observations": 800,
+        "encoded_selection_error": 0.37299175560474396,
+        "fds_global_temperature_max_c_mae": 17.202477918215262,
+        "fds_global_temperature_mean_c_mae": 0.1277695892740433,
+        "fds_global_smoke_mean_kg_m3_mae": 7.654838466036712e-08,
+        "fds_global_heat_release_w_mae": 818.7602122821073
+      },
+      {
+        "run_id": "crossflow-layout-2-smoldering",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "smoldering",
+        "observations": 16740,
+        "temperature_mae_c": 0.11314010144450774,
+        "smoke_mae_kg_m3": 6.281120586023862e-08,
+        "temperature_peak_error_c": 0.4383200741530615,
+        "smoke_peak_error_kg_m3": 3.159216105260045e-05,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 6.773017748458488e-06,
+        "hot_observations": 0,
+        "smoky_observations": 33,
+        "encoded_selection_error": 0.933503121137619,
+        "fds_global_temperature_max_c_mae": 22.23665194826085,
+        "fds_global_temperature_mean_c_mae": 0.04558916676919115,
+        "fds_global_smoke_mean_kg_m3_mae": 1.3111329557513683e-07,
+        "fds_global_heat_release_w_mae": 54.76876754365474
+      },
+      {
+        "run_id": "crossflow-layout-2-battery",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "battery",
+        "observations": 16740,
+        "temperature_mae_c": 0.1362491846218458,
+        "smoke_mae_kg_m3": 2.1300963635776303e-07,
+        "temperature_peak_error_c": 0.15292729132809413,
+        "smoke_peak_error_kg_m3": 1.6200312912342388e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 7.837189180183429e-07,
+        "hot_observations": 0,
+        "smoky_observations": 190,
+        "encoded_selection_error": 0.38961079716682434,
+        "fds_global_temperature_max_c_mae": 8.904639864992383,
+        "fds_global_temperature_mean_c_mae": 0.08233922658467528,
+        "fds_global_smoke_mean_kg_m3_mae": 8.31077873578999e-08,
+        "fds_global_heat_release_w_mae": 108.45077105531166
+      }
+    ]
+  },
+  "ambient_baseline": {
+    "runs": 15,
+    "layouts": 3,
+    "per_layout": [
+      {
+        "layout_id": "crossflow-layout-0",
+        "temperature_mae_c": 0.01686625407022168,
+        "smoke_mae_kg_m3": 3.5822528283796845e-08,
+        "temperature_peak_error_c": 1.0516918182373047,
+        "smoke_peak_error_kg_m3": 3.869518372878744e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.6346490196218766e-06,
+        "encoded_selection_error": 0.367323875099828,
+        "fds_global_temperature_max_c_mae": 10.932242411951865,
+        "fds_global_temperature_mean_c_mae": 0.01776083162658807,
+        "fds_global_smoke_mean_kg_m3_mae": 5.058158981786992e-08,
+        "fds_global_heat_release_w_mae": 78.0097654172816
+      },
+      {
+        "layout_id": "crossflow-layout-1",
+        "temperature_mae_c": 0.008500241860250678,
+        "smoke_mae_kg_m3": 3.404793297897542e-08,
+        "temperature_peak_error_c": 1.7552665710449218,
+        "smoke_peak_error_kg_m3": 7.564894258393906e-06,
+        "hot_temperature_mae_c": 6.0496368408203125,
+        "smoky_smoke_mae_kg_m3": 3.46934540075883e-06,
+        "encoded_selection_error": 0.5413850850658491,
+        "fds_global_temperature_max_c_mae": 19.684009295758532,
+        "fds_global_temperature_mean_c_mae": 0.010797965322997583,
+        "fds_global_smoke_mean_kg_m3_mae": 6.614920028729228e-08,
+        "fds_global_heat_release_w_mae": 57.49403704474954
+      },
+      {
+        "layout_id": "crossflow-layout-2",
+        "temperature_mae_c": 0.025916368973901094,
+        "smoke_mae_kg_m3": 3.4433703327706205e-08,
+        "temperature_peak_error_c": 1.2395679473876953,
+        "smoke_peak_error_kg_m3": 8.179327414836734e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 3.1483451437951335e-06,
+        "encoded_selection_error": 0.44158260879976297,
+        "fds_global_temperature_max_c_mae": 12.96353690058728,
+        "fds_global_temperature_mean_c_mae": 0.025934455335931937,
+        "fds_global_smoke_mean_kg_m3_mae": 6.439573970478334e-08,
+        "fds_global_heat_release_w_mae": 138.11802401287903
+      }
+    ],
+    "layout_balanced": {
+      "temperature_mae_c": 0.017094288301457816,
+      "smoke_mae_kg_m3": 3.4768054863492824e-08,
+      "temperature_peak_error_c": 1.3488421122233074,
+      "smoke_peak_error_kg_m3": 6.537913348703128e-06,
+      "hot_temperature_mae_c": 6.0496368408203125,
+      "smoky_smoke_mae_kg_m3": 2.7507798547252804e-06,
+      "encoded_selection_error": 0.45009718965514667,
+      "fds_global_temperature_max_c_mae": 14.526596202765893,
+      "fds_global_temperature_mean_c_mae": 0.01816441742850586,
+      "fds_global_smoke_mean_kg_m3_mae": 6.037550993664852e-08,
+      "fds_global_heat_release_w_mae": 91.20727549163672
+    },
+    "per_run": [
+      {
+        "run_id": "crossflow-layout-0-overheating",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "overheating",
+        "observations": 16678,
+        "temperature_mae_c": 0.005097259876467595,
+        "smoke_mae_kg_m3": 7.46646911587691e-12,
+        "temperature_peak_error_c": 0.4954814910888672,
+        "smoke_peak_error_kg_m3": 1.4062828679328732e-09,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.011323549784719944,
+        "fds_global_temperature_max_c_mae": 5.39583735312185,
+        "fds_global_temperature_mean_c_mae": 0.006981880434097782,
+        "fds_global_smoke_mean_kg_m3_mae": 8.92465162160875e-12,
+        "fds_global_heat_release_w_mae": 0.08323841462181243
+      },
+      {
+        "run_id": "crossflow-layout-0-arc",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "arc",
+        "observations": 16678,
+        "temperature_mae_c": 1.7111243382819994e-05,
+        "smoke_mae_kg_m3": 0.0,
+        "temperature_peak_error_c": 0.0004558563232421875,
+        "smoke_peak_error_kg_m3": 0.0,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 7.046502287266776e-05,
+        "fds_global_temperature_max_c_mae": 0.033591670374716484,
+        "fds_global_temperature_mean_c_mae": 1.7473774571572582e-05,
+        "fds_global_smoke_mean_kg_m3_mae": 0.0,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-0-flaming",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "flaming",
+        "observations": 16678,
+        "temperature_mae_c": 0.0538965617027882,
+        "smoke_mae_kg_m3": 5.592072231451404e-08,
+        "temperature_peak_error_c": 3.181119918823242,
+        "smoke_peak_error_kg_m3": 3.883905264956411e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 8.731587685732911e-07,
+        "hot_observations": 0,
+        "smoky_observations": 532,
+        "encoded_selection_error": 0.4641644060611725,
+        "fds_global_temperature_max_c_mae": 20.596508456814675,
+        "fds_global_temperature_mean_c_mae": 0.05390561011529738,
+        "fds_global_smoke_mean_kg_m3_mae": 5.7300218462536866e-08,
+        "fds_global_heat_release_w_mae": 389.9655886717862
+      },
+      {
+        "run_id": "crossflow-layout-0-smoldering",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "smoldering",
+        "observations": 9146,
+        "temperature_mae_c": 0.0013907607942135309,
+        "smoke_mae_kg_m3": 6.5777862289799385e-09,
+        "temperature_peak_error_c": 0.13932228088378906,
+        "smoke_peak_error_kg_m3": 5.947966201347299e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.655296578127895e-06,
+        "hot_observations": 0,
+        "smoky_observations": 18,
+        "encoded_selection_error": 0.5906777158379555,
+        "fds_global_temperature_max_c_mae": 20.634281158447266,
+        "fds_global_temperature_mean_c_mae": 0.004502240349264706,
+        "fds_global_smoke_mean_kg_m3_mae": 8.39264957661231e-08,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-0-battery",
+        "layout_id": "crossflow-layout-0",
+        "incident_type": "battery",
+        "observations": 16678,
+        "temperature_mae_c": 0.023929576734256254,
+        "smoke_mae_kg_m3": 1.1660666640637437e-07,
+        "temperature_peak_error_c": 1.4420795440673828,
+        "smoke_peak_error_kg_m3": 9.514314115222078e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 2.3754917121644438e-06,
+        "hot_observations": 0,
+        "smoky_observations": 408,
+        "encoded_selection_error": 0.7703832387924194,
+        "fds_global_temperature_max_c_mae": 8.00099342100082,
+        "fds_global_temperature_mean_c_mae": 0.023396953459708922,
+        "fds_global_smoke_mean_kg_m3_mae": 1.1167231020906804e-07,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-1-overheating",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "overheating",
+        "observations": 16678,
+        "temperature_mae_c": 5.745353108616609e-05,
+        "smoke_mae_kg_m3": 0.0,
+        "temperature_peak_error_c": 0.0070209503173828125,
+        "smoke_peak_error_kg_m3": 0.0,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.0027189753018319607,
+        "fds_global_temperature_max_c_mae": 1.3049239497030936,
+        "fds_global_temperature_mean_c_mae": 0.00013536022555443549,
+        "fds_global_smoke_mean_kg_m3_mae": 0.0,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-1-arc",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "arc",
+        "observations": 16678,
+        "temperature_mae_c": 0.000776139248016427,
+        "smoke_mae_kg_m3": 0.0,
+        "temperature_peak_error_c": 0.06712913513183594,
+        "smoke_peak_error_kg_m3": 0.0,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.0017783102812245488,
+        "fds_global_temperature_max_c_mae": 0.8438378610918599,
+        "fds_global_temperature_mean_c_mae": 0.0005212599231350807,
+        "fds_global_smoke_mean_kg_m3_mae": 0.0,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-1-flaming",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "flaming",
+        "observations": 9146,
+        "temperature_mae_c": 0.012206266725608147,
+        "smoke_mae_kg_m3": 9.96259696215493e-09,
+        "temperature_peak_error_c": 6.73878288269043,
+        "smoke_peak_error_kg_m3": 1.0357304745411966e-05,
+        "hot_temperature_mae_c": 6.0496368408203125,
+        "smoky_smoke_mae_kg_m3": 2.668420143566784e-06,
+        "hot_observations": 3,
+        "smoky_observations": 17,
+        "encoded_selection_error": 0.8592970594763756,
+        "fds_global_temperature_max_c_mae": 61.71899975047392,
+        "fds_global_temperature_mean_c_mae": 0.01960451462689568,
+        "fds_global_smoke_mean_kg_m3_mae": 3.134336053445917e-08,
+        "fds_global_heat_release_w_mae": 287.4701852237477
+      },
+      {
+        "run_id": "crossflow-layout-1-smoldering",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "smoldering",
+        "observations": 16678,
+        "temperature_mae_c": 0.026737729598755658,
+        "smoke_mae_kg_m3": 1.3563907693531027e-07,
+        "temperature_peak_error_c": 1.5120601654052734,
+        "smoke_peak_error_kg_m3": 1.0588083569018636e-05,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 2.5351922311987632e-06,
+        "hot_observations": 0,
+        "smoky_observations": 445,
+        "encoded_selection_error": 0.8024058490991592,
+        "fds_global_temperature_max_c_mae": 8.57334961429719,
+        "fds_global_temperature_mean_c_mae": 0.026164147161668348,
+        "fds_global_smoke_mean_kg_m3_mae": 1.3095433617780277e-07,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-1-battery",
+        "layout_id": "crossflow-layout-1",
+        "incident_type": "battery",
+        "observations": 16678,
+        "temperature_mae_c": 0.0027236201977869894,
+        "smoke_mae_kg_m3": 2.4637990997411887e-08,
+        "temperature_peak_error_c": 0.4513397216796875,
+        "smoke_peak_error_kg_m3": 1.687908297753893e-05,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 5.204423827510942e-06,
+        "hot_observations": 0,
+        "smoky_observations": 39,
+        "encoded_selection_error": 1.0407252311706543,
+        "fds_global_temperature_max_c_mae": 25.978935303226596,
+        "fds_global_temperature_mean_c_mae": 0.007564544677734375,
+        "fds_global_smoke_mean_kg_m3_mae": 1.6844830472419953e-07,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-2-overheating",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "overheating",
+        "observations": 16740,
+        "temperature_mae_c": 0.0021846114948231685,
+        "smoke_mae_kg_m3": 0.0,
+        "temperature_peak_error_c": 0.3812427520751953,
+        "smoke_peak_error_kg_m3": 0.0,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 0.008157116360962391,
+        "fds_global_temperature_max_c_mae": 3.9015963154454387,
+        "fds_global_temperature_mean_c_mae": 0.0024236248385521675,
+        "fds_global_smoke_mean_kg_m3_mae": 0.0,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-2-arc",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "arc",
+        "observations": 9180,
+        "temperature_mae_c": 2.233343186721303e-05,
+        "smoke_mae_kg_m3": 0.0,
+        "temperature_peak_error_c": 0.0007724761962890625,
+        "smoke_peak_error_kg_m3": 0.0,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": null,
+        "hot_observations": 0,
+        "smoky_observations": 0,
+        "encoded_selection_error": 1.4436400306294672e-06,
+        "fds_global_temperature_max_c_mae": 0.0003850600298713235,
+        "fds_global_temperature_mean_c_mae": 2.6590683880974265e-05,
+        "fds_global_smoke_mean_kg_m3_mae": 0.0,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-2-flaming",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "flaming",
+        "observations": 16740,
+        "temperature_mae_c": 0.11429469633843024,
+        "smoke_mae_kg_m3": 1.1559185534862285e-07,
+        "temperature_peak_error_c": 3.944509506225586,
+        "smoke_peak_error_kg_m3": 4.88718524138676e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.2030127708939631e-06,
+        "hot_observations": 0,
+        "smoky_observations": 800,
+        "encoded_selection_error": 0.6091658771038055,
+        "fds_global_temperature_max_c_mae": 18.778104782104492,
+        "fds_global_temperature_mean_c_mae": 0.10773252671764742,
+        "fds_global_smoke_mean_kg_m3_mae": 1.0622358224562475e-07,
+        "fds_global_heat_release_w_mae": 690.5901200643951
+      },
+      {
+        "run_id": "crossflow-layout-2-smoldering",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "smoldering",
+        "observations": 16740,
+        "temperature_mae_c": 0.0034306739251103737,
+        "smoke_mae_kg_m3": 2.7641417711208272e-08,
+        "temperature_peak_error_c": 0.8899803161621094,
+        "smoke_peak_error_kg_m3": 3.1935695005813614e-05,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 6.972079944489451e-06,
+        "hot_observations": 0,
+        "smoky_observations": 33,
+        "encoded_selection_error": 1.0674528032541275,
+        "fds_global_temperature_max_c_mae": 35.00556595094742,
+        "fds_global_temperature_mean_c_mae": 0.009753442579700101,
+        "fds_global_smoke_mean_kg_m3_mae": 1.8713117802280426e-07,
+        "fds_global_heat_release_w_mae": 0.0
+      },
+      {
+        "run_id": "crossflow-layout-2-battery",
+        "layout_id": "crossflow-layout-2",
+        "incident_type": "battery",
+        "observations": 16740,
+        "temperature_mae_c": 0.009649529679274474,
+        "smoke_mae_kg_m3": 2.8935243578699906e-08,
+        "temperature_peak_error_c": 0.9813346862792969,
+        "smoke_peak_error_kg_m3": 4.073756826983299e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.2699427160019864e-06,
+        "hot_observations": 0,
+        "smoky_observations": 190,
+        "encoded_selection_error": 0.5231358036398888,
+        "fds_global_temperature_max_c_mae": 7.13203239440918,
+        "fds_global_temperature_mean_c_mae": 0.009736091859879033,
+        "fds_global_smoke_mean_kg_m3_mae": 2.862393825548766e-08,
+        "fds_global_heat_release_w_mae": 0.0
+      }
+    ]
+  },
+  "model_excluding_initial": {
+    "runs": 15,
+    "layouts": 3,
+    "per_layout": [
+      {
+        "layout_id": "crossflow-layout-0",
+        "temperature_mae_c": 0.11944313583286785,
+        "smoke_mae_kg_m3": 8.557383793224553e-08,
+        "temperature_peak_error_c": 0.8660251407339373,
+        "smoke_peak_error_kg_m3": 3.3252344892205657e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 1.2944528589782347e-06,
+        "fds_global_temperature_max_c_mae": 12.833243321227878,
+        "fds_global_temperature_mean_c_mae": 0.07825811555049644,
+        "fds_global_smoke_mean_kg_m3_mae": 5.0704335095710964e-08,
+        "fds_global_heat_release_w_mae": 154.45890311325337
+      },
+      {
+        "layout_id": "crossflow-layout-1",
+        "temperature_mae_c": 0.12137051758465231,
+        "smoke_mae_kg_m3": 7.578756164081122e-08,
+        "temperature_peak_error_c": 1.616860803896087,
+        "smoke_peak_error_kg_m3": 7.202943400110313e-06,
+        "hot_temperature_mae_c": 5.934873614247377,
+        "smoky_smoke_mae_kg_m3": 3.0993897794964056e-06,
+        "fds_global_temperature_max_c_mae": 21.079506970135363,
+        "fds_global_temperature_mean_c_mae": 0.0704965949712919,
+        "fds_global_smoke_mean_kg_m3_mae": 6.706408270989686e-08,
+        "fds_global_heat_release_w_mae": 121.5720975057857
+      },
+      {
+        "layout_id": "crossflow-layout-2",
+        "temperature_mae_c": 0.12801295649938962,
+        "smoke_mae_kg_m3": 1.0335094233587925e-07,
+        "temperature_peak_error_c": 0.9060548038191392,
+        "smoke_peak_error_kg_m3": 7.447085033274367e-06,
+        "hot_temperature_mae_c": null,
+        "smoky_smoke_mae_kg_m3": 2.7505201688177117e-06,
+        "fds_global_temperature_max_c_mae": 14.893868356504615,
+        "fds_global_temperature_mean_c_mae": 0.068043675980114,
+        "fds_global_smoke_mean_kg_m3_mae": 8.48666112899385e-08,
+        "fds_global_heat_release_w_mae": 225.86120844318276
+      }
+    ],
+    "layout_balanced": {
+      "temperature_mae_c": 0.12294220330563659,
+      "smoke_mae_kg_m3": 8.823744730297866e-08,
+      "temperature_peak_error_c": 1.1296469161497213,
+      "smoke_peak_error_kg_m3": 5.991754307535082e-06,
+      "hot_temperature_mae_c": 5.934873614247377,
+      "smoky_smoke_mae_kg_m3": 2.3814542690974507e-06,
+      "fds_global_temperature_max_c_mae": 16.268872882622617,
+      "fds_global_temperature_mean_c_mae": 0.07226612883396745,
+      "fds_global_smoke_mean_kg_m3_mae": 6.754500969851544e-08,
+      "fds_global_heat_release_w_mae": 167.29740302074063
+    }
+  },
+  "diagnostics": {
+    "hot": {
+      "tp": 0,
+      "fn": 3,
+      "fp": 0,
+      "tn": 109885,
+      "recall": 0.0,
+      "precision": null
+    },
+    "smoky": {
+      "tp": 2438,
+      "fn": 44,
+      "fp": 17352,
+      "tn": 90054,
+      "recall": 0.9822723609991942,
+      "precision": 0.12319353208691258
+    }
+  },
+  "per_case_diagnostics": [
+    {
+      "run_id": "crossflow-layout-0-overheating",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 825,
+        "tn": 7245
+      }
+    },
+    {
+      "run_id": "crossflow-layout-0-arc",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 823,
+        "tn": 7247
+      }
+    },
+    {
+      "run_id": "crossflow-layout-0-flaming",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 531,
+        "fn": 1,
+        "fp": 1389,
+        "tn": 6149
+      }
+    },
+    {
+      "run_id": "crossflow-layout-0-smoldering",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 4304
+      },
+      "smoky": {
+        "tp": 8,
+        "fn": 10,
+        "fp": 330,
+        "tn": 3956
+      }
+    },
+    {
+      "run_id": "crossflow-layout-0-battery",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 381,
+        "fn": 27,
+        "fp": 2111,
+        "tn": 5551
+      }
+    },
+    {
+      "run_id": "crossflow-layout-1-overheating",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 737,
+        "tn": 7333
+      }
+    },
+    {
+      "run_id": "crossflow-layout-1-arc",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 733,
+        "tn": 7337
+      }
+    },
+    {
+      "run_id": "crossflow-layout-1-flaming",
+      "hot": {
+        "tp": 0,
+        "fn": 3,
+        "fp": 0,
+        "tn": 4301
+      },
+      "smoky": {
+        "tp": 14,
+        "fn": 3,
+        "fp": 338,
+        "tn": 3949
+      }
+    },
+    {
+      "run_id": "crossflow-layout-1-smoldering",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 444,
+        "fn": 1,
+        "fp": 2484,
+        "tn": 5141
+      }
+    },
+    {
+      "run_id": "crossflow-layout-1-battery",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8070
+      },
+      "smoky": {
+        "tp": 39,
+        "fn": 0,
+        "fp": 947,
+        "tn": 7084
+      }
+    },
+    {
+      "run_id": "crossflow-layout-2-overheating",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8100
+      },
+      "smoky": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 883,
+        "tn": 7217
+      }
+    },
+    {
+      "run_id": "crossflow-layout-2-arc",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 4320
+      },
+      "smoky": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 362,
+        "tn": 3958
+      }
+    },
+    {
+      "run_id": "crossflow-layout-2-flaming",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8100
+      },
+      "smoky": {
+        "tp": 798,
+        "fn": 2,
+        "fp": 2015,
+        "tn": 5285
+      }
+    },
+    {
+      "run_id": "crossflow-layout-2-smoldering",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8100
+      },
+      "smoky": {
+        "tp": 33,
+        "fn": 0,
+        "fp": 1173,
+        "tn": 6894
+      }
+    },
+    {
+      "run_id": "crossflow-layout-2-battery",
+      "hot": {
+        "tp": 0,
+        "fn": 0,
+        "fp": 0,
+        "tn": 8100
+      },
+      "smoky": {
+        "tp": 190,
+        "fn": 0,
+        "fp": 2202,
+        "tn": 5708
+      }
+    }
+  ]
+}

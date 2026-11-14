@@ -139,3 +139,27 @@ plus haut reste inchangé et ne possède pas ces empreintes source.
 Il s’agit d’un substitut des hypothèses exploratoires FDS, pas d’observations
 NASA ni d’une probabilité de panne électrique, d’une simulation électrochimique
 de batterie ou d’une certification de sécurité.
+
+## Vérification indépendante de l’inférence et test élargi
+
+Le 14 novembre 2026, les poids sauvegardés ont été rechargés sur CUDA et les
+15 cas de test historiques rejoués en 0,404 s d’inférence cumulée. Les erreurs
+publiées sont reproduites ; les poids, données et partitions sont inchangés.
+Ce contrôle de reproductibilité ne constitue pas un nouveau test indépendant.
+
+Un second contrôle a produit **60 nouvelles simulations FDS** : 30 cas dans
+trois dispositions similaires avec nouvelles conditions, puis 30 cas dans trois
+géométries inédites. Quatre solveurs CPU mono-thread ont terminé en 477,27 s ;
+l’inférence sur RTX 4070 Ti a pris 4,41 s cumulées. Aucun entraînement.
+Le modèle ne détecte aucun point chaud au seuil ambiance + 5 °C et seulement
+20–21 % de ses alertes de fumée sont correctes. Il reste hors interface.
+Le [rapport de pertinence et ses comparaisons 3D](../evidence/incidents/spatial-pilot/expanded-audit/README.md)
+documentent les métriques, limites, empreintes et sorties de chaque cas.
+
+Le plan facultatif `compact_spatial_design.build_design(source_hashes, layout_count)`
+prépare 2 cas par disposition, avec un nombre de dispositions multiple de 50,
+jusqu’à 1 000. Son défaut de 200 dispositions donne 400 cas. Il sélectionne des
+cas exactement identiques au plan initial pour permettre une réutilisation
+ultérieure après vérification. L’identité `spatial-compact-v1` exige ce dataset
+et une grille 12×16×8 ; elle ne remplace aucun modèle existant. Le plan est testé,
+mais aucune campagne compacte ni aucun entraînement correspondant n’a été lancé.

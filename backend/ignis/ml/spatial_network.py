@@ -20,7 +20,7 @@ from ignis.physics.materials import INERT_MATERIALS, MATERIALS, MODEL_VERSION
 
 FEATURE_VERSION = "incident-voxel-features-1"
 ARCHITECTURE_VERSION = "incident-unet3d-1"
-MODEL_IDS = ("spatial-pilot-v1", "spatial-corpus-v1")
+MODEL_IDS = ("spatial-pilot-v1", "spatial-corpus-v1", "spatial-compact-v1")
 MATERIAL_IDS = tuple(sorted((*MATERIALS, *INERT_MATERIALS)))
 STATIC_CHANNELS = (
     "x_over_width",

@@ -45,6 +45,7 @@ CUDA_BUDGET_BYTES = 5 * 1024**3
 MODEL_DATASETS = {
     "spatial-pilot-v1": ("incidents-v1", (8, 10, 4)),
     "spatial-corpus-v1": ("spatial-corpus-v1", (12, 16, 8)),
+    "spatial-compact-v1": ("spatial-compact-v1", (12, 16, 8)),
 }
 SOURCE_MODULES = {
     "tools/remote/train_spatial.py": None,
