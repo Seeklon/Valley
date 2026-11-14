@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "saved_physics_hidden": true,
+  "checks": [
+    {
+      "physics_layer_excluded": false,
+      "visibility_preserved": true,
+      "objects": 15,
+      "bounds_m": [
+        3.0,
+        3.0,
+        2.5999999046325684
+      ]
+    },
+    {
+      "physics_layer_excluded": true,
+      "visibility_preserved": true,
+      "objects": 15,
+      "bounds_m": [
+        3.0,
+        3.0,
+        2.5999999046325684
+      ]
+    }
+  ],
+  "status": "passed"
+}

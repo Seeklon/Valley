@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "scene_id": "soyuz",
+  "blender_version": "4.5.9 LTS",
+  "catalog_sha256": "ac403277321f76bb4bff0305b0c3b1c8b112c816625deadafcc36a04452423af",
+  "generator_sha256": "5832cf3f76654eec75cd3498c29810e0ea3ec5e860c1a7c78b280c2181af35e2",
+  "generator_sources": {
+    "build_scene.py": "5832cf3f76654eec75cd3498c29810e0ea3ec5e860c1a7c78b280c2181af35e2",
+    "soyuz_geometry.py": "39238312b2feddc3a3745aa5da5fc9fa478f6d5b621b65dbae0575514480b8aa",
+    "scene_catalog.py": "dbf7d3916667bdf27af1f5b580085a9f68104715e1e12a6933015dc64234555e"
+  },
+  "generated_elapsed_s": 13.22,
+  "geometry": {
+    "visual_objects": 326,
+    "vertices": 34918,
+    "triangles": 54984
+  },
+  "coordinates": {
+    "physical": "Z-up, metres",
+    "glb": "Y-up, metres",
+    "physical_to_glb": "[x,z,-y]"
+  },
+  "artifacts": [
+    {
+      "file": "soyuz.blend",
+      "bytes": 3039003,
+      "sha256": "4959207ef5398b72d2c5ba843a9a5178d0761aa2d912eaaecfcc882531c12d2e"
+    },
+    {
+      "file": "soyuz.glb",
+      "bytes": 2080716,
+      "sha256": "c8d9032b43ed29c81fdb73923bcb4b4c1bf6cb0a0f339d282a7deec01b04df00"
+    },
+    {
+      "file": "soyuz-overview.png",
+      "bytes": 1771296,
+      "sha256": "dd2e0ab978a341b7b5ff7a3c29be4eef602384a17cecf9a23a569967cf0761ae"
+    },
+    {
+      "file": "soyuz-detail.png",
+      "bytes": 1662407,
+      "sha256": "ecef2f8aca6fc312d29f92befee0f4aaab1e469855f8cee03ed3280554b8661b"
+    }
+  ],
+  "presentation": {
+    "cutaway": true,
+    "source_geometry": "authored, not NASA CAD",
+    "render_engine": "Cycles",
+    "render_samples": 32
+  },
+  "verification": {
+    "render_inspected": false,
+    "note": "Rendering alone is not visual acceptance. Inspect overview and detail after generation."
+  }
+}

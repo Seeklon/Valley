@@ -1,4 +1,4 @@
-# Contrats initiaux — v1
+# Contrats de l’application — v1
 
 Coordonnées physiques : mètres, repère Blender Z vers le haut. Taille du
 compartiment de référence : X=5.6, Y=8.0, Z=3.2 ; origine au coin inférieur.
@@ -18,7 +18,7 @@ Chaque scène contient `id`, `name`, `description`, `asset_url`, `bounds_m: [x,y
 - Capteur : `id`, `name`, `position_m`.
 - Matériau : `id`, `name`, `description`, `color`, `provenance` ; propriétés
   physiques définies dans le backend et reliées aux sources, pas à la couleur.
-- IDs des trois scènes : `habitat`, `cargo`, `crossflow`.
+- IDs des quatre scènes : `habitat`, `cargo`, `crossflow`, `soyuz`.
 - Matériaux combustibles de départ : `cellulose`, `pmma` ; autres `aluminium`,
   `steel`, `glass`, `insulation`. Valeurs génériques identifiées comme telles.
 
@@ -70,10 +70,67 @@ GET `/api/health` : statut worker/runtime et capacités réelles.
 GET `/api/sources` : sources NASA et observations traçables.
 GET `/api/runs/{id}/export` : archive avec config, métriques, provenance.
 
+## Paramètres et provenance complémentaires
+
+Le schéma complet est défini par `backend/ignis/schema.py` et exposé par `/docs`
+et `/openapi.json`. Les clés inconnues, valeurs non finies et durées incohérentes
+sont refusées. Les entrées physiques utilisent des unités SI ; l’oxygène est
+exprimé en pourcentage volumique et la gravité en multiples de 9,80665 m/s².
+
+- `ignition_kind` : `thermal` ou `resistive`. Le chauffage résistif exige le
+  mode couplé ; `current_a² × resistance_ohm` remplace la puissance de chauffage
+  du solide. La puissance chimique libérée est une mesure distincte.
+- `mesh_cell_m` : maille cible entre 0,1 et 0,4 m ; les dimensions réelles de
+  cellules et les bornes discrétisées figurent dans le manifeste de compilation.
+- `sample_shape` : `[8,10,4]` pour cette version. Une frame ajoute `valid_mask`
+  et `sample_positions_m` ; les valeurs dans les solides sont `null`.
+- `model_id` : `field-mlp-v2` ou `metrics-forest-v2`. Le modèle tabulaire renvoie
+  `frames: []`, avec ses métriques et sa réserve explicite.
+- Les prédictions contrôlent le domaine, le maillage et l’identité physique
+  version 2 de la scène. Les anciennes représentations entières/flottantes
+  équivalentes sont normalisées ; les hashes exacts des fichiers FDS restent
+  indépendants de cette normalisation.
+
+La provenance du résultat distingue `origin: simulation` et `origin: prediction`,
+versions, empreintes, statut scientifique et `warnings`. Les erreurs publiées
+des modèles et les limites de cohérence restent dans les exports.
+
+## Campagnes
+
+POST `/api/campaigns` accepte `count` (2–100), `seed`, `scene_ids`,
+`base_config` et `ranges`. Les plages portent sur `airflow_m_s`,
+`oxygen_percent`, `ignition_power_w` et `gravity_g`. Le plan stratifié
+est déterministe pour une même spécification. Le manifeste et ses jobs sont
+créés dans une seule transaction ; le calcul est séquentiel.
+
+GET `/api/campaigns/{id}` expose l’avancement ; POST
+`/api/campaigns/{id}/cancel` demande l’arrêt. L’export ZIP via GET
+`/api/campaigns/{id}/export` devient disponible après terminaison et contient
+les entrées, provenances et métriques Parquet des runs terminés. Les champs
+spatiaux sont accessibles dans les exports individuels.
+
+## Interprétation NASA avec Codex
+
+POST `/api/insights` accepte `config` et `question` (1 500 caractères maximum).
+La réponse contient `summary`, `method`, `model`, `sources`, `facts` et `limits`.
+Le classement est calculé avec des critères documentaires explicites.
+
+`method=codex_grounded_in_nasa_evidence` signifie que Codex a reçu les faits
+archivés et que le format de citation de sa réponse a passé les contrôles ;
+cela ne constitue pas une validation scientifique du texte. Les mesures restent
+dans les faits sourcés. Le modèle effectivement utilisé est rapporté lorsqu’il
+est fourni par le CLI. L’appel utilise l’authentification Codex Windows existante.
+
+Si Codex est absent, occupé ou échoue, `method=extractive_evidence`, `model=null`
+et une explication dans `limits` identifient la synthèse de secours. Une seule
+requête Codex s’exécute à la fois ; délai maximal 110 s et cache de 32 réponses.
+Le backend n’utilise pas Ollama.
+
 ## Attribution de fichiers
 
 - Coordinateur : backend API/runtime/ML, scripts distants, docs générales et intégration.
 - Blender : `tools/blender/`, `scenes/`, `docs/SCENES.md`.
-- Frontend : `web/` uniquement.
+- Frontend et lanceurs Windows : `web/`, `backend/ignis/windows_process.py`,
+  `tools/windows/` et tests de processus associés.
 - Physique : `backend/ignis/physics/`, `tests/physics/`, `docs/PHYSICS.md`.
 Les évolutions de contrats sont coordonnées avant modification des appelants.

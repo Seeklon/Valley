@@ -1,0 +1,1757 @@
+{
+  "schema_version": 1,
+  "materials": [
+    {
+      "id": "cellulose",
+      "name": "Cellulose — référence générique",
+      "description": "Échantillon de référence. Les paramètres de combustion doivent être explicitement calibrés ; la couleur du modèle ne détermine aucune propriété thermique.",
+      "color": "#bc9066",
+      "provenance": {
+        "kind": "generic_material",
+        "nasa_calibrated": false
+      }
+    },
+    {
+      "id": "pmma",
+      "name": "PMMA — référence générique",
+      "description": "Polymère de référence ; aucune équivalence implicite à un matériau de vol.",
+      "color": "#8bbdc5",
+      "provenance": {
+        "kind": "generic_material",
+        "nasa_calibrated": false
+      }
+    },
+    {
+      "id": "aluminium",
+      "name": "Aluminium",
+      "description": "Structure et boîtiers. La bibliothèque thermique du backend porte les paramètres physiques.",
+      "color": "#a8bec5",
+      "provenance": {
+        "kind": "generic_material"
+      }
+    },
+    {
+      "id": "steel",
+      "name": "Acier",
+      "description": "Supports, banc expérimental et interfaces mécaniques.",
+      "color": "#586c7b",
+      "provenance": {
+        "kind": "generic_material"
+      }
+    },
+    {
+      "id": "glass",
+      "name": "Verre",
+      "description": "Éléments graphiques transparents ; rôle physique seulement si explicitement affecté à un proxy.",
+      "color": "#a2cbd4",
+      "provenance": {
+        "kind": "generic_material"
+      }
+    },
+    {
+      "id": "insulation",
+      "name": "Isolation — à caractériser",
+      "description": "Habillage technique générique ; ne constitue pas un matériau certifié ni une propriété de combustion mesurée.",
+      "color": "#d3d4bc",
+      "provenance": {
+        "kind": "generic_material",
+        "nasa_calibrated": false
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "bounds_m": [
+        5.6,
+        8.0,
+        3.2
+      ],
+      "coordinate_system": "right_handed_z_up",
+      "units": "m",
+      "sensors": [
+        {
+          "id": "sensor_near",
+          "name": "S01 · proximité de la source",
+          "position_m": [
+            2.65,
+            4.35,
+            1.6
+          ]
+        },
+        {
+          "id": "sensor_aft",
+          "name": "S02 · compartiment arrière",
+          "position_m": [
+            3.2,
+            6.7,
+            2.4
+          ]
+        },
+        {
+          "id": "sensor_forward",
+          "name": "S03 · accès",
+          "position_m": [
+            2.8,
+            0.8,
+            1.5
+          ]
+        },
+        {
+          "id": "sensor_crown",
+          "name": "S04 · haut du volume",
+          "position_m": [
+            2.65,
+            3.55,
+            2.9
+          ]
+        }
+      ],
+      "source_position_m": [
+        2.65,
+        3.55,
+        1.5
+      ],
+      "defaults": {
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21,
+        "material_id": "cellulose",
+        "ignition_power_w": 500,
+        "ignition_duration_s": 15,
+        "duration_s": 60,
+        "seed": 42
+      },
+      "provenance": {
+        "kind": "authored_synthetic_environment",
+        "author": "IGNIS / Valley",
+        "title": "Aster — compartiment expérimental original",
+        "is_nasa_geometry": false,
+        "scientific_status": "Uncalibrated authored geometry. No certified spacecraft reconstruction.",
+        "visual_detail_policy": "Racks and equipment use AABB envelopes for calculation. Small fasteners, cables and handrails are decoration; not independently resolved.",
+        "boundary_policy": "role=wall describes domain boundaries. Exclude wall AABBs from interior OBST; apply boundary conditions and vents in the solver.",
+        "presentation_policy": "GLB uses a cutaway shell. The complete fluid domain is defined by bounds_m, never by the visible shell alone."
+      },
+      "presentation": {
+        "name": "ASTER / IGNIS EXPERIMENTAL HABITAT",
+        "blender_file": "habitat.blend",
+        "preview_image": "habitat-overview.png",
+        "physical_camera_m": [
+          10.9,
+          -10.5,
+          9.1
+        ],
+        "camera_target_m": [
+          2.65,
+          4,
+          1.0
+        ],
+        "cutaway": true
+      },
+      "id": "habitat",
+      "name": "Aster · habitat instrumenté",
+      "description": "Compartiment de 5,6 × 8 × 3,2 m avec racks d'avionique, contrôle atmosphère, paillasse et banc de combustion central.",
+      "asset_url": "/assets/scenes/habitat.glb",
+      "preview_url": "/assets/scenes/habitat-overview.png",
+      "objects": [
+        {
+          "id": "floor",
+          "name": "Plancher technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            4.0,
+            -0.04
+          ],
+          "size_m": [
+            5.6,
+            8.0,
+            0.08
+          ],
+          "surface_kind": "floor",
+          "boundary": "z_min"
+        },
+        {
+          "id": "ceiling",
+          "name": "Plafond technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            4.0,
+            3.24
+          ],
+          "size_m": [
+            5.6,
+            8.0,
+            0.08
+          ],
+          "surface_kind": "ceiling",
+          "boundary": "z_max"
+        },
+        {
+          "id": "wall_port",
+          "name": "Paroi bâbord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            -0.04,
+            4.0,
+            1.6
+          ],
+          "size_m": [
+            0.08,
+            8.0,
+            3.2
+          ],
+          "boundary": "x_min"
+        },
+        {
+          "id": "wall_starboard",
+          "name": "Paroi tribord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            5.64,
+            4.0,
+            1.6
+          ],
+          "size_m": [
+            0.08,
+            8.0,
+            3.2
+          ],
+          "boundary": "x_max"
+        },
+        {
+          "id": "wall_entry",
+          "name": "Paroi d'accès",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            -0.04,
+            1.6
+          ],
+          "size_m": [
+            5.6,
+            0.08,
+            3.2
+          ],
+          "boundary": "y_min"
+        },
+        {
+          "id": "wall_aft",
+          "name": "Cloison arrière",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            8.04,
+            1.6
+          ],
+          "size_m": [
+            5.6,
+            0.08,
+            3.2
+          ],
+          "boundary": "y_max"
+        },
+        {
+          "id": "rack_power",
+          "name": "Rack · distribution électrique",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            1.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "power"
+        },
+        {
+          "id": "rack_avionics",
+          "name": "Rack · acquisition et calcul",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            3.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "avionics"
+        },
+        {
+          "id": "rack_atmosphere",
+          "name": "Rack · contrôle atmosphère",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            5.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "atmosphere"
+        },
+        {
+          "id": "console_control",
+          "name": "Console · commande et télémétrie",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            5.03,
+            2.1,
+            0.65
+          ],
+          "size_m": [
+            0.9,
+            1.55,
+            1.1
+          ],
+          "visual_type": "console",
+          "yaw_deg": -90
+        },
+        {
+          "id": "life_support",
+          "name": "Baie · fluides et filtration",
+          "role": "obstacle",
+          "material_id": "steel",
+          "center_m": [
+            5.03,
+            4.2,
+            0.65
+          ],
+          "size_m": [
+            0.9,
+            1.6,
+            1.1
+          ],
+          "visual_type": "life_support",
+          "yaw_deg": -90
+        },
+        {
+          "id": "workbench",
+          "name": "Paillasse d'analyse",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            4.82,
+            6.35,
+            0.55
+          ],
+          "size_m": [
+            1.2,
+            1.6,
+            0.95
+          ],
+          "visual_type": "workbench",
+          "yaw_deg": -90
+        },
+        {
+          "id": "aft_locker",
+          "name": "Armoire arrière",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            1.05,
+            7.65,
+            1.35
+          ],
+          "size_m": [
+            1.5,
+            0.5,
+            2.6
+          ],
+          "visual_type": "locker",
+          "yaw_deg": 0
+        },
+        {
+          "id": "experiment_base",
+          "name": "Socle instrumenté",
+          "role": "obstacle",
+          "material_id": "steel",
+          "center_m": [
+            2.65,
+            3.55,
+            0.6
+          ],
+          "size_m": [
+            0.95,
+            1.15,
+            1.05
+          ],
+          "visual_type": "experiment",
+          "yaw_deg": 0
+        },
+        {
+          "id": "fuel_sample",
+          "name": "Échantillon combustible",
+          "role": "fuel",
+          "material_id": "cellulose",
+          "center_m": [
+            2.65,
+            3.55,
+            1.35
+          ],
+          "size_m": [
+            0.6,
+            0.6,
+            0.05
+          ],
+          "visual_type": "fuel",
+          "yaw_deg": 0
+        }
+      ],
+      "vents": [
+        {
+          "id": "inlet_forward",
+          "role": "inlet",
+          "center_m": [
+            2.8,
+            0,
+            1.6
+          ],
+          "size_m": [
+            1.2,
+            0,
+            0.8
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        },
+        {
+          "id": "outlet_aft",
+          "role": "outlet",
+          "center_m": [
+            2.8,
+            8,
+            2.5
+          ],
+          "size_m": [
+            1.2,
+            0,
+            0.8
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        }
+      ]
+    },
+    {
+      "bounds_m": [
+        5.6,
+        8.0,
+        3.2
+      ],
+      "coordinate_system": "right_handed_z_up",
+      "units": "m",
+      "sensors": [
+        {
+          "id": "sensor_near",
+          "name": "S01 · proximité de la source",
+          "position_m": [
+            2.65,
+            4.35,
+            1.6
+          ]
+        },
+        {
+          "id": "sensor_aft",
+          "name": "S02 · compartiment arrière",
+          "position_m": [
+            3.2,
+            6.7,
+            2.4
+          ]
+        },
+        {
+          "id": "sensor_forward",
+          "name": "S03 · accès",
+          "position_m": [
+            2.8,
+            0.8,
+            1.5
+          ]
+        },
+        {
+          "id": "sensor_crown",
+          "name": "S04 · haut du volume",
+          "position_m": [
+            2.65,
+            3.55,
+            2.9
+          ]
+        }
+      ],
+      "source_position_m": [
+        2.65,
+        3.55,
+        1.5
+      ],
+      "defaults": {
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21,
+        "material_id": "pmma",
+        "ignition_power_w": 500,
+        "ignition_duration_s": 15,
+        "duration_s": 60,
+        "seed": 42
+      },
+      "provenance": {
+        "kind": "authored_synthetic_environment",
+        "author": "IGNIS / Valley",
+        "title": "Aster — compartiment expérimental original",
+        "is_nasa_geometry": false,
+        "scientific_status": "Uncalibrated authored geometry. No certified spacecraft reconstruction.",
+        "visual_detail_policy": "Racks and equipment use AABB envelopes for calculation. Small fasteners, cables and handrails are decoration; not independently resolved.",
+        "boundary_policy": "role=wall describes domain boundaries. Exclude wall AABBs from interior OBST; apply boundary conditions and vents in the solver.",
+        "presentation_policy": "GLB uses a cutaway shell. The complete fluid domain is defined by bounds_m, never by the visible shell alone."
+      },
+      "presentation": {
+        "name": "ASTER / IGNIS EXPERIMENTAL HABITAT",
+        "blender_file": "cargo.blend",
+        "preview_image": "cargo-overview.png",
+        "physical_camera_m": [
+          10.9,
+          -10.5,
+          9.1
+        ],
+        "camera_target_m": [
+          2.65,
+          4,
+          1.0
+        ],
+        "cutaway": true
+      },
+      "id": "cargo",
+      "name": "Aster · configuration cargo",
+      "description": "Le compartiment reçoit trois conteneurs et un panneau PMMA. L'encombrement modifie les trajets de ventilation et les zones de recirculation possibles.",
+      "asset_url": "/assets/scenes/cargo.glb",
+      "preview_url": "/assets/scenes/cargo-overview.png",
+      "objects": [
+        {
+          "id": "floor",
+          "name": "Plancher technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            4.0,
+            -0.04
+          ],
+          "size_m": [
+            5.6,
+            8.0,
+            0.08
+          ],
+          "surface_kind": "floor",
+          "boundary": "z_min"
+        },
+        {
+          "id": "ceiling",
+          "name": "Plafond technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            4.0,
+            3.24
+          ],
+          "size_m": [
+            5.6,
+            8.0,
+            0.08
+          ],
+          "surface_kind": "ceiling",
+          "boundary": "z_max"
+        },
+        {
+          "id": "wall_port",
+          "name": "Paroi bâbord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            -0.04,
+            4.0,
+            1.6
+          ],
+          "size_m": [
+            0.08,
+            8.0,
+            3.2
+          ],
+          "boundary": "x_min"
+        },
+        {
+          "id": "wall_starboard",
+          "name": "Paroi tribord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            5.64,
+            4.0,
+            1.6
+          ],
+          "size_m": [
+            0.08,
+            8.0,
+            3.2
+          ],
+          "boundary": "x_max"
+        },
+        {
+          "id": "wall_entry",
+          "name": "Paroi d'accès",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            -0.04,
+            1.6
+          ],
+          "size_m": [
+            5.6,
+            0.08,
+            3.2
+          ],
+          "boundary": "y_min"
+        },
+        {
+          "id": "wall_aft",
+          "name": "Cloison arrière",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            8.04,
+            1.6
+          ],
+          "size_m": [
+            5.6,
+            0.08,
+            3.2
+          ],
+          "boundary": "y_max"
+        },
+        {
+          "id": "rack_power",
+          "name": "Rack · distribution électrique",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            1.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "power"
+        },
+        {
+          "id": "rack_avionics",
+          "name": "Rack · acquisition et calcul",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            3.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "avionics"
+        },
+        {
+          "id": "rack_atmosphere",
+          "name": "Rack · contrôle atmosphère",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            5.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "atmosphere"
+        },
+        {
+          "id": "console_control",
+          "name": "Console · commande et télémétrie",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            5.03,
+            2.1,
+            0.65
+          ],
+          "size_m": [
+            0.9,
+            1.55,
+            1.1
+          ],
+          "visual_type": "console",
+          "yaw_deg": -90
+        },
+        {
+          "id": "life_support",
+          "name": "Baie · fluides et filtration",
+          "role": "obstacle",
+          "material_id": "steel",
+          "center_m": [
+            5.03,
+            4.2,
+            0.65
+          ],
+          "size_m": [
+            0.9,
+            1.6,
+            1.1
+          ],
+          "visual_type": "life_support",
+          "yaw_deg": -90
+        },
+        {
+          "id": "workbench",
+          "name": "Paillasse d'analyse",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            4.82,
+            6.35,
+            0.55
+          ],
+          "size_m": [
+            1.2,
+            1.6,
+            0.95
+          ],
+          "visual_type": "workbench",
+          "yaw_deg": -90
+        },
+        {
+          "id": "aft_locker",
+          "name": "Armoire arrière",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            1.05,
+            7.65,
+            1.35
+          ],
+          "size_m": [
+            1.5,
+            0.5,
+            2.6
+          ],
+          "visual_type": "locker",
+          "yaw_deg": 0
+        },
+        {
+          "id": "experiment_base",
+          "name": "Socle instrumenté",
+          "role": "obstacle",
+          "material_id": "steel",
+          "center_m": [
+            2.65,
+            3.55,
+            0.6
+          ],
+          "size_m": [
+            0.95,
+            1.15,
+            1.05
+          ],
+          "visual_type": "experiment",
+          "yaw_deg": 0
+        },
+        {
+          "id": "fuel_sample",
+          "name": "Échantillon combustible",
+          "role": "fuel",
+          "material_id": "pmma",
+          "center_m": [
+            2.65,
+            3.55,
+            1.35
+          ],
+          "size_m": [
+            0.6,
+            0.6,
+            0.05
+          ],
+          "visual_type": "fuel",
+          "yaw_deg": 0
+        },
+        {
+          "id": "cargo_crate_01",
+          "name": "Conteneur cargo A",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            3.5,
+            5.05,
+            0.65
+          ],
+          "size_m": [
+            1.0,
+            1.1,
+            1.15
+          ],
+          "visual_type": "cargo"
+        },
+        {
+          "id": "cargo_crate_02",
+          "name": "Conteneur cargo B",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            2.3,
+            6.35,
+            0.55
+          ],
+          "size_m": [
+            1.2,
+            1.0,
+            0.95
+          ],
+          "visual_type": "cargo"
+        },
+        {
+          "id": "cargo_crate_03",
+          "name": "Conteneur cargo C",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            3.8,
+            1.4,
+            0.48
+          ],
+          "size_m": [
+            1.05,
+            0.9,
+            0.8
+          ],
+          "visual_type": "cargo"
+        }
+      ],
+      "vents": [
+        {
+          "id": "inlet_forward",
+          "role": "inlet",
+          "center_m": [
+            2.8,
+            0,
+            1.6
+          ],
+          "size_m": [
+            1.2,
+            0,
+            0.8
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        },
+        {
+          "id": "outlet_aft",
+          "role": "outlet",
+          "center_m": [
+            2.8,
+            8,
+            2.5
+          ],
+          "size_m": [
+            1.2,
+            0,
+            0.8
+          ],
+          "normal": [
+            0,
+            1,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        }
+      ]
+    },
+    {
+      "bounds_m": [
+        5.6,
+        8.0,
+        3.2
+      ],
+      "coordinate_system": "right_handed_z_up",
+      "units": "m",
+      "sensors": [
+        {
+          "id": "sensor_near",
+          "name": "S01 · proximité de la source",
+          "position_m": [
+            2.65,
+            4.35,
+            1.6
+          ]
+        },
+        {
+          "id": "sensor_aft",
+          "name": "S02 · compartiment arrière",
+          "position_m": [
+            3.2,
+            6.7,
+            2.4
+          ]
+        },
+        {
+          "id": "sensor_forward",
+          "name": "S03 · accès",
+          "position_m": [
+            2.8,
+            0.8,
+            1.5
+          ]
+        },
+        {
+          "id": "sensor_crown",
+          "name": "S04 · haut du volume",
+          "position_m": [
+            2.65,
+            3.55,
+            2.9
+          ]
+        }
+      ],
+      "source_position_m": [
+        2.65,
+        3.55,
+        1.5
+      ],
+      "defaults": {
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21,
+        "material_id": "cellulose",
+        "ignition_power_w": 500,
+        "ignition_duration_s": 15,
+        "duration_s": 60,
+        "seed": 42
+      },
+      "provenance": {
+        "kind": "authored_synthetic_environment",
+        "author": "IGNIS / Valley",
+        "title": "Aster — compartiment expérimental original",
+        "is_nasa_geometry": false,
+        "scientific_status": "Uncalibrated authored geometry. No certified spacecraft reconstruction.",
+        "visual_detail_policy": "Racks and equipment use AABB envelopes for calculation. Small fasteners, cables and handrails are decoration; not independently resolved.",
+        "boundary_policy": "role=wall describes domain boundaries. Exclude wall AABBs from interior OBST; apply boundary conditions and vents in the solver.",
+        "presentation_policy": "GLB uses a cutaway shell. The complete fluid domain is defined by bounds_m, never by the visible shell alone."
+      },
+      "presentation": {
+        "name": "ASTER / IGNIS EXPERIMENTAL HABITAT",
+        "blender_file": "crossflow.blend",
+        "preview_image": "crossflow-overview.png",
+        "physical_camera_m": [
+          10.9,
+          -10.5,
+          9.1
+        ],
+        "camera_target_m": [
+          2.65,
+          4,
+          1.0
+        ],
+        "cutaway": true
+      },
+      "id": "crossflow",
+      "name": "Aster · ventilation transversale",
+      "description": "Même enveloppe et équipements avec soufflage depuis bâbord et extraction à tribord ; déflecteur central pour explorer les effets de la disposition.",
+      "asset_url": "/assets/scenes/crossflow.glb",
+      "preview_url": "/assets/scenes/crossflow-overview.png",
+      "objects": [
+        {
+          "id": "floor",
+          "name": "Plancher technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            4.0,
+            -0.04
+          ],
+          "size_m": [
+            5.6,
+            8.0,
+            0.08
+          ],
+          "surface_kind": "floor",
+          "boundary": "z_min"
+        },
+        {
+          "id": "ceiling",
+          "name": "Plafond technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            4.0,
+            3.24
+          ],
+          "size_m": [
+            5.6,
+            8.0,
+            0.08
+          ],
+          "surface_kind": "ceiling",
+          "boundary": "z_max"
+        },
+        {
+          "id": "wall_port",
+          "name": "Paroi bâbord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            -0.04,
+            4.0,
+            1.6
+          ],
+          "size_m": [
+            0.08,
+            8.0,
+            3.2
+          ],
+          "boundary": "x_min"
+        },
+        {
+          "id": "wall_starboard",
+          "name": "Paroi tribord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            5.64,
+            4.0,
+            1.6
+          ],
+          "size_m": [
+            0.08,
+            8.0,
+            3.2
+          ],
+          "boundary": "x_max"
+        },
+        {
+          "id": "wall_entry",
+          "name": "Paroi d'accès",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            -0.04,
+            1.6
+          ],
+          "size_m": [
+            5.6,
+            0.08,
+            3.2
+          ],
+          "boundary": "y_min"
+        },
+        {
+          "id": "wall_aft",
+          "name": "Cloison arrière",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            2.8,
+            8.04,
+            1.6
+          ],
+          "size_m": [
+            5.6,
+            0.08,
+            3.2
+          ],
+          "boundary": "y_max"
+        },
+        {
+          "id": "rack_power",
+          "name": "Rack · distribution électrique",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            1.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "power"
+        },
+        {
+          "id": "rack_avionics",
+          "name": "Rack · acquisition et calcul",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            3.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "avionics"
+        },
+        {
+          "id": "rack_atmosphere",
+          "name": "Rack · contrôle atmosphère",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.58,
+            5.55,
+            1.375
+          ],
+          "size_m": [
+            0.94,
+            1.5,
+            2.55
+          ],
+          "visual_type": "rack",
+          "yaw_deg": 90,
+          "rack_kind": "atmosphere"
+        },
+        {
+          "id": "console_control",
+          "name": "Console · commande et télémétrie",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            5.03,
+            2.1,
+            0.65
+          ],
+          "size_m": [
+            0.9,
+            1.55,
+            1.1
+          ],
+          "visual_type": "console",
+          "yaw_deg": -90
+        },
+        {
+          "id": "life_support",
+          "name": "Baie · fluides et filtration",
+          "role": "obstacle",
+          "material_id": "steel",
+          "center_m": [
+            5.03,
+            4.2,
+            0.65
+          ],
+          "size_m": [
+            0.9,
+            1.6,
+            1.1
+          ],
+          "visual_type": "life_support",
+          "yaw_deg": -90
+        },
+        {
+          "id": "workbench",
+          "name": "Paillasse d'analyse",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            4.82,
+            6.35,
+            0.55
+          ],
+          "size_m": [
+            1.2,
+            1.6,
+            0.95
+          ],
+          "visual_type": "workbench",
+          "yaw_deg": -90
+        },
+        {
+          "id": "aft_locker",
+          "name": "Armoire arrière",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            1.05,
+            7.65,
+            1.35
+          ],
+          "size_m": [
+            1.5,
+            0.5,
+            2.6
+          ],
+          "visual_type": "locker",
+          "yaw_deg": 0
+        },
+        {
+          "id": "experiment_base",
+          "name": "Socle instrumenté",
+          "role": "obstacle",
+          "material_id": "steel",
+          "center_m": [
+            2.65,
+            3.55,
+            0.6
+          ],
+          "size_m": [
+            0.95,
+            1.15,
+            1.05
+          ],
+          "visual_type": "experiment",
+          "yaw_deg": 0
+        },
+        {
+          "id": "fuel_sample",
+          "name": "Échantillon combustible",
+          "role": "fuel",
+          "material_id": "cellulose",
+          "center_m": [
+            2.65,
+            3.55,
+            1.35
+          ],
+          "size_m": [
+            0.6,
+            0.6,
+            0.05
+          ],
+          "visual_type": "fuel",
+          "yaw_deg": 0
+        },
+        {
+          "id": "flow_baffle",
+          "name": "Déflecteur instrumenté",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            3.65,
+            4.6,
+            1.25
+          ],
+          "size_m": [
+            0.12,
+            1.65,
+            2.2
+          ],
+          "visual_type": "baffle"
+        }
+      ],
+      "vents": [
+        {
+          "id": "inlet_port",
+          "role": "inlet",
+          "center_m": [
+            0,
+            6.7,
+            1.8
+          ],
+          "size_m": [
+            0,
+            0.8,
+            0.8
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        },
+        {
+          "id": "outlet_starboard",
+          "role": "outlet",
+          "center_m": [
+            5.6,
+            1.0,
+            1.8
+          ],
+          "size_m": [
+            0,
+            0.8,
+            0.8
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        }
+      ]
+    },
+    {
+      "bounds_m": [
+        3.0,
+        3.0,
+        2.6
+      ],
+      "coordinate_system": "right_handed_z_up",
+      "units": "m",
+      "sensors": [
+        {
+          "id": "sensor_near",
+          "name": "S01 · tableau de bord",
+          "position_m": [
+            1.5,
+            0.75,
+            2.0
+          ]
+        },
+        {
+          "id": "sensor_crew",
+          "name": "S02 · volume équipage",
+          "position_m": [
+            1.5,
+            1.75,
+            1.6
+          ]
+        },
+        {
+          "id": "sensor_aft",
+          "name": "S03 · coque arrière",
+          "position_m": [
+            1.5,
+            2.5,
+            1.7
+          ]
+        },
+        {
+          "id": "sensor_crown",
+          "name": "S04 · couronne",
+          "position_m": [
+            1.5,
+            1.5,
+            2.3
+          ]
+        }
+      ],
+      "source_position_m": [
+        1.5,
+        0.75,
+        1.7
+      ],
+      "defaults": {
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21,
+        "material_id": "cellulose",
+        "ignition_power_w": 500,
+        "ignition_duration_s": 15,
+        "duration_s": 60,
+        "seed": 42,
+        "mesh_cell_m": 0.2
+      },
+      "provenance": {
+        "kind": "authored_synthetic_environment",
+        "author": "IGNIS / Valley",
+        "title": "Capsule Soyouz — interprétation originale",
+        "is_nasa_geometry": false,
+        "scientific_status": "Visually inspired by the Soyuz descent module, not flight CAD. Approximate 3 x 3 x 2.6 m computational envelope; four corner obstacles approximate the rounded shell. Seat proxies are filled AABB envelopes. No engineering or flight certification.",
+        "visual_detail_policy": "Rounded visual shell differs from the coarse four-corner AABB computational shell. This discrepancy must be retained in simulation provenance; quantitative capsule validation is not established.",
+        "boundary_policy": "role=wall describes domain boundaries. Exclude wall AABBs from interior OBST; apply boundary conditions and vents in the solver.",
+        "presentation_policy": "GLB uses a cutaway shell. The complete fluid domain is defined by bounds_m, never by the visible shell alone."
+      },
+      "presentation": {
+        "name": "SOYUZ / DESCENT CAPSULE STUDY",
+        "blender_file": "soyuz.blend",
+        "preview_image": "soyuz-overview.png",
+        "physical_camera_m": [
+          5.2,
+          -5.1,
+          5.9
+        ],
+        "camera_target_m": [
+          1.5,
+          1.5,
+          1.15
+        ],
+        "cutaway": true
+      },
+      "id": "soyuz",
+      "name": "Soyouz · capsule en coupe",
+      "description": "Capsule originale inspirée du module de descente Soyouz : coque arrondie, trois sièges inclinés, harnais, tableau de bord et hublots. Géométrie artistique et proxy de calcul approximatif ; aucun plan de vol officiel.",
+      "asset_url": "/assets/scenes/soyuz.glb",
+      "preview_url": "/assets/scenes/soyuz-overview.png",
+      "objects": [
+        {
+          "id": "floor",
+          "name": "Plancher technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            1.5,
+            -0.04
+          ],
+          "size_m": [
+            3.0,
+            3.0,
+            0.08
+          ],
+          "surface_kind": "floor",
+          "boundary": "z_min"
+        },
+        {
+          "id": "ceiling",
+          "name": "Plafond technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            1.5,
+            2.64
+          ],
+          "size_m": [
+            3.0,
+            3.0,
+            0.08
+          ],
+          "surface_kind": "ceiling",
+          "boundary": "z_max"
+        },
+        {
+          "id": "wall_port",
+          "name": "Paroi bâbord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            -0.04,
+            1.5,
+            1.3
+          ],
+          "size_m": [
+            0.08,
+            3.0,
+            2.6
+          ],
+          "boundary": "x_min"
+        },
+        {
+          "id": "wall_starboard",
+          "name": "Paroi tribord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            3.04,
+            1.5,
+            1.3
+          ],
+          "size_m": [
+            0.08,
+            3.0,
+            2.6
+          ],
+          "boundary": "x_max"
+        },
+        {
+          "id": "wall_entry",
+          "name": "Paroi d'accès",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            -0.04,
+            1.3
+          ],
+          "size_m": [
+            3.0,
+            0.08,
+            2.6
+          ],
+          "boundary": "y_min"
+        },
+        {
+          "id": "wall_aft",
+          "name": "Cloison arrière",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            3.04,
+            1.3
+          ],
+          "size_m": [
+            3.0,
+            0.08,
+            2.6
+          ],
+          "boundary": "y_max"
+        },
+        {
+          "id": "soyuz_seat_left",
+          "name": "Siège gauche · coque et harnais",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.7,
+            1.5,
+            0.7
+          ],
+          "size_m": [
+            0.6,
+            1.1,
+            1.1
+          ],
+          "visual_type": "soyuz_seat",
+          "seat_index": 0
+        },
+        {
+          "id": "soyuz_seat_center",
+          "name": "Siège central · coque et harnais",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            1.5,
+            0.7
+          ],
+          "size_m": [
+            0.6,
+            1.1,
+            1.1
+          ],
+          "visual_type": "soyuz_seat",
+          "seat_index": 1
+        },
+        {
+          "id": "soyuz_seat_right",
+          "name": "Siège droit · coque et harnais",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            2.3,
+            1.5,
+            0.7
+          ],
+          "size_m": [
+            0.6,
+            1.1,
+            1.1
+          ],
+          "visual_type": "soyuz_seat",
+          "seat_index": 2
+        },
+        {
+          "id": "soyuz_console",
+          "name": "Tableau de bord de capsule",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            0.3,
+            1.05
+          ],
+          "size_m": [
+            1.8,
+            0.3,
+            0.5
+          ],
+          "visual_type": "soyuz_console"
+        },
+        {
+          "id": "fuel_sample",
+          "name": "Coupon de matériau instrumenté",
+          "role": "fuel",
+          "material_id": "cellulose",
+          "center_m": [
+            1.5,
+            0.75,
+            1.5
+          ],
+          "size_m": [
+            0.2,
+            0.2,
+            0.05
+          ],
+          "visual_type": "fuel"
+        },
+        {
+          "id": "capsule_corner_0",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.3,
+            0.3,
+            1.3
+          ],
+          "size_m": [
+            0.6,
+            0.6,
+            2.6
+          ],
+          "visual_type": "physical_only",
+          "proxy_kind": "coarse_capsule_shell"
+        },
+        {
+          "id": "capsule_corner_1",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            2.7,
+            0.3,
+            1.3
+          ],
+          "size_m": [
+            0.6,
+            0.6,
+            2.6
+          ],
+          "visual_type": "physical_only",
+          "proxy_kind": "coarse_capsule_shell"
+        },
+        {
+          "id": "capsule_corner_2",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.3,
+            2.7,
+            1.3
+          ],
+          "size_m": [
+            0.6,
+            0.6,
+            2.6
+          ],
+          "visual_type": "physical_only",
+          "proxy_kind": "coarse_capsule_shell"
+        },
+        {
+          "id": "capsule_corner_3",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            2.7,
+            2.7,
+            1.3
+          ],
+          "size_m": [
+            0.6,
+            0.6,
+            2.6
+          ],
+          "visual_type": "physical_only",
+          "proxy_kind": "coarse_capsule_shell"
+        }
+      ],
+      "vents": [
+        {
+          "id": "inlet_port",
+          "role": "inlet",
+          "center_m": [
+            0,
+            1.5,
+            0.8
+          ],
+          "size_m": [
+            0,
+            0.4,
+            0.4
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        },
+        {
+          "id": "outlet_starboard",
+          "role": "outlet",
+          "center_m": [
+            3,
+            1.5,
+            0.8
+          ],
+          "size_m": [
+            0,
+            0.4,
+            0.4
+          ],
+          "normal": [
+            1,
+            0,
+            0
+          ],
+          "nominal_speed_m_s": 0.2
+        }
+      ],
+      "visual_style": "soyuz"
+    }
+  ]
+}

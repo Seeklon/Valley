@@ -1,0 +1,11 @@
+{
+  "deployed_at": "2026-11-14T11:35:55.760185+00:00",
+  "archive_sha256": "3ab4db42e04b49569b143606d4dd8a24a497cc7120a809ebbcd3f9622f744b34",
+  "index_sha256": "bc666610ca2eda9e9ce9ee4a234c07658ff951eae54852bba7ffa40a9d97598d",
+  "file_count": 21,
+  "destination": "E:/IGNIS-Valley/app/web/dist",
+  "source_changed": "web/src/components/Library.tsx",
+  "source_sha256": "70e2de2741ba5c7553db1a8f79df66087bf5d13de98d8f03e9dd78eb97a84073",
+  "change": "Model introduction says domaine d’utilisation déclaré",
+  "formatting_verified_build_identical": true
+}

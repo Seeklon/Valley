@@ -1,0 +1,2365 @@
+{
+  "id": "PSI-26",
+  "name": "BASS",
+  "title": "Burning and Suppression of Solids",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
+  "doi": "10.60555/58h4-dy80",
+  "license": "CC0-1.0",
+  "metadata_version": 4,
+  "table_version": 1,
+  "table_id": "67a3768509ed061032c125fb",
+  "table_file": "PSI-26.csv",
+  "sha256": "ccfc3c54d948b64a1c5d2596a63c7c8019e51df0c91a1d62f039f48fa28c300f",
+  "metadata_sha256": "9dee45d44bb736178db270a07c9ee8f98ac02ee810189ab518271fd4720c0533",
+  "retrieved_at": "2026-11-14T10:07:29.755545+00:00",
+  "status": "experimental_inventory",
+  "description": "Tableau d’inventaire : des identifiants se répètent et une ligne est une note. Aucun champ 3D ni débit étalonné dans ce tableau.",
+  "quality": {
+    "table_rows": 122,
+    "combustion_inventory_rows": 121,
+    "unique_test_identifiers": 116,
+    "repeated_identifiers": {
+      "24": 2,
+      "85": 2,
+      "89": 2,
+      "90": 2,
+      "91": 2
+    },
+    "direct_airflow_values": 0,
+    "direct_burn_time_values": 0,
+    "not_a_ready_supervised_dataset": true
+  },
+  "observations": [
+    {
+      "test_id": "1",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 2,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "3/30/2012",
+        "GMT": "90",
+        "As Run Test #": "1",
+        "Test #": "1",
+        "Sample #": "4",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "2",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 3,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "3/30/2012",
+        "GMT": "90",
+        "As Run Test #": "2",
+        "Test #": "42",
+        "Sample #": "24",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "3",
+      "material": "PMMA sphere 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 4,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "3/30/2012",
+        "GMT": "90",
+        "As Run Test #": "3",
+        "Test #": "18",
+        "Sample #": "19",
+        "Fuel Sample Material": "PMMA sphere 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "4",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 5,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/5/2012",
+        "GMT": "96",
+        "As Run Test #": "4",
+        "Test #": "7",
+        "Sample #": "10",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "5",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 6,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/5/2012",
+        "GMT": "96",
+        "As Run Test #": "5",
+        "Test #": "8",
+        "Sample #": "11",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "6",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 7,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2012",
+        "GMT": "100",
+        "As Run Test #": "6",
+        "Test #": "43",
+        "Sample #": "24",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "7",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 8,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2012",
+        "GMT": "100",
+        "As Run Test #": "7",
+        "Test #": "44",
+        "Sample #": "24",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "8",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 9,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2012",
+        "GMT": "100",
+        "As Run Test #": "8",
+        "Test #": "45",
+        "Sample #": "24",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "9",
+      "material": "PMMA sphere 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 10,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/2/2012",
+        "GMT": "123",
+        "As Run Test #": "9",
+        "Test #": "19",
+        "Sample #": "19",
+        "Fuel Sample Material": "PMMA sphere 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "10",
+      "material": "PMMA sphere 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 11,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/2/2012",
+        "GMT": "123",
+        "As Run Test #": "10",
+        "Test #": "20",
+        "Sample #": "19",
+        "Fuel Sample Material": "PMMA sphere 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "11",
+      "material": "PMMA sphere 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 12,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/2/2012",
+        "GMT": "123",
+        "As Run Test #": "11",
+        "Test #": "21",
+        "Sample #": "19",
+        "Fuel Sample Material": "PMMA sphere 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "12",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 13,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/10/2012",
+        "GMT": "131",
+        "As Run Test #": "12",
+        "Test #": "4",
+        "Sample #": "12",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "13",
+      "material": "SIBAL 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 14,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/10/2012",
+        "GMT": "131",
+        "As Run Test #": "13",
+        "Test #": "10",
+        "Sample #": "2",
+        "Fuel Sample Material": "SIBAL 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "14",
+      "material": "Nomex blend 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 15,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/10/2012",
+        "GMT": "131",
+        "As Run Test #": "14",
+        "Test #": "12",
+        "Sample #": "27",
+        "Fuel Sample Material": "Nomex blend 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "15",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 16,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/11/2012",
+        "GMT": "132",
+        "As Run Test #": "15",
+        "Test #": "54",
+        "Sample #": "21",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "16",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 17,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/11/2012",
+        "GMT": "132",
+        "As Run Test #": "16",
+        "Test #": "55",
+        "Sample #": "21",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "17",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 18,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/11/2012",
+        "GMT": "132",
+        "As Run Test #": "17",
+        "Test #": "56",
+        "Sample #": "21",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "18",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 19,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/11/2012",
+        "GMT": "132",
+        "As Run Test #": "18",
+        "Test #": "57",
+        "Sample #": "21",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "19",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 20,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/11/2012",
+        "GMT": "132",
+        "As Run Test #": "19",
+        "Test #": "110",
+        "Sample #": "21",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "20",
+      "material": "PMMA 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 21,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/5/2012",
+        "GMT": "157",
+        "As Run Test #": "20",
+        "Test #": "30",
+        "Sample #": "15",
+        "Fuel Sample Material": "PMMA 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "21",
+      "material": "PMMA 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 22,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/5/2012",
+        "GMT": "157",
+        "As Run Test #": "21",
+        "Test #": "31",
+        "Sample #": "15",
+        "Fuel Sample Material": "PMMA 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "22",
+      "material": "PMMA 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 23,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/5/2012",
+        "GMT": "157",
+        "As Run Test #": "22",
+        "Test #": "32",
+        "Sample #": "15",
+        "Fuel Sample Material": "PMMA 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "23",
+      "material": "PMMA 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 24,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/5/2012",
+        "GMT": "157",
+        "As Run Test #": "23",
+        "Test #": "33",
+        "Sample #": "15",
+        "Fuel Sample Material": "PMMA 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "24",
+      "material": "Nomex blend 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 25,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/5/2012",
+        "GMT": "157",
+        "As Run Test #": "24",
+        "Test #": "12-R",
+        "Sample #": "27",
+        "Fuel Sample Material": "Nomex blend 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "24",
+      "material": "Nomex blend 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 26,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/5/2012",
+        "GMT": "157",
+        "As Run Test #": "24",
+        "Test #": "12-R2",
+        "Sample #": "27",
+        "Fuel Sample Material": "Nomex blend 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "25",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 27,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/11/2012",
+        "GMT": "163",
+        "As Run Test #": "25",
+        "Test #": "46",
+        "Sample #": "22",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "26",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 28,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/11/2012",
+        "GMT": "163",
+        "As Run Test #": "26",
+        "Test #": "47",
+        "Sample #": "22",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "27",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 29,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/11/2012",
+        "GMT": "163",
+        "As Run Test #": "27",
+        "Test #": "48",
+        "Sample #": "22",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "28",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 30,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/11/2012",
+        "GMT": "163",
+        "As Run Test #": "28",
+        "Test #": "49",
+        "Sample #": "22",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "29",
+      "material": "1 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 31,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/14/2012",
+        "GMT": "166",
+        "As Run Test #": "29",
+        "Test #": "22",
+        "Sample #": "18",
+        "Fuel Sample Material": "1 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "30",
+      "material": "1 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 32,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/14/2012",
+        "GMT": "166",
+        "As Run Test #": "30",
+        "Test #": "23",
+        "Sample #": "18",
+        "Fuel Sample Material": "1 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "31",
+      "material": "1 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 33,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/14/2012",
+        "GMT": "166",
+        "As Run Test #": "31",
+        "Test #": "24",
+        "Sample #": "18",
+        "Fuel Sample Material": "1 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "32",
+      "material": "1 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 34,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/14/2012",
+        "GMT": "166",
+        "As Run Test #": "32",
+        "Test #": "25",
+        "Sample #": "18",
+        "Fuel Sample Material": "1 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "33",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 35,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/18/2012",
+        "GMT": "170",
+        "As Run Test #": "33",
+        "Test #": "58",
+        "Sample #": "25",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "34",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 36,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/18/2012",
+        "GMT": "170",
+        "As Run Test #": "34",
+        "Test #": "59",
+        "Sample #": "25",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "35",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 37,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/18/2012",
+        "GMT": "170",
+        "As Run Test #": "35",
+        "Test #": "60",
+        "Sample #": "25",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "36",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 38,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/18/2012",
+        "GMT": "170",
+        "As Run Test #": "36",
+        "Test #": "61",
+        "Sample #": "25",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "37",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 39,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/28/2012",
+        "GMT": "180",
+        "As Run Test #": "37",
+        "Test #": "5",
+        "Sample #": "9",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "38",
+      "material": "Nomex III Natural",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 40,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/28/2012",
+        "GMT": "180",
+        "As Run Test #": "38",
+        "Test #": "14",
+        "Sample #": "29",
+        "Fuel Sample Material": "Nomex III Natural"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "39",
+      "material": "PMMA slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 41,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/28/2012",
+        "GMT": "180",
+        "As Run Test #": "39",
+        "Test #": "66",
+        "Sample #": "33",
+        "Fuel Sample Material": "PMMA slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "40",
+      "material": "PMMA slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 42,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/28/2012",
+        "GMT": "180",
+        "As Run Test #": "40",
+        "Test #": "67",
+        "Sample #": "33",
+        "Fuel Sample Material": "PMMA slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "41",
+      "material": "1 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 43,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/29/2012",
+        "GMT": "181",
+        "As Run Test #": "41",
+        "Test #": "34",
+        "Sample #": "16",
+        "Fuel Sample Material": "1 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "42",
+      "material": "1 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 44,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/29/`12",
+        "GMT": "181",
+        "As Run Test #": "42",
+        "Test #": "35",
+        "Sample #": "16",
+        "Fuel Sample Material": "1 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "43",
+      "material": "ultem sheet",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 45,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/29/2012",
+        "GMT": "181",
+        "As Run Test #": "43",
+        "Test #": "16",
+        "Sample #": "31",
+        "Fuel Sample Material": "ultem sheet"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "44",
+      "material": "SIBAL 2 cm   opposed flow",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 46,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/29/2012",
+        "GMT": "181",
+        "As Run Test #": "44",
+        "Test #": "5b",
+        "Sample #": "9",
+        "Fuel Sample Material": "SIBAL 2 cm   opposed flow"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "45",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 47,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/3/2012",
+        "GMT": "185",
+        "As Run Test #": "45",
+        "Test #": "6",
+        "Sample #": "8",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "46",
+      "material": "candle",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 48,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/3/2012",
+        "GMT": "185",
+        "As Run Test #": "46",
+        "Test #": "82",
+        "Sample #": "35",
+        "Fuel Sample Material": "candle"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "47",
+      "material": "candle",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 49,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/3/2012",
+        "GMT": "185",
+        "As Run Test #": "47",
+        "Test #": "82a",
+        "Sample #": "35",
+        "Fuel Sample Material": "candle"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "48",
+      "material": "candle",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 50,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/3/2012",
+        "GMT": "185",
+        "As Run Test #": "48",
+        "Test #": "82b",
+        "Sample #": "35",
+        "Fuel Sample Material": "candle"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "49",
+      "material": "pmma slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 51,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/3/2012",
+        "GMT": "185",
+        "As Run Test #": "49",
+        "Test #": "68",
+        "Sample #": "33",
+        "Fuel Sample Material": "pmma slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "50",
+      "material": "pmma slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 52,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/12/2012",
+        "GMT": "194",
+        "As Run Test #": "50",
+        "Test #": "69",
+        "Sample #": "33",
+        "Fuel Sample Material": "pmma slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "51",
+      "material": "2 cm sphere   wake ign",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 53,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/12/2012",
+        "GMT": "194",
+        "As Run Test #": "51",
+        "Test #": "111",
+        "Sample #": "21",
+        "Fuel Sample Material": "2 cm sphere   wake ign"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "52",
+      "material": "2 cm sphere   wake ign",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 54,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/12/2012",
+        "GMT": "194",
+        "As Run Test #": "52",
+        "Test #": "112",
+        "Sample #": "21",
+        "Fuel Sample Material": "2 cm sphere   wake ign"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "53",
+      "material": "2 cm sphere   wake ign",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 55,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/12/2012",
+        "GMT": "194",
+        "As Run Test #": "53",
+        "Test #": "113",
+        "Sample #": "21",
+        "Fuel Sample Material": "2 cm sphere   wake ign"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "54",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 56,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/19/2012",
+        "GMT": "201",
+        "As Run Test #": "54",
+        "Test #": "2",
+        "Sample #": "5",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "55",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 57,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/19/2012",
+        "GMT": "201",
+        "As Run Test #": "55",
+        "Test #": "3",
+        "Sample #": "6",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "56",
+      "material": "nomex natural III",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 58,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/19/2012",
+        "GMT": "201",
+        "As Run Test #": "56",
+        "Test #": "15",
+        "Sample #": "30",
+        "Fuel Sample Material": "nomex natural III"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "57",
+      "material": "Nomex blend 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 59,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/19/2012",
+        "GMT": "201",
+        "As Run Test #": "57",
+        "Test #": "13",
+        "Sample #": "28",
+        "Fuel Sample Material": "Nomex blend 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "58",
+      "material": "ultem sheet",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 60,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/19/2012",
+        "GMT": "201",
+        "As Run Test #": "58",
+        "Test #": "17",
+        "Sample #": "32",
+        "Fuel Sample Material": "ultem sheet"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "59",
+      "material": "pmma sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 61,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/19/2012",
+        "GMT": "201",
+        "As Run Test #": "59",
+        "Test #": "114",
+        "Sample #": "25",
+        "Fuel Sample Material": "pmma sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "60",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 62,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/23/2012",
+        "GMT": "205",
+        "As Run Test #": "60",
+        "Test #": "62",
+        "Sample #": "23",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "61",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 63,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/23/2012",
+        "GMT": "205",
+        "As Run Test #": "61",
+        "Test #": "63",
+        "Sample #": "23",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "62",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 64,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/23/2012",
+        "GMT": "205",
+        "As Run Test #": "62",
+        "Test #": "64",
+        "Sample #": "23",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "63",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 65,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/23/2012",
+        "GMT": "205",
+        "As Run Test #": "63",
+        "Test #": "65",
+        "Sample #": "23",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "64",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 66,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "7/23/2012",
+        "GMT": "205",
+        "As Run Test #": "64",
+        "Test #": "118",
+        "Sample #": "23",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "",
+      "material": "SOOT Cleaning",
+      "kind": "table_note",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 67,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/3/2012",
+        "GMT": "216",
+        "As Run Test #": "",
+        "Test #": "",
+        "Sample #": "",
+        "Fuel Sample Material": "SOOT Cleaning"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "65",
+      "material": "SIBAL 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 68,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/9/2012",
+        "GMT": "222",
+        "As Run Test #": "65",
+        "Test #": "11",
+        "Sample #": "3",
+        "Fuel Sample Material": "SIBAL 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "66",
+      "material": "SIBAL 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 69,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/9/2012",
+        "GMT": "222",
+        "As Run Test #": "66",
+        "Test #": "9",
+        "Sample #": "7",
+        "Fuel Sample Material": "SIBAL 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "67",
+      "material": "PMMA sphere 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 70,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/9/2012",
+        "GMT": "222",
+        "As Run Test #": "67",
+        "Test #": "102",
+        "Sample #": "22",
+        "Fuel Sample Material": "PMMA sphere 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "68",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 71,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "68",
+        "Test #": "83a",
+        "Sample #": "36",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "69",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 72,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "69",
+        "Test #": "83b",
+        "Sample #": "36",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "70",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 73,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "70",
+        "Test #": "83c",
+        "Sample #": "36",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "71",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 74,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "71",
+        "Test #": "84a",
+        "Sample #": "37",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "72",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 75,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "72",
+        "Test #": "84b",
+        "Sample #": "37",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "73",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 76,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "73",
+        "Test #": "86a",
+        "Sample #": "38",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "74",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 77,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "74",
+        "Test #": "86b",
+        "Sample #": "38",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "75",
+      "material": "Japan Wax Candle   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 78,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/16/2012",
+        "GMT": "229",
+        "As Run Test #": "75",
+        "Test #": "86c",
+        "Sample #": "38",
+        "Fuel Sample Material": "Japan Wax Candle   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "76",
+      "material": "PMMA slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 79,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/21/2012",
+        "GMT": "234",
+        "As Run Test #": "76",
+        "Test #": "70",
+        "Sample #": "34",
+        "Fuel Sample Material": "PMMA slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "77",
+      "material": "PMMA slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 80,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/21/2012",
+        "GMT": "234",
+        "As Run Test #": "77",
+        "Test #": "71",
+        "Sample #": "34",
+        "Fuel Sample Material": "PMMA slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "78",
+      "material": "paraffin wax slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 81,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/21/2012",
+        "GMT": "234",
+        "As Run Test #": "78",
+        "Test #": "74",
+        "Sample #": "41",
+        "Fuel Sample Material": "paraffin wax slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "79",
+      "material": "parrafin wax slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 82,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "8/21/2012",
+        "GMT": "234",
+        "As Run Test #": "79",
+        "Test #": "75",
+        "Sample #": "41",
+        "Fuel Sample Material": "parrafin wax slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "80",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 83,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/5/2013",
+        "GMT": "95",
+        "As Run Test #": "80",
+        "Test #": "98",
+        "Sample #": "24",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "81",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 84,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/5/2013",
+        "GMT": "95",
+        "As Run Test #": "81",
+        "Test #": "99",
+        "Sample #": "24",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "82",
+      "material": "PMMA 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 85,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2013",
+        "GMT": "99",
+        "As Run Test #": "82",
+        "Test #": "114",
+        "Sample #": "25",
+        "Fuel Sample Material": "PMMA 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "83",
+      "material": "pmma 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 86,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2013",
+        "GMT": "99",
+        "As Run Test #": "83",
+        "Test #": "115",
+        "Sample #": "25",
+        "Fuel Sample Material": "pmma 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "84",
+      "material": "pmma 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 87,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2013",
+        "GMT": "99",
+        "As Run Test #": "84",
+        "Test #": "116",
+        "Sample #": "25",
+        "Fuel Sample Material": "pmma 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "85",
+      "material": "pmma 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 88,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2013",
+        "GMT": "99",
+        "As Run Test #": "85",
+        "Test #": "117",
+        "Sample #": "25",
+        "Fuel Sample Material": "pmma 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "85",
+      "material": "pmma 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 89,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/9/2013",
+        "GMT": "99",
+        "As Run Test #": "85",
+        "Test #": "117a",
+        "Sample #": "25",
+        "Fuel Sample Material": "pmma 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "86",
+      "material": "pmma 2 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 90,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/12/2013",
+        "GMT": "102",
+        "As Run Test #": "86",
+        "Test #": "100",
+        "Sample #": "24",
+        "Fuel Sample Material": "pmma 2 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "87",
+      "material": "candle    paraffin   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 91,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/12/2013",
+        "GMT": "102",
+        "As Run Test #": "87",
+        "Test #": "85",
+        "Sample #": "43",
+        "Fuel Sample Material": "candle    paraffin   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "88",
+      "material": "candle    paraffin   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 92,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/12/2013",
+        "GMT": "102",
+        "As Run Test #": "88",
+        "Test #": "93",
+        "Sample #": "43",
+        "Fuel Sample Material": "candle    paraffin   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "89",
+      "material": "pmma 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 93,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/16/2013",
+        "GMT": "106",
+        "As Run Test #": "89",
+        "Test #": "26",
+        "Sample #": "17",
+        "Fuel Sample Material": "pmma 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "90",
+      "material": "pmma 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 94,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/16/2013",
+        "GMT": "106",
+        "As Run Test #": "90",
+        "Test #": "27",
+        "Sample #": "17",
+        "Fuel Sample Material": "pmma 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "91",
+      "material": "pmma 1 cm",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 95,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/16/2013",
+        "GMT": "106",
+        "As Run Test #": "91",
+        "Test #": "28",
+        "Sample #": "17",
+        "Fuel Sample Material": "pmma 1 cm"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "89",
+      "material": "candle   Japan wax",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 96,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/23/2013",
+        "GMT": "113",
+        "As Run Test #": "89",
+        "Test #": "87",
+        "Sample #": "40",
+        "Fuel Sample Material": "candle   Japan wax"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "90",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 97,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/23/2013",
+        "GMT": "113",
+        "As Run Test #": "90",
+        "Test #": "103",
+        "Sample #": "22",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "91",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 98,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/23/2013",
+        "GMT": "113",
+        "As Run Test #": "91",
+        "Test #": "104",
+        "Sample #": "22",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "92",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 99,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/23/2013",
+        "GMT": "113",
+        "As Run Test #": "92",
+        "Test #": "105",
+        "Sample #": "22",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "93",
+      "material": "1 cm sphere   wake",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 100,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/26/2013",
+        "GMT": "113",
+        "As Run Test #": "93",
+        "Test #": "38",
+        "Sample #": "20",
+        "Fuel Sample Material": "1 cm sphere   wake"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "94",
+      "material": "1 cm wake sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 101,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/26/2013",
+        "GMT": "116",
+        "As Run Test #": "94",
+        "Test #": "39",
+        "Sample #": "20",
+        "Fuel Sample Material": "1 cm wake sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "95",
+      "material": "1 cm wake sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 102,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/26/2013",
+        "GMT": "116",
+        "As Run Test #": "95",
+        "Test #": "40",
+        "Sample #": "20",
+        "Fuel Sample Material": "1 cm wake sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "96",
+      "material": "pmma slab opposed",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 103,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/26/2013",
+        "GMT": "116",
+        "As Run Test #": "96",
+        "Test #": "72",
+        "Sample #": "34",
+        "Fuel Sample Material": "pmma slab opposed"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "97",
+      "material": "pmma slab   oppsed",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 104,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/26/2013",
+        "GMT": "116",
+        "As Run Test #": "97",
+        "Test #": "73",
+        "Sample #": "34",
+        "Fuel Sample Material": "pmma slab   oppsed"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "98",
+      "material": "2 cm pmma sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 105,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/29/2013",
+        "GMT": "119",
+        "As Run Test #": "98",
+        "Test #": "118",
+        "Sample #": "23",
+        "Fuel Sample Material": "2 cm pmma sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "99",
+      "material": "2 cm pmma sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 106,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "4/29/2013",
+        "GMT": "119",
+        "As Run Test #": "99",
+        "Test #": "119",
+        "Sample #": "23",
+        "Fuel Sample Material": "2 cm pmma sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "100",
+      "material": "parrafin wax candle",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 107,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/2/2013",
+        "GMT": "122",
+        "As Run Test #": "100",
+        "Test #": "89",
+        "Sample #": "44",
+        "Fuel Sample Material": "parrafin wax candle"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "101",
+      "material": "paraffin wax candle",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 108,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/2/2013",
+        "GMT": "122",
+        "As Run Test #": "101",
+        "Test #": "95",
+        "Sample #": "44",
+        "Fuel Sample Material": "paraffin wax candle"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "102",
+      "material": "candle   Japan wax",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 109,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/2/2013",
+        "GMT": "122",
+        "As Run Test #": "102",
+        "Test #": "92",
+        "Sample #": "40",
+        "Fuel Sample Material": "candle   Japan wax"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "103",
+      "material": "paraffin wax slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 110,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/2/2013",
+        "GMT": "122",
+        "As Run Test #": "103",
+        "Test #": "78",
+        "Sample #": "42",
+        "Fuel Sample Material": "paraffin wax slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "104",
+      "material": "2 cm pmma sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 111,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/15/2103",
+        "GMT": "135",
+        "As Run Test #": "104",
+        "Test #": "50",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm pmma sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "105",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 112,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/15/2013",
+        "GMT": "135",
+        "As Run Test #": "105",
+        "Test #": "51",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "106",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 113,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/15/2013",
+        "GMT": "135",
+        "As Run Test #": "106",
+        "Test #": "52",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "107",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 114,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/15/2013",
+        "GMT": "135",
+        "As Run Test #": "107",
+        "Test #": "53",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "108",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 115,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/17/2013",
+        "GMT": "137",
+        "As Run Test #": "108",
+        "Test #": "106",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "109",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 116,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/17/2013",
+        "GMT": "137",
+        "As Run Test #": "109",
+        "Test #": "107",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "110",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 117,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "5/17/2013",
+        "GMT": "137",
+        "As Run Test #": "110",
+        "Test #": "108",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "111",
+      "material": "2 cm sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 118,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/1/2013",
+        "GMT": "137",
+        "As Run Test #": "111",
+        "Test #": "109",
+        "Sample #": "26",
+        "Fuel Sample Material": "2 cm sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "112",
+      "material": "flat wax slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 119,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/1/2013",
+        "GMT": "150",
+        "As Run Test #": "112",
+        "Test #": "79",
+        "Sample #": "42",
+        "Fuel Sample Material": "flat wax slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "113",
+      "material": "flat wax slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 120,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/1/2013",
+        "GMT": "150",
+        "As Run Test #": "113",
+        "Test #": "80",
+        "Sample #": "42",
+        "Fuel Sample Material": "flat wax slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "114",
+      "material": "flat wax slab",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 121,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/1/2013",
+        "GMT": "150",
+        "As Run Test #": "114",
+        "Test #": "75",
+        "Sample #": "41",
+        "Fuel Sample Material": "flat wax slab"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "115",
+      "material": "pmma sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 122,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/1/2013",
+        "GMT": "150",
+        "As Run Test #": "115",
+        "Test #": "53",
+        "Sample #": "26",
+        "Fuel Sample Material": "pmma sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    },
+    {
+      "test_id": "116",
+      "material": "pmma sphere",
+      "kind": "combustion_test_inventory",
+      "airflow_m_s": null,
+      "oxygen_initial_percent": null,
+      "source_id": "PSI-26",
+      "csv_line": 123,
+      "gravity_regime": "microgravity",
+      "raw": {
+        "Date": "6/1/2013",
+        "GMT": "150",
+        "As Run Test #": "116",
+        "Test #": "53a",
+        "Sample #": "26",
+        "Fuel Sample Material": "pmma sphere"
+      },
+      "measurement_origin": "NASA PSI experimental inventory"
+    }
+  ],
+  "objective": "The two main objectives for BASS are to:\n    1.) Begin to bridge the gap between the normal gravity NASA-STD-6001 Test#1 method, ground-based microgravity tests, and actual material flammability in microgravity. The relation between these can be investigated by observing flames burning for the longer times available in flight. Practical, realistic (thicker) fuels in typical geometries will be examined, including wake flames which have characteristics of a fire burning behind another object (for example, a fire burning in tight area which may not be easily accessible).\n    2.) Assess the effectiveness of an inert, gaseous extinguishing agent (similar to that used on ISS) in putting out flames over different materials, geometries, preheating, and flow.",
+  "hypothesis": "BASS experiments were based on the hypothesis that materials in microgravity, with adequate ventilation, burn as well if not better than the same material in normal gravity with other conditions being identical (pressure, oxygen concentration, temperature, etc.) To test this hypothesis with any but the thinnest materials requires extended microgravity time – longer than available in drop towers or parabolic aircraft.",
+  "approach": "The experiment was conducted aboard the International Space Station (ISS) inside the Microgravity Glove Box (MSG). Custom-made fabric samples consisting of 75% cotton and 25% fiberglass (by mass) measuring were used as a fuel source as well as Nomex fabric and Ultem. A Kanthal wire (29-gage)igniter was used to initiate combustion at one end of the fabric. Airflow was controlled using a variable speed fan, with airflow speeds reaching as high as 40 cm/s. The airflow was directed along the fuel surface in either the opposed or concurrent direction.\n\nThis investigation explored two primary air flow configurations; concurrent-flow and opposed-flow. With concurrent-flow air flows in the same direction as the flame spread and in opposed-flow air flows in the opposite direction of flame spread. Flames were observed in the top and edge profiles and data was collected on flame size, shape, color, spread rate, and potential flame quenching. The samples were placed in a small flow duct (76 mm x 76 mm cross section) that allowed for airflow across the fabric. Other sample shapes were utilized as well including spheres and cylinders.",
+  "hardware": "Microgravity Science Glovebox",
+  "limits": [
+    "Tableau d’inventaire : des identifiants se répètent et une ligne est une note. Aucun champ 3D ni débit étalonné dans ce tableau."
+  ],
+  "used_for": [
+    "source exploration",
+    "experimental design",
+    "domain comparison"
+  ],
+  "used_as_training_labels": false
+}

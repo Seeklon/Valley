@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-11-14T10:10:48.830451+00:00",
+  "system": "Windows-10-10.0.22631-SP0",
+  "python": "3.11.2",
+  "logical_cpus": 16,
+  "disk_free_gb": {
+    "C": 55.37,
+    "E": 111.39,
+    "G": 780.79
+  },
+  "fds_executables": [
+    "E:\\IGNIS-Valley\\tools\\fds-6.11.1\\firemodels\\FDS6\\bin\\fds.exe",
+    "E:\\IGNIS-Valley\\tools\\fds-6.11.1\\firemodels\\FDS6\\bin\\fds2ascii.exe",
+    "E:\\IGNIS-Valley\\tools\\fds-6.11.1\\firemodels\\FDS6\\bin\\fds_openmp.exe",
+    "E:\\IGNIS-Valley\\tools\\fds-6.11.1\\firemodels\\SMV6\\fds2fed.exe"
+  ],
+  "blender": "E:\\IGNIS-Valley\\tools\\blender-4.5.9-windows-x64\\blender.exe",
+  "torch": "2.7.0+cu128",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 4070 Ti",
+  "vram_bytes": 12877955072,
+  "cuda_matmul_mean": 64.0,
+  "blender_version": "Blender 4.5.9 LTS"
+}

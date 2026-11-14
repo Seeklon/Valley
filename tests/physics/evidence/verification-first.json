@@ -1,0 +1,448 @@
+{
+  "scope": "Actual Windows FDS first integration runs before explicit gas Cp correction; not calibration or NASA validation",
+  "results": [
+    {
+      "case": "cold",
+      "engine_version": "6.11.1",
+      "compiler_version": "ignis-fds-1",
+      "material_model_version": "ignis-fds-materials-1",
+      "source_directory": "runtime/verification-first/cold",
+      "deck_original_sha256": "a60e48f09271d830ea86042a229a79f1e3beca2ef24eb90798f1ac55afcda351",
+      "deck_canonical_sha256": "25067775c7bf18d72c1f2abf0d8f39aa32ce208121a49df029837481c51216fe",
+      "analysis_normalization": "CRLF to LF in temporary analysis copy only; canonical bytes match compiled manifest",
+      "raw_csv_sha256": "5497744b3fd917b97daad60b857fe343c1ec455a14d12831128811ec57aeae9b",
+      "source_mode": "prescribed_source",
+      "source_nominal_power_w": 0.0,
+      "source_imposed_pulse_energy_j": 0.0,
+      "mesh": {
+        "shape": [
+          10,
+          10,
+          10
+        ],
+        "bounds_m": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "cell_size_m": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "cell_count": 1000
+      },
+      "summary": {
+        "duration_s": 5.0,
+        "sample_count": 8,
+        "temperature_peak_c": 20.000009,
+        "heat_release_peak_w": 0.0,
+        "oxygen_min_mean_percent": 21.0,
+        "smoke_peak_mean_kg_m3": 0.0,
+        "released_energy_j": 0.0,
+        "released_energy_method": "trapezoidal integral of sampled instantaneous gas-phase HRR",
+        "valid_spatial_points": 64,
+        "solid_or_unmeasured_points": 0,
+        "nonfinite_spatial_measurements": 0
+      },
+      "source_area_m2": 0.16000000000000011,
+      "final_measured_vent_volume_flows_m3_s": {
+        "inlet": -0.032,
+        "outlet": 0.032
+      },
+      "gas_mass_initial_kg": 9.5179746,
+      "gas_mass_final_kg": 9.5179746,
+      "completion": {
+        "reached_requested_time": true,
+        "success_message_observed": true,
+        "process_exit_status": "must be verified by scheduler"
+      },
+      "reported_solver_elapsed_wall_s": 1.832,
+      "integration_assessment_current_criteria": {
+        "case": "cold",
+        "passed": true,
+        "checks": [
+          {
+            "name": "duration_s",
+            "observed": 5.0,
+            "criterion": "reaches requested duration",
+            "passed": true
+          },
+          {
+            "name": "nonfinite_spatial_values",
+            "observed": 0,
+            "criterion": "equals 0",
+            "passed": true
+          },
+          {
+            "name": "vent_inlet_m3_s",
+            "observed": -0.032,
+            "criterion": "-0.032 ± max(1e-5, 1% of requested flow)",
+            "passed": true
+          },
+          {
+            "name": "vent_outlet_m3_s",
+            "observed": 0.032,
+            "criterion": "0.032 ± max(1e-5, 1% of requested flow)",
+            "passed": true
+          },
+          {
+            "name": "temperature_max_error_c",
+            "observed": 8.999999998593466e-06,
+            "criterion": "<= 0.05 °C",
+            "passed": true
+          },
+          {
+            "name": "oxygen_error_percentage_points",
+            "observed": 0.0,
+            "criterion": "<= 0.005 percentage point",
+            "passed": true
+          },
+          {
+            "name": "peak_hrr_w",
+            "observed": 0.0,
+            "criterion": "absolute value <= 0.01 W",
+            "passed": true
+          }
+        ],
+        "scope": "software/solver integration smoke check; no NASA calibration or grid convergence assertion"
+      }
+    },
+    {
+      "case": "coupled",
+      "engine_version": "6.11.1",
+      "compiler_version": "ignis-fds-1",
+      "material_model_version": "ignis-fds-materials-1",
+      "source_directory": "runtime/verification-first/coupled",
+      "deck_original_sha256": "9bc89e31477e01074ef9c650495373cc73dc29561c761c4fb5cf8c63b93adf44",
+      "deck_canonical_sha256": "530d5c16fa6f3f0f943f2045be85954fe12c1a1acff65ca8bce34d7e0f187c9c",
+      "analysis_normalization": "CRLF to LF in temporary analysis copy only; canonical bytes match compiled manifest",
+      "raw_csv_sha256": "221f4818dca49419d2da66db0e217d07dc4ced44fe22b2d7d2bfcc34d29de7cf",
+      "source_mode": "coupled_combustion",
+      "source_nominal_power_w": 8000.0,
+      "source_imposed_pulse_energy_j": 159959.99999999997,
+      "mesh": {
+        "shape": [
+          10,
+          10,
+          10
+        ],
+        "bounds_m": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "cell_size_m": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "cell_count": 1000
+      },
+      "summary": {
+        "duration_s": 30.0,
+        "sample_count": 61,
+        "temperature_peak_c": 29.972151,
+        "heat_release_peak_w": 1.1911437,
+        "oxygen_min_mean_percent": 20.999998,
+        "smoke_peak_mean_kg_m3": 2.9853079e-10,
+        "released_energy_j": 3.080097470103937,
+        "released_energy_method": "trapezoidal integral of sampled instantaneous gas-phase HRR",
+        "valid_spatial_points": 64,
+        "solid_or_unmeasured_points": 0,
+        "nonfinite_spatial_measurements": 0
+      },
+      "source_area_m2": 0.16000000000000011,
+      "final_measured_vent_volume_flows_m3_s": {
+        "inlet": -0.032,
+        "outlet": 0.032
+      },
+      "gas_mass_initial_kg": 9.5168623,
+      "gas_mass_final_kg": 9.5174105,
+      "completion": {
+        "reached_requested_time": true,
+        "success_message_observed": true,
+        "process_exit_status": "must be verified by scheduler"
+      },
+      "reported_solver_elapsed_wall_s": 2.358,
+      "integration_assessment_current_criteria": {
+        "case": "coupled",
+        "passed": false,
+        "checks": [
+          {
+            "name": "duration_s",
+            "observed": 30.0,
+            "criterion": "reaches requested duration",
+            "passed": true
+          },
+          {
+            "name": "nonfinite_spatial_values",
+            "observed": 0,
+            "criterion": "equals 0",
+            "passed": true
+          },
+          {
+            "name": "vent_inlet_m3_s",
+            "observed": -0.032,
+            "criterion": "-0.032 ± max(1e-5, 1% of requested flow)",
+            "passed": true
+          },
+          {
+            "name": "vent_outlet_m3_s",
+            "observed": 0.032,
+            "criterion": "0.032 ± max(1e-5, 1% of requested flow)",
+            "passed": true
+          },
+          {
+            "name": "peak_hrr_w",
+            "observed": 1.1911437,
+            "criterion": "> 100 W (resolved combustion response)",
+            "passed": false
+          },
+          {
+            "name": "temperature_peak_c",
+            "observed": 29.972151,
+            "criterion": "> initial temperature + 0.1 °C",
+            "passed": true
+          },
+          {
+            "name": "smoke_peak_kg_m3",
+            "observed": 2.9853079e-10,
+            "criterion": "> 0 kg/m³",
+            "passed": true
+          },
+          {
+            "name": "measured_fuel_mass_flux_kg_m2_s",
+            "observed": null,
+            "criterion": "> 1e-6 kg/(m² s) from actual surface device",
+            "passed": false
+          }
+        ],
+        "scope": "software/solver integration smoke check; no NASA calibration or grid convergence assertion"
+      }
+    },
+    {
+      "case": "habitat-0.2",
+      "engine_version": "6.11.1",
+      "compiler_version": "ignis-fds-1",
+      "material_model_version": "ignis-fds-materials-1",
+      "source_directory": "runtime/verification-first/habitat-0.2",
+      "deck_original_sha256": "616bd5395903a29d10d174440f66f6367e05013228bef8e3f7ad3370d0be146b",
+      "deck_canonical_sha256": "add540414cccc06aeaac887abda4b24e3e05e0a418121dc975596591bf65d7d2",
+      "analysis_normalization": "CRLF to LF in temporary analysis copy only; canonical bytes match compiled manifest",
+      "raw_csv_sha256": "dedf338ad6d24b003660705dbce54d6e7fa95309ae968569392dc27462052190",
+      "source_mode": "prescribed_source",
+      "source_nominal_power_w": 1500.0,
+      "source_imposed_pulse_energy_j": 22492.5,
+      "mesh": {
+        "shape": [
+          30,
+          40,
+          16
+        ],
+        "bounds_m": [
+          5.6,
+          8.0,
+          3.2
+        ],
+        "cell_size_m": [
+          0.18666666666666665,
+          0.2,
+          0.2
+        ],
+        "cell_count": 19200
+      },
+      "summary": {
+        "duration_s": 30.0,
+        "sample_count": 31,
+        "temperature_peak_c": 87.701662,
+        "heat_release_peak_w": 830.86032,
+        "oxygen_min_mean_percent": 20.999135,
+        "smoke_peak_mean_kg_m3": 1.1366778e-07,
+        "released_energy_j": 15593.777832797472,
+        "released_energy_method": "trapezoidal integral of sampled instantaneous gas-phase HRR",
+        "valid_spatial_points": 269,
+        "solid_or_unmeasured_points": 51,
+        "nonfinite_spatial_measurements": 0
+      },
+      "source_area_m2": 0.3360000000000001,
+      "final_measured_vent_volume_flows_m3_s": {
+        "inlet_forward": -0.1792,
+        "outlet_aft": 0.1792
+      },
+      "gas_mass_initial_kg": 150.79465,
+      "gas_mass_final_kg": 150.79628,
+      "completion": {
+        "reached_requested_time": true,
+        "success_message_observed": true,
+        "process_exit_status": "must be verified by scheduler"
+      },
+      "reported_solver_elapsed_wall_s": 4.853
+    },
+    {
+      "case": "habitat-0.4",
+      "engine_version": "6.11.1",
+      "compiler_version": "ignis-fds-1",
+      "material_model_version": "ignis-fds-materials-1",
+      "source_directory": "runtime/verification-first/habitat-0.4",
+      "deck_original_sha256": "5fc2c169f559886fe396dbc0a4d979cc64527fa8cb763801d2d21d449d3dc5e7",
+      "deck_canonical_sha256": "74370d8098631686cac45bb94f6a7e7844b08fd00d30c5177108f2b2c1f3ec8e",
+      "analysis_normalization": "CRLF to LF in temporary analysis copy only; canonical bytes match compiled manifest",
+      "raw_csv_sha256": "3259fbb9fd344e7a01dcecc46ee456f5dca58009c2e94981c60fccd898187d09",
+      "source_mode": "prescribed_source",
+      "source_nominal_power_w": 1500.0,
+      "source_imposed_pulse_energy_j": 22492.5,
+      "mesh": {
+        "shape": [
+          15,
+          20,
+          8
+        ],
+        "bounds_m": [
+          5.6,
+          8.0,
+          3.2
+        ],
+        "cell_size_m": [
+          0.3733333333333333,
+          0.4,
+          0.4
+        ],
+        "cell_count": 2400
+      },
+      "summary": {
+        "duration_s": 30.0,
+        "sample_count": 21,
+        "temperature_peak_c": 43.617341,
+        "heat_release_peak_w": 583.65496,
+        "oxygen_min_mean_percent": 20.999351,
+        "smoke_peak_mean_kg_m3": 8.8665478e-08,
+        "released_energy_j": 11452.570627254252,
+        "released_energy_method": "trapezoidal integral of sampled instantaneous gas-phase HRR",
+        "valid_spatial_points": 263,
+        "solid_or_unmeasured_points": 57,
+        "nonfinite_spatial_measurements": 0
+      },
+      "source_area_m2": 0.5973333333333332,
+      "final_measured_vent_volume_flows_m3_s": {
+        "inlet_forward": -0.1792,
+        "outlet_aft": 0.1792
+      },
+      "gas_mass_initial_kg": 141.70524,
+      "gas_mass_final_kg": 141.70688,
+      "completion": {
+        "reached_requested_time": true,
+        "success_message_observed": true,
+        "process_exit_status": "must be verified by scheduler"
+      },
+      "reported_solver_elapsed_wall_s": 2.15
+    },
+    {
+      "case": "transport",
+      "engine_version": "6.11.1",
+      "compiler_version": "ignis-fds-1",
+      "material_model_version": "ignis-fds-materials-1",
+      "source_directory": "runtime/verification-first/transport",
+      "deck_original_sha256": "e0fbbd413d72b50791261fd61e424c5ad78a5aa245b3f56c710b2538f943fea1",
+      "deck_canonical_sha256": "1ab5718903ac412d1ff4cd87c6e08d3b171ad593a07900ff8e4503ed1d4255a0",
+      "analysis_normalization": "CRLF to LF in temporary analysis copy only; canonical bytes match compiled manifest",
+      "raw_csv_sha256": "3dfb9cd58a704ca151e3003e3bcb141dae199bf20df7debe8d783f72a858e00d",
+      "source_mode": "prescribed_source",
+      "source_nominal_power_w": 1000.0,
+      "source_imposed_pulse_energy_j": 2995.0,
+      "mesh": {
+        "shape": [
+          10,
+          10,
+          10
+        ],
+        "bounds_m": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "cell_size_m": [
+          0.2,
+          0.2,
+          0.2
+        ],
+        "cell_count": 1000
+      },
+      "summary": {
+        "duration_s": 5.0,
+        "sample_count": 8,
+        "temperature_peak_c": 29.376028,
+        "heat_release_peak_w": 99.93648400000001,
+        "oxygen_min_mean_percent": 20.999734,
+        "smoke_peak_mean_kg_m3": 3.3027188e-08,
+        "released_energy_j": 314.373862968418,
+        "released_energy_method": "trapezoidal integral of sampled instantaneous gas-phase HRR",
+        "valid_spatial_points": 64,
+        "solid_or_unmeasured_points": 0,
+        "nonfinite_spatial_measurements": 0
+      },
+      "source_area_m2": 0.16000000000000011,
+      "final_measured_vent_volume_flows_m3_s": {
+        "inlet": -0.032,
+        "outlet": 0.032
+      },
+      "gas_mass_initial_kg": 9.5179746,
+      "gas_mass_final_kg": 9.5180909,
+      "completion": {
+        "reached_requested_time": true,
+        "success_message_observed": true,
+        "process_exit_status": "must be verified by scheduler"
+      },
+      "reported_solver_elapsed_wall_s": 1.821,
+      "integration_assessment_current_criteria": {
+        "case": "transport",
+        "passed": true,
+        "checks": [
+          {
+            "name": "duration_s",
+            "observed": 5.0,
+            "criterion": "reaches requested duration",
+            "passed": true
+          },
+          {
+            "name": "nonfinite_spatial_values",
+            "observed": 0,
+            "criterion": "equals 0",
+            "passed": true
+          },
+          {
+            "name": "vent_inlet_m3_s",
+            "observed": -0.032,
+            "criterion": "-0.032 ± max(1e-5, 1% of requested flow)",
+            "passed": true
+          },
+          {
+            "name": "vent_outlet_m3_s",
+            "observed": 0.032,
+            "criterion": "0.032 ± max(1e-5, 1% of requested flow)",
+            "passed": true
+          },
+          {
+            "name": "peak_hrr_w",
+            "observed": 99.93648400000001,
+            "criterion": "> 1 W (resolved combustion response)",
+            "passed": true
+          },
+          {
+            "name": "temperature_peak_c",
+            "observed": 29.376028,
+            "criterion": "> initial temperature + 0.1 °C",
+            "passed": true
+          },
+          {
+            "name": "smoke_peak_kg_m3",
+            "observed": 3.3027188e-08,
+            "criterion": "> 0 kg/m³",
+            "passed": true
+          }
+        ],
+        "scope": "software/solver integration smoke check; no NASA calibration or grid convergence assertion"
+      }
+    }
+  ]
+}

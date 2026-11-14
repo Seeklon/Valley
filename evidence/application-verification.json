@@ -1,0 +1,503 @@
+{
+  "base_url": "http://127.0.0.1:8765",
+  "checks": [
+    {
+      "name": "models_preloaded_and_all_engines_available",
+      "passed": true
+    },
+    {
+      "name": "real_soyuz_fds_run",
+      "passed": true,
+      "run_id": "8af6bbaff0eb4e21a3c1b8dbc481ddb4",
+      "frames": 31,
+      "summary": {
+        "duration_s": 30.0,
+        "sample_count": 31,
+        "temperature_peak_c": 86.571805,
+        "heat_release_peak_w": 369.71409,
+        "oxygen_min_mean_percent": 20.997453,
+        "smoke_peak_mean_kg_m3": 3.4772259e-07,
+        "released_energy_j": 6591.808912934076,
+        "released_energy_method": "trapezoidal integral of sampled instantaneous gas-phase HRR",
+        "valid_spatial_points": 208,
+        "solid_or_unmeasured_points": 112,
+        "nonfinite_spatial_measurements": 0
+      }
+    },
+    {
+      "name": "individual_export_matches_real_result",
+      "passed": true,
+      "bytes": 225868
+    },
+    {
+      "name": "actual_prediction_habitat_field-mlp-v2",
+      "passed": true,
+      "run_id": "68bc53c2e0a2448aa14aa7aab0f5af5e",
+      "seconds": 0.0497
+    },
+    {
+      "name": "actual_prediction_habitat_metrics-forest-v2",
+      "passed": true,
+      "run_id": "c2d9332315b94fd9b296da9f6f4e1313",
+      "seconds": 0.038
+    },
+    {
+      "name": "actual_prediction_cargo_field-mlp-v2",
+      "passed": true,
+      "run_id": "499740fc16e64587aae359ceacf8b193",
+      "seconds": 0.0377
+    },
+    {
+      "name": "actual_prediction_cargo_metrics-forest-v2",
+      "passed": true,
+      "run_id": "8849b9be137940f0820b74fab92517c8",
+      "seconds": 0.0366
+    },
+    {
+      "name": "actual_prediction_crossflow_field-mlp-v2",
+      "passed": true,
+      "run_id": "5ddf23a3239642a383c651817c4e5837",
+      "seconds": 0.0361
+    },
+    {
+      "name": "actual_prediction_crossflow_metrics-forest-v2",
+      "passed": true,
+      "run_id": "73f7570a02d94ddeacf0a02e1f1ac95e",
+      "seconds": 0.0359
+    },
+    {
+      "name": "actual_prediction_soyuz_field-mlp-v2",
+      "passed": true,
+      "run_id": "8d6b60bbc20d442ca5208b8b0e9bc095",
+      "seconds": 0.0338
+    },
+    {
+      "name": "actual_prediction_soyuz_metrics-forest-v2",
+      "passed": true,
+      "run_id": "f270b11976414f309f213fe3d1b84edd",
+      "seconds": 0.0371
+    },
+    {
+      "name": "prediction_domain_rejections",
+      "passed": true
+    },
+    {
+      "name": "running_fds_cancellation",
+      "passed": true,
+      "run_id": "9b8e2ce1f25547b1a906508954b43366"
+    },
+    {
+      "name": "campaign_completion_and_parquet_export",
+      "passed": true,
+      "campaign_id": "8914cde82c6b4a4cb96815aeba041315",
+      "rows": 19
+    },
+    {
+      "name": "actual_codex_nasa_interpretation",
+      "passed": true,
+      "method": "codex_grounded_in_nasa_evidence",
+      "model": "gpt-6.1-sol"
+    }
+  ],
+  "runs": [
+    {
+      "id": "8af6bbaff0eb4e21a3c1b8dbc481ddb4",
+      "status": "completed",
+      "config": {
+        "scene_id": "soyuz",
+        "mode": "physics",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": null,
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "68bc53c2e0a2448aa14aa7aab0f5af5e",
+      "status": "completed",
+      "config": {
+        "scene_id": "habitat",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "field-mlp-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "c2d9332315b94fd9b296da9f6f4e1313",
+      "status": "completed",
+      "config": {
+        "scene_id": "habitat",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "metrics-forest-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "499740fc16e64587aae359ceacf8b193",
+      "status": "completed",
+      "config": {
+        "scene_id": "cargo",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "field-mlp-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "8849b9be137940f0820b74fab92517c8",
+      "status": "completed",
+      "config": {
+        "scene_id": "cargo",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "metrics-forest-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "5ddf23a3239642a383c651817c4e5837",
+      "status": "completed",
+      "config": {
+        "scene_id": "crossflow",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "field-mlp-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "73f7570a02d94ddeacf0a02e1f1ac95e",
+      "status": "completed",
+      "config": {
+        "scene_id": "crossflow",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "metrics-forest-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "8d6b60bbc20d442ca5208b8b0e9bc095",
+      "status": "completed",
+      "config": {
+        "scene_id": "soyuz",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "field-mlp-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "f270b11976414f309f213fe3d1b84edd",
+      "status": "completed",
+      "config": {
+        "scene_id": "soyuz",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 30.0,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "metrics-forest-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "9b8e2ce1f25547b1a906508954b43366",
+      "status": "cancelled",
+      "config": {
+        "scene_id": "soyuz",
+        "mode": "physics",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000.0,
+        "ignition_duration_s": 10.0,
+        "duration_s": 180.0,
+        "seed": 42,
+        "mesh_cell_m": 0.1,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": null,
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "150c77efb34b49f4b7e72d064deae757",
+      "status": "completed",
+      "config": {
+        "scene_id": "soyuz",
+        "mode": "physics",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.10766880017862449,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 560.3499607766433,
+        "ignition_duration_s": 5.0,
+        "duration_s": 10.0,
+        "seed": 721,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": null,
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    },
+    {
+      "id": "ec6047c7a56842b6bd6c40fd1603e506",
+      "status": "completed",
+      "config": {
+        "scene_id": "habitat",
+        "mode": "physics",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.1706903611064417,
+        "oxygen_percent": 21.0,
+        "material_id": "cellulose",
+        "ignition_power_w": 704.8162356199051,
+        "ignition_duration_s": 5.0,
+        "duration_s": 10.0,
+        "seed": 722,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": null,
+        "ignition_kind": "thermal",
+        "current_a": 5.0,
+        "resistance_ohm": 20.0
+      }
+    }
+  ],
+  "started_utc": "2026-11-14T11:29:03.186645+00:00",
+  "insight": {
+    "summary": "Les observations NASA offrent des points de comparaison pour la simulation IGNIS de cette capsule en microgravité. Saffire permet de rapprocher l’écoulement publié de la consigne simulée et de comparer les durées de combustion entre essais. Le SIBAL contient de la cellulose, sans être équivalent au matériau générique simulé ; les différences entre essais ne démontrent pas un effet causal de la ventilation [PSI-98].\n\nBASS et BASS-II apportent des inventaires d’essais et une calibration du ventilateur, qui concerne l’instrumentation et varie entre sessions [PSI-25] [PSI-26]. Il manque les champs spatiaux nécessaires à une validation complète du modèle IGNIS, dont la convergence du maillage n’est pas démontrée. La pertinence documentaire ne constitue ni un score de sûreté ni une validation de vol.",
+    "method": "codex_grounded_in_nasa_evidence",
+    "model": "gpt-6.1-sol",
+    "sources": [
+      {
+        "id": "PSI-98",
+        "name": "SAFFIRE-I",
+        "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+        "doi": "10.60555/0t15-1z43",
+        "score": 6,
+        "reasons": [
+          "Table expérimentale NASA PSI archivée avec DOI, version et empreinte.",
+          "Expériences réalisées en microgravité.",
+          "Présence de SIBAL, composite contenant de la cellulose ; pas d’équivalence à notre matériau générique.",
+          "Vitesse d’écoulement publiée proche de la consigne sélectionnée."
+        ]
+      },
+      {
+        "id": "PSI-25",
+        "name": "BASS-II",
+        "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+        "doi": "10.60555/4qc4-de67",
+        "score": 4,
+        "reasons": [
+          "Table expérimentale NASA PSI archivée avec DOI, version et empreinte.",
+          "Expériences réalisées en microgravité.",
+          "Présence de SIBAL, composite contenant de la cellulose ; pas d’équivalence à notre matériau générique."
+        ]
+      },
+      {
+        "id": "PSI-26",
+        "name": "BASS",
+        "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
+        "doi": "10.60555/58h4-dy80",
+        "score": 4,
+        "reasons": [
+          "Table expérimentale NASA PSI archivée avec DOI, version et empreinte.",
+          "Expériences réalisées en microgravité.",
+          "Présence de SIBAL, composite contenant de la cellulose ; pas d’équivalence à notre matériau générique."
+        ]
+      }
+    ],
+    "facts": [
+      {
+        "text": "BASS-II : 129 identifiants d’essais dans le tableau ; les réglages de ventilateur ne sont pas directement des m/s.",
+        "source_id": "PSI-25"
+      },
+      {
+        "text": "BASS : 121 lignes avec identifiant d’essai, 116 identifiants distincts. Le tableau est un inventaire, pas un dataset de champs 3D.",
+        "source_id": "PSI-26"
+      },
+      {
+        "text": "Saffire-I : S1 et S2 utilisent du SIBAL avec un écoulement publié de 0,20 m/s. Les durées de combustion reportées sont 420 s et 70 s ; les sens d’écoulement diffèrent.",
+        "source_id": "PSI-98"
+      },
+      {
+        "text": "Le tableau Saffire-I contient aussi deux références de visualisation d’écoulement. Elles ne constituent pas deux essais de combustion supplémentaires.",
+        "source_id": "PSI-98"
+      },
+      {
+        "text": "Le classeur BASS-II fournit 211 paires admissibles de calibration du ventilateur : 171 pour l’ajustement et 40 pour le test sur des journées ultérieures. La dérive entre sessions empêche de traiter une unique courbe tension-vitesse comme universelle. Cette analyse calibre l’instrumentation, pas la combustion.",
+        "source_id": "PSI-25"
+      }
+    ],
+    "limits": [
+      "Le classement mesure la pertinence documentaire selon des critères explicites ; il n’est pas un score de sûreté.",
+      "Les différences entre S1 et S2 ne permettent pas d’isoler à elles seules un effet causal de la ventilation.",
+      "Les simulations IGNIS utilisent des matériaux génériques et un maillage non démontré convergé ; aucune validation de vol n’est revendiquée.",
+      "Les tables importées ne fournissent pas les champs 3D nécessaires à une validation complète du modèle prédictif.",
+      "Synthèse générée par Codex : les identifiants de citation sont contrôlés, mais les affirmations doivent être confrontées aux faits archivés."
+    ]
+  },
+  "completed_utc": "2026-11-14T11:29:31.128415+00:00"
+}

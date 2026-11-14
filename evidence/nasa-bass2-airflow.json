@@ -1,0 +1,2077 @@
+{
+  "source_csv_sha256": "71e792bf6b5fb5ea620c5dd70fbbac05515992e12aefcf5dff47312caa48c042",
+  "counts": {
+    "scalar_display_converted": 24,
+    "time_varying_or_annotated_requires_manual_segmentation": 100,
+    "zero_display_not_resolved_velocity": 1,
+    "missing": 4
+  },
+  "observations": [
+    {
+      "test_id": "B1",
+      "csv_line": 2,
+      "raw_air_display": "5",
+      "raw_fan_display": "62",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B2",
+      "csv_line": 3,
+      "raw_air_display": "5",
+      "raw_fan_display": "62",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B3",
+      "csv_line": 4,
+      "raw_air_display": "2",
+      "raw_fan_display": "47",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.020131999999999997,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B4",
+      "csv_line": 5,
+      "raw_air_display": "5",
+      "raw_fan_display": "61",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B5",
+      "csv_line": 6,
+      "raw_air_display": "5",
+      "raw_fan_display": "59",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B6",
+      "csv_line": 7,
+      "raw_air_display": "3   5   approaching 10",
+      "raw_fan_display": "0.9   1.3   2.75",
+      "restrictors": "2",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B7",
+      "csv_line": 8,
+      "raw_air_display": "2",
+      "raw_fan_display": "47",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.020131999999999997,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B8",
+      "csv_line": 9,
+      "raw_air_display": "10   max",
+      "raw_fan_display": "1.4    incr to 10.0",
+      "restrictors": "0",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B9",
+      "csv_line": 10,
+      "raw_air_display": "2   <1",
+      "raw_fan_display": "0.6   0.35",
+      "restrictors": "2",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B10",
+      "csv_line": 11,
+      "raw_air_display": "5  4  3  2  1",
+      "raw_fan_display": "1.7 (52)   1.25   0.9   0.6   0.4   0.35",
+      "restrictors": "2",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B11",
+      "csv_line": 12,
+      "raw_air_display": "5   3   1   <1",
+      "raw_fan_display": "2.5 (59)   1.3   0.7   0.5   0.35",
+      "restrictors": "2",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B12",
+      "csv_line": 13,
+      "raw_air_display": "2",
+      "raw_fan_display": "46.5",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.020131999999999997,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B13",
+      "csv_line": 14,
+      "raw_air_display": "10   5  4  3  2  1",
+      "raw_fan_display": "3.5 (68)    1.7   1.25   0.9   0.6   0.4   0.35",
+      "restrictors": "2",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B14",
+      "csv_line": 15,
+      "raw_air_display": "5  3  2   ext",
+      "raw_fan_display": "pot 0.9   0.5 and down",
+      "restrictors": "2",
+      "gmt": "183",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B15",
+      "csv_line": 16,
+      "raw_air_display": "10   max",
+      "raw_fan_display": "1.4 (50) incr to 10.0 pot",
+      "restrictors": "0",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B16",
+      "csv_line": 17,
+      "raw_air_display": "3  0.5 pot   0.4 pot",
+      "raw_fan_display": "44 (pot 0.68)",
+      "restrictors": "2",
+      "gmt": "183",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B17",
+      "csv_line": 18,
+      "raw_air_display": "5   3    pot 0.4",
+      "raw_fan_display": "pot 1.2 (48)    0.9   0.4 ",
+      "restrictors": "2",
+      "gmt": "183",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B18",
+      "csv_line": 19,
+      "raw_air_display": "10   blowoff",
+      "raw_fan_display": "pot 1.02 (47)   incr to 7.0",
+      "restrictors": "0",
+      "gmt": "183",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B19",
+      "csv_line": 20,
+      "raw_air_display": "10   blowoff",
+      "raw_fan_display": "47 (pot 1.05)   incr to pot 6.0",
+      "restrictors": "0",
+      "gmt": "183",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B20",
+      "csv_line": 21,
+      "raw_air_display": "5   3      pot 0.5",
+      "raw_fan_display": "48   pot 0.9   0.5",
+      "restrictors": "2",
+      "gmt": "183",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B21",
+      "csv_line": 22,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "53   and down",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "B22",
+      "csv_line": 23,
+      "raw_air_display": "5   2   0",
+      "raw_fan_display": "53   42   41   40.5",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "F1",
+      "csv_line": 24,
+      "raw_air_display": "9.5",
+      "raw_fan_display": "82",
+      "restrictors": "2",
+      "gmt": "50",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.09562699999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "F2",
+      "csv_line": 25,
+      "raw_air_display": "15",
+      "raw_fan_display": "92",
+      "restrictors": "2",
+      "gmt": "209",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.15098999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "F3",
+      "csv_line": 26,
+      "raw_air_display": "8",
+      "raw_fan_display": "61",
+      "restrictors": "1",
+      "gmt": "213",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.08052799999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "F4",
+      "csv_line": 27,
+      "raw_air_display": "3 ign",
+      "raw_fan_display": "see notes",
+      "restrictors": "2",
+      "gmt": "175",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M1",
+      "csv_line": 28,
+      "raw_air_display": "10  8",
+      "raw_fan_display": "58   54",
+      "restrictors": "2",
+      "gmt": "51",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M2",
+      "csv_line": 29,
+      "raw_air_display": "20  15  13   14",
+      "raw_fan_display": "116 (pot 9.3)    89   80   84",
+      "restrictors": "0",
+      "gmt": "51",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M3",
+      "csv_line": 30,
+      "raw_air_display": "10   20  18",
+      "raw_fan_display": "3.0  3.1  3.2  6.4  5.5  5.4",
+      "restrictors": "2",
+      "gmt": "192",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M4",
+      "csv_line": 31,
+      "raw_air_display": "5   4   3",
+      "raw_fan_display": "52   47   43",
+      "restrictors": "1",
+      "gmt": "212",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M5",
+      "csv_line": 32,
+      "raw_air_display": "20  13  10  8  5",
+      "raw_fan_display": "",
+      "restrictors": "0",
+      "gmt": "51",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M6",
+      "csv_line": 33,
+      "raw_air_display": "10   5   3   0",
+      "raw_fan_display": "68   52   47   43   42   41",
+      "restrictors": "1",
+      "gmt": "212",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M7",
+      "csv_line": 34,
+      "raw_air_display": "10   6  5  4.5  4  3",
+      "raw_fan_display": "2.6   1.3   0.8  0.7  0.6  0.5; 60   49  45  44  43  42",
+      "restrictors": "2",
+      "gmt": "192",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M8",
+      "csv_line": 35,
+      "raw_air_display": "10   5>7  5 decr",
+      "raw_fan_display": "3.3   1.6  1.0   decr",
+      "restrictors": "2",
+      "gmt": "192",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M9",
+      "csv_line": 36,
+      "raw_air_display": "10   14",
+      "raw_fan_display": "3.3   4.8;66  79",
+      "restrictors": "2",
+      "gmt": "192",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M10",
+      "csv_line": 37,
+      "raw_air_display": "10  17  14  10  8",
+      "raw_fan_display": "75   105   94/91   72/69   63/61  (4.4   8.0   6.6/6.3   4.0/3.7   3/0/2.7)",
+      "restrictors": "2",
+      "gmt": "204",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M11",
+      "csv_line": 38,
+      "raw_air_display": "10   20   15  12",
+      "raw_fan_display": "3.9  6.5  4.6  3.3  2.9  2.8; 62.5  93  77  66  63  62",
+      "restrictors": "2",
+      "gmt": "192",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M12",
+      "csv_line": 39,
+      "raw_air_display": "<1",
+      "raw_fan_display": "41   42   41",
+      "restrictors": "1",
+      "gmt": "212",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M13",
+      "csv_line": 40,
+      "raw_air_display": "6   5   4",
+      "raw_fan_display": "52   47   43",
+      "restrictors": "1",
+      "gmt": "212",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M14",
+      "csv_line": 41,
+      "raw_air_display": "10   ~8",
+      "raw_fan_display": "pot 2.4   1.87  (54)",
+      "restrictors": "2",
+      "gmt": "51",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M15",
+      "csv_line": 42,
+      "raw_air_display": "10   8  7  8  10  20  18  16  15",
+      "raw_fan_display": "ignited 10   adjusted down then up to 20   down in incrments to 15",
+      "restrictors": "2",
+      "gmt": "188",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M16",
+      "csv_line": 43,
+      "raw_air_display": "10  6  3  2  1  10",
+      "raw_fan_display": "73  57  59  48  45  43  75 (4.2  2.2  2.4  1.2  0.8  0.5  4.4)",
+      "restrictors": "2",
+      "gmt": "204",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M17",
+      "csv_line": 44,
+      "raw_air_display": "10   5   3   0ext",
+      "raw_fan_display": "Fan pot 3.7   1.7   1.5   1.3   0.8   0.6   0.5   0.3ext",
+      "restrictors": "2",
+      "gmt": "196",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M18",
+      "csv_line": 45,
+      "raw_air_display": "10   15 (brief)   10   8",
+      "raw_fan_display": "Fan pot 3.5   5 (brief)   3  5   2.2",
+      "restrictors": "2",
+      "gmt": "196",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M19",
+      "csv_line": 46,
+      "raw_air_display": "10  17  14  10  7  5",
+      "raw_fan_display": "75  105  94  75  77  79  59  61  57  55  53 (4.4  8.0  6.6  4.4  4.6  4.8  2.5  2.7  2.2  2.0  1.8)",
+      "restrictors": "2",
+      "gmt": "204",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "M20",
+      "csv_line": 47,
+      "raw_air_display": "10  8",
+      "raw_fan_display": "67   58",
+      "restrictors": "1",
+      "gmt": "213",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O1",
+      "csv_line": 48,
+      "raw_air_display": "20  10  5  2  1",
+      "raw_fan_display": "89  62  50  41",
+      "restrictors": "2",
+      "gmt": "49",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O2",
+      "csv_line": 49,
+      "raw_air_display": "0",
+      "raw_fan_display": ".54 pot   0.45 pot",
+      "restrictors": "2",
+      "gmt": "49",
+      "status": "zero_display_not_resolved_velocity",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O3a",
+      "csv_line": 50,
+      "raw_air_display": "5  3",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "164",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O3b",
+      "csv_line": 51,
+      "raw_air_display": "5  3  2  1  low",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "164",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O4",
+      "csv_line": 52,
+      "raw_air_display": "5   down to ext",
+      "raw_fan_display": "5   0.7   0.5   0.4   0.36 ext",
+      "restrictors": "2",
+      "gmt": "189",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O5a",
+      "csv_line": 53,
+      "raw_air_display": "5  10  5   2   0 (49   62   49   44   42)",
+      "raw_fan_display": "1.3   2.7   1.3   0.7   0.45. 4.0",
+      "restrictors": "2",
+      "gmt": "202",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O5b",
+      "csv_line": 54,
+      "raw_air_display": "49   5 cm/s",
+      "raw_fan_display": "1.3",
+      "restrictors": "2",
+      "gmt": "202",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O6",
+      "csv_line": 55,
+      "raw_air_display": "see fan",
+      "raw_fan_display": "5   .36  .32  .31  .305   out .275",
+      "restrictors": "2",
+      "gmt": "177",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O7",
+      "csv_line": 56,
+      "raw_air_display": "",
+      "raw_fan_display": "5   .36  .32  ..305   blowoff fan max 10",
+      "restrictors": "2",
+      "gmt": "177",
+      "status": "missing",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O8a",
+      "csv_line": 57,
+      "raw_air_display": "",
+      "raw_fan_display": "5   .36  .32  .31   extinguished",
+      "restrictors": "2",
+      "gmt": "177",
+      "status": "missing",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O8b",
+      "csv_line": 58,
+      "raw_air_display": "",
+      "raw_fan_display": "5  .36  .32  .31 blowoff fan pot 6.0",
+      "restrictors": "2",
+      "gmt": "177",
+      "status": "missing",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O9",
+      "csv_line": 59,
+      "raw_air_display": "",
+      "raw_fan_display": "5   .36  .32 blowoff pt 4.0",
+      "restrictors": "2",
+      "gmt": "177",
+      "status": "missing",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O10",
+      "csv_line": 60,
+      "raw_air_display": "5  2   0   max",
+      "raw_fan_display": "49  44  41   122 (1.3   0.7   0.4   0.36   0.32   10)",
+      "restrictors": "2",
+      "gmt": "213",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O11",
+      "csv_line": 61,
+      "raw_air_display": "5   down then blowoff",
+      "raw_fan_display": "ign 5   0.36   0.32   0.31   0.305   blowoff 6.0",
+      "restrictors": "2",
+      "gmt": "189",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O12",
+      "csv_line": 62,
+      "raw_air_display": "no ign at any flow",
+      "raw_fan_display": "pots 1.4   3   0.9   0.7",
+      "restrictors": "2",
+      "gmt": "189",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O13a",
+      "csv_line": 63,
+      "raw_air_display": "49  44  42  41  41  40.5 (5   2   0)",
+      "raw_fan_display": "1.3   0.7   0.45   0.36   0.32   0.31",
+      "restrictors": "2",
+      "gmt": "202",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O13b",
+      "csv_line": 64,
+      "raw_air_display": "7   4? (49   ?)",
+      "raw_fan_display": "1.3   0.9",
+      "restrictors": "2",
+      "gmt": "202",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O14",
+      "csv_line": 65,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "52   and down",
+      "restrictors": "1",
+      "gmt": "213",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O15a",
+      "csv_line": 66,
+      "raw_air_display": "5  0",
+      "raw_fan_display": "57.5   47   42   41 (2.3   1.0   0.5   0.35   0.32)",
+      "restrictors": "2",
+      "gmt": "209",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O15b",
+      "csv_line": 67,
+      "raw_air_display": "5   0",
+      "raw_fan_display": "57.5   42   41   40 (2.3   0.5   0.35   0.34   0.33   0.32   0.31   0.30   0.29   0.28   0.27)",
+      "restrictors": "2",
+      "gmt": "209",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O16",
+      "csv_line": 68,
+      "raw_air_display": "5",
+      "raw_fan_display": "60 (2.6)",
+      "restrictors": "2",
+      "gmt": "210",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O17",
+      "csv_line": 69,
+      "raw_air_display": "3   0   11",
+      "raw_fan_display": "49   46.5   44   42  41  72   decr (1.3   1.0   0.7   0.5   0.4   4.0   decr )",
+      "restrictors": "2",
+      "gmt": "203",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O18",
+      "csv_line": 70,
+      "raw_air_display": "5  2  0  11  2  11  2  0",
+      "raw_fan_display": "57  51  47  72  51  72  51  47 (2.3   1.5   1.0   4.0   1.5   4.0   1.5   1.0)",
+      "restrictors": "2",
+      "gmt": "209",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O19",
+      "csv_line": 71,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "52   and down",
+      "restrictors": "1",
+      "gmt": "213",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O20",
+      "csv_line": 72,
+      "raw_air_display": "5   8    incr to max 38.5",
+      "raw_fan_display": "49 (1.3 pot)   pots 7   8  9   10",
+      "restrictors": "0",
+      "gmt": "57",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O21",
+      "csv_line": 73,
+      "raw_air_display": "incr to 28",
+      "raw_fan_display": "46 (pot 0.8)    pot 7   10",
+      "restrictors": "0",
+      "gmt": "57",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "O22",
+      "csv_line": 74,
+      "raw_air_display": "4 incr to 26.5",
+      "raw_fan_display": "49 (pot 1.1)   blowoff pot 5   out at fan 87",
+      "restrictors": "0",
+      "gmt": "57",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P1",
+      "csv_line": 75,
+      "raw_air_display": "5  2   slow decr to ext",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "167",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P2",
+      "csv_line": 76,
+      "raw_air_display": "5   2.5   2 (pot .9   .5   .35.  .33)",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "167",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P3a",
+      "csv_line": 77,
+      "raw_air_display": "5   2.5 (1.15   .5   .35   .33. .32   .315   .31   .3)",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "167",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P3b",
+      "csv_line": 78,
+      "raw_air_display": "5   very low (0.85   0.32   0.31   0.305   0.30   0.295)",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "167",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P4",
+      "csv_line": 79,
+      "raw_air_display": "5   pots 0.4   0.36   0.32   0.308   .3   off",
+      "raw_fan_display": "48   41",
+      "restrictors": "2",
+      "gmt": "184",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P5",
+      "csv_line": 80,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "Fan pot 1.5 (5cm/s)   0.9   0.4   0.36   0.32   0.308   0.3   0.29   0.28   0 ext",
+      "restrictors": "2",
+      "gmt": "195",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P6",
+      "csv_line": 81,
+      "raw_air_display": "5   pots 0.4   0.36   0.32   0.31   off",
+      "raw_fan_display": "48   41",
+      "restrictors": "2",
+      "gmt": "184",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P8",
+      "csv_line": 82,
+      "raw_air_display": "5   would not stay lit   10   15 ibid",
+      "raw_fan_display": "48   62   75",
+      "restrictors": "2",
+      "gmt": "184",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P9",
+      "csv_line": 83,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "Fan pot 1.5 (5cm/s)   0.9   0.4   0.36   0.32   0.3   0.28 ext",
+      "restrictors": "2",
+      "gmt": "195",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P10",
+      "csv_line": 84,
+      "raw_air_display": "5   pots 0.4   0.36   0.32   0.31   0.30 extinguished",
+      "raw_fan_display": "48   41",
+      "restrictors": "2",
+      "gmt": "184",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P12",
+      "csv_line": 85,
+      "raw_air_display": "5   3  2  1   0.5   lower",
+      "raw_fan_display": "60  52  48  44.5  42  41.5  41 (2.6  1.6  1.2  .75  .5  .4  .36  0.34)",
+      "restrictors": "2",
+      "gmt": "210",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P13a",
+      "csv_line": 86,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "Fan pot 1.1 (5cm/s)   0.4   0.36   0.32   0.3   0.28   0.26   0 ext",
+      "restrictors": "2",
+      "gmt": "195",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P13b",
+      "csv_line": 87,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "Fan pot 1.3 (5cm/s)   0.4   0.36   0.32 ext",
+      "restrictors": "2",
+      "gmt": "195",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P14",
+      "csv_line": 88,
+      "raw_air_display": "5   low (.85   .4   .32)",
+      "raw_fan_display": "46   41",
+      "restrictors": "2",
+      "gmt": "174",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P15",
+      "csv_line": 89,
+      "raw_air_display": "5   (0.36)",
+      "raw_fan_display": "46   41",
+      "restrictors": "2",
+      "gmt": "174",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P16",
+      "csv_line": 90,
+      "raw_air_display": "5  8  2  low",
+      "raw_fan_display": "49  62  44  41.5  41 (pots 1.3   2.8   0.7   0.4   0.36   0.32)",
+      "restrictors": "2",
+      "gmt": "203",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P17",
+      "csv_line": 91,
+      "raw_air_display": "5   3   2   22   2   low",
+      "raw_fan_display": "60  52  48  233  48  41 (2.6   1.6   1.2   10   1.2   0.36   0.34)",
+      "restrictors": "2",
+      "gmt": "210",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P18",
+      "csv_line": 92,
+      "raw_air_display": "2  0  2  0  etc",
+      "raw_fan_display": "55  47  etc (pot 1  2  1  2   etc)",
+      "restrictors": "2",
+      "gmt": "211",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P19",
+      "csv_line": 93,
+      "raw_air_display": "5  8  2  max   0",
+      "raw_fan_display": "49  62  44  41.5  122   41 (pots 1.3   2.8   0.7   0.4   0.36   10.   0.32)",
+      "restrictors": "2",
+      "gmt": "203",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P20",
+      "csv_line": 94,
+      "raw_air_display": "2  0  2  0  etc",
+      "raw_fan_display": "55  47  etc (pot 1  2  1  2   etc)",
+      "restrictors": "2",
+      "gmt": "211",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P21a",
+      "csv_line": 95,
+      "raw_air_display": "5",
+      "raw_fan_display": "46",
+      "restrictors": "2",
+      "gmt": "174",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P21b",
+      "csv_line": 96,
+      "raw_air_display": "5",
+      "raw_fan_display": "46",
+      "restrictors": "2",
+      "gmt": "174",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P22a",
+      "csv_line": 97,
+      "raw_air_display": "5   down to ext",
+      "raw_fan_display": "5   0.36   0.32 ext after some time",
+      "restrictors": "2",
+      "gmt": "189",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P22b",
+      "csv_line": 98,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "5   p.36   0.34   0.33   0.32   0.31 ext",
+      "restrictors": "2",
+      "gmt": "189",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P23",
+      "csv_line": 99,
+      "raw_air_display": "2  0  2  0  etc",
+      "raw_fan_display": "55  47  etc (pot 1  2  1  2   etc)",
+      "restrictors": "2",
+      "gmt": "211",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P24",
+      "csv_line": 100,
+      "raw_air_display": "2  0  2  0  etc",
+      "raw_fan_display": "55  47  etc (pot 1  2  1  2   etc)",
+      "restrictors": "2",
+      "gmt": "211",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "P25",
+      "csv_line": 101,
+      "raw_air_display": "5 down to ext",
+      "raw_fan_display": "5   p.36   0.34   0.33   0.32   0.31 ext",
+      "restrictors": "2",
+      "gmt": "189",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T1",
+      "csv_line": 102,
+      "raw_air_display": "10",
+      "raw_fan_display": "80",
+      "restrictors": "2",
+      "gmt": "45",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.10065999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T2",
+      "csv_line": 103,
+      "raw_air_display": "9   5   4",
+      "raw_fan_display": "80   59   55",
+      "restrictors": "2",
+      "gmt": "45",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T3",
+      "csv_line": 104,
+      "raw_air_display": "10",
+      "raw_fan_display": "63",
+      "restrictors": "2",
+      "gmt": "178",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.10065999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T4",
+      "csv_line": 105,
+      "raw_air_display": "9  1",
+      "raw_fan_display": "80   46",
+      "restrictors": "2",
+      "gmt": "45",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T5",
+      "csv_line": 106,
+      "raw_air_display": "10   2   1",
+      "raw_fan_display": "2.72   0.50   0.42",
+      "restrictors": "2",
+      "gmt": "100",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T6",
+      "csv_line": 107,
+      "raw_air_display": "5  2  1   <1",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "100",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T7",
+      "csv_line": 108,
+      "raw_air_display": "10   5  3  1   decr",
+      "raw_fan_display": "3.4   67",
+      "restrictors": "2",
+      "gmt": "190",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T9",
+      "csv_line": 109,
+      "raw_air_display": "10",
+      "raw_fan_display": "pot 2.5",
+      "restrictors": "2",
+      "gmt": "175",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.10065999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T10",
+      "csv_line": 110,
+      "raw_air_display": "5",
+      "raw_fan_display": "pot 1.1",
+      "restrictors": "2",
+      "gmt": "175",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T11",
+      "csv_line": 111,
+      "raw_air_display": "5",
+      "raw_fan_display": "48",
+      "restrictors": "2",
+      "gmt": "178",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T12",
+      "csv_line": 112,
+      "raw_air_display": "5",
+      "raw_fan_display": "pot 1.1",
+      "restrictors": "2",
+      "gmt": "178",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T13",
+      "csv_line": 113,
+      "raw_air_display": "5  1",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "100",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T14",
+      "csv_line": 114,
+      "raw_air_display": "5  3",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "178",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T15",
+      "csv_line": 115,
+      "raw_air_display": "9   29",
+      "raw_fan_display": "80122",
+      "restrictors": "0",
+      "gmt": "45",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T16",
+      "csv_line": 116,
+      "raw_air_display": "5  3",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "100",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T17",
+      "csv_line": 117,
+      "raw_air_display": "6   53",
+      "raw_fan_display": "",
+      "restrictors": "0",
+      "gmt": "178",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T18",
+      "csv_line": 118,
+      "raw_air_display": "5  2",
+      "raw_fan_display": "",
+      "restrictors": "2",
+      "gmt": "175",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T19",
+      "csv_line": 119,
+      "raw_air_display": "11",
+      "raw_fan_display": "68.5   pot 3.6",
+      "restrictors": "2",
+      "gmt": "190",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.11072599999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T20",
+      "csv_line": 120,
+      "raw_air_display": "11   3",
+      "raw_fan_display": "3.6   0.9",
+      "restrictors": "2",
+      "gmt": "190",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T21",
+      "csv_line": 121,
+      "raw_air_display": "11   max(47)",
+      "raw_fan_display": "1.6 pot   52",
+      "restrictors": "0",
+      "gmt": "190",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T22",
+      "csv_line": 122,
+      "raw_air_display": "10   5",
+      "raw_fan_display": "3.4   1.7",
+      "restrictors": "2",
+      "gmt": "190",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T23",
+      "csv_line": 123,
+      "raw_air_display": "10",
+      "raw_fan_display": "3.3   66",
+      "restrictors": "2",
+      "gmt": "190",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.10065999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T24",
+      "csv_line": 124,
+      "raw_air_display": "10",
+      "raw_fan_display": "3.3 66",
+      "restrictors": "2",
+      "gmt": "190",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.10065999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T25",
+      "csv_line": 125,
+      "raw_air_display": "5   2.5",
+      "raw_fan_display": "53   45",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T26",
+      "csv_line": 126,
+      "raw_air_display": "5   2.5",
+      "raw_fan_display": "53   45",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T27",
+      "csv_line": 127,
+      "raw_air_display": "5   2",
+      "raw_fan_display": "53   45",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T28a",
+      "csv_line": 128,
+      "raw_air_display": "5",
+      "raw_fan_display": "53",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T28b",
+      "csv_line": 129,
+      "raw_air_display": "5",
+      "raw_fan_display": "53",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "scalar_display_converted",
+      "test_section_velocity_estimate_m_s": 0.05032999999999999,
+      "method": "workbook AIR-display scaling, not fan-regression prediction",
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    },
+    {
+      "test_id": "T29",
+      "csv_line": 130,
+      "raw_air_display": "5   2(?)",
+      "raw_fan_display": "53   43",
+      "restrictors": "1",
+      "gmt": "216",
+      "status": "time_varying_or_annotated_requires_manual_segmentation",
+      "test_section_velocity_estimate_m_s": null,
+      "method": null,
+      "references": [
+        "PSI-25.csv:Air display",
+        "Fan Calibration data!A33:A34"
+      ],
+      "uncertainty": null
+    }
+  ],
+  "calibration_workbook_sha256": "bc0dca3efdef44a7774d8dd37aebc0cedae8d67d7bae8c9cbde9590014a3c983",
+  "scope": "Retrospective scalar AIR conversion only; not a complete labeled training dataset"
+}

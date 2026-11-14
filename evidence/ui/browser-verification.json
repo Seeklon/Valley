@@ -1,0 +1,105 @@
+{
+  "checked_at": "2026-11-14T11:30:32.083Z",
+  "base_url": "https://desktop-m4hkr86.tail609f26.ts.net:8443",
+  "checks": [
+    {
+      "name": "initial_scene_real_glb",
+      "passed": true,
+      "scene_id": "habitat"
+    },
+    {
+      "name": "semantic_object_inspector",
+      "passed": true,
+      "object_id": "fuel_sample"
+    },
+    {
+      "name": "nasa_interpretation_uses_actual_response_and_sources",
+      "passed": true,
+      "method": "codex_grounded_in_nasa_evidence",
+      "model": "gpt-6.1-sol",
+      "sources": 3
+    },
+    {
+      "name": "model_registry_matches_real_api",
+      "passed": true,
+      "models": 2
+    },
+    {
+      "name": "spatial_model_consistency_limits_match_real_audit",
+      "passed": true,
+      "model_id": "field-mlp-v2",
+      "audit": {
+        "mean_above_global_max_frames": 307,
+        "max_mean_above_global_max_c": 10.778005599975586,
+        "sample_above_global_max_frames": 443,
+        "max_sample_above_global_max_c": 11.4759521484375
+      }
+    },
+    {
+      "name": "nasa_observations_filtered_from_real_table",
+      "passed": true,
+      "visible_rows": 12
+    },
+    {
+      "name": "campaign_capabilities_and_scene_selection",
+      "passed": true
+    },
+    {
+      "name": "mobile_navigation_parameters_no_overflow",
+      "passed": true,
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "screenshots": [
+    "ignis-cockpit-desktop.png",
+    "ignis-soyuz-desktop.png",
+    "ignis-interpretation-desktop.png",
+    "ignis-models-final.png",
+    "ignis-models-final-mobile.png",
+    "ignis-sources-desktop.png",
+    "ignis-cockpit-mobile.png"
+  ],
+  "page_errors": [],
+  "runtime": {
+    "status": "ok",
+    "worker_available": true,
+    "capabilities": {
+      "physics": true,
+      "prediction": true,
+      "campaigns": true,
+      "insights": true,
+      "source_models": [
+        "prescribed_source",
+        "coupled_combustion"
+      ]
+    },
+    "disk_free_gb": 110.8,
+    "version": "0.1.0"
+  },
+  "scenes": [
+    {
+      "scene_id": "habitat",
+      "available": true,
+      "rendered": true
+    },
+    {
+      "scene_id": "cargo",
+      "available": true,
+      "rendered": true
+    },
+    {
+      "scene_id": "crossflow",
+      "available": true,
+      "rendered": true
+    },
+    {
+      "scene_id": "soyuz",
+      "available": true,
+      "rendered": true
+    }
+  ],
+  "passed": true
+}

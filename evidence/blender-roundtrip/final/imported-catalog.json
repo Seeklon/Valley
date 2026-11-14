@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "materials": [
+    {
+      "id": "cellulose",
+      "name": "Cellulose — référence générique",
+      "description": "Échantillon de référence. Les paramètres de combustion doivent être explicitement calibrés ; la couleur du modèle ne détermine aucune propriété thermique.",
+      "color": "#bc9066",
+      "provenance": {
+        "kind": "generic_material",
+        "nasa_calibrated": false
+      }
+    },
+    {
+      "id": "pmma",
+      "name": "PMMA — référence générique",
+      "description": "Polymère de référence ; aucune équivalence implicite à un matériau de vol.",
+      "color": "#8bbdc5",
+      "provenance": {
+        "kind": "generic_material",
+        "nasa_calibrated": false
+      }
+    },
+    {
+      "id": "aluminium",
+      "name": "Aluminium",
+      "description": "Structure et boîtiers. La bibliothèque thermique du backend porte les paramètres physiques.",
+      "color": "#a8bec5",
+      "provenance": {
+        "kind": "generic_material"
+      }
+    },
+    {
+      "id": "steel",
+      "name": "Acier",
+      "description": "Supports, banc expérimental et interfaces mécaniques.",
+      "color": "#586c7b",
+      "provenance": {
+        "kind": "generic_material"
+      }
+    },
+    {
+      "id": "glass",
+      "name": "Verre",
+      "description": "Éléments graphiques transparents ; rôle physique seulement si explicitement affecté à un proxy.",
+      "color": "#a2cbd4",
+      "provenance": {
+        "kind": "generic_material"
+      }
+    },
+    {
+      "id": "insulation",
+      "name": "Isolation — à caractériser",
+      "description": "Habillage technique générique ; ne constitue pas un matériau certifié ni une propriété de combustion mesurée.",
+      "color": "#d3d4bc",
+      "provenance": {
+        "kind": "generic_material",
+        "nasa_calibrated": false
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "soyuz-import-check",
+      "name": "soyuz-import-check",
+      "description": "Environment imported and explicitly annotated in Blender",
+      "asset_url": "/assets/scenes/soyuz-import-check.glb",
+      "bounds_m": [
+        3.0,
+        3.0,
+        2.5999999046325684
+      ],
+      "coordinate_system": "right_handed_z_up",
+      "units": "m",
+      "objects": [
+        {
+          "id": "floor",
+          "name": "Plancher technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            1.5,
+            -0.03999999910593033
+          ],
+          "size_m": [
+            3.0,
+            3.0,
+            0.07999999821186066
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "ceiling",
+          "name": "Plafond technique",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            1.5,
+            2.640000104904175
+          ],
+          "size_m": [
+            3.0,
+            3.0,
+            0.07999992370605469
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "wall_port",
+          "name": "Paroi bâbord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            -0.03999999910593033,
+            1.5,
+            1.2999999523162842
+          ],
+          "size_m": [
+            0.07999999821186066,
+            3.0,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "wall_starboard",
+          "name": "Paroi tribord",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            3.0399999618530273,
+            1.5,
+            1.2999999523162842
+          ],
+          "size_m": [
+            0.07999992370605469,
+            3.0,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "wall_entry",
+          "name": "Paroi d'accès",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            -0.03999999910593033,
+            1.2999999523162842
+          ],
+          "size_m": [
+            3.0,
+            0.07999999821186066,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "wall_aft",
+          "name": "Cloison arrière",
+          "role": "wall",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            3.0399999618530273,
+            1.2999999523162842
+          ],
+          "size_m": [
+            3.0,
+            0.07999992370605469,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "soyuz_seat_left",
+          "name": "Siège gauche · coque et harnais",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.699999988079071,
+            1.4999999701976776,
+            0.699999988079071
+          ],
+          "size_m": [
+            0.6000000238418579,
+            1.0999999642372131,
+            1.100000023841858
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "soyuz_seat_center",
+          "name": "Siège central · coque et harnais",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5,
+            1.4999999701976776,
+            0.699999988079071
+          ],
+          "size_m": [
+            0.5999999046325684,
+            1.0999999642372131,
+            1.100000023841858
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "soyuz_seat_right",
+          "name": "Siège droit · coque et harnais",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            2.299999952316284,
+            1.4999999701976776,
+            0.699999988079071
+          ],
+          "size_m": [
+            0.5999999046325684,
+            1.0999999642372131,
+            1.100000023841858
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "soyuz_console",
+          "name": "Tableau de bord de capsule",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            1.5000000596046448,
+            0.30000001192092896,
+            1.0499999523162842
+          ],
+          "size_m": [
+            1.8000000715255737,
+            0.30000001192092896,
+            0.5
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "fuel_sample",
+          "name": "Coupon de matériau instrumenté",
+          "role": "fuel",
+          "material_id": "cellulose",
+          "center_m": [
+            1.5,
+            0.75,
+            1.5
+          ],
+          "size_m": [
+            0.20000004768371582,
+            0.20000004768371582,
+            0.04999995231628418
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "capsule_corner_0",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.30000001192092896,
+            0.30000001192092896,
+            1.2999999523162842
+          ],
+          "size_m": [
+            0.6000000238418579,
+            0.6000000238418579,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "capsule_corner_1",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            2.700000047683716,
+            0.30000001192092896,
+            1.2999999523162842
+          ],
+          "size_m": [
+            0.5999999046325684,
+            0.6000000238418579,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "capsule_corner_2",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            0.30000001192092896,
+            2.700000047683716,
+            1.2999999523162842
+          ],
+          "size_m": [
+            0.6000000238418579,
+            0.5999999046325684,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        },
+        {
+          "id": "capsule_corner_3",
+          "name": "Exclusion d'angle · coque approchée",
+          "role": "obstacle",
+          "material_id": "aluminium",
+          "center_m": [
+            2.700000047683716,
+            2.700000047683716,
+            1.2999999523162842
+          ],
+          "size_m": [
+            0.5999999046325684,
+            0.5999999046325684,
+            2.5999999046325684
+          ],
+          "proxy_kind": "explicit_axis_aligned_box"
+        }
+      ],
+      "vents": [
+        {
+          "id": "inlet_port",
+          "role": "inlet",
+          "center_m": [
+            0.0,
+            1.5,
+            0.800000011920929
+          ],
+          "size_m": [
+            0.0,
+            0.4,
+            0.4
+          ],
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "nominal_speed_m_s": 0.2
+        },
+        {
+          "id": "outlet_starboard",
+          "role": "outlet",
+          "center_m": [
+            3.0,
+            1.5,
+            0.800000011920929
+          ],
+          "size_m": [
+            0.0,
+            0.4,
+            0.4
+          ],
+          "normal": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "nominal_speed_m_s": 0.2
+        }
+      ],
+      "sensors": [
+        {
+          "id": "sensor_near",
+          "name": "S01 · tableau de bord",
+          "position_m": [
+            1.5,
+            0.75,
+            2.0
+          ]
+        },
+        {
+          "id": "sensor_crew",
+          "name": "S02 · volume équipage",
+          "position_m": [
+            1.5,
+            1.75,
+            1.600000023841858
+          ]
+        },
+        {
+          "id": "sensor_aft",
+          "name": "S03 · coque arrière",
+          "position_m": [
+            1.5,
+            2.5,
+            1.7000000476837158
+          ]
+        },
+        {
+          "id": "sensor_crown",
+          "name": "S04 · couronne",
+          "position_m": [
+            1.5,
+            1.5,
+            2.299999952316284
+          ]
+        }
+      ],
+      "source_position_m": [
+        1.5,
+        0.75,
+        1.7000000476837158
+      ],
+      "defaults": {
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21,
+        "material_id": "cellulose",
+        "ignition_power_w": 500,
+        "ignition_duration_s": 15,
+        "duration_s": 60,
+        "seed": 42,
+        "mesh_cell_m": 0.2
+      },
+      "provenance": {
+        "kind": "user_imported_annotated_environment",
+        "source_file": "soyuz.blend",
+        "geometry_source": "Original IGNIS geometry; roundtrip verification",
+        "scientific_status": "Explicit user annotations; uncalibrated until tested against independent data.",
+        "boundary_policy": "role=wall describes domain boundaries, not interior OBST.",
+        "visual_detail_policy": "Only explicit physical proxies participate in calculation; shader materials do not define combustion."
+      }
+    }
+  ]
+}

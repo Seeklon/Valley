@@ -1,6 +1,6 @@
 # IGNIS 3D — plan de réalisation figé
 
-Version 1 — 14 novembre 2026. Demande de Thomas. Dépôt : Seeklon/Valley.
+Version 2 — 14 novembre 2026. Ajout Soyouz demandé par Thomas. Dépôt : Seeklon/Valley.
 
 ## Résultat attendu
 
@@ -34,6 +34,9 @@ des provenances distinctes.
 - ML : référence tabulaire, puis modèle spatial compact ; validation sur familles
   de scènes réservées. Modèles livrés avec poids, métriques, variables d'entrée,
   plages de validité, version du simulateur et identifiants des datasets.
+- Interprétation documentaire : Codex via son installation Windows et sa session
+  authentifiée, à partir des faits NASA archivés. Aucun appel Ollama par IGNIS,
+  conformément à la correction explicite de Thomas.
 
 ## Contrat de scène
 
@@ -46,8 +49,10 @@ graphiques ne sont pas interprétés comme propriétés de combustion.
 Le premier environnement est un compartiment spatial original et détaillé,
 inspiré d'équipements de cabine : racks, panneaux, câbles, conduits, grilles,
 trappes, éclairage, équipements et repères. Il n'est pas présenté comme une
-reconstruction certifiée d'un module réel. Trois variantes minimales partagent
-le contrat : nominale, ventilation différente, disposition/encombrement différent.
+reconstruction certifiée d'un module réel. Quatre scènes partagent le contrat :
+habitat, ventilation transversale, zone cargo et capsule inspirée du Soyouz.
+Cette capsule est une interprétation originale du module de descente, avec trois
+sièges, instrumentation et hublots ; aucune géométrie officielle n'est revendiquée.
 
 ## Physique et validité
 
@@ -75,12 +80,12 @@ par une animation ou une interpolation de résultats préfabriqués.
 | ID | Livrable | Preuve d'acceptation |
 |---|---|---|
 | A | Poste Windows et exécution distante | Identité SSH, inventaire CPU/RAM/GPU/disque, CUDA exercé, dossier Valley séparé, quotas et absence d'interférence avec les autres travaux. |
-| B | Scènes et Blender | Script reproductible, .blend, GLB, trois variantes, matériaux et ventilation associés, rendus inspectés et paquets importables. |
+| B | Scènes et Blender | Script reproductible, .blend, GLB, quatre scènes dont Soyouz, matériaux et ventilation associés, rendus inspectés et paquets importables. |
 | C | Simulation 3D | Cas ventilation/chaleur puis combustion couplée réellement exécutés, champs et métriques exportés, diagnostics et tests pertinents. |
 | D | Sources NASA | Données importées avec DOI/version/hash, cas comparables, documentation des écarts et données manquantes, calibration et test distincts. |
 | E | Campagnes | Environ 100 simulations pilotes valides, génération contrainte, reprise et export testés, débit et volume mesurés avant augmentation. |
 | F | Modèles entraînés | Poids issus d'une exécution d'entraînement conservée ; référence et modèle spatial évalués ; aucun chevauchement des familles train/test ; limites publiées. |
-| G | Application | Modèles chargés au démarrage, trois scènes, variables modifiables, lancement réel, chronologie 3D et courbes, comparaison et téléchargement. |
+| G | Application | Modèles chargés au démarrage, quatre scènes, variables modifiables, lancement réel, chronologie 3D et courbes, comparaison et téléchargement. |
 | H | Livraison vérifiée | URL accessible, test navigateur réel sur le parcours complet, guide Windows, versions verrouillées, revue indépendante, sources et preuves commitées. |
 
 ## Gestion des ressources et campagnes
@@ -121,8 +126,8 @@ par une animation ou une interpolation de résultats préfabriqués.
 - Modélisation Saffire V : https://ntrs.nasa.gov/citations/20240008602 — transport avec sources mesurées, pas modélisation directe de la flamme.
 - FDS : https://pages.nist.gov/fds-smv/
 
-Les trois tableaux PSI ont déjà été récupérés dans /tmp/ignis-PSI-{25,26,98}-table.csv.
-Ils doivent être contrôlés et archivés avec leur provenance avant usage durable.
+Les trois tableaux PSI ont été contrôlés et archivés avec leur provenance dans
+`data/sources/`. Les métriques, écarts et limites sont dans `docs/NASA.md`.
 Le tableau BASS-II a 129 identifiants ; ce nombre ne garantit pas 129 labels
 d'apprentissage complets. Le détail du challenge signale l'absence actuelle de
 données de combustion en gravité partielle dans PSI.

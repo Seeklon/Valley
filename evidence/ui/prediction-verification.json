@@ -1,0 +1,1291 @@
+{
+  "checked_at": "2026-11-14T11:32:42.464Z",
+  "base_url": "https://desktop-m4hkr86.tail609f26.ts.net:8443",
+  "scene_id": "soyuz",
+  "checks": [
+    {
+      "name": "real_spatial_prediction_autoplay_timeline_and_field",
+      "passed": true,
+      "peak_frame_time_s": 30
+    },
+    {
+      "name": "real_scalar_prediction_no_fabricated_fields_and_comparison",
+      "passed": true
+    },
+    {
+      "name": "real_run_export_via_download_link",
+      "passed": true,
+      "filename": "ignis-f06738c3ce0a4dd197143c324c6ecd72.zip"
+    },
+    {
+      "name": "domain_rejection_in_browser_and_real_api",
+      "passed": true
+    },
+    {
+      "name": "last_real_run_restored_after_reload",
+      "passed": true
+    },
+    {
+      "name": "model_evaluation_tables_match_real_metadata_and_show_soyuz_limits",
+      "passed": true
+    },
+    {
+      "name": "mobile_model_evaluation_without_horizontal_overflow",
+      "passed": true
+    }
+  ],
+  "runs": [
+    {
+      "id": "0719a6e33fa64281addc327d2541fcba",
+      "model_id": "field-mlp-v2",
+      "config": {
+        "scene_id": "soyuz",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.2,
+        "oxygen_percent": 21,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000,
+        "ignition_duration_s": 15,
+        "duration_s": 30,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "field-mlp-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5,
+        "resistance_ohm": 20
+      },
+      "metrics": 31,
+      "frames": 31,
+      "provenance": {
+        "engine": "IGNIS learned surrogate",
+        "engine_version": "2",
+        "origin": "prediction",
+        "model_id": "field-mlp-v2",
+        "source_model": "prescribed_source",
+        "scientific_status": "learned_from_exploratory_fds",
+        "warnings": [
+          "Prédiction apprise sur des simulations FDS exploratoires, sans validation de la combustion réelle en microgravité.",
+          "Le maillage de référence de 0,20 m n’est pas démontré convergé ; les 320 points affichés sont des observations clairsemées.",
+          "L’erreur sur familles réservées mesure l’émulation du simulateur, pas l’exactitude physique dans un véhicule réel.",
+          "La graine aléatoire n’est pas une entrée du réseau : la prédiction ne reproduit pas chaque fluctuation turbulente d’un run FDS.",
+          "Prévisualisation exploratoire : le réseau ne contraint pas la cohérence entre température moyenne, maximum et valeurs du champ."
+        ],
+        "training_dataset_id": "pilot-v2",
+        "weights_sha256": "38d81a6220c87e0cfe72404308fc710b5916c6ebeb44143d3640f4ab15bc2f6c",
+        "inference_seconds": 0.035,
+        "initial_condition": "ambient thermodynamics at t=0; velocity perturbations learned",
+        "postprocessing": "physical range clipping",
+        "seed_conditioned": false,
+        "validation_errors": {
+          "validation": {
+            "frames": 732,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 6.739346504211426,
+                "p95_absolute_error": 20.58555030822754
+              },
+              "temperature_mean_c": {
+                "mae": 0.0361526794731617,
+                "p95_absolute_error": 0.14064054191112518
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00036281836219131947,
+                "p95_absolute_error": 0.0012566569494083524
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.829925532272682e-8,
+                "p95_absolute_error": 1.5694551791511913e-7
+              },
+              "heat_release_w": {
+                "mae": 153.09140014648438,
+                "p95_absolute_error": 534.2137451171875
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.21233738958835602,
+                "p95_absolute_error": 0.5334670543670654
+              },
+              "oxygen_percent": {
+                "mae": 0.0020553781650960445,
+                "p95_absolute_error": 0.005001068115234375
+              },
+              "smoke_kg_m3": {
+                "mae": 1.7146021491498686e-7,
+                "p95_absolute_error": 4.6606297132711916e-7
+              },
+              "u_m_s": {
+                "mae": 0.009836548008024693,
+                "p95_absolute_error": 0.032342880964279175
+              },
+              "v_m_s": {
+                "mae": 0.01149850431829691,
+                "p95_absolute_error": 0.039985574781894684
+              },
+              "w_m_s": {
+                "mae": 0.011268996633589268,
+                "p95_absolute_error": 0.03968139365315437
+              }
+            },
+            "run_temperature_peak_mae_c": 18.068413416544598,
+            "spatial_temperature_peak_mae_c": 7.828930695851644,
+            "temperature_field_mae_run_balanced_c": 0.22518487398823103,
+            "heated_points_temperature_error_c": {
+              "mae": 1.9810563325881958,
+              "p95_absolute_error": 8.55483627319336
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally",
+            "consistency": {
+              "mean_above_global_max_frames": 121,
+              "max_mean_above_global_max_c": 9.735136985778809,
+              "sample_above_global_max_frames": 136,
+              "max_sample_above_global_max_c": 10.552931785583496
+            }
+          },
+          "test": {
+            "frames": 2187,
+            "runs": 36,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 8.060556411743164,
+                "p95_absolute_error": 33.4005012512207
+              },
+              "temperature_mean_c": {
+                "mae": 0.050082091242074966,
+                "p95_absolute_error": 0.26970380544662476
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.000651933834888041,
+                "p95_absolute_error": 0.00262527447193861
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 5.827920190881741e-8,
+                "p95_absolute_error": 3.6977675677007937e-7
+              },
+              "heat_release_w": {
+                "mae": 150.54498291015625,
+                "p95_absolute_error": 496.4758605957031
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.19108085334300995,
+                "p95_absolute_error": 0.45371294021606445
+              },
+              "oxygen_percent": {
+                "mae": 0.001770599978044629,
+                "p95_absolute_error": 0.003993988037109375
+              },
+              "smoke_kg_m3": {
+                "mae": 1.4139072845864575e-7,
+                "p95_absolute_error": 3.917000412911875e-7
+              },
+              "u_m_s": {
+                "mae": 0.014273051172494888,
+                "p95_absolute_error": 0.04550726339221001
+              },
+              "v_m_s": {
+                "mae": 0.022528914734721184,
+                "p95_absolute_error": 0.07049877941608429
+              },
+              "w_m_s": {
+                "mae": 0.012632484547793865,
+                "p95_absolute_error": 0.04665454104542732
+              }
+            },
+            "run_temperature_peak_mae_c": 26.53182866838243,
+            "spatial_temperature_peak_mae_c": 8.844370524088541,
+            "temperature_field_mae_run_balanced_c": 0.19949535673691166,
+            "heated_points_temperature_error_c": {
+              "mae": 2.4129722118377686,
+              "p95_absolute_error": 7.11609411239624
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally",
+            "consistency": {
+              "mean_above_global_max_frames": 307,
+              "max_mean_above_global_max_c": 10.778005599975586,
+              "sample_above_global_max_frames": 443,
+              "max_sample_above_global_max_c": 11.4759521484375
+            }
+          },
+          "test_geometry": {
+            "frames": 1455,
+            "runs": 24,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 6.6104326248168945,
+                "p95_absolute_error": 30.875404357910156
+              },
+              "temperature_mean_c": {
+                "mae": 0.01891530677676201,
+                "p95_absolute_error": 0.05065421387553215
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00042897777166217566,
+                "p95_absolute_error": 0.0008716583251953125
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 1.1910642250256842e-8,
+                "p95_absolute_error": 3.494123035352459e-8
+              },
+              "heat_release_w": {
+                "mae": 127.24918365478516,
+                "p95_absolute_error": 437.6311950683594
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.16151908040046692,
+                "p95_absolute_error": 0.40831536054611206
+              },
+              "oxygen_percent": {
+                "mae": 0.0011478607775643468,
+                "p95_absolute_error": 0.003299713134765625
+              },
+              "smoke_kg_m3": {
+                "mae": 6.718527600924062e-8,
+                "p95_absolute_error": 3.0395801786653465e-7
+              },
+              "u_m_s": {
+                "mae": 0.015852680429816246,
+                "p95_absolute_error": 0.05081842467188835
+              },
+              "v_m_s": {
+                "mae": 0.02725393697619438,
+                "p95_absolute_error": 0.07950607687234879
+              },
+              "w_m_s": {
+                "mae": 0.012819906696677208,
+                "p95_absolute_error": 0.04835191369056702
+              }
+            },
+            "run_temperature_peak_mae_c": 18.065860589345295,
+            "spatial_temperature_peak_mae_c": 3.923532803853353,
+            "temperature_field_mae_run_balanced_c": 0.1614492122704784,
+            "heated_points_temperature_error_c": {
+              "mae": 3.067566156387329,
+              "p95_absolute_error": 6.96085786819458
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_parameters": {
+            "frames": 732,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 10.942975044250488,
+                "p95_absolute_error": 39.65442657470703
+              },
+              "temperature_mean_c": {
+                "mae": 0.112032450735569,
+                "p95_absolute_error": 0.3928539454936981
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.001095104729756713,
+                "p95_absolute_error": 0.004223919939249754
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 1.5044622614368564e-7,
+                "p95_absolute_error": 6.781802994737518e-7
+              },
+              "heat_release_w": {
+                "mae": 196.8501739501953,
+                "p95_absolute_error": 624.22216796875
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.2550746500492096,
+                "p95_absolute_error": 0.5893702507019043
+              },
+              "oxygen_percent": {
+                "mae": 0.0031186731066554785,
+                "p95_absolute_error": 0.006557464599609375
+              },
+              "smoke_kg_m3": {
+                "mae": 3.020267627107387e-7,
+                "p95_absolute_error": 7.256942353706108e-7
+              },
+              "u_m_s": {
+                "mae": 0.010853544808924198,
+                "p95_absolute_error": 0.036531660705804825
+              },
+              "v_m_s": {
+                "mae": 0.01230041403323412,
+                "p95_absolute_error": 0.04380543902516365
+              },
+              "w_m_s": {
+                "mae": 0.01222675945609808,
+                "p95_absolute_error": 0.04358476400375366
+              }
+            },
+            "run_temperature_peak_mae_c": 43.4637648264567,
+            "spatial_temperature_peak_mae_c": 18.686045964558918,
+            "temperature_field_mae_run_balanced_c": 0.27558764566977817,
+            "heated_points_temperature_error_c": {
+              "mae": 2.3416953086853027,
+              "p95_absolute_error": 7.4952473640441895
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_cargo_microg": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 12.318711280822754,
+                "p95_absolute_error": 29.456018447875977
+              },
+              "temperature_mean_c": {
+                "mae": 0.053219202905893326,
+                "p95_absolute_error": 0.10184001922607422
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0002398569049546495,
+                "p95_absolute_error": 0.0004424095095600933
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 4.047815238550356e-8,
+                "p95_absolute_error": 7.042155658609772e-8
+              },
+              "heat_release_w": {
+                "mae": 161.2350616455078,
+                "p95_absolute_error": 431.4986267089844
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.14271561801433563,
+                "p95_absolute_error": 0.34059008955955505
+              },
+              "oxygen_percent": {
+                "mae": 0.001037745038047433,
+                "p95_absolute_error": 0.002315521240234375
+              },
+              "smoke_kg_m3": {
+                "mae": 5.223813559496193e-8,
+                "p95_absolute_error": 6.785263195752123e-8
+              },
+              "u_m_s": {
+                "mae": 0.0075028082355856895,
+                "p95_absolute_error": 0.02333618514239788
+              },
+              "v_m_s": {
+                "mae": 0.010175693780183792,
+                "p95_absolute_error": 0.03324742615222931
+              },
+              "w_m_s": {
+                "mae": 0.007214472629129887,
+                "p95_absolute_error": 0.02391871064901352
+              }
+            },
+            "run_temperature_peak_mae_c": 26.06159210205078,
+            "spatial_temperature_peak_mae_c": 8.087547302246094,
+            "temperature_field_mae_run_balanced_c": 0.14271561056375504,
+            "heated_points_temperature_error_c": {
+              "mae": 2.9361138343811035,
+              "p95_absolute_error": 6.326694488525391
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_cargo_earth": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 2.5600199699401855,
+                "p95_absolute_error": 4.914848804473877
+              },
+              "temperature_mean_c": {
+                "mae": 0.04065249487757683,
+                "p95_absolute_error": 0.0670834556221962
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0004063746891915798,
+                "p95_absolute_error": 0.0009774207137525082
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.5357995642470996e-8,
+                "p95_absolute_error": 7.261260037694228e-8
+              },
+              "heat_release_w": {
+                "mae": 212.92901611328125,
+                "p95_absolute_error": 582.6934204101562
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.14358025789260864,
+                "p95_absolute_error": 0.3871226906776428
+              },
+              "oxygen_percent": {
+                "mae": 0.0011558670084923506,
+                "p95_absolute_error": 0.00399017333984375
+              },
+              "smoke_kg_m3": {
+                "mae": 9.638853271098924e-8,
+                "p95_absolute_error": 4.7429708160962036e-7
+              },
+              "u_m_s": {
+                "mae": 0.011893367394804955,
+                "p95_absolute_error": 0.03880847990512848
+              },
+              "v_m_s": {
+                "mae": 0.014313198626041412,
+                "p95_absolute_error": 0.05058509111404419
+              },
+              "w_m_s": {
+                "mae": 0.014609858393669128,
+                "p95_absolute_error": 0.0511585995554924
+              }
+            },
+            "run_temperature_peak_mae_c": 36.94331359863281,
+            "spatial_temperature_peak_mae_c": 9.420060157775879,
+            "temperature_field_mae_run_balanced_c": 0.14358025044202805,
+            "heated_points_temperature_error_c": {
+              "mae": 1.4921637773513794,
+              "p95_absolute_error": 3.494894027709961
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_crossflow_microg": {
+            "frames": 723,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 10.6879243850708,
+                "p95_absolute_error": 35.59175109863281
+              },
+              "temperature_mean_c": {
+                "mae": 0.01436202134937048,
+                "p95_absolute_error": 0.060813307762145996
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00035306790960021317,
+                "p95_absolute_error": 0.0007246016757562757
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 9.751352614273401e-9,
+                "p95_absolute_error": 2.756132388981314e-8
+              },
+              "heat_release_w": {
+                "mae": 103.44171142578125,
+                "p95_absolute_error": 325.2713317871094
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.16896238923072815,
+                "p95_absolute_error": 0.40740522742271423
+              },
+              "oxygen_percent": {
+                "mae": 0.0011116552632302046,
+                "p95_absolute_error": 0.00252532958984375
+              },
+              "smoke_kg_m3": {
+                "mae": 5.412426773432344e-8,
+                "p95_absolute_error": 6.57583285601504e-8
+              },
+              "u_m_s": {
+                "mae": 0.014541549608111382,
+                "p95_absolute_error": 0.04635798931121826
+              },
+              "v_m_s": {
+                "mae": 0.026028329506516457,
+                "p95_absolute_error": 0.07554209977388382
+              },
+              "w_m_s": {
+                "mae": 0.009665870107710361,
+                "p95_absolute_error": 0.0351957306265831
+              }
+            },
+            "run_temperature_peak_mae_c": 13.174929936726889,
+            "spatial_temperature_peak_mae_c": 2.391280015309652,
+            "temperature_field_mae_run_balanced_c": 0.16873115549484888,
+            "heated_points_temperature_error_c": {
+              "mae": 4.237180233001709,
+              "p95_absolute_error": 7.824690341949463
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_crossflow_earth": {
+            "frames": 732,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 2.583073616027832,
+                "p95_absolute_error": 6.4520673751831055
+              },
+              "temperature_mean_c": {
+                "mae": 0.023412607610225677,
+                "p95_absolute_error": 0.04607229307293892
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0005039543611928821,
+                "p95_absolute_error": 0.001004123711027205
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 1.4043385121453866e-8,
+                "p95_absolute_error": 3.952420968289516e-8
+              },
+              "heat_release_w": {
+                "mae": 150.76393127441406,
+                "p95_absolute_error": 557.3148803710938
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.15416724979877472,
+                "p95_absolute_error": 0.4090441167354584
+              },
+              "oxygen_percent": {
+                "mae": 0.0011836214689537883,
+                "p95_absolute_error": 0.0038356781005859375
+              },
+              "smoke_kg_m3": {
+                "mae": 8.008569807316235e-8,
+                "p95_absolute_error": 4.0389147670794046e-7
+              },
+              "u_m_s": {
+                "mae": 0.017147693783044815,
+                "p95_absolute_error": 0.05426376685500145
+              },
+              "v_m_s": {
+                "mae": 0.028464477509260178,
+                "p95_absolute_error": 0.08340594917535782
+              },
+              "w_m_s": {
+                "mae": 0.01593516580760479,
+                "p95_absolute_error": 0.057271551340818405
+              }
+            },
+            "run_temperature_peak_mae_c": 22.956791241963703,
+            "spatial_temperature_peak_mae_c": 5.455785592397054,
+            "temperature_field_mae_run_balanced_c": 0.15416726904610792,
+            "heated_points_temperature_error_c": {
+              "mae": 1.4431023597717285,
+              "p95_absolute_error": 3.5009207725524902
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_habitat_microg": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 10.366260528564453,
+                "p95_absolute_error": 28.476367950439453
+              },
+              "temperature_mean_c": {
+                "mae": 0.04877551645040512,
+                "p95_absolute_error": 0.0946928933262825
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00028256900259293616,
+                "p95_absolute_error": 0.0005203246837481856
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.936803594228877e-8,
+                "p95_absolute_error": 6.912920014201518e-8
+              },
+              "heat_release_w": {
+                "mae": 182.3584747314453,
+                "p95_absolute_error": 510.602294921875
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.1532650738954544,
+                "p95_absolute_error": 0.3456382155418396
+              },
+              "oxygen_percent": {
+                "mae": 0.0011675284476950765,
+                "p95_absolute_error": 0.0022585876286029816
+              },
+              "smoke_kg_m3": {
+                "mae": 6.881502656597149e-8,
+                "p95_absolute_error": 6.876911129438668e-8
+              },
+              "u_m_s": {
+                "mae": 0.007302179001271725,
+                "p95_absolute_error": 0.022426452487707138
+              },
+              "v_m_s": {
+                "mae": 0.009783568792045116,
+                "p95_absolute_error": 0.03251773491501808
+              },
+              "w_m_s": {
+                "mae": 0.007271440699696541,
+                "p95_absolute_error": 0.02359982207417488
+              }
+            },
+            "run_temperature_peak_mae_c": 25.562725067138672,
+            "spatial_temperature_peak_mae_c": 13.696354866027832,
+            "temperature_field_mae_run_balanced_c": 0.153265081346035,
+            "heated_points_temperature_error_c": {
+              "mae": 4.697952747344971,
+              "p95_absolute_error": 16.013654708862305
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_habitat_earth": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 2.5077474117279053,
+                "p95_absolute_error": 5.318789005279541
+              },
+              "temperature_mean_c": {
+                "mae": 0.03658580780029297,
+                "p95_absolute_error": 0.059488389641046524
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0003944928466808051,
+                "p95_absolute_error": 0.0009207725524902344
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 2.99664399960875e-8,
+                "p95_absolute_error": 6.533903729177837e-8
+              },
+              "heat_release_w": {
+                "mae": 204.40773010253906,
+                "p95_absolute_error": 521.27783203125
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.14271390438079834,
+                "p95_absolute_error": 0.38108474016189575
+              },
+              "oxygen_percent": {
+                "mae": 0.0011342139914631844,
+                "p95_absolute_error": 0.003843594342470169
+              },
+              "smoke_kg_m3": {
+                "mae": 9.32008248355487e-8,
+                "p95_absolute_error": 4.605593915130157e-7
+              },
+              "u_m_s": {
+                "mae": 0.01173130888491869,
+                "p95_absolute_error": 0.03831915557384491
+              },
+              "v_m_s": {
+                "mae": 0.014010924845933914,
+                "p95_absolute_error": 0.04977884143590927
+              },
+              "w_m_s": {
+                "mae": 0.014387204311788082,
+                "p95_absolute_error": 0.0513121671974659
+              }
+            },
+            "run_temperature_peak_mae_c": 28.881519317626953,
+            "spatial_temperature_peak_mae_c": 9.49932861328125,
+            "temperature_field_mae_run_balanced_c": 0.14271389693021774,
+            "heated_points_temperature_error_c": {
+              "mae": 1.4405128955841064,
+              "p95_absolute_error": 3.441004753112793
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_soyuz_microg": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 32.57569885253906,
+                "p95_absolute_error": 94.754150390625
+              },
+              "temperature_mean_c": {
+                "mae": 0.25094833970069885,
+                "p95_absolute_error": 0.429490864276886
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0029064554255455732,
+                "p95_absolute_error": 0.005751609802246094
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.3626287176957703e-7,
+                "p95_absolute_error": 7.360428071478964e-7
+              },
+              "heat_release_w": {
+                "mae": 259.8381652832031,
+                "p95_absolute_error": 931.592529296875
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.6996434330940247,
+                "p95_absolute_error": 0.7073369026184082
+              },
+              "oxygen_percent": {
+                "mae": 0.012473180890083313,
+                "p95_absolute_error": 0.005959987640380859
+              },
+              "smoke_kg_m3": {
+                "mae": 0.000001239524976881512,
+                "p95_absolute_error": 3.110851025667216e-7
+              },
+              "u_m_s": {
+                "mae": 0.0101948706433177,
+                "p95_absolute_error": 0.031415533274412155
+              },
+              "v_m_s": {
+                "mae": 0.009058233350515366,
+                "p95_absolute_error": 0.027170471847057343
+              },
+              "w_m_s": {
+                "mae": 0.010793156921863556,
+                "p95_absolute_error": 0.0341903418302536
+              }
+            },
+            "run_temperature_peak_mae_c": 95.68798828125,
+            "spatial_temperature_peak_mae_c": 65.46226692199707,
+            "temperature_field_mae_run_balanced_c": 0.6996434926986694,
+            "heated_points_temperature_error_c": {
+              "mae": 18.134902954101562,
+              "p95_absolute_error": 81.86759185791016
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_soyuz_earth": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 5.329414367675781,
+                "p95_absolute_error": 20.057111740112305
+              },
+              "temperature_mean_c": {
+                "mae": 0.2420133799314499,
+                "p95_absolute_error": 0.4139655828475952
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.002340879524126649,
+                "p95_absolute_error": 0.0036945343017578125
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 4.2124381138819444e-7,
+                "p95_absolute_error": 7.644192692168872e-7
+              },
+              "heat_release_w": {
+                "mae": 160.33258056640625,
+                "p95_absolute_error": 755.650634765625
+              }
+            },
+            "field_errors": {
+              "temperature_c": {
+                "mae": 0.37160754203796387,
+                "p95_absolute_error": 1.1562299728393555
+              },
+              "oxygen_percent": {
+                "mae": 0.00398639403283596,
+                "p95_absolute_error": 0.014610767364501953
+              },
+              "smoke_kg_m3": {
+                "mae": 5.142443342265324e-7,
+                "p95_absolute_error": 0.000002446463895466877
+              },
+              "u_m_s": {
+                "mae": 0.01790299080312252,
+                "p95_absolute_error": 0.05661996826529503
+              },
+              "v_m_s": {
+                "mae": 0.01672748662531376,
+                "p95_absolute_error": 0.0554831326007843
+              },
+              "w_m_s": {
+                "mae": 0.02061193808913231,
+                "p95_absolute_error": 0.05878153070807457
+              }
+            },
+            "run_temperature_peak_mae_c": 47.645450592041016,
+            "spatial_temperature_peak_mae_c": 5.950717926025391,
+            "temperature_field_mae_run_balanced_c": 0.37160754203796387,
+            "heated_points_temperature_error_c": {
+              "mae": 0.7490063309669495,
+              "p95_absolute_error": 1.6911146640777588
+            },
+            "heated_points_definition": "valid gas observations with true T > ambient + 2 C",
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          }
+        },
+        "solver_mesh": {
+          "shape": [
+            15,
+            15,
+            15
+          ],
+          "bounds_m": [
+            3,
+            3,
+            2.6
+          ],
+          "cell_size_m": [
+            0.2,
+            0.2,
+            0.17333333333333334
+          ],
+          "cell_count": 3375
+        }
+      }
+    },
+    {
+      "id": "f06738c3ce0a4dd197143c324c6ecd72",
+      "model_id": "metrics-forest-v2",
+      "config": {
+        "scene_id": "soyuz",
+        "mode": "prediction",
+        "source_model": "prescribed_source",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.3,
+        "oxygen_percent": 21,
+        "material_id": "cellulose",
+        "ignition_power_w": 1000,
+        "ignition_duration_s": 15,
+        "duration_s": 30,
+        "seed": 42,
+        "mesh_cell_m": 0.2,
+        "sample_shape": [
+          8,
+          10,
+          4
+        ],
+        "model_id": "metrics-forest-v2",
+        "ignition_kind": "thermal",
+        "current_a": 5,
+        "resistance_ohm": 20
+      },
+      "metrics": 31,
+      "frames": 0,
+      "provenance": {
+        "engine": "IGNIS learned surrogate",
+        "engine_version": "2",
+        "origin": "prediction",
+        "model_id": "metrics-forest-v2",
+        "source_model": "prescribed_source",
+        "scientific_status": "learned_from_exploratory_fds",
+        "warnings": [
+          "Prédiction apprise sur des simulations FDS exploratoires, sans validation de la combustion réelle en microgravité.",
+          "Le maillage de référence de 0,20 m n’est pas démontré convergé ; les 320 points affichés sont des observations clairsemées.",
+          "L’erreur sur familles réservées mesure l’émulation du simulateur, pas l’exactitude physique dans un véhicule réel.",
+          "La graine aléatoire n’est pas une entrée du réseau : la prédiction ne reproduit pas chaque fluctuation turbulente d’un run FDS.",
+          "Ce modèle tabulaire prédit uniquement les métriques ; aucun champ 3D n’est produit."
+        ],
+        "training_dataset_id": "pilot-v2",
+        "weights_sha256": "ff0ea10dd651854499fb9db5a993f0ebecb06d4ea0d884423a37e3913206be69",
+        "inference_seconds": 0.0333,
+        "initial_condition": "ambient thermodynamics at t=0; velocity perturbations learned",
+        "postprocessing": "physical range clipping",
+        "seed_conditioned": false,
+        "validation_errors": {
+          "validation": {
+            "frames": 732,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 8.573094367980957,
+                "p95_absolute_error": 26.414400100708008
+              },
+              "temperature_mean_c": {
+                "mae": 0.09885069727897644,
+                "p95_absolute_error": 0.5166569948196411
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0013539725914597511,
+                "p95_absolute_error": 0.00843267422169447
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 1.3001248078126082e-7,
+                "p95_absolute_error": 5.982764719192346e-7
+              },
+              "heat_release_w": {
+                "mae": 206.97178649902344,
+                "p95_absolute_error": 715.9390869140625
+              }
+            },
+            "run_temperature_peak_mae_c": 21.337975819905598,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally",
+            "consistency": {
+              "mean_above_global_max_frames": 0,
+              "max_mean_above_global_max_c": 0
+            }
+          },
+          "test": {
+            "frames": 2187,
+            "runs": 36,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 6.648061752319336,
+                "p95_absolute_error": 28.417015075683594
+              },
+              "temperature_mean_c": {
+                "mae": 0.05458248779177666,
+                "p95_absolute_error": 0.18646176159381866
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0006183123914524913,
+                "p95_absolute_error": 0.002002906519919634
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 6.25214298111132e-8,
+                "p95_absolute_error": 1.5897221317118237e-7
+              },
+              "heat_release_w": {
+                "mae": 81.71417999267578,
+                "p95_absolute_error": 335.4124450683594
+              }
+            },
+            "run_temperature_peak_mae_c": 21.370405832926433,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally",
+            "consistency": {
+              "mean_above_global_max_frames": 0,
+              "max_mean_above_global_max_c": 0
+            }
+          },
+          "test_geometry": {
+            "frames": 1455,
+            "runs": 24,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 4.811673641204834,
+                "p95_absolute_error": 22.570266723632812
+              },
+              "temperature_mean_c": {
+                "mae": 0.04077247902750969,
+                "p95_absolute_error": 0.1159648671746254
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0005880323005840182,
+                "p95_absolute_error": 0.001852607587352395
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.0154755137346e-8,
+                "p95_absolute_error": 1.0648953718828125e-7
+              },
+              "heat_release_w": {
+                "mae": 69.36929321289062,
+                "p95_absolute_error": 325.82257080078125
+              }
+            },
+            "run_temperature_peak_mae_c": 12.521846930185953,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_parameters": {
+            "frames": 732,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 10.298256874084473,
+                "p95_absolute_error": 38.590457916259766
+              },
+              "temperature_mean_c": {
+                "mae": 0.0820327177643776,
+                "p95_absolute_error": 0.3399147093296051
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0006785002187825739,
+                "p95_absolute_error": 0.005119237583130598
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 1.2685681838320306e-7,
+                "p95_absolute_error": 6.820696967224649e-7
+              },
+              "heat_release_w": {
+                "mae": 106.25215911865234,
+                "p95_absolute_error": 338.5310974121094
+              }
+            },
+            "run_temperature_peak_mae_c": 39.06752363840739,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_cargo_microg": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 12.736578941345215,
+                "p95_absolute_error": 29.929176330566406
+              },
+              "temperature_mean_c": {
+                "mae": 0.04093146696686745,
+                "p95_absolute_error": 0.09017515182495117
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00015286929556168616,
+                "p95_absolute_error": 0.0003986358642578125
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.0254344807190137e-8,
+                "p95_absolute_error": 9.06891983731839e-8
+              },
+              "heat_release_w": {
+                "mae": 85.10274505615234,
+                "p95_absolute_error": 228.6936798095703
+              }
+            },
+            "run_temperature_peak_mae_c": 19.943145751953125,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_cargo_earth": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 1.1599851846694946,
+                "p95_absolute_error": 3.9412081241607666
+              },
+              "temperature_mean_c": {
+                "mae": 0.019259562715888023,
+                "p95_absolute_error": 0.04505414888262749
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00018965611525345594,
+                "p95_absolute_error": 0.0004099845828022808
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 4.057549318758902e-8,
+                "p95_absolute_error": 1.0643072556604238e-7
+              },
+              "heat_release_w": {
+                "mae": 108.79402160644531,
+                "p95_absolute_error": 327.69720458984375
+              }
+            },
+            "run_temperature_peak_mae_c": 22.84160041809082,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_crossflow_microg": {
+            "frames": 723,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 8.322800636291504,
+                "p95_absolute_error": 28.30779457092285
+              },
+              "temperature_mean_c": {
+                "mae": 0.02341378666460514,
+                "p95_absolute_error": 0.07805384695529938
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00045937029062770307,
+                "p95_absolute_error": 0.0015695571200922132
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 2.3964876305626603e-8,
+                "p95_absolute_error": 6.460520296514005e-8
+              },
+              "heat_release_w": {
+                "mae": 62.92238998413086,
+                "p95_absolute_error": 270.0172424316406
+              }
+            },
+            "run_temperature_peak_mae_c": 12.031637191772461,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_crossflow_earth": {
+            "frames": 732,
+            "runs": 12,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 1.3437176942825317,
+                "p95_absolute_error": 6.2569966316223145
+              },
+              "temperature_mean_c": {
+                "mae": 0.057917747646570206,
+                "p95_absolute_error": 0.15753507614135742
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0007151124300435185,
+                "p95_absolute_error": 0.001884079072624445
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.626853484206549e-8,
+                "p95_absolute_error": 1.1776009500863438e-7
+              },
+              "heat_release_w": {
+                "mae": 75.7369384765625,
+                "p95_absolute_error": 503.7220153808594
+              }
+            },
+            "run_temperature_peak_mae_c": 13.012056668599447,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_habitat_microg": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 12.816328048706055,
+                "p95_absolute_error": 28.35480308532715
+              },
+              "temperature_mean_c": {
+                "mae": 0.0391685925424099,
+                "p95_absolute_error": 0.08687172085046768
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00014742866915185004,
+                "p95_absolute_error": 0.00038118360680527985
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 2.9522336575382724e-8,
+                "p95_absolute_error": 8.898443581983884e-8
+              },
+              "heat_release_w": {
+                "mae": 90.98462677001953,
+                "p95_absolute_error": 255.1737060546875
+              }
+            },
+            "run_temperature_peak_mae_c": 19.28573226928711,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_habitat_earth": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 1.0438212156295776,
+                "p95_absolute_error": 4.09846305847168
+              },
+              "temperature_mean_c": {
+                "mae": 0.01846618391573429,
+                "p95_absolute_error": 0.040610406547784805
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.00018202672072220594,
+                "p95_absolute_error": 0.00037174223689362407
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.74079931475535e-8,
+                "p95_absolute_error": 9.95419142668652e-8
+              },
+              "heat_release_w": {
+                "mae": 103.01811981201172,
+                "p95_absolute_error": 325.61651611328125
+              }
+            },
+            "run_temperature_peak_mae_c": 15.251201629638672,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_soyuz_microg": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 30.306570053100586,
+                "p95_absolute_error": 91.65805053710938
+              },
+              "temperature_mean_c": {
+                "mae": 0.26647624373435974,
+                "p95_absolute_error": 0.561001181602478
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.002238914603367448,
+                "p95_absolute_error": 0.005970859434455633
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 3.6278601101003005e-7,
+                "p95_absolute_error": 9.8587599950406e-7
+              },
+              "heat_release_w": {
+                "mae": 146.56906127929688,
+                "p95_absolute_error": 765.558837890625
+              }
+            },
+            "run_temperature_peak_mae_c": 123.3493881225586,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          },
+          "test_soyuz_earth": {
+            "frames": 122,
+            "runs": 2,
+            "metric_errors": {
+              "temperature_max_c": {
+                "mae": 3.726255416870117,
+                "p95_absolute_error": 18.429851531982422
+              },
+              "temperature_mean_c": {
+                "mae": 0.10789427161216736,
+                "p95_absolute_error": 0.29352694749832153
+              },
+              "oxygen_mean_percent": {
+                "mae": 0.0011601056903600693,
+                "p95_absolute_error": 0.0019092559814453125
+              },
+              "smoke_mean_kg_m3": {
+                "mae": 2.6059473157147295e-7,
+                "p95_absolute_error": 6.165870445329347e-7
+              },
+              "heat_release_w": {
+                "mae": 103.04438018798828,
+                "p95_absolute_error": 510.14727783203125
+              }
+            },
+            "run_temperature_peak_mae_c": 33.734073638916016,
+            "aggregation": "field_errors and metric_errors are sample weighted; peak and run_balanced errors weight runs equally"
+          }
+        },
+        "solver_mesh": {
+          "shape": [
+            15,
+            15,
+            15
+          ],
+          "bounds_m": [
+            3,
+            3,
+            2.6
+          ],
+          "cell_size_m": [
+            0.2,
+            0.2,
+            0.17333333333333334
+          ],
+          "cell_count": 3375
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "ignis-prediction-spatial.png",
+    "ignis-prediction-comparison.png",
+    "ignis-models-evaluation.png",
+    "ignis-models-mobile.png"
+  ],
+  "page_errors": [],
+  "runtime": {
+    "status": "ok",
+    "worker_available": true,
+    "capabilities": {
+      "physics": true,
+      "prediction": true,
+      "campaigns": true,
+      "insights": true,
+      "source_models": [
+        "prescribed_source",
+        "coupled_combustion"
+      ]
+    },
+    "disk_free_gb": 110.8,
+    "version": "0.1.0"
+  },
+  "passed": true
+}

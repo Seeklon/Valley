@@ -1,0 +1,16 @@
+* text=auto eol=lf
+
+*.blend binary
+*.glb binary
+*.png binary
+*.xlsx binary
+
+# Preserve archived source bytes and measured hashes, including Windows CRLF.
+data/sources/*.csv -text -whitespace
+data/sources/*.metadata.json -text -whitespace
+evidence/**/*.json -text -whitespace
+evidence/**/*.xml -text -whitespace
+evidence/**/*.fds -text -whitespace
+tests/physics/evidence/*.json -text -whitespace
+scenes/catalog.json -text
+scenes/generated/*.manifest.json -text -whitespace

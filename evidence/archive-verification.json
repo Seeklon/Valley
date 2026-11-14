@@ -1,0 +1,11 @@
+{
+  "created_utc": "20261114T112409Z",
+  "source_root": "E:\\IGNIS-Valley",
+  "archive": "G:\\IGNIS-Valley-archives\\ignis-pilot-v2-models-20261114T112409Z.zip",
+  "file_count": 1351,
+  "uncompressed_bytes": 485591338,
+  "scope": "96-run pilot and two trained models; installed software and credentials excluded",
+  "sha256": "d440e39878cac6d15125970ff347176bc257dbdbe2de51bd1c2d66436f8a5cac",
+  "compressed_bytes": 157279419,
+  "all_entry_sha256_verified": true
+}

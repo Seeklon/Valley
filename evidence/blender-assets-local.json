@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "results": [
+    {
+      "id": "habitat",
+      "glb_bytes": 3793416,
+      "nodes": 860,
+      "semantic_ids": 22,
+      "verified_local_artifacts": [
+        "habitat.blend",
+        "habitat.glb",
+        "habitat-overview.png",
+        "habitat-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "cargo",
+      "glb_bytes": 4240060,
+      "nodes": 897,
+      "semantic_ids": 25,
+      "verified_local_artifacts": [
+        "cargo.blend",
+        "cargo.glb",
+        "cargo-overview.png",
+        "cargo-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "crossflow",
+      "glb_bytes": 3867668,
+      "nodes": 866,
+      "semantic_ids": 23,
+      "verified_local_artifacts": [
+        "crossflow.blend",
+        "crossflow.glb",
+        "crossflow-overview.png",
+        "crossflow-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "soyuz",
+      "glb_bytes": 2080716,
+      "nodes": 326,
+      "semantic_ids": 12,
+      "verified_local_artifacts": [
+        "soyuz.blend",
+        "soyuz.glb",
+        "soyuz-overview.png",
+        "soyuz-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    }
+  ]
+}

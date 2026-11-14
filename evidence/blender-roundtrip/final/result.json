@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-11-14T10:49:47.030628+00:00",
+  "platform": "Windows",
+  "python_version": "3.11.2",
+  "scene_id": "soyuz-import-check",
+  "source_blend_sha256": "4959207ef5398b72d2c5ba843a9a5178d0761aa2d912eaaecfcc882531c12d2e",
+  "source_catalog_sha256": "ac403277321f76bb4bff0305b0c3b1c8b112c816625deadafcc36a04452423af",
+  "tools_sha256": {
+    "tools/blender/export_scene.py": "da89d9d0f7e3d696b8fdcc81e5d1e02262e54a6f6bada0d748a4659bf2b5f6e9",
+    "tools/blender/validate_assets.py": "f18cdcf958f565961c762e32a401196b6f14e3e4587bbad66ffde161dd3c012c",
+    "backend/ignis/physics/compiler.py": "23b982fce7217309027af33e4c182351df210584065ecbef8d839b001c326453",
+    "backend/ignis/physics/materials.py": "2f1daea97c4a259f17cae2d955daf8ea0bfc5076c001c50fe02e0a734113a02e"
+  },
+  "steps": [
+    {
+      "name": "assets-windows",
+      "exit_code": 0,
+      "elapsed_s": 0.172,
+      "log": "evidence/blender-roundtrip/final/assets-windows.log",
+      "log_sha256": "0beeeb34007da573fdcdeff7447bc11703510d810e254c835b799bd8dc2e864e"
+    },
+    {
+      "name": "validate-original",
+      "exit_code": 0,
+      "elapsed_s": 0.719,
+      "log": "evidence/blender-roundtrip/final/validate-original.log",
+      "log_sha256": "177f39f8e26a39be00f5bbc9f86e35c103416d9eddbfb55bc1887caba1305126"
+    },
+    {
+      "name": "export",
+      "exit_code": 0,
+      "elapsed_s": 1.531,
+      "log": "evidence/blender-roundtrip/final/export.log",
+      "log_sha256": "b81aad2d20a2f07e7e2aca52a0d1b48789342814e2d2a668bac6580b1247c0a6"
+    },
+    {
+      "name": "validate-reopened",
+      "exit_code": 0,
+      "elapsed_s": 0.719,
+      "log": "evidence/blender-roundtrip/final/validate-reopened.log",
+      "log_sha256": "11a9b04cf048c2d83a3d652c3e099d76f07096e1ea01f6e378d6347359df849c"
+    }
+  ],
+  "fds_executed": false,
+  "render_performed": false,
+  "generated_assets": [
+    {
+      "id": "habitat",
+      "glb_bytes": 3793416,
+      "nodes": 860,
+      "semantic_ids": 22,
+      "verified_local_artifacts": [
+        "habitat.blend",
+        "habitat.glb",
+        "habitat-overview.png",
+        "habitat-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "cargo",
+      "glb_bytes": 4240060,
+      "nodes": 897,
+      "semantic_ids": 25,
+      "verified_local_artifacts": [
+        "cargo.blend",
+        "cargo.glb",
+        "cargo-overview.png",
+        "cargo-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "crossflow",
+      "glb_bytes": 3867668,
+      "nodes": 866,
+      "semantic_ids": 23,
+      "verified_local_artifacts": [
+        "crossflow.blend",
+        "crossflow.glb",
+        "crossflow-overview.png",
+        "crossflow-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "soyuz",
+      "glb_bytes": 2080716,
+      "nodes": 326,
+      "semantic_ids": 12,
+      "verified_local_artifacts": [
+        "soyuz.blend",
+        "soyuz.glb",
+        "soyuz-overview.png",
+        "soyuz-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    }
+  ],
+  "blender_version": "4.5.9 LTS",
+  "exported_artifacts": [
+    {
+      "file": "soyuz-import-check.blend",
+      "bytes": 3039003,
+      "sha256": "67c2aa6d3cfc18dc795e0fbe4c2c3ab68575773922230ed5aef11b649b91bb1a"
+    },
+    {
+      "file": "soyuz-import-check.glb",
+      "bytes": 2080716,
+      "sha256": "c8d9032b43ed29c81fdb73923bcb4b4c1bf6cb0a0f339d282a7deec01b04df00"
+    },
+    {
+      "file": "catalog.json",
+      "bytes": 12247,
+      "sha256": "ab46505adbd3f4760f12403f63a9fbbf2f01e23206ffc2adc7d662f04ff7c511"
+    }
+  ],
+  "contract_roundtrip": {
+    "status": "passed",
+    "tolerance_m": 1e-05,
+    "max_numeric_delta": 1.0490417468034252e-07,
+    "objects": 15,
+    "vents": 2,
+    "sensors": 4,
+    "defaults_preserved": true
+  },
+  "imported_glb": {
+    "nodes": 326,
+    "semantic_ids": 12,
+    "required_ids_preserved": true,
+    "external_resources": false,
+    "physics_or_studio_leak": false
+  },
+  "compile_case": {
+    "status": "passed",
+    "configuration_overrides": {},
+    "mesh": {
+      "shape": [
+        15,
+        15,
+        15
+      ],
+      "bounds_m": [
+        3.0,
+        3.0,
+        2.5999999046325684
+      ],
+      "cell_size_m": [
+        0.2,
+        0.2,
+        0.17333332697550455
+      ],
+      "cell_count": 3375
+    },
+    "devices": 1280,
+    "artifacts": [
+      {
+        "file": "ignis.fds",
+        "sha256": "f813e0e3306535252d3386e6e032719401bd87da90157652be785cf6418db16e",
+        "bytes": 121462
+      },
+      {
+        "file": "manifest.json",
+        "sha256": "660f3f1985799b2a152b1956b3385b6bab1bc7403cd9c98dbdf24712d7f55f95",
+        "bytes": 44088
+      }
+    ],
+    "warnings": [
+      "Exploratory FDS 6.11.1 calculation; not calibrated or validated against NASA microgravity experiments.",
+      "Coarse LES grid and mixing-controlled gas chemistry cannot establish microgravity flame extinction limits.",
+      "Ventilation exchanges fresh ambient gas with external reservoirs; it is not a closed recirculating spacecraft HVAC loop.",
+      "Soot is a prescribed reaction yield; CO toxicity, battery runaway, arcs and plasma are not modeled.",
+      "Object soyuz_seat_left: proxy snapped to mesh; original and calculated bounds recorded.",
+      "Object soyuz_seat_center: proxy snapped to mesh; original and calculated bounds recorded.",
+      "Object soyuz_seat_right: proxy snapped to mesh; original and calculated bounds recorded.",
+      "Object soyuz_console: proxy snapped to mesh; original and calculated bounds recorded.",
+      "Object fuel_sample: proxy snapped to mesh; original and calculated bounds recorded."
+    ]
+  },
+  "status": "passed",
+  "source_blend_preserved": true,
+  "finished_at_utc": "2026-11-14T10:49:50.234483+00:00"
+}

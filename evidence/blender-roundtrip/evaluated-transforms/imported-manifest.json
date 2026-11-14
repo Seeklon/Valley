@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "scene_id": "soyuz-import-check",
+  "blender_version": "4.5.9 LTS",
+  "artifacts": [
+    {
+      "file": "soyuz-import-check.blend",
+      "bytes": 3039003,
+      "sha256": "6a86fa2b9e6cb58cac9ddeb20cc45994b9f44a6585dab9435afc2e7943fb7239"
+    },
+    {
+      "file": "soyuz-import-check.glb",
+      "bytes": 2080716,
+      "sha256": "c8d9032b43ed29c81fdb73923bcb4b4c1bf6cb0a0f339d282a7deec01b04df00"
+    },
+    {
+      "file": "catalog.json",
+      "bytes": 12247,
+      "sha256": "ab46505adbd3f4760f12403f63a9fbbf2f01e23206ffc2adc7d662f04ff7c511"
+    }
+  ],
+  "verification": {
+    "annotation_validation": "passed",
+    "simulation_validation": "not_run",
+    "render_inspected": false
+  }
+}

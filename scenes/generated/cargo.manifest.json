@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scene_id": "cargo",
+  "blender_version": "4.5.9 LTS",
+  "catalog_sha256": "ef5597b130d138e90759c34080568120d8ee443083db60f35b51ecb7797a0df6",
+  "generator_sha256": "1362a4d94e20a7f13374a7e2f51c901bcde51f8ebe152613248c92f5927c8b36",
+  "generated_elapsed_s": 14.12,
+  "geometry": {
+    "visual_objects": 897,
+    "vertices": 57780,
+    "triangles": 84056
+  },
+  "coordinates": {
+    "physical": "Z-up, metres",
+    "glb": "Y-up, metres",
+    "physical_to_glb": "[x,z,-y]"
+  },
+  "artifacts": [
+    {
+      "file": "cargo.blend",
+      "bytes": 6591591,
+      "sha256": "735ccffcf9834dcafdef22003facd7cd29e608528a625e6c927926d10985bc3b"
+    },
+    {
+      "file": "cargo.glb",
+      "bytes": 4240060,
+      "sha256": "6b35d74e564f9382ae60cbdf89a7f386af3db53d1bdecd8efc776805a0a0fb45"
+    },
+    {
+      "file": "cargo-overview.png",
+      "bytes": 1888165,
+      "sha256": "df8d7fa8d418fe560c8e405e5fa985e3adcbe1588a2ce1e8bf03c9cb6f953d11"
+    },
+    {
+      "file": "cargo-detail.png",
+      "bytes": 2275111,
+      "sha256": "3fe7ecb8d4c73f951348ffe65e22674ac54e415463c7c0622db5826facea29bf"
+    }
+  ],
+  "presentation": {
+    "cutaway": true,
+    "source_geometry": "authored, not NASA CAD",
+    "render_engine": "Cycles",
+    "render_samples": 32
+  },
+  "verification": {
+    "render_inspected": false,
+    "note": "Rendering alone is not visual acceptance. Inspect overview and detail after generation."
+  }
+}

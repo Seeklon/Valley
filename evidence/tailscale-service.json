@@ -1,0 +1,29 @@
+{
+  "preserved_previous_routes": true,
+  "config": {
+    "TCP": {
+      "443": {
+        "HTTPS": true
+      },
+      "8443": {
+        "HTTPS": true
+      }
+    },
+    "Web": {
+      "desktop-m4hkr86.tail609f26.ts.net:443": {
+        "Handlers": {
+          "/": {
+            "Proxy": "http://127.0.0.1:11434"
+          }
+        }
+      },
+      "desktop-m4hkr86.tail609f26.ts.net:8443": {
+        "Handlers": {
+          "/": {
+            "Proxy": "http://127.0.0.1:8765"
+          }
+        }
+      }
+    }
+  }
+}

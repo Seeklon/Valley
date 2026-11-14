@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scene_id": "habitat",
+  "blender_version": "4.5.9 LTS",
+  "catalog_sha256": "ef5597b130d138e90759c34080568120d8ee443083db60f35b51ecb7797a0df6",
+  "generator_sha256": "1362a4d94e20a7f13374a7e2f51c901bcde51f8ebe152613248c92f5927c8b36",
+  "generated_elapsed_s": 14.44,
+  "geometry": {
+    "visual_objects": 860,
+    "vertices": 49648,
+    "triangles": 74024
+  },
+  "coordinates": {
+    "physical": "Z-up, metres",
+    "glb": "Y-up, metres",
+    "physical_to_glb": "[x,z,-y]"
+  },
+  "artifacts": [
+    {
+      "file": "habitat.blend",
+      "bytes": 6340263,
+      "sha256": "282e7e9301722e68574155397b1c445a471a3dadb5a8a6c61af36a057e95b7db"
+    },
+    {
+      "file": "habitat.glb",
+      "bytes": 3793416,
+      "sha256": "fbacf74c7a3d57960c0e1f6301f05ddc60d44685e7f484c976c975adb3a61f8d"
+    },
+    {
+      "file": "habitat-overview.png",
+      "bytes": 1880326,
+      "sha256": "5c6e308c71906b96a15511596709a68c10c60536d44b638f99a8404dba37b865"
+    },
+    {
+      "file": "habitat-detail.png",
+      "bytes": 2276329,
+      "sha256": "91587d6284917495d89e13a964f913adc1976d76a7dc3e6888223945d254e50b"
+    }
+  ],
+  "presentation": {
+    "cutaway": true,
+    "source_geometry": "authored, not NASA CAD",
+    "render_engine": "Cycles",
+    "render_samples": 32
+  },
+  "verification": {
+    "render_inspected": false,
+    "note": "Rendering alone is not visual acceptance. Inspect overview and detail after generation."
+  }
+}

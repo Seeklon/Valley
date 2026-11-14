@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scene_id": "crossflow",
+  "blender_version": "4.5.9 LTS",
+  "catalog_sha256": "ef5597b130d138e90759c34080568120d8ee443083db60f35b51ecb7797a0df6",
+  "generator_sha256": "1362a4d94e20a7f13374a7e2f51c901bcde51f8ebe152613248c92f5927c8b36",
+  "generated_elapsed_s": 13.94,
+  "geometry": {
+    "visual_objects": 866,
+    "vertices": 50960,
+    "triangles": 75588
+  },
+  "coordinates": {
+    "physical": "Z-up, metres",
+    "glb": "Y-up, metres",
+    "physical_to_glb": "[x,z,-y]"
+  },
+  "artifacts": [
+    {
+      "file": "crossflow.blend",
+      "bytes": 6380763,
+      "sha256": "cb11e46cd464b3d03508cd0c4ec08d02d1dbf74b36e13076c3ba151a84443284"
+    },
+    {
+      "file": "crossflow.glb",
+      "bytes": 3867668,
+      "sha256": "b35338dfbf7d6fda50d1504a8267d446ccbd3e03685248bbbb5615ea88c0dc47"
+    },
+    {
+      "file": "crossflow-overview.png",
+      "bytes": 1873044,
+      "sha256": "a692c40752bcbc04a098763909589449fdd5480da5d6cdfe10986512913a0a87"
+    },
+    {
+      "file": "crossflow-detail.png",
+      "bytes": 2261371,
+      "sha256": "b243d915f47763140e4090ecaf64d310cdabfac12800da4e81f9e13be8e8aefe"
+    }
+  ],
+  "presentation": {
+    "cutaway": true,
+    "source_geometry": "authored, not NASA CAD",
+    "render_engine": "Cycles",
+    "render_samples": 32
+  },
+  "verification": {
+    "render_inspected": false,
+    "note": "Rendering alone is not visual acceptance. Inspect overview and detail after generation."
+  }
+}

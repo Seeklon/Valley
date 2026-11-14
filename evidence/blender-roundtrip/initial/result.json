@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-11-14T10:43:01.214197+00:00",
+  "platform": "Windows",
+  "python_version": "3.11.2",
+  "scene_id": "soyuz-import-check",
+  "source_blend_sha256": "4959207ef5398b72d2c5ba843a9a5178d0761aa2d912eaaecfcc882531c12d2e",
+  "source_catalog_sha256": "ac403277321f76bb4bff0305b0c3b1c8b112c816625deadafcc36a04452423af",
+  "tools_sha256": {
+    "tools/blender/export_scene.py": "b90c84f3786988b25faf970dc7bd3ea3d61b0d88807458d8e5cc803278d1d8ef",
+    "tools/blender/validate_assets.py": "f18cdcf958f565961c762e32a401196b6f14e3e4587bbad66ffde161dd3c012c",
+    "backend/ignis/physics/compiler.py": "23b982fce7217309027af33e4c182351df210584065ecbef8d839b001c326453",
+    "backend/ignis/physics/materials.py": "2f1daea97c4a259f17cae2d955daf8ea0bfc5076c001c50fe02e0a734113a02e"
+  },
+  "steps": [
+    {
+      "name": "assets-windows",
+      "exit_code": 0,
+      "elapsed_s": 0.187,
+      "log": "evidence/blender-roundtrip/initial/assets-windows.log",
+      "log_sha256": "0beeeb34007da573fdcdeff7447bc11703510d810e254c835b799bd8dc2e864e"
+    },
+    {
+      "name": "validate-original",
+      "exit_code": 2,
+      "elapsed_s": 0.735,
+      "log": "evidence/blender-roundtrip/initial/validate-original.log",
+      "log_sha256": "8696d47ef425f78ae24ffc9c371ad64c23ddab9ed0c4508e868635129c216845"
+    }
+  ],
+  "fds_executed": false,
+  "render_performed": false,
+  "generated_assets": [
+    {
+      "id": "habitat",
+      "glb_bytes": 3793416,
+      "nodes": 860,
+      "semantic_ids": 22,
+      "verified_local_artifacts": [
+        "habitat.blend",
+        "habitat.glb",
+        "habitat-overview.png",
+        "habitat-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "cargo",
+      "glb_bytes": 4240060,
+      "nodes": 897,
+      "semantic_ids": 25,
+      "verified_local_artifacts": [
+        "cargo.blend",
+        "cargo.glb",
+        "cargo-overview.png",
+        "cargo-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "crossflow",
+      "glb_bytes": 3867668,
+      "nodes": 866,
+      "semantic_ids": 23,
+      "verified_local_artifacts": [
+        "crossflow.blend",
+        "crossflow.glb",
+        "crossflow-overview.png",
+        "crossflow-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    },
+    {
+      "id": "soyuz",
+      "glb_bytes": 2080716,
+      "nodes": 326,
+      "semantic_ids": 12,
+      "verified_local_artifacts": [
+        "soyuz.blend",
+        "soyuz.glb",
+        "soyuz-overview.png",
+        "soyuz-detail.png"
+      ],
+      "artifacts_not_in_this_checkout": [],
+      "visual_review": "separate manual inspection required"
+    }
+  ],
+  "status": "failed",
+  "error": "RuntimeError: validate-original failed: exit=2, marker='IGNIS_IMPORT_VALID'; see its log",
+  "source_blend_preserved": true,
+  "finished_at_utc": "2026-11-14T10:43:02.171381+00:00"
+}
