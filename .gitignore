@@ -45,3 +45,18 @@ tools/social_watch.py
 # Python caches (Agentic tools)
 __pycache__/
 *.py[cod]
+
+# Application tooling and generated data
+node_modules/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+runtime/
+datasets/
+checkpoints/
+runs/
+*.log
+.remote-pc.json
+*.blend1
