@@ -1,0 +1,47 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Agentic kit (local install, not versioned here)
+.agents/
+.claude/agents/
+.claude/skills/
+.codex/agents/
+AGENTS.md
+CLAUDE.md
+social-watch/
+tools/install_agentic.py
+tools/generate_agentic_agents.py
+tools/validate_agentic_agents.py
+tools/validate_agentic_catalog.py
+tools/validate_agentic_skills.py
+tools/requirements-agentic.txt
+tools/social_watch.py
+
+# Claude Code
+.claude/settings.local.json
+.claude/cache/
+.claude/projects/
+.claude/.session/
+
+# Codex
+.codex/cache/
+.codex/.session/
+
+# Impeccable (per-machine settings)
+.impeccable/config.local.json
+
+# Python caches (Agentic tools)
+__pycache__/
+*.py[cod]
