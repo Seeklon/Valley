@@ -1,0 +1,29 @@
+{
+  "source_id": "NTRS-20210022143",
+  "title": "Research Questions and Challenges for Improved Spacecraft Fire Detection",
+  "landing_url": "https://ntrs.nasa.gov/citations/20210022143",
+  "metadata_url": "https://ntrs.nasa.gov/api/citations/20210022143",
+  "download_url": "https://ntrs.nasa.gov/api/citations/20210022143/downloads/Fire%20detection%20white%20paper%20final%20211031.pdf",
+  "retrieved_at": "2026-11-14T12:04:59.678145+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "WHITE_PAPER",
+  "original_filename": "Fire detection white paper final 211031.pdf",
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 5345,
+      "sha256": "7c8c0593dc8d48c435aab46c781a5e0c519a65e48d9cfc2f2575518724aed2c1"
+    },
+    {
+      "name": "source.pdf",
+      "bytes": 233897,
+      "sha256": "217f0498badba77d7a23d400225b5ff9d7232ee862b2be046dbb6123d2bb0fe8"
+    },
+    {
+      "name": "source.txt",
+      "bytes": 38218,
+      "sha256": "c2e19f307095a783389c6f237904532c1a5c91cd00206b8d031a702ef129b637"
+    }
+  ],
+  "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative"
+}

@@ -1,0 +1,29 @@
+{
+  "source_id": "NTRS-19660008736",
+  "title": "Evaluation of thin wall spacecraft electrical wiring.  Volume I - Test methods and facilities Technical report no. 1",
+  "landing_url": "https://ntrs.nasa.gov/citations/19660008736",
+  "metadata_url": "https://ntrs.nasa.gov/api/citations/19660008736",
+  "download_url": "https://ntrs.nasa.gov/api/citations/19660008736/downloads/19660008736.pdf",
+  "retrieved_at": "2026-11-14T12:05:21.512945+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "CONTRACTOR_REPORT",
+  "original_filename": "19660008736.pdf",
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 2914,
+      "sha256": "2f9dc9460fd19f226b4cab0e44210eed476ce1eb7a272a7fca4c0c5153053142"
+    },
+    {
+      "name": "source.pdf",
+      "bytes": 3797906,
+      "sha256": "fb9c11638073263219ea59ab2abb707bf83e6c360607c7a5c34e5567a5a66cb5"
+    },
+    {
+      "name": "source.txt",
+      "bytes": 170337,
+      "sha256": "a5be7f9708ad7c63b9274b606b1641fed9cbf850fbd5cb3d031813634e9be449"
+    }
+  ],
+  "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative"
+}

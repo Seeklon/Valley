@@ -170,3 +170,39 @@ CUDA, FDS ou des poids Windows. Les preuves de calcul sont séparées dans `evid
 
 La portée scientifique est détaillée dans [PHYSICS.md](PHYSICS.md),
 [NASA.md](NASA.md) et [MODELS.md](MODELS.md).
+## Prévention avant allumage
+
+L'accueil « Prévention » charge les modèles de
+`E:/IGNIS-Valley/runtime/prevention/models/` : `ignition-delay-guo-v1`
+et `thermal-history-forest-v1`. Les deux modèles FDS historiques restent dans
+`runtime/models/` et dans le parcours « Laboratoire ».
+
+`GET /api/prevention/catalog` expose modèles, domaines et composants ;
+`POST /api/prevention/analyze` produit une analyse persistée dans
+`runtime/prevention/analyses/`. Son export fige les preuves NASA et Guo,
+séparées par provenance. Le calcul local partage `runtime/compute.lock` avec
+FDS et l'entraînement, sans dépasser une analyse simultanée.
+
+Le dataset `runtime/prevention/datasets/thermal-families-v1/` contient le plan
+de 384 trajectoires, les séries Parquet, fenêtres et empreintes. Les scripts
+`tools/remote/train_ignition.py` et `train_thermal.py` refusent une destination
+déjà occupée. Pour une nouvelle campagne, définir une nouvelle version et des
+familles réservées ; ne pas supprimer les originaux pour relancer ces scripts.
+
+Vérification sans réentraînement :
+
+```powershell
+Set-Location E:/IGNIS-Valley/app
+$env:PYTHONPATH='E:/IGNIS-Valley/app/backend'
+& E:/IGNIS-Valley/.venv/Scripts/python.exe tools/remote/verify_prevention.py
+& E:/IGNIS-Valley/.venv/Scripts/python.exe tools/remote/archive_prevention.py
+```
+
+La première commande relit les hashes et poids, reproduit les métriques figées
+et crée des analyses de vérification. La seconde archive données, modèles,
+sources exactes d'entraînement et analyses présentes sur `G:/IGNIS-Valley-archives`,
+puis vérifie chaque entrée. Aucun identifiant de connexion n'y est ajouté.
+Les [limites de prévention](PREIGNITION.md) et le [protocole ML](PREVENTION_MODELS.md)
+doivent accompagner les démonstrations. Le navigateur automatisé peut tourner
+sur le poste de coordination contre l'URL Tailscale ; calcul et inférence
+restent exécutés sur Windows.

@@ -1,0 +1,31 @@
+{
+  "health": {
+    "status": "ok",
+    "worker_available": true,
+    "capabilities": {
+      "physics": true,
+      "prediction": true,
+      "campaigns": true,
+      "insights": true,
+      "prevention": true,
+      "ignition_delay_prediction": true,
+      "source_models": [
+        "prescribed_source",
+        "coupled_combustion"
+      ]
+    },
+    "disk_free_gb": 110.71,
+    "version": "0.1.0"
+  },
+  "model_ids": [
+    "ignition-delay-guo-v1",
+    "thermal-history-forest-v1"
+  ],
+  "api_pid": 24436,
+  "launcher_pid": 6472,
+  "queued_or_running": 0,
+  "free_ram_gb": 8.48,
+  "verified_at": "2026-11-14T12:58:34.130060+00:00",
+  "app_url": "https://desktop-m4hkr86.tail609f26.ts.net:8443",
+  "frontend_index_sha256": "9d94219027c9865704ddbb7fca3dc8e6c4da480b88e30ecd6097ce093f313b2f"
+}

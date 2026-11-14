@@ -1,0 +1,2914 @@
+                                                 TECHNICAL       REPORT    NO.   1
+
+
+
+
+                    EVALUATION          OF THIN       WALL       SPACECRAFT      ELECTRICAL   WIRINC
+
+
+
+                               VOLUME       i:     TEST    METHODS      AND FACILITIES
+
+
+
+                                                          July    28,   1965
+                                                                                                       Z
+
+
+
+
+                                        :        Contract    No.     NAS 9-4549
+                                                  Control    No.     509-0022
+
+
+
+
+                                                                                     i
+
+
+
+
+Report   Prepared       by:
+
+
+
+                                                      L. J.       Frisco
+                                                      K. N. Mathes
+                    -              Advanced   Technology   Laboratories
+                                        General Electric    Company
+                                          Schenectady    5, N.Y;
+
+
+
+
+Report   Prepared       for:
+
+
+                                                             NASA
+                                            Manned     Spacecraft  Center
+                                                      Houston, Texas
+        /
+    i
+i
+
+
+
+
+                                                                     Volume I
+
+
+                                                        TABLE OF CONTENTS
+
+                                                                                                                                                      P_e   No.
+
+I.           OBJECTIVE ..............................                                                                                                   1
+
+II.           EVALUATION PROGRAM ..........................                                                                                         I
+              A. General ............................                                                                                               1
+              B   Test Methods                                                                                                                      o
+                  i. In3ulation Resistance - Total Sample ............                                                                              3
+                  2. Voltage Withstand .....................                                                                                        3
+                                                                     f
+                  3. Insulation Resistance • ............... /
+                                                                                                                                                 • 3
+                  4   Corona                       ....                                                                                             4
+                  5. Voltage Breakdown. ....................                                                                                        5
+                  6. Voltage Flash•vet ......................                                                                                       7
+                  7. Outside Diameter ......................                                                                                        8
+                  8. Concentricity                                                                                                                  8
+                  9.  Conductor    Dimension .....................                                                                                  8
+                 I0   Weight Per I000 Feet                                                                                                          8
+                 11   S trioabi lity                                                 "                                                              9
+                 12. Solderability ........................                                                                                         9
+                 13   Color Durability                                                                                                            IO
+                 14.  Marking   Legibility           . .         . .................                                                              10
+                        "
+                 15. Compatibility with Po_                          dng
+                                                                     Compounds . . .......                                                •   • • ii
+                 16. Flexibility .........................                                                                                        13
+                 17.. Scrape Abrasion .......................                                                                                     16
+                 18 • Blocking     _•   •   •   •   •    •       •       •   ,t   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •   •18
+                 19   Cut -Through                                                                                                                19
+                 20. Thermal Creep ........................                                                                                       20
+                 21   Wicking              "                                                                                                   '  2].
+            _    22.  Thermal   Aging .....................                                                                                       22
+                 23. Exposure to Ultra'Violet Radiation ..............                                                                            22
+                 24. Exposure to X-Ray Radiation .................                                                                                22
+                 25   Flammability                                                                                                                24
+                 26." Chemical   Comp't'b'l't-a
+                                            i i ly          ...................
+                                                            ..................                                                                    31
+                 27. Offgassirg in 5 psia Oxygen- .................                                                                               32
+                 28. Vacuum Volatility ......................                                                                                     38
+                                         LIST OF FIGURES
+
+FIGURE NO.                                                                                 PAGE NO.
+
+   I           Cabled Specimen for Insulation Resistance and
+                     Corona Measurement ......                                                  40
+   2           Chamber for Aging Cabled Specimens at'50°C and IOO%....
+                     RH plus Dew in Pure Oxygen at 15 psia ......                               41
+   3           Cabled Specimen _ounted in High Voltage Cell .......                             42
+   4           Jig for Forming Twisted Pair Specimens ..........                                43
+   5           High Voltage Cell for Voltage Breakdown Measurments
+                     in Oxygen and in Vacuum ................                                   44
+   6           Cross Sectional View of Sec-Up for Electric Strength
+                     Measurements at 5 psia O^                   .                              45
+   7           Cell for Flashover Measurement in Wet Oxygen at 5 psia                           46
+   8           Typical X-ray of Wire Specimens (bX Magnification) .                       .     47
+   9           Wire No. 3 After Thermal Stripping ...........                                   48
+  I0           Electrical and Mechanical Specimens for Potting
+                     Compound Compatibility Tests              .......                          49
+  ll           Potting Compound Compatibility S_.ci_ns                being Cured
+                     in AJuminum Foil Molds ............                                        50
+  12           Repeated Reversed Mandrel Flexibility Test Apparatus for "
+        ....         use with 0.030" to o.i25" Diameter Mandrels .......                        51
+  13           Repeated Reversed Mandrel Flexibility Test Apparatus for
+                     use with 1/4" to 1 3/4" Diameter Mandrels. • .....                         52
+  14           MIT Fold Endurance Flex Tester ................                                  53
+  15           Loading Nose for MIT Fold Endurance Flex Tester .......                          54
+  16           Dimensions of Modified Loading Nose for MIT Flex
+                     Tester ........................                                            55
+  17           NFMA Scrape Abrasion Tester ................                                     56
+  18           Close-up of Scrape Abrasion Head .............                                   57
+  19           Compressions Cage Equipped for Thermal Creep Test .....                          58
+  20           Ivstron Testing Machine with Conditioning Chamber for
+                     Thermal Creep and Cut-Through Tests ..........                             59
+  21           Wicking Specimens in Fluorescent Dye Solution .......                            60
+  22           Specimens for Thermal Aging Tests at 150°C in Vacuum • • •                       61
+  23           Chamber for Ultraviolet Exposure in Vacuum ........                              62
+  24           Test Assembly for Flammability Test ............                                 63
+  25           Flammability Test with External Heater ..........                                64
+  26           Flammability Test, Voltage Drop Technique .........                              65
+  27           Measured Temperature vs. Resistance (I inch length)
+                     Stranded #20 Nickel Plated Copper Wire ........                            66
+  28           Mea,ured Temperature vs. Resistance (I inch length)
+                     Stranded #20 Silver Plated Wire (wire #6).......                           67
+  29           Chemical      Compatibility       Specimens   in a Test Fluid      .....         68
+  30           Quartz spring Balance Assemblies for Measurement of
+                    _Offgasslng in Oxygen ..............                                . • •   69
+  31           Quartz Spring Balance Specimen Chamber ..........                                70
+  32           Schematic Diagram of Quartz Spring Balance • • _......                           71
+  33           Flow Diagram Atmospheric Control System for Quartz
+                     Spring Balance Apparatus ..............                                    72
+  34"          Sample Holding Furnace Tub_ for Gas Analysis .......                             73
+  35           Balance     System Showing Vacu,_m Station          and Associated
+                     Recording      and Powe_ Supply Equipment        ....       • • • . •      74
+  36           Recording       Microbalance      and Furnace   Used in Vacuum                         .--
+                   •
+                     Vulatility      St._dy _ ,. • • • • 4 • e e '_ • 'e O • -# • • • •
+                                     _
+                                                                                                7_
+                   EVALUATION       OF THIN WALL SPACECRAFT   ELECTRICAL WIRING
+
+
+I.    OBJECTIVE
+
+      The objective of this program is to determine the performance               characteristics
+of various thin wall, spacecraft, electrical wiring under simulated               spacecraft
+environments.     The data will permit wire selection         for manned spacecraft to be made
+on the basis of comparative performance.           Further, recommendations will be made
+
+regarding the development          of specifications   for comparative   evaluation   and
+qualification    testing of manned spacecraft electrical wire insulation.
+
+II.   EVALUAT ION PROGRAM
+
+      A.     General
+
+            Approximately    iOOO feet of each wire type is required to fabricate the
+
+various    types of specimens that are used in the program.          The samples were
+purchase4 directly from each wire manufacturer.             It was specified   that the wire be
+spark tested and that each reel contain o,_ly one piece, with both ends accessible.
+
+            Upon receipt of eacb sample, a sufficient quantity of wire was set
+aside for the specimens that are used in the experiments            on off gassing in
+oxygen, volatility     iiAvacuum, gas analysis and markability.          The remainder of each
+
+sample was immersed in distilled water          for the three day insulation      resistance and
+voltage withstand measurements.
+
+            The evaluation program consists of the following tests:
+
+                                        Electrical Tests
+
+      Insulation Resistance               -     Total sample immersed in water at 23°C
+      Voltage Withstand -                 -     Total sample immersed in water
+      1600 volts for i rain.
+
+      Insulation Resistance*              -     As a functinn of exposure time at 100%
+                                                RH +-dew in 15 psia pure oxygen at 50°C
+      Corona Start Voltage                -     In 5 psia pure dry oxygen at 93°C and in
+                                                15 psla 02 at 10070RH + dew
+                                                                                  O
+      Voltage Breakdown                   -     In wet_oxygen at 5 psia.and 23 CD and
+                                                at 15OuC in vacuum, lO"_ tort
+      Voltage Flashover                   -     In 5 psia pur_ oxygen at 23°C and
+                                                100% RH + dew.
+
+
+      *Note:    Insulation Resistance and voltage breakdown          are used as end point
+                criteria of certain other tests.
+
+                             t "
+
+                         6
+                                                                                                    i
+                                                  Mechanical Tests
+
+
+               Outside Diameter                           -                    at 23C and 50% RH
+
+               Concentricity of                           -                    "      "      "     "        '=
+                 Insulation
+               Conductor Dimensions                       -                    "      "      "     "        "
+
+           Weight per iO00 ft                             -                    "      "      "     "        "
+
+               Stripability                               -                    "      "      "     "        "
+               Solderability                              -                    Solder pot at 320°
+               Color Durability                           -                    See Test Method
+           Marking Legibility                         l
+                                                          -                    See Test Method
+
+               Compatibility with                         -                    See Test Method
+                 Potting Compounds
+               Flexibility*                               -                    At 23°C and-196°C
+           Abrasion                               _       -                    At 23C
+
+               Blocking                                   -                    150°C and I0"6 torr
+               Cut-through                                -                    23°C and i50°C
+               Thermal Creep                              '-                   23°C and 150°C
+               ("Cold" Flow)
+
+           Wicking                                        -                    In water at 23°C
+
+               *Note:      Flexibility is used as an end point criterion of certain
+                           other tests.
+
+
+                                       Physical       - Chemical         Tests
+
+    Thermal Aging                                 -         At 150°C in oxygen at 15 psia and in
+                                                           vacuum°
+                                                                                        2
+    Exposure      to    Ultra-Violet              -         Approx.   1.4 x 106 ergs/cm   /sec/_
+                                                            equiv,  at 4000 A for I month
+                                                            At 85C in wet oxygen at 15 psia and
+                                                            at 150C in vacuum.
+
+    Exposure      to    Radiation                 -            I0 hrs.    at 6000 rads/hr   at 150°C and
+J                                                              10 -6 torr   and 100 rads/hr   at 93C in
+                                                               5 psla     pure       02
+    Flammability                                  -            In wet     flowing         oxygen       at       5 psia.
+    Smoke, flash         and   fire
+    points
+    Chemical      Compatibility                   -            (See     Test       Method)
+                                                                                                                          1
+
+
+
+
+                                                              -2-
+                                                        _.lalytical         Tests
+
+
+                  r_ffgassing in Oxygen                                -             TGA and Analysis           of Gases
+
+                  Volatility        in Vacuum                          -             TGA    and Analysis        at     10 -7 torr
+
+
+
+            B.     Test    Methods
+
+
+                   i.      Insulation          Resistance       - Total       Sample
+
+                   This     test    is one of the two screening                      tests     that    are performed           on
+
+the total        sample.      The    full       length    of the test          sample        (except      for the ends,
+
+which     are suitably        protected)          are immersed             in water.        The DC resistance            between
+
+the conductor           and the water           is measured       at 500 volts             after     i hour,    i day     and 3
+
+days.      The measurements           are made          with    a Kiethly          electrometer        after    a one-minute
+
+elecerification           time.      If a specimen             fails       to meet    the acceptance           criterion
+
+(3 x i0 I0 ohms          per iO00     feet),       the electrification                time     is increased          to 5 minutes.
+
+The 5 minute        value     will    be significantly             greater          than    the one minute           value     if the
+
+conduction        is not associated              wlth    the absorpticn             of water       into    the insulation
+
+structure,        either     in a fault          or throughout             the volume       of the insulating            wail.
+
+
+                   2.     Voltage     Withstand
+
+                   At the conclusion              of the insulation                resistance        test,    a voltage        of
+
+1600 volts        RMS at 60 cps is applied                  for one minute_                If failure        occurs,     the failure
+
+point     (or points)        are removed          from    the water          and    the test       is repeated         fcr one
+minute.
+
+
+                   Only     those    portions       of the wire             sample    which     pass      the voltage         with-
+
+stand     test    and have     a resistance             greater    than       30,000       megohms     per    iOOO     feet    after
+
+3 days     immersion       are used        for further          evaluation.
+
+                   3.      Insulation          Resistance
+
+
+                   A cabled        test    specimen       is dsed          to determine        the effect       of exposure
+
+at 50%      and 100%        RH + dew       in pure       oxygen    at       15 psia     on insulation          resistance.
+
+The cabled        specimen     consists          of six wires          that    are wrapped           around    a seventh         central
+
+wire,     as shown       i:l Figure       I.     Fabrication       is accomplished              by passing       the bundled
+
+wires     through       a circular        guide,    which       will       allow    the wires        to pass    through        only
+
+if they     are in the proper              configuration.              The cabled          wires     are he l.d in place            with
+
+short     lengths       of heat-shrinkable              tubing.        The cabled          specimens       are mounted         _n
+
+chambers     by inserting           them       in holes     in the chamber            walls,       as shown     in Figure           2.
+
+
+                                                                   "3"
+RTV    silicone     rubber     is used      to seal      the ho]es       after        the wires       are in place.
+
+This    scheme     permits     the ends       of the specimens           to remain          outside     ¢f    the chamber
+
+and eliminates           the need     for   feed-through         bushings        that would         introduce
+
+undesirable        leakage     currents       when     wet.
+
+                    A heated        water   bath     is located        in the bottom           of each       chamber.
+
+The whole        arrangement        is placed      in an oven         and maintained           at 50°C.        The additional
+
+heat    in the water         bath    provides      the required         100%     RH + dew.          the chamber         is
+
+purged     and filled       with     oxygen     at 15 psia       and twice           each   day    fresh     ox? sen is
+
+allowed     to flow       through      the chamber.
+
+                   Insulation        resistance        is measured       between        the six outer          wires,        which
+
+are connected        together,         and the central          wire.         &gain,    the Kiethly          electrometer
+
+is used     with    a one minute         electrification          time.
+
+
+                    4.     Corona
+
+
+                    At    the conclusion         of the       insulation        resistance         measurement,        corona
+
+measurements        are made        on the cabled        specimens       before        they    are removed          from     the
+
+conditioning        chamber        - (50°C,     100%    RH,    15 psia        02).     The speczmens          are    then
+removed     and tested        in a high-voltage           cell,       which     is described         below,     in dry
+
+oxygen     at 5 psia.         Figure     3 shows       the method       of connecting             the cabled        specimens.
+
+                    Corona     tests     are made       according       to ASTM        DI868-61T.           The high
+
+frequency        components        of the corona        are amplified           and detected         using     a I00 kc
+
+resonant     circuit       and a wide       band     amplif_.er with           a 300 kc high          frequency       and a
+
+15 kc     low frequency        cut off.         The signals       are displayed             on an oscilloscope               and
+
+the variation        of the amplitude            of the detected              signa _ with        applied     60 cycle
+
+voltage     is noted.         The voltage        is increased          slowly        and the corona          initiation
+
+voltage     (C.I.V.)       is noted.        Then     the voltage        is i_,creased          about    20% above          the
+
+C.I.V.     and then       decreased      slowly      and the corona            extinction         voltage     (CoE.V.)        is
+
+noted.      The C.E.V.        is considered          to be more        significant          than    the C.I.V.        for it
+
+is the highest           voltage     at which      corona      will    persist        if it is ever          initiated        by
+
+a momentary        high    voltage      surge.
+
+                    Wnenever        the C.E.V.       is l_er      than        expected,       a resistivity          check       is
+
+made     after    the completion         of the corona          test    to determine           if a failure          has
+
+occurred.
+
+
+
+
+                                                                -4-
+                    5.     Volt age Bre _kd_m
+
+                    Voitage       breakdown         tests    are made             on NEMA     twisted         p_._r specimens,
+
+which     provide       posltive     pressure        at the cross-overs.                    The    specimens           are
+
+fabricated        with    a special        jig as shown           in Figure          4=
+
+                    The    test cell        consists        of a vacuum             tank,     [0.5      inches       in diameter
+
+which     is fitted       with     a cover     containing             ten feed-throughs.                 Figure       5 shows
+
+the cb     .Jer and       the associated            vacudm       system,          Figure    3 shows          details     of    the
+
+feed-throughs,           which    are made         with    Veeco       1/4 inch          diameter,       O-ring        type    C-25
+
+quick    vacuum     couplings.         Eighteen           inch    lengths          of silicone          insulated        solid
+
+copper    wire     are passed        through        each    coupling,             with    a six    inch       extension        in the
+
+tank.      This    arrangement        provides        a flashover             strength        of at least            25 kv, even
+
+at the reduced           pressure     of 5 psiao            These          fee._-.throughs are corona-free                     at
+
+voltages     that       are higher     than        the coron_, _tart               _oitages       of    the cabled           specimens.
+
+For tests        in vacuum,        flashover        LS not a problem                and the six          inch       emtension        can
+
+be reduced        to one inch        to minimiz_           the am,,unt of organic                  material          in the
+
+chambe r,
+
+
+                    For    tests     of twist-            _air    specimens          in 5 psia          02     '_is necessary
+to minimize        the chance        for flasho_er           between          leads       of the       tw-;_ ed pairs          and
+
+also between        the high        voltage        cm.nectien          to the twisted             pa-        ,qd    the tank.
+
+                    The    twisted     pairs        were    _,ade with            long    lesJ    "=-:.'_sions so that               the
+
+opposite     ends       of each     wire    could     be broug_              _ogechet" ;,,              good       separation
+between     the ends       ef t._e two wires              could       be    obtained.
+
+
+                    Figure       6 is a sketch            of the       twisted       p_i_: in the            tank.      It will       be
+
+noted     that    each    s[ecimen     is surrounded              w_th       a pyrex       tube°        The primacy           function
+
+of the pyrex        tube    is to prevent            breakdown             to the    tank.        It also          shields     the
+
+specimens        from    the breakdown         products          of    other       spec._mens      _._d diminishes             fire
+hazards °
+
+
+                    For    the tests        at 5 psia        02, a vacuum                of less       than    50 microns           was
+
+first     established       in the tank.             Then    02 was          bubbled       through       water       at 30_C        into
+the tank     and pressure           adjusted,
+
+                    For    the tests        in vacuum,           a diffusion             pump was       used       to establish           a
+
+vacuum     of 10 -5 torr         or less      at    a temperature             of    150C,
+
+
+
+
+                                                                            -5-
+                 The    tank was      grounded     and one _ire       of        t.wlsted pair was            corqccted
+
+to it.      Sl,:_y cy_ie    voltage     was    increased      at a 500      vo_ts/seco       rate    and at a [OO
+
+volts/see,     rate.    Nine    specimens        were    tested    at each    rate°      In order      to conserve
+
+time,    on the JO0 volt/see,          tests,     the voltage      was     raised   quickly     to 0,5       t_mes
+
+the minimum     breakdown      strength       noted     on the 500 vo|t/_eco          test    and I00 volt/_co
+
+rate was     started    at this    voltage.           This   should   have    a negligible          effect    on the
+
+breakdown     voltage    at the slow      rate     of    rise°
+
+
+
+
+                                                             -6-
+                    6.     Voltage       Fleshover
+
+                   Voltage        failure    may     occur    along     the surface          of hook-up           ins-Jlation
+
+#voltage     "flashover")          as wel]     as through          its volume        (voltage       "breakdown").               Fc-
+
+this ncogram        a .O10 inch diameter              nichrome       wire    wa_ wrapped         around          the hook-up
+
+w:rt- (approxlmate,'y         5 turns)        to serve       as an electrode           and was        accurately          spaced
+
+3/16"    f[om    the cut end of           the insulation           at the end        of the wire.            Conventional
+
+mechanical      wi:e     strippers        could    not be used         to strip       the     insulation          from    the wire
+
+s)nce    they damaged        some     of the insulations             used.      Instead        the insulation             was
+
+carefully       removed     from     the end of       the wire       with     a razor       blade.
+
+                   Voltage        flashover       tests     (see Figure        7) were       made     with       the test
+
+specimen     tn flowing,          wet oxygen       at 5 psia        absolute.         The     60 cps voltage             was    raised
+
+so t._at flashover          occurred       in about        I minute.        The voltage         at flashover             was
+
+noted.      A 50,000       ohms    resistance        was    used    in series        with     the specimen          so    that
+
+flashover       current     continued       to flew        until    voltage     was    removed.         In this way             the
+
+tendency     of the .;urface to track                or to flame        could       be evaluated        and visual             results
+
+reported.
+
+                                                      Significance          and Use
+
+
+                    If a crack        or other       type    of discontinuity           is present           in hook-up             wire
+
+or develops        during    installation          or use,        dielectric        failure     can    occur       along       the
+
+surface     of the wire       from       the conductor        at the point           of the discontinuity                 to ground
+
+or to another        component.           Since    the =lashover           voltage      is reduced          at    low pressures
+
+it is important           to determine        its value       under     the worst       conditions           of use.           In
+
+this    program,     5 psia wet          oxygen    is considered            to be    the worst        service       condition,
+
+although     it should       be noted       that     the somewhat           lower    pressures        which       mzght    occur
+
+on depressurizatlon           of a capsule           in space       could     result     in considerably             lower
+
+f lashover      voltages.
+
+                    Even    though       normal    voltages        in spacecraft        wiring        may    be quite          low,    it
+
+should     be recognized          that    considerable        overvoltage           can develop        in switching,
+
+particularly        o_ith inductive         circuits.         Once     an arc has been           established              it may
+
+persist     even    at very       low voltages.
+
+                    Unfortunately,          surface        arcs    tends     to carbonize        or "t_ack"          many
+
+_nsulatton       surfaces     so that permanent              damage     occurs.        Moreover,        the high           temperature
+
+arc may     readily       ignite     flammable       insulating        materials.
+
+
+
+
+                                                                     -7-
+                    7.     Outside       Diameter
+
+
+                    Ten pieces       of wire,        26.46       inches    long,       are £emoved        at random
+
+inter_als     during       the preparation           of specimens               These    pieces     are first        used    for
+
+weight     determination          (see Section        i0 below)          and    then    for dimension        meesuremer, ts.
+
+One piece,     six inches          long,     is cut       from    each    of    the randomly        selected     weight
+
+specimens,         llxe outside      diameter        is measured          with     a hand   micrometer         at three
+
+locations     on    the specimen.           Two measurements,              at right       angles     to each     other,          _re
+
+made     at each    of    the three       locations,        giving       ; total       of six measurements            for each
+
+specimen,     or 60 measurements              for the entire             smmpie.
+
+                    The    average,       maximum     and minimum          outside       diameter        is reported        for
+
+each    specimen.         These    values     are then       averaged          for the ten specimens.
+
+                    The same       samples     are    then examined             by industrial        x-ray     techniques.
+
+The specimens        are mounted          so as to provide            an undistorted             image    on x-ray     film.
+
+An enlarged        portion     of a typical          x-ray       photograph        is shown       in Figure     8.
+
+Additional     measurements          o5 outside           diameter,       as well       as other     dimensions,        are
+
+made    by examining         tb# x-ray      with     a measuring          microscope.
+
+                    T_._esame      specimens        are    also viewed         with     an optical        co_parator        to
+
+give    additional        measurements        of m_ximum          and minimum          outside     diameter.
+
+
+                    _.     Concentricity
+
+                    The x-ray       examination           yields    data       on insulation        wall    thickness.
+
+Six measurements           are made       for each        specimen.        Concentricity           is defined        as the
+
+ratio     of the minimum          wall    thickness        to the maximum          wall     thickness,       expressed           as
+
+a percentage.            The percent       concentricity           for each        specimen       is reported,        and the
+
+average     value    of the       ten specimens           is computed.           The    acceptance        criterion     is
+80%.
+
+                    9.     Conductor       Dimension
+
+
+                    The overall          conductor        dimensions       are determined           from    the x-ray
+
+examination,        as described          above.      Such       measurements          permit     a determination           of
+
+the degree     of bunching          in the stranding.               In addition,          the wire        insulation        is
+
+stripped     and the overall             stranded     diameter,          as well       as the diameter         of the
+
+individual     wires,        is measured       with       a hand    micrometer.
+
+                   I00     Weight    Per     I000 Feet
+
+                    Ten randomly          selected        specimens       are cut       to a length        of 26.46     inches.
+
+                                                                   -8-
+The    length     is determined          b> stretching           the wire       over    a precisely          machined          bar
+
+of the proper          length        Uniform       tension       among    specimens          is achieved           by hanging            a
+
+3 lb. weight        from one end of the wire.
+
+                    Each    specimen       is wiped        _ith    a lint-free          cloth       and rolled          into    a
+
+small     coii.     _ Mettler        balance       is used       to weigh       the specimens             to the nearest
+
+O.I mg.        The weigh__ in grams              Jf the 26.46          inch    specimen        is equivalent            to the
+
+weight     in pounds       of a I000       foot        specimen.
+
+                   Ii.     Stripabilit       X
+
+                  Ten     test specimens           approximately          six       inches     long      are evaluated.
+
+A pro_,erly adjusted            precision         cutting       type    wire    stripper        is used          to strip      one
+
+inch    of insulation        from     each       end     of the specimen.              Where     appropriate,             a thermal
+
+type, hot wire           stripper     is used.
+
+                  The ease        of stripping           is reported          and    the_cposed          conductor       i_
+
+examined       under     a stereomicroscope              with    at lea3t       5X magnification                 for evidence
+
+of mechanical          damage     such    _s n_cks        and scrapes.              After    thermal       stripping,          change
+
+in color       or other     evldence       of thermal           damage    is    looked       for.        After     examining         the
+
+bunched     stranding       it may be useful              to separate          the stranding             to permit       additional
+
+observatlon.           Lighting      of the test          suec_men       is critical          and     the microscope            lamp
+
+is moved       into various        positions           during    the    _,isual study.
+
+                  If nicks        or scrapes           are observed       on the conductor                after       the use       of
+
+ a properly       adiusted        mechanical           stripper,       photomicrographs             of    the defect          will       be
+
+made    with    adequate     magnification              (at least       5X),
+
+                  The cut ends           of the insulation              are also       examined          for damage       caused
+
+by crushing       in the jaws         of the mechanical                stripper       or by heating              in the case         of
+
+the    therma]    stripper.
+
+                  Permanent         records       of dam_,ge to conductor               or     insulation         may    be made
+
+with    photomicrographs            (at least          5X)_ such       ag that       shown    in F_gure          9.
+
+                   12.     $olderability
+
+                  A six-inch        wire      test      specimen       with    1/2 inch        of insulatio_            removed
+
+from    one end     is bent       around     a mandrel          of its own diameter              at a point            1/2 inch
+
+back    from    the cut edge         of the       insulation       _o that          an approximate          90 ° bend         in the
+
+wire    is maintained.            The stripped           conductor       is immersed           in molten         solder       to a
+depth     of    3/8 inches,           or within       1/8 i,lch of tile insulation,                   and held       for 5 secoilds.
+
+Upon    removal,           the specimen         is explained         for evidence           of    insulation       damage    at       the
+
+cut edge        end    the bent        section.           Observation        of discoloration,              melting,       shrinking.
+
+cracking,        spiltting,           flaring       or charring          are reported.
+
+                      The 60/40        (tin/lead)          solder     is heated          to 320°C     in a solder          pot    and
+
+the temperature              ks contlolled           to + 5°C.           In those        cases    where     the    solder    does
+
+not wet        the c_nductor,             a suitable        flux     is applied          before     dipping.        This    insures
+
+adequate        thermal        contact       and    increases        the heat       ransfer        to the conductor          and,
+
+hence,     to the insula_ioTi.
+
+
+                      13.      Color      Durabil-" ty
+
+                      Evidence        and extent          of visual        color    change        is deten,_ined       afrcr
+
+exposure        to the various              environmental           conditions        of    the program_           Comparisons
+
+are made        with       unexposed        .specimens.        If a color          change        is noted,     the specimen            is
+re tained.
+
+
+                      Special       atteetion        will    be     paid    to color        characteristics          after       thermal
+
+ageing,        ultra-violet           and    radiation        exposure.
+
+
+                      14      M_.9_arki-,g
+                                       Lc gibi li.ty
+
+                      Marked       specimens        are    to b_ ?rovided           by the NASA         Manned      Spacecraft
+
+Center.         Specimens          aie prepared           by t.le Kingsley          Machine        Company,       Hoi[>-_ood,
+California.
+
+
+                      Approximately           I00 feet        of each       sample       is shipped       to Kingsley        for
+
+marking,         l_wenty feet          is for experimenting                 by Kingsley;           the remainder        is required
+
+for use as test              specimens.
+
+                      Marked       test     specimens       are subjected           to a 1600 volt           withstand       test
+
+after     imm:rsion          in water        for 24 hours.            After     passing          the voltage      withstand           test,
+
+the marked        area       of the test           specimen       will     be exposed        to human       perspiration,
+
+preferably        by wiping           several       times     over    the outside           of the nose.           The marked          area
+
+of   the wire         will     then    be pulled          between     the     thumb      and forefinger           i0 times,       while
+
+held    tightly        together        in an effort           to remove        the marking.           The     legibility         of    the
+
+m=_'_ing to the naked                 eye after       test     will      be reported.
+
+                      Marked       test     specimens       will     also    be subjected           to the therm_l          ageing
+
+ult:.a-vilot          and    chemical        co,,-o_.ligy__-.__
+                                             ....            tests.                The     legibility       of the markings             to
+
+the naked        eye       after    such     exposure       will     be reported.
+
+
+
+                                                                      -I0-
+                   15.     £_mpatibi;_tty_ :.z_thPotting                     C_ompounds
+
+                   "l:Jotypes         of specimens,           a mechanical            and an electrical,                are used             to
+
+l-st.      (-_) the mechanical               bond    between       wire      and potting         compounds,            and    (b) the
+
+_    .ts[ance     to moist_'re penetration                  along     the     interface         between          the wire
+
+insulation        and    the resin.
+
+
+                   The mechanical             specimen        consLsts        of ? straight            piece       or wire         36
+
+inches     in    length    with       one end        potted.        Four      wires     are potted           in a too]_ that
+
+cuasists        of a one inch          d_ameter       pill-box        with      masking        tape    applied         to increase
+
+the depth        to about       3/4    inches.        One cnd       of each       wire       is Inserted           in a hole            in
+
+the bottom        of tb_ mold.           This       holds     the wires         in position           during       the potting
+
+operation.         The mold       is removed          before       the specimen           is aged          for    testing.          Figure
+
+!O bho, J both          the _._ch_n_cal         and electrical               specime--,s, with             and without            molds.
+
+
+                   The mechanical             speci.-mns       are aged         for 15 days           at    150°C      in pure
+
+oxygen     _L 15 psia       before       _esting.           In the mechanical                bond     test,       the wire         is
+
+nttached        to the upper          crosshead       of an     Instron         testing        machine       by making            three
+
+turns     aroun_    a capstan.           The potted          end    of the specimen              "_ restrained               by    a foz-k
+
+that    i_ attached        to the l_wer             crosshead.         With       a crosshead          speed       of one         inch       per
+
+minute,     the wire       is    loaded       until:        (a) the wire           is pulled          complete'y          free      of the
+
+potting     compounds,          (b) the compound              fails    in shear,          or    (c) the wire            fails           in
+
+tension.         The maximum          load    carried       by each wire           joint       is reported.
+
+                   The electrical             specimen       consists         of a twisted            pair       (see page         5)
+
+for description_           that       is potted       in a cylindrical                mold     3/4    inches       in diameter               and
+
+4½   inches      long.     The _old          is formed       by wrapping           aluminum          foil    aroui_d a glass
+
+test    tube     and then       removing       the test        tube.        Two    electrical          specimens,            with       and
+
+without     the alumin_,m mold,               are shown        in Figure          10.     For    the purpose            o_ this          test,
+
+the twisted        pa_rs    are cut          in the center          of _he        :wisted       portion          and   the ends          are
+
+bent    back     to provide       adequate          spacing     between         the bare        conductor          ends.
+
+                   A duplicate          set o_ electriczl              specimens          is prepared             using      twisted
+
+pairs     that    are nicked          with    a razor       blade.        The blade          is d_awn        across       both wires
+
+so that     the nicks       are adjacent             to each       other.
+
+                   The electrical             specimens        are aged         for     15 days       at    150°C      in pure
+
+oxygen     at    15 psia.        They    are then        immersed         in water        at room          temperature            for    three
+
+days.      The    free ends       o£ the wires           are held         out     of the water             to avoid       wicking            along
+
+the conductors.            At    the end of          the three        day     immersion         perioa,          insulation
+
+
+
+                                                                      -11-
+reeistance        is measured    between     the wires     and    the water        bath.     The specinmns      are
+
+then    removed     from   the water      bath   and tested      to    voltage      breakdown.       These   tests
+
+will    deEect     the penetration        of moisture     along       the interface        between   the wire
+
+insulation        and the pottipg      compound.
+
+                    Standard    potting     techniqt'es    are used       in fabricating         the spccimen.
+
+Figure     II shows    a group     of specimens      being     cured.      Manufacture        recomme_ndations
+
+are    followed     in preparing     the various        wire   insulation        surface     for potting.
+
+Detailed     descriptions       of the potting       compounds,         etchants     and primers      are
+included     in the discussion         of results.
+
+
+
+
+                                                          -12-
+                     16.     Flexibility
+
+
+                             a.     Mandrel      Flexibility        Test
+
+                                    The mandrel      flexibility           test provides          a visual          indication
+
+of the ability         of a wire        to be     flexed     around       a mandrel       of specified             size.        The
+
+test may     be performed           in several      ways.      In the simplest             way    the wire          is carefully
+
+straightened        without        elongation      and wrapped        around        itself       (IX mandrel).             If
+
+cracking     or delamination            of tne insulation            is noted,          the wire       may    be wrapped
+
+around     a metal     mandrel       which     is approximately            twice       th_ diameter          of the wire           (2X
+
+mdndrel).         The test        is continued      with     larger       and    larger    mandrels          until     a mandrel
+
+diameter     is found with           which     damage     to the insulation              is not     observed,           in is
+
+customary        to report        the mandrel      diameter        with    which       no insulation          failure        is
+obtained     as well        as the next        smaller     diamete;        with    which      failure        of the insulation
+
+is observed.          The extent        and chdracter         of    the visual          damage    to the       insulation             is
+
+reported     also.
+
+                                    The uniformity         and reproducibility                of the mandrel            flexibility
+
+test may be         improved       by winding      the wire        specimen       back    and    forth       between       two
+
+mandrels     of the same           diauleter.      A "reverse"        bend      will     take    place       if the wire           is
+
+wrapped     in opposite           rotational      direction        between       two mandrels.           A simple          mandrel
+
+holder     for making        repeated     "reverse"        mandrel        f)exibility         tests     is shown        in
+
+Figure     12.     The end of the test             specimen        is first        inserted      through       the hole           in one
+
+mandrel     to hold        it in place.          The mandrel        is then        twisted      by hand       while     slight
+
+tension     is applied        to the wire         so that     a uniform          and    reasonably       tight       winding          can
+
+be formed        on the mandrel.          If cracking         or    other       insulation       damage       takes     place,          the
+
+result     is reported        and a larger         mandrel     diameter          is used.        When     four      to six        turns
+
+of _Jire have       been     applied     to one mandrel,            the other          end of the wire             is fastened
+
+through     the hold        of the adjoining         mandrel.         The wire          is then wound          from     the       first
+
+to the second         mandrel       so that      the reverse        bend     takes      place.      A restraining               torque
+
+is applied        to the first         mandrel     so that     sufficient           tension      is maintained             to
+
+produce     a uniform        winding     on    the second      mandrel.             The wire       i8 wound         back     and
+
+forth     between     the two mandrels            five    times.      If after          examination          some     slight
+
+evidence     of insulation           damage      is noted,     it may        be desirable         to     continue       winding
+
+the wire     specimen        back    and forth      five     times    more.
+
+                             The mendrel         assembly     shown       in Figure        Jv is designed             to be used
+
+at room     temperature           and also while         immersed     in liquid          nigrogen.           The    liquld
+
+
+
+
+                                                                   -13-
+n_trogen     can be held           in a polystyrene             foam    container          as shown       in the photograph°
+
+in a NASA        (Huntsville)        program,          NAS 8-2442,       mandrels          for    the repeated       flexibility
+
+test were        designed     to operatc          in liquid       helium.           To reduce       the heat       leak   the
+
+mandrels     were    supported           at the end        of long      stainless          steel    tubes    as shown        il,
+
+Figure     13.     Since     these mandrels             were    available        in several         diameters,       they were
+
+used    in the subject            program       even    though    heat       loss    is not so important             with
+
+liquid     nitrogen.
+
+                             At    low temperatures             some wire        insulations         may become       quite
+
+brittle     so that       large     mandrel       diameters       must       be used.        For the #20 hook-up               wire
+
+used    in this     program,        the following           mandrel       sizes      were    standardized:           The wire
+
+itself     (IX) and for the repeated                    mandrel       flexing       tast    - .060,       0.125,    0.25,      0.50,
+
+0.75,     I.O,    1.25,     1.50,    1.75,       2.0 inch       diameters.
+
+                             It is thecretical!y                possible        to calculate         the elengation            in
+
+the insulating         coating       as the wire           is bent      around       a mandrel       of a given       size.
+
+However,     a stranded           wire    may    tend    to change        shape      when    bent    so    that    such
+
+calculations        are apt        to be in er£or=              When    wire     of a single         size     is to be
+
+compared        (as in this        program),       it    is better        to compare         flexibility          results      as a
+
+function     of mandrel           diameter       without       attempting        the calculation             of elongation.
+
+When    wires     of different           size    are to be compared,                it is desirable           to make     an
+
+arbitrary        comparison        by describing           the =andrel          diameter         in terms     of a multiple
+
+of the overall         wire       diameter       - 2X, 3Y-, 5X, etc             , (_.e.,         a O.125     in. dia.       (2X)
+
+mandrel     or a 0.50        in. dia.        (8X) mandrel          for a       .062 in. dia.         wire).
+
+
+                                                       Significance          and Use
+
+                             At    room     2emperature         hook-up       wire    usually       can be wrapped           on
+
+its own diameter            (IX mandrel)          without       visible       damage.        The mandrel          flexibility
+
+test    is used     primarily        to determine           the influence            of ambient       or aging       conditions.
+
+                             Exposure        at elevated          temperatures         may       embrittle     hook-up      wire
+
+insulation        by loss     of voltage          plasticizer          or low molecular             weight     polymer
+
+fragments,        by polymer        scission       or increased           cross-linking            or by oxidative
+
+degradation.         Exposure        to radiation,             such    as ultra-violet             light     or gamma     and
+
+neutron     flux,    may cause           molecular       scission       or cro_s-linking             and may       also     p_omote
+
+oxidative        degradation.            A mandrel       flexibility          test made          at a room     temperature
+
+provides     a simple        means       of showing        the effect         of ageing.
+
+
+
+
+                                                                      -14-
+                    As     the test     temperature        is decreased,            the wire       insulation          may    become
+
+stronger      but decreases            in elongation         to break       - becomes           more    brittle_        For
+
+most   elastomerJc          materials      such    as silicone           rubber,       brittleness         increases
+
+relatively     slowly        as the temperature            is decreased           until,        finally,     a sudden
+
+increase     occurs        at what     is conventionally            called       the "glass        transition"
+
+temperature_          For non-elastomeric               materials        such    as H-fllm,        much     smaller       changes
+
+in elongation         occur      as the temperature             is decreased.            While     information          is quite
+
+incomplete,        availab]e       data    for both       elastomerlc           and non-eiastomeric              materials
+
+indicate     that,       below    the t_mperature          of liquid        nitrogen        (-196°C),        brittleness
+
+increases     very       little.       Particularly        interesting           and useful        comparisons          of
+
+flexlbility        can be made,         therefore,        at the liquid            nitrogen       temperature.
+
+                    Flexibility         measurements         made       at liquid       nitrogen        temperatures
+
+provide     data    of functional          significance          for space         applications          where     very      cold
+
+ambient     temperatures          may be encountered.               In NASA        contract       NAS8-2442        it was
+
+discovered       that mandrel          flexibility        tests     on wire        at liquid       nitrogen        temperatures
+
+provided     a very        sensitive      means    for determining              the effect        of thermal        aging      and
+
+hydrolytic     molecular          scission       with    great    sensitivity.             The effects        of such         aging
+
+degradation        could be detected             with measurements              made    in liquid        nitrogen       or
+
+itquid     hellum     long before         the aging       effects        became     apparent       with     tests      at room
+
+temperature.          To capitaiize          on this      sensztivity,           mandrel        flexibility        tests      in
+
+llquid     mtrogen         are being      used    in this       program     to detect           aging    in wire       after
+
+exposure     to high        temperature       in oxygen,         to ultra-violet            light,       to x-ray
+
+ radiation       and to varzous           chemicals°
+
+
+                                       Analysis     from     Visual       0bservation
+
+                    Mandrel        flexibility      tests       can provide         considerable           information
+
+when   carried      out by a skilled             observer.        For exampie,           lack     of adhesion          between
+
+layers     in a taped        constructto      _ or between          overcoats          and base        insulation       may
+
+be observed         and point       to weakness         in particular           wire    insulation         constructions.
+
+A tendency     for       dispersion       overcoats       to "mud        flat    cracking"        becomes     more
+
+visible     when     the coating        is flexed.         A weak        "knit     line"    in an extrusion             tends
+
+to develop       longitudinal          splits     when    the wire        is flexed        in    liquid     nitrogen.
+
+                     It must      be recognized          that    such visual           observations         are subjective
+
+and not quantitatlve.                In this      program       only     one individual           has made       the
+
+flexibility         test    so as to provide            a uniform        basis     for comparison           between       wires°
+
+
+
+                                                                 -15-
+                       17.        Scrape     Abrasion
+
+                       The NEMA        (GE) repeated         scrap_        abraslon        tester     subjects       the wi,e           t,'_
+
+ the back        and       forth     scraping      action    of a NOn         I_    (.016    inch dzameter)              steel     sew-ng
+
+needle     mounted          at a right         angle     to the wire        which        is _:lamped ,n an anvil,                  as
+
+shown     in Figure          17.      The side      of    the needle        rests        on the wire.           The neeale         is held
+
+in the abrading              head,     Figure      18, and loaded           with     weights       as shown       by eccentric
+
+action.         The needle           under     the compression           load is moved            back    and    forth     aiong        the
+
+wire     for a distance              of 3/'8 inches,        60 times        per minute.            When     the needle        ,brades
+
+throdgh        the    insulation        coating        on the wire,         electrical         contact       (limited        to    .003
+
+amperes)        is established             which    actuates        a relay        to stop     the driving          motor°
+
+                       In the operation             of the test_           the wire        is straightened           without
+
+elongation           and clamped        in the anvil°              The counter           is set    to zero.         The deslred
+
+load     is added          to the abrading          head    and the needle               is set carefully           on the wire.
+
+The motor        is started           and the      repeated        scraping        action    progresses          until     contact
+
+nith     the wire          turns     off the driving         motor.         The number         of strokes         to failure            is
+
+recorded.            For    the next       test    the wire        is rotated        120 ° and tbe test             repeated           at
+
+anothez        position       along     the wire.          For the third            test    the wire        is again       rotated
+
+120 °.     In this          fashion     three      points        about   the circumference               are evaluated            so
+
+that effects           of eccentricity             will    be included.             It is customary             to make      at least
+
+three measurements                 on each     gire      specimen.
+
+                       The scrape          abrasion       tester     was    originally         developed         for use with
+
+film-coated,           magnet       wire.      With      magnet     wire    insulation         the effects          of    load,
+
+insulation           thickness,        and wire        diameter      have     been       determined       as represented               by
+
+the following              equation:
+
+
+
+                       A = S p3                          where     A = Abrasion           factor
+
+                              t2d                                  S = Average           number    of scrapes           to failure
+
+                                                                   p = Load        in grams
+                                                                   t = Insulation           thickness
+
+                                                                   d = Solid        conductor       diameter        in mils
+
+
+With     stranded          hook_up     wire     this     relationship        may not        hold,     but    does       indicate        the
+need     to obtain          test     results      at several        loads,         For    the #20 stranded           wire     used          in
+
+this     program,          load    of 500,      800 and     I000 grams          have      generally       been    used.       This
+
+range     of    loads will           permit     adequate     comparison            of the different             wires     in this
+
+program.
+
+
+
+                                                                         "16-
+                                                        Signiflcence           and bse
+
+
+                     The    repeated       scrape       abrasion       test     gi_es    completely        arbitrary          results
+
+  but perk,
+          fits comparison              between      wires      with     different        insulation        coatings°           It dees
+
+baw      thr advantage        tbat     the effect         of    load can be evaluated.                   However,       many       other
+
+ lactots     contribute       to the abrasion             of hook-up           wire:
+
+
+                     io     Nature and uniformity                of the abrading              surface     (sharp       edge;
+                            wire on wire, etc.)
+
+                   ii.      The tpnsion          in the wire.
+
+                iii.        Test    temperature.
+
+                   iv.      Thermal     or othe_         aging.
+
+ In service     many       k_nds    of abrasion         may be encountered                    The sawin 6 action             of wire
+
+against      a sharp       metal    edge    (i.e.: when          a protective           grommet     is missing)          is
+
+unfortunately         a common        and very      destructive           type    of abrasion.           Abrasion        of wire
+
+against     wire     when    cabled     together        can     also    occur     and may       be most     serious          under      a
+
+clamp.       E_per_ence       indicates          that    in such       cases     failure       usually     occurs       by    cut-
+
+through.       However,       the tendency          for cut-through              may    be    increased     by vibrational
+forces.
+
+
+                     Many    types     of abrasion          test have          been    proposed     for hook-up          wire°          A
+
+commonly      used    test makes        use of a sandpaper                abrading       surface.         This    surface          is
+
+hardly    representative           of normal       service       conditions.            The    sandpaper        can be       constantly
+
+ renewed     so that       it presents       a new abrading             surface.         Even     so, sandpaner          is
+
+ sufficiently        variable       that    uniform       test     results       are    difficult        to achieve°           A
+
+ ,_ire-on-wire       test    is occaslonally             suggested        since       the uniformity        of    the abrading
+
+ surface     is thereby       eliminated          as a test        factor_        In practice,           such    tests       are
+
+difficult      to run and require                unrealistically           large       compressive        loads       to achieve
+
+ failure     in a reasonable           time.
+
+
+                     Considerable          attention        has been       directed          to the type        of abrading
+
+ surface     used.       A sewing      needle      has been        found       to be very       uniform,        hard    and
+
+ inexpensive.         The diameter          of    the needle        can,       of course,       be varied        to achieve
+
+ different     types       of abrasion.           Sharp     cutting       edges       generally     have     proved      to be
+
+ impractical       as abrading         surfaces,         although       a sapphire           cutting     edge    has    shown        some
+
+ promise.      Small       balls    have    also    proven       useful        as abrading        surfaces       on    flat wires,
+
+ but are not useful           with     small,      round       wires.
+
+
+
+
+                                                                        -17-
+                     The repeated          scrape       abrasion      teste_        is n_     being     replaced     _or magnet
+
+wire    evaluation         by    a single       scrape     sbrasion      test       in which        the Io_     is gradually
+
+increased     until        failure       occurs.        _hile    reasons      exist        for substituting         the single
+
+scrape     abrasion        test with        film    coated      magnet     wire,      it is not        a suitable     test    £or
+
+hook-up     wire     insulation.           With     the single        scrape        test,    the relatively         sol
+
+insulstion       of hook-up         wire       "piles     up"   ahead    of    the abrading           edge    and very
+
+non-uniform        tearing        results.
+
+                     Until       some    other     test    is developed            which    meets     functional     need    better,
+
+it is suggested            that    the     repeated       scrape    abrasion         test    can provide        a comparative,
+
+even    though     arbitrary,           evaluation        of abrasion         resistance       for hook-up         wire
+insulation.
+
+
+                     18.        Blocking
+
+                     Blocking        is difficult          to determine            in a quantitative           _ashiGn.
+
+However,     qualitative           evidence        of blocking        is watched           for throughout        the program
+
+in the cabled         specimens          and    twisted     pairs     under        the vnrious        exposure     conditions.
+
+Since     blocking     will       be evaluated           in this    way,      no    special     test specimens        or
+
+procedures       are considered             to be necessary
+
+
+
+
+                                                                    -IR-
+                    l_.     Cut -Through
+
+                    This    test    evaluatts      the ability         of the insulation             to withstand
+
+highly     localized       pressures     _ithout     cutting     through         to the conductor.                The test
+
+spec=men     censists       of a straight        piece     of wire      about       six   inches     long    that       is
+
+mounted     on a flat base          plate(2OO      RMS minimum         surface       finish).        The    base    plate     is
+
+placed     in the compression           cage    of an Instron          Testing       Machine,      as shown        in Figure
+
+!9      Pressuru     is applied        to the wi__e insulation            by a steel         paddle        1/16    inch
+
+_h:ck :,_itha i/32 inch             radius.      (The paddle         shown     in Figure        IcJ is used        for
+
+thermal     creep    tests       and ts thicker      than    the cut-through              paddle).         A 1].5 volt
+
+alarm    circuit     is connected        between     the conductor            and    the paddle       so    that    a signal
+
+is given     when    the insulation          is ruptured.
+
+                    A crosshead        speed    of 0.005     inches      per minute         is used        to obtain
+
+load versus     deflecticn          curves     for three     specimens         at room      temperature           and    three
+
+specimens     at 149°C.          The   curves    for the tes;          insulations         are compared           to that
+
+for MIL-W-!6878           Type    E Teflon     insulated     wire,      and    the load      to cut-through              is
+
+reported.
+
+
+                    Figure       20 is an overall        view   of the test           equipment       that    is required
+
+for the cut-through              and thermal     creep     tests.
+
+
+
+
+                                                                -19-
+                      20.      The rmal Creep
+
+                      The specimen            and    test    apparatus        for thermal           creep    im_asuremLnts             is
+
+the same        as that       for     the cut--through          tests       except       for     the shape     of    tEt, steel          paddle,
+
+w_.'ch is 1/4 inch             thick with           a flat     bottom       surface       (200 RMS)        and a 1/32         inch
+
+radius     _t each        longitudinal          edge.        The shape        of the paddle           is     _hown    in Figure             19.
+
+                      The purpose           of the creep           test     is to evaluate           the ability            of the
+
+wire     insulation          to withstand           constant       compressive           loads     such    as those         encounter¢_d
+
+ill tight       bundle      tie _.     The acceptance              criterion        is    that     the time       to breakthrough
+
+must     exceed      one hour        for a specified            load      that   is defined          as    the load         required         to
+
+fail     Type    E Teflon       in one hour.            In addition           to determining              if the failure            time
+
+of an insulation             exceeds        that     of Teflon,        it is desirable              to rank       the various
+
+insulation        in the order             of their     performance.             For _.nsulation with                creep
+
+characteristics             greatly        different        from     those    of Teflon,           it is not        feasible        to
+
+obtain     bo_h      kinds     of    information        with       a single      test      employing        only     one test          load.
+
+The H-film        constructions,              for instance,          will     run for          thousands     of hours         at the
+
+load     (116 pounds)          that    fails        Teflon    in one hour.               Since     it is a foregone              conclusion
+
+that    certain       wire     constructions           will     pass      the acceptance            criterion,        the     test was
+
+modified        to provide          data    on the comparative               creep       characteristics            of all       the
+
+samples       in the program.
+
+
+                      Fxperience           has shown        that    with     many    materials        the creep           rupture
+
+load    is approximately              50% to 75% of the ultimate                     short-time           tensile     load.        This
+
+principle       was    applied        to the wire           specimens        to obtain         an estimate          of the load
+
+that would        yield      a creep        failure     in a reasonable              length       of time.          The    specimen
+
+is subjected          to a short-time               test,    which     consists          of applying         a load,        with       the
+
+creep     fixture,       at a steady          rate     of    .002 inches         per minute          until    failure         occurs.
+
+Approximately          75% of this           short-time        _ailure        load       is then     used    as     the constant
+
+load    in the first           creep       test.      The    load    is applied           for one hour        and,        if failure
+
+does    not     occur,    it    is increased           by about        10% for the next              15 minutes.            This
+
+procedure        is repeated          until     failure       occurs.         Two additional              specimens        are   then
+
+tested     at a load determined                by     the results          of the first           test.
+
+
+                      This     test    procedure        permits        the wires         with     failure     times       much
+
+greater       than    that     of Teflon       to be ranked            in order          of performance.             With    wires
+
+that    fail     in shorter          time    than     Teflon,       there     is no need          to modify         the procedure.
+
+
+
+
+                                                                     -20-
+                    Tbc     tests   are also         conducted        at     149°C       to determine       the effect      of
+
+temperature        on creep     characteristics.                At    the elevated           temperature         the one hour
+
+failure     load    fcr the Teflou            wire     was   only     33 pounds.            Again,     this    load    is too
+
+small     to cause        failure    of most      of    the other          wires     in a reasonable           ti_.       Therefore,
+
+the procedure        used     at room       temperature,         as described              above,     is also     applied      at
+149°C.
+
+
+                    21.      Wicklng
+
+
+                    Specimens        for the wicking            test       consist        of straight       pieces     of wire
+
+six inches     in length.           Each      specimen       is wiped         with       a clean,    dry,     ]int-free     cloth
+
+and then _._etghed to the nearest                    O.I mg.         The     specimen       is then vertically            immersed
+
+for two inches            of its lengtn         in a fluorescent              dye solution          of the     following
+
+compos ition:
+
+                                       O.i gm            Rhodamine           B dye
+
+                                       2. Ogm            Urea
+
+                                       15 c.c.           ethyl       alcohol
+
+                                        I c.c.           10% water           solution       of Triton       X-IOO
+
+                                    IOOO c.c.            Water
+
+
+Figure     21 shows        the manner       in which         the _pecimens           are held        in the dye solution.
+
+                    After     an immersion           period     of 24 hours,              at room     temperat      ire, the
+
+specimens     are removed           from    the solution,            wiped        with    a clean,     dry,    lint-free       cloth,
+
+end weighed.         After weighing,             the specimens              are    taken    to a dark-room           and cxamined
+
+under     aa ultra-violet           light     for evidence           of fluorescent           dye on the stripped
+
+conductor.         With     transparent         insulation       the dye can be detected                    without     stripping.
+
+                    The weight         gain     and the wicking              distance       are reported         for each
+
+specimen.
+
+
+
+
+                                                                     -21-
+                     22.     Thermal         Aging
+
+
+                     Thermal        aging       is carried        out both          in vacuum        an4   in oxygen.
+
+Flexibility         specimens        and     twiste_       pairs       are    aged     at    150°C    for 15 days        illvacuum
+
+(10 -6 torr        range)    or     in oxygen        (15 p_ia).              Figure     22 shows       a group     of specimens
+
+in a glass       bot_:ie that         is located           in an oven          and     attached       to the manifold        of    a
+
+high    v_cuum     pumping         system.
+
+                     After     the nging          period,       insulation            resistance       and short-time        voltage
+
+breakdown     tests        are made        at    room    condition           (23°C/50%        RH).     Mandrel     flexibility
+
+tests     (see page         13)     are made       at 23°C        and at        -196°C       in liquid      nitrogen.       The
+
+degree     of degradation            is determined           by comparison              with    unaged      specimens.
+
+                     23.     Exposure           to Ultra-Violet              Radiation
+
+                     Flexibility           specimens        and twisted             pairs     are exposed        to ultra-violet
+
+radiation     in vacuum            and in wet        oxygen       at    15 psia        for 30 days.           Ill each    case    the
+
+wires     are held     vertically            on a cylindrical                rack     that    is coaxially        positioned
+
+with     respect     to a cylindrical              UV    lamp          Figure       23 shows        this   arrangement      for    the
+
+vacuum     radiation.         A silvered           reflector,           which       is mounted        inside     the metal
+
+bell-jar,     is not visible               in the photograph.
+
+                     The    lamp     is a General           Electric          Company        UA-3    Photochemical        Lamp.
+
+It has     a lighted        length     of six        inch_s,       producing           approximately          39 watts       u the
+
+ultra-violet         range,        between       2200    and 400OA.             To provide          the required     radiation
+
+of 0.0056     watts        cm -2    (56,000       ergs     cm -2 sec -I) the radial                  distance     from    the lamp
+
+to the specimen            holder     is 18o5        cm.
+
+                     The    temperature           of the wires           is measured           with    a thermocouple.            In
+
+vacuum     the specimens            are maintained           at about           145°C.        In oxygen       the temperature
+
+is approximately            90°C.      These       temperatures              are reached        as the result        of
+
+L-adiated energy, from              the 360 watt           U.V.    lamp,       no additional           heat     is required.
+
+
+                     24.     Exposure           to X-Ray     Radiation
+
+                     Five    twisted         pairs      and five        flexibility           specimens       of each     wire
+
+sample     are exposed         to 50 KVP x-rays              in vacuum           at    150°C    and in oxygen        at 5
+
+psia     and 93°C.
+
+
+
+
+                                                                   -22-
+                 The x-ray     source    is a Machlett      AEG50S     tube    (tungsten     target,
+
+beryllium     windo_   rated   at 50 KVP,    50 ma.      In vacuum       the specimens        are exposed
+
+for ten hours     at a dose      rate   of 6000   fads _r      hour.     In oxygen        the dose     rate   is
+
+reduced     to I00 rads     per hour.     After   irradiation,       insulation      resistance,       voltage
+
+breakdown     and mandrel      fle×i_llity   are measured       at room       condition     and mandrel
+
+flexibility     is also     measured    in liquid   nitrogen     at -196°C.
+
+
+
+
+                                                      -23-
+                    25.     Flammability
+
+                    In this       program     flan_nability         tests     have    been       performpd        in wet
+
+flowing     oxygen    at 5 psi        (254 mm.       of Hg) absolute           pressure.          The    oxygen      was      saturated
+
+with   moisture      by passing          it through       water     held     at about          10°C    above    room     temperature.
+
+The    flammability        test    chamber     was      evacuated,        flushed     once       with    pure    oxygen        and
+
+then    evacuated     to the test           pressure.          Provision     was made           for connecting           a vacuum
+
+bottle    so that     gases       evolved     could      be analyzed         as described             in the section           under
+
+analysis.
+
+                    Three    approaches        were      taken     to produce        the high          temperatures           needed
+
+to cause     ignition       (if possible)          in wires        mounted     vertically.
+
+                    Test    I - The wire          was    subjected        to external           heat    from    an
+
+                    incandescent,           heater      coil     so that     the wire          temperature        increased
+
+                    rapidly       to about     480      to 500°C.         If ignition           did not occur
+
+                    after     a five minute           exposure,      the wire        was       heated    by passing
+
+                    current       ,-hrough it sufficient             to achieve           a temperature           of
+
+                    600°C     or s anewhat        higher.
+
+
+                    Test    ii A     - An    external       heat    source     was    not used          but the conductor
+
+                    was    heated     by passing         a large     steady     current          through       it so tb.t
+
+                    a very    high       temperature       was     achieved     quickly.              In various        phases
+
+                    cf this       test    a _lominal initial          current        of 40, 45, or 50 amoeres
+
+                    was    used    for the #20 wire.               If ignition        or considerable                degrada-
+
+                    tion was       not    obtained       in 5 minutes,         the current             was    increased
+
+                    by 5 amperes          (i.e.    from     40    to 45 or from           45    to 50).
+
+
+                    Test    II B - An        external       heat    source     was not          used    and the wire
+
+                    was    brought       up to high       temperatures         somewhat          more    slowly        than    in
+
+                    II A above        by passing         smaller     currents        at    first       through       the wire
+
+                    and then        increas _Lg the current               in steps        at    2.5 minutes          intervals.
+
+                    The    following        nominal      current     steps     were       adopted:           20, 30, 32.5,
+
+                    35, 37.5,        40, 42.5,        45 and 47.5         amperes.
+
+
+
+
+                                                                   -24-
+                    Throughout      the     flammability         test     the test         specimen          was    watched
+
+carefully       for evidence       of physical        change       and the         formation          of    smoke     or visibJe
+
+w_por.      Periodically         during     the t=st      at    intervals          of about          15 seconds        a conven-
+
+tiona_     spark    plug with      platinum        plated      electrodes          set at a gap distance                   of
+
+I).125 inches       was activoted         for about       a second        by       applying          the output        of a 15 KV
+
+sign-lighting        transformer         with        output      current        limited         to    .020 amperes           by
+
+resistance        in the primary         circuit     of the transformer.                   The       spark     gap was       located
+
+within     1/32    inch of the wire          and about         i_ inches        above      the hottest             portion        of the
+
+wire    so that     inflammable         degradation       gases       would     be readily            ignited.         The      spark
+
+gap was     not operated         continuously        when      it was     discovered            that       periodic       operation
+
+of the spark        gap was      more    likely     to cause       ignition         than    continuous             operation.
+
+                    Various      types    of ignition          were    encountered          as will          be reported           under
+
+test    results.      Efforts      to use phocoelectric                indication          of    ignition          were    not     very
+
+successful.         It was     possible      to obtain         reliable        photoelectric               indication        of the
+
+faint    flashes     of non-continuing             combustion         only     in the      absenc:e of background
+
+light which        made   other    visual       observations          impossible.           It wos          indicated        that
+
+photoelectric        techniques         could    det2ct     a maintained            flame       even       in the presence
+
+of some     background        lighting     but     such detection            was    inadequate             for the present
+
+program.        Visual    observation        appears      to be more           sensitive         and discriminatory
+
+than    photoelectric         techniques        for the subject           purpose.
+
+
+                                            Description          of Apparatus
+
+                    The   test    assembly       except     for the DC          power      supply          is shown       in Figure           24.
+
+In this     photograph        the bell      jar, which         contained        the oxygen            a_ 5 psi,        is shown          in
+
+the    lifted     position.       The    bell    jar was       supported        by a rope            passing       over    a pulley           and
+
+was    counterweighted         so that      even    the development             of a small            pressure       within        the
+
+jar would       automatically       lift the bell           jar and vent            it to the atmosphere                   in an
+
+explosion       resistant      hood.      Provisions        were      made     also   to flood             the chamber          with
+
+nitrogen     in case      of uncontrolled           fire.       Thes    precautions             so far have           not been
+needed.
+
+
+
+
+                                                                -25-
+                 The    various        points     of the test           assembly     are     listed    and described           ip
+more   detail   below.
+
+
+                 a.        An    8 inch     diameter        glass       be!!     jar with     a brass       base    plate
+
+                 containing        suitable        gas ports        and     electrical        bushings        and a circular
+
+                 silicone        rubber     gasket        to plovide        a seal.
+
+
+                 b.        A DC vower        supply        capable       of supplying         a cnntrolled          current
+
+                 up to 250 amperes.                A G.F,        DC arc welder          modified      with     an extern_l
+
+                 electronic        field     supply        for better          current      control    was     used.
+
+
+                 c.        A means       for supporting            and clamping            the 6 inch        long wire
+
+                 specimen        in a vertical           position        (see Figure         25),     The     clamps    and
+
+                 leads were        designed        so that        50 amperes        flowing        through     them would
+
+                 produce        negligible        heating.
+
+                 d.       A heater         coil    (see Figure           25) consisting            of 9 turns       of #26
+
+                 nichrome        wire    wound     in a diameter            of _ inch        and a length          of ½ in_ _.
+
+                A variable,            low voltage        power     supply        to permit        bringing     the heater
+
+                 coil    to a yellow         heat     - 7 volts          from     a Variac     was    used.
+
+                 e.       A spark        plug wi'h        platinum         plated    electrodes        set to a gap           of
+
+                 0.125     inches.        The     power     supply       for the spark         plug    consists        of a
+
+                 15 KV,       50 ma     sign-lighting            transformer        with     a resistance          in the
+
+                 115 volt        prima_y     circuit        to    limit     the current        through        the gap to
+
+                 .020 amperes.            The     primary        circuit       of the      transformer       passes     through
+
+                 an electrical           interlock        on the cage            to prevent        accidental       contact
+
+                with     high     voltage.         The    spark     is activated            by an external          switch
+
+                 in the       115 volt      supply.
+
+                          The     spark     gap    is located           within     1/32     inch    of the wire        and
+
+                 1½ inches        above     the center           of th_ test        specimen.
+
+                 f.       A     .003    inch chromel-alumel                thermocouple        is used       to measure       the
+
+                 temperature           of the wire        when     the heater        coil     is used.        A hole
+
+                 sufficiently           large     to accept        the thermocouple            junction        (about    .014 inch
+
+                 diameter)        is drilled        through        the center        of     the wire.        The uninsu_ted
+
+                 thermocouple           leads     are brought           down     through     the heater       coil     and along
+
+
+
+
+                                                                 -26-
+the test wire but separated from both as can be seen in Figure 25°
+The uninsula ted thermocouple     leads are connected    to suitable and
+
+larger insulated leads and led through the bottom pis:e of the bell
+jar assembly to a thermocouple chart recorder.          A thermocouple
+potentiometer    is avail_ble also for auxiliary and calibration
+
+purposes.
+
+g.    When the external heater coil was not used,         the wire temperature
+was determined by measuring      the potential drop =long a one inch length
+
+at the center of the wire while current was flowing in the _ire.             In
+this way it was unnecessary to drill a hole for the thermocouple            and
+thereby disrupt the continuity of the wire.          Moreover,   initial tests
+
+showed that the temperature      along a one inch length at the center of
+the wire test specimen was substantially      uniform.     It is necessary
+
+to cut the wire insulation at each end of the one inch length in the
+center so as to apply the .003 inch diameter platinum            drop leads as
+
+shown in Figure 26.     These   fine drop leads are then soldered to leads
+which pass out through the base plate.       These    leads are connected to
+
+a recorder with a full scale of 0.150 volt.          Actual voltage drops
+along the one inch section of the test wire may be as high as
+0.150 inch at the highest currents.       (The internal resistance       of the
+
+recording voltmeter     is high compared to the lead resistance        so that
+the voltage drop along the wire can be accurately measured without
+error from the leads).
+
+      The current is recorded simultaneously         with the voltage on a two-
+pen strip recorder.     A suitable current shunt is used to provide the
+input to the recorder.
+
+      From the current and voltage measurement         the resistance of the
+hot wire can be easily calculated.
+
+                    E
+                R = -   Where R --resistance,   ohms.
+                    I
+                                E = voltage, volts.
+                                I = current, amperes.
+
+
+
+
+                                -27-
+                   Wire    resistance        changes          with    temperature              and it is theoretically
+
+                   possible        to calculate          the temperature                 from       the cha_,ge in resistance.
+
+                   Unfortunately           such    calculations             #epend        upon       the tempcrature
+
+                   coefficient        of resistar=e             for the conductor                    and this       coefficient
+
+                   appeared        to depend       to a larger             extent        than       expected       on the wire
+
+                   plating        and perhaps          some    unknown          factors        sucb       as the diffusivity              of
+
+                   silver    plating        into the          copper.           Oxidation           may    also    be a factor.            In
+
+                   consequence        it proved          necessary          to run calibration                    curves    of resistance
+
+                   against        the temperature             measured          with     a thermocouple.                 In _bis       case,
+
+                   to avoid        disrupting          the wire       by drilling              a hole,       the    insulation          was
+
+                   removed        from a short          section       at the center                 of the wire          and the       strands
+
+                   untwisted        sufficiently          to permit             the     entrance          of the    °003     inch wire
+
+                   thermocouple.           The wire           was    then       retwisted.            The    experimentslly
+
+                   determined        calibration          curves          for     the nickel          plated       and    silver       plated,
+
+                   #20    stranded     wires       used       in this       program           are    drawn       in FiBures       27 and 28.
+
+                             If current       alone       would       serve        to    indicate          the temperature             of the
+
+                   wire,     the measurement             problem          would       be solved.            At    the    lower    wire
+
+                   temperatures,           current       could       be related           directly          to tenperature.
+
+                   Unfortunately           at the higher             temperatures,              differences             in thermal
+
+                   emissivity        and exothermic              (or endothermic)                   reactions       at the wire
+
+                   3urface        seemed    to produce          temperature              changes          not directly          related        to
+
+                   the amount        of current          flowing.           From        the    functional          point    of view,
+
+                   the current        may be       a more       important             parameter           than    the resulting
+
+                   temperature_            However,       a knowledge              of the temperature                   is helpful        in
+
+                   makinB     comparisons          between          wires       and     in considering             the mechanism
+
+                   of deterioration           and       iBnition.
+
+                   At    the conclusion           cf    the first          phase        of this       program       it is reluctantly
+
+concluded    that       neither     the thermocouple                nor    the voltage-drop                 technique       for measuring
+
+wire    temperature       is adequate        in every          respect.           While        the voltage-drop             technique
+
+has provided       temperature        measurements,             which       are believed              to be       reasonably
+
+accurate,    it is concluded           that       the    th_rmocouple              technique          is more       direc=       and    less
+
+tedious.     In the remainder              of the program             a thermocouple                 will    be    inserted       within        a
+
+small    sectio_    of wire        which    has    been       untwisted           at the center             of the       te_t    specimen
+
+and then    retwisted        before    test.
+
+
+
+
+                                                                    -28-
+                                                   Significance           and Use
+
+
+                   The     importance           of resistance           to ignition        and combustion            in space-
+
+craft    wiring    is obvious.            The     psychological           as well        as physical        hazard      of smeke
+
+which    may    be toxic     or coat       optical           elements     is also well            recognized.         The     danger
+
+of toxic       products,     which       may     not form       visible        smoke,     should     be recognized            also.
+
+Finally,       so far as possible,              hook-up        wire   should          continue     to perform        its function
+
+even    though    _xposed        to very       high    temperatures.             As     an ideal,        a hook-up      wire      should
+
+maintain       adequat_     insulation           until       it melts     and    fuses      itself.        Perhaps      more
+
+realistically,        the wires          surrounding           such   a melting          wire     in a cabled        bund_
+
+should     continue       to function          and remain        electrically            iso_ted.          The   flammability
+
+uest    should    permit     analysis          of the suitability               of a specific            insulated,      hook-up
+
+wire    in the foregoing           respects.
+
+                   The     three    types       of flammability               tesL     are designed        to represent           three
+
+types    of field     conditions:                                        -_
+
+
+                   Test     I.     The    test with          a_ external         heat     source     represents         the situation
+
+                   in which        a hook-up          wire     accidently        may     be adjacent        to or come           in
+
+                   contact        with    another        very    hot wire        or a very         hot    element     or device.
+
+                   It is the condition                 most     likely        to produce        combustion       since      the
+
+                   heater        coil    operating        at about        900°C        itself     serves    as an     ignition
+
+                   source        and the heat          is applied        very        rapdi!y      to the outside         of      the
+                   wire     insulation.
+
+
+                   Test     II A.        The    test with        a high        _urrent     applied        at the start           of
+
+                   the test        represents          performance            under     a short-circuit          condition.
+
+                   Because        heat    is applied           so suddenly           to the conductor,           it is most
+
+                   likely        to cause maximum             physical         damage     to     the wire    insulation.
+
+                   Test     II B.        The    test     in which       current         is slowly        increased      represents
+
+                   the characteristic                 of an increasingly                overloaded        (ra_her     than       short
+
+                   circuited)           wire.     Smoke        is more        likely     tc evolve       with    this    procedure.
+
+                   The     test    also permits           somewhat       more        quantitative         comparison        of    the
+
+                   physical        degradation           of different           types     of wire.
+
+
+
+
+                                                                  -29-
+                       Additional         comment       concerning        the test        specimen     appears      important.
+
+The    speciiicatioT:           i_ the request            for proposal          called     for the     flammability           test    to
+
+be made        on a single         wire    mounted        so tLat    the 5 psi oxygen             would     have    free      access
+
+to    it.     The     test     results     to d_te        indicate     that      the vertical        mounting       chosen         does
+
+tend     to promote          the progress         of combustion           along     the wire.         It is likely         also
+
+that the       free    access       co the      atmosphere        may promote          ignition.      For     future
+
+evaluation           programs,        it is rec Jmmended           that,    in addition           to the     freely    n_ounte_
+
+specimen,        a cabled          specimen      should     be considered.               A suitable       7 wire    cabled
+
+test     specimen        has been        used    in this     program       for measuring           insulation       resistance            and
+
+corona        intensity        (see Figure        I).      With    this    sample        the high     current      could      be
+
+applied        to the central            conductor        of the bundle          and     a test    voltage      simultaneously
+
+applied        between       the Pot      central       conductor      and the surrounding                6 wire3      in the
+
+bundle.
+
+
+                       The     5 psi wet        oxygen     atmo, phere      reb'resents       the environment            of
+
+      •eral    spacecraft          and is, therefore,             important       for this        evaluation       program.
+
+however,        a very       few    limited      tests     indicate       that    more     serious     ignition        and combus-
+
+tion     problems        may    occur     in oxygen        at atmospheric           pressure.         For    eyample,      the wire
+
+itself        will    burn     in oxygen        at 15 psi.        A polyolefin           insulated     wire     even    ignited       and
+
+burned        in 15 psi oxygen            under     the    influence       of     just    the high     voltr.ge spark          at
+
+room     temperature.              In fut-,re evaluation             programs       it may be        important        Lu consider
+
+the effect           of 15 psi        as well     as 5 psi        oxygen    on flammability            since     the higher
+
+oxygen         pressures        may    be encountered         in s_me       operational           phases.
+
+
+
+
+                                                                   -30-
+                    26.     Chemical     Compatibilitv
+
+                    To determine       the resistance          of the wire       insulation         to various        c_emicals
+
+_sed   in or about manned            spacecraft,       three    twisted      pair    specimens       and six
+
+fl_Jxibility specimens             are exposed     to the chemicals           for specified          periods     and then
+
+tested     for insulation          resistance,     voltage      breakdown       and mandrel         flexibility        at
+
+room   temperature         and mandrel       flexibility       in hquid       nitrogen       at -196°C.         The
+
+perlod   of exposure          is 14 days       for all of the chemicals              except    the fuels        and
+
+ oxidizers.         For tbese compounds           the period      is reduced         to 20 hours.
+
+                    Tile twisted      pairs     are made     from extra       long     (35 inches)      pieces        of
+
+wire   so that      the flexibility          samples     can be cut      from    the long      tails    after       the
+
+exposure.      Figure       29 sh_s     t,le method       of _mmersing        the specimens          and bringing
+
+the ends     out through          a two-hole     _abber    stupper,          l_e ends      are sealed        with     an
+
+RTV silicone        rubber     to protect       the conductors        from    direct      contact     witb     the vapor
+
+from   the test      liquid         The test     tubes    are 38 mm. diameter             and 300 mm.        long.
+
+Specimens     of only       one wire    sample     are placed        in each     test     tube.     This     eliminates
+
+the possibility           of having    the reaction        products      from    one sample         influencing        the
+
+reaction    with     another       sample.
+
+                    Special       techniques     and appalatus        are required         for handling         fluorine
+
+and N204 .
+
+                    In the case       of Freon     114, which        boils    at 3.6°C,       the gas was
+
+liquified     and    then held       at -7°C ouring        the exposure         period.
+
+                    The chemicals       that     ar_ used      as test    f_uids      are:
+
+
+                             a.     Hypergolic     Fuels     (M-l)
+                                        UDMH
+
+                                        MMH
+
+                                        Pydrazine        (MIL-P-26536)
+
+                                        A-50     (MIL-P-27402)
+
+                             b.     Oxidizers
+
+
+                                        N204
+                                        Fluorine
+
+
+
+
+                                                                -31-
+                              c.     Oils    (M-2)
+
+                                            Lube    el!        (MYL-]-7838]
+
+                                            Hydraulic           oi"    (Nl_-h-5606)
+
+                              d.     Solvents
+
+                                            Ethyl       alcohol
+
+                                            JP-4    (MIL-7- 5624)
+
+                                            Freon       TF
+
+                                            Freon       1 ig
+
+                                            Yrich loroe htyicne
+                                            Ace tone
+
+
+                              eo     Miscellaneous              liquids        (M-2p
+
+                                            5% salt          solution
+
+                                            Ethylene   glycot (67.5%)                   and water
+                                              (32.5%) with inhibitors                    per A. Research
+                                            Specification    RS-89,
+
+                     In addition,        a salt         fog test        is conducted         in accordance          with
+MIL   STD    810.
+
+
+                     A11y evidence       of discoloration,                 delaminatton,           cracking,       swelling,
+
+flaking,      corrosion       or other       unusual           condition        is reported        al3ng    with     any change
+
+in insulation          resistance,       voltage         breakdown         strength       and     flexibility.
+
+
+                     27°     O ffgassing      in 5 psia             Oxygen
+
+
+                                                                 Apparatus
+
+                     The    spring     balance      apparatus           system     constructed        for determining             the
+
+weight      loss    in oxygen      is shown        in    the photographs               of Figures     30 and 31.           lhe
+
+apparatus      basically        comprised        duplicate            spring     balances       of co,ventional         deaign
+
+and a common         gas handling        system         for atmosphere            control.
+
+                     The spring        balance      utilized           quartz     springs       (Wor#en     Quartz     Products)
+
+specified      for     a 500 mg. maximum            load        and a sensitivity            of    i mm./mg.        Spring
+
+displacement         was    measured     optically            using     a cathetometer            (Gaer_ner    Scientific
+
+Corp.)      which    provided      measurements              to 0.05       nml,    T-ne nominal       detectian        limlt
+
+for these      balances       was:     therefore,            0,05     rags.     The balance       reading     was    based       on
+
+double      location       ,_asurements"           the position            of    the spring       index     relative       to the
+
+position      of a reference         mark     on the body              of the spring        housi,g        tube°
+
+
+
+                                                                       -32-
+                      The design        of    the spring          balance        unit    is shown        schematically        in
+
+Figure     32.     The balance          chamber       assembly          was     fabricated        £rom    Pyrex    glass     utilizing
+
+"standard        taper"      joints     between       sections.            A load       support     link     of 6 mil
+
+platinum       wire    was used        to suspend          the    test     specimen       within     the hot       zone.      The
+
+weight     of these         links was        about    80 rags. thus             limiting        the sample     capacity       of
+
+the balance         to 420 mgs.
+
+                      The sample        chamber       was       heated     by    a tube    furnace,        the temperature           of
+
+which    was     automatically          controlled          by means          of a thcrmocouple            placed     in the open
+
+hot    zone.      Specimen      temperature           was       monitored        by    a second     thermocouple           located       in
+
+a well     within      the sample        chamber.           This       temperature        was     recorded     and    is the
+
+temperature         listed     in the data.            The furnaces             were     mounted     on jack       units     for
+
+ease     in positioning,
+
+                      The    two balance        units were            mounted       in a rack      which    was    supported        on
+
+a vibration        dampening      pad°         The gas delivery                 lines    were     manifolded        into    the
+
+atmosphere        control      system,        the flow          diagram       for which         is shown     in Figure       33.
+
+
+                                                       Calibration              Tests
+
+
+                      The sensitivity           of    the springs             was     determined     experimentally           in the
+
+300-400     rag, load        region.         Th_s    was    accomplished              by applying        a base     load    to the
+
+balance     and measuring         the sprzng           extension           resulting       from     the addition           of known
+load     increments.          The results           in this       test     are tabulated           below:
+
+
+                                                                        Sensitivity               (mm_/rag. )
+                      Load    Range     (mgs.)                          Balance "A"               Balance "B"
+
+                       331 to 356                                         O.974                    O.970
+
+                       331 to 381                                         0.973                    O.971
+
+                       331 to 406                                         O.973                    O.970
+
+
+                       The system        was    also       checked        for temperature           effects.         Loads    of
+
+400 rags. (nichrome            wire)     were       placed       on    the balances        and an atmosphere               of 5 psia
+
+argon    was     established       in the balance                chambers.            Balance     readings     were    then made
+
+at the several          temperature           levels       of    the test schedule:                room    temperature,           150°C,
+
+200°C,     250°C,      and 300°C.            No significant             shift       in balance      reading       resulted        from
+
+the cb_:ge        in temperature.
+
+
+
+
+                                                                        -33 -
+                                              Operating        Procedure
+
+
+
+               The procedure        in this       test     comprised        the following         operations:
+
+                   i.    Wire    specimens        are cut      to a weight          of 4OO-410      mgs.      the
+
+                         test    niece     is cleaned        by wiping         with    lintless     tissues
+
+                         dampened     with     ethanol.           The specimen         is then     formed     for
+
+                        hanging     on the spring           balance,        after     which     its weight     is
+
+                         measured     on an anlytical              _alance.         All specimen          handling
+
+                         is by means         of glo_es       or    forceps.
+
+                   2.    After     suspension        of the specimen            from    the balance,         Lhe
+
+                         specimen     and     also    the glass        surfaces        of the chamber
+
+                         system     are freed        of static       surface        charges      by means     of a
+
+                         Static     Master     Ionizing        Unit.       Neutralization          of these
+
+                         charges     is required           in order      to prevent        the sample        and
+
+                         load    support      link    from     being     pulled       against     the walls.
+
+                   3.    After     complete       assembly        of the system         and positioning            of
+
+                         the furnaces,         an initial          balance      reading       is obtained.           The
+
+                         atmosphere        of the balance           chamber      is then        changed     to 5 psia
+
+                         oxygen.      This     is accomplished             by evacuation          of thp system
+
+                         (ca 50 microns)           and back-filling             with    argon     twice,     after
+
+                         which     the system        was    re-evacuated          (50 microns       or less)         and
+
+                         charged     with     oxygen*       to 5 psia        pressure      as measured        on a
+
+                         diaphra_     type vacuum           gauge.       The    stopcocks        on the balance
+
+                         chambers     are     then    closed       after    which      balance     readings        are
+
+                         obtained.         This    balance        reading      is used     as the base        for the
+
+                        weight      loss    data.
+
+                  4.     Both    balance      systems       arc then       heated      to 150°C     at relatively
+
+                         rapid     rates     (room    temperature           to 150°C      in about        15 minutes).
+
+                         The    temperature        is maintained            at 150°C     overnigha.
+
+                         Surveillance         of weight        changes       is maintained         du_ing     the
+
+                         first     i_ hours       of this      16 hour       exposure.
+
+
+
+
+*Linde   Co. Aviator    Breathing     Grade:         Minimum      Purity       Specification        99,5%.
+
+
+
+
+                                                             •34-
+                              lhe balance       of    the heat         schedule      comprises         increasing
+
+                       the temperature         sequentially            to 200°C,       250°C,     and    300°C
+
+                      with    30 minute      ho|d_        '_gperiods      at each       temperature.        A
+
+                      eontin.,ng      surveillance           of weight         change     is maintail.ed
+
+                       throughout     this exposure.               _'le balances        are    run singly         in
+
+                       this heat     schedule        in order       to permit        the close         following
+
+                       of any     reactions.         As    a consequence           of this     scheduling,
+
+                       additional     data     are obtained            on the inactive          system.         While
+
+                       the first     balance     is operated             through     the high      temperature
+
+                      program,      the second        balance       is held        at 150°C     (ca 2_ hours)
+
+                       and confirmatory         rate       data    re obtained         relative        to the
+
+                      overnight      heating     at       thls    temperatureo          Similarly,        while        the
+
+                       200-250-300°C        program        is being       conducted       on   the second
+
+                      balance,      the first        unit     is maintained          at 300°C      and data
+
+                       covering     an additional           2½ hours       at the termina]             temperature
+
+                       are obtained°
+
+
+                 5.   The systems      are cooled           rapidly       by     withdrawal       of the
+
+                       furnaces.      'ferminal balance             readings        are made      after
+
+                      cooling      tn room     temperature.
+
+                 6.   Prior     to disassembly            a check      is made      to insure      the absence
+
+                       of leakage     into     the balance          chambers.          This    is accomplished
+
+                       by readjusting        the pressure           in    the gas manifold             to the
+
+                       initial     level    and then        noting       any   change     in pressure       on
+
+                       reopening     the balance           chambers       into     the manifold.
+
+                 7.    The terminal        weight     of the specimen              is determined         on an
+
+                       analytical     balance.
+
+
+                                                Data       Tabulation
+
+                 The results       in these     tests        are tabulated          in terms      of    the cumulative
+
+weight   loss   of the specimen       versus        the various          thermal     exposure      events       (time
+
+and temperature       defining     the extent        of exposure).             Thus,     the indicated          weight
+
+
+
+
+                                                             -35-
+loss    represents       the     full weight           loss    accumulated              as a result          of the refere,lced
+
+exposure       event    plus     the summation           of all prior                 events.        The weight       loss values
+
+are based       on the initial           spring        balance        reading          at 5 psia       oxygen       (room
+
+tempe rature).
+
+                      It should        perhaps       be noted         that       the balance          chambcr       temperature          has
+
+a cyclic       characteristic           based     on the operating                    differential        of the controller
+
+and    the thermal        lag in the system.                  The cycle          was     generally        uniform      and       amounted
+
+to +_J°C for Unit          A and +_1½°C for Unit                 B.        The    temperatures           listed      for    the constant
+
+temperature          periods     are    the mean        values        of    recorded          temperature          for that       period.
+
+
+                                                             Gas Analysis
+
+
+                      In addition        to determining               the weight           loss      in vacuum,       separat_
+
+analytical       experiments           are conducted           to identify              the off-gassing             products,        both
+
+in oxygen       and in vacuum.            These        analyses        are done with              an Analytical            Mass
+
+Spectrometer           (General    Electric          Cat. No.         8665934          G-I)     and a Recording            Infrared
+
+Spectrometer           (Perkin-Elmer          Model     21).
+
+                      In making        the studies,           18 inch        lengtlls of the wire                  sample     are
+
+first     cleaned      with     ethyl    alcohol,        then     cut       into       short     (I_")    lengths,         and
+
+weighed.        This     sample    of wire        is then        placed          in    the side       arm of the q,,artz
+
+furnace     tube shown          in Figure        34.     The quartz              tube    is then       placed       in a Hoskins
+
+Furnace     so that       the    lower    portion        of the        tube       (up to the side             arm)    can be
+
+heated.        The    furnace     is held        at 600°C        for orle hour             under      vacuum.        The     side    arm
+
+and    the upper       portion     of    the quartz           sampling           tube    are kept        at ambient
+
+temperature          during     the heating.
+
+                      After     one hour       _f heating         the sampling                tube    is sealed       off with        the
+
+stopcock       and removed        from    the furnace.                It is allowed              to cool      to below        lOO°C
+
+and then       tipped     to move       the wire        to the bottom                 of the     tube.       The    tube     is then
+
+placed     in a furnace          held    at    150°C     with     an Amplitral                Controller        for ene hour.
+
+                      After     one hour,        the tube, still              in the oven,            is attached           to the
+
+mass    spectrometer           sample    system        and    a portion           of the outgassing                _roducts       that
+
+have    been    given     off are admitted              to the mass              spectrometer          and    analyzed.
+
+Following       this,     the sample          tube     is placed           in !iq,-id nitrogen               to freeze        out all
+
+¢ondensabl,           compounds        especially        C02_         Since       the mass        spectrometer         cannot
+
+easily     separate       CO from       N 2, those       gase_        _ot condensed              at the      liquid    nitrogen
+temperature          are admitted        to the mass           spectrometer              through       a small       tube
+
+                                                                      -36-
+containing        a catalyst       to convert         CO to CO 2.          In th_s       way the CO-N 2 ratio             can be
+
+determined        using    mass    28    (N2) and mass         44    (C02).
+
+                    When     the analyses         are completed            at 150°C       the sample        tube    is again
+
+evacuated       - this     time    only       for five minutes           to pump        off the residual           material.
+
+The    tube    is again      sealed      off and      the same       procedure          followed     using    an    oven
+
+controlled        by an Amplitrol             at 300°C.
+
+                    The foregoing             discussion     gives       the aetai!s        when     studying       outgassing
+
+and degradation           under    vacuum.        When     the studies        are made           in the presence          of
+
+oxygen     some    of   the procedures           are different.             The    initial       evacuation        of    the
+
+sample     tube    is carried       out for       15 minutes,         then    nxygen       at 5 ibs.        absolute          is
+
+admitted       to tbe sample         tube, sealed          off,     and he:_ued for cne hour               with     oxygen.
+
+After    one hour       the oxygen        and outgassing            prod_.t s are pu,_ped away               and    the
+
+sample     tube    cooled.        The wire       is dropped         into     ,le Io       Jr part    of    the furnace
+
+and brought        up to 150°C          and    then   filled      to 5 psis        with     _"      n (Matheson
+
+lecture       bottle)     and heated          for one hour.          Since,       with    the oxygen       present        the
+
+degassing       products      are considerably             diluted,        the method       of analysis         consists
+
+of first       taking     a sample       of    the total     gas, with        the oxygen,           then    freezing          out
+
+the remainder,          and allowing           this   to pass       thro,,gh the catalyst             to check          for CO.
+
+After    this     is completed,          the non condensible               gases    are pumped        away    and       the
+
+sample     agaln    brought       up to       temperature.          In this       way    a more     sensitive       analyses
+
+of    the trace     degradation          products      in the sample          can be achieved.
+
+
+
+
+                                                                  -37-
+                       28,     Vacuum       Volatility
+
+
+
+                                                                 A_aratus
+
+                       The weight          change       measurements           for the vacuum              exposure     are made       in
+
+the spparatus           shown       in Figures          35 and 36.          This         apparatus       consists      of a micro-
+
+balance     and associated                vacuum     system       furnace       and       recording        equipment.
+
+                       The    electronic          recording        microbalance             (Sartorius-Werke,              Gottingen,
+
+model     Electr_ta)          was    designed        for vacuum          operation.             The maximum         load    and accuracy
+
+are specified           as    I000 mg.       and 0.001           mg.   respectively.               The balance         amplifier
+
+scales     can be adjusted                to detect        weight      changes           in the following           ranges:     0-20,
+
+0-i0,     0-5,    0-2,       0-i,    0_0,5,       and    0-0°2     mg.    full       scale°        The     balance     sensitivity          is
+
+about     0.2%    of    the full          scale    magnitude.            The balance            is mounted       on a table        designed
+
+to minimize        transmittal             of shocks        and vibration                from   the environment            to the balance.
+
+The output        signal        is continuously             recorded          (Leeds       and Northrup,         Philadelphia,           Pa.,
+
+Model     Speedom_x          H) o    Because        of the weight             of the wire          used     to suspend        the specimen,
+
+the specimen           weight       was    held     at 800 to 815 mg.
+
+                       The    balance       is connected            through         metallic       bellows     to a vacuum         pumping
+
+station     (Veeco          Vacuum     Corpo,      N.Y.     Model      VS-9)        designed       to produce         vacuums     of
+
+1 x 10 -7 torr°              The    system     as used       readily          pumped       down     to 10 -6 to 10 -7 torro
+
+during     test°
+
+                       The    specimens       were       suspended        from       the right        arm of the balance               in a
+
+veruical,        closed-end          quartz        tube.     Tare      weights           were   suspended       from    the     left
+
+balance     arm.        The     specimens         were     heated      by raising           a tube       furnace      mounted     on slid-
+
+ing rods     over       the furnace          tube.         The    furnace       was       continuously        held     at the operating
+
+temperature        which            )uld maintain          the    specimen          at    150°C.
+
+                                                        Operating        Procedure
+
+                       The procedure            in this      test      consists           of the     following        steps:
+
+
+                       i.          Wire    specimens        are     cut to a weight               of 800 to 815 mg.             to the
+
+                       nearest        0.i mg.       on an analytical                balance.         The    length     of wire     is
+
+                       recorded.           The wire        specimens          are    cleaned       by wipip_        with    a lintless
+
+                       tissue        dampened      with     ethanol.           The       specimen     is formed        into a coil          of
+
+
+
+
+                                                                       -38-
+               suitable        size    for insertion          into     the furnace             tube.      The    specimen          is
+
+               re-weighe_        and differences             from     the original             weight     noted.        The
+
+               specimens        are handled        by means          of gloves        or    forceps        during      this
+
+               operation.
+
+               2.        The    specimen       is hung       on the balance              arm    and the position              on
+
+               the chart        noted.        If repositioning              is required,           other      than     that
+
+               which     could    be accomplished             by readjusting               the torsion          of the beam
+
+               wire,     tare weight s are removed                   or added       at     this    time.        The quartz
+
+               furnace     tube       is then    positioned.            No     further         operations        are    conducted
+
+               until     a stable       signal     is obtained.
+
+               3.        The    roughing       pump    is then        used     to evacuate             the balnnce       chamber.
+
+               The    range     swltch     is turned         to the 20 mg.            setting          during    this    initial
+
+               evacuation,        which       was manually          controlled           at a rate        slow    enough       to
+
+               pre_,ent excessive             force    on    the balance           arm     (as indicated          by "apparent"
+
+               weight     changes       observed       during        this    operation).               Evacuation       is continued
+
+               with    the diffusion           pmnp,     and the weight             change        during      this     operation
+               is recorded.
+
+
+               4.        When    the weight       becomes       constant,           the heated           furnace       is raised
+
+               around     the specimen.           Continuous           weight       loss       rate     measurements          are
+
+               recorded        until    the    slope     of the curve           obtained          is    less than       0.0025%         per
+
+               hour     (based    on insulation             weight     which       was     assumed       to be    10% of the
+
+               wire    weight).         The    furnace       is cooled        by    lowering           _he furnace,       and
+
+               weight     changes,       if any,       are noted.
+
+               5.        Thc vacuum       pump     is isolated          and     air      introduced         slowly,      following
+
+               the precautions           take,_ during         initial         evacuation.             When     the    specimen         is
+
+               subjected        to air at atmosph_ic                  pressure,          the weight         change      is recorded
+               for one half           hour.
+
+
+               6.        The    specimen       is removed        from       the microbalance              and weighed          on
+
+               the analytical           balance.
+
+                                                   Gas Analys is
+
+               The    procedu=es        used    in analyzing           the gases           collected       during       heating         in
+
+vacuum   are described     in the previous             section.
+
+
+
+
+                                                              -39-
+Figure I:   Cabled Specimen for Insulation Resls_ance
+                     and Corona Measurements
+
+
+
+
+                         -40-
+-41-
+Figure   3:   Cable4   Specimen   Mounted   in   High   Voltage   Cell
+
+
+
+
+                                  -42-
+                                                                         i
+• i !
+
+
+
+
+  _|.
+ • o
+Figure 5:   High Voltage (;ell for Voltage Breakdown
+             Measurements in Oxygen and in Vacu.a
+
+
+
+                         -44-
+
+
+                                                       1966008736-
+                             Silicone       Rubb
+
+               /       _F-      Insulated          -----_d
+                        rJ        Le ad s          14          f
+              /                                                ¢
+
+                                    Spring
+                                    Loaded-                    /
+              /                      Clips
+
+
+              /                                                /
+                                 .i Pyrex                      fq
+                                    Tubes
+              /
+                                                               f
+
+                                   Twisted.                    /
+                   I                Pairs                      /
+
+
+                                 19.5"      long                   /
+
+                                    28 mm                          /
+
+
+              /
+
+
+
+
+Figure   6:   Cross    Sectional     View     of Set-Up      for
+              Electric       Strength      Measurements      at 5 psta   O
+                                                                             2
+
+
+
+                                    t /"
+.,,(,-    9660
+         ,_
+Figure 8:   Typical X-ray ef Wire Specimens
+                   (5X Magn_f _cation)
+
+
+                    -47-
+Figure   9:   Wire   No.   3 After   Thermal   Stripping
+
+
+
+
+                            -48-
+        .-j
+
+
+
+
+    ;   •4 ".
+
+
+
+
+                                                    •           **   ._   %%   _   .-   o. *,•
+
+
+
+
+                Figure i0:   Electrical and Mechanical Specimens for Potting
+,                                      Compound Compatibility Tests
+
+
+                                             -49-
+                                                                                                      ?
+
+
+
+
+:                                                               _              .   -,         _ _ _-i_,
+
+
+
+
+    ,                                                                                   :       %
+
+
+
+
+        • ,,.' i'   ".   J,a
+
+
+
+
+                Figure         12:   Repeated  Reversed Mandrel Flexibility  Test Apparatus
+                                        for use with 0.030" t_ 0.125" Diameter Ma,ldrels
+
+
+                                                         -51-
+                                                                               1966008736-0!
+                                                 \
+
+
+
+
+Figure   13:   Repeated  Reversed Mandrel Flexibility  Test Apparatus
+                    for use with 1/4" to 1 3/4" Diameter Mandrels
+
+
+                                   -n
+                                                 ®
+
+
+
+
+Figure   14:   MIT   Fold   Endurance   Flex   Teste_
+
+
+
+                        -53-
+                                                        1966008736-(
+Figure 15:   Loading Nose for MIT Fold Endurance Flex Tester
+
+
+
+
+                              CA.
+Figure   16:   £imens_ ons of Modified   Loading   Nose   for MIT   Flex   Tester
+Figure 17:   NEMA Scrape Abrasion Tester
+. qq -
+Figurc   22:   Specimens  for Thermal Aging   Tests
+                       at LS0°C in Vacuun]
+Figure   23:   Chamber   for Ultraviolet   Exposure
+                            in Vacuum
+Figure   2_:   Fllbility   Test with   External   Heater
+
+
+                                                           i
+Figure 26:   Fla_nability Test, Voltage Drop Technique
+                                                                                                                                                      ;                                                                          :                                      ....                               :                .!._".:i ..i
+
+
+                                                 ""                                                                                                                         "       "        :         ..........                                                                                          '     ...........                     i
+                                                   "i
+
+
+
+
+                                                                                                                                                                                                                                                                                          ",,t,., t-%
+
+                                                                               "" ".. ")[                                   " :    "                  : "    "                                                                                                                '               _      O     .
+
+    ............................ -'_.._
+                                    ......... - .....: ................. : ....................                                                                                                                                                                                               M_ '                             -
+                                                                                                 ",_                                                                                                                                                                                          _
+.........................                                                                             -N-- .......            :- .....                _ .............                        : .............................                                                  ;               m--    -
+                                                                                                        •                                                                                                                                                                                     IJ v-_
+
+                                                                               ......                         _               : ......................                                                                           :         .......                            :               II_ -4
+    ................................                                           :........                          \---_. ......                       :...............................                                           :......... !........ :_.                                         • _., ...............                                  ,.
+                    :       .................
+                                 •                                                       :...........................
+                                                                                         .               -l, -                                                                                         .                         .         :...........
+                                                                                                                                                                                                                                                .                       i i                         .,-4 "            "        "       :             "_'"
+
+                        .......................                                                                                                                                                                                                                                               4-IC'J ".....                    i...... ,
+
+
+                           .                       .       .         :                   !                    _         .     : \                     !                 •           .        ,         .       _ .               :         :         :        .         :                     ,, _ _                           :
+    .......         I .....         ! .......      _       ..............                 ; .......           i .......       : ...... '_,_:........                    _.................                     - .        : .__: .... :.-_: .........                   :..                   _-." %       i -        .     -"       -:- .-
+                    •      :        _        .                     I                    -I                    '         "      i      " \_                         :,           ,        I         -           ',              • -          _                           :                     _ _          :                 :         :    :
+
+    --!:: , !:!                                                                                                                                                                     ::i:.....                                                                                                              !.......
+                                                                                                                                                                                                                                                                                                              :....
+                                                                                                                                                                                                                                                                                                                 !
+     .....          :    ".'" -d ........          . .........       ,'---:---t              .......          : .....         _ "":'--                I"-'_,---         _--         :"::_-':":           .................                       :': .........                                ¢_ r._       : .....             :   ': .... ]
+          •                  - !                   ' -               !                                        I                               :        I     "_                     :                  : "                       :               " " "                  ,                     I,,4         l                          --
+ ..................                                                                                                                                                     ,           ,                                                                I                  ,                                  14--                                      ,
+• . ....                                                   •         I                    ,                   _         •     _ -:---_                       ,-_t                   " -,'-                                       .         "-                           ;
+1" -"-- :..................
+                   1 .................
+                                ":.................
+                                                _                                                             I---: ....
+                                                                                                                    ......l-:Ti:'::?":-"
+                                                                                                                                      .......
+                                                                                                                                         _--',._',
+                                                                                                                                               ....... t....... :!-- :"-:'_::-:':".......
+                                                                                                                                                                                      1 :.... :"                                                                                              _             .....              :". :.....
+                                                                                                                                                                                                                                                                                                                                       l,.
+      ....                     .--':-..'Y----,----,_-------_-'z                                           •             +_--.f-_----                                            .            r    ' .          I       .'_'-'_.'_.                ,-t------          --,*-- .................                                                   "_
+
+J--
+  ........................                     t.............
+                             _..................
+                                         ,.......           :-:-:_---:_,rJ---:---_---'-  -4---    :-:
+                                                                                                    .................... :- - -] I-".
+! . ! : i:j . ;                  . ! .:q    " '!:-::     .:::!-:I   :_i..i-.i:l.:     ,..::,iii:i      : i '   _       : i . i _,
+.L:--------_---_------4_---_   '   I : .. .: --_::----_-_ ..... I " ', 'L:I       ..... i " ' ___L_....                :__.:_--_.--' ,
+
+L.:_...:_......-_-L:....i-.,_____i...:-_:_::_-:.
+                                  i .-; ..-::--1:-_-:_.    :: _....::..__L.:._:__-_.q_!:-:3.3!.:q..._.
+                                                                                           .:.- . ._- .-. ,....i....._
+                                                                                                                     ...i.:..,...i.
+                                                                                                                           " :-                                                                                                                                                               _             i:.. '_: ..i...:l: ,_--
+
+]                                   ....                                                                                      I                                                                                                                                                                                                "-I
+    -           _        " :      '  .......          _      ....        _  ..............
+                                                                                                      :::t: -: i "- • o•                                                                                                                                                                      _                               o
+  -. t '          - -t--.- .....
+ ...... I- ._: -.::__.: : :-:.::-
+                                  t ."-:.....t-::. ...... :--      -: , :--::::::':::;-
+                                                            :_._-::_:_::-_._.-->_:".._;-t-" . ". --.--'.':::_-:i ..... :--':.... _-"                                                                                                                                                          I_
+                                                                                                                                                                                                                                                                                                                         " ":....
+                                                                                                                                                                                                                                                                                                            [.... :.... !:::'.'E"  -_
+                                                                                                                                                                                                                                                                                                                                  _-
+r_----_:.                                        _ ; '.;                   "            __                              : I                       "I         _i                         -:---I . "                    "                    :         ;_-.:--                              .................                            :-:_                      _O
+    • - ,                            " : +:I+'.':.:'.I                     "': ....                   :     -i •        •     I    " .   - . .                            ".. ; ..                     "     - "L:              ....       :                  .         + .       :       J                 ,                  ,       "+                     -,_'-'
+        : :., -            '         ;.: :,: :|-" ;: -                   " , : " +                :       ;_ -          :    "I  ".-   ! .:.:.'.                        I'.":"       : I                    "+,  "                !    '             ! .      "         '             "   I                 "                  J                .'               _
+        .... 1                     _ ......................                                                                   _ "      I         .                      l      .....                          t    "             _              ......                                                                                 _             l
+                                    I .--: :-d:                                :_.-"--:'-,                                                            ,.::-I-                                _ '::.,                           "-._ : :                                 '..               _                                    i ...Z:!_ '_.
+          ..........                                                                     ! ..................                                                                                                                    _:                           ....                                                             _       t ....
+
+I....... ] .....                      -:._         ]-_:':":-..T:-T::-I-.--T                                                              --               =:-;q--:---i:-::-!-.-.-]                                  .... :-I"V!                .... i ': .... _;; .... !....... i........ T:"E:::]
+t         ,                                 .                    /                      ._ ......                                                     I      .......                                                             ,         :% .X              .....
+I-: .... •: : ........
+                  _                   ,
+                       :.... ,--: ........                                               _........ * -:• .....................
+                                                                                          ,     .            ,           ;                                       - _                •
+                                                                                                                                                                                    :......,                   ,: ...... _"_\:
+                                                                                                                                                                                                               :                             - ,
+                                                                                                                                                                                                                                                           ': , ........
+                                                                                                                                                                                                                                                                   .                      :
+                                                                                                                                                                                                                                                                                          , "              :          ......         ..
+                                                                                                                                                                                                                                                                                                                                       .             ;
+
+
+
+t i i-l...::-:.it..:ii:..l...!.:..t!!:i:.-                                                                    il: .           ! : i..:.-.                                       :!. I : !.                                       i                   l_i                ! : i                               :                  ; " ,
+I"...........
+         ', .....                   i""     :.... _";.':::"."
+                                            :;    : ;:.,.: .'I:.i.:,
+                                                              ".'::I*;'_ I...
+                                                                           ::.'---,*..........
+                                                                                      "-"I;i                                  |-         : ;
+                                                                                                                                         ,"           ] --;. _,-
+                                                                                                                                                             :          ,
+                                                                                                                                                                        !'-:        :
+                                                                                                                                                                                    ......             :"      II "; .... T.........
+                                                                                                                                                                                                                                  ;                  :, .............
+                                                                                                                                                                                                                                                           "_"                    ,       ,                 ,:        *        , .
+                                                                                                                                                                                                                                                                                                                               ,;........            '
+
+I          I                      :.I:      :..i.       :":I-":."      :-I:: .::'-I.--        :                               ,        '          ]              -I    "                                       "                 i      '             '       : "_i    ,                                    ,                  i       •             i
+I- --'_--]               ......      I .... _.-- _.-: ::-." - :::.:.-i::--:::.         I ---:--                               i ......                _.... ' .... I.--: .......                               _ -        .-     , .......           '        • - %--- :                  :              --!         ....              : -           I
+I          _                                          '      'I             "             "                                   i        '                            I    :                                     ,                                      ,                                                                        '       •
+    ......          £----- -- _ ....... :--- '--_:-:-:-=--4..... :_---: ---!........                                                                         ----._---------_
+                                                                                                                                                                            ..... _- --:.... :............. ;-- ,'-_:---_---- ......                                                                                           ,--- :---J
+                              ' ' _":::..'.'.             .I" .,       .   :                                                                                      _                ,         :          i       ' N ,i            i                                                                                                 '
+
+    .....           i ...... ; .....              ;---: ....._ --i---.:-                         --..--=4.
+                                                                                                       ......                 ,----=--r -------_, -----f----_                                                       ........ _-_-_- ..... T ..... -_ ......... _........ _........
+      .. ! ' .: _ : i l.;.i !...:.:i......I...-.-.i......1.......I...:....: ....I ..... !...i...L..i
+                                                                                                  ....;.N.::..i...:.i...i..i
+    ........"-'...........
+                    "_ _ .... -_-'--"_-'--'':
+                                     I"      I--'=--_'---II
+                                                       :.'t--'T:' _--" !,, ' _ I___._
+                                                                                   i .-.._j___j
+                                                                                         '. i.-._----_:--_-.-.--
+                                                                                                :        .L-.._:--.!...'.-.-
+                                                                                                                       t :.....,
+      • + ' :       ' ":" i...i.;:l     ]                                                                                    .l. ! 'I ' I -, I : i ' ; : I :--I '.       Ix'  I_ : _ '
+    ..........4.....
+                   -_-----_._-_z4-  ....                                                                                      _---i----4_
+                                                                                                                                      _ -4_-'_._.--_.-_---__i-----_
+                                                                                                                                                             --_
+                                                                                                                                                               ---:.--4._*
+                                                                                                                                                                        -_---_--.
+                                                                                                                                                                              ,llv.-
+                                                                                                                                                                                  ---
+                                                                                                                                                                                    i-.
+                                                                                                                                                                                      -..,--..
+F_,_ur_, _0:   Quartz   Spring    Balance    Assemblies       for   Measurement
+                                 of   Offgassing   in     Oxygen
+Figure   31:   Quartz   Spring   Balance   Specimen   Chamber
+                                                              ol _ermocoup!e
+
+
+
+
+Figure   32:   Schematic   D_a_mam   o_ Quartz   Spring   Balance
+
+
+                              -71-
+                                                       To Spring Balance
+                                                       Chambers
+                                              >
+
+
+
+
+         Flow
+                 I
+         Meter
+
+                 q
+
+
+
+                                                           Dial Gauge
+
+                                             __            Vacuum
+
+
+
+
+Oxygen                                            _       Thermocouple
+
+
+    _> ____                          _            _'      Vacuum Gauge
+
+
+
+
+Argon                         I
+
+                                  Pump
+                                  Vacuum
+
+
+          Figure 33:   Flow Diagram Atmospheric Control System
+                       for Quartz Spring Balance Apparatus
+
+
+
+
+                                    -72-
+                                                                !
+
+                                                                l"
+I:_guv_,3b:   Recording Microbalance and Furnace Used in
+                        Vacuum Volatility S_udy
+
+
+
+
+                                                           1966008736_081
+

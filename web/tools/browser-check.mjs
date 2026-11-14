@@ -36,6 +36,7 @@ try {
   evidence.runtime = health;
   assert.ok(catalog.scenes.length > 0, 'A real scene catalogue is required.');
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: 'Laboratoire', exact: true }).click();
   await page.locator('#scene-select').selectOption(catalog.scenes[0].id);
   await page.locator('.viewport-loading').waitFor({ state: 'hidden' });
   assert.equal(await page.locator('canvas').count(), 1);

@@ -1,0 +1,18 @@
+A New Test Methodology for Evaluating Fire Risk Due to Electrical Faults in Oxygen-
+Enriched Environments
+Authors: Stephen F. Peralta, Timothy D. Gallus, Gregory J. Harrigan, Thomas K. Evans, and
+DeAngelo D. Maestas
+This paper discusses a new test methodology for assessing the safe use of materials found in
+spacecraft that may be exposed to electrical faults, as performed at the NASA White Sands Test
+Facility. “Wire-break” testing, modeled after the Cleveland Open Cup method, identifies the
+conditions under which pyrolyzed material transitions from a brief flash to a propagating flame.
+The approach focuses on fuel mass liberated through pyrolysis, mixed with oxygen, and ignited
+by a piloted ignition (spark due to fusion of wire) to achieve flame propagation with the least
+energy. The test approach attempts to find energy density thresholds derived using I²t values
+from current-induced heating of various test materials and wire characteristics. The application
+of the data provides a useful approach to mitigating fire risks in space systems by correlating
+threshold data to real-world designs and scaling factors, including oxygen pressure, wire
+diameter, heat sinking, and contained smoke volume. Several case studies, including Apollo
+missions and hypothetical scenarios, illustrate practical applications of these thresholds to
+enhance fire safety design considerations in space environments.
+

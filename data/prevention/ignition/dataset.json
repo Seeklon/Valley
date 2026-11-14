@@ -1,0 +1,802 @@
+{
+  "dataset_id": "guo2023-figure5-v1",
+  "source_id": "GUO-2023",
+  "title": "Identifying two ignition modes of polymer insulated wires with continuous excess current in microgravity",
+  "doi": "10.1016/j.firesaf.2023.103925",
+  "url": "https://hdl.handle.net/2115/95853",
+  "download_url": "https://eprints.lib.hokudai.ac.jp/dspace/bitstream/2115/95853/1/F.Guo_FSJ_141%282023%29103925.pdf",
+  "source_sha256": "cb5837c2c8570338da4020ad0648e8630555bf43b0dec92ecb9bcfbb2b6ec853",
+  "source_bytes": 2550400,
+  "source_file": "guo2023.pdf",
+  "license": "CC-BY-NC-ND 4.0 (accepted manuscript, unchanged)",
+  "authors": "Feng Guo, Seiya Kawaguchi, Nozomu Hashimoto, Osamu Fujita",
+  "is_nasa_dataset": false,
+  "method": "Coloured vector symbol centres, linear current axis, log2 time axis; black simulated points excluded",
+  "axis_anchors": {
+    "x_current_0_25_pdf_pt": [
+      185.1000061,
+      424.5
+    ],
+    "y_time_half_32_pdf_pt": [
+      474.9599915,
+      367.6199646
+    ]
+  },
+  "partition": {
+    "train": [
+      3.5,
+      4,
+      5,
+      6,
+      6.5,
+      8,
+      10,
+      18
+    ],
+    "validation": [
+      5.5,
+      9,
+      13
+    ],
+    "test": [
+      4.5,
+      7,
+      7.5,
+      11,
+      15
+    ]
+  },
+  "protocol": {
+    "material_preset": "nichrome_ldpe_guo2023",
+    "wire_length_m": 0.07,
+    "core_radius_m": 0.00025,
+    "insulation_thickness_m": 0.00015,
+    "resistance_per_m_ohm": 5.5,
+    "resistance_tolerance_fraction": 0.07,
+    "forcing": "constant excess current, initially quiescent gas",
+    "associated_numerical_context": {
+      "temperature_c": 20,
+      "oxygen_percent": 21,
+      "pressure_pa": 101325
+    },
+    "experimental_environment_uncertainty": "Numerical nominal atmosphere is stated in Figure 2; per-test atmosphere logs are unavailable"
+  },
+  "limitations": [
+    "Only published igniting cases: no non-ignitions, failure frequencies or full censoring records",
+    "26 plotted observations are not 26 verified independent raw trials; replicate counts are unavailable",
+    "Current groups are held out together; no independent study or flight-vehicle validation",
+    "Microgravity facilities have different residual acceleration and exposure time; a causal gravity effect is not identifiable",
+    "A predicted conditional delay is not an ignition probability, mission risk or remaining useful life of actual spacecraft wiring",
+    "Graphical readings retain rounding/marker-anchor uncertainty; time series and experimental uncertainty are unavailable"
+  ],
+  "points": [
+    {
+      "id": "guo2023-das-3.5a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 3.5,
+      "read_current_a": 3.502504857442052,
+      "ignition_delay_s": 16.19330658897947,
+      "event_observed": true,
+      "family_id": "current-3.5a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        218.6399917602539,
+        385.20001220703125
+      ],
+      "pdf_drawing_seqno": 88,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-4a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 4.0,
+      "read_current_a": 4.000625617049654,
+      "ignition_delay_s": 12.819481835625172,
+      "event_observed": true,
+      "family_id": "current-4a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        223.40999603271484,
+        391.2300109863281
+      ],
+      "pdf_drawing_seqno": 89,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-4.5a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 4.5,
+      "read_current_a": 4.501879081342016,
+      "ignition_delay_s": 9.377320573009843,
+      "event_observed": true,
+      "family_id": "current-4.5a",
+      "split": "test",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        228.20999908447266,
+        399.3000183105469
+      ],
+      "pdf_drawing_seqno": 90,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-5a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 5.0,
+      "read_current_a": 5.0031325456343785,
+      "ignition_delay_s": 7.7049033960240765,
+      "event_observed": true,
+      "family_id": "current-5a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        233.01000213623047,
+        404.3700256347656
+      ],
+      "pdf_drawing_seqno": 91,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-5.5a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 5.5,
+      "read_current_a": 5.501253305241981,
+      "ignition_delay_s": 6.479653224592376,
+      "event_observed": true,
+      "family_id": "current-5.5a",
+      "split": "validation",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        237.7800064086914,
+        408.84002685546875
+      ],
+      "pdf_drawing_seqno": 92,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-6a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 6.0,
+      "read_current_a": 5.999374064849584,
+      "ignition_delay_s": 5.213791136357312,
+      "event_observed": true,
+      "family_id": "current-6a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        242.55001068115234,
+        414.4500427246094
+      ],
+      "pdf_drawing_seqno": 93,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-6.5a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 6.5,
+      "read_current_a": 6.500627529141946,
+      "ignition_delay_s": 4.435943485170847,
+      "event_observed": true,
+      "family_id": "current-6.5a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        247.35001373291016,
+        418.62005615234375
+      ],
+      "pdf_drawing_seqno": 94,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-7a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 7.0,
+      "read_current_a": 7.001880993434308,
+      "ignition_delay_s": 3.958361219683294,
+      "event_observed": true,
+      "family_id": "current-7a",
+      "split": "test",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        252.15001678466797,
+        421.56005859375
+      ],
+      "pdf_drawing_seqno": 95,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-mglab-7a",
+      "source_id": "GUO-2023",
+      "facility": "MGLAB",
+      "current_a": 7.0,
+      "read_current_a": 6.998745898588293,
+      "ignition_delay_s": 4.13712494840315,
+      "event_observed": true,
+      "family_id": "current-7a",
+      "split": "test",
+      "gravity_g": 1e-05,
+      "facility_max_exposure_s": 4.5,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        252.1199951171875,
+        420.4200134277344
+      ],
+      "pdf_drawing_seqno": 103,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-7.5a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 7.5,
+      "read_current_a": 7.50000175304191,
+      "ignition_delay_s": 3.435022506360377,
+      "event_observed": true,
+      "family_id": "current-7.5a",
+      "split": "test",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        256.9200210571289,
+        425.2200622558594
+      ],
+      "pdf_drawing_seqno": 96,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-8a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 8.0,
+      "read_current_a": 8.00125601405469,
+      "ignition_delay_s": 3.0438995765396304,
+      "event_observed": true,
+      "family_id": "current-8a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        261.72003173828125,
+        428.3400573730469
+      ],
+      "pdf_drawing_seqno": 97,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-mglab-8a",
+      "source_id": "GUO-2023",
+      "facility": "MGLAB",
+      "current_a": 8.0,
+      "read_current_a": 8.001252827173017,
+      "ignition_delay_s": 3.301923723909703,
+      "event_observed": true,
+      "family_id": "current-8a",
+      "split": "train",
+      "gravity_g": 1e-05,
+      "facility_max_exposure_s": 4.5,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        261.7200012207031,
+        426.2400207519531
+      ],
+      "pdf_drawing_seqno": 104,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-mglab-9a",
+      "source_id": "GUO-2023",
+      "facility": "MGLAB",
+      "current_a": 9.0,
+      "read_current_a": 8.997494346388223,
+      "ignition_delay_s": 2.635332607666574,
+      "event_observed": true,
+      "family_id": "current-9a",
+      "split": "validation",
+      "gravity_g": 1e-05,
+      "facility_max_exposure_s": 4.5,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        271.260009765625,
+        432.0600280761719
+      ],
+      "pdf_drawing_seqno": 105,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-cosmotorre-10a",
+      "source_id": "GUO-2023",
+      "facility": "COSMOTORRE",
+      "current_a": 10.0,
+      "read_current_a": 9.999998088091273,
+      "ignition_delay_s": 2.203416569399537,
+      "event_observed": true,
+      "family_id": "current-10a",
+      "split": "train",
+      "gravity_g": 0.001,
+      "facility_max_exposure_s": 3,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        280.8599853515625,
+        436.67999267578125
+      ],
+      "pdf_drawing_seqno": 109,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-10a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 10.0,
+      "read_current_a": 10.000004461854619,
+      "ignition_delay_s": 2.2343590054429527,
+      "event_observed": true,
+      "family_id": "current-10a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        280.86004638671875,
+        436.320068359375
+      ],
+      "pdf_drawing_seqno": 98,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-mglab-10a",
+      "source_id": "GUO-2023",
+      "facility": "MGLAB",
+      "current_a": 10.0,
+      "read_current_a": 10.000001274972945,
+      "ignition_delay_s": 2.172892361557956,
+      "event_observed": true,
+      "family_id": "current-10a",
+      "split": "train",
+      "gravity_g": 1e-05,
+      "facility_max_exposure_s": 4.5,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        280.8600158691406,
+        437.0400390625
+      ],
+      "pdf_drawing_seqno": 106,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-cosmotorre-11a",
+      "source_id": "GUO-2023",
+      "facility": "COSMOTORRE",
+      "current_a": 11.0,
+      "read_current_a": 11.000416546886155,
+      "ignition_delay_s": 1.8725102563596,
+      "event_observed": true,
+      "family_id": "current-11a",
+      "split": "test",
+      "gravity_g": 0.001,
+      "facility_max_exposure_s": 3,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        290.4399922688802,
+        440.8800048828125
+      ],
+      "pdf_drawing_seqno": 110,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-11a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 11.0,
+      "read_current_a": 11.002511390439343,
+      "ignition_delay_s": 1.7647302316768876,
+      "event_observed": true,
+      "family_id": "current-11a",
+      "split": "test",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        290.4600524902344,
+        442.4100646972656
+      ],
+      "pdf_drawing_seqno": 99,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-mglab-11a",
+      "source_id": "GUO-2023",
+      "facility": "MGLAB",
+      "current_a": 11.0,
+      "read_current_a": 10.996242794188152,
+      "ignition_delay_s": 1.9210089345379173,
+      "event_observed": true,
+      "family_id": "current-11a",
+      "split": "test",
+      "gravity_g": 1e-05,
+      "facility_max_exposure_s": 4.5,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        290.4000244140625,
+        440.22003173828125
+      ],
+      "pdf_drawing_seqno": 107,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-cosmotorre-13a",
+      "source_id": "GUO-2023",
+      "facility": "COSMOTORRE",
+      "current_a": 13.0,
+      "read_current_a": 12.99916180780441,
+      "ignition_delay_s": 1.3325561018460343,
+      "event_observed": true,
+      "family_id": "current-13a",
+      "split": "validation",
+      "gravity_g": 0.001,
+      "facility_max_exposure_s": 3,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        309.57997639973956,
+        449.66001383463544
+      ],
+      "pdf_drawing_seqno": 111,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-13a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 13.0,
+      "read_current_a": 12.998123946672841,
+      "ignition_delay_s": 1.2612189459564924,
+      "event_observed": true,
+      "family_id": "current-13a",
+      "split": "validation",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        309.5700378417969,
+        451.080078125
+      ],
+      "pdf_drawing_seqno": 100,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-mglab-13a",
+      "source_id": "GUO-2023",
+      "facility": "MGLAB",
+      "current_a": 13.0,
+      "read_current_a": 12.994988055106408,
+      "ignition_delay_s": 1.4737869954360503,
+      "event_observed": true,
+      "family_id": "current-13a",
+      "split": "validation",
+      "gravity_g": 1e-05,
+      "facility_max_exposure_s": 4.5,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        309.5400085449219,
+        447.0600280761719
+      ],
+      "pdf_drawing_seqno": 108,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-cosmotorre-15a",
+      "source_id": "GUO-2023",
+      "facility": "COSMOTORRE",
+      "current_a": 15.0,
+      "read_current_a": 14.999998725394182,
+      "ignition_delay_s": 1.001161794366624,
+      "event_observed": true,
+      "family_id": "current-15a",
+      "split": "test",
+      "gravity_g": 0.001,
+      "facility_max_exposure_s": 3,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        328.739990234375,
+        457.04001871744794
+      ],
+      "pdf_drawing_seqno": 112,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-15a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 15.0,
+      "read_current_a": 15.000005099157528,
+      "ignition_delay_s": 1.03387815503261,
+      "event_observed": true,
+      "family_id": "current-15a",
+      "split": "test",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        328.74005126953125,
+        456.2100830078125
+      ],
+      "pdf_drawing_seqno": 101,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-cosmotorre-18a",
+      "source_id": "GUO-2023",
+      "facility": "COSMOTORRE",
+      "current_a": 18.0,
+      "read_current_a": 17.99916244510732,
+      "ignition_delay_s": 0.8319031427949709,
+      "event_observed": true,
+      "family_id": "current-18a",
+      "split": "train",
+      "gravity_g": 0.001,
+      "facility_max_exposure_s": 3,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        357.45998128255206,
+        461.82000732421875
+      ],
+      "pdf_drawing_seqno": 113,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    },
+    {
+      "id": "guo2023-das-18a",
+      "source_id": "GUO-2023",
+      "facility": "DAS",
+      "current_a": 18.0,
+      "read_current_a": 18.001257288660508,
+      "ignition_delay_s": 0.8786116415800015,
+      "event_observed": true,
+      "family_id": "current-18a",
+      "split": "train",
+      "gravity_g": 0.03,
+      "facility_max_exposure_s": 20,
+      "origin": "published_experimental_figure_digitization",
+      "source_page_pdf": 8,
+      "source_figure": "5",
+      "pdf_marker_anchor": [
+        357.48004150390625,
+        460.41009521484375
+      ],
+      "pdf_drawing_seqno": 102,
+      "reading_envelope": {
+        "current_a": 0.05,
+        "relative_delay": 0.05,
+        "meaning": "Conservative graphical reading allowance; NOT experimental uncertainty or a confidence interval"
+      },
+      "experimental_uncertainty": null,
+      "replicate_count": null
+    }
+  ]
+}

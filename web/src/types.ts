@@ -3,6 +3,15 @@ export type RunMode = 'physics' | 'prediction';
 export type SourceModel = 'prescribed_source' | 'coupled_combustion';
 export type Field = 'scene' | 'temperature' | 'airflow' | 'smoke' | 'oxygen';
 
+/** Component annotations use the same physical Z-up coordinates as the scene. */
+export interface ViewportMarker {
+  id: string;
+  name: string;
+  position_m: Vec3;
+  object_id?: string;
+  color?: string;
+}
+
 export interface Material {
   id: string;
   name: string;

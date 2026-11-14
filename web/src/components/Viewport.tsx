@@ -4,7 +4,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { finite, toWorld, voxelPosition } from '../data';
-import type { Field, Frame, Scene as LabScene, Vec3 } from '../types';
+import type { Field, Frame, Scene as LabScene, Vec3, ViewportMarker } from '../types';
 
 interface Props {
   scene?: LabScene;
@@ -12,9 +12,13 @@ interface Props {
   field: Field;
   cutaway: boolean;
   showSensors: boolean;
+  showSource?: boolean;
   slice: boolean;
   selectedId: string | null;
   onSelect: (id: string | null) => void;
+  componentMarkers?: ViewportMarker[];
+  selectedComponentId?: string | null;
+  onSelectComponent?: (id: string | null) => void;
 }
 
 interface ViewState {
@@ -25,6 +29,7 @@ interface ViewState {
   model: THREE.Group;
   overlay: THREE.Group;
   markers: THREE.Group;
+  components: THREE.Group;
   selection: THREE.Group;
   fit: () => void;
   invalidate: () => void;
@@ -49,10 +54,10 @@ function clearGroup(group: THREE.Group): void {
   }
 }
 
-function physicalId(node: THREE.Object3D): string | null {
+function annotationId(node: THREE.Object3D, key = 'object_id'): string | null {
   let current: THREE.Object3D | null = node;
   while (current) {
-    if (typeof current.userData.object_id === 'string') return current.userData.object_id;
+    if (typeof current.userData[key] === 'string') return current.userData[key];
     current = current.parent;
   }
   return null;
@@ -76,14 +81,15 @@ function fallbackGeometry(scene: LabScene, group: THREE.Group): void {
   }
 }
 
-function addMarker(group: THREE.Group, position: Vec3, color: string, radius: number): void {
+function addMarker(group: THREE.Group, position: Vec3, color: string, radius: number): THREE.Group {
+  const annotation = new THREE.Group();
   const marker = new THREE.Mesh(
     new THREE.SphereGeometry(radius, 12, 8),
     new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.92, depthTest: false }),
   );
   marker.position.set(...toWorld(position));
   marker.renderOrder = 5;
-  group.add(marker);
+  annotation.add(marker);
   const ring = new THREE.Mesh(
     new THREE.TorusGeometry(radius * 1.8, radius * 0.11, 6, 24),
     new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.65, depthTest: false }),
@@ -91,7 +97,9 @@ function addMarker(group: THREE.Group, position: Vec3, color: string, radius: nu
   ring.rotation.x = Math.PI / 2;
   ring.position.copy(marker.position);
   ring.renderOrder = 5;
-  group.add(ring);
+  annotation.add(ring);
+  group.add(annotation);
+  return annotation;
 }
 
 function scalarColor(value: number, field: Field, maximum: number): THREE.Color {
@@ -174,16 +182,33 @@ function createOverlay(group: THREE.Group, frame: Frame, field: Field, slice: bo
 }
 
 export default function Viewport(props: Props) {
-  const { scene, frame, field, cutaway, showSensors, slice, selectedId, onSelect } = props;
+  const {
+    scene,
+    frame,
+    field,
+    cutaway,
+    showSensors,
+    showSource = true,
+    slice,
+    selectedId,
+    onSelect,
+    componentMarkers,
+    selectedComponentId,
+    onSelectComponent,
+  } = props;
   const host = useRef<HTMLDivElement>(null);
   const state = useRef<ViewState | null>(null);
   const selectRef = useRef(onSelect);
   const sceneRef = useRef(scene);
+  const componentsRef = useRef(componentMarkers);
+  const componentSelectRef = useRef(onSelectComponent);
   const [ready, setReady] = useState(false);
   const [assetStatus, setAssetStatus] = useState<'loading' | 'loaded' | 'fallback' | 'empty'>('empty');
   const [renderError, setRenderError] = useState<string | null>(null);
   selectRef.current = onSelect;
   sceneRef.current = scene;
+  componentsRef.current = componentMarkers;
+  componentSelectRef.current = onSelectComponent;
 
   useEffect(() => {
     const element = host.current;
@@ -236,8 +261,9 @@ export default function Viewport(props: Props) {
     const model = new THREE.Group();
     const overlay = new THREE.Group();
     const markers = new THREE.Group();
+    const components = new THREE.Group();
     const selection = new THREE.Group();
-    world.add(model, overlay, markers, selection);
+    world.add(model, overlay, markers, components, selection);
     const grid = new THREE.GridHelper(32, 64, '#22313e', '#1a2835');
     grid.position.set(2.8, -0.04, -4);
     world.add(grid);
@@ -261,6 +287,7 @@ export default function Viewport(props: Props) {
       model,
       overlay,
       markers,
+      components,
       selection,
       fit,
       invalidate,
@@ -292,12 +319,20 @@ export default function Viewport(props: Props) {
         ),
         camera,
       );
+      const markerHits = raycaster.intersectObject(components, true);
+      for (const hit of markerHits) {
+        const id = annotationId(hit.object, 'component_id');
+        if (id && componentSelectRef.current) {
+          componentSelectRef.current(id);
+          return;
+        }
+      }
       const hits = raycaster.intersectObject(model, true);
       let selected: string | null = null;
       for (const hit of hits) {
         if (!hit.object.visible) continue;
         const id =
-          physicalId(hit.object) ??
+          annotationId(hit.object) ??
           (sceneRef.current?.objects.some((object) => object.id === hit.object.name)
             ? hit.object.name
             : null);
@@ -306,6 +341,8 @@ export default function Viewport(props: Props) {
           break;
         }
       }
+      const component = componentsRef.current?.find((item) => item.object_id === selected);
+      componentSelectRef.current?.(component?.id ?? null);
       selectRef.current(selected);
     };
     renderer.domElement.addEventListener('pointerdown', down);
@@ -392,8 +429,42 @@ export default function Viewport(props: Props) {
     state.current?.invalidate();
     if (!scene || !showSensors) return;
     for (const sensor of scene.sensors) addMarker(group, sensor.position_m, '#75e2d9', 0.045);
-    addMarker(group, scene.source_position_m, '#ffaf6a', 0.075);
-  }, [scene, showSensors, ready]);
+    if (showSource) addMarker(group, scene.source_position_m, '#ffaf6a', 0.075);
+  }, [scene, showSensors, showSource, ready]);
+
+  useEffect(() => {
+    const view = state.current;
+    if (!view) return;
+    clearGroup(view.components);
+    for (const component of componentMarkers ?? []) {
+      if (!component.position_m.every(finite)) continue;
+      const selected = component.id === selectedComponentId;
+      const marker = addMarker(
+        view.components,
+        component.position_m,
+        component.color ?? '#7d8898',
+        selected ? 0.085 : 0.06,
+      );
+      marker.userData.component_id = component.id;
+      marker.name = component.name;
+      if (selected) {
+        const outline = new THREE.Mesh(
+          new THREE.SphereGeometry(0.105, 16, 10),
+          new THREE.MeshBasicMaterial({
+            color: '#dae8f2',
+            wireframe: true,
+            transparent: true,
+            opacity: 0.4,
+            depthTest: false,
+          }),
+        );
+        outline.position.set(...toWorld(component.position_m));
+        outline.renderOrder = 6;
+        marker.add(outline);
+      }
+    }
+    view.invalidate();
+  }, [componentMarkers, selectedComponentId, scene, ready]);
 
   useEffect(() => {
     const group = state.current?.overlay;

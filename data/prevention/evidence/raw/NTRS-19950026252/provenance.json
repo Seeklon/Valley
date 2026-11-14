@@ -1,0 +1,29 @@
+{
+  "source_id": "NTRS-19950026252",
+  "title": "Performance of Partially Fluorinated Polyimide Insulation for Aerospace Applications",
+  "landing_url": "https://ntrs.nasa.gov/citations/19950026252",
+  "metadata_url": "https://ntrs.nasa.gov/api/citations/19950026252",
+  "download_url": "https://ntrs.nasa.gov/api/citations/19950026252/downloads/19950026252.pdf",
+  "retrieved_at": "2026-11-14T12:10:32.048721+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "CONTRACTOR_REPORT",
+  "original_filename": "19950026252.pdf",
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 4303,
+      "sha256": "af119d85f42fa1d9688104472c618968bb28f1e8faa9d52829c37397d8c8b07b"
+    },
+    {
+      "name": "source.pdf",
+      "bytes": 431977,
+      "sha256": "7d2e23ed7da28a1f0f9deee66686fa4e005cb86f15bd3b954c650cd9e7a4edd5"
+    },
+    {
+      "name": "source.txt",
+      "bytes": 36728,
+      "sha256": "e91c61fe14bc4637d87b7647c0526388d0ef26c5eb62b9ec665a52b0ae2cb42d"
+    }
+  ],
+  "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; verify the PDF for OCR ambiguity"
+}

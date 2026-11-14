@@ -1,0 +1,3627 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-14",
+  "scope": "Conclusions et données NASA avant flamme. Aucune source ici ne constitue un jeu complet validé d’auto-inflammation résistive cabine.",
+  "ranking_contract": {
+    "dimensions": [
+      "mechanism_match",
+      "material_match",
+      "gravity_match",
+      "oxygen_pressure_match",
+      "heating_protocol_match",
+      "observable_match",
+      "primary_vs_secondary",
+      "quantitative_uncertainty",
+      "raw_trial_availability",
+      "independent_replication"
+    ],
+    "quality_tiers": [
+      "primary_measured",
+      "primary_sparse",
+      "summary",
+      "method_only",
+      "inventory"
+    ],
+    "rules": [
+      "Score documentaire seulement, jamais probabilité de feu.",
+      "Filtrer le mécanisme avant de transférer une valeur.",
+      "Inconnu reste inconnu ; ne pas traiter une condition absente comme compatible.",
+      "Les conclusions liées au même groupe expérimental ne comptent pas comme réplications indépendantes.",
+      "Les témoins sont censurés à leur fin observée, jamais sains pour toujours.",
+      "Les rapports dérivés et textes officiels restent distincts des mesures brutes."
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "NTRS-19660008736",
+      "title": "Evaluation of thin wall spacecraft electrical wiring.  Volume I - Test methods and facilities Technical report no. 1",
+      "landing_url": "https://ntrs.nasa.gov/citations/19660008736",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/19660008736",
+      "download_url": "https://ntrs.nasa.gov/api/citations/19660008736/downloads/19660008736.pdf",
+      "retrieved_at": "2026-11-14T12:05:21.512945+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "CONTRACTOR_REPORT",
+      "original_filename": "19660008736.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 2914,
+          "sha256": "2f9dc9460fd19f226b4cab0e44210eed476ce1eb7a272a7fca4c0c5153053142"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 3797906,
+          "sha256": "fb9c11638073263219ea59ab2abb707bf83e6c360607c7a5c34e5567a5a66cb5"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 170337,
+          "sha256": "a5be7f9708ad7c63b9274b606b1641fed9cbf850fbd5cb3d031813634e9be449"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "primary_experimental_method",
+      "quality_tier": "primary_sparse",
+      "mechanisms": [
+        "resistive_overheating",
+        "spark_piloted_ignition",
+        "external_heater"
+      ],
+      "materials": [
+        "H-film/FEP/TFE wire constructions",
+        "copper"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "protocol": true
+      },
+      "limitations": [
+        "Méthodes de 1965 en oxygène humide ; l’éclateur reste présent même sans chauffage externe."
+      ],
+      "related_source_ids": [],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 2914,
+          "sha256": "2f9dc9460fd19f226b4cab0e44210eed476ce1eb7a272a7fca4c0c5153053142",
+          "path": "raw/NTRS-19660008736/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 3797906,
+          "sha256": "fb9c11638073263219ea59ab2abb707bf83e6c360607c7a5c34e5567a5a66cb5",
+          "path": "raw/NTRS-19660008736/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 170337,
+          "sha256": "a5be7f9708ad7c63b9274b606b1641fed9cbf850fbd5cb3d031813634e9be449",
+          "path": "raw/NTRS-19660008736/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-19660008892",
+      "title": "Evaluation of thin wall spacecraft electrical wiring.  Volume II - Test results and facilities  Technical report no. 1",
+      "landing_url": "https://ntrs.nasa.gov/citations/19660008892",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/19660008892",
+      "download_url": "https://ntrs.nasa.gov/api/citations/19660008892/downloads/19660008892.pdf",
+      "retrieved_at": "2026-11-14T12:05:17.862719+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "CONTRACTOR_REPORT",
+      "original_filename": "19660008892.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 2868,
+          "sha256": "8f4a160e140ce1573f5ce177a05531cecad4ad6fa514e6c4536de01de64360d1"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 4803131,
+          "sha256": "ba4b6579942669a49297fb6007dc2e496a324fde110601ae56df8a81751cf8e4"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 598263,
+          "sha256": "dbeb6e5e6a675e7461f96afb7b3b2776688e81289ba1977f44683f42f3ab5ca3"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "primary_experimental_report",
+      "quality_tier": "primary_sparse",
+      "mechanisms": [
+        "resistive_overheating",
+        "spark_piloted_ignition",
+        "thermal_degradation"
+      ],
+      "materials": [
+        "H-film/FEP/TFE wire constructions",
+        "copper"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": "sparse_paper_logs",
+        "individual_temperature_timeseries": "sparse_resistance_derived_estimates",
+        "ignition_event_labels": "transient_flame_or_flash_not_uniform_sustained_ignition",
+        "no_ignition_controls": "observed_until_record_end",
+        "raw_machine_readable_trials": false
+      },
+      "limitations": [
+        "Températures calculées généralement sous-estimées selon les auteurs.",
+        "Journaux clairsemés ; aucune interpolation ni trajectoire continue n’est fournie.",
+        "Échantillons sélectionnés pour audit, pas échantillonnage représentatif ni taux de risque."
+      ],
+      "related_source_ids": [
+        "NTRS-19660008736"
+      ],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 2868,
+          "sha256": "8f4a160e140ce1573f5ce177a05531cecad4ad6fa514e6c4536de01de64360d1",
+          "path": "raw/NTRS-19660008892/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 4803131,
+          "sha256": "ba4b6579942669a49297fb6007dc2e496a324fde110601ae56df8a81751cf8e4",
+          "path": "raw/NTRS-19660008892/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 598263,
+          "sha256": "dbeb6e5e6a675e7461f96afb7b3b2776688e81289ba1977f44683f42f3ab5ca3",
+          "path": "raw/NTRS-19660008892/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-19940024209",
+      "title": "Wire insulation degradation and flammability in low gravity",
+      "landing_url": "https://ntrs.nasa.gov/citations/19940024209",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/19940024209",
+      "download_url": "https://ntrs.nasa.gov/api/citations/19940024209/downloads/19940024209.pdf",
+      "retrieved_at": "2026-11-14T12:05:11.194123+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "CONFERENCE_PAPER",
+      "original_filename": "19940024209.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 3048,
+          "sha256": "3fe352505fef19513b49bf5cdbd64c211f28530a3755b519c8e6ae91a505e471"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 390959,
+          "sha256": "a5a81c6a023e415a1818e26479f6df67f373d8cf5537894fa4eeff3fd267eb08"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 21688,
+          "sha256": "22ec0f8c9c5dd156f80260f1f96734804adbde87cf212be8387cda4d055a65db"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "experimental_summary_slides",
+      "quality_tier": "summary",
+      "mechanisms": [
+        "resistive_overheating",
+        "external_hot_wire_ignition",
+        "arc_tracking"
+      ],
+      "materials": [
+        "polyethylene/nichrome",
+        "Kapton/copper",
+        "Tefzel/copper",
+        "Teflon/copper"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": "plotted_only_selected_histories",
+        "ignition_event_labels": "aggregate_some_instances",
+        "no_ignition_controls": "qualitative_normal_gravity_comparison",
+        "raw_machine_readable_trials": false
+      },
+      "limitations": [
+        "Plusieurs expériences distinctes dans une présentation ; conditions et dénominateurs incomplets.",
+        "Aucun journal électrique horodaté individuel exploitable extrait.",
+        "La désignation chimique de Tefzel dans la présentation est ambiguë ; aucune substitution par FEP ou LDPE."
+      ],
+      "related_source_ids": [],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 3048,
+          "sha256": "3fe352505fef19513b49bf5cdbd64c211f28530a3755b519c8e6ae91a505e471",
+          "path": "raw/NTRS-19940024209/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 390959,
+          "sha256": "a5a81c6a023e415a1818e26479f6df67f373d8cf5537894fa4eeff3fd267eb08",
+          "path": "raw/NTRS-19940024209/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 21688,
+          "sha256": "22ec0f8c9c5dd156f80260f1f96734804adbde87cf212be8387cda4d055a65db",
+          "path": "raw/NTRS-19940024209/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-19950026252",
+      "title": "Performance of Partially Fluorinated Polyimide Insulation for Aerospace Applications",
+      "landing_url": "https://ntrs.nasa.gov/citations/19950026252",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/19950026252",
+      "download_url": "https://ntrs.nasa.gov/api/citations/19950026252/downloads/19950026252.pdf",
+      "retrieved_at": "2026-11-14T12:10:32.048721+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "CONTRACTOR_REPORT",
+      "original_filename": "19950026252.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 4303,
+          "sha256": "af119d85f42fa1d9688104472c618968bb28f1e8faa9d52829c37397d8c8b07b"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 431977,
+          "sha256": "7d2e23ed7da28a1f0f9deee66686fa4e005cb86f15bd3b954c650cd9e7a4edd5"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 36728,
+          "sha256": "e91c61fe14bc4637d87b7647c0526388d0ef26c5eb62b9ec665a52b0ae2cb42d"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; verify the PDF for OCR ambiguity",
+      "evidence_kind": "primary_experimental_report",
+      "quality_tier": "primary_sparse",
+      "mechanisms": [
+        "resistive_overheating",
+        "smoke_emission",
+        "conductor_fusing"
+      ],
+      "materials": [
+        "PFPI TRW solid copper",
+        "MIL-W-81381/7 stranded copper"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "smoke_event_labels": "aggregate_with_internal_time_current_inconsistency",
+        "conductor_fusing": "group_means_n6"
+      },
+      "limitations": [
+        "Émission de fumée et rupture du conducteur ne sont pas des événements d’allumage.",
+        "Incohérence temps/courant du paragraphe fumée ; aucune correction silencieuse.",
+        "Construction PFPI prototype imparfaite et conducteur massif contre multibrin."
+      ],
+      "related_source_ids": [],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 4303,
+          "sha256": "af119d85f42fa1d9688104472c618968bb28f1e8faa9d52829c37397d8c8b07b",
+          "path": "raw/NTRS-19950026252/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 431977,
+          "sha256": "7d2e23ed7da28a1f0f9deee66686fa4e005cb86f15bd3b954c650cd9e7a4edd5",
+          "path": "raw/NTRS-19950026252/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 36728,
+          "sha256": "e91c61fe14bc4637d87b7647c0526388d0ef26c5eb62b9ec665a52b0ae2cb42d",
+          "path": "raw/NTRS-19950026252/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-20130000422",
+      "title": "Particle Morphology and Size Results from the Smoke Aerosol Measurement Experiment-2",
+      "landing_url": "https://ntrs.nasa.gov/citations/20130000422",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/20130000422",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20130000422/downloads/20130000422.pdf",
+      "retrieved_at": "2026-11-14T12:06:53.006299+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "CONFERENCE_PAPER",
+      "original_filename": "20130000422.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 7067,
+          "sha256": "ebce810350f2c1f6dac8007b0996878a5c22bb68d12bbc092485ad2470e54e5f"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 757824,
+          "sha256": "bdc5e7e0d65f569c2c4a0b8899870d2d47e8f0d644cfe033a450d9fd892375aa"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 121880,
+          "sha256": "1bfb5c4df2937418587d55bca89f227e1575b5d0f3d5b7f6500573b3b01f09b9"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "primary_experimental_paper",
+      "quality_tier": "primary_measured",
+      "mechanisms": [
+        "oxidative_pyrolysis",
+        "smoke_transport",
+        "particle_aging"
+      ],
+      "materials": [
+        "Kapton",
+        "Teflon",
+        "Pyrell",
+        "silicone rubber",
+        "cellulose lampwick",
+        "dibutyl phthalate"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "particle_measurements": "published_aggregate_table"
+      },
+      "limitations": [
+        "Pas de délai naturel d’allumage électrique ni de labels d’absence de feu après surchauffe.",
+        "Diamètre géométrique estimé sous hypothèse lognormale ; pas de mesure résolue en classes de taille.",
+        "Températures de base propres au matériau, valeurs non données dans la table extraite."
+      ],
+      "related_source_ids": [],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 7067,
+          "sha256": "ebce810350f2c1f6dac8007b0996878a5c22bb68d12bbc092485ad2470e54e5f",
+          "path": "raw/NTRS-20130000422/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 757824,
+          "sha256": "bdc5e7e0d65f569c2c4a0b8899870d2d47e8f0d644cfe033a450d9fd892375aa",
+          "path": "raw/NTRS-20130000422/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 121880,
+          "sha256": "1bfb5c4df2937418587d55bca89f227e1575b5d0f3d5b7f6500573b3b01f09b9",
+          "path": "raw/NTRS-20130000422/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-20160000940",
+      "title": "Particle Morphology and Elemental Composition of Smoke Generated by Overheating Common Spacecraft Materials",
+      "landing_url": "https://ntrs.nasa.gov/citations/20160000940",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/20160000940",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20160000940/downloads/20160000940.pdf",
+      "retrieved_at": "2026-11-14T12:06:56.639104+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "TECHNICAL_MEMORANDUM",
+      "original_filename": "20160000940.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 3956,
+          "sha256": "8dcdd662fbea5f9b41b8707a1a275581a82609288fd23d259ed84d8d12dff73e"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 53811,
+          "sha256": "1b18bbd7c0a7a5ab505b1dfe603ddf6cef1204054507ab0494e411faf03a2a69"
+        },
+        {
+          "name": "selected-pages.pdf",
+          "bytes": 530020,
+          "sha256": "4de1f53729ba0aa9824f4d3c46459a1c16f988702a67726797694c17da11b4af",
+          "derived_from_sha256": "c0bb60975f5e2bf12fced8ec5800fea1c9e15512edf75665f7fe53af1e943d43",
+          "original_pdf_pages": [
+            1,
+            5,
+            6,
+            16,
+            21,
+            30
+          ],
+          "method": "PyMuPDF1.23.7 select original pages [1,5,6,16,21,30], clean unused resources, garbage=4, deflate=True; no rasterization"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "remote_original_pdf": {
+        "name": "source.pdf",
+        "bytes": 7122986,
+        "sha256": "c0bb60975f5e2bf12fced8ec5800fea1c9e15512edf75665f7fe53af1e943d43",
+        "url": "https://ntrs.nasa.gov/api/citations/20160000940/downloads/20160000940.pdf",
+        "locally_retained": false,
+        "reason": "Bounded archive: selected relevant pages retain primary figures/text; full original downloadable from NASA."
+      },
+      "evidence_kind": "primary_microscopy_report_with_literature_context",
+      "quality_tier": "primary_measured",
+      "mechanisms": [
+        "oxidative_pyrolysis",
+        "smoke_emission"
+      ],
+      "materials": [
+        "PFPI",
+        "Kapton",
+        "Teflon",
+        "Nomex",
+        "printed circuit board"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "particle_measurements": "microscopy_and_heater_setpoints"
+      },
+      "limitations": [
+        "Les températures sont celles du protocole de génération de fumée, pas des seuils d’allumage.",
+        "La citation de délai de fumée PFPI est secondaire et non réconciliée avec le rapport primaire.",
+        "Formulations propriétaires et additifs ; contamination instrumentale possible Cu/Al/Si."
+      ],
+      "related_source_ids": [
+        "NTRS-19950026252",
+        "NTRS-20130000422"
+      ],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 3956,
+          "sha256": "8dcdd662fbea5f9b41b8707a1a275581a82609288fd23d259ed84d8d12dff73e",
+          "path": "raw/NTRS-20160000940/metadata.json"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 53811,
+          "sha256": "1b18bbd7c0a7a5ab505b1dfe603ddf6cef1204054507ab0494e411faf03a2a69",
+          "path": "raw/NTRS-20160000940/source.txt"
+        },
+        {
+          "name": "selected-pages.pdf",
+          "bytes": 530020,
+          "sha256": "4de1f53729ba0aa9824f4d3c46459a1c16f988702a67726797694c17da11b4af",
+          "derived_from_sha256": "c0bb60975f5e2bf12fced8ec5800fea1c9e15512edf75665f7fe53af1e943d43",
+          "original_pdf_pages": [
+            1,
+            5,
+            6,
+            16,
+            21,
+            30
+          ],
+          "method": "PyMuPDF1.23.7 select original pages [1,5,6,16,21,30], clean unused resources, garbage=4, deflate=True; no rasterization",
+          "path": "raw/NTRS-20160000940/selected-pages.pdf"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-20210011385",
+      "title": "Burning and Suppression of Solids–II  (BASS-II) Summary Report",
+      "landing_url": "https://ntrs.nasa.gov/citations/20210011385",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/20210011385",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20210011385/downloads/TM-20210011385.pdf.txt",
+      "retrieved_at": "2026-11-14T12:08:48.884681+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "TECHNICAL_MEMORANDUM",
+      "original_filename": "TM-20210011385.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 7042,
+          "sha256": "3fcf1e93014a6c0e210bc77714c5a7f95b0ccbedb7e28390184e051d517ab9e9"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 354681,
+          "sha256": "56ee5bd7702b5c8235f9934468bb9d6e4ea143c4570d7eaa1da11d904b42ea3f"
+        }
+      ],
+      "text_extraction": "NASA NTRS fulltext endpoint; derived text only, not page-verified PDF",
+      "pdf_not_archived_reason": "48,972,416 byte PDF exceeds 15 MB per-file archive limit",
+      "evidence_kind": "experimental_summary_report_text_only",
+      "quality_tier": "summary",
+      "mechanisms": [
+        "externally_piloted_solid_ignition",
+        "flame_spread",
+        "suppression"
+      ],
+      "materials": [
+        "PMMA",
+        "SIBAL",
+        "Nomex"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": "externally_piloted_attempts_only",
+        "no_ignition_controls": "aggregate_unsuccessful_piloted_attempts",
+        "raw_machine_readable_trials": false
+      },
+      "limitations": [
+        "Texte intégral officiel NTRS archivé ; PDF 48 972 416 octets non archivé dans ce lot borné.",
+        "Délais d’actionnement d’allumeur imposé, pas délais naturels de défaut électrique.",
+        "Repérage par section/lignes de texte, pagination PDF non vérifiée."
+      ],
+      "related_source_ids": [
+        "PSI-25",
+        "PSI-26"
+      ],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 7042,
+          "sha256": "3fcf1e93014a6c0e210bc77714c5a7f95b0ccbedb7e28390184e051d517ab9e9",
+          "path": "raw/NTRS-20210011385/metadata.json"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 354681,
+          "sha256": "56ee5bd7702b5c8235f9934468bb9d6e4ea143c4570d7eaa1da11d904b42ea3f",
+          "path": "raw/NTRS-20210011385/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-20210022143",
+      "title": "Research Questions and Challenges for Improved Spacecraft Fire Detection",
+      "landing_url": "https://ntrs.nasa.gov/citations/20210022143",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/20210022143",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20210022143/downloads/Fire%20detection%20white%20paper%20final%20211031.pdf",
+      "retrieved_at": "2026-11-14T12:04:59.678145+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "WHITE_PAPER",
+      "original_filename": "Fire detection white paper final 211031.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 5345,
+          "sha256": "7c8c0593dc8d48c435aab46c781a5e0c519a65e48d9cfc2f2575518724aed2c1"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 233897,
+          "sha256": "217f0498badba77d7a23d400225b5ff9d7232ee862b2be046dbb6123d2bb0fe8"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 38218,
+          "sha256": "c2e19f307095a783389c6f237904532c1a5c91cd00206b8d031a702ef129b637"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "research_agenda_white_paper",
+      "quality_tier": "summary",
+      "mechanisms": [
+        "resistive_overheating",
+        "oxidative_pyrolysis",
+        "smoke_detection"
+      ],
+      "materials": [
+        "Kapton",
+        "Teflon",
+        "multiple spacecraft materials"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "detector_misses": "secondary_summary_only"
+      },
+      "limitations": [
+        "Rapport de recommandations, pas un dataset ; performances des détecteurs reprises de travaux antérieurs."
+      ],
+      "related_source_ids": [
+        "NTRS-20130000422",
+        "NTRS-20160000940"
+      ],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 5345,
+          "sha256": "7c8c0593dc8d48c435aab46c781a5e0c519a65e48d9cfc2f2575518724aed2c1",
+          "path": "raw/NTRS-20210022143/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 233897,
+          "sha256": "217f0498badba77d7a23d400225b5ff9d7232ee862b2be046dbb6123d2bb0fe8",
+          "path": "raw/NTRS-20210022143/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 38218,
+          "sha256": "c2e19f307095a783389c6f237904532c1a5c91cd00206b8d031a702ef129b637",
+          "path": "raw/NTRS-20210022143/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-20240006315",
+      "title": "Wire-break Ignition Testing of Materials for Spacesuit Fire Hazard Control",
+      "landing_url": "https://ntrs.nasa.gov/citations/20240006315",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/20240006315",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20240006315/downloads/ICES%202024%20476%20%20Wire%20Break%20Ignition%20Testing%20Final.pdf",
+      "retrieved_at": "2026-11-14T12:05:24.770230+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "CONFERENCE_PAPER",
+      "original_filename": "ICES 2024 476  Wire Break Ignition Testing Final.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 8051,
+          "sha256": "728670c9d00ff5e0b44ba8d653d89ebf607a54280c40142289cc5bf74ff0defd"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 1828847,
+          "sha256": "48390bbce022b7a9dbdf7b4e6fd505d1d9bbce020040df67abdf64b2c3de3710"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 46717,
+          "sha256": "f8bf2600fe96ae2f0c1e9d814fc0c686d6517141af7b0136ce464905c7a4f374"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "primary_experimental_paper",
+      "quality_tier": "primary_sparse",
+      "mechanisms": [
+        "wire_break_piloted_arc",
+        "resistive_preheating"
+      ],
+      "materials": [
+        "spacesuit fabrics",
+        "polyurethane",
+        "PVC",
+        "Gore-Tex"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": "figures_only_not_digitized",
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": "aggregate_current_at_wire_break",
+        "no_ignition_controls": "material_specific_aggregate",
+        "raw_machine_readable_trials": false
+      },
+      "limitations": [
+        "Allumage piloté par rupture/arc, atmosphère de combinaison enrichie en O2.",
+        "Les valeurs P=I*V publiées sont déclarées erronées/non pertinentes par les auteurs.",
+        "Pas de temps d’allumage par essai extrait.",
+        "Pas de seuil inférieur établi pour plusieurs matériaux."
+      ],
+      "related_source_ids": [],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 8051,
+          "sha256": "728670c9d00ff5e0b44ba8d653d89ebf607a54280c40142289cc5bf74ff0defd",
+          "path": "raw/NTRS-20240006315/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 1828847,
+          "sha256": "48390bbce022b7a9dbdf7b4e6fd505d1d9bbce020040df67abdf64b2c3de3710",
+          "path": "raw/NTRS-20240006315/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 46717,
+          "sha256": "f8bf2600fe96ae2f0c1e9d814fc0c686d6517141af7b0136ce464905c7a4f374",
+          "path": "raw/NTRS-20240006315/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-20240008688",
+      "title": "Wire-break Ignition Testing of Materials for Spacesuit Fire Hazard Control",
+      "landing_url": "https://ntrs.nasa.gov/citations/20240008688",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/20240008688",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20240008688/downloads/ICES%202024%20476_Wire%20Break_Final.pdf",
+      "retrieved_at": "2026-11-14T12:05:04.491495+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "PRESENTATION",
+      "original_filename": "ICES 2024 476_Wire Break_Final.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 5024,
+          "sha256": "1dc36b9760387c6f5b92613d7e5425b11a51f6aaef0ded6f189d2a08e4674b0d"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 1176528,
+          "sha256": "cb52a2cb00550746673133faef354703eb7dc1c7da1adf1147fad569176ac17a"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 38782,
+          "sha256": "669fcc77775f4d9f3f56d3161e96d60f5cdf7f6afe52bf564f40d98a70f2a2d0"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "companion_experimental_slides",
+      "quality_tier": "summary",
+      "mechanisms": [
+        "wire_break_piloted_arc",
+        "resistive_preheating"
+      ],
+      "materials": [
+        "spacesuit fabrics",
+        "polyurethane",
+        "PVC",
+        "Gore-Tex"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": "aggregate_current_at_wire_break",
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false
+      },
+      "limitations": [
+        "Même famille de résultats que ICES-2024-476 ; ne pas compter comme réplication indépendante.",
+        "Ligne Kerlix différente du papier : version à conserver séparée."
+      ],
+      "related_source_ids": [
+        "NTRS-20240006315"
+      ],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 5024,
+          "sha256": "1dc36b9760387c6f5b92613d7e5425b11a51f6aaef0ded6f189d2a08e4674b0d",
+          "path": "raw/NTRS-20240008688/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 1176528,
+          "sha256": "cb52a2cb00550746673133faef354703eb7dc1c7da1adf1147fad569176ac17a",
+          "path": "raw/NTRS-20240008688/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 38782,
+          "sha256": "669fcc77775f4d9f3f56d3161e96d60f5cdf7f6afe52bf564f40d98a70f2a2d0",
+          "path": "raw/NTRS-20240008688/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "NTRS-20240014551",
+      "title": "A New Test Methodology for Evaluating Fire Risk Due to Electrical Faults in Oxygen-Enriched Environments",
+      "landing_url": "https://ntrs.nasa.gov/citations/20240014551",
+      "metadata_url": "https://ntrs.nasa.gov/api/citations/20240014551",
+      "download_url": "https://ntrs.nasa.gov/api/citations/20240014551/downloads/20220003562.pdf",
+      "retrieved_at": "2026-11-14T12:05:06.513216+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "ABSTRACT",
+      "original_filename": "20220003562.pdf",
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 5527,
+          "sha256": "1c042d4bd43e2ac2b44b07fe281c50d65fbad6dc7277dd6ebd15c76ec8e8a7a6"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 72798,
+          "sha256": "7a4800c52eb921148f1bd436726350ed04f95cb67c5843ca05d2714fb69ad9a3"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 1416,
+          "sha256": "16483065fcf8d4eb1c6e272692a9b856fe4a2b4b17466742cd3d63eb645a9761"
+        }
+      ],
+      "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative",
+      "evidence_kind": "methodology_abstract",
+      "quality_tier": "method_only",
+      "mechanisms": [
+        "wire_break_piloted_arc",
+        "resistive_preheating"
+      ],
+      "materials": [
+        "unspecified spacecraft materials"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "protocol": "abstract_only"
+      },
+      "limitations": [
+        "Le téléchargement est un résumé d’une page malgré un titre annonçant une méthodologie.",
+        "Aucun tableau d’essais, seuil numérique ou témoin accessible dans ce document."
+      ],
+      "related_source_ids": [],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 5527,
+          "sha256": "1c042d4bd43e2ac2b44b07fe281c50d65fbad6dc7277dd6ebd15c76ec8e8a7a6",
+          "path": "raw/NTRS-20240014551/metadata.json"
+        },
+        {
+          "name": "source.pdf",
+          "bytes": 72798,
+          "sha256": "7a4800c52eb921148f1bd436726350ed04f95cb67c5843ca05d2714fb69ad9a3",
+          "path": "raw/NTRS-20240014551/source.pdf"
+        },
+        {
+          "name": "source.txt",
+          "bytes": 1416,
+          "sha256": "16483065fcf8d4eb1c6e272692a9b856fe4a2b4b17466742cd3d63eb645a9761",
+          "path": "raw/NTRS-20240014551/source.txt"
+        }
+      ]
+    },
+    {
+      "source_id": "PSI-25",
+      "title": "Burning and Suppression of Solids - II",
+      "landing_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+      "metadata_url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-25",
+      "download_url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-25",
+      "retrieved_at": "2026-11-14T12:08:51.474894+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "EXPERIMENT_INVENTORY",
+      "license": "CC0-1.0",
+      "metadata_version": 4,
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 680348,
+          "sha256": "b9234754db5da651ad27d888af082b889d07210b018e543369662f065b4ec2da"
+        }
+      ],
+      "evidence_kind": "experimental_inventory_metadata",
+      "quality_tier": "inventory",
+      "mechanisms": [
+        "externally_piloted_solid_ignition",
+        "flame_spread"
+      ],
+      "materials": [
+        "PMMA",
+        "SIBAL",
+        "other solid fuels"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "inventory": true,
+        "supplemental_files": "metadata_listed_not_all_inspected"
+      },
+      "limitations": [
+        "Tables existantes et métadonnées consultées ; ni courant de défaut horodaté ni événement naturel d’allumage établi.",
+        "Les métadonnées référencent des vidéos supplémentaires ; leur contenu ne permet pas d’affirmer ici l’absence universelle de données avant flamme."
+      ],
+      "related_source_ids": [
+        "NTRS-20210011385"
+      ],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 680348,
+          "sha256": "b9234754db5da651ad27d888af082b889d07210b018e543369662f065b4ec2da",
+          "path": "raw/PSI-25/metadata.json"
+        }
+      ]
+    },
+    {
+      "source_id": "PSI-26",
+      "title": "Burning and Suppression of Solids",
+      "landing_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
+      "metadata_url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-26",
+      "download_url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-26",
+      "retrieved_at": "2026-11-14T12:08:54.418733+00:00",
+      "distribution": "PUBLIC",
+      "sti_type": "EXPERIMENT_INVENTORY",
+      "license": "CC0-1.0",
+      "metadata_version": 4,
+      "files": [
+        {
+          "name": "metadata.json",
+          "bytes": 190127,
+          "sha256": "9dee45d44bb736178db270a07c9ee8f98ac02ee810189ab518271fd4720c0533"
+        }
+      ],
+      "evidence_kind": "experimental_inventory_metadata",
+      "quality_tier": "inventory",
+      "mechanisms": [
+        "externally_piloted_solid_ignition",
+        "flame_spread"
+      ],
+      "materials": [
+        "PMMA",
+        "SIBAL",
+        "other solid fuels"
+      ],
+      "data_availability": {
+        "individual_electrical_timeseries": false,
+        "individual_temperature_timeseries": false,
+        "ignition_event_labels": false,
+        "no_ignition_controls": false,
+        "raw_machine_readable_trials": false,
+        "inventory": true,
+        "supplemental_files": "metadata_listed_not_all_inspected"
+      },
+      "limitations": [
+        "Tables existantes et métadonnées consultées ; ni courant de défaut horodaté ni événement naturel d’allumage établi.",
+        "Les métadonnées référencent des vidéos supplémentaires ; leur contenu ne permet pas d’affirmer ici l’absence universelle de données avant flamme."
+      ],
+      "related_source_ids": [
+        "NTRS-20210011385"
+      ],
+      "used_for_training": false,
+      "artifacts": [
+        {
+          "name": "metadata.json",
+          "bytes": 190127,
+          "sha256": "9dee45d44bb736178db270a07c9ee8f98ac02ee810189ab518271fd4720c0533",
+          "path": "raw/PSI-26/metadata.json"
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "NASA-PRE-001",
+      "source_id": "NTRS-20210022143",
+      "statement_fr": "La détection doit couvrir la surchauffe avant la flamme ; les émissions de pyrolyse diffèrent des suies de combustion établie.",
+      "epistemic_status": "author_interpretation",
+      "anchors": [
+        {
+          "pdf_page": 2,
+          "section": "Introduction",
+          "quote": "period of fuel overheating prior to flame development since early fire detection is preferred."
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating",
+        "oxidative_pyrolysis",
+        "smoke_detection"
+      ],
+      "materials": [
+        "spacecraft materials"
+      ],
+      "conditions": {
+        "gravity_regime": "multiple",
+        "oxygen_regime": "multiple"
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Incertitude quantitative non fournie pour ce résultat."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "summary",
+        "independence_group": "NTRS-20210022143",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-002",
+      "source_id": "NTRS-20210022143",
+      "statement_fr": "Le rapport rappelle des non-détections du détecteur ISS pour des fumées Kapton et Teflon dans SAME ; détecter une seule propriété ne couvre pas tous les scénarios.",
+      "epistemic_status": "author_interpretation",
+      "anchors": [
+        {
+          "pdf_page": 2,
+          "section": "Introduction"
+        }
+      ],
+      "mechanisms": [
+        "smoke_detection"
+      ],
+      "materials": [
+        "Kapton",
+        "Teflon"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity",
+        "location": "ISS Microgravity Science Glovebox",
+        "oxygen_regime": "cabin_atmosphere_not_quantified_in_extracted_table",
+        "oxygen_volume_fraction": null,
+        "pressure": null,
+        "airflow_m_s": 0.08,
+        "heating": "material-specific pyrolysis heater setting selected for 1–2 mg loss in 60 s",
+        "pilot": null
+      },
+      "quantities": [
+        {
+          "name": "Kapton missed tests fraction",
+          "value": 0.5,
+          "unit": "fraction",
+          "kind": "secondary_report",
+          "uncertainty": null
+        },
+        {
+          "name": "Teflon missed tests fraction",
+          "value": 0.6666666666666666,
+          "unit": "fraction",
+          "kind": "secondary_report",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Dénominateurs et résultats individuels absents du rapport de synthèse.",
+        "Ce sont des non-détections de fumée, pas des probabilités d’allumage."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "summary",
+        "independence_group": "SAME",
+        "basis": "Synthèse secondaire citant les études SAME ; aucune nouvelle réplication."
+      }
+    },
+    {
+      "id": "NASA-PRE-003",
+      "source_id": "NTRS-19940024209",
+      "statement_fr": "Des isolants Kapton et Tefzel ont flambé dans certains essais autochauffés en microgravité alors qu’ils étaient considérés non inflammables dans les conditions terrestres de comparaison.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 14,
+          "printed_page": 160
+        },
+        {
+          "pdf_page": 16,
+          "printed_page": 162
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating"
+      ],
+      "materials": [
+        "Kapton/copper",
+        "Tefzel/copper"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity_vs_normal_gravity",
+        "facility": "NASA Lewis 2-second drop tower",
+        "oxygen_regime": "not_reported",
+        "pressure": null,
+        "airflow_m_s": null,
+        "airflow_description": "quiescent"
+      },
+      "quantities": [
+        {
+          "name": "microgravity observation window",
+          "value": 2,
+          "unit": "s",
+          "kind": "protocol",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Présentation de résultats agrégés ; effectif, courant, critères et temps d’allumage individuels non fournis.",
+        "Le nom Tefzel et sa parenthèse chimique dans les diapositives sont incohérents ; composition à confirmer."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "summary",
+        "independence_group": "NTRS-19940024209",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-004",
+      "source_id": "NTRS-19940024209",
+      "statement_fr": "Dans WIF, le fil nichrome isolé en polyéthylène est chauffé électriquement puis allumé par un fil chaud externe ; cette expérience ne mesure pas un délai naturel d’auto-inflammation.",
+      "epistemic_status": "protocol",
+      "anchors": [
+        {
+          "pdf_page": 4,
+          "printed_page": 150
+        }
+      ],
+      "mechanisms": [
+        "external_hot_wire_ignition",
+        "resistive_preheating"
+      ],
+      "materials": [
+        "polyethylene/nichrome"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity",
+        "location": "STS-50 USML-1 glovebox",
+        "oxygen_regime": "not_reported",
+        "airflow_description": "opposed and concurrent forced flow",
+        "pressure": null
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Incertitude quantitative non fournie pour ce résultat."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "summary",
+        "independence_group": "NTRS-19940024209",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-005",
+      "source_id": "NTRS-19660008736",
+      "statement_fr": "Le protocole II-B augmente le courant par paliers sans chauffage externe, mais comporte un éclateur proche du fil ; il représente une surcharge avec sollicitations d’allumage possibles.",
+      "epistemic_status": "protocol",
+      "anchors": [
+        {
+          "pdf_page": 28,
+          "printed_page": 24
+        },
+        {
+          "pdf_page": 30,
+          "printed_page": 26
+        },
+        {
+          "pdf_page": 33,
+          "printed_page": 29
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating",
+        "spark_piloted_ignition"
+      ],
+      "materials": [
+        "H-film/FEP/TFE wire constructions"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "quantities": [
+        {
+          "name": "nominal current steps",
+          "value": [
+            20,
+            30,
+            32.5,
+            35,
+            37.5,
+            40,
+            42.5,
+            45,
+            47.5
+          ],
+          "unit": "A",
+          "kind": "protocol",
+          "uncertainty": null
+        },
+        {
+          "name": "nominal step duration",
+          "value": 150,
+          "unit": "s",
+          "kind": "unit_conversion_from_2.5_min",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Incertitude quantitative non fournie pour ce résultat."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-19660008892",
+        "basis": "Protocole du même programme d’essais que le volume de résultats 19660008892 ; aucune réplication indépendante."
+      }
+    },
+    {
+      "id": "NASA-PRE-006",
+      "source_id": "NTRS-19660008892",
+      "statement_fr": "Les auteurs jugent les températures calculées des tests II-A/II-B généralement plus basses que les températures réelles et les courants plus utiles ; aucune précision thermique chiffrée n’est fournie.",
+      "epistemic_status": "author_interpretation",
+      "anchors": [
+        {
+          "pdf_page": 84,
+          "printed_page": 151
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating"
+      ],
+      "materials": [
+        "H-film/FEP/TFE wire constructions"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Biais négatif de température signalé, amplitude inconnue.",
+        "Mesure par résistance locale et étalonnage dépendant du métal/revêtement ; pas une thermocouple continue sur chaque essai."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "mise en évidence d’une limite de mesure"
+        ],
+        "not_valid_for": [
+          "calibration quantitative d’un seuil thermique",
+          "validation thermique de précision"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-19660008892",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-007",
+      "source_id": "NTRS-19660008892",
+      "statement_fr": "L’essai 3-IIB-1 rapporte une très petite flamme jaune autoextinguible à la ligne 21 min ; il ne démontre pas une flamme entretenue.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 111,
+          "printed_page": 178
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating",
+        "spark_piloted_ignition"
+      ],
+      "materials": [
+        "double-wrap H-film/FEP with pigmented TFE overcoat",
+        "nickel-plated copper"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "quantities": [
+        {
+          "name": "reported transient flame time",
+          "value": 1260,
+          "unit": "s",
+          "kind": "unit_conversion_from_21_min",
+          "uncertainty": null
+        },
+        {
+          "name": "recorded current at transient flame",
+          "value": 47.2,
+          "unit": "A",
+          "kind": "reported_measurement",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Résolution temporelle de l’observation inconnue ; 21 min est une ligne de journal, pas un instant précis.",
+        "Éclateur signalé plus tôt ; attribution à une auto-inflammation non établie."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-19660008892",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      },
+      "experimental_record_ids": [
+        "NASA-1965-3-IIB-1"
+      ]
+    },
+    {
+      "id": "NASA-PRE-008",
+      "source_id": "NTRS-19660008892",
+      "statement_fr": "L’essai 6-IIB-3 rapporte une forte dégradation et aucun allumage sous décharge d’étincelle à la dernière ligne, 22,5 min et 50,1 A.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 122,
+          "printed_page": 189
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating",
+        "spark_piloted_ignition",
+        "thermal_degradation"
+      ],
+      "materials": [
+        "double-wrap H-film/FEP",
+        "silver-plated copper"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "quantities": [
+        {
+          "name": "last observation time",
+          "value": 1350,
+          "unit": "s",
+          "kind": "unit_conversion_from_22.5_min",
+          "uncertainty": null
+        },
+        {
+          "name": "last recorded current",
+          "value": 50.1,
+          "unit": "A",
+          "kind": "reported_measurement",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Absence observée jusqu’à la fin du journal seulement ; suivi après coupure inconnu.",
+        "Un isolant détruit sans flamme n’est pas un état sain."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-19660008892",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      },
+      "experimental_record_ids": [
+        "NASA-1965-6-IIB-3"
+      ]
+    },
+    {
+      "id": "NASA-PRE-009",
+      "source_id": "NTRS-19660008892",
+      "statement_fr": "Dans 9-IIB-2, aucune flamme ni fumée n’est observée malgré un éclateur périodique ; le courant est coupé à 19,25 min après destruction de l’isolant central.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 124,
+          "printed_page": 191
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating",
+        "spark_piloted_ignition",
+        "thermal_degradation"
+      ],
+      "materials": [
+        "MIL-W-16878D Type E TFE 9.5 mil",
+        "nickel-plated copper"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "quantities": [
+        {
+          "name": "power-off and observation endpoint",
+          "value": 1155,
+          "unit": "s",
+          "kind": "unit_conversion_from_19.25_min",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Fin après dégradation, potentiellement informative ; pas de fenêtre post-coupure documentée.",
+        "Un exemple sans flamme ne démontre pas l’innocuité du matériau."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-19660008892",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      },
+      "experimental_record_ids": [
+        "NASA-1965-9-IIB-2"
+      ]
+    },
+    {
+      "id": "NASA-PRE-010",
+      "source_id": "NTRS-20240006315",
+      "statement_fr": "Le wire-break préchauffe et pyrolyse le matériau puis produit un arc à la rupture du fil ; les courants publiés dépendent du montage et de l’oxygène.",
+      "epistemic_status": "protocol",
+      "anchors": [
+        {
+          "pdf_page": 5,
+          "printed_page": 5
+        },
+        {
+          "pdf_page": 6,
+          "printed_page": 6
+        },
+        {
+          "pdf_page": 8,
+          "printed_page": 8
+        }
+      ],
+      "mechanisms": [
+        "wire_break_piloted_arc",
+        "resistive_preheating"
+      ],
+      "materials": [
+        "spacesuit fabrics",
+        "polyurethane",
+        "PVC",
+        "Gore-Tex"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "WSTF ground laboratory",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": {
+          "lower_bound": 0.99
+        },
+        "pressure": {
+          "value": 23.5,
+          "unit": "psia",
+          "plus_minus": 1
+        },
+        "airflow_m_s": null,
+        "heating": "ramped current through sacrificial silver-coated copper wire in contact with sample",
+        "pilot": "arc on wire fusion/break",
+        "preheat_temperature": {
+          "value": 95,
+          "unit": "degF",
+          "plus_minus": 5
+        }
+      },
+      "quantities": [
+        {
+          "name": "Rayon chamois reported ignition current",
+          "value": 0.049,
+          "unit": "A",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "wire_awg": 56
+        },
+        {
+          "name": "Cotton t-shirt reported ignition current",
+          "value": 0.49,
+          "unit": "A",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "wire_awg": 51
+        },
+        {
+          "name": "Gore-Tex tested current without ignition",
+          "value": 9.23,
+          "unit": "A",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "wire_awg": 34,
+          "outcome": "no_ignition_in_test_conditions_not_a_threshold"
+        }
+      ],
+      "uncertainties": [
+        "Répétitions et distribution des délais non disponibles dans le tableau.",
+        "Gore-Tex peut s’allumer à pression O2 supérieure ; aucun seuil universel n’est déduit."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison de mécanismes",
+          "limites de transfert des essais d’arc"
+        ],
+        "not_valid_for": [
+          "auto-inflammation résistive NiCr/LDPE",
+          "cabine à oxygène ambiant",
+          "courant sûr universel"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-20240006315",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-011",
+      "source_id": "NTRS-20240006315",
+      "statement_fr": "Le produit courant × tension d’alimentation du tableau ne représente pas la puissance effectivement dissipée dans le fil ; les auteurs rejettent cette interprétation pour la conception.",
+      "epistemic_status": "author_interpretation",
+      "anchors": [
+        {
+          "pdf_page": 8,
+          "printed_page": 8,
+          "section": "Table 3 note 4"
+        },
+        {
+          "pdf_page": 9,
+          "printed_page": 9
+        }
+      ],
+      "mechanisms": [
+        "wire_break_piloted_arc",
+        "resistive_preheating"
+      ],
+      "materials": [
+        "spacesuit materials"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "WSTF ground laboratory",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": {
+          "lower_bound": 0.99
+        },
+        "pressure": {
+          "value": 23.5,
+          "unit": "psia",
+          "plus_minus": 1
+        },
+        "airflow_m_s": null,
+        "heating": "ramped current through sacrificial silver-coated copper wire in contact with sample",
+        "pilot": "arc on wire fusion/break",
+        "preheat_temperature": {
+          "value": 95,
+          "unit": "degF",
+          "plus_minus": 5
+        }
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Chutes de tension et résistances de contact différentes entre pinces magnétiques et bornes vissées."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "critique de la mesure électrique"
+        ],
+        "not_valid_for": [
+          "conversion du tableau en énergie d’allumage",
+          "seuil de watts de sécurité"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-20240006315",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-012",
+      "source_id": "NTRS-20240006315",
+      "statement_fr": "L’intégrale I²t est proposée pour comparer les essais malgré les contacts ; les limites d’extrapolation restent à étudier. I²t seul a l’unité A²·s, pas joule sans la résistance appropriée.",
+      "epistemic_status": "author_interpretation",
+      "anchors": [
+        {
+          "pdf_page": 11,
+          "printed_page": 11
+        },
+        {
+          "pdf_page": 12,
+          "printed_page": 12
+        }
+      ],
+      "mechanisms": [
+        "wire_break_piloted_arc"
+      ],
+      "materials": [
+        "polyurethane",
+        "moleskin"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "WSTF ground laboratory",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": {
+          "lower_bound": 0.99
+        },
+        "pressure": {
+          "value": 23.5,
+          "unit": "psia",
+          "plus_minus": 1
+        },
+        "airflow_m_s": null,
+        "heating": "ramped current through sacrificial silver-coated copper wire in contact with sample",
+        "pilot": "arc on wire fusion/break",
+        "preheat_temperature": {
+          "value": 95,
+          "unit": "degF",
+          "plus_minus": 5
+        }
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Approche présentée comme nouvelle et encore en développement.",
+        "Les remarques d’unité sont une interprétation dimensionnelle explicite d’IGNIS ; aucune valeur de seuil I²t n’est extraite."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-20240006315",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-013",
+      "source_id": "NTRS-20240008688",
+      "statement_fr": "La présentation et le papier ICES du même travail ne donnent pas la même ligne Kerlix : la présentation indique 54 AWG et 0,39 A ; le papier indique 52 AWG et TBD pour la nouvelle série.",
+      "epistemic_status": "data_gap",
+      "anchors": [
+        {
+          "pdf_page": 6,
+          "printed_page": 5
+        },
+        {
+          "pdf_page": 19,
+          "printed_page": 18
+        }
+      ],
+      "mechanisms": [
+        "wire_break_piloted_arc"
+      ],
+      "materials": [
+        "Kerlix dressing"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "WSTF ground laboratory",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": {
+          "lower_bound": 0.99
+        },
+        "pressure": {
+          "value": 23.5,
+          "unit": "psia",
+          "plus_minus": 1
+        },
+        "airflow_m_s": null,
+        "heating": "ramped current through sacrificial silver-coated copper wire in contact with sample",
+        "pilot": "arc on wire fusion/break",
+        "preheat_temperature": {
+          "value": 95,
+          "unit": "degF",
+          "plus_minus": 5
+        }
+      },
+      "quantities": [
+        {
+          "name": "presentation Kerlix current",
+          "value": 0.39,
+          "unit": "A",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "wire_awg": 54
+        }
+      ],
+      "uncertainties": [
+        "Les deux documents ne sont pas deux réplications indépendantes.",
+        "Identité de la série et état de réduction à résoudre avant agrégation."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "summary",
+        "independence_group": "NTRS-20240006315",
+        "basis": "Présentation du même travail que le papier ICES 2024-476 ; aucune réplication indépendante."
+      },
+      "related_conclusion_ids": [
+        "NASA-PRE-010"
+      ],
+      "evidence_conflict_ids": [
+        "NASA-CONFLICT-KERLIX"
+      ]
+    },
+    {
+      "id": "NASA-PRE-014",
+      "source_id": "NTRS-20240014551",
+      "statement_fr": "Le document disponible est un résumé méthodologique d’une page : il annonce un seuil de transition flash/flamme propagative sous arc piloté, mais ne fournit ni valeurs, ni trajectoires, ni témoins.",
+      "epistemic_status": "data_gap",
+      "anchors": [
+        {
+          "pdf_page": 1
+        }
+      ],
+      "mechanisms": [
+        "wire_break_piloted_arc",
+        "resistive_preheating"
+      ],
+      "materials": [
+        "unspecified spacecraft materials"
+      ],
+      "conditions": {
+        "gravity_regime": "not_reported",
+        "oxygen_regime": "oxygen_enriched",
+        "pressure": null,
+        "airflow_m_s": null
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Incertitude quantitative non fournie pour ce résultat."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "piste de protocole"
+        ],
+        "not_valid_for": [
+          "tout label numérique d’allumage",
+          "calibration",
+          "validation"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "method_only",
+        "independence_group": "NTRS-20240014551",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-015",
+      "source_id": "NTRS-20130000422",
+      "statement_fr": "SAME publie des diamètres de particules de pyrolyse avant/après vieillissement pour cinq matériaux. Ces mesures caractérisent les fumées ; elles ne datent pas un futur allumage.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 7,
+          "printed_page": 7,
+          "section": "Table 1"
+        }
+      ],
+      "mechanisms": [
+        "oxidative_pyrolysis",
+        "particle_aging"
+      ],
+      "materials": [
+        "Kapton",
+        "Teflon",
+        "Pyrell",
+        "silicone rubber",
+        "cellulose lampwick"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity",
+        "location": "ISS Microgravity Science Glovebox",
+        "oxygen_regime": "cabin_atmosphere_not_quantified_in_extracted_table",
+        "oxygen_volume_fraction": null,
+        "pressure": null,
+        "airflow_m_s": 0.08,
+        "heating": "material-specific pyrolysis heater setting selected for 1–2 mg loss in 60 s",
+        "pilot": null
+      },
+      "quantities": [
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.042,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 0
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.056,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 0
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.101,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 2.154,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.089,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 720
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.109,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 720
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.161,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 1.872,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Kapton",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.09,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 0
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.128,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 0
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.258,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 2.312,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.229,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 720
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.276,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 720
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.398,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 1.834,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Lampwick",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.128,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 0
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.196,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 0
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.465,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 2.53,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.269,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 720
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.355,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 720
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.619,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 2.108,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Silicone",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.081,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 0
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.101,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 0
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.17,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 2.198,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.07,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 720
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.105,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 720
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.232,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 2.442,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Teflon",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.149,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 0
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.204,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 0
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.384,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 2.211,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 0
+        },
+        {
+          "name": "geometric_mean_diameter",
+          "value": 0.293,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 720
+        },
+        {
+          "name": "count_mean_diameter",
+          "value": 0.359,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 720
+        },
+        {
+          "name": "diameter_of_average_mass",
+          "value": 0.539,
+          "unit": "um",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 720
+        },
+        {
+          "name": "geometric_standard_deviation",
+          "value": 1.892,
+          "unit": "dimensionless",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "material": "Pyrell",
+          "aging_time_s": 720
+        }
+      ],
+      "uncertainties": [
+        "Pas d’incertitudes par cellule ni de tailles d’échantillon par ligne.",
+        "Les diamètres géométriques supposent une distribution lognormale.",
+        "Le vieillissement de 720 s porte sur l’aérosol, pas sur le délai d’allumage du matériau."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison de signatures de fumée",
+          "vérification conditionnelle d’un modèle d’aérosols compatible"
+        ],
+        "not_valid_for": [
+          "label de délai d’allumage",
+          "modèle électrique de câble"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_measured",
+        "independence_group": "SAME",
+        "basis": "Table 1 transcrite et contrôlée sur la page PDF."
+      }
+    },
+    {
+      "id": "NASA-PRE-016",
+      "source_id": "NTRS-20130000422",
+      "statement_fr": "Dans SAME, les fumées produites sans écoulement ont des particules plus grosses que celles à l’écoulement nominal ; l’effet concerne le transport et la détection, pas une règle universelle de prévention.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 12,
+          "printed_page": 12,
+          "section": "Conclusions"
+        }
+      ],
+      "mechanisms": [
+        "oxidative_pyrolysis",
+        "smoke_transport"
+      ],
+      "materials": [
+        "Pyrell",
+        "cellulose lampwick",
+        "SAME fuels"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity",
+        "location": "ISS Microgravity Science Glovebox",
+        "oxygen_regime": "cabin_atmosphere_not_quantified_in_extracted_table",
+        "oxygen_volume_fraction": null,
+        "pressure": null,
+        "airflow_m_s": [
+          0,
+          0.08
+        ],
+        "heating": "material-specific pyrolysis heater setting selected for 1–2 mg loss in 60 s",
+        "pilot": null
+      },
+      "quantities": [
+        {
+          "name": "reported zero-flow particle diameter ratio",
+          "value": [
+            2,
+            3
+          ],
+          "unit": "ratio",
+          "kind": "reported_measurement",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Comparaison sous les conditions SAME seulement ; composition et morphologie varient selon le matériau."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_measured",
+        "independence_group": "SAME",
+        "basis": "Conclusions et figure 13 ; effet de protocole, pas taux de feu."
+      }
+    },
+    {
+      "id": "NASA-PRE-017",
+      "source_id": "NTRS-20160000940",
+      "statement_fr": "Les fumées Kapton générées à 540 °C et 640 °C présentent des morphologies différentes ; les consignes de chauffage ne sont pas des températures d’allumage.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 21,
+          "printed_page": 17,
+          "section": "Section 6 and Figure 16"
+        }
+      ],
+      "mechanisms": [
+        "oxidative_pyrolysis"
+      ],
+      "materials": [
+        "Kapton"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "location": "WSTF ground experiments",
+        "oxygen_regime": "not_quantified_here",
+        "pressure": null,
+        "airflow_m_s": null
+      },
+      "quantities": [
+        {
+          "name": "smoke-generation heater settings",
+          "value": [
+            540,
+            640
+          ],
+          "unit": "degC",
+          "kind": "protocol",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Formulation, transport et collecte influencent les particules ; aucune trajectoire d’allumage extraite."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison documentaire"
+        ],
+        "not_valid_for": [
+          "probabilité réelle d’incendie cabine",
+          "seuil universel d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_measured",
+        "independence_group": "NTRS-20160000940",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-018",
+      "source_id": "NTRS-20160000940",
+      "statement_fr": "La mention de fumée PFPI en 35 s sous 10–15 A est une citation secondaire qui ne se réconcilie pas avec le protocole et les résultats chiffrés du rapport primaire de 1995. Elle est exclue des labels.",
+      "epistemic_status": "data_gap",
+      "anchors": [
+        {
+          "pdf_page": 16,
+          "printed_page": 12,
+          "section": "Section 4"
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating",
+        "smoke_emission"
+      ],
+      "materials": [
+        "PFPI TRW"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "oxygen_regime": "not_reported",
+        "pressure": null,
+        "airflow_m_s": null
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Rapport primaire : départ 10 A puis +5 A toutes les 30 s ; prose et figure 3 présentent aussi une incohérence secondes/ampères.",
+        "Ne corriger ni reconstruire silencieusement les valeurs."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "signalement d’incohérence de source"
+        ],
+        "not_valid_for": [
+          "entraînement",
+          "validation",
+          "seuil de fumée",
+          "délai d’allumage"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "summary",
+        "independence_group": "NTRS-19950026252",
+        "basis": "Citation secondaire du rapport PFPI de 1995 ; incohérence non résolue, valeurs exclues des labels."
+      },
+      "related_conclusion_ids": [
+        "NASA-PRE-019"
+      ],
+      "evidence_conflict_ids": [
+        "NASA-CONFLICT-PFPI"
+      ]
+    },
+    {
+      "id": "NASA-PRE-019",
+      "source_id": "NTRS-19950026252",
+      "statement_fr": "À 60 A, les temps moyens d’interruption par fusion sont 24,8 s pour MIL-W-81381 et 14,4 s pour PFPI ; ce sont des ruptures électriques, pas des allumages.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "pdf_page": 3,
+          "printed_page": 1,
+          "section": "Wire construction"
+        },
+        {
+          "pdf_page": 4,
+          "printed_page": 2,
+          "section": "Wire Fusing Time Test"
+        }
+      ],
+      "mechanisms": [
+        "resistive_overheating",
+        "conductor_fusing"
+      ],
+      "materials": [
+        "MIL-W-81381/7 stranded silver-plated copper",
+        "PFPI TRW solid copper"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "oxygen_regime": "not_reported_for_this_test",
+        "pressure": null,
+        "airflow_m_s": null,
+        "wire_awg": 20,
+        "current_a": 60
+      },
+      "quantities": [
+        {
+          "name": "MIL-W-81381 mean fusing time",
+          "value": 24.8,
+          "unit": "s",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "sample_count": 6
+        },
+        {
+          "name": "PFPI mean fusing time",
+          "value": 14.4,
+          "unit": "s",
+          "kind": "reported_measurement",
+          "uncertainty": null,
+          "sample_count": 6
+        }
+      ],
+      "uncertainties": [
+        "Dispersion chiffrée non donnée dans le texte.",
+        "Différences de construction et défauts PFPI : effet matériau non isolé."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "comparaison conditionnelle de fusion électrique"
+        ],
+        "not_valid_for": [
+          "délai d’inflammation",
+          "probabilité de feu",
+          "effet causal du seul polymère"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "primary_sparse",
+        "independence_group": "NTRS-19950026252",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-020",
+      "source_id": "NTRS-20210011385",
+      "statement_fr": "BASS-II emploie un allumeur externe commandé : certains essais de tiges PMMA exigent jusqu’à 230 s d’allumage ; à faible O2, des tentatives jusqu’à 500 s n’obtiennent pas de flamme entretenue.",
+      "epistemic_status": "observation",
+      "anchors": [
+        {
+          "section": "Chapter 6, manual ignition protocol",
+          "text_lines": [
+            3656,
+            3660
+          ],
+          "quote": "Ignition times to achieve sustained flames varied"
+        }
+      ],
+      "mechanisms": [
+        "externally_piloted_solid_ignition"
+      ],
+      "materials": [
+        "PMMA rods"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity",
+        "oxygen_regime": "variable_low_oxygen_for_unsuccessful_attempts",
+        "oxygen_volume_fraction": null,
+        "pressure": null,
+        "airflow_m_s": {
+          "typical": 0.05,
+          "varied": [
+            0.02,
+            0.1
+          ]
+        },
+        "pilot": "29-gauge Kanthal hot wire, 1 ohm, 4-A circuit"
+      },
+      "quantities": [
+        {
+          "name": "long reported successful ignition attempt",
+          "value": 230,
+          "unit": "s",
+          "kind": "reported_measurement",
+          "uncertainty": null
+        },
+        {
+          "name": "long reported unsuccessful ignition attempt",
+          "value": 500,
+          "unit": "s",
+          "kind": "reported_measurement",
+          "uncertainty": null
+        }
+      ],
+      "uncertainties": [
+        "Bornes narratives, pas lignes d’essais liées à O2/identifiant.",
+        "Aucune conversion en délai naturel de défaut électrique.",
+        "PDF original non archivé ; texte officiel et lignes conservés."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "distinguer allumage piloté et feu spontané",
+          "contexte de combustion solide"
+        ],
+        "not_valid_for": [
+          "labels de surcharge électrique",
+          "calibration du modèle NiCr/LDPE"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "summary",
+        "independence_group": "PSI-25",
+        "basis": "Rapport BASS-II lié à l’investigation PSI-25 ; bornes narratives, pas nouveaux essais indépendants."
+      }
+    },
+    {
+      "id": "NASA-PRE-021",
+      "source_id": "PSI-25",
+      "statement_fr": "Les tables et métadonnées BASS consultées décrivent matériaux et essais ; aucun jeu joint courant/température/événement naturel d’allumage n’est établi dans ce lot.",
+      "epistemic_status": "data_gap",
+      "anchors": [
+        {
+          "json_pointer": "/experimentalTable/0",
+          "existing_table_path": "data/sources/PSI-25.csv"
+        }
+      ],
+      "mechanisms": [
+        "externally_piloted_solid_ignition",
+        "flame_spread"
+      ],
+      "materials": [
+        "PMMA",
+        "other solid fuels"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity",
+        "oxygen_regime": "variable",
+        "pressure": null,
+        "airflow_m_s": null
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Les vidéos et autres fichiers référencés n’ont pas tous été examinés.",
+        "La liste des fichiers est une preuve de disponibilité documentaire, pas de contenu des labels."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "index documentaire",
+          "comparaison des conditions"
+        ],
+        "not_valid_for": [
+          "apprentissage supervisé avant allumage à partir de ces seules tables"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "inventory",
+        "independence_group": "PSI-25",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    },
+    {
+      "id": "NASA-PRE-022",
+      "source_id": "PSI-26",
+      "statement_fr": "Les tables et métadonnées BASS consultées décrivent matériaux et essais ; aucun jeu joint courant/température/événement naturel d’allumage n’est établi dans ce lot.",
+      "epistemic_status": "data_gap",
+      "anchors": [
+        {
+          "json_pointer": "/experimentalTable/0",
+          "existing_table_path": "data/sources/PSI-26.csv"
+        }
+      ],
+      "mechanisms": [
+        "externally_piloted_solid_ignition",
+        "flame_spread"
+      ],
+      "materials": [
+        "PMMA",
+        "other solid fuels"
+      ],
+      "conditions": {
+        "gravity_regime": "microgravity",
+        "oxygen_regime": "variable",
+        "pressure": null,
+        "airflow_m_s": null
+      },
+      "quantities": [],
+      "uncertainties": [
+        "Les vidéos et autres fichiers référencés n’ont pas tous été examinés.",
+        "La liste des fichiers est une preuve de disponibilité documentaire, pas de contenu des labels."
+      ],
+      "compatibility": {
+        "usable_for": [
+          "index documentaire",
+          "comparaison des conditions"
+        ],
+        "not_valid_for": [
+          "apprentissage supervisé avant allumage à partir de ces seules tables"
+        ]
+      },
+      "evidence_quality": {
+        "tier": "inventory",
+        "independence_group": "PSI-26",
+        "basis": "Source examinée avec localisateur explicite ; limites de transfert conservées."
+      }
+    }
+  ],
+  "experimental_records": [
+    {
+      "id": "NASA-1965-3-IIB-1",
+      "source_id": "NTRS-19660008892",
+      "original_test_id": "3-IIB-1",
+      "anchors": [
+        {
+          "pdf_page": 111,
+          "printed_page": 178
+        }
+      ],
+      "verification_view": "views/NTRS-19660008892-p111.png",
+      "materials": [
+        "Wire 3: double-wrap H-film/FEP, 6 mil wall plus 0.5 mil pigmented TFE overcoat; 20AWG nickel-plated copper, 19/32 strands"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "samples": [
+        {
+          "time_s": 0,
+          "source_time_min": 0,
+          "current_a": 20,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 150.0,
+          "source_time_min": 2.5,
+          "current_a": 30,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 300,
+          "source_time_min": 5,
+          "current_a": 32.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 450.0,
+          "source_time_min": 7.5,
+          "current_a": 35,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 600,
+          "source_time_min": 10,
+          "current_a": 37.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Slight darkening"
+        },
+        {
+          "time_s": 660,
+          "source_time_min": 11,
+          "current_a": 37.5,
+          "current_status": "recorded",
+          "temperature_c": 310,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Spark discharge causes gap flickering"
+        },
+        {
+          "time_s": 750.0,
+          "source_time_min": 12.5,
+          "current_a": 40,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Dark and swells"
+        },
+        {
+          "time_s": 900,
+          "source_time_min": 15,
+          "current_a": 42.5,
+          "current_status": "recorded",
+          "temperature_c": 340,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Bare spot showing at center"
+        },
+        {
+          "time_s": 1080,
+          "source_time_min": 18,
+          "current_a": 45,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Drops formed"
+        },
+        {
+          "time_s": 1200,
+          "source_time_min": 20,
+          "current_a": 47.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 1230.0,
+          "source_time_min": 20.5,
+          "current_a": 47.2,
+          "current_status": "recorded",
+          "temperature_c": 655,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Conductor glows"
+        },
+        {
+          "time_s": 1260,
+          "source_time_min": 21,
+          "current_a": 47.2,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Very small yellow flame appeared - extinguished itself"
+        },
+        {
+          "time_s": 1380,
+          "source_time_min": 23,
+          "current_a": null,
+          "current_status": "power_off",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        }
+      ],
+      "event": {
+        "observed": true,
+        "kind": "transient_self_extinguishing_flame",
+        "time_s": 1260,
+        "time_precision_s": null,
+        "sustained_ignition": false,
+        "origin": "reported log row; spark contribution unresolved"
+      },
+      "observation_end_s": 1380,
+      "post_poweroff_observation_s": null,
+      "selection": "purposive_examples_not_random_or_exhaustive",
+      "interpolation": "none; blank source cells stay null; Off is a switch state, not a measured 0 A",
+      "uncertainties": [
+        "Sparse handwritten/typed log; no calibrated timing uncertainty.",
+        "Temperature estimates biased low according to report p.151; >800 is retained as an inequality.",
+        "Spark probing prevents attribution to unpiloted autoignition."
+      ],
+      "used_for_training": false,
+      "eligible_for_ignition_model_validation": false,
+      "eligible_for_thermal_model_validation": false
+    },
+    {
+      "id": "NASA-1965-6-IIB-3",
+      "source_id": "NTRS-19660008892",
+      "original_test_id": "6-IIB-3",
+      "anchors": [
+        {
+          "pdf_page": 122,
+          "printed_page": 189
+        }
+      ],
+      "verification_view": "views/NTRS-19660008892-p122.png",
+      "materials": [
+        "Wire 6: double-wrap H-film/FEP with 0.5 mil FEP overcoat; 20AWG silver-plated copper, 19/32 strands"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "samples": [
+        {
+          "time_s": 0,
+          "source_time_min": 0,
+          "current_a": 20,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 120,
+          "source_time_min": 2,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": 226,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 150.0,
+          "source_time_min": 2.5,
+          "current_a": 30,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 300,
+          "source_time_min": 5,
+          "current_a": 32.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 360,
+          "source_time_min": 6,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": 358,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 450.0,
+          "source_time_min": 7.5,
+          "current_a": 35,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 600,
+          "source_time_min": 10,
+          "current_a": 37.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 660,
+          "source_time_min": 11,
+          "current_a": 36.8,
+          "current_status": "recorded",
+          "temperature_c": 453,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Specimen darkening"
+        },
+        {
+          "time_s": 750.0,
+          "source_time_min": 12.5,
+          "current_a": 40,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 780,
+          "source_time_min": 13,
+          "current_a": 40.9,
+          "current_status": "recorded",
+          "temperature_c": 555,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Very dark"
+        },
+        {
+          "time_s": 900,
+          "source_time_min": 15,
+          "current_a": 42.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Shrinks"
+        },
+        {
+          "time_s": 1050.0,
+          "source_time_min": 17.5,
+          "current_a": 45,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 1080,
+          "source_time_min": 18,
+          "current_a": 45,
+          "current_status": "recorded",
+          "temperature_c": 626,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Very black - drips"
+        },
+        {
+          "time_s": 1140,
+          "source_time_min": 19,
+          "current_a": 45,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Unwraps"
+        },
+        {
+          "time_s": 1200,
+          "source_time_min": 20,
+          "current_a": 47.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 1230.0,
+          "source_time_min": 20.5,
+          "current_a": 47.2,
+          "current_status": "recorded",
+          "temperature_c": 790,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Bare conductor shows where insulation is unwrapped"
+        },
+        {
+          "time_s": 1320,
+          "source_time_min": 22,
+          "current_a": 48,
+          "current_status": "recorded",
+          "temperature_c": 800,
+          "temperature_qualifier": "gt",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Badly unwrapped"
+        },
+        {
+          "time_s": 1350.0,
+          "source_time_min": 22.5,
+          "current_a": 50.1,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Considerable conductor shows - wire glows - no smoke - no ignition with spark discharge"
+        }
+      ],
+      "event": {
+        "observed": false,
+        "kind": "no_ignition_observed_at_record_end",
+        "time_s": null,
+        "censoring": "right_censored_at_last_record; stopping rule not specified"
+      },
+      "observation_end_s": 1350,
+      "post_poweroff_observation_s": null,
+      "selection": "purposive_examples_not_random_or_exhaustive",
+      "interpolation": "none; blank source cells stay null; Off is a switch state, not a measured 0 A",
+      "uncertainties": [
+        "Sparse handwritten/typed log; no calibrated timing uncertainty.",
+        "Temperature estimates biased low according to report p.151; >800 is retained as an inequality.",
+        "Spark probing prevents attribution to unpiloted autoignition.",
+        "No recorded power-off row; observation ends at the final written observation."
+      ],
+      "used_for_training": false,
+      "eligible_for_ignition_model_validation": false,
+      "eligible_for_thermal_model_validation": false
+    },
+    {
+      "id": "NASA-1965-9-IIB-2",
+      "source_id": "NTRS-19660008892",
+      "original_test_id": "9-IIB-2",
+      "anchors": [
+        {
+          "pdf_page": 124,
+          "printed_page": 191
+        }
+      ],
+      "verification_view": "views/NTRS-19660008892-p124.png",
+      "materials": [
+        "Wire 9: Type E TFE per MIL-W-16878D, 9.5 mil wall; 20AWG nickel-plated copper, 19/32 strands"
+      ],
+      "conditions": {
+        "gravity_regime": "normal_gravity",
+        "gravity_basis": "ground laboratory apparatus",
+        "oxygen_regime": "oxygen_rich",
+        "oxygen_volume_fraction": null,
+        "oxygen_description": "Pure-oxygen feed humidified through water about 10 °C above room temperature; final wet mixture fraction not reported.",
+        "pressure": {
+          "value": 5,
+          "unit": "psia",
+          "reported_equivalent": {
+            "value": 254,
+            "unit": "mmHg"
+          },
+          "note": "Reported rounded equivalence; do not silently conflate exact pressures."
+        },
+        "airflow_m_s": null,
+        "airflow_description": "flowing wet oxygen; speed not specified",
+        "orientation": "vertical",
+        "wire_length": {
+          "value": 6,
+          "unit": "inch"
+        },
+        "wire_awg": 20,
+        "heating": "stepped current, no external heater in II-B",
+        "pilot": "spark gap energized intermittently; timing incompletely recorded"
+      },
+      "samples": [
+        {
+          "time_s": 0,
+          "source_time_min": 0,
+          "current_a": 20,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 150.0,
+          "source_time_min": 2.5,
+          "current_a": 30,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 210.0,
+          "source_time_min": 3.5,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": 195,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 300,
+          "source_time_min": 5,
+          "current_a": 32.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 330.0,
+          "source_time_min": 5.5,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Insulation swells"
+        },
+        {
+          "time_s": 390.0,
+          "source_time_min": 6.5,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": 248,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 450.0,
+          "source_time_min": 7.5,
+          "current_a": 35,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 465.0,
+          "source_time_min": 7.75,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Insulation shrinks"
+        },
+        {
+          "time_s": 600,
+          "source_time_min": 10,
+          "current_a": 37.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 720,
+          "source_time_min": 12,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": 370,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 750.0,
+          "source_time_min": 12.5,
+          "current_a": 40,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Rapid shrinking continues"
+        },
+        {
+          "time_s": 900,
+          "source_time_min": 15,
+          "current_a": 42.5,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 1020,
+          "source_time_min": 17,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": 537,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 1050.0,
+          "source_time_min": 17.5,
+          "current_a": 45,
+          "current_status": "recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 1065.0,
+          "source_time_min": 17.75,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Insulation melts - splits along axis of wire - conductor red"
+        },
+        {
+          "time_s": 1110.0,
+          "source_time_min": 18.5,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": 620,
+          "temperature_qualifier": "eq",
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": ""
+        },
+        {
+          "time_s": 1125.0,
+          "source_time_min": 18.75,
+          "current_a": null,
+          "current_status": "not_recorded",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "Entire center section of insulation is gone - rest hangs in long shreds"
+        },
+        {
+          "time_s": 1155.0,
+          "source_time_min": 19.25,
+          "current_a": null,
+          "current_status": "power_off",
+          "temperature_c": null,
+          "temperature_qualifier": null,
+          "temperature_method": "resistance_inferred",
+          "current_uncertainty_a": null,
+          "temperature_uncertainty_c": null,
+          "note": "No flames or smoke apparent with spark gap energized periodically throughout test"
+        }
+      ],
+      "event": {
+        "observed": false,
+        "kind": "no_flame_observed_until_power_off",
+        "time_s": null,
+        "censoring": "right_censored_at_stop; potentially informative after insulation destruction"
+      },
+      "observation_end_s": 1155,
+      "post_poweroff_observation_s": null,
+      "selection": "purposive_examples_not_random_or_exhaustive",
+      "interpolation": "none; blank source cells stay null; Off is a switch state, not a measured 0 A",
+      "uncertainties": [
+        "Sparse handwritten/typed log; no calibrated timing uncertainty.",
+        "Temperature estimates biased low according to report p.151; >800 is retained as an inequality.",
+        "Spark probing prevents attribution to unpiloted autoignition.",
+        "No post-poweroff observation duration documented."
+      ],
+      "used_for_training": false,
+      "eligible_for_ignition_model_validation": false,
+      "eligible_for_thermal_model_validation": false
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "NASA-CONFLICT-PFPI",
+      "source_ids": [
+        "NTRS-20160000940",
+        "NTRS-19950026252"
+      ],
+      "kind": "unresolved_numeric_inconsistency",
+      "description_fr": "Le résumé secondaire 35 s /10–15 A ne se réconcilie pas avec les paliers primaires 10 A puis +5 A/30 s ; le paragraphe primaire mêle aussi secondes et ampères.",
+      "resolution": "Do not use as numeric smoke or ignition labels; retain both documents and PDF view.",
+      "anchors": [
+        {
+          "source_id": "NTRS-20160000940",
+          "pdf_page": 16
+        },
+        {
+          "source_id": "NTRS-19950026252",
+          "pdf_page": 4
+        }
+      ]
+    },
+    {
+      "id": "NASA-CONFLICT-KERLIX",
+      "source_ids": [
+        "NTRS-20240006315",
+        "NTRS-20240008688"
+      ],
+      "kind": "version_difference",
+      "description_fr": "Nouvelle série Kerlix : papier 52 AWG/TBD ; présentation 54 AWG/0,39 A.",
+      "resolution": "No pooling or invented resolved threshold.",
+      "anchors": [
+        {
+          "source_id": "NTRS-20240006315",
+          "pdf_page": 8
+        },
+        {
+          "source_id": "NTRS-20240008688",
+          "pdf_page": 6
+        }
+      ]
+    },
+    {
+      "id": "NASA-CONFLICT-UNIVERSAL-MATERIAL-RANK",
+      "source_ids": [
+        "NTRS-19660008892",
+        "NTRS-19940024209"
+      ],
+      "kind": "domain_dependent_findings_not_direct_contradiction",
+      "description_fr": "Résistance à la flamme élevée dans des essais terrestres spécifiques et flammes rapportées en microgravité ne permettent pas de classer universellement Kapton/Tefzel/TFE. Montages, matériaux et pilotes diffèrent.",
+      "resolution": "Compare domain and mechanism first; do not infer a causal gravity-only effect."
+    },
+    {
+      "id": "NASA-CONFLICT-UNIVERSAL-AGING",
+      "source_ids": [
+        "NTRS-20130000422"
+      ],
+      "kind": "counterexample_to_overgeneralization",
+      "description_fr": "Dans la table SAME, le diamètre géométrique Teflon passe de 0,081 à 0,070 µm avec vieillissement, tandis que d’autres moments augmentent. Ne pas généraliser une hausse de tous les diamètres pour tous les matériaux.",
+      "resolution": "Retain metric definitions and individual rows; no universal monotonic rule."
+    }
+  ],
+  "data_gaps": [
+    "Aucun jeu joint moderne courant/température/temps/événement/témoins pour NiCr-LDPE en atmosphère cabine dans les sources NASA archivées ici.",
+    "Aucune fréquence réelle de défaut par composant ou exposition opérationnelle ; aucun pourcentage de risque de mission calculable.",
+    "Les 3 journaux NASA de 1965 sont des exemples sélectionnés, sous oxygène humide et éclateur, à températures biaisées.",
+    "Les tables SAME donnent des signatures d’aérosols, pas un futur allumage.",
+    "BASS-II comporte des tentatives d’allumage et vidéos supplémentaires ; seule leur existence documentaire est établie ici.",
+    "Le modèle complémentaire Guo 2023, s’il est utilisé, doit porter une provenance distincte hors NASA et son domaine NiCr/LDPE propre."
+  ]
+}

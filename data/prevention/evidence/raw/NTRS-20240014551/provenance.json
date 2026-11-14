@@ -1,0 +1,29 @@
+{
+  "source_id": "NTRS-20240014551",
+  "title": "A New Test Methodology for Evaluating Fire Risk Due to Electrical Faults in Oxygen-Enriched Environments",
+  "landing_url": "https://ntrs.nasa.gov/citations/20240014551",
+  "metadata_url": "https://ntrs.nasa.gov/api/citations/20240014551",
+  "download_url": "https://ntrs.nasa.gov/api/citations/20240014551/downloads/20220003562.pdf",
+  "retrieved_at": "2026-11-14T12:05:06.513216+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "ABSTRACT",
+  "original_filename": "20220003562.pdf",
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 5527,
+      "sha256": "1c042d4bd43e2ac2b44b07fe281c50d65fbad6dc7277dd6ebd15c76ec8e8a7a6"
+    },
+    {
+      "name": "source.pdf",
+      "bytes": 72798,
+      "sha256": "7a4800c52eb921148f1bd436726350ed04f95cb67c5843ca05d2714fb69ad9a3"
+    },
+    {
+      "name": "source.txt",
+      "bytes": 1416,
+      "sha256": "16483065fcf8d4eb1c6e272692a9b856fe4a2b4b17466742cd3d63eb645a9761"
+    }
+  ],
+  "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative"
+}

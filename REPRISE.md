@@ -4,6 +4,38 @@
 livraison sur la branche `codex/ignis-3d-lab`. Lors d’une reprise, relire Git
 et `/api/health` pour connaître l’état actuel du code et du service.
 
+## Prévention avant allumage livrée
+
+L'accueil ouvre Soyouz sans foyer. Quatre composants hypothétiques par scène,
+dont deux fils NiCr/LDPE, un faisceau non caractérisé et une batterie non couverte.
+Le délai vient d'un modèle expérimental restreint ; température physique et
+prévision ML sont distinctes. Comparaison, preuve par composant, Codex et ZIP
+fonctionnent. Aucune probabilité calibrée ni intervalle n'est inventé.
+
+- 13 sources NASA, 22 conclusions et 49 relevés historiques archivés ; une étude
+  complémentaire Guo, explicitement hors NASA, fournit 26 points d'allumage.
+- `ignition-delay-guo-v1` : test 9 points/5 courants, MAE 0,157 s, maximum 0,335 s.
+  Protocole NiCr/LDPE sous courant maintenu en microgravité uniquement.
+- `thermal-history-forest-v1` : 384 trajectoires Windows, 16 familles test,
+  1 940 fenêtres couvertes ; MAE 10,05 °C, maximum 129,30 °C. Physique locale
+  exploratoire, pas de chimie d'allumage ni de validation thermique expérimentale.
+- 131 tests Windows, Ruff, 22 tests frontend, build/format passent. 9 contrôles
+  réels des modèles/API, 12 contrôles navigateur prévention et 8 contrôles
+  de non-régression du laboratoire réussis ; aucune erreur JavaScript.
+- Explication réelle par Codex `gpt-6.1-sol`, avec faits figés par composant.
+- Preuves et revue indépendante : `evidence/prevention/`. Modèles/datasets
+  dans `E:/IGNIS-Valley/runtime/prevention/`, distincts du registre FDS.
+- Archive vérifiée de 99 fichiers, 39 142 723 octets :
+  `G:/IGNIS-Valley-archives/ignis-prevention-v1-20261114T125618Z.zip`.
+  SHA et vérification de chaque entrée dans `evidence/prevention/archive-verification.json`.
+
+Lire `docs/PREVENTION_MODELS.md`, `PREIGNITION_PHYSICS.md`,
+`PREIGNITION_SOURCES.md` et `PREVENTION_API.md`. L'air local est prescrit ; la
+position 3D ne couple pas encore le fil au champ FDS. Les fréquences de panne,
+cas sans allumage et données indépendantes nécessaires à un risque réel manquent.
+Les datasets/modèles archivés ne doivent pas être écrasés ni leurs tests utilisés
+pour choisir une amélioration. Les scripts refusent leur réécriture.
+
 ## Accès et exploitation
 
 - Dépôt `/home/platform-admin/projects/Valley`, branche `codex/ignis-3d-lab`.
@@ -11,7 +43,7 @@ et `/api/health` pour connaître l’état actuel du code et du service.
 - Sur le PC Windows : `http://127.0.0.1:8765`.
 - Lanceurs : `tools/windows/start-ignis.ps1` et `stop-ignis.ps1`.
   Ils survivent à la fermeture SSH et contrôlent l’identité du service.
-- Dernier démarrage vérifié : PID 3660, wrapper 29152. Ces numéros sont
+- Dernier démarrage vérifié : PID 24436, wrapper 6472. Ces numéros sont
   historiques ; utiliser le fichier d’identité pour arrêter le service.
 - État du service : `E:/IGNIS-Valley/runtime/service/api-process.json`.
 - Pas de tâche au démarrage Windows : relancer avec `docs/WINDOWS.md`.
@@ -19,7 +51,7 @@ et `/api/health` pour connaître l’état actuel du code et du service.
   authentifiée. Aucun appel Ollama dans IGNIS. L’autre service Ollama sur HTTPS
   443 a été préservé.
 
-## Livrables et preuves
+## Socle FDS et preuves antérieures
 
 - Quatre scènes Blender/GLB détaillées : habitat, cargo, crossflow et Soyouz.
   Soyouz est une interprétation originale avec proxy physique simplifié.
@@ -76,8 +108,14 @@ par scène et gravité sont visibles dans l’interface. Aucun ajustement sur le
 Une nouvelle géométrie doit être annotée, compilée, simulée et faire l’objet
 d’un nouvel entraînement. La visualisation seule ne lui donne pas un domaine
 prédictif. Réserver de nouvelles familles de test avant toute amélioration ML.
-Le prochain travail scientifique est la convergence et la validation sur des
-expériences comparables, puis une meilleure couverture des scénarios.
+Thomas a précisé la priorité : prévoir le départ de feu avant l'allumage et
+localiser le risque dans la 3D. Le cadrage est dans `docs/PREIGNITION.md` :
+premier cas de surchauffe électrique, conclusions NASA comparables, trajectoires
+avant feu et témoins, modèle temporel, validation indépendante et incertitude.
+La première tranche est livrée selon le périmètre décrit en tête de ce document.
+Les 96 calculs de source prescrite restent distincts du dataset d'allumage.
+La prochaine étape scientifique exige cas témoins, validation indépendante et
+couplage fil/cabine ; les températures simulées seules ne comblent pas ces données.
 
 ## Méthode conservée
 

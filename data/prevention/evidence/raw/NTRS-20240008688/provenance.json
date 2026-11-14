@@ -1,0 +1,29 @@
+{
+  "source_id": "NTRS-20240008688",
+  "title": "Wire-break Ignition Testing of Materials for Spacesuit Fire Hazard Control",
+  "landing_url": "https://ntrs.nasa.gov/citations/20240008688",
+  "metadata_url": "https://ntrs.nasa.gov/api/citations/20240008688",
+  "download_url": "https://ntrs.nasa.gov/api/citations/20240008688/downloads/ICES%202024%20476_Wire%20Break_Final.pdf",
+  "retrieved_at": "2026-11-14T12:05:04.491495+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "PRESENTATION",
+  "original_filename": "ICES 2024 476_Wire Break_Final.pdf",
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 5024,
+      "sha256": "1dc36b9760387c6f5b92613d7e5425b11a51f6aaef0ded6f189d2a08e4674b0d"
+    },
+    {
+      "name": "source.pdf",
+      "bytes": 1176528,
+      "sha256": "cb52a2cb00550746673133faef354703eb7dc1c7da1adf1147fad569176ac17a"
+    },
+    {
+      "name": "source.txt",
+      "bytes": 38782,
+      "sha256": "669fcc77775f4d9f3f56d3161e96d60f5cdf7f6afe52bf564f40d98a70f2a2d0"
+    }
+  ],
+  "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative"
+}

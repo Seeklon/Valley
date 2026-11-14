@@ -1,0 +1,428 @@
+                                                                                                         //,/-                _ 0
+
+                                                                                                                ...::-,/j/
+NASA            Contractor         Report   198372
+                                                                                                                   ,;L 6
+                                                                                                                    t
+
+
+
+
+Performance     of Partially                                 Fluorinated                Polyimide
+Insulation  for Aerospace                                    Applications
+
+
+
+Ahmad            N. Hammoud            and Mark W. Stavnes
+NYMA, Inc.
+Brook Park, Ohio
+
+
+
+
+James R. Ide and Ed Muegge                                                        f_
+
+McDonnell    Douglas Aerospace
+St. Louis, Missouri                                                               I                      ,m             r_l
+                                                                                 U_                       U             _D
+                                                                                 O,                       C:            0
+
+
+
+                                                                                                                        0
+                                                                                                                        r_
+
+
+                                                                                                                        t_
+August           1995
+
+                                                                                 U.
+                                                                                 C3_
+                                                                                 C_
+                                                                             LtJ b-._
+                                                                             U_r                     0
+Prepared for                                                                 Z_
+                                                                                         U
+Lewis Research                    Center                                      3E..I
+                                                                              _LLJ      t.
+Under Contracts                   NAS3-27186     and NAS1-18580               0 aL _.J
+                                                                             I.L    ,¢[ C
+                                                                             _C3_       0
+
+                                                                             _. I.'-         C3                Q.
+                                                                                                  ira.
+
+                                                                                       ZUJ        r_o
+                                                                                                  c
+                                                                            NCI_
+                                                                            P_C3
+
+                                                                            a_ ,..J
+                                                                            0', t4.               Z>.
+
+
+
+
+                                                                             I     ,_
+National     Aeronautics    and
+
+Space      Administration
+                                                                            Z_
+                                                                            vr_
+      Performance             of Partially   Fluorinated      Polyimide                    Insulation        for
+                                     Aerospace      Applications
+      Ahmad N. I-Iammoudand Mark W. Stavnes                                   James R. Ide and Ed Muegge
+                    Nyma, Inc.                                               McDonneUDon#as Aerospece
+           NASA Lewis Research Center                                                 P.O. Box 516
+             2001 Aerospace Parkway                                              St. Louis, MO 63166
+             Brook Park, Ohio 44142
+
+                        Abstract                             tobeperformed         revealed[2].
+
+Polyimide has been used extensively as the primary           An experimental insulation material developed by TRW
+wiring insulation in commercial planes, military             under the Air Force's More Electric Aircraft contract,
+aircraftand space vehicles due to its low weight, high       exhibited   some very promising         electrical  and
+service temperatme and good dielectric strength. New         mechanical properties for _         applications. This
+failure modes, however, have been associated with the        insulation material uses a partially fluorinated
+use of polyimide because of the susceptibility of the        polyimide (PFPI) formulation and exhibits similar
+insulation to pyrolization and arc lracking. A new           mechanical and electrical properties to polyimide
+wiring construction      utilizing partially fluorinated     material without the arc propagation tendencies. In
+polyimide insulation has been tested and                     work, PFPI insulation was characterized according to
+with the standard military polyimide wire. Electrical        SAE AS-4373 standards in terms of the following:
+properties which were investigated include AC corona
+inception and extinction voltages (sea level and 60,000      Corona Inception/Extinction      Time/Current to Smoke
+feet), time/current to smoke and wire fusing time. The       Wire Fusing Time                 Abrasion Resistance
+two constructions were also characterized in terms of        Dynamic Cut Through              Notch Propagation
+their mechanical       properties including       abrasion   Weight Loss/Outgassing
+resistance, dynamic cut through and notch propagation.
+In this paper, these test efforts and the results obtained   The NASA test program compared 20 AWG samples of
+arepresented and discussed.                                  MIL-W-81381/7 and PFPI insulated wire produced by
+                                                             TRW. The TRW sample was delivered with a solid
+                      Introduction                           conductor instead of stranded.         This reduced the
+                                                             flexibility of the sample and promoted cracking in the
+Polyimide based wiring insulation (MIL-W-81381) is           PFPI layers.      Since the PFPI material is in the
+widely used in electrical wiring systems for aerospace       developmental stages, the process of applying the
+applications due to its high dielectric slzength, low        material to the conductor has not been perfected. The
+weight, non-flammability       and high temperature          process used to produce the samples permitted air
+capability. New failure modes, however, have been            pockets to form in the insulated layers degrading the
+rsportedbytheaerospacecommmityin whichdegraded               materials performance.       The conductor expenmced
+polyimide     insulation becomes conductive upon me          tensile stress and flexure during processing which led to
+initiation.    These failures are detrimental to mission     the development of micro cracks forming in the
+completion     and safety as they have proven to be very     insulated layers. During the test, extreme care was
+costly in      terms of loss of life and expensive           taken in the preparation and handling of the PFPI
+equipment.                                                   samples in order to produce reliable results.
+
+A NASA program whose objective is to increase the                   PFPI/MIL-W-81381           Test     Results
+safety of _         wiring systems is being managed at
+NASALeRC.        Theprogram usesa datahaseof testing         Corona Inception and Extinction T_'t
+information on various candidates to replace MIL-W-
+81381, and identifies the requirements which ate             A 400 Hz power source was used to determine the AC
+relevant to the NASA missions.         Specifically, an      corona inception and extinction voltages. Tests were
+extensive testing database was developed by the Air          performed on wire samples that were exposed to
+Force Wright Laboratory under contract with                  ambient temperature at pressures of sea level and
+McDonnell      Douglas    Aerospace     (MDA) which          60,000 feet. Three specimens of each wire sample were
+thoroughly     addressed the     aircraft operational        wrapped for 10 equally spaced turns around a 10X
+environments [1]. By determining the opea_onal               mandrel. Power was applied at a rate of 50 volts per
+environments for NASA, as compared to the aircraft           second until continuous corona discharges were
+environments, the additional operational requirements        observed on the positive half cycle of the AC
+for NASA missions were determined and unique tests           wavef_rn. After the inception voltage was determined,
+the voltage was lowered gradually until the discharges                            until smoke was detected.
+were no longer detectable and this voltage was recoaled
+as the extinction voltage.                                                        The results of the fime/cmrent to smoke test are shown
+                                                                                  in Figure 3.       All of the MIL-W-81381 samples
+Corona results at sea level ae shown in Figure 1 and                              survived 40 amps. One sample failed at 45 seconds,
+results at 60,000 feet are shown in Figure 2. In the                              four at 50 seconds and one at 55 seconds with the
+test, the inception and extinction levels for the MIDW-                           average being 10.2 seconds at 50 amps. The PFPI
+81381 specimens were consistendy 140 Vans higher                                  samples did not perfmm as well. Two samples failed at
+than those of the PFPI construction. The differential                             35 seconds while the other four samples failed at 40
+voltage required to extinguish         the corona was                             seconds with the average being 0.2 seconds at 40 amps.
+comparable for both constructions at 70 Vain.                                     It should be noted that the smoke on the MIDW-81381
+                                                                                  wire vented out of the seams of the tape construction
+                                                                                  while the PFPI constntction vented fixan the bubbles
+      Iloo                                                                        and imperfections present in the insulation.
+      1050             MIL-W-81381      Inception
+
+      1ooo             MIL-W-81381      Extinction                                      35
+                                                                                                                                 MiL-W-81381
+       95o
+                                                                                    _so
+       9oo                                                                                                                     fl P_Pi
+                                                                                    | 25
+       85O                                                                          _- 20
+       80o                                                                          W15
+       75o
+                                                                                    >
+       7oo                                       !                        !         <     5
+                                               2                          3
+
+                                    SPECIMEN         NUMBER                                        35         40          45           5O
+
+                                                                                                               CURRENT   (A)
+
+Figure           1.        Corona         Test         Results       at   Sea
+Level.                                                                            Figure      3.        Time/Current     to    Smoke        Test
+                                                                                  Results.
+
+     700
+                      MIL-Wdl1381    Inlmptlon                                    Wire Fusin2 Tune Test
+     650
+
+     $00
+                      MIL-W-81381    Extindlon                                    The wire fusing time test was used to determine the
+ i   550     I
+                                                                                  time required to interrupt an insulated wire sample
+     500                        PFPI Ini:Ipllon                                   during an overcurrem condition. Six samples of each
+ O
+                                                                                  whe type were used in this test. A DC constant current
+     450                        PFPI ExtlnClion
+                                                                                  supply was set for 60 amps which is 2.5 times the
+     400                                                                          rated cmrent of 20 AWG silver plated copper conchr.mr.
+     3S0                                     I                                I   The current was appfied to the specimen and the time to
+                                             2                                3   intenupt was recoaled.
+                                    SPECIMEN NUMBER
+                                                                                  The results of the wire fusing time test arc shown in
+                                                                                  Figure 4. The MIL-W-81381 samples averaged 24.8
+Figure       2.        Corona        Results          at Altitude.                seconds to intmalpt while the PFPI samples averaged
+                                                                                  14.4 seconds. It should be noted that all the samples
+                                                                                  tested were fairly cm_istent across the specimen base.
+Time/Current            to Smoke Test                                             The MIL-W-81381 wire samples averaged 10.4 seconds
+                                                                                  longer to intm-upt in the overcurrent condition than dd
+The time/current to smoke test was used to determine                              the TRW PFPI samples.           The PFPI consm_tion
+the current and duration required to Ixoduce smoke from                           started venting out of the bubbles and imperfections
+a finished wire Slx_imen.     Six samples of each whe                             present in the insulation within a few seconds of power
+type were used in this _      The test began by raising                           being applied. The disparity in performance between
+the current through the specimen to I0 amps. Once 10                              the two specimens can be partially atlributed to the
+amps of current was achieved, a stop watch was started.                           immediate breakdown of the PFPI insulation through
+After 30 seconds, the current was increased 5 amps for                            the imperfections and pmti_y due to the u_on          of
+an additional 30 seconds. This process was repeated                               solid conductor in the PFPI construction.
+         30,
+                                             MIL-W-..01381                 .
+         25,
+  It.
+  :)                                                                                                     O       600
+                                                                                                                 500                                                  Et MiL.W.81381
+
+
+  ttl
+
+                                              PFPI
+                                                                                                                                                                -                            -
+  O_     10,                                                                                             i       200
+  I-
+
+  ra       5                                                                                             _       100
+                                                                                                                       0
+  I=       0             I             I                    I                  I              I
+                                                                                                                                     I                    2                        3
+                         2            3                 4                  5              6
+                                                                                                                                                 WEIGHT         (LBG)
+                                   9PECIMEN        NUUBER
+
+
+
+Figure         4.     Wire       Fusing       Time               Test              Results.            Figure      6.            Abrasion        Test         Results          at 150"C.
+
+
+Abrasion Resistance Test                                                                               Dynamic Cut Through Test
+
+The abrasion test was used to provide a relative                                                       The dynamiccut through test was used to evaluate the
+abrasion resistance evaluation of wire insulations at                                                  resistance of the insulation system to penetration by a
+ambient temperature and 150 degrees celsius.     Four                                                  cutting surface at various temperatm_. Eight samples
+samples of each specimen were tested using weights of                                                  of each wire type were tested for dynamic cut through at
+one, two and three pounds at each temperatme rating.                                                   ambient, 70, 150 and 200 degrees Celsius. The cutting
+Failure was determined by the abrading rod making                                                      tool was a 20 mil tungsten cable rod with a 4-6 mil
+electrical contact with the conductor. The number of                                                   finish. The test concluded when continuity was noted
+cycles to faihue was receded.                                                                          between the conductor and the cutting tool rod.
+
+The results of the abrasion resistance test at ambient                                                 Results of the dynamic cut through test are shown in
+temperature are shown in Figure 5 and the results at                                                   Figure 7.     The MIL-W-81381 samples withstood
+150 degrees Celsius are shown in Figure 6.            At                                               approximately twenty percent greater force at each
+ambient temperature,     the MIL-W-81381 withstood                                                     temperatm'etested. Part of the performance margin cm
+approximately seven limes more cycles than the PFPI                                                    be _         to using samded coaducton in the MR.-W-
+samples. With a 2 pound weight, the differential was                                                   81381 which permitted some compression of the wire
+three times and at 3 pounds the diffezence less than two                                               and produced a greater surface area for the rod to
+times. At elevated temperatures, the MIL-W-81381                                                       pmeuate.
+withstood eighteen times more cycles as did the PFPI
+construction.    With both the 2 and 3 pound weights,                                                    .,o,,                                                        ]uu,L.w4,,,___
+the differential was two times. The imperfections in
+the PFPI insulation made this test very difficult to
+perform. The abrading tool would catch the edge of a
+hole or crack and rip the insulation as opposed to
+cutting through it. Individual data points indicate that
+the PFPI conslrucfion has the potential of peafonning
+                                                                                                         l'
+                                                                                                                            2$              71                   110                   =O|
+as well as MIL-W-81381 in this test, providing the
+                                                                                                                                             TImPBIM'dg|       ('¢)
+imperfections in the insulation are removed.
+
+                                                                                                       Figure              7,       Dynamic             Cut             Through              Test
+                                                                                                       Results.
+
+
+          1::_                                                  r'l PFPI
+                                                                                                       Notch Prvva_atlon Test
+
+                                                                                                       The notch propagation test was used to evaluate the
+                                                                                                       ability of a wire insulation to withstand notching or
+                                                                                                       nicking without propagating the damage down to the
+                             1                     2                                3
+                                                                                                       conducts. Six specimens of each sample weae wrapped
+                                          WEIGHT        (LB$)                                          around a 0.25 inch mandrel at a rate of 30 revolutions
+                                                                                                       per minute. One revolution was noted as the winding
+Figure              $.    Abrasion                     Test           Results                     at   and unwinding of the wire in front of and then behind
+Ambient             Temperature.                                                                       the notch. Any visual indication of bare conductor was
+considered
+        a failure. After 100cycles,thesamples The weight lnss/outgassing results are shown in Figure
+weresubmerged in a saltbathfor oneminuteand 8. The PFPI insulated wire demonslxat_l a 0.9%
+subje_ed
+       toa2500volt,60Hzvoltage  withstand
+                                        test. greater weight loss than did the MIL-W-81381. Based
+                                                            on the percentage of weight gain/loss present in the
+All sixsamplesoftheMIL-W-81381    wiresuccessfully PFPI material after preconditioning, moisture which
+passed thetest. Thebendradiusof 0.25incheswas was trapped in the imperfections of the insulation
+toosevereforthePFPIconstruction.    Theinsulation coating, was released during the test skewing the
+wouldcrack and expose bare conducl_r as soon as the results.
+wire began wrapping around the mandrel.              The
+insulation in the location of the notch remained in tact.                       Conclusions
+Mandrel size was increased to determine the Im3p_
+bend radius of the construction. With a 0.50 inch           The tests performed to date demonstrated the similar
+mandrel, the PFPI construction averaged 53 3 cycles         perfc_nance characteristics bexween MIL-W-81381 and
+before failure. Two samples broke in half and the           PFPI insulations in the areas of AC corona inception
+voltage withstand test could not be performed, while        and extinction and dynamic cut through. The MIL-W-
+the third sample passed. Cracking was noted away            81381 consuuction outperformed the PFPI cons_
+fi'om the notch on all three samples. Wire Ixeakage         in the areas of wire fusing time, time/current to smoke,
+can be attributed to the flexing of the solid conductor     abrasion resistance, notch propagation and weight
+and is not a characteristic of the insulation. With a       loss/outgassing.      Based on the results of this
+0.75 inch mandrel, the three samples su_y                   evaluation, the present pmccss of applying the PFPI
+completed the I00 cycle requirement along with the          coating to the conductor must be improved prior to
+voltage withstand test.                                     conducting additional testing.      The PFPI matea_
+                                                            demonstrated many outstanding qual/ties during this
+                                                            evaluafim, but the presence of voids and imperfections
+Wei2ht Loss/Ouumssin2 Test                                  in the PFPI coating negatively impacted its overall
+                                                            performance. Future evaluations of the PFPI material
+The weight loss under temperature and vacuum test           should focus on casting films which can he used in a
+was used to determine the weight loss of a                  multiple tape insulation construction.
+Weconditioned insulated wire when subjected to a
+vacuum at temperature. Six specimens of each sample                           Acknowledgment
+were _ditioned       at 95% relative humidity and 38
+degrees Celsius for 72 hours. Another six specimens         The authors would like to thank Dr. Daniel R.
+of each sample were preconditioned at less than 5%          Mulviile, Director of NASA HQ OS&MA, Technical
+relative humidity and 38 degrees Celsius for 72 hours.      Standards Division for his continuedsupport          and
+After preconditioning, the samples were weighed and         technical guidance. The testing effort was performed by
+placed in a temperatm'e altitude chamber preconditimed      McDonnell Douglas Aerospace under contract NAS1-
+to 200 degrees Celsius. The chamber was sealed and          18580, Technology for Hyperspa_ Vehicles - Task #12
+pressure was reducedto 33 Tc_r fc_ 384 hours. At the        Feasibility    Study   of    New      Wire    Insulation
+completion of the 384 hours, the specimens w_e              Constructions      for  NASA        Aerospace Wiring
+removed and weighed to acquire a weight loss                Applications. Work was also peffmned trader contract
+(outgas_g)         value.                                   NAS3-27186.
+
+                                                                                 References
+                                 B MIL-W-81381
+           2.00%'
+                                                             o    Soloman, R., Woodford, L., Domalewski, S., New
+                                 0 PFPI
+                                                                 Insulation Constructions for Aerospace   Wiring
+      ,J                                                         Applications,    McDonnell    Douglas    Aircraft
+
+
+  .t!'°°"
+  _
+  L
+     0.50%
+
+           0.00%
+                                                     t,      .
+                                                                 Company, June 1991, WL-TR-91-4066.
+
+                                                                 Stavnes,    M.W.,    Hammoud,   A.N.,   NASA
+                                                                 Requirements and Application Environments for
+                                                                 Electrical Power Wiring, Sverdrup Technology,
+                                                                 Inc., August, 1992, NASA CR-191064.
+
+                               RELATIVE
+                                      HUWDITY
+
+Figure        8.      Weight     Loss/Outgassiug   Test
+Results.
+                                                                                                                                                                     Form Approved
+                                REPORT                  DOCUMENTATION                                        PAGE                                                    OMB No. 0704-0188
+
+ Public reportingburden lor this colisction ot inforrnalion is estimated 1oaverage 1 hour pet' re6ponse, includingthe time for rev',,mwingin.structions,,_a_-hiog existingdala sou.¢_..,
+ gathering and maintainingthe data needed, and co.ml_.ing ..apdreviewingthe ¢olleotionof information. _          _.comments  regaromgthis ouroen e,stlmateor any other aspect of this
+ collectionof information,includingsuggestions fer reducing this burden, to Washington HeadquartersS(mccss, Dwenteratefor informationupermmns and Reports, 1215 Jefferson
+ Davis Highway, Suite 1204, Arlington, VA 22202-4302, and to the OW¢8 o( Managementand Budget, Paperwork Reduction Project (0704.-0188), Washington,DC 20503.
+
+1. AGENCY           USE ONLY            (Leave blank)                2. REPORT            DATE                          3. REPORT       TYPE       AND   DATES     COVERED
+
+                                                                                    August          1995                                           Final Contractor            Report
+4. TITLE       AND     SUBTITLE                                                                                                                          5. FUNDING       NUMBERS
+
+       Performance                of Partially        Fluorinated              Polyimide       Insulation          for Aerospace
+        Applications
+                                                                                                                                                            WU-297-50--00
+6. AUTHOR(S)                                                                                                                                                C-NAS 3-27186
+     Ahmad N. Hammoud,                              Mark W. Stavnes,                James R. Ide, and Ed Muegge                                             C-NAS 1-18580
+
+
+
+7. PERFORMING                 ORGANIZATION             NAME(S)        AND ADDRESS(ES)                                                                    8. PERFORMING ORGANIZATION
+                                                                                                                                                            REPORT NUMBER
+       NYMA,         Inc.
+       NASA       Lewis Research Center
+       2001 Aerospace  Parkway                                                                                                                              E-9820
+       Brook Park, Ohio 44142
+       and
+       McDonnell Douglas                Aerospace
+       P.O. Box 516
+       St. Louis,      Missouri        63166
+I. SPONSORING/MONITORING
+                       AGENCYNAME(S) ANDADDRESS(ES)                                                                                                  q0.    SPONSORING/MONITORING
+                                                                                                                                                            AGENCY   REPORT NUMBER
+       National Aeronautics and Space Administration
+       Lewis Research Center                                                                                                                                NASA          CR-198372
+       Cleveland,             Ohio       44135-3191
+11.   SUPPLEMENTARY                    NOTES
+
+       Prepared for the 1995 Conference                           on Electrical Insulation and Dielectric Phenomena, sponsored by the IEEE Dielectrics and Electrical
+       Insulation           Society,     Virginia    Beach,        Virginia,      October     22-25,       1995.    Abroad   N. Hammoud            and Mark      W. Stavnes,       NYMAInc.,       2001
+       Aerospace            Parkway,       Brook    Park, Ohio 44142    (work funded   by NASA   Contract                            NAS3-27186);     James   R. Ide and Ed Muegge,
+       McDonnell             Douglas       Aerospace,     P.O. Box 516, SL Louis,   Missouri 63166   (work                           funded   by NASA    Contract   NAS1-18580).    Respon-
+       sible    person,        Ronald      Cull,    organization        code      5430,     (216)    433-3948.
+
+2a.   DISTRIBUTION/AVAILABILITY                        STATEMENT                                                                                     12b.    DISTRIBUTION          CODE
+
+       Unclassified              - Unlimited
+       Subject         Category          20
+
+       This    publication         is available      from     the NASA          Center    for Aea'ospa(_     Information,    (301)    621--0390.
+
+13. ABSTRACT                (Maximum        200 words)
+
+
+       Polyimide has been used extensively as the primary wiring insulation in commercial planes, military aircraft and space
+       vehicles due to its low weight, high service temperature and good dielectric strength. New failure modes, however, have
+       been associated with the use of polyimide becauseof the susceptibility of the insulation to pyrolization      and arctracking.
+       A new wiring construction      utilizing partially fluorinated polyimide insulation has been tested and compared with the
+       standard military polyimide wire. Electrical properties which were investigated include AC corona inception and
+       extinction voltages (sea level and 60 000 feet), time/current to smoke and wire fusing time. The two constructions were
+       also characterized in terms of their mechanical       properties including abrasion resistance, dynamic cut through and notch
+       propagation.    In this paper, these test efforts and the results obtained are presented and discussed.
+
+
+
+
+14.   SUBJECT         TERMS                                                                                                                                         15.    NUMBER       OF PAGES
+
+       Polyimide              insulation;          Space wiring; Corona
+                                                                                                                                                                    16.    PRICE    CODE
+                                                                                                                                                                                         A02
+17.   SECURITY  CLASSIFICATION                              18.   SECURITY  CLASSIFICATION                          19. SECURITY CLASSIFICATION                     20.    LIMITATION      OF ABSTRACT
+      OF REPORT                                                   OF THIS PAGE                                          OF ABSTRACT
+
+               Unclassified                                               Unclassified                                        Unclassified
+
+NSN 7540-01-280-5500                                                                                                                                          Standard  Form 298 (Rev. 2-89)
+                                                                                                                                                              Pres<_bed by ANSI Std. Z39-18
+                                                                                                                                                              298-102
+

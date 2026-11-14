@@ -1,8 +1,23 @@
-# IGNIS 3D — plan de réalisation figé
+# IGNIS 3D — socle livré et évolution préventive
 
-Version 2 — 14 novembre 2026. Ajout Soyouz demandé par Thomas. Dépôt : Seeklon/Valley.
+Socle version 2 — 14 novembre 2026. Ajout Soyouz demandé par Thomas.
+Dépôt : Seeklon/Valley.
 
-## Résultat attendu
+## Priorité actualisée : prédire avant le départ de feu
+
+Thomas a précisé que l'objectif central est la prévision de l'allumage et du
+risque localisé en 3D. Le [plan avant allumage](docs/PREIGNITION.md) définit
+le premier cas électrique, les conclusions NASA à exploiter, les données
+nécessaires, l'apprentissage temporel et les preuves d'acceptation.
+
+Une première tranche de prévention est implémentée : modèle de délai expérimental
+dans un domaine restreint, 384 trajectoires thermiques, prévision temporelle,
+composants 3D, conclusions NASA classées et export traçable. Voir
+[les résultats et limites](docs/PREVENTION_MODELS.md). La probabilité réelle
+et le couplage fil/cabine demandent encore des données et une validation.
+Le socle de transport décrit ci-dessous reste disponible dans « Laboratoire ».
+
+## Résultat du plan du socle
 
 Une application web accessible depuis le PC Windows de Thomas et par Tailscale,
 avec une scène Blender détaillée, plusieurs variantes physiques et des modèles

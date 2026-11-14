@@ -1,0 +1,629 @@
+53rd International Conference on Environmental Systems                                                                 ICES-2024-476
+21-25 July 2024, Louisville, Kentucky
+
+
+
+
+            Wire-break Ignition Testing of Materials for Spacesuit Fire
+                                 Hazard Control
+                                                         Colin Campbell1
+                                           NASA Johnson Space Center, Houston, TX 77058
+
+                                         Stephen Peralta2, Virginia Ward3, and Tim Gallus4
+                                       NASA White Sands Test Facility, Las Cruces, NM 88012
+
+                                                                   and
+
+                                               Danielle Morris5 and Morgan Abney6
+                                         Marshall Space Flight Center, Huntsville, AL 35812
+
+
+                       The input design constraints applied to the extravehicular activity (EVA) spacesuit pose a
+                   significant challenge for mitigation of fire hazards. To minimize fatigue and increase comfort
+                   of the crewmember operating the suit, the suit pressure is lowered below sea level conditions
+                   with typical EVA suit designs operating with 4.3 psia (29.7 kPa). With the lowered operating
+                   pressures and the use of closed-loop life support, the suit requires elevated concentrations of
+                   oxygen, typically >95%. At these oxygen concentrations, nearly the entirety of the suit internal
+                   materials are flammable. This leaves one remaining possible control leg of the fire triangle:
+                   ignition sources. Since the Gemini and Apollo programs, this has been a risk that has
+                   undergone constant reassessment, with a focus on improved mitigation. After the Apollo I fire,
+                   an arc ignition method was developed and used to quantify ignition thresholds for in-suit
+                   materials resulting in a current limit for powered in-suit devices applied to all subsequent suit
+                   designs. After the discovery of a frayed spacesuit biomed cable on STS-113 during the Shuttle
+                   Program, the previous arcing method was repeated with additional methods developed to
+                   extend the testing further. One of those methods was wire-break ignition testing, in which the
+                   current in a single strand of wire was progressively increased, preheating the material in
+                   proximity with a resultant break and the application of a reasonably repeatable arc to ignite
+                   the material, all while exposed in the selected environment. This method was used to test a
+                   suite of spacesuit materials providing relative performance with respect to ignition with this
+                   configuration for application of energy. This paper discusses extension of the current data set
+                   to address recent material additions, lowering of energy test levels for quantification of
+                   materials too low to measure in previous testing, as well as future plans to improve this
+                   method.
+
+
+                                                           Nomenclature
+            ASTM      =   American Society for Testing Materials
+            AWG       =   American Wire Gauge
+            CCA       =   communications carrier assembly
+            CHX       =   condensing heat exchanger
+
+        1
+          EVA Technical Discipline Lead, Crew and Thermal Systems Division\NASA\JSC, and 2101 NASA Parkway,
+        Houston, TX 77058, EC5
+        2
+          Project Manager, NASA JSC White Sands Test Facility, 12600 NASA Road, Las Cruces, NM 88012
+        3
+          Project Manager, NASA JSC White Sands Test Facility, 12600 NASA Road, Las Cruces, NM 88012
+        4
+          Test Engineer, NASA JSC White Sands Test Facility (WSTF), 12600 NASA Road, Las Cruces, NM 88012
+        5
+          EVA Deputy, NASA Engineering and Safety Center, National Aeronautics and Space Administration
+        6
+           ECLSS/EVA Technical Fellow, NASA Engineering and Safety Center, National Aeronautics and Space
+        Administration
+ CO2        =    carbon dioxide
+ DC         =    direct current
+ DCS        =    decompression sickness
+ DIDB       =    disposable in-suit drink bag
+ E          =    energy
+ EMU        =    extravehicular mobility unit
+ ESD        =    electrostatic discharge
+ ESPL       =    Electrostatics and Surface Physics Laboratory
+ EVA        =    extravehicular activity
+ HAB        =    helmet absorption band
+ HAP        =    helmet absorption pad
+ HAP-E      =    helmet absorption pad extender
+ ISS        =    International Space Station
+ IVA        =    intravehicular activity
+ JCI        =    John Chubb Instrumentation
+ JSC        =    Johnson Space Center
+ KSC        =    Kennedy Space Center
+ LCVG       =    liquid cooling and ventilation garment
+ NASA       =    National Aeronautics and Space Administration
+ O2         =    oxygen
+ OCA        =    Oxygen Compatibility Assessment
+ PLSS       =    portable or primary life support system
+ PVC        =    polyvinyl chloride
+ SRP        =    Safety Review Panel
+ STS        =    Space Transportation System
+ t          =    time
+ TCHDE      =    2-4-4’-trichloro-2’-hydroxydiphenyl ether
+ TCU        =    thermal comfort undergarment
+ V          =    voltage
+ WSTF       =    White Sands Test Facility
+
+                                                 I. Introduction
+
+F   or extravehicular activity (EVA) spacesuit applications, the use of 100% oxygen is required to enable operation
+    of the total suit pressure at levels down to 3.1 psia [21.4 kPa] with nominal operation for suits such as the Space
+Shuttle and International Space Station (ISS) extravehicular mobility unit (EMU) at 4.3 psia [29.6 kPa]. As the EMU
+and all other flown or active suit designs use an anthropomorphic pressure vessel approach, the suit is pressurized, the
+crew operates within the shaped pressure vessel, and must work against it to perform tasks. Despite the great care and
+extensive design work implemented in these suit designs, the fact remains that as the suit operating pressure increases,
+so does the effort the crew must exert increasing fatigue of the crew over the course of an EVA or spacewalk. As a
+result, the suit operating pressure is lowered as far as possible, with the low end based on hypoxia limitations of human
+physiology. Use of 100% oxygen is required to achieve this lowest possible absolute pressure. Considering that
+materials within the spacesuit are flammable in 100% oxygen and that 100% oxygen is required for the functional
+performance of the spacesuit, the suit application already includes two of the three legs of the fire triangle: fuel and
+oxygen (Figure 1). Consequently, the control of ignition sources in the suit volume is the only remaining option for
+mitigation of the fire hazard in a spacesuit.
+
+
+
+
+                                                          2
+                                 International Conference on Environmental Systems
+                                               Figure 1. Fire triangle.1
+
+     A detailed and extensive investigation (21 parallel working panels) took place in the wake of the Apollo I (Saturn
+I Vehicle 204) incident in January 1967. A vehicle wire chafing issue was ultimately identified as a likely proximate
+cause for the fire. One of the findings in the Apollo 204 Accident Report2was that inadequate data, understanding, and
+control of materials in the spacecraft were contributors to the accident. A Discovery Channel documentary provides a
+reasonable summary of this event3. The Gemini spacesuit that preceded the Apollo suit had a verified catastrophic fire
+hazard regarding the ignition of the cotton constant-wear garment from arc ignition via an intermittent short4. Testing
+of the 20V biomedical supply was performed at the time using 258 and 720 mmHg total pressure in 100% oxygen,
+with values of 4.0A and 1.5A determined as the minimum short circuit current required for ignition, respectively. A
+subsequent test simulated the short circuit with current limiting at pressures of 650 and 760 mmHg in 100% oxygen
+without ignition in 200 tests. This test data was used to establish the 0.5A current limit for suit internal volume (often
+referred to as the pressure garment volume or ventilation loop) input power from that point forward. Analysis of the
+Apollo suit biomedical and communications power determined that the maximum short circuit currents were 0.18A
+and 0.065A, respectively. Both were well below the 0.5A established current limit.
+     After the Apollo I incident, the current limiting implementation of the suit electronics was reassessed, and more
+extensive testing of materials used in the suit volume was performed. In this test, which will be referred to as the
+“scratch and poke” test, a flat electrode plate including the material sample was placed in a chamber that was evacuated
+and then refilled with 100% oxygen to achieve the selected test pressure. A needle electrode was then used to scratch
+and poke the material creating shorts to the flat plate through the material in an attempt to create an ignition (Figure
+2). Samples were intentionally frayed to represent potential abrasion of the material from relative motion within the
+suit volume.
+
+
+
+
+                                   Figure 2 - Scratch and Poke Test Diagram [4]
+
+
+
+                                                          3
+                                 International Conference on Environmental Systems
+     A material was determined to be “safe” if no ignition occurred during 15 minutes of arcing across the frayed
+sample4. For the 19 psia, >95% oxygen case, clean cotton underwear was determined to be the limiting material
+igniting with a current of 1.1A during the testing. Using clean cotton underwear as the limiting material, a subsequent
+test was performed to evaluate the suit current limiting of the biomedical system and determine the additional output
+lead resistance necessary to mitigate the ignition hazard from the transient shorting failure mode. The steady-state
+current limit was 50mA, with an additional transient current from the pulse discharge of two 60uF capacitors in the
+event of a transient short circuit. The test setup was similar to that from Figure 2 but with the addition of the transient
+pulse discharging capacitors as part of the DC/DC converter (Figure 3); an oscilloscope was set up to measure the
+transient current spikes associated with the shorts. With the lead resistance “R” at “0 Ohm,” ignition was achieved.
+As the lead resistance was increased to 5 Ohm, the ignition was not achieved in 1.5 hours of testing.
+                                                                                     NEEDLE
+                                                                                   ELECTRODE
+
+                                                                        ENVIRONMENTAL                     FABRIC
+                                                                        CHAMBER
+                                                                                                          FLAT ELECTRODE
+
+
+
+
+                                                                R
+                    +                              +10 VDC
+
+
+  120     POWER      16.3 VDC     DC/DC                COMMON
+  VAC     SUPPLY                CONVERTER
+                                                                R
+
+                    -                             -10 VDC
+
+
+
+
+                   Figure 3 - Biomedical Transient Short Test Setup4 with clarified annotations
+
+The established steady-state current limit of 0.5A or 500mA was then used broadly across the suit programs such as
+Shuttle and ISS EMU, including ground testing through and up to the early 2000’s.
+
+     During Shuttle Mission STS-113, after completion of EVA 2, Crewmember EV1 reported that the biomedical
+cable in his ISS EMU that had been used for EVAs 1 and 2 had broken wire insulation with some wires protruding
+through the insulation5. A team was assembled, taking many parallel paths to work the problem. One of the immediate
+considerations was the quantification of risk for not only the biomedical cable but also for the communications cable
+used in the same environment and carrying higher voltage and current conductors. As a result, arc energy assessments
+were made considering the biomedical and communication system designs. A test effort was initiated with the White
+Sands Test Facility (WSTF), as the current EMU materials were not fully covered in the Apollo era testing, the
+electrical system design for the Shuttle EMU was different, and some information from the Apollo era testing was
+lost. The team developed three different methods to evaluate materials for flammability in this application: “scratch
+test,” “poke test,” and “wire-break test.” Data was collected with each of these methods and variants of them for
+relative comparison. The scratch testing dragged a stylus across the material while arcing through the material. The
+poke test was similar to the Apollo era testing performed that poked a small stylus into the material, arcing through
+the material (Figure 4).
+
+
+
+
+                                                          4
+                                 International Conference on Environmental Systems
+                               Sample Mounting Block                                                                             Sample Mounting Block
+                                       Cathode Plate                                                                                    Cathode Plate
+                                                                                                               Anode Electrode
+              Inlet Port               Fabric Sample
+                                                                                                                                       Fabric Sample
+         Thermocouple                    Ring Clamp                                                           Outlet Port
+                 Port                Anode Electrode                                                                                  Ring Clamp
+
+
+
+
+                                                                                                        Inlet Port
+
+
+
+
+                                                                                             Thermocouple Port
+
+
+
+
+                 Outlet Port
+
+
+
+
+                                                                                                                                           View Window Assembly
+                                                       View Window Assembly
+
+
+                                                           Figure 4 - Scratch Test (left) and Poke Test (right)6
+
+     Upon evaluation of both of tests, the team found that in both the scratch and poke tests, an arc occurred at one
+location perhaps multiple times sequentially. With subsequent evaluation of frayed wire with arcs in multiple locations
+a lower ignition current was measured indicating that it is more severe to arc in multiple locations. With the arc-to-
+arc, test-to-test variation of these two methods, the team focused on a more repeatable method that became the wire-
+break method (Figure 5). In this method, a single “U”-shaped wire was placed in contact with the test material while
+the current was slowly ramped to the melting point of the wire, where it broke and arced. The material was preheated
+to 95° +/- 5°F. The ramp to the breaking current of the wire preheated the test material which thermally decomposed
+the test material and generated a combustible vapor which was trapped in proximity by the slide glass while still
+mixing with the oxygen in the chamber. Upon wire breakage an arc was created which was then able to ignite the
+vapor and kindle to the material.
+
+
+
+
+                                                                              Figure 5 - Wire Break Test6
+
+    As wire-break test definition was a materials-focused ignition test tailored to the EMU application, the wire gauge
+range tested focused on wire sizes (Table 1) bracketing the flight design at 46 AWG (34 to 54 AWG). The wire gauge
+range spanned to the smallest available wire gauge at the time attempting to account for the status of a damaged or
+abraded cable. As this was something that could not be known, the test was essentially determining the material limit
+with this particular mechanism type as implemented by this test setup.
+                                                                                      5
+                                                             International Conference on Environmental Systems
+ A range of current EMU materials was tested, ranging from wire jacketing to generic cotton to Moleskin, is thoroughly
+ documented in the summary report6 and Table 3-17 of ASTM Manual 367 with the relevant information provided in
+ Table 2.
+
+                                    Table 1 - Wire Sizes Used in Wire Break Test6
+
+
+
+
+          Table 2 – Wire-Break Ignition Testing DCS Test Results (23.5 ± 1 psia, >99 percent oxygen)6
+Material                                                             Wire         Voltage       Current at Wattage at
+                                                                     Gauge          (V)(4)        Ignition      Ignition(4)
+                                                                    (AWG)                            (A)           (W)
+Generic cotton(2)                                                     54             22.5           0.36            8.1
+Moleskin(2)                                                           54             22.5            0.3            6.8
+Kerlix dressing(2)                                                    54             22.5            0.3            6.8
+TCU assembly (Capilene – hollow fiber polyester treated               54             22.5           0.33            7.4
+with 3% TCHDE solution) (gray) (2)
+Urethane-coated nylon suit bladder (shiny side)                       52             22.5            0.7           15.8
+Urethane-coated nylon suit bladder (fabric side)                      47             22.5           0.97           21.8
+Interface cable Gore-Tex sleeve(3)                                    34             22.5           9.23           N/A
+Interface cable polyurethane jacket                                   48             22.5           0.78           17.6
+CCA cap spandex (nylon & Lycra knit fabric)                           50             22.5           0.59           13.3
+Estane polyurethane(5)                                                48             22.5           0.92           20.7
+Astronaut longhandle undergarment                                     50             22.5           0.64           14.4
+Cotton flocked Rucothane glove bladder (flocked side)                 52             22.5           0.45           10.1
+LCVG garment inner liner (nylon tricot treated with 3%                52             22.5           0.49           11.0
+TCHDE solution)
+LCVG garment inner liner (nylon tricot untreated)                     50             22.5           0.61           13.7
+LCVG garment (multifilament nylon / spandex knit 1106                 52             22.5           0.53           11.9
+treated with 3% TCHDE solution)
+PVC wire jacket                                                       47             22.5           0.92           20.7
+  NOTE:
+      (1) Tests were performed with a single strand of silver-coated copper wire in contact with test material. Current
+          was increased until wire failed, producing an electrical arc.
+      (2) This material ignited at the lowest possible current; therefore, no threshold for ignition was determined.
+      (3) This material was never ignited in the test conditions; however, it could be ignited in higher-pressure oxygen.
+
+
+                                                           6
+                                  International Conference on Environmental Systems
+    (4) Wattage at ignition using P = I*V is not accurate with respect to the power actually provided. Supply was
+        operated in constant current mode, with voltage varied to hold the current through the test wire constant by
+        varying the supply voltage accounting for changes in resistance of the wire as the temperature increases.
+    (5) This material was mistakenly sent to WSTF as an arc-ignition test material. Apparently it is not in the EMU.
+        However, some tests were performed before this was discovered. A threshold for ignition was not determined.
+
+  As a corrective action for the “water in the helmet” investigation for US EVA 80 on ISS8, additional materials were
+added to the helmet area in contact with the communications harness such as viscose (rayon) chamois material. The
+chamois absorbs and sequesters sublimator condensate carryover from the ISS EMU that migrates into the helmet
+under certain failure and usage conditions. This material had not been tested using the wire-break test method but was
+deemed safe to use via the ISS Safety Review Panel (SRP) process based on the multi-layer harness layup with
+additional inspections of that harness as part of preparation for each EVA on ISS. During the initial design and
+development of this testing approach6, it was noted that 46 AWG was the EMU flight individual wire strand size but
+that testing was to be performed down to 54 AWG wire given that, due to damage, it is impossible to state the ampacity
+of a damaged single 46 AWG wire. Additionally, an intact 46 AWG wire would not break until current exceeded
+~1.1A, necessitating the use of smaller wire gauges to aid in application of the lower energy levels. Hence, while this
+test had been originally conceived as a bounding case on a credible ignition method within the Shuttle/ISS EMU, the
+test had already transitioned to a materials-centric test method representing a worst-case suit application less
+engineering controls not unlike other tests represented in ASTM Manual 367. Examples of similar materials-centric
+test methods include: mechanical impact, particle impact, and upward flame propagation of an 1/8-inch diameter rod.
+For each of these, the system designer/assessor must review the standardized test data for applicability to a specific
+implementation; this is routinely performed as part of the oxygen compatibility assessment (OCA) process for an
+oxygen system. At the time of completion of the initial wire-break testing6, four materials — cotton, thermal comfort
+undergarment (TCU) polyester, moleskin, and Kerlix dressing — could not be tested to a low enough energy level
+using the smallest available 54 AWG wire. Hence, to quantify the performance of the new materials added post-EVA
+80 as well as other materials added to the suit volume since the time of the initial wire-break testing, another wire-
+break test effort was initiated. A custom wire vendor was identified for wire gauges of 56 AWG and 58 AWG copper
+and sourced to attempt to further lower the applied energy at the test conditions.
+  Herein, the extended wire-break ignition test data for the materials will be discussed considering the instantaneous
+voltage/current at time of ignition. To make this data more usable to system designers and those assessing the systems,
+an additional discussion and data reduction will be performed to convey that same data but in a more accurate manner
+with respect to the energy input into the sample through the test. Lastly, the plan for an updated test method derivative
+of the wire-break method will be examined to improve repeatability and usability of the data going forward.
+
+                              II. Summary of Extended Wire-break Testing
+    The standard method defined in document reference6 and is also called as an optional materials test in NASA-
+STD-60019, Appendix A.2.11 was originally developed in 2003-2005 and used to generate data summarized in
+Table 3. The basic procedure and test setup were discussed above.
+
+
+
+
+                                                          7
+                                 International Conference on Environmental Systems
+                   Table 3 – Total Set of EVA DCS Condition Wire-break Ignition Testing Data
+                                The added data from 2023/2024 is highlighted in orange.
+Material(7)                                                           Wire        Voltage       Current at Wattage at
+                                                                      Gauge         (V)(4)        Ignition      Ignition(4)
+                                                                     (AWG)                           (A)           (W)
+HAB/HAP-E (Viscose) Rayon Chamois                                       56           22.5          0.049           1.09
+HAP Outliner - Tranquility                                              56           22.5          0.200           4.49
+Moleskin                                                                58           22.5          0.078           1.76
+Cotton (t-shirt)                                                        51           22.5          0.490          11.03
+Pyropel(8)                                                              52           22.5         <0.493*         11.10
+Kerlix dressing(6)                                                      52           22.5           TBD            TBD
+Kerlix dressing(2)                                                      54           22.5            0.3            6.8
+Generic cotton(2)                                                       54           22.5           0.36            8.1
+TCU assembly (Capilene – hollow fiber polyester treated                 54           22.5           0.33            7.4
+with 3% TCHDE solution) (gray) (2)
+Urethane-coated nylon suit bladder (shiny side)                         52           22.5            0.7           15.8
+Urethane-coated nylon suit bladder (fabric side)                        47           22.5           0.97           21.8
+Interface cable Gore-Tex sleeve(3)                                      34           22.5           9.23           N/A
+Interface cable polyurethane jacket                                     48           22.5           0.78           17.6
+CCA cap spandex (nylon & Lycra knit fabric)                             50           22.5           0.59           13.3
+Estane polyurethane(5)                                                  48           22.5           0.92           20.7
+Astronaut longhandle undergarment                                       50           22.5           0.64           14.4
+Cotton flocked Rucothane glove bladder (flocked side)                   52           22.5           0.45           10.1
+LCVG garment inner liner (nylon tricot treated with 3%                  52           22.5           0.49           11.0
+TCHDE solution)
+LCVG garment inner liner (nylon tricot untreated)                       50           22.5           0.61           13.7
+LCVG garment (multifilament nylon / spandex knit 1106                   52           22.5           0.53           11.9
+treated with 3% TCHDE solution)
+PVC wire jacket                                                         47           22.5           0.92           20.7
+  NOTE:
+      (1) Tests were performed with a single strand of silver-coated copper wire in contact with test material. Current
+           was increased until wire failed, producing an electrical arc.
+      (2) This material ignited at the lowest possible current; therefore, no threshold for ignition was determined.
+      (3) This material was never ignited in the test conditions; however, it could be ignited in higher-pressure oxygen.
+      (4) Wattage at ignition using P = I*V is not accurate with respect to the power actually provided. Supply was
+           operated in constant current mode with voltage varied to hold the current constant through the test wire by
+           varying the supply voltage, accounting for changes in resistance of the wire as the temperature increases.
+      (5) This material was mistakenly sent to WSTF as an arc-ignition test material. Apparently, it is not in the EMU.
+           However, some tests were performed before this was discovered. A threshold for ignition was not determined.
+      (6) Data reduction in-process to provide value given considerable scatter in observed test results. Testing was
+           ceased on this sample as the gauze filament spacing added a significant amount of variability in the results
+           for combustible vapor generation and ignition.
+      (7) The EMU thermal comfort undergarment (TCU) Capilene - hollow fiber polyester, with and without 3%
+           TCHDE, pristine or frayed was not retested in 2023/2024 given its lack of proximity to the current source
+           and similar performance to moleskin and cotton.
+      (8) Pyropel was initially tested but was dropped mid-test without completion to lower limit determination due to
+           demanifesting of the solution involving this material as the post-EVA 80 corrective action. Hence, a no burn
+           limit was not achieved.
+
+ Allowing for changes noted in Figure 5, the test setup was reconstructed to the state used in previous testing
+ performed in 2005. In particular, the clamping mechanism to retain the ends of the wire was changed from screw-
+ down terminals to magnetic clamps, which resulted in greater contact resistance at the joint. This is not an issue
+ when controlling the current through the wire with local voltage drop measurement across the wire but does pose a
+ variable offset for a method using constant voltage potential across the setup. As noted in Table 3, the voltage
+                                                           8
+                                  International Conference on Environmental Systems
+reported in the table is not relevant as it is the power supply voltage not considering the constant current mode and
+the actual voltage drop across the test wire. Also note that the power shown in the right-hand column is erroneous or
+not relevant as it basically multiplies the power supply voltage by the current using Ohm’s Law (P = I*V), where P
+= power in watts, I = current in amperes, and V = voltage or potential in volts of direct current (VDC). Figure 6
+provides a simple electrical diagram of the setup. Heat is generated and voltage is dropped a significant amount in
+three locations. R1 and R3 each vary with holder design and test to test, with greater contact resistance for the
+magnetic clamp holders versus screw-down terminal holders. If the voltage noted in Table 3, column 3 is recorded
+for the total voltage that floats to allow the constant current and varied path resistance, then large errors are
+introduced into the power computation.
+
+
+
+
+                             Figure 6 - Electrical Diagram for Wire Break Test Setup
+
+The data in Table 3 is still relevant but the interpretation provided is not useful for driving system design and
+allowing assessment of the ignition hazard. An alternate approach is needed when applying this data.
+
+                                III. Discussion of Summary Energy Input
+    As discussed above, the test method described in this paper was originally developed as a materials-centric
+configuration specific ignition test. However, the approach and application of data derived from it, has been evolving
+into a material characterization test to determine a minimum threshold of energy necessary for ignition given an
+electrical circuit failure where heat energy can be put into the material at a rate sufficient to ignite and propagate to
+bulk burning. To do so, the current through the wire and the voltage across the wire just before the moment the wire
+is fused open can be taken to derive an instantaneous power level. This value could then be used as a power threshold
+or a go/no-go where the material that has been characterized could or could not be used. This approach should be
+considered carefully. Closer examination shows this approach is inadequate. To illustrate this, consider Figure 7.
+During the test, the power (voltage and current) rises above the power level at the time of break several times before
+the wire ultimately fuses open, ignites, and burns the material.
+
+
+
+
+                                                          9
+                                 International Conference on Environmental Systems
+                                       Figure 7 - KER 54-1 Wire-Break Test
+
+    Logically, it stands to reason that the ignition and burning of the material should be observed at these higher power
+levels rather than at the final lower power where the wire did fuse open. Conversely, it could also be shown that the
+material can also be ignited at a lower power level lower than observed in the test. Therefore, using power exclusively
+to describe performance of the material is insufficient and suggests that more information is needed for a fair and
+honest application of the data to occur. Consider Figure 8 in which the plot on the left provides the current at break
+on the Y-axis and the test number on the X-axis; the plot on the right provides the power at break on the Y-axis and
+the test number on the X-axis. The orange series is the 2024 magnetic clamp approach while the gray series is the
+screw-terminal contacts from 2004-2005. The blue series is moleskin, which was placed for reference. Note that the
+reported power is skewed by the contact resistance difference between the two variations of the setup.
+
+
+
+
+                    Figure 8 - Current vs Test Number (Left)/Power vs Test Number (Right)
+
+    Looking at the process of ignition and burning more closely, the material needs to be thermally decomposed
+(pyrolyzed) for it to be in a state in which it can readily burn. This process takes time and exclusively using a power
+derived from voltage and current overlooks that critical part of the process. If time is taken into account, then what is
+really being described and observed is the energy or work that it takes to get the material to become pyrolyzed to the
+point that it can be ignited and burned. More specifically, total energy is the focus. This total energy is what describes
+the cumulative work done by the flowing current in the wire that is in intimate contact with the material, heating and
+pyrolyzing it. However, heating the material is also a balance of getting enough material to thermally decompose yet
+not having too much time and getting too much pyrolyzed material. In other words, for the material to burn, it needs
+to be above the lower flammability limit and below the upper flammability limit. Time is required, but not too much.
+                                                             10
+                                   International Conference on Environmental Systems
+Once enough material is pyrolyzed (thermally decomposed) and in the flammability zone, the amount of energy
+needed to ignite the evolved material is extremely low (on the order of millijoules) and the probability for ignition is
+at its greatest.
+     If energy or total energy is a more appropriate way to handle to the application of data generated from this test
+method, then a term that would describe it is desirable. Such a term exists and can be borrowed from the electrical
+engineering field where such a term is employed. The term is I2t, where I is the current squared multiplied with time,
+t. It is commonly used, particularly in the context of protection devices such as fuses and circuit breakers. It represents
+the thermal energy or "let-through energy" that flows through a device due to a short-circuit or overload condition, a
+condition or scenario that is of interest in this context.
+     As a possible defense for using this approach, consider the derivation of the term. The term is derived from the
+equation for the energy dissipated as heat in a conductor due to the electrical current flowing through it. According to
+Joule's law, the heat generated in a conductor is proportional to the square of the current flowing through it and the
+time duration for which the current flows. Mathematically, this relationship can be expressed as:
+                                                      𝑄 = 𝐼 𝑅𝑡                                                        (1)
+
+    Where Q is the heat energy dissipated in Joules, I is the current flowing through the conductor in amperes, R is the
+resistance of the conductor in ohms, and t is the time duration for which the current flows in seconds.
+
+    In protective devices, the time taken for the device to react and interrupt the current flow is very short (typically
+in milliseconds). Therefore, for protective devices like fuses and circuit breakers, the energy let-through or "let-
+through energy" is more relevant than the total heat dissipated. This is often represented by the integral of the square
+of the current over time, hence the term I2t.
+    The I2t rating of a protective device is a measure of its ability to withstand and safely interrupt short-circuit currents
+without sustaining damage or causing downstream equipment damage. It helps in selecting the appropriate protective
+device for specific applications based on the expected magnitude and duration of fault currents. Likewise, a similar
+approach may be used in adopting the I2t term and applying it to a material and thinking of the material in much the
+same manner as a fuse or breaker, where the interest is in protecting the material from a total energy input that would
+lead it to become ignited.
+    To illustrate this approach, consider Figure 9, which reflects the power (W) during the test showing the energy
+input into the wire and sample building up to the wire break where the actual power during the ignition of the resulting
+combustible vapor is much lower than that required to heat it initially. Now consider Figure 10. For the leftmost plot,
+the energy input is integrated and plotted and on the rightmost plot, the I2t is plotted. For the orange series and gray
+series, they are the same material but the orange represents the 2024 magnetic clamping fixture and the gray represents
+the 2004-2005 screw-terminal fixture. The blue series is moleskin, which was plotted for reference. With the energy
+input integrated alone, the contact resistance is still driving an erroneous result, showing the material with much lower
+ignition energy than actual due to the losses across the higher contact resistances of the magnetic clamps. For the I2t
+approach, the contact resistances for the screw-terminal vs magnetic clamps are tared out of the data as the power
+supply corrects the actual supply voltage to maintain a constant current. Hence, on the rightmost plot, the orange series
+with the magnetic clamping fixture is in line with the gray screw-terminal clamping fixture and a clearer picture of
+the actual material performance is observed.
+
+
+
+
+                                                          11
+                                  International Conference on Environmental Systems
+                                   Figure 9 - Power at Wire Break (W) Example
+
+
+
+
+                                                                   2024 moleskin
+
+
+
+
+            Figure 10 – Integrated Energy Input (J) (Left)/ I^2t Example with Polyurethane (Right)
+
+   This approach is novel, and there are still many aspects of the approach that require further consideration, including
+understanding the limits of the application’s extrapolation, which is beyond the scope of this paper. Further work is
+being done to understand the limits and modifications to the test method.
+
+                                             IV. Method Updates
+    As expressed in reference document6 several test setup parameters were found to alter the wire-break ignition test
+results. Some of these factors included:
+    • Wire placement
+             o The wire must be in direct contact with the sample to obtain ignition.
+             o Occasionally, the wire would lift off of the surface of the material when heated.
+             o High-speed video has to be reviewed from each run to ensure that the wire remained in contact with
+                  the sample.
+    • Wire length
+             o An increase in the wire length lowered the ignition energy, as this resulted in transmission energy
+                  loss with less delivered to the sample as measured at the contacts.
+    • Wire gauge/handling to avoid breakage
+             o As the wire gauge increases and the resulting cross-section decreases, it becomes much more
+                  difficult to handle and secure the wire without damage.
+    • Ability to control wire-breakage location in small-gauge wires
+                                                          12
+                                  International Conference on Environmental Systems
+             o    With the heat sinking at the terminals, the wire has peak heating at the center of the U-loop.
+                  However, peak heating can occur elsewhere if the wire is damaged or altered.
+    •    Heat flux/thermal conductivity of the materials under test
+             o If the material sample is highly conductive, it can dissipate heat away from the localized heating
+                  zone, with the wire sinking it to the copper baseplate. This produces a higher apparent ignition
+                  energy, skewing the results.
+    •    Combustible vapors
+             o The combustible vapors must be accumulated above the lower flammability limit and below the
+                  upper flammability limit. This time component of the test forces iteration to find the optimal ignition
+                  point.
+             o The material density in proximity to the wire also contributes to how much of the heat-affected zone
+                  will experience thermal decomposition and potentially source combustible vapors. Figure 11 shows
+                  the rather small size of the heat-affected zone along with the open fiber density of the Pyropel
+                  leading to less direct contact with the given material.
+
+
+
+
+                                 Figure 11 - Photo of Pyropel with 38 AWG Wire
+
+Potential improvements under active investigation include refining or evolving the existing wire-break method with
+changes such as:
+    • Programmed current (A) ramp rate
+    • Re-test sweet spot (seconds) to maximum ignition frequency
+    • Add spark plug for more repeatable arc ignition
+    • Instant calculation of integrated I^2t, current at break, voltage at break, power at break, and integrated energy
+         (Joules) so operator knows step-down accomplished
+    • Measure heat flux of ignited smoke
+Additional considerations include the splitting of the different functions performed by the current wire-break setup:
+    1. Perform a materials characterization prior to the test using thermos gravimetric analysis (TGA), differential
+         scanning calorimetry (DSC), and gas chromatograph/mass spectrometer (GC/MS) to determine when thermal
+         decomposition occurs for the given material and what combustible vapor is produced.
+    2. Use the setup-controlled preheat to generate the combustible vapor via thermal decomposition across a larger
+         area of the sample, addressing the small heat-affected zone issue.
+    3. Use a controlled igniter similar to a spark plug to generate a repeatable and controlled spark with variable
+         energy for the selected test condition.
+
+                                                 V. Conclusion
+    The wire-break ignition test was developed after re-creation and review of the Apollo era tests that employed
+scratch and poke electrode techniques to devise a more repeatable and conservative test that still represents a system
+failure mode. A body of data was generated for materials characterization considering thermal decomposition into a
+combustible vapor with subsequent ignition from an arc discharge. The interpretation of that data is being evolved to
+
+                                                         13
+                                 International Conference on Environmental Systems
+improve its usability for design and assessment of oxygen systems. Work is ongoing to further evolve and improve
+the repeatability of the test method and data produced.
+
+
+                                                        References
+
+    1Wikipedia, "Fire Triangle," [Online]. Available: https://en.wikipedia.org/wiki/Fire_triangle. [Accessed 18 February
+
+2024].
+    2Committee on Aeronautical and Space Sciences US Senate, "Apollo 204 Accident Report," 90th US Congress, 2nd
+
+Session, Washington, DC, 1968.
+    3H. Downs, Director, Tragedy on Pad 34: Apollo One. [Film]. US: Discovery Channel, 1997.
+
+    4CSD-A-518, "Study of the Apollo Space Suit Electrical Fire Hazard," NASA/JSC, Crew Systems Division, Houston,
+
+1968.
+    5MER-01025, "IFI EMU Comm Cap Pigtail Adapter Damage," NASA/JSC, Houston, 2002.
+
+    6WSTF-TR-1035-001-01-05, "Test Report - Electrical Arc Ignition Testing of Spacesuit Materials," NASA/JSC-WSTF,
+
+Las Cruces, NM, 2007.
+    7ASTM Manual 36, 2nd Ed., "Safe Use of Oxygen and Oxygen Systems: Handbook for Design, Operation, and
+
+Maintanenance," ASTM, West Conshohocken, PA, 2007.
+    8M. W. Weislogel, O. Krischcko, L. J. Torres, C. S. Campbell, P. D. Dum, J. C. Graf and a. T. J. Rundle, "Excess Water
+
+in Astronaut Helmet During EVA on ISS: Mitigations with Flight Demonstrations," 52nd International Conference on
+Environmental Systems, Calgary, Canada, 2023.
+    9NASA-STD-6001, Rev B, Change 2, "Flammability, Offgassing, and Compatibility Requirements and Test
+
+Procedures," NASA, Washington, DC, 2016.
+    101967    CBS      News       Special     Report,     "YouTube,"      February      1967.      [Online].    Available:
+https://www.youtube.com/watch?v=iSWUnWOMdTk.
+
+
+
+
+                                                          14
+                                  International Conference on Environmental Systems
+

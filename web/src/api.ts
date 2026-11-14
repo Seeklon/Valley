@@ -9,6 +9,13 @@ import type {
   RunConfig,
   Source,
 } from './types';
+import type {
+  PreventionCatalog,
+  PreventionConfig,
+  PreventionEvidence,
+  PreventionInterpretation,
+  PreventionResult,
+} from './prevention';
 
 export class ApiError extends Error {
   constructor(
@@ -77,6 +84,38 @@ export const api = {
       { method: 'POST', body: JSON.stringify({ config, question }), signal },
       120_000,
     ),
+  preventionCatalog: (signal?: AbortSignal) => request<PreventionCatalog>('/prevention/catalog', { signal }),
+  preventionAnalyze: (config: PreventionConfig, signal?: AbortSignal) =>
+    request<PreventionResult>(
+      '/prevention/analyze',
+      { method: 'POST', body: JSON.stringify(config), signal },
+      60_000,
+    ),
+  preventionEvidence: (componentId: string, config: PreventionConfig, signal?: AbortSignal) => {
+    const query = new URLSearchParams({
+      component_id: componentId,
+      gravity_g: String(config.gravity_g),
+      oxygen_percent: String(config.oxygen_percent),
+      airflow_m_s: String(config.airflow_m_s),
+      pressure_pa: String(config.pressure_pa),
+    });
+    return request<PreventionEvidence>(`/prevention/evidence?${query}`, { signal });
+  },
+  preventionInterpret: (analysisId: string, componentId: string, question: string, signal?: AbortSignal) =>
+    request<PreventionInterpretation>(
+      '/prevention/interpret',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          analysis_id: analysisId,
+          component_id: componentId,
+          question: question.trim() || undefined,
+        }),
+        signal,
+      },
+      120_000,
+    ),
+  preventionExportUrl: (id: string) => `/api/prevention/analyses/${encodeURIComponent(id)}/export`,
 };
 
 export function messageOf(error: unknown): string {

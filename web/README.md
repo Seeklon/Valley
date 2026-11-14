@@ -12,6 +12,7 @@ npm test
 npx playwright install chromium
 npm run test:browser
 npm run test:prediction
+node tools/prevention-check.mjs
 ```
 
 Le serveur de développement utilise le port 5173 et transmet `/api` et
@@ -21,6 +22,9 @@ Le serveur de développement utilise le port 5173 et transmet `/api` et
 
 ## Fonctionnalités
 
+- Accueil **Prévention**, distinct du Laboratoire : géométrie sans foyer,
+  composants hypothétiques sélectionnables dans la scène et la liste, analyse
+  d'échauffement avant feu, conclusions expérimentales classées et export ZIP.
 - Scènes issues de `/api/scenes`, GLB interactif, sélection par `object_id`,
   contrôle des éléments `userData.cutaway`, capteurs et point d'allumage.
 - Physique et prédiction via `POST /api/runs`, suivi non bloquant, annulation et
@@ -42,7 +46,7 @@ Le serveur de développement utilise le port 5173 et transmet `/api` et
 
 ## Contrats attendus
 
-Voir `../docs/CONTRACTS.md`. Contrats opérationnels utilisés :
+Voir `../docs/CONTRACTS.md` et `../docs/PREVENTION_API.md`. Contrats opérationnels utilisés :
 
 - `/api/health`: `{status, worker_available, capabilities:{physics,prediction,source_models}}`.
 - `/api/scenes`: `{schema_version,materials,scenes}`. Catalogue dynamique, incluant
@@ -136,3 +140,59 @@ ne sont pas corrigées dans le navigateur.
 Le rendu 3D est actualisé à la demande ; un tableau de bord immobile ne relance
 pas en continu des centaines de draw calls. Les textures et géométries sont
 libérées lors du changement de scène ou de vue.
+
+## Prévention avant allumage
+
+Les bornes, valeurs initiales et composants viennent de `/api/prevention/catalog`.
+« Analyser le scénario » transmet la configuration à `/api/prevention/analyze` ;
+le navigateur ne fabrique aucun résultat. Les paramètres de prévention sont
+indépendants du dernier essai du Laboratoire. La session de prévention, ses
+résultats et sa référence sont conservés pendant la navigation entre onglets.
+Le rechargement de la page revient à une scène non évaluée, sans restaurer un
+foyer du Laboratoire. Annuler l'attente coupe la requête côté navigateur ; cela
+ne prétend pas arrêter le calcul déjà engagé sur Windows.
+
+La couleur concerne uniquement les marqueurs de composants : délai estimé dans
+l'horizon, au-delà, instant estimé atteint, ou inconnu gris. Aucun risque n'est
+interpolé dans la cabine. Le gris couvre notamment les mécanismes non pris en
+charge et les conditions hors protocole. Un délai au-delà de l'horizon n'est
+jamais appelé « faible risque ». Un instant estimé atteint n'est pas une détection.
+Les emplacements et composants sont des hypothèses d'étude, pas un câblage
+qualifié de Soyouz.
+
+Le délai d'allumage depuis la mise sous courant est un résultat appris sur un
+protocole expérimental précis ; il reste distinct des courbes thermiques locales.
+L'interface ne convertit ni un délai, ni une fraction pyrolysée en probabilité de
+feu. `interval=null` affiche « Non quantifiée ». L'historique simulé utilise
+uniquement les points `time_s <= observation_cutoff_s` ; projection physique et
+prévision ML sont tracées séparément après cet instant. Les séries s'arrêtent
+à leur dernier point réel, sans prolongement lorsque le modèle thermique sort
+de son domaine. Aucun capteur réel n'est connecté.
+
+Le mode « Relecture simulée » permet de choisir l'instant observé ; une nouvelle
+analyse explicite est nécessaire pour recalculer le scénario. La somme de
+l'instant et de l'horizon ne peut pas dépasser la durée. Une référence est un
+résultat du serveur conservé, jamais une courbe factice. Un écart de délai n'est
+calculé que pour un même composant, scène, instant, horizon, critère et modèle
+dans le même domaine. Une modification des paramètres garde un avertissement
+sur la provenance des résultats encore affichés.
+
+Le panneau `/api/prevention/evidence` conserve l'ordre documentaire du serveur,
+les conclusions, motifs d'applicabilité, conditions, qualité des preuves,
+localisateurs et limites. Ce rang ne classe pas le danger des composants.
+Une analyse conserve son instantané de preuves par composant ; l'interface
+affiche ces preuves figées avec les résultats correspondants, même lorsqu'un
+changement de paramètres reste en attente de recalcul. Le classement d'un fil
+NiCr/LDPE n'est donc jamais substitué à celui d'une batterie ou d'un autre matériau.
+L'explication `/api/prevention/interpret` est associée à une analyse et un
+composant précis ; la méthode réelle, Codex ou synthèse extractive, est affichée.
+
+`node tools/prevention-check.mjs` exige les deux modèles de prévention chargés
+sur le vrai backend. Le parcours vérifie l'accueil, les bornes serveur, la
+sélection 3D par projection des coordonnées physiques, les délais réels, la
+frontière temporelle des courbes, l'absence d'extrapolation, les conclusions et
+l'explication réelles, la comparaison, un export ZIP, le hors domaine, la
+batterie inconnue, la navigation indépendante du Laboratoire et le mobile.
+Il exécute de courts calculs thermiques via l'API Windows, jamais de CFD ni
+d'entraînement. `IGNIS_EXPECT_PREVENTION_METHOD` peut exiger une méthode exacte.
+Rapport et captures dans `artifacts/prevention-verification.json` et `artifacts/`.

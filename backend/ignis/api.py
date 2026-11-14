@@ -18,6 +18,8 @@ from .engine import Worker
 from .knowledge import InsightRequest, interpret
 from .locking import ProcessLock
 from .ml.registry import ModelRegistry
+from .preignition.routes import prevention_router
+from .preignition.service import PreventionService
 from .schema import RunConfig
 from .store import RunStore
 
@@ -29,12 +31,14 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     store = RunStore(settings.runtime)
     worker = Worker(settings, store, catalog, models)
     campaigns = Campaigns(settings.runtime / "campaigns", store, catalog["scenes"], settings.max_runs)
+    prevention = PreventionService(settings, catalog["scenes"])
 
     @asynccontextmanager
     async def lifespan(app):
         with ProcessLock(settings.runtime / "service.lock"):
             store.recover_interrupted()
             models.load()
+            prevention.load()
             worker.start()
             try:
                 yield
@@ -43,6 +47,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     app = FastAPI(title="IGNIS 3D", version="0.1.0", lifespan=lifespan)
     app.state.settings, app.state.store, app.state.models = settings, store, models
+    app.state.prevention = prevention
+    app.include_router(prevention_router(prevention))
 
     @app.get("/api/health")
     def health():
@@ -53,6 +59,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 "capabilities": {"physics": worker.runner.available, "prediction": bool(models.models),
                                  "campaigns": worker.runner.available,
                                  "insights": True,
+                                 "prevention": True,
+                                 "ignition_delay_prediction": prevention.ignition_model is not None,
                                  "source_models": source_models},
                 "disk_free_gb": round(shutil.disk_usage(settings.runtime).free / 1024**3, 2),
                 "version": "0.1.0"}

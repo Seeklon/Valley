@@ -1,0 +1,29 @@
+{
+  "source_id": "NTRS-20130000422",
+  "title": "Particle Morphology and Size Results from the Smoke Aerosol Measurement Experiment-2",
+  "landing_url": "https://ntrs.nasa.gov/citations/20130000422",
+  "metadata_url": "https://ntrs.nasa.gov/api/citations/20130000422",
+  "download_url": "https://ntrs.nasa.gov/api/citations/20130000422/downloads/20130000422.pdf",
+  "retrieved_at": "2026-11-14T12:06:53.006299+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "CONFERENCE_PAPER",
+  "original_filename": "20130000422.pdf",
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 7067,
+      "sha256": "ebce810350f2c1f6dac8007b0996878a5c22bb68d12bbc092485ad2470e54e5f"
+    },
+    {
+      "name": "source.pdf",
+      "bytes": 757824,
+      "sha256": "bdc5e7e0d65f569c2c4a0b8899870d2d47e8f0d644cfe033a450d9fd892375aa"
+    },
+    {
+      "name": "source.txt",
+      "bytes": 121880,
+      "sha256": "1bfb5c4df2937418587d55bca89f227e1575b5d0f3d5b7f6500573b3b01f09b9"
+    }
+  ],
+  "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative"
+}

@@ -1,0 +1,29 @@
+{
+  "source_id": "NTRS-19940024209",
+  "title": "Wire insulation degradation and flammability in low gravity",
+  "landing_url": "https://ntrs.nasa.gov/citations/19940024209",
+  "metadata_url": "https://ntrs.nasa.gov/api/citations/19940024209",
+  "download_url": "https://ntrs.nasa.gov/api/citations/19940024209/downloads/19940024209.pdf",
+  "retrieved_at": "2026-11-14T12:05:11.194123+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "CONFERENCE_PAPER",
+  "original_filename": "19940024209.pdf",
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 3048,
+      "sha256": "3fe352505fef19513b49bf5cdbd64c211f28530a3755b519c8e6ae91a505e471"
+    },
+    {
+      "name": "source.pdf",
+      "bytes": 390959,
+      "sha256": "a5a81c6a023e415a1818e26479f6df67f373d8cf5537894fa4eeff3fd267eb08"
+    },
+    {
+      "name": "source.txt",
+      "bytes": 21688,
+      "sha256": "22ec0f8c9c5dd156f80260f1f96734804adbde87cf212be8387cda4d055a65db"
+    }
+  ],
+  "text_extraction": "pdftotext -layout; form feed separates physical PDF pages; text is not independently authoritative"
+}

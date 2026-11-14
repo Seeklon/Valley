@@ -4,8 +4,10 @@ Application de recherche pour le challenge NASA **Flame in Freefall** : explorer
 des scènes 3D, comparer gravité terrestre et microgravité, générer des simulations
 reproductibles et consulter les observations expérimentales NASA pertinentes.
 
-La version livrée fonctionne sur le PC Windows de Thomas, avec **deux modèles
-réellement entraînés et préchargés**. L’interface et les calculs utilisent ce PC ;
+La version livrée fonctionne sur le PC Windows de Thomas, avec **quatre modèles
+réellement entraînés et préchargés** : deux pour le transport FDS, un pour le
+délai d'allumage expérimental et un pour la température future simulée.
+L’interface et les calculs utilisent ce PC ;
 le VPS conserve le code et les preuves légères.
 
 ## Ouvrir l’application
@@ -26,6 +28,13 @@ automatique à l’ouverture de session.
 
 ## Fonctionnalités livrées
 
+- **Prévention avant allumage** : accueil Soyouz sans foyer, composants
+  sélectionnables, délai conditionnel appris sur une expérience de fil NiCr/LDPE,
+  historique thermique et prévision ML distincts, comparaison et export.
+  Les inconnus restent gris ; aucune probabilité de feu n'est fabriquée.
+- **22 conclusions NASA classées** issues de 13 sources archivées, pages,
+  conditions et limites visibles ; étude complémentaire Guo identifiée séparément.
+  Codex explique à partir des preuves figées de l'analyse.
 - **Quatre scènes Blender détaillées** : habitat, cargo, ventilation transversale
   et capsule inspirée de Soyouz. Fichiers `.blend`, GLB, proxies physiques,
   matériaux, bouches et capteurs ; [import d’un modèle annoté](docs/SCENES.md).
@@ -36,16 +45,25 @@ automatique à l’ouverture de session.
   de température, oxygène, suies et vitesse, chronologie, courbes et comparaison.
 - **Campagnes de 2 à 100 scénarios** : graine, plages de paramètres, file persistante,
   annulation, provenance et exports JSON/CSV/Parquet.
-- **Deux modèles préchargés** : réseau spatial PyTorch et référence Extra Trees.
+- **Deux modèles de transport préchargés** : réseau spatial PyTorch et référence Extra Trees.
   Les poids et les scènes sont contrôlés par empreinte ; les requêtes hors domaine
   sont refusées. Entraînement CUDA réalisé sur RTX 4070 Ti.
 - **Observations NASA traçables** : tables BASS-II, BASS et Saffire-I archivées,
   classement selon des critères visibles et interprétation par **Codex** avec
   citations. IGNIS n’appelle pas Ollama.
 
-![Capsule originale inspirée de Soyouz](scenes/generated/soyuz-overview.png)
+![Prévention dans la capsule inspirée de Soyouz](evidence/prevention/ui/ignis-prevention-desktop.png)
 
 ## Données et résultats mesurés
+
+Prévention : 26 points expérimentaux d'allumage extraits d'une publication
+complémentaire (pas des labels NASA), et 384 trajectoires électrothermiques
+générées sur Windows. Le délai atteint une MAE de **0,157 s** sur 9 observations
+réservées (5 courants). La température future atteint une MAE de **10,05 °C**
+sur 1 940 fenêtres disponibles de 16 familles réservées ; erreur maximale
+**129,30 °C**. Ces fenêtres ne sont pas des essais indépendants.
+Voir [prévention et limites](docs/PREIGNITION.md) et
+[protocole ML](docs/PREVENTION_MODELS.md).
 
 Le pilote comprend **96 simulations FDS et 5 800 instants**, répartis en
 48 calculs d’entraînement, 12 de validation et 36 de test. Les familles complètes
@@ -67,18 +85,26 @@ global prédit : il sert à la prévisualisation exploratoire.
 
 ## Portée scientifique
 
-Les modèles apprennent à reproduire **les simulations FDS**, avec un maillage
+Les deux modèles de transport apprennent à reproduire **les simulations FDS**, avec un maillage
 de 0,20 m dont la convergence n’est pas démontrée. Ils ne sont pas entraînés sur
 des champs de flamme NASA. Les tables NASA importées et la calibration du
 ventilateur BASS-II apportent des références documentaires et instrumentales ;
 elles ne valident pas la combustion simulée.
 
-La prédiction apprise couvre seulement le transport d’une source prescrite,
+La prédiction de transport couvre seulement une source prescrite,
 à 10⁻⁴ g ou 1 g, dans les quatre géométries et plages publiées. Le solveur propose
 en plus un mode couplé expérimental. Les matériaux sont génériques ; les arcs
 électriques, le plasma, l’emballement de batteries et les systèmes de ventilation
 fermés d’une capsule réelle restent hors périmètre. Soyouz est une interprétation
 originale, avec une enveloppe physique simplifiée.
+
+Le modèle de délai couvre le protocole restreint de fils de laboratoire sous
+courant constant en microgravité. Il n'est pas validé sur le câblage d'une
+capsule réelle. Les historiques de température sont simulés et leur modèle
+local n'inclut pas l'allumage gazeux. Sans cas sans allumage, fréquence de panne
+et validation indépendante, ni probabilité calibrée ni taux de fausses alertes
+ne peuvent être annoncés. La position 3D ne couple pas encore le fil à un champ
+CFD : l'air local est une hypothèse prescrite.
 
 ## Développement et preuves
 

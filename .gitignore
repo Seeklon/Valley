@@ -60,3 +60,4 @@ runs/
 *.log
 .remote-pc.json
 *.blend1
+*.egg-info/

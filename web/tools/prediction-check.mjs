@@ -90,6 +90,7 @@ try {
   evidence.runtime = health;
 
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: 'Laboratoire', exact: true }).click();
   await page.locator('#scene-select').selectOption(sceneId);
   await page.locator('.viewport-loading').waitFor({ state: 'hidden' });
   assert.equal(await page.locator('.asset-warning').count(), 0);
@@ -172,6 +173,7 @@ try {
   evidence.checks.push({ name: 'domain_rejection_in_browser_and_real_api', passed: true });
 
   await page.reload({ waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: 'Laboratoire', exact: true }).click();
   await page
     .locator('.execution-panel .job-status.completed')
     .filter({ hasText: scalarRun.id.slice(0, 8) })

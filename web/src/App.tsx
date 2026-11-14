@@ -49,10 +49,12 @@ import { ModelsView, ScenesView, SourcesView } from './components/Library';
 import CampaignPanel from './components/CampaignPanel';
 import InsightsPanel from './components/InsightsPanel';
 import { ModelConsistency } from './components/ModelDetails';
+import PreventionView from './components/PreventionView';
+import type { PreventionSession } from './components/PreventionView';
 import type { Catalog, Field, Health, ModelInfo, Run, RunConfig, Source } from './types';
 
 const Viewport = lazy(() => import('./components/Viewport'));
-type Tab = 'lab' | 'scenes' | 'models' | 'sources';
+type Tab = 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
 const fields: { id: Field; label: string; icon: typeof Box }[] = [
   { id: 'scene', label: 'Géométrie', icon: Box },
   { id: 'temperature', label: 'Température', icon: Thermometer },
@@ -84,7 +86,8 @@ function saveRunId(id: string): void {
 }
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>('lab');
+  const [tab, setTab] = useState<Tab>('prevention');
+  const [preventionSession, setPreventionSession] = useState<PreventionSession | null>(null);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [health, setHealth] = useState<Health | null>(null);
   const [models, setModels] = useState<ModelInfo[]>([]);
@@ -379,9 +382,9 @@ export default function App() {
           className="brand"
           onClick={(event) => {
             event.preventDefault();
-            setTab('lab');
+            setTab('prevention');
           }}
-          aria-label="IGNIS, revenir au laboratoire"
+          aria-label="IGNIS, revenir à la prévention"
         >
           <span className="brand-mark">
             <Flame size={24} fill="currentColor" />
@@ -394,6 +397,7 @@ export default function App() {
         <nav className="main-nav" aria-label="Navigation principale">
           {(
             [
+              { id: 'prevention', label: 'Prévention', icon: ShieldCheck },
               { id: 'lab', label: 'Laboratoire', icon: Activity },
               { id: 'scenes', label: 'Scènes', icon: Box },
               { id: 'models', label: 'Modèles', icon: Cpu },
@@ -448,6 +452,14 @@ export default function App() {
               Réessayer <RefreshCw size={13} />
             </button>
           </div>
+        )}
+        {tab === 'prevention' && (
+          <PreventionView
+            scenes={scenes}
+            connected={connected}
+            session={preventionSession}
+            onSessionChange={setPreventionSession}
+          />
         )}
         {tab === 'models' && <ModelsView models={models} connected={connected} />}
         {tab === 'sources' && <SourcesView sources={sources} />}

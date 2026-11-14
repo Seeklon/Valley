@@ -1,0 +1,19 @@
+{
+  "source_id": "PSI-25",
+  "title": "Burning and Suppression of Solids - II",
+  "landing_url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+  "metadata_url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-25",
+  "download_url": "https://psi.nasa.gov/geode-py/ws/repo/investigations/PSI-25",
+  "retrieved_at": "2026-11-14T12:08:51.474894+00:00",
+  "distribution": "PUBLIC",
+  "sti_type": "EXPERIMENT_INVENTORY",
+  "license": "CC0-1.0",
+  "metadata_version": 4,
+  "files": [
+    {
+      "name": "metadata.json",
+      "bytes": 680348,
+      "sha256": "b9234754db5da651ad27d888af082b889d07210b018e543369662f065b4ec2da"
+    }
+  ]
+}
