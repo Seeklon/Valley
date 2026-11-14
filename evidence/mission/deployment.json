@@ -1,0 +1,47 @@
+{
+  "deployed_at": "20261114T142512Z",
+  "app_url": "https://desktop-m4hkr86.tail609f26.ts.net:8443",
+  "bundle_sha256": "996cd8ef75faf518ee2e5ddeb3074af9cae20a7adf7850ab828ee65a673f5c52",
+  "frontend_files": {
+    "assets/GLTFLoader-XRSanOzM.js": "d33ce2ebaf4a234048afda36397341be729c600e30fade3d2c910cc846ddbb04",
+    "assets/MissionViewport-Bw__hXQQ.js": "bbde83c1eded4a19e003414915f6f4ad99befce0693d12c6e518508117bf6c35",
+    "assets/Viewport-CrHxZJSL.js": "29fad4008e98fbc210c76b67b0362e45a0c799260e0cfdcf0864b70de1b09958",
+    "assets/dm-sans-latin-400-normal-BwCSEQnW.woff": "38702875fe179437d200e7ba6f7fab4d497ffe48117ef332029b2081751186ad",
+    "assets/dm-sans-latin-400-normal-CW0RaeGs.woff2": "4ab51eb2cd7305d177187908d6397474d4520663f6c6e572feb0a64f4fa80006",
+    "assets/dm-sans-latin-500-normal-B9HHJjqV.woff2": "19bf1984956517c35c2bd35b6cdedac12a21d6fcd3596c614ecdfb88b648909d",
+    "assets/dm-sans-latin-500-normal-Dr3UlScf.woff": "7deb957e430b780ee3272d801af4f9f2211b1330ec40a312a8f25309eacb4034",
+    "assets/dm-sans-latin-600-normal-Aqo67rzb.woff2": "6bb2b2645ba5eeaecf56322c543fa3a75b87b927977b9c03b1dabc4205089120",
+    "assets/dm-sans-latin-600-normal-BmdmIIQ2.woff": "e7351257e49400eff05aca30a2007289194a900860d30c30770d8b8732897564",
+    "assets/dm-sans-latin-700-normal-CUSSCpQX.woff": "af422a448ac00679a8dbb13532db3616829c5a35b58d3eeea5903ce17ad2e36a",
+    "assets/dm-sans-latin-700-normal-DvUfVpUG.woff2": "35c5efa0e5daa52ee5c6500f5be354bf751fb65c4e49e1d6806c6eb5883e8fe9",
+    "assets/index-BY7xTryb.css": "8df4676d9cfb84a9b4867f3d938a9749fa4c2e05b2c1ca7668365d0eb71fb526",
+    "assets/index-RTx0eNyM.js": "8de7d80622a86cc847ae848bdecab4c8e507920404751a481ded4654878118c3",
+    "assets/space-grotesk-latin-400-normal-BnQMeOim.woff": "d3fcfce61e3792f35b7c95c2f7f4f26c8d19c93998c03ad77d7bf0cd6d334e35",
+    "assets/space-grotesk-latin-400-normal-CJ-V5oYT.woff2": "65fd17fcbd2e2f522940b5f67ead3d23329e02891aa5495e74d11a499c0b0673",
+    "assets/space-grotesk-latin-500-normal-CNSSEhBt.woff": "aa3f2941f6db6ca253c9f55bb173e1a1ade690dcc50e501119814a4414027df3",
+    "assets/space-grotesk-latin-500-normal-lFbtlQH6.woff2": "1b1a8131d9edf975d9decee81e2f2bf504812f7a4f498e5500f28a613e22e64c",
+    "assets/space-grotesk-latin-600-normal-BflQw4A9.woff": "1c7ffb357cef0950935783c5a50e140e092f05c814da5b196e67a64e69cb2991",
+    "assets/space-grotesk-latin-600-normal-DjKNqYRj.woff2": "685bbbf69fa616df1ef81847c85fc76be097ddfb3468ff2257be54511ab3130f",
+    "assets/space-grotesk-latin-700-normal-CwsQ-cCU.woff": "145016049aa47932e2d116f70151edc5a53df894cb367514c52ea2d11289bee7",
+    "assets/space-grotesk-latin-700-normal-RjhwGPKo.woff2": "35f8aec56cfd5cbfdb03cc68733a54a0b05bb3617ffcd5fd332badc0b045ca55",
+    "favicon.svg": "ed45d6fda257174603e33620c9152ca08553ef7382603c6984d3133547a6befc",
+    "index.html": "a8139b0f4903519216024ab8965185bce201e0716bc37a8d0961dba45f6b8f05"
+  },
+  "windows": {
+    "health": "ok",
+    "api_pid": 24436,
+    "index_sha256": "a8139b0f4903519216024ab8965185bce201e0716bc37a8d0961dba45f6b8f05",
+    "files": 23
+  },
+  "backend_restarted": false,
+  "prior_index_backup": "E:/IGNIS-Valley/runtime/index-before-mission-20261114T142512Z.html",
+  "live_browser": {
+    "verified_at": "2026-11-14T14:26:38.863Z",
+    "url": "https://desktop-m4hkr86.tail609f26.ts.net:8443",
+    "camera": "pov",
+    "field_status": "available",
+    "page_errors": [],
+    "screenshot": "mission-live-windows.png",
+    "index_sha256_verified": true
+  }
+}

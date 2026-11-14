@@ -13,6 +13,7 @@ npx playwright install chromium
 npm run test:browser
 npm run test:prediction
 node tools/prevention-check.mjs
+node tools/mission-check.mjs
 ```
 
 Le serveur de développement utilise le port 5173 et transmet `/api` et
@@ -22,7 +23,10 @@ Le serveur de développement utilise le port 5173 et transmet `/api` et
 
 ## Fonctionnalités
 
-- Accueil **Prévention**, distinct du Laboratoire : géométrie sans foyer,
+- Accueil **Mission** en POV équipage : relecture spatiale enregistrée,
+  fumée douce et heatmap, contrôle temporel, échelle fixe sur tout le calcul,
+  caméras orbite/dessus et panneau repliable. Voir `../docs/MISSION_VIEW.md`.
+- Mode **Avant allumage** et onglet Prévention : géométrie sans foyer,
   composants hypothétiques sélectionnables dans la scène et la liste, analyse
   d'échauffement avant feu, conclusions expérimentales classées et export ZIP.
 - Scènes issues de `/api/scenes`, GLB interactif, sélection par `object_id`,
@@ -83,7 +87,12 @@ Voir `../docs/CONTRACTS.md` et `../docs/PREVENTION_API.md`. Contrats opérationn
   La requête est annulable côté navigateur et dispose de 120 secondes. Les
   scores documentaires ne sont jamais présentés comme des scores de sécurité.
 
-## Interprétation visuelle
+## Interprétation visuelle du laboratoire historique
+
+Les règles ci-dessous décrivent `Viewport.tsx` dans le laboratoire et l'onglet
+Prévention détaillé. La nouvelle vue Mission utilise `MissionViewport.tsx` :
+interpolation entre timestamps réels compatibles, masque spatial et échelles
+fixes sur l'enregistrement, conformément à `../docs/MISSION_VIEW.md`.
 
 Les champs sont les observations spatiales conservées dans chaque frame. La
 lecture sélectionne la frame la plus proche et affiche son temps réel, sans

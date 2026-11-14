@@ -4,9 +4,30 @@
 livraison sur la branche `codex/ignis-3d-lab`. Lors d’une reprise, relire Git
 et `/api/health` pour connaître l’état actuel du code et du service.
 
+## Vue mission immersive — 14 novembre 2026
+
+L'accueil est maintenant **Mission** : POV équipage dans Soyouz, fumée douce
+colorée par température, couches fumée/température/ventilation, caméras orbite
+et dessus, lecture/pause/vitesse et panneau latéral repliable. Le mode avant
+allumage affiche les températures des composants et partage la session avec
+les paramètres de Prévention. La fumée n'est jamais déduite de ces prévisions.
+
+- Relecture Soyouz réelle `52687f69460643ada9ff8d8a7573dbca`, 61 champs sur 60 s ;
+  sélection dynamique depuis `/api/runs`, hors résultats purement scalaires.
+- Échelles fixes sur le replay, interpolation aux temps réels, axes non uniformes
+  et masque des cellules respectés. Le lissage n'ajoute pas de résolution physique.
+- Coque artistique complétée visuellement en POV ; données, proxies, moteur et
+  poids inchangés. Aucun entraînement ni nouveau calcul FDS pour cette refonte.
+- **34 tests frontend**, build TypeScript/Vite et formatage réussis ; **12 contrôles
+  navigateur réels**, aucune erreur JavaScript. Captures, revue et preuve du
+  déploiement statique dans `evidence/mission/`.
+- Lire `docs/MISSION_VIEW.md` pour navigation, unités et portée du rendu.
+  Le backend n'a pas été redémarré ; les anciens assets restent disponibles
+  pour les onglets déjà ouverts, et l'ancien index est sauvegardé dans le runtime.
+
 ## Prévention avant allumage livrée
 
-L'accueil ouvre Soyouz sans foyer. Quatre composants hypothétiques par scène,
+L'onglet Prévention ouvre Soyouz sans foyer. Quatre composants hypothétiques par scène,
 dont deux fils NiCr/LDPE, un faisceau non caractérisé et une batterie non couverte.
 Le délai vient d'un modèle expérimental restreint ; température physique et
 prévision ML sont distinctes. Comparaison, preuve par composant, Codex et ZIP

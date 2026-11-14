@@ -68,6 +68,10 @@ export const api = {
     return Array.isArray(response) ? response : (response.sources ?? []);
   },
   launch: (config: RunConfig) => request<Run>('/runs', { method: 'POST', body: JSON.stringify(config) }),
+  runs: async (signal?: AbortSignal) => {
+    const response = await request<{ runs: Run[] }>('/runs?limit=100', { signal });
+    return response.runs;
+  },
   run: (id: string, signal?: AbortSignal) => request<Run>(`/runs/${encodeURIComponent(id)}`, { signal }),
   cancel: (id: string) => request<Run>(`/runs/${encodeURIComponent(id)}/cancel`, { method: 'POST' }),
   exportUrl: (id: string) => `/api/runs/${encodeURIComponent(id)}/export`,

@@ -108,6 +108,7 @@ try {
   assert.ok(battery);
 
   await page.goto(baseUrl, { waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: 'Prévention', exact: true }).click();
   assert.equal(
     await page.getByRole('button', { name: 'Prévention', exact: true }).getAttribute('aria-current'),
     'page',

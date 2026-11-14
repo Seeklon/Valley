@@ -28,7 +28,11 @@ automatique à l’ouverture de session.
 
 ## Fonctionnalités livrées
 
-- **Prévention avant allumage** : accueil Soyouz sans foyer, composants
+- **Vue mission immersive** : accueil dans la cabine Soyouz en POV équipage,
+  fumée volumétrique colorée par température, lecture temporelle, caméras orbitale
+  et de dessus. Champs de simulations enregistrées, légende fixe et réglage
+  d'opacité. Le mode avant allumage conserve les prévisions sur composants.
+- **Prévention avant allumage** : scène sans foyer, composants
   sélectionnables, délai conditionnel appris sur une expérience de fil NiCr/LDPE,
   historique thermique et prévision ML distincts, comparaison et export.
   Les inconnus restent gris ; aucune probabilité de feu n'est fabriquée.
@@ -52,7 +56,10 @@ automatique à l’ouverture de session.
   classement selon des critères visibles et interprétation par **Codex** avec
   citations. IGNIS n’appelle pas Ollama.
 
-![Prévention dans la capsule inspirée de Soyouz](evidence/prevention/ui/ignis-prevention-desktop.png)
+![Vue mission : fumée et chaleur dans Soyouz](evidence/mission/mission-orbit-heatmap.png)
+
+La [documentation de la vue mission](docs/MISSION_VIEW.md) décrit navigation,
+lecture, unités, provenance et limites du rendu.
 
 ## Données et résultats mesurés
 

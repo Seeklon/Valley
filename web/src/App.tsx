@@ -19,6 +19,7 @@ import {
   Play,
   Plus,
   Radio,
+  Radar,
   RefreshCw,
   RotateCcw,
   ScanLine,
@@ -50,11 +51,12 @@ import CampaignPanel from './components/CampaignPanel';
 import InsightsPanel from './components/InsightsPanel';
 import { ModelConsistency } from './components/ModelDetails';
 import PreventionView from './components/PreventionView';
+import MissionView from './components/MissionView';
 import type { PreventionSession } from './components/PreventionView';
 import type { Catalog, Field, Health, ModelInfo, Run, RunConfig, Source } from './types';
 
 const Viewport = lazy(() => import('./components/Viewport'));
-type Tab = 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
+type Tab = 'mission' | 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
 const fields: { id: Field; label: string; icon: typeof Box }[] = [
   { id: 'scene', label: 'Géométrie', icon: Box },
   { id: 'temperature', label: 'Température', icon: Thermometer },
@@ -86,7 +88,7 @@ function saveRunId(id: string): void {
 }
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>('prevention');
+  const [tab, setTab] = useState<Tab>('mission');
   const [preventionSession, setPreventionSession] = useState<PreventionSession | null>(null);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [health, setHealth] = useState<Health | null>(null);
@@ -375,16 +377,16 @@ export default function App() {
   else if (invalidPower) unavailableReason = 'La puissance résistive dépasse la limite de 10 kW.';
 
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${tab === 'mission' ? 'mission-shell' : ''}`}>
       <header className="topbar">
         <a
           href="#"
           className="brand"
           onClick={(event) => {
             event.preventDefault();
-            setTab('prevention');
+            setTab('mission');
           }}
-          aria-label="IGNIS, revenir à la prévention"
+          aria-label="IGNIS, revenir à la mission"
         >
           <span className="brand-mark">
             <Flame size={24} fill="currentColor" />
@@ -397,6 +399,7 @@ export default function App() {
         <nav className="main-nav" aria-label="Navigation principale">
           {(
             [
+              { id: 'mission', label: 'Mission', icon: Radar },
               { id: 'prevention', label: 'Prévention', icon: ShieldCheck },
               { id: 'lab', label: 'Laboratoire', icon: Activity },
               { id: 'scenes', label: 'Scènes', icon: Box },
@@ -452,6 +455,31 @@ export default function App() {
               Réessayer <RefreshCw size={13} />
             </button>
           </div>
+        )}
+        {tab === 'mission' && (
+          <MissionView
+            scenes={scenes}
+            connected={connected}
+            session={preventionSession}
+            onSessionChange={setPreventionSession}
+            onOpenLab={(sceneId, replay) => {
+              if (!busy) {
+                if (replay?.config) {
+                  setConfig(replay.config);
+                  setRun(replay);
+                } else changeScene(sceneId);
+                setTime(0);
+                setPlaying(false);
+                setSelectedId(null);
+                if (baseline?.config?.scene_id !== sceneId) setBaseline(null);
+              }
+              setTab('lab');
+            }}
+            onOpenPrevention={(session) => {
+              if (session) setPreventionSession(session);
+              setTab('prevention');
+            }}
+          />
         )}
         {tab === 'prevention' && (
           <PreventionView
@@ -1106,17 +1134,20 @@ export default function App() {
           </>
         )}
       </main>
-      <footer className="app-footer">
-        <span>
-          <Flame size={13} /> IGNIS <span className="footer-divider" /> Laboratoire exploratoire de combustion
-        </span>
-        <span>
-          Sources expérimentales, simulations et prédictions identifiées séparément.
-          <button onClick={() => setTab('sources')}>
-            Consulter les sources <ArrowRight size={12} />
-          </button>
-        </span>
-      </footer>
+      {tab !== 'mission' && (
+        <footer className="app-footer">
+          <span>
+            <Flame size={13} /> IGNIS <span className="footer-divider" /> Laboratoire exploratoire de
+            combustion
+          </span>
+          <span>
+            Sources expérimentales, simulations et prédictions identifiées séparément.
+            <button onClick={() => setTab('sources')}>
+              Consulter les sources <ArrowRight size={12} />
+            </button>
+          </span>
+        </footer>
+      )}
     </div>
   );
 }

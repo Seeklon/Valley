@@ -1,0 +1,71 @@
+{
+  "checked_at": "2026-11-14T14:21:45.717Z",
+  "base_url": "http://127.0.0.1:5173",
+  "checks": [
+    {
+      "name": "mission_opens_in_pov_with_real_soyuz_fds",
+      "passed": true,
+      "run_id": "52687f69460643ada9ff8d8a7573dbca",
+      "frames": 61
+    },
+    {
+      "name": "desktop_stage_fills_available_window_without_document_scroll",
+      "passed": true
+    },
+    {
+      "name": "spatial_heat_smoke_changes_with_recording_and_keeps_fixed_scale",
+      "passed": true,
+      "start": "b071445382ad43461a3c2294f5917a44be7ad531928ab5272420554897b8a98b",
+      "hot": "e81a4318fca5c1129d5fc53f12f32901d734a2b91b07a6a244a960b9619f2617",
+      "late": "cbf38368e0efd690d5d042dac9118a0572df80ab8ed4fa9ef7a37ebbf81e7260",
+      "scale": "10\n200 °C"
+    },
+    {
+      "name": "playback_advances_and_pause_freezes_recorded_time",
+      "passed": true
+    },
+    {
+      "name": "occupant_camera_moves_with_keyboard_and_resets",
+      "passed": true
+    },
+    {
+      "name": "all_layers_and_three_camera_views_work",
+      "passed": true
+    },
+    {
+      "name": "scene_switch_selects_spatial_replay_and_labels_ml_origin",
+      "passed": true,
+      "run_id": "499740fc16e64587aae359ceacf8b193"
+    },
+    {
+      "name": "laboratory_receives_the_displayed_replay_configuration",
+      "passed": true
+    },
+    {
+      "name": "preignition_uses_real_ml_without_smoke_or_probability",
+      "passed": true,
+      "analysis_id": "f0d9283fb5404c048edf9b71ac53ee4d"
+    },
+    {
+      "name": "unsupported_battery_remains_unknown_with_context_sources",
+      "passed": true
+    },
+    {
+      "name": "advanced_prevention_parameters_return_to_the_immersive_view",
+      "passed": true
+    },
+    {
+      "name": "mobile_layout_has_no_horizontal_overflow_and_inspector_toggles",
+      "passed": true
+    }
+  ],
+  "screenshots": [
+    "mission-pov.png",
+    "mission-orbit-heatmap.png",
+    "mission-top.png",
+    "mission-prevention.png",
+    "mission-mobile.png"
+  ],
+  "errors": [],
+  "passed": true
+}
