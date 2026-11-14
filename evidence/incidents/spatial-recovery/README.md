@@ -161,8 +161,16 @@ Rapports bruts : [entraînement](training-report.json), [relecture](replay-repor
 [analyse contrôlée](analysis.json), [enquête du train](final-training-survey.json),
 [revue indépendante](review.md). Les exports gzip contiennent les données des
 figures ; les poids et gros fichiers FDS restent sur Windows. Tests : 35 contrôles
-uniques réseau/reprise sur Windows, 18 tests locaux du lanceur compact, Ruff et
-diff vérifiés ; détails dans les XML et la revue. Aucun changement d'interface.
+uniques réseau/reprise sur Windows, puis 68 tests locaux de campagne (dont 19
+du lanceur compact), Ruff et diff vérifiés ; détails dans les XML et la revue.
+Aucun changement d'interface.
+
+La première CI GitHub de cette reprise a révélé une dépendance des fixtures à
+l'espace libre réel du runner : 19 tests s'arrêtaient sur `disk_reserve`. Les
+fixtures simulent maintenant 40 Gio disponibles ; des tests dédiés à 19 Gio
+vérifient toujours l'arrêt avant lancement. La réserve réelle de 20 Gio et les
+sources entraînées sont inchangées. Les 68 tests concernés passent en 108,69 s,
+sans solveur réel ni apprentissage ; preuve dans [campaign-tests.xml](campaign-tests.xml).
 
 Reproduire le bilan local sans simulation ni apprentissage :
 

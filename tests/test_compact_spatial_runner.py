@@ -6,6 +6,7 @@ import copy
 import importlib.util
 import time
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 from ignis.config import Settings
@@ -38,7 +39,9 @@ def design(runner):
 
 
 @pytest.fixture
-def setup(runner, design, tmp_path):
+def setup(runner, design, tmp_path, monkeypatch):
+    # Solver fixtures must not depend on free space on the CI host.
+    monkeypatch.setattr(runner.shutil, "disk_usage", lambda path: SimpleNamespace(free=40 * 1024**3))
     small = copy.deepcopy(design)
     small.update(layouts=small["layouts"][:2], runs=small["runs"][:4], expected_runs=4)
     dataset = tmp_path / "compact"
@@ -235,6 +238,13 @@ def test_existing_compute_lock_blocks_dispatch(runner, setup, fake_runner):
     with ProcessLock(setup[3].runtime / "compute.lock"):
         with pytest.raises(RuntimeError, match="autre instance"):
             run(runner, setup, fake_runner)
+    assert fake_runner.calls == []
+
+
+def test_disk_reserve_stops_before_dispatch(runner, setup, fake_runner, monkeypatch):
+    monkeypatch.setattr(runner.shutil, "disk_usage", lambda path: SimpleNamespace(free=19 * 1024**3))
+    result = run(runner, setup, fake_runner)
+    assert result["state"] == "disk_reserve" and not result["ready_for_training"]
     assert fake_runner.calls == []
 
 

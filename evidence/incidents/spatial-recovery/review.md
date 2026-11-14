@@ -452,3 +452,23 @@ réelle de départ de feu ou validation expérimentale NASA n'est établie.
 | `tools/remote/recover_spatial.py` | `95d1d6119a386efa08cbdb21a2e3ef47e1edc1cf9659a177408cce7195f2db23` |
 | `tools/remote/replay_spatial_recovery.py` | `9b375fa6956aa52b5f84c92992bfea9aac983dcc40fe278b11ad32732fd0d719` |
 | `tools/remote/analyze_spatial_recovery.py` | `d40464e7e00da0374470ee5529c348fa6ae3d0821db45061b15ff2fa2eea5ec5` |
+
+## Correctif des fixtures CI — 19:58 UTC
+
+**Diff approuvé à la lecture, sans défaut bloquant.** Seuls les tests de
+campagne sont modifiés : leurs fixtures simulent 40 Gio libres pour ne plus
+dépendre du disque du runner CI. Le `monkeypatch` est restauré après chaque
+test. L'override explicite à 19 Gio s'applique après la fixture et reste
+effectif, aussi bien dans le test historique conservé que dans le nouveau
+test compact.
+
+Le nouveau test exige `state == "disk_reserve"`, un corpus non prêt pour
+l'entraînement et **zéro appel au faux solveur**. Les contrôles réels des deux
+runners et de `FDSRunner` ne sont pas modifiés ; la réserve de 20 Gio n'est pas
+abaissée. Les sources entraînées restent inchangées. Cette revue n'a exécuté
+aucun test ni calcul ; elle ne présume pas du résultat du prochain run CI.
+
+Empreintes des tests relus :
+
+- `tests/test_spatial_corpus.py` : `f4098847869e6755a9ab456d3b66e29d41e5ba5229fc700785be352b0693fa34`.
+- `tests/test_compact_spatial_runner.py` : `1777d96cfc57b61ab3184df7100ec4bbb14dc42fc6995d57be4bc0674027b8a9`.

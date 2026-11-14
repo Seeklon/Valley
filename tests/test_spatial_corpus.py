@@ -375,7 +375,9 @@ def test_compression_failure_keeps_every_original(case, monkeypatch):
 
 
 @pytest.fixture
-def campaign(corpus, design, tmp_path):
+def campaign(corpus, design, tmp_path, monkeypatch):
+    # Solver fixtures must not depend on free space on the CI host.
+    monkeypatch.setattr(corpus.shutil, "disk_usage", lambda path: SimpleNamespace(free=40 * 1024**3))
     small = small_design(design)
     dataset = tmp_path / "datasets" / corpus.DATASET_ID
     dataset.mkdir(parents=True)
