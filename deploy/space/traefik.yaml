@@ -1,0 +1,23 @@
+http:
+  routers:
+    momentum-space:
+      entryPoints: [https]
+      rule: Host(`space.in-momentum.fr`)
+      service: momentum-space
+      tls:
+        certResolver: letsencrypt
+    momentum-space-http:
+      entryPoints: [http]
+      rule: Host(`space.in-momentum.fr`)
+      service: momentum-space
+      middlewares: [momentum-space-https]
+  services:
+    momentum-space:
+      loadBalancer:
+        servers:
+          - url: http://momentum-space:8080
+  middlewares:
+    momentum-space-https:
+      redirectScheme:
+        scheme: https
+        permanent: true

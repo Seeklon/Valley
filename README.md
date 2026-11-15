@@ -114,9 +114,11 @@ Le premier instant affiché est le pic observé par FDS, pas un résultat choisi
 Changer de scénario peut changer plusieurs conditions simultanément : ce n’est pas une expérience
 isolant causalement le débit d’air.
 
-ISS charge uniquement les cas en microgravité ; Terre charge les contrôles à 1 g. En l’absence de
-cas lunaires, la Lune conserve le parcours et montre seulement un aperçu de géométrie, avec les
-prédictions explicitement désactivées. Le mode `?nogl` conserve les images pour l’extérieur ; les
+ISS charge uniquement les cas en microgravité ; Terre charge les cas à 1 g lorsqu’ils existent.
+Pour toute gravité absente de l’export, le parcours montre seulement un aperçu de géométrie, avec les
+prédictions explicitement désactivées. L’adaptation ventilation du 15 novembre contient 216 cas,
+tous en microgravité : les parcours Terre et Lune restent donc en aperçu de géométrie.
+Le mode `?nogl` conserve les images pour l’extérieur ; les
 nouveaux intérieurs nécessitent WebGL et affichent un état d’erreur s’il est indisponible. Les anciens
 exports `?export=rooms` sont les images de la maquette, pas des sorties ML.
 

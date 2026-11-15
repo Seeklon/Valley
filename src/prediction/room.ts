@@ -368,7 +368,7 @@ export class PredictionRoom {
     this.host.dataset.heatCount = String(counts.heat);
     this.host.dataset.smokeCount = String(counts.smoke);
     const output = this.panel.querySelector('#ml-counts');
-    if (output) output.textContent = this.geometryOnly ? 'No lunar prediction available'
+    if (output) output.textContent = this.geometryOnly ? 'No prediction for these gravity conditions'
       : `${counts.heat} heat · ${counts.smoke} smoke samples`;
     const legend = this.panel.querySelector('#ml-legend');
     if (legend) legend.innerHTML = this.options.display === 'errors'
@@ -389,9 +389,11 @@ export class PredictionRoom {
     const cases = this.entries.filter(item => item.family === entry.family);
     const option = (value: string, label: string, selected: boolean) => `<option value="${escape(value)}"${selected ? ' selected' : ''}>${escape(label)}</option>`;
     const conditions = data.conditions;
+    const environmentLabel = this.environment === 'earth' ? 'Earth · 1 g'
+      : this.environment === 'moon' ? 'Moon · 0.17 g' : 'Microgravity';
     this.panel.innerHTML = `<h3>${this.geometryOnly ? 'Geometry preview' : 'Model prediction'}</h3>
-      <div class="envl">${this.geometryOnly ? 'Lunar conditions unavailable' : this.environment === 'earth' ? 'Earth · 1 g' : 'Microgravity'} · ${conditions.oxygen_percent ?? 21}% O₂</div>
-      ${this.geometryOnly ? '<div class="envn">Interior geometry only. This export has no lunar cases; heat and smoke predictions are disabled.</div>' : ''}
+      <div class="envl">${environmentLabel}${this.geometryOnly ? ' · predictions unavailable' : ` · ${conditions.oxygen_percent ?? 21}% O₂`}</div>
+      ${this.geometryOnly ? '<div class="envn">Interior geometry only. This export has no cases for these gravity conditions; heat and smoke predictions are disabled.</div>' : ''}
       <label for="ml-family">Compartment</label><select id="ml-family">${families.map(family => option(family, FAMILY_NAMES[family] ?? family, family === entry.family)).join('')}</select>
       <label for="ml-scenario">Recorded scenario</label><select id="ml-scenario">${cases.map(item => option(item.id, `${INCIDENT_NAMES[item.incident_type ?? ''] ?? item.incident_type ?? 'Incident'} · ${((item.airflow_m_s ?? 0) * 100).toFixed(0)} cm/s · ${item.id.replace(item.family + '-', '')} · ${item.split}`, item.id === data.id)).join('')}</select>
       <div class="ml-conditions">${escape(conditions.power_w === 0 ? 'No-fire control' : INCIDENT_NAMES[conditions.incident_type] ?? conditions.incident_type)} · ${conditions.power_w ?? 0} W · ${(conditions.airflow_m_s * 100).toFixed(0)} cm/s airflow</div>

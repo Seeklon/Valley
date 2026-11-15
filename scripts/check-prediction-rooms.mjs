@@ -125,9 +125,19 @@ try {
   await page.goto(`${base}/?nogl&hub&env=earth&open=det`, { waitUntil: 'domcontentloaded' });
   await ready('iss-node');
   const earth = await selected();
-  assert.equal(earth.data.conditions.gravity_g, 1);
+  const hasEarth = index.cases.some(entry => Math.abs(entry.gravity_g - 1) < 0.02);
+  if (hasEarth) {
+    assert.equal(earth.data.conditions.gravity_g, 1);
+    assert.equal(await root().getAttribute('data-geometry-only'), 'false');
+  } else {
+    assert.equal(await root().getAttribute('data-geometry-only'), 'true');
+    assert.equal(await root().getAttribute('data-heat-visible'), 'false');
+    assert.equal(await root().getAttribute('data-smoke-visible'), 'false');
+    assert.equal(await page.locator('#ml-display').isDisabled(), true);
+    assert.match(await page.locator('#pars').innerText(), /Earth · 1 g · predictions unavailable/);
+  }
   await shot('earth-room.png');
-  record('Earth selects a genuine 1 g case');
+  record(hasEarth ? 'Earth selects a genuine 1 g case' : 'Unavailable Earth predictions are disabled, with the correct gravity label');
   await page.goto(`${base}/?nogl&hub&env=moon&open=fun`, { waitUntil: 'domcontentloaded' });
   await ready('iss-laboratory');
   assert.equal(await root().getAttribute('data-geometry-only'), 'true');

@@ -30,7 +30,7 @@ try {
         clip: { x: 384, y: 194, width: 512, height: 512 },
         style: '#inbar,#pars,#panel,#ptab,#replay,#tags,#fade,#vig{visibility:hidden!important}',
       });
-      const details = await page.locator('#prediction-room').evaluate(el => ({ case_id: el.dataset.caseId, weights_sha256: el.dataset.modelSha, time_s: Number(el.dataset.timeS) }));
+      const details = await page.locator('#prediction-room').evaluate(el => ({ case_id: el.dataset.caseId, weights_sha256: el.dataset.modelSha, time_s: Number(el.dataset.timeS), geometry_only: el.dataset.geometryOnly === 'true' }));
       captures.push({ filename, environment, room, ...details });
       console.log(JSON.stringify(captures[captures.length - 1]));
     }
