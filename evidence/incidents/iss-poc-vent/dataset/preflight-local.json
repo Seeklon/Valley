@@ -1,0 +1,3185 @@
+{
+  "unique_source_geometries": 72,
+  "unique_physical_layouts": 24,
+  "layouts": {
+    "iss-laboratory-vent-00": {
+      "geometry_sha256": "16a498508bb62a1c13c78196360f1b99e3e171cdbc058fc1307933fcd3a496bc",
+      "split": "train",
+      "structural_family": "iss-laboratory",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.15153,
+      "cell_size_m": [
+        0.15153,
+        0.15153,
+        0.15153
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "iss-node-vent-00": {
+      "geometry_sha256": "11c4926947a2fb290db6e9425fb46a3bc135a4ce658fa9aa84da6085fd18b49b",
+      "split": "train",
+      "structural_family": "iss-node",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.160101,
+      "cell_size_m": [
+        0.160101,
+        0.160101,
+        0.160101
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "iss-service-vent-00": {
+      "geometry_sha256": "4b8eaca223aeef703de92cc3b708c301aea51e8d7ff244d079e76187819477a6",
+      "split": "train",
+      "structural_family": "iss-service",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.160117,
+      "cell_size_m": [
+        0.160117,
+        0.16011699999999998,
+        0.16011699999999998
+      ],
+      "mesh_shape": [
+        20,
+        36,
+        24
+      ]
+    },
+    "habitat-cargo-vent-00": {
+      "geometry_sha256": "2c29e855d526f52ebeea455634c03289358a49ba055dfc7114fafa7fcb624822",
+      "split": "train",
+      "structural_family": "habitat-cargo",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.14631,
+      "cell_size_m": [
+        0.14631,
+        0.14631,
+        0.14631
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "habitat-capsule-vent-00": {
+      "geometry_sha256": "5770a7aed60e6a8242918ff3674c1587515c8656536e1f612363fecf610aa6c5",
+      "split": "train",
+      "structural_family": "habitat-capsule",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.156088,
+      "cell_size_m": [
+        0.156088,
+        0.156088,
+        0.156088
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "habitat-central-racks-vent-00": {
+      "geometry_sha256": "1999b421f2af9a8ad8d8eaa626704b894d00eaf9fba5a09031ee507bb47ff6f0",
+      "split": "train",
+      "structural_family": "habitat-central-racks",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.140102,
+      "cell_size_m": [
+        0.140102,
+        0.140102,
+        0.140102
+      ],
+      "mesh_shape": [
+        24,
+        36,
+        20
+      ]
+    },
+    "iss-laboratory-vent-01": {
+      "geometry_sha256": "5955c16d0240ed52d9d7c90694881b7aedd619f0839734a10c70245fc81153d1",
+      "split": "train",
+      "structural_family": "iss-laboratory",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.140102,
+      "cell_size_m": [
+        0.140102,
+        0.140102,
+        0.140102
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "iss-node-vent-01": {
+      "geometry_sha256": "28341569b1d9b960d2fd39b9c3c7952847bf04590fdb987631fa44f6e241c48a",
+      "split": "train",
+      "structural_family": "iss-node",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.161285,
+      "cell_size_m": [
+        0.16128499999999998,
+        0.16128499999999998,
+        0.16128499999999998
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "iss-service-vent-01": {
+      "geometry_sha256": "d61a5a2159b2168bb878a9cd02e7d099d333d93019b3afd52d152e319eb0d941",
+      "split": "train",
+      "structural_family": "iss-service",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.144058,
+      "cell_size_m": [
+        0.144058,
+        0.144058,
+        0.144058
+      ],
+      "mesh_shape": [
+        20,
+        36,
+        24
+      ]
+    },
+    "habitat-cargo-vent-01": {
+      "geometry_sha256": "579d47bfa05475750a141bf5a3c0932688c8645e5ecba0e21e86ef3ef9075922",
+      "split": "train",
+      "structural_family": "habitat-cargo",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.154536,
+      "cell_size_m": [
+        0.154536,
+        0.154536,
+        0.154536
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "habitat-capsule-vent-01": {
+      "geometry_sha256": "156aa6a3d8d3ea6a2015927ed048eb17d1452033b4b086d01b4ace936232a8fd",
+      "split": "train",
+      "structural_family": "habitat-capsule",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.142664,
+      "cell_size_m": [
+        0.14266399999999999,
+        0.14266399999999999,
+        0.14266399999999999
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "habitat-central-racks-vent-01": {
+      "geometry_sha256": "3275c96d8ae4fbd5961da9c664e388098d8d679935501d06fc7b64b31ed5f909",
+      "split": "train",
+      "structural_family": "habitat-central-racks",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.142433,
+      "cell_size_m": [
+        0.142433,
+        0.142433,
+        0.142433
+      ],
+      "mesh_shape": [
+        24,
+        36,
+        20
+      ]
+    },
+    "iss-laboratory-vent-02": {
+      "geometry_sha256": "7876e1ede15c05ebcb011dedaf9828ef0dac850835fa1a10893c485b27d60ffe",
+      "split": "validation",
+      "structural_family": "iss-laboratory",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.141459,
+      "cell_size_m": [
+        0.141459,
+        0.141459,
+        0.141459
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "iss-node-vent-02": {
+      "geometry_sha256": "541734b9a9cab9fecca73fff1798042b73c058a990122d0ea570e5724f70df57",
+      "split": "validation",
+      "structural_family": "iss-node",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.138592,
+      "cell_size_m": [
+        0.138592,
+        0.138592,
+        0.138592
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "iss-service-vent-02": {
+      "geometry_sha256": "3a59ea8665b47667239e938e872b159baa6df322830ad2c95a2dded196dc1295",
+      "split": "validation",
+      "structural_family": "iss-service",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.161562,
+      "cell_size_m": [
+        0.161562,
+        0.161562,
+        0.161562
+      ],
+      "mesh_shape": [
+        20,
+        36,
+        24
+      ]
+    },
+    "habitat-cargo-vent-02": {
+      "geometry_sha256": "fab126ac21f087b14b33eb95279ce76ab99de46b0d2d1d410b794e769c76dc83",
+      "split": "validation",
+      "structural_family": "habitat-cargo",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.14148,
+      "cell_size_m": [
+        0.14148,
+        0.14148,
+        0.14148
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "habitat-capsule-vent-02": {
+      "geometry_sha256": "04ffee417e26642b51d3aa10dd22f69b3b3fec8525ac5673345b3c3f81547dad",
+      "split": "validation",
+      "structural_family": "habitat-capsule",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.145476,
+      "cell_size_m": [
+        0.145476,
+        0.145476,
+        0.145476
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "habitat-central-racks-vent-02": {
+      "geometry_sha256": "7ad9369039c5ddb1471277f95120d4ec2da220c27945375657125c3b8f1db46c",
+      "split": "validation",
+      "structural_family": "habitat-central-racks",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.161058,
+      "cell_size_m": [
+        0.161058,
+        0.161058,
+        0.16105799999999998
+      ],
+      "mesh_shape": [
+        24,
+        36,
+        20
+      ]
+    },
+    "iss-laboratory-vent-03": {
+      "geometry_sha256": "4c1dfccba2afd0b51c3244e2471a8e4a260be3b2aba736054115ca5634d23e1c",
+      "split": "test",
+      "structural_family": "iss-laboratory",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.147034,
+      "cell_size_m": [
+        0.147034,
+        0.147034,
+        0.147034
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "iss-node-vent-03": {
+      "geometry_sha256": "781f6fab2c55c002efd40de0c257d3e1049842e7cc6794f14e199ecc59955dda",
+      "split": "test",
+      "structural_family": "iss-node",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.159527,
+      "cell_size_m": [
+        0.159527,
+        0.159527,
+        0.159527
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "iss-service-vent-03": {
+      "geometry_sha256": "193feca4cbba72712e50cff0a086d36c53018318cdaa93e0b36e887de34e80a3",
+      "split": "test",
+      "structural_family": "iss-service",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.145672,
+      "cell_size_m": [
+        0.145672,
+        0.145672,
+        0.145672
+      ],
+      "mesh_shape": [
+        20,
+        36,
+        24
+      ]
+    },
+    "habitat-cargo-vent-03": {
+      "geometry_sha256": "7c770be5ea96627833fbbba1f247522b70463517e2cb65a7eccbf98b95e35cc7",
+      "split": "test",
+      "structural_family": "habitat-cargo",
+      "cell_count": 15360,
+      "mesh_cell_m": 0.158978,
+      "cell_size_m": [
+        0.158978,
+        0.158978,
+        0.158978
+      ],
+      "mesh_shape": [
+        24,
+        32,
+        20
+      ]
+    },
+    "habitat-capsule-vent-03": {
+      "geometry_sha256": "5bba43a279d5e642db8cd7ae7ca782ca8a622b0a6d5f83aa8bce7771165aabb4",
+      "split": "test",
+      "structural_family": "habitat-capsule",
+      "cell_count": 13824,
+      "mesh_cell_m": 0.144722,
+      "cell_size_m": [
+        0.144722,
+        0.144722,
+        0.144722
+      ],
+      "mesh_shape": [
+        24,
+        24,
+        24
+      ]
+    },
+    "habitat-central-racks-vent-03": {
+      "geometry_sha256": "7a516416d601cade6e75cc5905b3d54bb71f5eab54f29605c133e3dfa4e77e80",
+      "split": "test",
+      "structural_family": "habitat-central-racks",
+      "cell_count": 17280,
+      "mesh_cell_m": 0.142865,
+      "cell_size_m": [
+        0.142865,
+        0.142865,
+        0.142865
+      ],
+      "mesh_shape": [
+        24,
+        36,
+        20
+      ]
+    }
+  },
+  "sources": [
+    {
+      "layout_id": "iss-laboratory-vent-00",
+      "component_id": "electrical-00",
+      "object_id": "rack-port-front",
+      "face": 3,
+      "requested_position_m": [
+        0.227295,
+        0.833415,
+        0.90918
+      ],
+      "position_m": [
+        0.227295,
+        0.833415,
+        0.90918
+      ],
+      "bounds_m": [
+        0.15153,
+        0.30306,
+        0.7576499999999999,
+        0.90918,
+        0.90918,
+        0.90918
+      ],
+      "area_m2": 0.02296134090000001,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-00",
+      "component_id": "electrical-01",
+      "object_id": "rack-starboard-front",
+      "face": 3,
+      "requested_position_m": [
+        2.954835,
+        0.833415,
+        1.66683
+      ],
+      "position_m": [
+        2.954835,
+        0.833415,
+        1.66683
+      ],
+      "bounds_m": [
+        2.87907,
+        3.0305999999999997,
+        0.7576499999999999,
+        0.90918,
+        1.66683,
+        1.66683
+      ],
+      "area_m2": 0.022961340899999967,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-00",
+      "component_id": "electrical-02",
+      "object_id": "rack-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        0.833415,
+        3.864015,
+        1.96989
+      ],
+      "position_m": [
+        0.833415,
+        3.864015,
+        1.96989
+      ],
+      "bounds_m": [
+        0.7576499999999999,
+        0.90918,
+        3.78825,
+        3.93978,
+        1.96989,
+        1.96989
+      ],
+      "area_m2": 0.022961340899999967,
+      "material_id": "insulation",
+      "combustible_material_id": null,
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-00",
+      "component_id": "electrical-00",
+      "object_id": "avionics-port",
+      "face": 3,
+      "requested_position_m": [
+        0.240151,
+        1.040656,
+        2.081313
+      ],
+      "position_m": [
+        0.2401515,
+        1.0406564999999999,
+        2.0813129999999997
+      ],
+      "bounds_m": [
+        0.160101,
+        0.320202,
+        0.960606,
+        1.120707,
+        2.0813129999999997,
+        2.0813129999999997
+      ],
+      "area_m2": 0.02563233020099999,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-00",
+      "component_id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "face": 3,
+      "requested_position_m": [
+        3.12197,
+        2.801767,
+        1.60101
+      ],
+      "position_m": [
+        3.1219695,
+        2.8017675,
+        1.60101
+      ],
+      "bounds_m": [
+        3.041919,
+        3.20202,
+        2.721717,
+        2.881818,
+        1.60101,
+        1.60101
+      ],
+      "area_m2": 0.025632330201000017,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-00",
+      "component_id": "electrical-02",
+      "object_id": "utility-bay",
+      "face": 3,
+      "requested_position_m": [
+        0.880555,
+        2.801767,
+        2.081313
+      ],
+      "position_m": [
+        0.8805555,
+        2.8017675,
+        2.0813129999999997
+      ],
+      "bounds_m": [
+        0.800505,
+        0.960606,
+        2.721717,
+        2.881818,
+        2.0813129999999997,
+        2.0813129999999997
+      ],
+      "area_m2": 0.025632330200999996,
+      "material_id": "glass",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-00",
+      "component_id": "electrical-00",
+      "object_id": "power-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        0.400293,
+        0.880644,
+        1.120819
+      ],
+      "position_m": [
+        0.40029250000000005,
+        0.8806434999999999,
+        1.1208189999999998
+      ],
+      "bounds_m": [
+        0.320234,
+        0.48035100000000003,
+        0.8005849999999999,
+        0.960702,
+        1.1208189999999998,
+        1.1208189999999998
+      ],
+      "area_m2": 0.02563745368900001,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-00",
+      "component_id": "electrical-01",
+      "object_id": "battery-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        2.481814,
+        2.64193,
+        2.081521
+      ],
+      "position_m": [
+        2.4818135000000003,
+        2.6419305,
+        2.081521
+      ],
+      "bounds_m": [
+        2.401755,
+        2.561872,
+        2.5618719999999997,
+        2.7219889999999998,
+        2.081521,
+        2.081521
+      ],
+      "area_m2": 0.02563745368900002,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-00",
+      "component_id": "electrical-02",
+      "object_id": "cable-bay",
+      "face": 3,
+      "requested_position_m": [
+        0.400293,
+        5.203803,
+        1.120819
+      ],
+      "position_m": [
+        0.40029250000000005,
+        5.203802499999999,
+        1.1208189999999998
+      ],
+      "bounds_m": [
+        0.320234,
+        0.48035100000000003,
+        5.123743999999999,
+        5.283860999999999,
+        1.1208189999999998,
+        1.1208189999999998
+      ],
+      "area_m2": 0.02563745368899994,
+      "material_id": "aluminium",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-00",
+      "component_id": "electrical-00",
+      "object_id": "cargo-port-forward",
+      "face": 3,
+      "requested_position_m": [
+        0.512085,
+        1.097325,
+        0.87786
+      ],
+      "position_m": [
+        0.512085,
+        1.097325,
+        0.87786
+      ],
+      "bounds_m": [
+        0.43893,
+        0.58524,
+        1.02417,
+        1.17048,
+        0.87786,
+        0.87786
+      ],
+      "area_m2": 0.02140661609999999,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-00",
+      "component_id": "electrical-01",
+      "object_id": "cargo-starboard-forward",
+      "face": 3,
+      "requested_position_m": [
+        2.853045,
+        0.512085,
+        1.17048
+      ],
+      "position_m": [
+        2.853045,
+        0.512085,
+        1.17048
+      ],
+      "bounds_m": [
+        2.77989,
+        2.9261999999999997,
+        0.43893,
+        0.58524,
+        1.17048,
+        1.17048
+      ],
+      "area_m2": 0.02140661609999996,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-00",
+      "component_id": "electrical-02",
+      "object_id": "cargo-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        1.097325,
+        4.023525,
+        1.90203
+      ],
+      "position_m": [
+        1.097325,
+        4.023525,
+        1.9020299999999999
+      ],
+      "bounds_m": [
+        1.02417,
+        1.17048,
+        3.95037,
+        4.09668,
+        1.9020299999999999,
+        1.9020299999999999
+      ],
+      "area_m2": 0.021406616100000015,
+      "material_id": "steel",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-00",
+      "component_id": "electrical-00",
+      "object_id": "seat-console-port",
+      "face": 3,
+      "requested_position_m": [
+        0.546308,
+        0.39022,
+        1.56088
+      ],
+      "position_m": [
+        0.546308,
+        0.39022,
+        1.56088
+      ],
+      "bounds_m": [
+        0.468264,
+        0.624352,
+        0.312176,
+        0.468264,
+        1.56088,
+        1.56088
+      ],
+      "area_m2": 0.024363463744000002,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-00",
+      "component_id": "electrical-01",
+      "object_id": "seat-console-starboard",
+      "face": 3,
+      "requested_position_m": [
+        3.043716,
+        0.546308,
+        1.56088
+      ],
+      "position_m": [
+        3.043716,
+        0.546308,
+        1.56088
+      ],
+      "bounds_m": [
+        2.965672,
+        3.12176,
+        0.468264,
+        0.624352,
+        1.56088,
+        1.56088
+      ],
+      "area_m2": 0.024363463744000002,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-00",
+      "component_id": "electrical-02",
+      "object_id": "rear-avionics",
+      "face": 3,
+      "requested_position_m": [
+        2.107188,
+        3.355892,
+        1.092616
+      ],
+      "position_m": [
+        2.107188,
+        3.355892,
+        1.092616
+      ],
+      "bounds_m": [
+        2.029144,
+        2.185232,
+        3.277848,
+        3.433936,
+        1.092616,
+        1.092616
+      ],
+      "area_m2": 0.024363463744000002,
+      "material_id": "insulation",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-00",
+      "component_id": "electrical-00",
+      "object_id": "central-rack-forward",
+      "face": 3,
+      "requested_position_m": [
+        1.330969,
+        0.490357,
+        1.541122
+      ],
+      "position_m": [
+        1.330969,
+        0.49035700000000004,
+        1.541122
+      ],
+      "bounds_m": [
+        1.260918,
+        1.40102,
+        0.420306,
+        0.560408,
+        1.541122,
+        1.541122
+      ],
+      "area_m2": 0.019628570403999995,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-00",
+      "component_id": "electrical-01",
+      "object_id": "central-rack-middle",
+      "face": 3,
+      "requested_position_m": [
+        1.611173,
+        2.731989,
+        1.120816
+      ],
+      "position_m": [
+        1.611173,
+        2.731989,
+        1.120816
+      ],
+      "bounds_m": [
+        1.541122,
+        1.681224,
+        2.661938,
+        2.80204,
+        1.120816,
+        1.120816
+      ],
+      "area_m2": 0.019628570403999953,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-00",
+      "component_id": "electrical-02",
+      "object_id": "central-rack-aft",
+      "face": 3,
+      "requested_position_m": [
+        1.891377,
+        3.992907,
+        1.120816
+      ],
+      "position_m": [
+        1.891377,
+        3.992907,
+        1.120816
+      ],
+      "bounds_m": [
+        1.821326,
+        1.9614280000000002,
+        3.9228560000000003,
+        4.062958,
+        1.120816,
+        1.120816
+      ],
+      "area_m2": 0.019628570403999984,
+      "material_id": "glass",
+      "combustible_material_id": null,
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-01",
+      "component_id": "electrical-00",
+      "object_id": "rack-port-front",
+      "face": 3,
+      "requested_position_m": [
+        0.490357,
+        0.770561,
+        1.541122
+      ],
+      "position_m": [
+        0.49035700000000004,
+        0.770561,
+        1.541122
+      ],
+      "bounds_m": [
+        0.420306,
+        0.560408,
+        0.70051,
+        0.840612,
+        1.541122,
+        1.541122
+      ],
+      "area_m2": 0.01962857040400001,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-01",
+      "component_id": "electrical-01",
+      "object_id": "rack-starboard-front",
+      "face": 3,
+      "requested_position_m": [
+        2.731989,
+        1.050765,
+        1.541122
+      ],
+      "position_m": [
+        2.731989,
+        1.0507650000000002,
+        1.541122
+      ],
+      "bounds_m": [
+        2.661938,
+        2.80204,
+        0.9807140000000001,
+        1.120816,
+        1.541122,
+        1.541122
+      ],
+      "area_m2": 0.019628570403999953,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-01",
+      "component_id": "electrical-02",
+      "object_id": "rack-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        0.490357,
+        3.572601,
+        1.120816
+      ],
+      "position_m": [
+        0.49035700000000004,
+        3.572601,
+        1.120816
+      ],
+      "bounds_m": [
+        0.420306,
+        0.560408,
+        3.5025500000000003,
+        3.642652,
+        1.120816,
+        1.120816
+      ],
+      "area_m2": 0.019628570403999963,
+      "material_id": "glass",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-01",
+      "component_id": "electrical-00",
+      "object_id": "avionics-port",
+      "face": 3,
+      "requested_position_m": [
+        0.564498,
+        0.887068,
+        1.61285
+      ],
+      "position_m": [
+        0.5644974999999999,
+        0.8870674999999999,
+        1.61285
+      ],
+      "bounds_m": [
+        0.4838549999999999,
+        0.6451399999999999,
+        0.806425,
+        0.9677099999999998,
+        1.61285,
+        1.61285
+      ],
+      "area_m2": 0.026012851224999987,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-01",
+      "component_id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "face": 3,
+      "requested_position_m": [
+        3.467628,
+        3.306343,
+        2.096705
+      ],
+      "position_m": [
+        3.4676275,
+        3.3063424999999995,
+        2.0967049999999996
+      ],
+      "bounds_m": [
+        3.3869849999999997,
+        3.5482699999999996,
+        3.2257,
+        3.3869849999999997,
+        2.0967049999999996,
+        2.0967049999999996
+      ],
+      "area_m2": 0.026012851224999967,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-01",
+      "component_id": "electrical-02",
+      "object_id": "utility-bay",
+      "face": 3,
+      "requested_position_m": [
+        1.209638,
+        2.822488,
+        1.61285
+      ],
+      "position_m": [
+        1.2096375,
+        2.8224874999999994,
+        1.61285
+      ],
+      "bounds_m": [
+        1.128995,
+        1.2902799999999999,
+        2.7418449999999996,
+        2.9031299999999995,
+        1.61285,
+        1.61285
+      ],
+      "area_m2": 0.026012851224999967,
+      "material_id": "aluminium",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-01",
+      "component_id": "electrical-00",
+      "object_id": "power-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        0.648261,
+        1.080435,
+        1.44058
+      ],
+      "position_m": [
+        0.648261,
+        1.080435,
+        1.44058
+      ],
+      "bounds_m": [
+        0.576232,
+        0.72029,
+        1.008406,
+        1.152464,
+        1.44058,
+        1.44058
+      ],
+      "area_m2": 0.020752707364000006,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-01",
+      "component_id": "electrical-01",
+      "object_id": "battery-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        2.521015,
+        2.376957,
+        1.44058
+      ],
+      "position_m": [
+        2.521015,
+        2.376957,
+        1.44058
+      ],
+      "bounds_m": [
+        2.4489859999999997,
+        2.593044,
+        2.304928,
+        2.4489859999999997,
+        1.44058,
+        1.44058
+      ],
+      "area_m2": 0.020752707364000006,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-01",
+      "component_id": "electrical-02",
+      "object_id": "cable-bay",
+      "face": 3,
+      "requested_position_m": [
+        0.360145,
+        4.105653,
+        1.872754
+      ],
+      "position_m": [
+        0.36014499999999994,
+        4.105653,
+        1.8727539999999998
+      ],
+      "bounds_m": [
+        0.288116,
+        0.43217399999999995,
+        4.033624,
+        4.177682,
+        1.8727539999999998,
+        1.8727539999999998
+      ],
+      "area_m2": 0.02075270736400003,
+      "material_id": "steel",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-01",
+      "component_id": "electrical-00",
+      "object_id": "cargo-port-forward",
+      "face": 3,
+      "requested_position_m": [
+        0.849948,
+        1.15902,
+        1.236288
+      ],
+      "position_m": [
+        0.849948,
+        1.15902,
+        1.236288
+      ],
+      "bounds_m": [
+        0.77268,
+        0.927216,
+        1.081752,
+        1.236288,
+        1.236288,
+        1.236288
+      ],
+      "area_m2": 0.023881375296000002,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-01",
+      "component_id": "electrical-01",
+      "object_id": "cargo-starboard-forward",
+      "face": 3,
+      "requested_position_m": [
+        3.322524,
+        1.15902,
+        2.008968
+      ],
+      "position_m": [
+        3.3225240000000005,
+        1.15902,
+        2.0089680000000003
+      ],
+      "bounds_m": [
+        3.2452560000000004,
+        3.399792,
+        1.081752,
+        1.236288,
+        2.0089680000000003,
+        2.0089680000000003
+      ],
+      "area_m2": 0.023881375295999967,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-01",
+      "component_id": "electrical-02",
+      "object_id": "cargo-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        0.849948,
+        3.322524,
+        0.927216
+      ],
+      "position_m": [
+        0.849948,
+        3.3225240000000005,
+        0.927216
+      ],
+      "bounds_m": [
+        0.77268,
+        0.927216,
+        3.2452560000000004,
+        3.399792,
+        0.927216,
+        0.927216
+      ],
+      "area_m2": 0.023881375295999967,
+      "material_id": "insulation",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-01",
+      "component_id": "electrical-00",
+      "object_id": "seat-console-port",
+      "face": 3,
+      "requested_position_m": [
+        0.784652,
+        0.927316,
+        1.854632
+      ],
+      "position_m": [
+        0.7846519999999999,
+        0.9273159999999998,
+        1.8546319999999998
+      ],
+      "bounds_m": [
+        0.71332,
+        0.8559839999999999,
+        0.8559839999999999,
+        0.9986479999999999,
+        1.8546319999999998,
+        1.8546319999999998
+      ],
+      "area_m2": 0.020353016895999988,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-01",
+      "component_id": "electrical-01",
+      "object_id": "seat-console-starboard",
+      "face": 3,
+      "requested_position_m": [
+        2.781948,
+        1.212644,
+        0.998648
+      ],
+      "position_m": [
+        2.781948,
+        1.2126439999999998,
+        0.9986479999999999
+      ],
+      "bounds_m": [
+        2.710616,
+        2.85328,
+        1.1413119999999999,
+        1.2839759999999998,
+        0.9986479999999999,
+        0.9986479999999999
+      ],
+      "area_m2": 0.020353016895999974,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-01",
+      "component_id": "electrical-02",
+      "object_id": "rear-avionics",
+      "face": 3,
+      "requested_position_m": [
+        2.211292,
+        2.49662,
+        1.854632
+      ],
+      "position_m": [
+        2.211292,
+        2.4966199999999996,
+        1.8546319999999998
+      ],
+      "bounds_m": [
+        2.13996,
+        2.2826239999999998,
+        2.4252879999999997,
+        2.5679519999999996,
+        1.8546319999999998,
+        1.8546319999999998
+      ],
+      "area_m2": 0.020353016895999974,
+      "material_id": "glass",
+      "combustible_material_id": null,
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-01",
+      "component_id": "electrical-00",
+      "object_id": "central-rack-forward",
+      "face": 3,
+      "requested_position_m": [
+        1.63798,
+        1.068248,
+        0.854598
+      ],
+      "position_m": [
+        1.6379795000000001,
+        1.0682475,
+        0.854598
+      ],
+      "bounds_m": [
+        1.5667630000000001,
+        1.709196,
+        0.997031,
+        1.139464,
+        0.854598,
+        0.854598
+      ],
+      "area_m2": 0.02028715948899998,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-01",
+      "component_id": "electrical-01",
+      "object_id": "central-rack-middle",
+      "face": 3,
+      "requested_position_m": [
+        1.922845,
+        2.350144,
+        1.139464
+      ],
+      "position_m": [
+        1.9228455,
+        2.3501445,
+        1.139464
+      ],
+      "bounds_m": [
+        1.851629,
+        1.994062,
+        2.278928,
+        2.421361,
+        1.139464,
+        1.139464
+      ],
+      "area_m2": 0.02028715948900001,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-01",
+      "component_id": "electrical-02",
+      "object_id": "central-rack-aft",
+      "face": 3,
+      "requested_position_m": [
+        1.353114,
+        4.059341,
+        1.851629
+      ],
+      "position_m": [
+        1.3531135,
+        4.0593405,
+        1.851629
+      ],
+      "bounds_m": [
+        1.281897,
+        1.42433,
+        3.988124,
+        4.1305570000000005,
+        1.851629,
+        1.851629
+      ],
+      "area_m2": 0.020287159489000072,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-02",
+      "component_id": "electrical-00",
+      "object_id": "rack-port-front",
+      "face": 3,
+      "requested_position_m": [
+        0.778025,
+        1.626778,
+        1.556049
+      ],
+      "position_m": [
+        0.7780245,
+        1.6267785,
+        1.556049
+      ],
+      "bounds_m": [
+        0.707295,
+        0.848754,
+        1.556049,
+        1.697508,
+        1.556049,
+        1.556049
+      ],
+      "area_m2": 0.020010648681000002,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-02",
+      "component_id": "electrical-01",
+      "object_id": "rack-starboard-front",
+      "face": 3,
+      "requested_position_m": [
+        3.041368,
+        1.060942,
+        0.848754
+      ],
+      "position_m": [
+        3.0413685,
+        1.0609425,
+        0.848754
+      ],
+      "bounds_m": [
+        2.9706390000000003,
+        3.112098,
+        0.990213,
+        1.131672,
+        0.848754,
+        0.848754
+      ],
+      "area_m2": 0.02001064868099997,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-02",
+      "component_id": "electrical-02",
+      "object_id": "rack-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        0.212189,
+        3.890122,
+        1.556049
+      ],
+      "position_m": [
+        0.2121885,
+        3.8901225,
+        1.556049
+      ],
+      "bounds_m": [
+        0.141459,
+        0.282918,
+        3.819393,
+        3.960852,
+        1.556049,
+        1.556049
+      ],
+      "area_m2": 0.020010648681000033,
+      "material_id": "aluminium",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-02",
+      "component_id": "electrical-00",
+      "object_id": "avionics-port",
+      "face": 3,
+      "requested_position_m": [
+        0.762256,
+        1.178032,
+        1.801696
+      ],
+      "position_m": [
+        0.762256,
+        1.178032,
+        1.801696
+      ],
+      "bounds_m": [
+        0.69296,
+        0.831552,
+        1.108736,
+        1.247328,
+        1.801696,
+        1.801696
+      ],
+      "area_m2": 0.019207742463999998,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-02",
+      "component_id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "face": 3,
+      "requested_position_m": [
+        2.42536,
+        2.009584,
+        0.970144
+      ],
+      "position_m": [
+        2.42536,
+        2.009584,
+        0.9701439999999999
+      ],
+      "bounds_m": [
+        2.356064,
+        2.494656,
+        1.9402879999999998,
+        2.07888,
+        0.9701439999999999,
+        0.9701439999999999
+      ],
+      "area_m2": 0.019207742464000012,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-02",
+      "component_id": "electrical-02",
+      "object_id": "utility-bay",
+      "face": 3,
+      "requested_position_m": [
+        0.485072,
+        2.563952,
+        1.801696
+      ],
+      "position_m": [
+        0.48507199999999995,
+        2.563952,
+        1.801696
+      ],
+      "bounds_m": [
+        0.415776,
+        0.554368,
+        2.494656,
+        2.633248,
+        1.801696,
+        1.801696
+      ],
+      "area_m2": 0.019207742464000005,
+      "material_id": "steel",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-02",
+      "component_id": "electrical-00",
+      "object_id": "power-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        0.888591,
+        1.211715,
+        1.130934
+      ],
+      "position_m": [
+        0.8885910000000001,
+        1.211715,
+        1.130934
+      ],
+      "bounds_m": [
+        0.80781,
+        0.9693720000000001,
+        1.130934,
+        1.292496,
+        1.130934,
+        1.130934
+      ],
+      "area_m2": 0.02610227984400001,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-02",
+      "component_id": "electrical-01",
+      "object_id": "battery-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        2.342649,
+        2.342649,
+        2.100306
+      ],
+      "position_m": [
+        2.342649,
+        2.342649,
+        2.1003060000000002
+      ],
+      "bounds_m": [
+        2.261868,
+        2.42343,
+        2.261868,
+        2.42343,
+        2.1003060000000002,
+        2.1003060000000002
+      ],
+      "area_m2": 0.026102279843999994,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-02",
+      "component_id": "electrical-02",
+      "object_id": "cable-bay",
+      "face": 3,
+      "requested_position_m": [
+        0.403905,
+        4.604517,
+        1.130934
+      ],
+      "position_m": [
+        0.40390500000000007,
+        4.604517,
+        1.130934
+      ],
+      "bounds_m": [
+        0.323124,
+        0.48468600000000006,
+        4.523736,
+        4.685298,
+        1.130934,
+        1.130934
+      ],
+      "area_m2": 0.026102279844000004,
+      "material_id": "insulation",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-02",
+      "component_id": "electrical-00",
+      "object_id": "cargo-port-forward",
+      "face": 3,
+      "requested_position_m": [
+        0.49518,
+        1.0611,
+        1.83924
+      ],
+      "position_m": [
+        0.49517999999999995,
+        1.0611,
+        1.83924
+      ],
+      "bounds_m": [
+        0.42444,
+        0.56592,
+        0.9903599999999999,
+        1.13184,
+        1.83924,
+        1.83924
+      ],
+      "area_m2": 0.020016590400000006,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-02",
+      "component_id": "electrical-01",
+      "object_id": "cargo-starboard-forward",
+      "face": 3,
+      "requested_position_m": [
+        2.4759,
+        1.0611,
+        0.84888
+      ],
+      "position_m": [
+        2.4759,
+        1.0611,
+        0.84888
+      ],
+      "bounds_m": [
+        2.40516,
+        2.54664,
+        0.9903599999999999,
+        1.13184,
+        0.84888,
+        0.84888
+      ],
+      "area_m2": 0.020016590400000013,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-02",
+      "component_id": "electrical-02",
+      "object_id": "cargo-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        0.77814,
+        3.60774,
+        1.13184
+      ],
+      "position_m": [
+        0.77814,
+        3.6077399999999997,
+        1.13184
+      ],
+      "bounds_m": [
+        0.7074,
+        0.84888,
+        3.537,
+        3.67848,
+        1.13184,
+        1.13184
+      ],
+      "area_m2": 0.0200165904,
+      "material_id": "glass",
+      "combustible_material_id": null,
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-02",
+      "component_id": "electrical-00",
+      "object_id": "seat-console-port",
+      "face": 3,
+      "requested_position_m": [
+        0.509166,
+        0.800118,
+        1.018332
+      ],
+      "position_m": [
+        0.509166,
+        0.8001179999999999,
+        1.018332
+      ],
+      "bounds_m": [
+        0.436428,
+        0.581904,
+        0.7273799999999999,
+        0.872856,
+        1.018332,
+        1.018332
+      ],
+      "area_m2": 0.021163266576000005,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-02",
+      "component_id": "electrical-01",
+      "object_id": "seat-console-starboard",
+      "face": 3,
+      "requested_position_m": [
+        3.127734,
+        0.509166,
+        1.891188
+      ],
+      "position_m": [
+        3.1277340000000002,
+        0.509166,
+        1.8911879999999999
+      ],
+      "bounds_m": [
+        3.054996,
+        3.200472,
+        0.436428,
+        0.581904,
+        1.8911879999999999,
+        1.8911879999999999
+      ],
+      "area_m2": 0.02116326657599999,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-02",
+      "component_id": "electrical-02",
+      "object_id": "rear-avionics",
+      "face": 3,
+      "requested_position_m": [
+        1.672974,
+        3.127734,
+        1.018332
+      ],
+      "position_m": [
+        1.672974,
+        3.1277340000000002,
+        1.018332
+      ],
+      "bounds_m": [
+        1.600236,
+        1.745712,
+        3.054996,
+        3.200472,
+        1.018332,
+        1.018332
+      ],
+      "area_m2": 0.021163266575999984,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-02",
+      "component_id": "electrical-00",
+      "object_id": "central-rack-forward",
+      "face": 3,
+      "requested_position_m": [
+        2.174283,
+        1.207935,
+        1.288464
+      ],
+      "position_m": [
+        2.174283,
+        1.207935,
+        1.2884639999999998
+      ],
+      "bounds_m": [
+        2.093754,
+        2.2548120000000003,
+        1.1274060000000001,
+        1.288464,
+        1.2884639999999998,
+        1.2884639999999998
+      ],
+      "area_m2": 0.02593967936400001,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-02",
+      "component_id": "electrical-01",
+      "object_id": "central-rack-middle",
+      "face": 3,
+      "requested_position_m": [
+        1.530051,
+        2.335341,
+        2.093754
+      ],
+      "position_m": [
+        1.530051,
+        2.335341,
+        2.0937539999999997
+      ],
+      "bounds_m": [
+        1.449522,
+        1.6105800000000001,
+        2.2548120000000003,
+        2.41587,
+        2.0937539999999997,
+        2.0937539999999997
+      ],
+      "area_m2": 0.025939679363999976,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-02",
+      "component_id": "electrical-02",
+      "object_id": "central-rack-aft",
+      "face": 3,
+      "requested_position_m": [
+        1.852167,
+        4.912269,
+        0.966348
+      ],
+      "position_m": [
+        1.8521670000000001,
+        4.912269,
+        0.9663479999999999
+      ],
+      "bounds_m": [
+        1.771638,
+        1.932696,
+        4.83174,
+        4.9927980000000005,
+        0.9663479999999999,
+        0.9663479999999999
+      ],
+      "area_m2": 0.025939679364000084,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-03",
+      "component_id": "electrical-00",
+      "object_id": "rack-port-front",
+      "face": 3,
+      "requested_position_m": [
+        0.220551,
+        1.396823,
+        1.176272
+      ],
+      "position_m": [
+        0.220551,
+        1.396823,
+        1.176272
+      ],
+      "bounds_m": [
+        0.147034,
+        0.294068,
+        1.323306,
+        1.47034,
+        1.176272,
+        1.176272
+      ],
+      "area_m2": 0.021618997155999985,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-03",
+      "component_id": "electrical-01",
+      "object_id": "rack-starboard-front",
+      "face": 3,
+      "requested_position_m": [
+        2.867163,
+        0.514619,
+        1.176272
+      ],
+      "position_m": [
+        2.8671629999999997,
+        0.5146189999999999,
+        1.176272
+      ],
+      "bounds_m": [
+        2.793646,
+        2.94068,
+        0.441102,
+        0.588136,
+        1.176272,
+        1.176272
+      ],
+      "area_m2": 0.021618997156000016,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-laboratory-vent-03",
+      "component_id": "electrical-02",
+      "object_id": "rack-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        0.808687,
+        3.749367,
+        1.911442
+      ],
+      "position_m": [
+        0.8086869999999999,
+        3.7493670000000003,
+        1.911442
+      ],
+      "bounds_m": [
+        0.73517,
+        0.882204,
+        3.67585,
+        3.822884,
+        1.911442,
+        1.911442
+      ],
+      "area_m2": 0.021618997156000016,
+      "material_id": "steel",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-03",
+      "component_id": "electrical-00",
+      "object_id": "avionics-port",
+      "face": 3,
+      "requested_position_m": [
+        0.558345,
+        1.036925,
+        1.116689
+      ],
+      "position_m": [
+        0.5583445,
+        1.0369255000000002,
+        1.116689
+      ],
+      "bounds_m": [
+        0.47858100000000003,
+        0.638108,
+        0.9571620000000001,
+        1.116689,
+        1.116689,
+        1.116689
+      ],
+      "area_m2": 0.02544886372899999,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-03",
+      "component_id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "face": 3,
+      "requested_position_m": [
+        3.110777,
+        2.951249,
+        2.073851
+      ],
+      "position_m": [
+        3.1107765,
+        2.9512495000000003,
+        2.073851
+      ],
+      "bounds_m": [
+        3.031013,
+        3.19054,
+        2.871486,
+        3.031013,
+        2.073851,
+        2.073851
+      ],
+      "area_m2": 0.02544886372899999,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-node-vent-03",
+      "component_id": "electrical-02",
+      "object_id": "utility-bay",
+      "face": 3,
+      "requested_position_m": [
+        0.558345,
+        2.472669,
+        1.116689
+      ],
+      "position_m": [
+        0.5583445,
+        2.4726685,
+        1.116689
+      ],
+      "bounds_m": [
+        0.47858100000000003,
+        0.638108,
+        2.392905,
+        2.552432,
+        1.116689,
+        1.116689
+      ],
+      "area_m2": 0.025448863729000026,
+      "material_id": "insulation",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-03",
+      "component_id": "electrical-00",
+      "object_id": "power-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        0.36418,
+        0.218508,
+        1.45672
+      ],
+      "position_m": [
+        0.36417999999999995,
+        0.21850799999999998,
+        1.45672
+      ],
+      "bounds_m": [
+        0.291344,
+        0.43701599999999996,
+        0.145672,
+        0.291344,
+        1.45672,
+        1.45672
+      ],
+      "area_m2": 0.021220331583999996,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-03",
+      "component_id": "electrical-01",
+      "object_id": "battery-cabinet",
+      "face": 3,
+      "requested_position_m": [
+        2.257916,
+        2.403588,
+        1.45672
+      ],
+      "position_m": [
+        2.257916,
+        2.403588,
+        1.45672
+      ],
+      "bounds_m": [
+        2.18508,
+        2.330752,
+        2.330752,
+        2.4764239999999997,
+        1.45672,
+        1.45672
+      ],
+      "area_m2": 0.02122033158399994,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "iss-service-vent-03",
+      "component_id": "electrical-02",
+      "object_id": "cable-bay",
+      "face": 3,
+      "requested_position_m": [
+        0.36418,
+        4.73434,
+        1.893736
+      ],
+      "position_m": [
+        0.36417999999999995,
+        4.7343399999999995,
+        1.8937359999999999
+      ],
+      "bounds_m": [
+        0.291344,
+        0.43701599999999996,
+        4.661504,
+        4.807176,
+        1.8937359999999999,
+        1.8937359999999999
+      ],
+      "area_m2": 0.02122033158400003,
+      "material_id": "glass",
+      "combustible_material_id": null,
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-03",
+      "component_id": "electrical-00",
+      "object_id": "cargo-port-forward",
+      "face": 3,
+      "requested_position_m": [
+        0.556423,
+        1.192335,
+        0.953868
+      ],
+      "position_m": [
+        0.556423,
+        1.192335,
+        0.953868
+      ],
+      "bounds_m": [
+        0.476934,
+        0.635912,
+        1.112846,
+        1.271824,
+        0.953868,
+        0.953868
+      ],
+      "area_m2": 0.025274004484000013,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-03",
+      "component_id": "electrical-01",
+      "object_id": "cargo-starboard-forward",
+      "face": 3,
+      "requested_position_m": [
+        2.464159,
+        1.510291,
+        1.271824
+      ],
+      "position_m": [
+        2.4641590000000004,
+        1.510291,
+        1.271824
+      ],
+      "bounds_m": [
+        2.3846700000000003,
+        2.543648,
+        1.4308020000000001,
+        1.5897800000000002,
+        1.271824,
+        1.271824
+      ],
+      "area_m2": 0.025274004483999985,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-cargo-vent-03",
+      "component_id": "electrical-02",
+      "object_id": "cargo-port-aft",
+      "face": 3,
+      "requested_position_m": [
+        0.874379,
+        4.053939,
+        1.748758
+      ],
+      "position_m": [
+        0.874379,
+        4.053939,
+        1.748758
+      ],
+      "bounds_m": [
+        0.7948900000000001,
+        0.953868,
+        3.97445,
+        4.133428,
+        1.748758,
+        1.748758
+      ],
+      "area_m2": 0.025274004484000037,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-03",
+      "component_id": "electrical-00",
+      "object_id": "seat-console-port",
+      "face": 3,
+      "requested_position_m": [
+        0.795971,
+        1.374859,
+        1.881386
+      ],
+      "position_m": [
+        0.795971,
+        1.3748589999999998,
+        1.8813859999999998
+      ],
+      "bounds_m": [
+        0.72361,
+        0.8683319999999999,
+        1.302498,
+        1.44722,
+        1.8813859999999998,
+        1.8813859999999998
+      ],
+      "area_m2": 0.02094445728399999,
+      "material_id": "glass",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-03",
+      "component_id": "electrical-01",
+      "object_id": "seat-console-starboard",
+      "face": 3,
+      "requested_position_m": [
+        2.822079,
+        0.361805,
+        1.013054
+      ],
+      "position_m": [
+        2.8220789999999996,
+        0.36180499999999993,
+        1.013054
+      ],
+      "bounds_m": [
+        2.7497179999999997,
+        2.89444,
+        0.289444,
+        0.43416599999999994,
+        1.013054,
+        1.013054
+      ],
+      "area_m2": 0.020944457284000028,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-capsule-vent-03",
+      "component_id": "electrical-02",
+      "object_id": "rear-avionics",
+      "face": 3,
+      "requested_position_m": [
+        1.953747,
+        2.677357,
+        1.881386
+      ],
+      "position_m": [
+        1.953747,
+        2.6773569999999998,
+        1.8813859999999998
+      ],
+      "bounds_m": [
+        1.8813859999999998,
+        2.026108,
+        2.604996,
+        2.7497179999999997,
+        1.8813859999999998,
+        1.8813859999999998
+      ],
+      "area_m2": 0.020944457283999973,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-03",
+      "component_id": "electrical-00",
+      "object_id": "central-rack-forward",
+      "face": 3,
+      "requested_position_m": [
+        2.214408,
+        0.214297,
+        1.571515
+      ],
+      "position_m": [
+        2.2144075,
+        0.21429749999999997,
+        1.571515
+      ],
+      "bounds_m": [
+        2.142975,
+        2.28584,
+        0.142865,
+        0.28573,
+        1.571515,
+        1.571515
+      ],
+      "area_m2": 0.020410408225000003,
+      "material_id": "aluminium",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-03",
+      "component_id": "electrical-01",
+      "object_id": "central-rack-middle",
+      "face": 3,
+      "requested_position_m": [
+        1.357217,
+        2.357272,
+        0.85719
+      ],
+      "position_m": [
+        1.3572175,
+        2.3572724999999997,
+        0.8571899999999999
+      ],
+      "bounds_m": [
+        1.285785,
+        1.42865,
+        2.28584,
+        2.428705,
+        0.8571899999999999,
+        0.8571899999999999
+      ],
+      "area_m2": 0.020410408225000006,
+      "material_id": "steel",
+      "combustible_material_id": "cellulose",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "layout_id": "habitat-central-racks-vent-03",
+      "component_id": "electrical-02",
+      "object_id": "central-rack-aft",
+      "face": 3,
+      "requested_position_m": [
+        1.928677,
+        4.357382,
+        1.571515
+      ],
+      "position_m": [
+        1.9286774999999998,
+        4.3573825,
+        1.571515
+      ],
+      "bounds_m": [
+        1.8572449999999998,
+        2.00011,
+        4.28595,
+        4.428815,
+        1.571515,
+        1.571515
+      ],
+      "area_m2": 0.02041040822500007,
+      "material_id": "insulation",
+      "combustible_material_id": "pmma",
+      "placement_basis": "one exposed upper-face mesh cell containing the annotated horizontal position",
+      "annotation_provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "max_estimated_device_csv_bytes": 6645408,
+  "scope": "compiler admissibility and split isolation, not solver success or physical validation",
+  "partition_policy": "whole_new_layouts_disjoint_from_v1_v2_and_across_ventilation_splits",
+  "unique_normalized_layouts": 24,
+  "v1_v2_normalized_geometry_overlap": 0,
+  "paired_groups": 48,
+  "compiled_ventilation_states": 96,
+  "ventilation_decks": [
+    {
+      "id": "iss-laboratory-vent-00-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "ea99cf05d1e6cd10770d1f50f250e8c9e5ef9db7f71c0470e806c7fe5d0e8e4e"
+    },
+    {
+      "id": "iss-laboratory-vent-00-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.264514647168,
+      "outlet_m3_s": 0.264514647168,
+      "deck_sha256": "45861518db349f02aaed0ae901aea61551d3b408ac47f99fab410b978eddf5cd"
+    },
+    {
+      "id": "iss-laboratory-vent-00-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.793543941504,
+      "outlet_m3_s": 0.793543941504,
+      "deck_sha256": "7442868b1bb6391d23ed5ff7893eb7e3c9da19074ca73c3cf68ec35126dad558"
+    },
+    {
+      "id": "iss-laboratory-vent-00-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.793543941504,
+      "outlet_m3_s": 0.793543941504,
+      "deck_sha256": "efb87f26b31be16c081f2881b6ff8ed1cf520a2ba066b74bb2365b078ea4021f"
+    },
+    {
+      "id": "iss-node-vent-00-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "e48040a472a5923daa216caa9d082ea44966245d89d5f31fcb82082400cfa65d"
+    },
+    {
+      "id": "iss-node-vent-00-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.29528444391551995,
+      "outlet_m3_s": 0.29528444391551995,
+      "deck_sha256": "52046896b4a658ea8e9fde8fec412abb1f462026d955e757225d9ebe4617bc8d"
+    },
+    {
+      "id": "iss-node-vent-00-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.8858533317465599,
+      "outlet_m3_s": 0.8858533317465599,
+      "deck_sha256": "55e8be7ba7a8e304d5869bd6be694c196826e7d5f20deb1d5b255f91f9c95d54"
+    },
+    {
+      "id": "iss-node-vent-00-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.8858533317465599,
+      "outlet_m3_s": 0.8858533317465599,
+      "deck_sha256": "34f2b02ebbffbf97163fb2eb85476c03a3d04d3a109eaf048b9888de457a147f"
+    },
+    {
+      "id": "iss-service-vent-00-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "e66733e0b03eea2d29fa8184e7f4cd53a4f8abc9f6061f38126278ac402fdffc"
+    },
+    {
+      "id": "iss-service-vent-00-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.29534346649727994,
+      "outlet_m3_s": 0.29534346649727994,
+      "deck_sha256": "9b6ce71e28ca43766920585d745d8e30d19de101b45bb293d705260d68e46c7d"
+    },
+    {
+      "id": "iss-service-vent-00-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.8860303994918398,
+      "outlet_m3_s": 0.8860303994918398,
+      "deck_sha256": "e86f18b8c7aa03fe5709316c1d04d07361b8641c572a0496b98552c371c47e44"
+    },
+    {
+      "id": "iss-service-vent-00-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.8860303994918398,
+      "outlet_m3_s": 0.8860303994918398,
+      "deck_sha256": "3037f3273bdb24ef340ba384fe78b45a96f0ebd919018f08551db56c2d2a575d"
+    },
+    {
+      "id": "habitat-cargo-vent-00-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "d1338a3f2d749234f89c72da5d8397479c898b0892bf2fd0d4c396f291c5b4c6"
+    },
+    {
+      "id": "habitat-cargo-vent-00-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.24660421747199995,
+      "outlet_m3_s": 0.24660421747199995,
+      "deck_sha256": "8e7e854a2e3b7a4f82e13704bd2d4b59311c52b7956b3fd4aa81505810562e90"
+    },
+    {
+      "id": "habitat-cargo-vent-00-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.7398126524159999,
+      "outlet_m3_s": 0.7398126524159999,
+      "deck_sha256": "78cb753c54bc7199a21d764f942e9c9a95cc324631c41ed3dd42943b60850bbe"
+    },
+    {
+      "id": "habitat-cargo-vent-00-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.7398126524159999,
+      "outlet_m3_s": 0.7398126524159999,
+      "deck_sha256": "3b32810721ae760b8c73f8999ee0b1305962c57e5988db7593812ec411c30a33"
+    },
+    {
+      "id": "habitat-capsule-vent-00-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "742e7884ece40f0d39a81ba9c69e02d0a06490cba86aae315164a89287a01b19"
+    },
+    {
+      "id": "habitat-capsule-vent-00-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.28066710233088,
+      "outlet_m3_s": 0.28066710233088,
+      "deck_sha256": "b7ce3bed371b2c22126bd474405f6e504152646e67a42b8a8d56236d2bca5de0"
+    },
+    {
+      "id": "habitat-capsule-vent-00-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.8420013069926401,
+      "outlet_m3_s": 0.8420013069926401,
+      "deck_sha256": "215425853fd5ab598db18a3adfd5110d93f34faac2ec30c7ef37e84ae4a8b93b"
+    },
+    {
+      "id": "habitat-capsule-vent-00-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.8420013069926401,
+      "outlet_m3_s": 0.8420013069926401,
+      "deck_sha256": "9b09579af43b66686e88955a5188ea179cc01b31d1cc25becf828f19d956de3e"
+    },
+    {
+      "id": "habitat-central-racks-vent-00-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "5386bfd2d07dfd581cfccecee99487edf529c1b0a64ebda2dca92b53f5995bd8"
+    },
+    {
+      "id": "habitat-central-racks-vent-00-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.22612113105407997,
+      "outlet_m3_s": 0.22612113105407997,
+      "deck_sha256": "15ee0afe064e3eb3ebc8a4f7e5d97d09e003d2c17ada25fd6432abc57b0ccabf"
+    },
+    {
+      "id": "habitat-central-racks-vent-00-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.6783633931622399,
+      "outlet_m3_s": 0.6783633931622399,
+      "deck_sha256": "b16c133ebd64504bd4f208aab04e2dae37cf4238f3c7f5976fbc06a7a76a2689"
+    },
+    {
+      "id": "habitat-central-racks-vent-00-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.6783633931622399,
+      "outlet_m3_s": 0.6783633931622399,
+      "deck_sha256": "1127107f934789de0d9958cfc1e8c6f87ace66fa0629995f40f3f6c0a56f7e95"
+    },
+    {
+      "id": "iss-laboratory-vent-01-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "09c09059206d50923746d1085d2ee06e22b386410463c847f27a25083401b6f3"
+    },
+    {
+      "id": "iss-laboratory-vent-01-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.22612113105407997,
+      "outlet_m3_s": 0.22612113105407997,
+      "deck_sha256": "1bac37c82632039c3112772243dc52bbeb2f316ed5aa23bb4d5a838d1e4cf2b1"
+    },
+    {
+      "id": "iss-laboratory-vent-01-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.6783633931622399,
+      "outlet_m3_s": 0.6783633931622399,
+      "deck_sha256": "dcde799ec06ec119ad17e6e57a328059c78442b006da809251bbf385385ab41d"
+    },
+    {
+      "id": "iss-laboratory-vent-01-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.6783633931622399,
+      "outlet_m3_s": 0.6783633931622399,
+      "deck_sha256": "120fd9c38ca69e1c0febd25715119e4a2c10feee3952b24086e82742ac68cdba"
+    },
+    {
+      "id": "iss-node-vent-01-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "e21be669b614f1fa341a5417ea839c9c02db80a7ff5d57483d85d96b1c9bc5fe"
+    },
+    {
+      "id": "iss-node-vent-01-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.29966804611199993,
+      "outlet_m3_s": 0.29966804611199993,
+      "deck_sha256": "ba72e18b2c46ec1fe7ecb766745ea6a91b12cc8d48a09b29fbce590ad2a9b81b"
+    },
+    {
+      "id": "iss-node-vent-01-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.8990041383359998,
+      "outlet_m3_s": 0.8990041383359998,
+      "deck_sha256": "7908506568b17d0946cabcd8b404e951a3a5be98eca06cf3fbf234403aa7c826"
+    },
+    {
+      "id": "iss-node-vent-01-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.8990041383359998,
+      "outlet_m3_s": 0.8990041383359998,
+      "deck_sha256": "4bf2b7b25e8dba51c748e6c20ec9768abd72c97f17f6739629cb2809bf56767a"
+    },
+    {
+      "id": "iss-service-vent-01-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "150a80567ecde7174c112ceb5be21af03091c326f9d9bbd5c7cab87e1c1ca0ac"
+    },
+    {
+      "id": "iss-service-vent-01-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.23907118883327996,
+      "outlet_m3_s": 0.23907118883327996,
+      "deck_sha256": "bb11010dccb93105a7203bbaf1f9dcfcd96ee4059ca340011581ac5555c51339"
+    },
+    {
+      "id": "iss-service-vent-01-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.7172135664998398,
+      "outlet_m3_s": 0.7172135664998398,
+      "deck_sha256": "b724989724acf7b77e87a69066f4828142312b5648227825aede0906af1d3133"
+    },
+    {
+      "id": "iss-service-vent-01-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.7172135664998398,
+      "outlet_m3_s": 0.7172135664998398,
+      "deck_sha256": "fb7d48d9ddd525bfeda706a88943f2867f3ea5fb45f36e8ee0666577475aedcf"
+    },
+    {
+      "id": "habitat-cargo-vent-01-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "095e924736059e1e45ca2b7835b4a7d8ae9f5bb445112a3fb96c7b60c0aafb01"
+    },
+    {
+      "id": "habitat-cargo-vent-01-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.27511344340992,
+      "outlet_m3_s": 0.27511344340992,
+      "deck_sha256": "b29bff03a9d9cce4315eff1034f23f8934731eabaa6feacdc31b461025d79801"
+    },
+    {
+      "id": "habitat-cargo-vent-01-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.82534033022976,
+      "outlet_m3_s": 0.82534033022976,
+      "deck_sha256": "3f4723906c3749e130d415b342cbbb8ec8e4fe949dd189223a9727c86af53a88"
+    },
+    {
+      "id": "habitat-cargo-vent-01-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.82534033022976,
+      "outlet_m3_s": 0.82534033022976,
+      "deck_sha256": "6f66d6e3d592c4bf468d5924c8ea3c9e1f64e5ea62e3f76fc6d9abcf0f4e0c44"
+    },
+    {
+      "id": "habitat-capsule-vent-01-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "00fec09aedea743b708ec8655db3dc63f7d1312d1f15c473bdb5f1920dfa80e0"
+    },
+    {
+      "id": "habitat-capsule-vent-01-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.2344667546419199,
+      "outlet_m3_s": 0.2344667546419199,
+      "deck_sha256": "0626cac4665bcb299a8a9bdfab7ec9f327063768031a3b9cd7ee966e1c3cbe2a"
+    },
+    {
+      "id": "habitat-capsule-vent-01-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.7034002639257597,
+      "outlet_m3_s": 0.7034002639257597,
+      "deck_sha256": "edeeb3b60401df33a38f443f3e9adaf180a23fc4fa391f1c02164be32f7c86e1"
+    },
+    {
+      "id": "habitat-capsule-vent-01-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.7034002639257597,
+      "outlet_m3_s": 0.7034002639257597,
+      "deck_sha256": "0b5b95552313b9fa8dd5876e97b5797b09410ea721eff76e20ac9868591f1766"
+    },
+    {
+      "id": "habitat-central-racks-vent-01-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "ca255b398be91cc0cc997ca45f151d28c653960648459b3c4c70cb151ff965bc"
+    },
+    {
+      "id": "habitat-central-racks-vent-01-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.23370807731327997,
+      "outlet_m3_s": 0.23370807731327997,
+      "deck_sha256": "d144b58cf9683b32aa23065e7f04f50e4526aac7a768d9afa3a86d4523948fcf"
+    },
+    {
+      "id": "habitat-central-racks-vent-01-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.70112423193984,
+      "outlet_m3_s": 0.70112423193984,
+      "deck_sha256": "9437e6786a1b7d569ab97ce0b9002c2def1efb9b29dbc30f7a9ccb8e53264d5d"
+    },
+    {
+      "id": "habitat-central-racks-vent-01-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.70112423193984,
+      "outlet_m3_s": 0.70112423193984,
+      "deck_sha256": "114c57e1596a3546960d682c1492b6821e8f98b472cf8446f8e59ef1bd828e1a"
+    },
+    {
+      "id": "iss-laboratory-vent-02-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "4fd02d3262d0418596660d340a5780ae827828c7a6339d127c61a95127b78f71"
+    },
+    {
+      "id": "iss-laboratory-vent-02-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.23052267280512,
+      "outlet_m3_s": 0.23052267280512,
+      "deck_sha256": "3f1228f71c1234890f79d56b905ea1e548345945d8f00e28437bda6645be250f"
+    },
+    {
+      "id": "iss-laboratory-vent-02-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.69156801841536,
+      "outlet_m3_s": 0.69156801841536,
+      "deck_sha256": "1881a47ed4139b51b879b59d889cd0af16ff7ce10c504eb19d4c6ffde3977187"
+    },
+    {
+      "id": "iss-laboratory-vent-02-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.69156801841536,
+      "outlet_m3_s": 0.69156801841536,
+      "deck_sha256": "1f836be02e13666d5abdd682d9af50bea8c3497485b1113cd05c63c570b592d5"
+    },
+    {
+      "id": "iss-node-vent-02-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "1784ea2147ea3e17c6c7327bd767ace0ecf28b76200524bbbd97aaa9a9fadba3"
+    },
+    {
+      "id": "iss-node-vent-02-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.22127319318528,
+      "outlet_m3_s": 0.22127319318528,
+      "deck_sha256": "a7352cf4aa29bfee844be65483db9b0e03385afb8b4fcf07e47ebc2ccb395e99"
+    },
+    {
+      "id": "iss-node-vent-02-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.66381957955584,
+      "outlet_m3_s": 0.66381957955584,
+      "deck_sha256": "041c288f77bfbf61e858bb253a5e584d1a0c013dceb231c5950bd4a67ceab0df"
+    },
+    {
+      "id": "iss-node-vent-02-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.66381957955584,
+      "outlet_m3_s": 0.66381957955584,
+      "deck_sha256": "0f211de4c8d60aca810a69a79f8cf5121e67eb1a34bd0a7707d11a97442f0839"
+    },
+    {
+      "id": "iss-service-vent-02-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "43dbf0d6685525c33444469c42bff8785505e2ac6555322557b244289c2ca47a"
+    },
+    {
+      "id": "iss-service-vent-02-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.30069826380288006,
+      "outlet_m3_s": 0.30069826380288006,
+      "deck_sha256": "186a58eb34dd86727991b9a295c6980e468c4942b19cc4a0e57052df8355718c"
+    },
+    {
+      "id": "iss-service-vent-02-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.9020947914086401,
+      "outlet_m3_s": 0.9020947914086401,
+      "deck_sha256": "c16dee1e30d8713b3f34c2dd5e2d84cebf30e803d8f0635f5f731916ef1e2282"
+    },
+    {
+      "id": "iss-service-vent-02-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.9020947914086401,
+      "outlet_m3_s": 0.9020947914086401,
+      "deck_sha256": "6fa3dea46c1473a8f491a48777f55f023830ecb13ccb084a66b0dfac3cb1ee81"
+    },
+    {
+      "id": "habitat-cargo-vent-02-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "6745710556d38169eb364db75da22560f26cc2ed80780351cfd3aa6ca863f025"
+    },
+    {
+      "id": "habitat-cargo-vent-02-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.230591121408,
+      "outlet_m3_s": 0.230591121408,
+      "deck_sha256": "a6e0076a251b32f4d924bfc62ab107172e7f36dec53316295ce3991df90a7f75"
+    },
+    {
+      "id": "habitat-cargo-vent-02-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.691773364224,
+      "outlet_m3_s": 0.691773364224,
+      "deck_sha256": "6d822632855deb8b4497e6fdef26e2dcd037ed0b39932ab0461e395d3901c17d"
+    },
+    {
+      "id": "habitat-cargo-vent-02-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.691773364224,
+      "outlet_m3_s": 0.691773364224,
+      "deck_sha256": "e30353e20094231c62e34a8d2e98970d6f5a7cce6c3fafe162fc2e8cf172f104"
+    },
+    {
+      "id": "habitat-capsule-vent-02-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "073b5a7e4697b78aef27833beb007c01c32f6f7741792d6669629695af75eb7e"
+    },
+    {
+      "id": "habitat-capsule-vent-02-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.24380083095551996,
+      "outlet_m3_s": 0.24380083095551996,
+      "deck_sha256": "32524ccb75ff22a64e5bd3ecefbc65f38cc8ed860e8a2ba13499caf4330d0a50"
+    },
+    {
+      "id": "habitat-capsule-vent-02-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.7314024928665599,
+      "outlet_m3_s": 0.7314024928665599,
+      "deck_sha256": "a3b740dd5b3c4ef5f57e9119590276577fb4fbbc05bbd4b64fcd207f9a05742a"
+    },
+    {
+      "id": "habitat-capsule-vent-02-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.7314024928665599,
+      "outlet_m3_s": 0.7314024928665599,
+      "deck_sha256": "1cb7d296dc49baa5917c88ba2333067cf5d9d1ff2f20040a3d33f585f23a8696"
+    },
+    {
+      "id": "habitat-central-racks-vent-02-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "f4c882dcc5637082100a341c5c50fabbacc1c6380517885c0b8575816300bd76"
+    },
+    {
+      "id": "habitat-central-racks-vent-02-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.2988251062732799,
+      "outlet_m3_s": 0.2988251062732799,
+      "deck_sha256": "290ee32a3301f030a2e057d137822465e285b2f05447b8771680f996657f2f39"
+    },
+    {
+      "id": "habitat-central-racks-vent-02-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.8964753188198398,
+      "outlet_m3_s": 0.8964753188198398,
+      "deck_sha256": "0a133961aabbbb15a71828e581379578dbad758ab9e9b1b8b0e314500303a5d7"
+    },
+    {
+      "id": "habitat-central-racks-vent-02-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.8964753188198398,
+      "outlet_m3_s": 0.8964753188198398,
+      "deck_sha256": "335844724998fa9122a940658ab9a5b2d4c9699efc731b9f7a1606fc844b7499"
+    },
+    {
+      "id": "iss-laboratory-vent-03-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "998c91cfb596385279600281ec549f2aea23dcb8a1bd65ab61c9d54280d59d24"
+    },
+    {
+      "id": "iss-laboratory-vent-03-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.24905084723712,
+      "outlet_m3_s": 0.24905084723712,
+      "deck_sha256": "678857713ad72a7fa87923355d2b0053c1702f2d6bdc97f4be0d633ef09a5966"
+    },
+    {
+      "id": "iss-laboratory-vent-03-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.74715254171136,
+      "outlet_m3_s": 0.74715254171136,
+      "deck_sha256": "6c0dd9c1521da292e7abc5a3556d4d86054852dda486fb44e612f4f063f8cb6a"
+    },
+    {
+      "id": "iss-laboratory-vent-03-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.74715254171136,
+      "outlet_m3_s": 0.74715254171136,
+      "deck_sha256": "3555b3ad6dc0b4da63a305723f1e73ca203281dec6be265421405068ec6426c5"
+    },
+    {
+      "id": "iss-node-vent-03-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "8ed2350830d4ee74dd7403825dc62ba916dcb0c99d9017c2eadb1ff2fa8093c4"
+    },
+    {
+      "id": "iss-node-vent-03-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.29317091015808,
+      "outlet_m3_s": 0.29317091015808,
+      "deck_sha256": "06f7de8df85d73fbb5972c6ff4aeb3450fcfa5c85b53d8423c1d29f168465090"
+    },
+    {
+      "id": "iss-node-vent-03-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.8795127304742401,
+      "outlet_m3_s": 0.8795127304742401,
+      "deck_sha256": "8fbab57e49423c941ba64118f2ec1e675c25dc000d516eed7c9f5d0e18c0ee58"
+    },
+    {
+      "id": "iss-node-vent-03-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.8795127304742401,
+      "outlet_m3_s": 0.8795127304742401,
+      "deck_sha256": "789836c5159b0dc80ccb98689a52857a04d5f91f4eed017ef5b5709dac983d8a"
+    },
+    {
+      "id": "iss-service-vent-03-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "48a43da3a3237819ad4296857a6127a2a287d7df4b84cc39c0bc010e5106f3b9"
+    },
+    {
+      "id": "iss-service-vent-03-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.24445821984767996,
+      "outlet_m3_s": 0.24445821984767996,
+      "deck_sha256": "ee59ccd58fdfa4237ebaf9f64fbb0cbad5466d68e8ac12afa97f121f5895534d"
+    },
+    {
+      "id": "iss-service-vent-03-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.7333746595430398,
+      "outlet_m3_s": 0.7333746595430398,
+      "deck_sha256": "303a8cbda8d2ecd03d80c54220beed2a2c8a528301b5738738a8f2fef07cb781"
+    },
+    {
+      "id": "iss-service-vent-03-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.7333746595430398,
+      "outlet_m3_s": 0.7333746595430398,
+      "deck_sha256": "79b7d1d81f3b15f43f046bbd037343edd9e67092dfc674848d2240c43f6a31a2"
+    },
+    {
+      "id": "habitat-cargo-vent-03-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "d3071685ed12982724956b8592e6fb942b834c7f7aa043cc01e5e82a7d3aaa8f"
+    },
+    {
+      "id": "habitat-cargo-vent-03-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.29115653165568,
+      "outlet_m3_s": 0.29115653165568,
+      "deck_sha256": "f249b4adb5b744b49c097265bd86baac1b55267af1f3690e6bf2f6934e5ae01f"
+    },
+    {
+      "id": "habitat-cargo-vent-03-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.87346959496704,
+      "outlet_m3_s": 0.87346959496704,
+      "deck_sha256": "aba2e40a2ef8bb2e62004b449ce4a2dfb075cc63e296c60389dd9c88fe1ada38"
+    },
+    {
+      "id": "habitat-cargo-vent-03-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.87346959496704,
+      "outlet_m3_s": 0.87346959496704,
+      "deck_sha256": "7bde42826d7ddd5a6dba46aba3c0f8ec3d0e84b634ffe6851e281d09d80c223b"
+    },
+    {
+      "id": "habitat-capsule-vent-03-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "67ad15ac1fc153b5b6c5244498417215913c17d537860b7175842b0d9f038f39"
+    },
+    {
+      "id": "habitat-capsule-vent-03-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.24128014791167998,
+      "outlet_m3_s": 0.24128014791167998,
+      "deck_sha256": "321cde4aad6c732a0b7295f04f0ea18cbfcc6d4802091be1abd3dae3f0cf04eb"
+    },
+    {
+      "id": "habitat-capsule-vent-03-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.72384044373504,
+      "outlet_m3_s": 0.72384044373504,
+      "deck_sha256": "266c44ec28267a673e991e18ccd78a9ba8a21a36101284692d28b17adb79e3fb"
+    },
+    {
+      "id": "habitat-capsule-vent-03-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.72384044373504,
+      "outlet_m3_s": 0.72384044373504,
+      "deck_sha256": "0196bf8514ab71811ea4650e1633f5218fb3961f6b25ce37ac0d8172f13f2426"
+    },
+    {
+      "id": "habitat-central-racks-vent-03-flaming-still",
+      "state": "still",
+      "inlet_m3_s": -0.0,
+      "outlet_m3_s": 0.0,
+      "deck_sha256": "20c1bdf8605c2464c36714868b23e13b7b18807c899a93197421dec4a2935f64"
+    },
+    {
+      "id": "habitat-central-racks-vent-03-flaming-slow",
+      "state": "slow",
+      "inlet_m3_s": -0.23512790275199993,
+      "outlet_m3_s": 0.23512790275199993,
+      "deck_sha256": "9a3746336964aec810c6beb83636c98d9e1ad0e152fe9d961cb69d564a15e595"
+    },
+    {
+      "id": "habitat-central-racks-vent-03-flaming-fast",
+      "state": "fast",
+      "inlet_m3_s": -0.7053837082559998,
+      "outlet_m3_s": 0.7053837082559998,
+      "deck_sha256": "ff84b2e890002df8dd3e03ddfb64efc00e7918f450e42962847142ade578ecf5"
+    },
+    {
+      "id": "habitat-central-racks-vent-03-flaming-reverse",
+      "state": "reverse",
+      "inlet_m3_s": -0.7053837082559998,
+      "outlet_m3_s": 0.7053837082559998,
+      "deck_sha256": "ec0d070c2efa4e08919b6e9ccfddf55690c7e53e002787473a7422ce68c38134"
+    }
+  ]
+}

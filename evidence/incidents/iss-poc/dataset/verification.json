@@ -1,0 +1,112 @@
+{
+  "verified_at": "2026-11-15T13:12:41.634520+00:00",
+  "dataset_id": "iss-poc-20261115-v1",
+  "status": "passed",
+  "complete_cases": 108,
+  "layouts": 18,
+  "split_counts": {
+    "train": 72,
+    "validation": 18,
+    "test": 18
+  },
+  "gravity_counts": {
+    "0.0001": 90,
+    "1.0": 18
+  },
+  "planned_zero_power_controls": 18,
+  "train_validation_activity": {
+    "train": {
+      "heat_observed": 2880710,
+      "heat_positive": 3524,
+      "smoke_observed": 2880710,
+      "smoke_positive": 55342,
+      "hot_cases": 39,
+      "smoky_cases": 53
+    },
+    "validation": {
+      "heat_observed": 700560,
+      "heat_positive": 1348,
+      "smoke_observed": 700560,
+      "smoke_positive": 13960,
+      "hot_cases": 9,
+      "smoky_cases": 13
+    }
+  },
+  "train_validation_zero_power_controls": {
+    "iss-service-v00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    }
+  },
+  "test_label_summary": null,
+  "checks": [
+    "immutable plan and frozen index hashes",
+    "all seven artifact hashes of every case",
+    "FDS provenance, coordinates, timestamps and masked observations",
+    "18 unique physical geometry hashes",
+    "train/validation profile recomputation with float64 thresholds",
+    "test label summaries remain absent"
+  ],
+  "manifest_sha256": "b119a200985e936ec3d0ff36d878850165bb345c42df5d6be97da653954592fb",
+  "plan_sha256": "12d0b5b88d206627c38217d5f6cf985b989bc3c7b111d91ce793b1ca04c94139",
+  "frozen_index_sha256": "f4648d1466804a180065e35375edb79027115877ea46371fbea682823b96a670",
+  "stored_bytes": 365152899,
+  "campaign_wall_time_s": 408.047,
+  "sum_case_solver_parse_seconds": 1416.1480000000001
+}

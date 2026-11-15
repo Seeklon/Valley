@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-15T14:08:28.432Z",
+  "completed": false,
+  "error": "Keyboard movement must change the real camera position.",
+  "location": "web/tools/iss-poc-check.mjs:243:10",
+  "observed_before_and_after": [1.8, 1.95, -0.18],
+  "conditions": "ArrowUp, ArrowLeft, ArrowDown, ArrowRight attempted after a real drag gesture, with fixed 100 ms waits and reads of data-camera-position.",
+  "cause": "This run read the camera before the software-rendered view updated. A separate focused reproduction received ArrowUp on the focused canvas, kept the old camera attribute after 100, 300 and 800 ms of fixed waits, then reported a 0.15 m displacement after the final 1000 ms wait. No application code changed.",
+  "diagnostic": "navigation-diagnostic.json",
+  "free_path_verification": "navigation-free-path.json",
+  "followup": "The test now waits for an actual camera-position change, bounded to 5 seconds per attempted direction. A collision still produces no movement and fails if all directions are blocked. Full rerun is stored in browser-realistic-dev-retry; this initial run remains incomplete."
+}

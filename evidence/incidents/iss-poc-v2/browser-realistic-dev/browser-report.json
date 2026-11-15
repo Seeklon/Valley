@@ -1,0 +1,291 @@
+{
+  "checked_at": "2026-11-15T14:34:50.255Z",
+  "base": "https://desktop-m4hkr86.tail609f26.ts.net:8444",
+  "route": "#iss",
+  "model_id": "iss-heat-smoke-poc-20261115",
+  "checks": [
+    {
+      "name": "recorded_export_with_heat_smoke_and_provenance",
+      "passed": true,
+      "cases": 384,
+      "model": "iss-heat-smoke-poc-20261115"
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-laboratory",
+      "id": "iss-laboratory-v2-05-flame-alt",
+      "layout": "iss-laboratory-v2-05",
+      "source_ndc": [
+        0,
+        -0.201833,
+        0.970471
+      ],
+      "test_id": "iss-laboratory-v2-06-flame",
+      "rendered": {
+        "calls": 37,
+        "triangles": 8778
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-node",
+      "id": "iss-node-v2-05-flame",
+      "layout": "iss-node-v2-05",
+      "source_ndc": [
+        0,
+        -0.213057,
+        0.968808
+      ],
+      "test_id": "iss-node-v2-06-flame",
+      "rendered": {
+        "calls": 38,
+        "triangles": 6762
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-service",
+      "id": "iss-service-v2-05-flame-alt",
+      "layout": "iss-service-v2-05",
+      "source_ndc": [
+        0,
+        -0.183262,
+        0.972738
+      ],
+      "test_id": "iss-service-v2-06-flame",
+      "rendered": {
+        "calls": 33,
+        "triangles": 6134
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "habitat-cargo",
+      "id": "habitat-cargo-v2-05-thermal",
+      "layout": "habitat-cargo-v2-05",
+      "source_ndc": [
+        0,
+        -0.328015,
+        0.951702
+      ],
+      "test_id": "habitat-cargo-v2-06-flame",
+      "rendered": {
+        "calls": 40,
+        "triangles": 10312
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "habitat-capsule",
+      "id": "habitat-capsule-v2-05-thermal",
+      "layout": "habitat-capsule-v2-05",
+      "source_ndc": [
+        0,
+        -0.269802,
+        0.960383
+      ],
+      "test_id": "habitat-capsule-v2-06-flame",
+      "rendered": {
+        "calls": 40,
+        "triangles": 7626
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "habitat-central-racks",
+      "id": "habitat-central-racks-v2-05-flame-alt",
+      "layout": "habitat-central-racks-v2-05",
+      "source_ndc": [
+        0,
+        -0.189365,
+        0.971707
+      ],
+      "test_id": "habitat-central-racks-v2-06-flame",
+      "rendered": {
+        "calls": 33,
+        "triangles": 9146
+      }
+    },
+    {
+      "name": "honest_cold_control_accessible",
+      "passed": true,
+      "id": "habitat-capsule-v2-05-control",
+      "metrics": {
+        "heat": {
+          "id": "habitat-capsule-v2-05-control",
+          "module_id": "habitat-capsule",
+          "gravity": "microgravity",
+          "incident_type": "overheating",
+          "sample_inactive": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 42480,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0,
+          "n_valid": 42480
+        },
+        "smoke": {
+          "id": "habitat-capsule-v2-05-control",
+          "module_id": "habitat-capsule",
+          "gravity": "microgravity",
+          "incident_type": "overheating",
+          "sample_inactive": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 42480,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0,
+          "n_valid": 42480
+        }
+      },
+      "time_s": 3.7076664
+    },
+    {
+      "name": "honest_failure_accessible",
+      "passed": true,
+      "id": "iss-service-v2-05-arc",
+      "metrics": {
+        "heat": {
+          "id": "iss-service-v2-05-arc",
+          "module_id": "iss-service",
+          "gravity": "microgravity",
+          "incident_type": "arc",
+          "sample_inactive": false,
+          "tp": 0,
+          "fp": 77,
+          "fn": 3,
+          "tn": 43840,
+          "precision": 0,
+          "recall": 0,
+          "iou": 0,
+          "f1": 0,
+          "false_positive_rate": 0.001753307375276089,
+          "n_valid": 43920
+        },
+        "smoke": {
+          "id": "iss-service-v2-05-arc",
+          "module_id": "iss-service",
+          "gravity": "microgravity",
+          "incident_type": "arc",
+          "sample_inactive": false,
+          "tp": 6,
+          "fp": 221,
+          "fn": 11,
+          "tn": 43682,
+          "precision": 0.02643171806167401,
+          "recall": 0.35294117647058826,
+          "iou": 0.025210084033613446,
+          "f1": 0.04918032786885246,
+          "false_positive_rate": 0.00503382456779719,
+          "n_valid": 43920
+        }
+      },
+      "time_s": 6.2063056
+    },
+    {
+      "name": "heldout_partition_accessible",
+      "passed": true,
+      "id": "iss-laboratory-v2-06-flame",
+      "layout_id": "iss-laboratory-v2-06"
+    },
+    {
+      "name": "inside_and_overview_cameras",
+      "passed": true,
+      "overviewHash": "c417371565bfa20d051e9a6112840ba2a11dbeea365d2a1c5865fac306d79a4f",
+      "insideHash": "f17be4a1052a693f49acff95cdcf6f90fe7bbf575f41f89b1020821431f4e488"
+    },
+    {
+      "name": "actual_look_and_walk_interaction",
+      "passed": true,
+      "beforeDirection": [
+        -0.713388,
+        -0.098987,
+        -0.693742
+      ],
+      "afterDirection": [
+        -0.890753,
+        -0.019148,
+        -0.454084
+      ],
+      "beforePosition": [
+        1.921836,
+        2.381989,
+        -0.18
+      ],
+      "afterPosition": [
+        1.788199,
+        2.381989,
+        -0.248125
+      ],
+      "movement_observation_timeout_ms": 5000
+    },
+    {
+      "name": "independent_heat_smoke_and_reference_controls",
+      "passed": true
+    },
+    {
+      "name": "timeline_plays_exported_times",
+      "passed": true
+    },
+    {
+      "name": "laptop_layout_and_useful_timeline",
+      "passed": true,
+      "timeline_width": 1066,
+      "slider_width": 787.515625,
+      "speed_width": 64
+    },
+    {
+      "name": "no_javascript_error_or_compute_submission",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "screenshots": [
+    "iss-iss-laboratory.png",
+    "iss-iss-laboratory-overview.png",
+    "iss-iss-laboratory-smoke.png",
+    "iss-iss-laboratory-test.png",
+    "iss-iss-node.png",
+    "iss-iss-node-overview.png",
+    "iss-iss-node-smoke.png",
+    "iss-iss-node-test.png",
+    "iss-iss-service.png",
+    "iss-iss-service-overview.png",
+    "iss-iss-service-smoke.png",
+    "iss-iss-service-test.png",
+    "iss-habitat-cargo.png",
+    "iss-habitat-cargo-overview.png",
+    "iss-habitat-cargo-smoke.png",
+    "iss-habitat-cargo-test.png",
+    "iss-habitat-capsule.png",
+    "iss-habitat-capsule-overview.png",
+    "iss-habitat-capsule-smoke.png",
+    "iss-habitat-capsule-test.png",
+    "iss-habitat-central-racks.png",
+    "iss-habitat-central-racks-overview.png",
+    "iss-habitat-central-racks-smoke.png",
+    "iss-habitat-central-racks-test.png",
+    "iss-cold-control.png",
+    "iss-model-failure.png",
+    "iss-heldout-test.png",
+    "iss-smoke-only.png",
+    "iss-heat-only.png",
+    "iss-presentation.png",
+    "iss-laptop.png"
+  ]
+}

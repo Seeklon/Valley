@@ -1,0 +1,37 @@
+{
+  "selected_at": "2026-11-15T15:08:55.973221+00:00",
+  "step": 5000,
+  "score_thresholds": {
+    "heat": 0.9088770151138306,
+    "smoke": 0.8320183753967285
+  },
+  "state_sha256": "edad77f5098e632fa48d2bc32f54b73597cb7a06e9278e5ca4f3e8fa2d28b3bb",
+  "selection": {
+    "thresholds": "same macro-family microgravity F1 rule on V2+fresh validation",
+    "checkpoint": "0.75 combined validation macro-family F1 + 0.25 fresh validation macro-family signed ventilation-change F1; equal heat/smoke mass",
+    "old_validation_macro_f1_tolerance": 0.02,
+    "combined_microgravity_precision_tolerance_per_field": 0.03,
+    "combined_microgravity_recall_must_not_decrease_per_field": true,
+    "explicit_zero_power_controls_false_positives": 0,
+    "must_improve_composite_and_paired_over_recalibrated_v2": true,
+    "test_used_for_selection": false
+  },
+  "value": 0.43250549758451506,
+  "paired_macro_f1": 0.26745077337047896,
+  "new_weights_selected": true,
+  "test_labels_used_for_selection": false,
+  "v2_frozen_thresholds": {
+    "heat": 0.9308615922927856,
+    "smoke": 0.9088770151138306
+  },
+  "v2_recalibrated_thresholds": {
+    "heat": 0.6456562876701355,
+    "smoke": 0.5986876487731934
+  },
+  "baseline_value": 0.3229773848015251,
+  "baseline_paired_macro_f1": 0.11534658986516334,
+  "promotion_guard": {
+    "promotable": true,
+    "failures": []
+  }
+}

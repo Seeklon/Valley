@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-11-15T15:26:56.211747+00:00",
+  "kind": "model-with-inference",
+  "model_id": "iss-heat-smoke-poc-20261115",
+  "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+  "index_sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e",
+  "verified_replay_count": 216,
+  "packaged_cpu_inference_verified": true,
+  "archive": "runtime/ignis-model-20261115-vent.zip",
+  "archive_bytes": 1798192,
+  "archive_sha256": "b7e1da6b6e97f2f4bc4c74fe092acbc5eca19fd27f878a227fb146ea1fb892e7",
+  "file_count": 30,
+  "packaged_at": "2026-11-15T15:28:09.412591+00:00",
+  "download_url": "https://desktop-m4hkr86.tail609f26.ts.net:8444/downloads/ignis-model-20261115-vent.zip",
+  "remote_download": "E:/IGNIS-Valley-dev/app/web/dist/downloads/ignis-model-20261115-vent.zip",
+  "download_http_verified": true,
+  "delivered_at": "2026-11-15T15:28:27.106146+00:00"
+}

@@ -60,7 +60,9 @@ import type { PreventionSession } from './components/PreventionView';
 import type { Catalog, Field, Health, ModelInfo, Run, RunConfig, Source } from './types';
 
 const Viewport = lazy(() => import('./components/Viewport'));
-type Tab = 'prediction' | 'simulation' | 'mission' | 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
+const HotspotPocView = lazy(() => import('./components/HotspotPocView'));
+const IssPocView = lazy(() => import('./components/IssPocView'));
+type Tab = 'iss' | 'poc' | 'prediction' | 'simulation' | 'mission' | 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
 const fields: { id: Field; label: string; icon: typeof Box }[] = [
   { id: 'scene', label: 'Géométrie', icon: Box },
   { id: 'temperature', label: 'Température', icon: Thermometer },
@@ -92,7 +94,15 @@ function saveRunId(id: string): void {
 }
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>('prediction');
+  const [tab, setTab] = useState<Tab>(() => window.location.hash === '#poc' ? 'poc' : 'iss');
+  useEffect(() => {
+    const openPoc = () => {
+      if (window.location.hash === '#poc') setTab('poc');
+      if (window.location.hash === '#iss') setTab('iss');
+    };
+    window.addEventListener('hashchange', openPoc);
+    return () => window.removeEventListener('hashchange', openPoc);
+  }, []);
   const [propagationSession, setPropagationSession] = useState<PropagationSession>(EMPTY_PROPAGATION_SESSION);
   const toolsMenu = useRef<HTMLDetailsElement | null>(null);
   useEffect(() => {
@@ -387,7 +397,7 @@ export default function App() {
 
   return (
     <div
-      className={`app-shell ${['mission', 'prediction', 'simulation'].includes(tab) ? 'mission-shell' : ''}`}
+      className={`app-shell ${['iss', 'poc', 'mission', 'prediction', 'simulation'].includes(tab) ? 'mission-shell' : ''}`}
     >
       <header className="topbar">
         <a
@@ -395,9 +405,9 @@ export default function App() {
           className="brand"
           onClick={(event) => {
             event.preventDefault();
-            setTab('prediction');
+            setTab('iss');
           }}
-          aria-label="IGNIS, revenir à la prédiction"
+          aria-label="IGNIS, revenir à la station"
         >
           <span className="brand-mark">
             <Flame size={24} fill="currentColor" />
@@ -410,6 +420,7 @@ export default function App() {
         <nav className="main-nav" aria-label="Navigation principale">
           {(
             [
+              { id: 'iss', label: 'Exploration 3D', icon: ScanLine },
               { id: 'prediction', label: 'Prédiction', icon: Cpu },
               { id: 'simulation', label: 'Simulation', icon: Flame },
               { id: 'sources', label: 'Sources NASA', icon: Database },
@@ -447,6 +458,7 @@ export default function App() {
             <div>
               {(
                 [
+                  { id: 'poc', label: 'POC ML initial', hint: 'Comparaison thermique du 14 novembre', icon: ScanLine },
                   { id: 'mission', label: 'Mission', hint: 'Relire les champs enregistrés', icon: Radar },
                   {
                     id: 'lab',
@@ -483,9 +495,11 @@ export default function App() {
         <div className="runtime-status">
           <span className={`connection-dot ${connected ? 'connected' : ''} ${loading ? 'pulse' : ''}`} />
           <div>
-            <strong>{loading ? 'Connexion…' : connected ? 'Poste connecté' : 'Poste déconnecté'}</strong>
+            <strong>{tab === 'poc' || tab === 'iss' ? 'Relecture POC' : loading ? 'Connexion…' : connected ? 'Poste connecté' : 'Poste déconnecté'}</strong>
             <span>
-              {connected
+              {tab === 'poc' || tab === 'iss'
+                ? 'Prédictions enregistrées'
+                : connected
                 ? `${loadedModels.length} modèle${loadedModels.length > 1 ? 's' : ''} chargé${loadedModels.length > 1 ? 's' : ''}`
                 : 'Calcul local · Tailscale'}
             </span>
@@ -504,7 +518,7 @@ export default function App() {
       </header>
 
       <main>
-        {(connectionError || catalogError) && (
+        {tab !== 'poc' && tab !== 'iss' && (connectionError || catalogError) && (
           <div className="connection-banner" role="status">
             <Radio size={16} />
             <span>{connectionError ?? `Catalogue : ${catalogError}`}</span>
@@ -516,6 +530,16 @@ export default function App() {
               Réessayer <RefreshCw size={13} />
             </button>
           </div>
+        )}
+        {tab === 'iss' && (
+          <Suspense fallback={<div className="empty-state">Chargement de la station…</div>}>
+            <IssPocView onOpenSources={() => setTab('sources')} />
+          </Suspense>
+        )}
+        {tab === 'poc' && (
+          <Suspense fallback={<div className="empty-state">Chargement de la comparaison…</div>}>
+            <HotspotPocView onOpenSources={() => setTab('sources')} />
+          </Suspense>
         )}
         {(tab === 'prediction' || tab === 'simulation') && (
           <PropagationView

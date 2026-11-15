@@ -1,0 +1,25 @@
+{
+  "case_id": "habitat-central-racks-vent-02-flaming-still",
+  "split": "validation",
+  "frames": 20,
+  "points_per_frame": 1536,
+  "cpu_threads": 4,
+  "cpu_checkpoint_load_seconds": 0.012233000001288019,
+  "cpu_first_trajectory_seconds": 0.06280650000007881,
+  "cpu_warm_trajectory_seconds": [
+    0.05543260000013106,
+    0.05568689999927301,
+    0.05816989999948419
+  ],
+  "gpu_warm_trajectory_seconds": [
+    0.03362770000057935,
+    0.033237800000279094,
+    0.03343200000017532
+  ],
+  "cpu_warm_median_seconds": 0.05568689999927301,
+  "gpu_warm_median_seconds": 0.03343200000017532,
+  "cpu_gpu_max_score_difference": 0.003918707370758057,
+  "cpu_gpu_class_disagreements": 0,
+  "timing_scope": "full trajectory input preparation and inference; CPU load separate, GPU model already loaded; no FDS runtime included",
+  "fds_comparison": "Compare separately with this case's measured FDS wall time from dataset generation, not its simulated duration."
+}

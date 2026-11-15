@@ -1,0 +1,1102 @@
+{
+  "execution/evaluation-protocol.json": {
+    "bytes": 611,
+    "sha256": "9cab97c7ba183f42867705f135406846385e403d0d649e790580e2bfd4c5d5e5"
+  },
+  "execution/evidence/incidents/iss-poc-vent/export-verification.json": {
+    "bytes": 635682,
+    "sha256": "80981c0821df0d800850b19e6e96e3d84813d101dddced4a9b21f9122056143a"
+  },
+  "execution/fit1-exited.json": {
+    "bytes": 130,
+    "sha256": "e194cd615ddea7dee7ceef076ef08eb641c9daadf735d59ef12a320bfe3c47f6"
+  },
+  "execution/fit1.stderr.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "execution/fit1.stdout.log": {
+    "bytes": 15926,
+    "sha256": "aa4f14b737f7b34ca518ccbe153b2ec31a64a72b69af97ae53caa8b1c55dc4fb"
+  },
+  "execution/launch-fit1.py": {
+    "bytes": 2177,
+    "sha256": "d6a2e5c3c54283deeafd5e8d929f7d94172e5d6ef90c973a142b03bfb02ff9ef"
+  },
+  "fit1/comparison-scores/candidate-test.npz": {
+    "bytes": 18006911,
+    "sha256": "0c236567537e37c2e0aacd1cc2b8093d4a0a1ca038fd4db20a3ebda05bffd2bd"
+  },
+  "fit1/comparison-scores/candidate-validation.npz": {
+    "bytes": 17967879,
+    "sha256": "b58fd7662159c3792143409a4042cd5309bfbae4f45661ba14d567d31e23c3ce"
+  },
+  "fit1/comparison-scores/v2-test.npz": {
+    "bytes": 17573123,
+    "sha256": "bc5076ca4c792f630b2af215f1c0dbe4d7ad782ac34142431d092c59a8697279"
+  },
+  "fit1/comparison-scores/v2-validation.npz": {
+    "bytes": 17547395,
+    "sha256": "07595f85f075fbe662aa6f8c3692155aa8e88154c92a0792a5a6cbb6e371a7f9"
+  },
+  "fit1/compute-lock.json": {
+    "bytes": 118,
+    "sha256": "b1ed377b8395f8e133420749dc942c92fd055eee7b1f0e8c152ca3a48a4a5fbb"
+  },
+  "fit1/dataset-snapshot.json": {
+    "bytes": 881281,
+    "sha256": "884a4a33cd912ed4d512dbe67566273c714447ce60b17f08846d56d9ecbd49e3"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-battery-fast.json": {
+    "bytes": 5364096,
+    "sha256": "b4df4a053237fc7c69dc0aad63901246dfc81de8a2e1d29dcdc8a3ea6406c6de"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-battery-reverse.json": {
+    "bytes": 5417028,
+    "sha256": "4dea83ba26df32e300d7e4d725e1bdada04c13a0fbde0257f08fa663582d3047"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-battery-slow.json": {
+    "bytes": 5162267,
+    "sha256": "9576b533e9bd6a6622b7a40bcc7753d3d796204a83a2d0a2ed68a7eba6fe20de"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-battery-still.json": {
+    "bytes": 3390696,
+    "sha256": "c188b55db5668d685d6c72f7baad66bac2e7b7d57ffff9eb9d943cb0b9983357"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-control.json": {
+    "bytes": 4722603,
+    "sha256": "9cd4addbed6cb4e00a80635cbde27029ce761c9482224b6d237676ee9ef86f58"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-flaming-fast.json": {
+    "bytes": 5408820,
+    "sha256": "563940ad782ec39f5af385c1667bf1faabd7f5c9fafd1f3d2049e87e412f32bc"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-flaming-reverse.json": {
+    "bytes": 5320091,
+    "sha256": "95af35e7d016be9a7226a5900942f3822d0c64f09e7a80abbd500cc0da6cf3ae"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-flaming-slow.json": {
+    "bytes": 5206485,
+    "sha256": "f04d0f13caaa2c56b8b48037f3e4456047d288cd8caea80614023757392537c3"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-00-flaming-still.json": {
+    "bytes": 3359291,
+    "sha256": "d55ea8bbd51a6ad0ca9b44a8fcb26f12aed75adfd626d84fe66d747f901f37c0"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-control.json": {
+    "bytes": 4686037,
+    "sha256": "93770077d2f1e9aa4cea0e8b8279d7587af3fa939757df0700a37cab64338640"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-flaming-fast.json": {
+    "bytes": 5380000,
+    "sha256": "1f2ae28bf1a12467c88ca0d6940b1d76ec9058ba50fc87378d8248cb872362f5"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-flaming-reverse.json": {
+    "bytes": 5372767,
+    "sha256": "50316bab6991e5f59effdfdd87986d5d165a4a4ec80e5285dacfcb25cd7a2bf4"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-flaming-slow.json": {
+    "bytes": 5254936,
+    "sha256": "3ce280cb5525a5a5f029f5afcef8483915ba29820f6eb00d5e9167c275b79db4"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-flaming-still.json": {
+    "bytes": 3737100,
+    "sha256": "0e571d403fc5e7d5e9656dd45e463c5d7242a06867e76e594c26b0e0f65d2080"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-smoldering-fast.json": {
+    "bytes": 5374432,
+    "sha256": "061b5d945b0b389361d2c09676892efc3a15770cb5dbdd880eacbcbd2596cee2"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-smoldering-reverse.json": {
+    "bytes": 5376932,
+    "sha256": "5d414ed7a5655ed84ef41a7d317488d161a84a7291cc18660fd0a1554c051c85"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-smoldering-slow.json": {
+    "bytes": 5238726,
+    "sha256": "3640902944b448c8c9a85a06e55c2a94455ab3318a8c131078b32a4acc3484a8"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-01-smoldering-still.json": {
+    "bytes": 3742873,
+    "sha256": "cca75524eb1da0cbc83e68583aaabd899459af58183569a7071278c7315589bc"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-control.json": {
+    "bytes": 4779343,
+    "sha256": "87ce3396a8949d5001c1ac3331262395878a7ce94538bf0834a1d51c0573e9e0"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-flaming-fast.json": {
+    "bytes": 5490593,
+    "sha256": "5c2486ba858b4a3639f10fe13a5bfeccc39b27712b3b40b0a3c7f2ed2e2bc6b7"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-flaming-reverse.json": {
+    "bytes": 5408235,
+    "sha256": "7f6d6be6e635187e17b1778fb49efbe8092c59f7e4f14ce717b43b46e7ddfc4b"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-flaming-slow.json": {
+    "bytes": 5308542,
+    "sha256": "ec47d585ccf39bf67950ff7cfe9c821ea9988a5d22c762268392cef6bc921d18"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-flaming-still.json": {
+    "bytes": 3594420,
+    "sha256": "396be783659a784ff40e89e04d6836871bbdd0026130a27e338cd4b0255c626f"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-overheating-fast.json": {
+    "bytes": 5406037,
+    "sha256": "c589287bedc98e9ee6f3ffe6de3fef05cc31f0eac3fae870aee15d8d23acf55b"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-overheating-reverse.json": {
+    "bytes": 5440022,
+    "sha256": "fdc7cadeb24964dc3b8d53e480d1bbaca51d40420fa826bf577d27e7a8fd6086"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-overheating-slow.json": {
+    "bytes": 5157283,
+    "sha256": "96c00f8bfff77b9cc56458dfbd77a923121e5eda7f7f4cdc41f0d08565d77ee9"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-02-overheating-still.json": {
+    "bytes": 4615928,
+    "sha256": "8e5d003b18e0b89a2a97db048fd862f0d819b3cbae4c25c0b88633e3424463b1"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-arc-fast.json": {
+    "bytes": 5357613,
+    "sha256": "b8425187f582b9211ad0ce2f37ad8136bf33ecbaa954e38fcf9dfdc49f443c56"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-arc-reverse.json": {
+    "bytes": 5270976,
+    "sha256": "5fa66f593adf53e3d5256e294127522eac3349f38e0856413766ee52306096a9"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-arc-slow.json": {
+    "bytes": 5132070,
+    "sha256": "e67c3d820f26ab377142296456252773468fa3d75df6e19dbf7fc2d083362909"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-arc-still.json": {
+    "bytes": 3462638,
+    "sha256": "f8824af111b59da75f780e7b9a85b4740333a04a48d65ba2cd76e4d74184e942"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-control.json": {
+    "bytes": 4719710,
+    "sha256": "dfb79ce5d1b63171d13d36e1de632b36f079b6d7d4b290c0afb831a9394e55db"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-flaming-fast.json": {
+    "bytes": 5435510,
+    "sha256": "025dd0fe36ffb3d08d02897002ebe038fc65854660b041aaf1992527992a6442"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-flaming-reverse.json": {
+    "bytes": 5425038,
+    "sha256": "b3c5945ddfd2a0856d5529848a83c55324bafd3bfb58fc92925a4442cb0a2d8e"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-flaming-slow.json": {
+    "bytes": 5292074,
+    "sha256": "ba9b1b0aca6fe1183a6202dade593fbafb682ff7e655095a30381e78a1d61f36"
+  },
+  "fit1/demo/cases/habitat-capsule-vent-03-flaming-still.json": {
+    "bytes": 3606472,
+    "sha256": "6927388fa7466906e866f02fe0e258f23dbe3b3cca39c05debd73ad7d4a5a689"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-arc-fast.json": {
+    "bytes": 5274502,
+    "sha256": "227b29b34470db29739a6fffe63c3e1dd0ae487d578a092ce33d7fbaeb770f36"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-arc-reverse.json": {
+    "bytes": 5166595,
+    "sha256": "a1b0243ad030b1588d9e4f708eacce517e3f727e54fe0012aee742e2ab13db05"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-arc-slow.json": {
+    "bytes": 5101885,
+    "sha256": "84529702de92917aec2380e624d174817dd19c766afca82c169e47a08b6aacd8"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-arc-still.json": {
+    "bytes": 4883869,
+    "sha256": "282f812d5c8e3c0509ee4117814afa5187872a031b9045b4191b8d517cfc4f73"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-control.json": {
+    "bytes": 4688850,
+    "sha256": "01bd84cdd7308b5e09fd030e8267cb3603d7da57e6029d9553e0b85cc71c4071"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-flaming-fast.json": {
+    "bytes": 5358007,
+    "sha256": "b26fee8d200bcc3d55e61c90cfd0df32e36b3c19459fe93e8280b155ff44be8e"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-flaming-reverse.json": {
+    "bytes": 5265783,
+    "sha256": "510dc86f7e6695f897e46d357693a0b22fb4ed05040d4d5dc6758a8835c9ea17"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-flaming-slow.json": {
+    "bytes": 5166086,
+    "sha256": "8813d484cc954b1be4cd31b0fb17d05dbd89fd1e5c1eabb576b37019bdb6e285"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-00-flaming-still.json": {
+    "bytes": 3494360,
+    "sha256": "d74067bec7b3a0207bd22284841bb4597e5e5ac7a6b8071ec89abeed3d6ec54d"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-battery-fast.json": {
+    "bytes": 5196774,
+    "sha256": "5163428504c073a4b57fccb2a8d5bd5a8a51afb41ca630b3eefc4344f2c685a0"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-battery-reverse.json": {
+    "bytes": 5289077,
+    "sha256": "5f3a9cd8f63640e5db44691695b5c4f496c96d33751684f44aef8002eadeb91b"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-battery-slow.json": {
+    "bytes": 4985343,
+    "sha256": "7bf0f9486a2b750b2680d233e92f1dd7cffd81fbd0b98b7bed6910a7f04c56a9"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-battery-still.json": {
+    "bytes": 3298730,
+    "sha256": "7048a501a0c05d2b3d6736aac5a554132db108ef44c395d76528ac1eada96566"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-control.json": {
+    "bytes": 4634686,
+    "sha256": "4b250276cd874784b3d75abaef46432c859114c482f74bfa87868dbb77d40534"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-flaming-fast.json": {
+    "bytes": 5283198,
+    "sha256": "e9b9e2053717265d2bc3077c988fe287e2f98b902756e45968d453c30fe227f4"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-flaming-reverse.json": {
+    "bytes": 5233651,
+    "sha256": "59227fbcc906687894f433719c89cc690385853a0c8507aa4f70c3143042ebab"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-flaming-slow.json": {
+    "bytes": 5108219,
+    "sha256": "5c779ae9292d9ac933c0dc2c4acd5d0516c8948506e7c6cb005119ebd091cc67"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-01-flaming-still.json": {
+    "bytes": 3311610,
+    "sha256": "abc54555889530b4f1b3b04443e7efc3fcffd3a680a888ba44ec7ef67e2a730f"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-control.json": {
+    "bytes": 4634151,
+    "sha256": "d4d55d1312be85a0d28b2605f0e1118231fb724ab4c0e86aee1e6374cc9329c8"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-flaming-fast.json": {
+    "bytes": 5312014,
+    "sha256": "036eaa4f6022f7cd52173f907397534b0e64ee840d33c7fcdfb712b36d4c9198"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-flaming-reverse.json": {
+    "bytes": 5233138,
+    "sha256": "d70b81bb46a90978d1a5558af1b9a4fc99fa67c1fd61b208279c12fa1ae52966"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-flaming-slow.json": {
+    "bytes": 5133653,
+    "sha256": "d2706789a5d412df390eb68e4be6e882ae5ecd58a6daad0ba4a6f7db54c2971a"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-flaming-still.json": {
+    "bytes": 3631985,
+    "sha256": "836efb75001964329e2eb7010aaa7de7bdfdaa0f93d6e22ba7fca5f02391b80e"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-smoldering-fast.json": {
+    "bytes": 5329861,
+    "sha256": "d89a800f13a8133ec22fc7fa58e499d9a8463873117e4ff891bab31a984b4d7a"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-smoldering-reverse.json": {
+    "bytes": 5255456,
+    "sha256": "bdb78af03233ae87c7a1b29514bec746c646a56e95a20fc35aeeefcf25c8d789"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-smoldering-slow.json": {
+    "bytes": 5156743,
+    "sha256": "98087d58767c241e59e7059124c121d5a2cf6bfbb299a191f12059d2ce1ecb43"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-02-smoldering-still.json": {
+    "bytes": 3662192,
+    "sha256": "f570d88244c96f0f519b08a0d3c7c465b8fd177b6cf76a69a506a7f82b52920e"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-control.json": {
+    "bytes": 4703498,
+    "sha256": "8f8a485720a8c7747908e54d2d9e3fa80d6a35f39b4d560e64e430129e10f8ba"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-flaming-fast.json": {
+    "bytes": 5349276,
+    "sha256": "61e495fd2027f2501535b16af65c015cfa4d9f6e3a73c995ee591a30b5faaaa9"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-flaming-reverse.json": {
+    "bytes": 5230369,
+    "sha256": "9362aaec5447da3e44221f74f8c9a2c75c8972a2ddd29ad2a0ffa2c94933cf46"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-flaming-slow.json": {
+    "bytes": 5141369,
+    "sha256": "7b33118b5bcbb96ffe09a4781bd3ed96f16d2b906688c1bfe2edb1d26eaaefa7"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-flaming-still.json": {
+    "bytes": 3167428,
+    "sha256": "1c17512b1d8c081f1441632a3f48dcd179cbad7c9b685d021e9e334613cb1aa5"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-overheating-fast.json": {
+    "bytes": 5349608,
+    "sha256": "b685d9f10b30144a986d29372fac8205147fc023cad1859a9ec2c1c299d1ac8a"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-overheating-reverse.json": {
+    "bytes": 5362150,
+    "sha256": "a4e1b239e07b2a43b476cc45d76c9b0b4359386824cee8bd23842db5693a8561"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-overheating-slow.json": {
+    "bytes": 5108565,
+    "sha256": "8a3c93278c4915cb514bc233fe2a4e28dd7f9f9bf88a22c2a5e2ced5d415cabd"
+  },
+  "fit1/demo/cases/habitat-cargo-vent-03-overheating-still.json": {
+    "bytes": 4223178,
+    "sha256": "c3475399e439a867d47c05ec44795ae84c0738808cf3352b12175fee670bd549"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-control.json": {
+    "bytes": 4737942,
+    "sha256": "69d1b053bb57ab96ea8d423ce23c9c14c9648466896ca66f536a61b84e85c508"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-flaming-fast.json": {
+    "bytes": 5395933,
+    "sha256": "1df1ef9e193a473f1d3f70492139d8f45b0ddc2d01700a7a4c2ac2681d3b971f"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-flaming-reverse.json": {
+    "bytes": 5242897,
+    "sha256": "0e717d393aa2d00139935e2b43ea30833c0c6b6047aa83a5423fea57176550ac"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-flaming-slow.json": {
+    "bytes": 5310270,
+    "sha256": "76244532cbda0f651502a67f7f8367455794c4ac26b82f461d60a184e6757f31"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-flaming-still.json": {
+    "bytes": 3677994,
+    "sha256": "745500e9fe40a062b5bc5398ab4cb59d00ecabc4c13467c32d313d3aecfbd2ee"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-smoldering-fast.json": {
+    "bytes": 5451136,
+    "sha256": "05112009974c0ecab2f68c322298ae059fb8e0f7036365bb6158b21c045e6057"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-smoldering-reverse.json": {
+    "bytes": 5459279,
+    "sha256": "0d6d3f4d25f2351839225b33762064c0694f2dec7b4a0dc0e4a76598dce28705"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-smoldering-slow.json": {
+    "bytes": 5337149,
+    "sha256": "7c8164d4b2b2cdf908ca549aa158e58b7735df0bd9fc29cfb9af50a4513b8268"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-00-smoldering-still.json": {
+    "bytes": 3792807,
+    "sha256": "89b680335dfd84639c626afb76176e607afd6aea921d7fd3e7df5ee5c5214648"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-control.json": {
+    "bytes": 4760348,
+    "sha256": "53193c49bd96e84f17cfcec182ab96628e6cc42111f3fcd7af6ca0b1577d2ef8"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-flaming-fast.json": {
+    "bytes": 5421811,
+    "sha256": "95174843e1b63ff0a16b4b9084a8c78036c5516963eaa40f03a80681b365ccdf"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-flaming-reverse.json": {
+    "bytes": 5413395,
+    "sha256": "b7da042dd7a1c7d929d6f7f845a2dcd3515ea55cb309236ca648616f3e489408"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-flaming-slow.json": {
+    "bytes": 5211891,
+    "sha256": "fbe8d65b9d02f8793701ab944907eec69e544f7aefe8a906b356348e6f81c8fe"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-flaming-still.json": {
+    "bytes": 3743992,
+    "sha256": "a1010ffbfb65ab61898b03ae16098a0b80a2193c80d32d1ae7a247dc7825eaf8"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-overheating-fast.json": {
+    "bytes": 5455621,
+    "sha256": "db1ae94728924c64381bacd17111aa9ae81bdbb325f88f132aa2c0afc360999d"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-overheating-reverse.json": {
+    "bytes": 5449889,
+    "sha256": "83abbcfde2220cdc628b937bae16742e4fd5b59cc896c1f00cf23cb237b891b0"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-overheating-slow.json": {
+    "bytes": 5252814,
+    "sha256": "aaee136e8af0ec6b66416aa34a93d17acc8d821afa3a609adc29156473e8792c"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-01-overheating-still.json": {
+    "bytes": 4547754,
+    "sha256": "859f8c3d50d6710adefa6f326348e293c90b98089f188a0ba4367fa7190f5e2a"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-arc-fast.json": {
+    "bytes": 5358996,
+    "sha256": "0fd116dc1bae3c55f24ee47b19a586daf146fd88bfefd1202e5c4ca5a1662d15"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-arc-reverse.json": {
+    "bytes": 5294671,
+    "sha256": "12bdbaef19b8197c40968c7cda08f5dec1f25472d8437447f9d9808388698f2a"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-arc-slow.json": {
+    "bytes": 5153438,
+    "sha256": "d040bd6b7cdad8270d1d859365c6dfa539f3fe34e2cea3edf5ac321dd19f5740"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-arc-still.json": {
+    "bytes": 3146284,
+    "sha256": "6a1f3ed08fa325b89414d9070eb24fd7c47e4be16cc472923768b517a34a2b84"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-control.json": {
+    "bytes": 4728813,
+    "sha256": "41006b1db66482769b1c5cdb9ea1c42bebfb71503b05d23a697e007708b1961c"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-flaming-fast.json": {
+    "bytes": 5420444,
+    "sha256": "59d0a47e82af20b3bdec1716ac9e4fff5d242018b614bd02125fe41b1d3ad7dc"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-flaming-reverse.json": {
+    "bytes": 5289019,
+    "sha256": "c0aaff9e5d6cde31adb199a8539f2c68a8faf94818fd2649f59ac4661451154b"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-flaming-slow.json": {
+    "bytes": 5235486,
+    "sha256": "2773a9ed0e8b47b0622ffdef2ce92c63d8e6064edcf1a5b2faa37c045367d2c4"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-02-flaming-still.json": {
+    "bytes": 3209734,
+    "sha256": "ea18625ab67ca9fa3413e67c21a13f0187a046dbe372e5ebcff0db0b0249be67"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-battery-fast.json": {
+    "bytes": 5430921,
+    "sha256": "90b762c5534e9fb96cab0ef60e5b30bca2f67a852a18dc6fd990ec82862e923e"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-battery-reverse.json": {
+    "bytes": 5395100,
+    "sha256": "986c04d7fdae98a5839340b3a3b79c90634f20f218ea9b00e8760be3b542b74f"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-battery-slow.json": {
+    "bytes": 5291791,
+    "sha256": "0f2efb9f355a7fcd65672948a3eeddaa73d06eef282da00cc5b42a65cd59ab93"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-battery-still.json": {
+    "bytes": 4304694,
+    "sha256": "47e5f0c20442e3ac58b41def0460cadc3bc5b3328ec6a3d5854d8d5ed89c2df3"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-control.json": {
+    "bytes": 4720600,
+    "sha256": "9912664635bb15308970856efa86d2f4baf80b9e43d6849b35f6d9500dca9810"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-flaming-fast.json": {
+    "bytes": 5245153,
+    "sha256": "92b3eb75ef99441f00580d46fcae2bbc6e1bd58412b8c217722b194ba974c7a9"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-flaming-reverse.json": {
+    "bytes": 5272557,
+    "sha256": "afa3571bb4035cf948d535f7de88f3afe4eecc7f41460be001a4944deddbd78a"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-flaming-slow.json": {
+    "bytes": 5053462,
+    "sha256": "a8b435593684b148b34833f695789ad3d77ad974c011e68c9608f4e0216a7390"
+  },
+  "fit1/demo/cases/habitat-central-racks-vent-03-flaming-still.json": {
+    "bytes": 3495623,
+    "sha256": "c47c150abcc224c314373a7b7a95a9c5f5bbd6093c7e9d55bae0108619851e7d"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-battery-fast.json": {
+    "bytes": 5291294,
+    "sha256": "123c11a7f125e0a232f02d07f5d34b2c304bbdb7a51323d6c4767fbdb30b4f9c"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-battery-reverse.json": {
+    "bytes": 5333856,
+    "sha256": "5b3c11dd40ce62d13c3d960cccd8d6b9db9b1b7c8303da3a5585f39798dcef9c"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-battery-slow.json": {
+    "bytes": 5105220,
+    "sha256": "24182d0b81ef0f6659fcd5ef9c613bfddb279eab6a6951a6feec7e2e5710f198"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-battery-still.json": {
+    "bytes": 3496797,
+    "sha256": "905293ab447d48e663b316eea024e91b3dd8d0f17109173cb1031fdf94876f73"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-control.json": {
+    "bytes": 4679476,
+    "sha256": "78ce7ddafe268daafd16cf6008ce287105bcc2750723436c03b835b1c8774ef3"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-flaming-fast.json": {
+    "bytes": 5322716,
+    "sha256": "b363e2e127a9545f0a6bb29ad8a41b23191e92e1d7a47b5a9175dfd32c159ffb"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-flaming-reverse.json": {
+    "bytes": 5188428,
+    "sha256": "b042f49ee81c093c7c929a0ebed241d04de92d83c1a7b94d7564e961a79a61d4"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-flaming-slow.json": {
+    "bytes": 5130011,
+    "sha256": "7e278d50ee0d015af05e20e88749f0d90ed7eb810d33d9818caef0c80427e8de"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-00-flaming-still.json": {
+    "bytes": 3277126,
+    "sha256": "59220d0624588f775d79438084664498fd2ffd6aab5302bb5cd2db2439285de0"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-control.json": {
+    "bytes": 4723879,
+    "sha256": "cbd6a8832bc77298f8665108d5e9c86e0155bcdf701df56ef1dcf889dffef35f"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-flaming-fast.json": {
+    "bytes": 5410953,
+    "sha256": "128fbb620dd19ea12aad6f9fd24f967256419c7bd453600b0693de3e74c6b2a2"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-flaming-reverse.json": {
+    "bytes": 5250881,
+    "sha256": "7956a2e5e37e54c20855f5d5ccd420bc95d868cd9c534ef8c40389bfad098946"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-flaming-slow.json": {
+    "bytes": 5227382,
+    "sha256": "f4d7315ce65feb59f814e681f121f8fca7b392b7f489ccd92ced0cda4ec2ef72"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-flaming-still.json": {
+    "bytes": 3689746,
+    "sha256": "2c3704d2a56ddd8657f00ce96bc2e3f7f867e50ef89c1491f0acc1134df92ff6"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-smoldering-fast.json": {
+    "bytes": 5426275,
+    "sha256": "ff8765bf98f823ffaaeb7d023a85ac8a580f5ec6fc91f69afc16418a2bb3df63"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-smoldering-reverse.json": {
+    "bytes": 5329143,
+    "sha256": "1006162e473bba1df4a36e627e99b307fbc7820805d7a8826705d557483f4bcb"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-smoldering-slow.json": {
+    "bytes": 5270232,
+    "sha256": "8d64c16c2388dbb387e3a374146f2a44e6e4dce74244f1db4fb94007960c9e8b"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-01-smoldering-still.json": {
+    "bytes": 3735940,
+    "sha256": "ed86303a62f1ad9cf73b39126a0c3a997726c11d6b9235a169b18a0256fb8a5f"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-control.json": {
+    "bytes": 4695990,
+    "sha256": "a14a5a146f2e22850aa05bf382fc64a04af1f49e4ad9ce680aafc2b991bd1fc6"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-flaming-fast.json": {
+    "bytes": 5381217,
+    "sha256": "e93a4bd258c90733991edec3fc4f341dc8415d689a966d9569179d865dbd6dab"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-flaming-reverse.json": {
+    "bytes": 5364304,
+    "sha256": "a7ce44e2261d51fafeb1ca5be575ca6296ff851cc81dda87fab999e9074da222"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-flaming-slow.json": {
+    "bytes": 5265625,
+    "sha256": "e02b4aff9bceefd307ab9555030b89ac5937c25d8362909e47f674c6ce4883bb"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-flaming-still.json": {
+    "bytes": 3708223,
+    "sha256": "84b9f008b46efec3efc03829fb0e420cfbcda006befd6013c5240ea920f5e273"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-overheating-fast.json": {
+    "bytes": 5265367,
+    "sha256": "8c5352cf1d0374ebeea17370d19261008ff70de6cd4a387dcb917aa75102823f"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-overheating-reverse.json": {
+    "bytes": 5340337,
+    "sha256": "ab67241a87daf7062fc2856e9705c3d51daf107284683bd4933a34ee3d7e2538"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-overheating-slow.json": {
+    "bytes": 5031713,
+    "sha256": "ccfd28e946a9978e7b657467b17d8dc9af5d37f656efa553ebda270fcb4c381e"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-02-overheating-still.json": {
+    "bytes": 4676356,
+    "sha256": "0daefa2a328063677319ab0e3e6554ebcd6f56b0e4eb03ff9ce0164ee289b2d0"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-arc-fast.json": {
+    "bytes": 5300322,
+    "sha256": "a9a976a86b86526b1c9df910636abe4f5cdfecc33f26a427ea3f3b24d0baabf3"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-arc-reverse.json": {
+    "bytes": 5114070,
+    "sha256": "49ba7c35e205729895ae5ec13f62e5f43774e93b4ce14869afccffef5ffd4bce"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-arc-slow.json": {
+    "bytes": 5090609,
+    "sha256": "0d3d6cee2650181773481cbff32a7f01a841d2bf91faba3c56ee445d661567d3"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-arc-still.json": {
+    "bytes": 4891635,
+    "sha256": "7790f73e942f30d0e9536562d5dadf35b71586a1c2d23aa8bf9f500a184bb967"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-control.json": {
+    "bytes": 4692997,
+    "sha256": "c6af1521002dd9f08cbfeb4ef0da62df91bfe94afdb0d89f65837da2cec48883"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-flaming-fast.json": {
+    "bytes": 5339795,
+    "sha256": "5cff1ae46fcd7ed4b6700ba0ced3a52a03eb6e58489f23f479519d783ab7a607"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-flaming-reverse.json": {
+    "bytes": 5259445,
+    "sha256": "ba7999e819b02e9e0d1917ede99ef3e0e0bc56687844a5dc1c5d7f18c8377c43"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-flaming-slow.json": {
+    "bytes": 5152918,
+    "sha256": "96bdc6b083ae0d8d6f112b7c55336fd48900f12b412bf3e7a7d58730ec7ea487"
+  },
+  "fit1/demo/cases/iss-laboratory-vent-03-flaming-still.json": {
+    "bytes": 3493944,
+    "sha256": "c27801a93dab6f6d497757d4bda6cc4eea8380c4a0a61a9446cddecceedd7db2"
+  },
+  "fit1/demo/cases/iss-node-vent-00-control.json": {
+    "bytes": 4656217,
+    "sha256": "20e8ac2365ecc4d9a8a4822ab651ae48d38b610f657f1f9c98dbadcb4d777d0c"
+  },
+  "fit1/demo/cases/iss-node-vent-00-flaming-fast.json": {
+    "bytes": 5329520,
+    "sha256": "ff2e7c56997cf384dd688e2c3f67cbbe32bb9106442d25e8e5d477ba44513280"
+  },
+  "fit1/demo/cases/iss-node-vent-00-flaming-reverse.json": {
+    "bytes": 5255231,
+    "sha256": "4c77da427fca84c5c65c74235be2e56ca752614ce0ea4f76687bfa531b7cb3a9"
+  },
+  "fit1/demo/cases/iss-node-vent-00-flaming-slow.json": {
+    "bytes": 5186473,
+    "sha256": "dc48563975242681cd0e23b133decb006e3a89bda2f49433ad45bf9a904bbd8f"
+  },
+  "fit1/demo/cases/iss-node-vent-00-flaming-still.json": {
+    "bytes": 3144906,
+    "sha256": "ad0cafee28365f9a704c6359ba393363e2743f6db7c3aa416fbfa5c779fa93ab"
+  },
+  "fit1/demo/cases/iss-node-vent-00-smoldering-fast.json": {
+    "bytes": 5314289,
+    "sha256": "fd06ae9a6140db52c1304b3aefce3850c303b436523a0a3ad8a6d3ad9063a395"
+  },
+  "fit1/demo/cases/iss-node-vent-00-smoldering-reverse.json": {
+    "bytes": 5343389,
+    "sha256": "e9562679646410b1a3b6aca397356c009b87cd50cc5898924cb42a772ac656ce"
+  },
+  "fit1/demo/cases/iss-node-vent-00-smoldering-slow.json": {
+    "bytes": 5143134,
+    "sha256": "1339eed2b07513211ff2e6853b854ec47df55e5d40cb49db509f683c83615b38"
+  },
+  "fit1/demo/cases/iss-node-vent-00-smoldering-still.json": {
+    "bytes": 3201290,
+    "sha256": "764cd59ac968ef4e79ffad1eb77571b6033734667c9cc0f788cf543feeccdce2"
+  },
+  "fit1/demo/cases/iss-node-vent-01-control.json": {
+    "bytes": 4737113,
+    "sha256": "69e3acf3c901271b55e5f9dc9cbe6b1532c12de7192f0fdcf8e20c16eb91b54a"
+  },
+  "fit1/demo/cases/iss-node-vent-01-flaming-fast.json": {
+    "bytes": 5394334,
+    "sha256": "d988bf86fc9d6dc6935aedf65ba055486d5e715b1737f14e26e2d108d424b6ba"
+  },
+  "fit1/demo/cases/iss-node-vent-01-flaming-reverse.json": {
+    "bytes": 5365707,
+    "sha256": "75ede1bee22dfdf9cdea194c61373ea1f22e6c35a76807a5ff13d7dec19099cd"
+  },
+  "fit1/demo/cases/iss-node-vent-01-flaming-slow.json": {
+    "bytes": 5280298,
+    "sha256": "3d6b5883b823cbe246ef2319af89b8c9033194e86b1aed1ca6593ad330a5c2f9"
+  },
+  "fit1/demo/cases/iss-node-vent-01-flaming-still.json": {
+    "bytes": 3212927,
+    "sha256": "5c6f771ff4b2dd4c741449b9e4af4920f242483ae769ab4e4eb4747b6fe69775"
+  },
+  "fit1/demo/cases/iss-node-vent-01-overheating-fast.json": {
+    "bytes": 5334874,
+    "sha256": "e07688fc92c41ebd8b0e740a9bf44271bd58a763d81d3e8e8e45442fbbd21e57"
+  },
+  "fit1/demo/cases/iss-node-vent-01-overheating-reverse.json": {
+    "bytes": 5346058,
+    "sha256": "f47d37da9901ffd39fd99bf54260782501692433b91fe801702666d1c72e5370"
+  },
+  "fit1/demo/cases/iss-node-vent-01-overheating-slow.json": {
+    "bytes": 5092562,
+    "sha256": "1aa743a86699d5ca9c1f87e270a6eac1548b6aad7438dee70bddd677927c348b"
+  },
+  "fit1/demo/cases/iss-node-vent-01-overheating-still.json": {
+    "bytes": 4177860,
+    "sha256": "b007a755a5db3628f50dc72eb976cf9592172e77711d4f5ad94101fb6c0babfd"
+  },
+  "fit1/demo/cases/iss-node-vent-02-arc-fast.json": {
+    "bytes": 5311579,
+    "sha256": "df0d273857a6d5a2f3f7b188e6dcb9027bf80539900681d4132eee230e1df601"
+  },
+  "fit1/demo/cases/iss-node-vent-02-arc-reverse.json": {
+    "bytes": 5312484,
+    "sha256": "f19738735edcd83f9826caae5723386bdc2da33928ef3a85022914b4e8bae7e7"
+  },
+  "fit1/demo/cases/iss-node-vent-02-arc-slow.json": {
+    "bytes": 5192148,
+    "sha256": "252474c27af37783ff9ca4bcff74156feebd9fa04e71859cd33d978482341623"
+  },
+  "fit1/demo/cases/iss-node-vent-02-arc-still.json": {
+    "bytes": 4535023,
+    "sha256": "8e95209f4cf61fdfe2a9ff91b5e95fff16d8ee6023d6c8a6e6e875c174c55beb"
+  },
+  "fit1/demo/cases/iss-node-vent-02-control.json": {
+    "bytes": 4668728,
+    "sha256": "e1e4c821fb582d82d013fb4daa47de008779bd2fd497b5c2d79ea2475a3758f5"
+  },
+  "fit1/demo/cases/iss-node-vent-02-flaming-fast.json": {
+    "bytes": 5382246,
+    "sha256": "7b6aab98f6d1cfb9d03d00bd359fd9f40b8e1c5f5e09c6338e90f85282776ca2"
+  },
+  "fit1/demo/cases/iss-node-vent-02-flaming-reverse.json": {
+    "bytes": 5369784,
+    "sha256": "d0a019555777b91c091c6f16a90cd124ad3ed7f940e1a07f56cafdba88ae081a"
+  },
+  "fit1/demo/cases/iss-node-vent-02-flaming-slow.json": {
+    "bytes": 5261751,
+    "sha256": "c86fd6cc83327d4ef005e70b961742f8e0ddb7a479b23a85d6c08f56a15d2945"
+  },
+  "fit1/demo/cases/iss-node-vent-02-flaming-still.json": {
+    "bytes": 3730677,
+    "sha256": "b635a5c5bc578d16e912da0c26bdcca6eb2f011c230d81c8a0fdafbdd72cc76c"
+  },
+  "fit1/demo/cases/iss-node-vent-03-battery-fast.json": {
+    "bytes": 5407775,
+    "sha256": "e52f8ce766b14caad67bddc9c7e3736f332a2081bfde00b03628e9e622621644"
+  },
+  "fit1/demo/cases/iss-node-vent-03-battery-reverse.json": {
+    "bytes": 5451971,
+    "sha256": "e5767ceb250ca75a3188756ca61c565a61eab1dbee541f8f1b7d929cae720cdb"
+  },
+  "fit1/demo/cases/iss-node-vent-03-battery-slow.json": {
+    "bytes": 5219487,
+    "sha256": "51fd5ad8e2f9fb77db5c84104c47168e5b4f90d318137f87e375f859667920be"
+  },
+  "fit1/demo/cases/iss-node-vent-03-battery-still.json": {
+    "bytes": 3255634,
+    "sha256": "0a9b98e64c4355426186ff8e7785f4658c883c2c9343f616719fc3785f1669cf"
+  },
+  "fit1/demo/cases/iss-node-vent-03-control.json": {
+    "bytes": 4744005,
+    "sha256": "f1c1d98a9f2579ea49a383f2d5a640934e360c9ddc472c25a46819b6ade05c1c"
+  },
+  "fit1/demo/cases/iss-node-vent-03-flaming-fast.json": {
+    "bytes": 5438371,
+    "sha256": "1ec0239c61cdf41ccb0dbbf13dd255673bcd70df90a718f190d617b4ba55637b"
+  },
+  "fit1/demo/cases/iss-node-vent-03-flaming-reverse.json": {
+    "bytes": 5361920,
+    "sha256": "06b3a94a007f5953ba9cfe5c4c107ab2fec21513a47f08e97e619da05244d421"
+  },
+  "fit1/demo/cases/iss-node-vent-03-flaming-slow.json": {
+    "bytes": 5239382,
+    "sha256": "f01379b37c29118557f2fe10ff8573824b4a31afb5c700124a695c2725f194d2"
+  },
+  "fit1/demo/cases/iss-node-vent-03-flaming-still.json": {
+    "bytes": 4605959,
+    "sha256": "1991099a47da538e15c68391d88b4d7610a88036b0880208aa8ac4927b47809a"
+  },
+  "fit1/demo/cases/iss-service-vent-00-control.json": {
+    "bytes": 4772360,
+    "sha256": "9bd5039c89114c0f70d9e33828ab6df7df7eedd9bb11b606bc277b0b91673e12"
+  },
+  "fit1/demo/cases/iss-service-vent-00-flaming-fast.json": {
+    "bytes": 5419319,
+    "sha256": "cdea8a1d2b8324e5cce22423f70e2cc25091d95edb2563f53eec1750a5b24fa4"
+  },
+  "fit1/demo/cases/iss-service-vent-00-flaming-reverse.json": {
+    "bytes": 5376250,
+    "sha256": "7fbdd072ccc65d9a7867f7a0731e0a78d8909e3c3daadf9d66b5812915572b15"
+  },
+  "fit1/demo/cases/iss-service-vent-00-flaming-slow.json": {
+    "bytes": 5247773,
+    "sha256": "7ce7972f67f874d445a49942d00b5b7cb3c832a894860536e18508282e5c1088"
+  },
+  "fit1/demo/cases/iss-service-vent-00-flaming-still.json": {
+    "bytes": 3208511,
+    "sha256": "396f325e56633bb1844d145fe5bcb0a3c8496eb3250d70c70f6b5dc1822793ab"
+  },
+  "fit1/demo/cases/iss-service-vent-00-overheating-fast.json": {
+    "bytes": 5487507,
+    "sha256": "7ee0f1c392541219f34cb7a0440b76ec1f21174f64b490c390c5831e94eb7508"
+  },
+  "fit1/demo/cases/iss-service-vent-00-overheating-reverse.json": {
+    "bytes": 5459356,
+    "sha256": "b21b68afa0799b3c520f864ff42c618fbc5db20fa4b6c7d1a36476e887124c99"
+  },
+  "fit1/demo/cases/iss-service-vent-00-overheating-slow.json": {
+    "bytes": 5336909,
+    "sha256": "f05e6bf067551b90eeb0c4070c4a008c1385ebeadd3c7b90ca1196f3d7a43d3f"
+  },
+  "fit1/demo/cases/iss-service-vent-00-overheating-still.json": {
+    "bytes": 4503833,
+    "sha256": "aaece27f9d03c11be5cf70a3b6588755d491465e0de35c0d2f1d518b0b7930a1"
+  },
+  "fit1/demo/cases/iss-service-vent-01-arc-fast.json": {
+    "bytes": 5396174,
+    "sha256": "0f81ad03631d68bc4e5bf79b14b3ae1b4b84e438069712e0badc43dd4c600c10"
+  },
+  "fit1/demo/cases/iss-service-vent-01-arc-reverse.json": {
+    "bytes": 5361645,
+    "sha256": "b8f8a3a41e32e85b163fb7354a03f5dd53c5f35e3eaa51eac8c9eadc2e48ceed"
+  },
+  "fit1/demo/cases/iss-service-vent-01-arc-slow.json": {
+    "bytes": 5200045,
+    "sha256": "d3f73e9eab333a75fed68be00d947bf4a7ebe166e309c6bc605e4e750512caaf"
+  },
+  "fit1/demo/cases/iss-service-vent-01-arc-still.json": {
+    "bytes": 4865409,
+    "sha256": "eb5fbb013aeb150973799a8656de52075100046bb1141f76c19854bded4a583e"
+  },
+  "fit1/demo/cases/iss-service-vent-01-control.json": {
+    "bytes": 4753593,
+    "sha256": "59555ffe1c92227d90a863571be6d6d241d7d9bdc12c9a6a6971c3485d90e9c3"
+  },
+  "fit1/demo/cases/iss-service-vent-01-flaming-fast.json": {
+    "bytes": 5460511,
+    "sha256": "24be63e0763330f12e587ff3fcbed6192e29eb95ce97a1cb3cde792d070ce0f3"
+  },
+  "fit1/demo/cases/iss-service-vent-01-flaming-reverse.json": {
+    "bytes": 5330660,
+    "sha256": "d772558188c54de7338cd63b751ff2beed7d3eb9296a2ec05c90e77a1d832e02"
+  },
+  "fit1/demo/cases/iss-service-vent-01-flaming-slow.json": {
+    "bytes": 5285674,
+    "sha256": "98d7dd7988e3f8d6b89238b13eb556b29f045da935ca95dcf0623aec5c944d9f"
+  },
+  "fit1/demo/cases/iss-service-vent-01-flaming-still.json": {
+    "bytes": 3564682,
+    "sha256": "d9b22ba740835fab94a9429bdcef471536bde5999c23a5928ff10894e624f4b7"
+  },
+  "fit1/demo/cases/iss-service-vent-02-battery-fast.json": {
+    "bytes": 5482269,
+    "sha256": "ad719392c9cba8a7900db8d9eeb80254558f17767904fc98ef9eabac9430050b"
+  },
+  "fit1/demo/cases/iss-service-vent-02-battery-reverse.json": {
+    "bytes": 5515451,
+    "sha256": "90f5242f81914d27ce94c6c82fe99294c4c7b47b4dbe3ccf884c389b41b9215a"
+  },
+  "fit1/demo/cases/iss-service-vent-02-battery-slow.json": {
+    "bytes": 5370079,
+    "sha256": "4b3f727cb7145592b9b8ebbc07c69cb8f865937a7b39253dfb5998419642dce3"
+  },
+  "fit1/demo/cases/iss-service-vent-02-battery-still.json": {
+    "bytes": 3259040,
+    "sha256": "60fe41df8b2e792f7c4789f33b174cd74af505ce757f4a7d994f3a9cacb9a400"
+  },
+  "fit1/demo/cases/iss-service-vent-02-control.json": {
+    "bytes": 4742625,
+    "sha256": "3e1dfbe8071f9c9de232b031b685ffcdef44937681072e3d4b42f4123919a36b"
+  },
+  "fit1/demo/cases/iss-service-vent-02-flaming-fast.json": {
+    "bytes": 5404814,
+    "sha256": "e53b59fa77739afb4c0437a2285aea609874ac9670492e3153be59e751739a41"
+  },
+  "fit1/demo/cases/iss-service-vent-02-flaming-reverse.json": {
+    "bytes": 5400883,
+    "sha256": "55d2ff66a8c39a40f411ffd79ae6a7eee943375364eb0546cb2c99844e18e11c"
+  },
+  "fit1/demo/cases/iss-service-vent-02-flaming-slow.json": {
+    "bytes": 5266567,
+    "sha256": "4677556b7b43e3d1156573fb55578d191eff1e3bc7390237237ae1e913e4cf9f"
+  },
+  "fit1/demo/cases/iss-service-vent-02-flaming-still.json": {
+    "bytes": 3210856,
+    "sha256": "ece5b74d24d11c085f197401ce3c858b4b44eb0ccb78e65204e069c33d124098"
+  },
+  "fit1/demo/cases/iss-service-vent-03-control.json": {
+    "bytes": 4751784,
+    "sha256": "a30d8c40546804dd801cc62657ed27e66c39f7bb65205f774c0925ca8786429b"
+  },
+  "fit1/demo/cases/iss-service-vent-03-flaming-fast.json": {
+    "bytes": 5434894,
+    "sha256": "4e95cf97c2eb35ef15f6dad4d74ca6ae293982d2b513afd3d1247ef5005878cc"
+  },
+  "fit1/demo/cases/iss-service-vent-03-flaming-reverse.json": {
+    "bytes": 5177617,
+    "sha256": "8a97c62664f052e9f0010c17d89894ddfb747eab632956dd9f05505b75f61991"
+  },
+  "fit1/demo/cases/iss-service-vent-03-flaming-slow.json": {
+    "bytes": 5285796,
+    "sha256": "a9270b4e399eae9a5653830c2020591a82152f631a8e52d6780e79f4fc73682d"
+  },
+  "fit1/demo/cases/iss-service-vent-03-flaming-still.json": {
+    "bytes": 3500308,
+    "sha256": "c94a1fecc6348bfd08798d0f33249b962c320d0258f0d9eab15f571e62f8c964"
+  },
+  "fit1/demo/cases/iss-service-vent-03-smoldering-fast.json": {
+    "bytes": 5473865,
+    "sha256": "33b3d9b93ca2f873ecb5e68275f5a4354f3ee1b55e7018374b9d2bf7592e4c8e"
+  },
+  "fit1/demo/cases/iss-service-vent-03-smoldering-reverse.json": {
+    "bytes": 5462496,
+    "sha256": "095d77ca5228212abc4a807e3bdf346d8a93215c878898e6718bfa5d83a271fe"
+  },
+  "fit1/demo/cases/iss-service-vent-03-smoldering-slow.json": {
+    "bytes": 5319295,
+    "sha256": "f154e267e5e6cbc718b0cd3e3fcd27c40a072b524b6f763df106013ddf0706b4"
+  },
+  "fit1/demo/cases/iss-service-vent-03-smoldering-still.json": {
+    "bytes": 3609774,
+    "sha256": "c2005b0145c7ecccc1d2f27903b65c54e08aa017e1013a276e31733a0b4227e1"
+  },
+  "fit1/demo/index.json": {
+    "bytes": 868891,
+    "sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e"
+  },
+  "fit1/frozen-selection.json": {
+    "bytes": 1397,
+    "sha256": "c922aae07c2b0580ec3465619785305247007ab29b239f183c0a62f4bbd4d7c6"
+  },
+  "fit1/geometry-disjointness.json": {
+    "bytes": 134,
+    "sha256": "e21b97f7d80caca11a01c19d4b481440d2805699f7026f8a053962cce391850c"
+  },
+  "fit1/gpu-telemetry-summary.json": {
+    "bytes": 320,
+    "sha256": "d9912121ce7f83dbfcdf5e5f33803ea19b61d3229b46930c378ecb8c5e462da5"
+  },
+  "fit1/gpu-telemetry.csv": {
+    "bytes": 17785,
+    "sha256": "19d7f9d12bbd079b08ceb2398721641019ed3f69c210b7d563e8b2ff4bc2c547"
+  },
+  "fit1/inference-benchmark.json": {
+    "bytes": 982,
+    "sha256": "1b04a64ff72f0e46b621a34cc69c40015e85f1dfd42ed2f870611e75ced2dfb7"
+  },
+  "fit1/postfreeze-verified-dataset-snapshot.json": {
+    "bytes": 886519,
+    "sha256": "6ff1d99aa31b532fea6edab0e8e0671e6c6979c65accfa585254bcd7f7ae4c64"
+  },
+  "fit1/previous-dataset-snapshot.json": {
+    "bytes": 1494215,
+    "sha256": "32ce68afecd55c2de532dcaa124e09b950efb1c8467fb6c50015b19bcb15e237"
+  },
+  "fit1/progress.jsonl": {
+    "bytes": 14872,
+    "sha256": "7ae9c32d56fd21081217fec8a20b8d23d8e242cee603d35b199263b60578d8db"
+  },
+  "fit1/report.json": {
+    "bytes": 2101862,
+    "sha256": "0450adc40bfa50a9c46fdf5e8449bbcda0ce6f13e53fa6793826e0ff4c2607d9"
+  },
+  "fit1/selection-policy.json": {
+    "bytes": 574,
+    "sha256": "79b1dbf2d81f2b919f43afc660ff234e77b1c988537bc4786ee86479b0520051"
+  },
+  "fit1/sources.json": {
+    "bytes": 1407,
+    "sha256": "4358c7be34b8436cfeff477363143e420f1072e53dc7fdb3bb8bc3957fc989c1"
+  },
+  "fit1/v2-frozen-validation.json": {
+    "bytes": 120513,
+    "sha256": "3473f4c1cd4dbd69fff0e5a2f586597e5132a2a209267d5550bc72733c915693"
+  },
+  "fit1/v2-recalibrated-validation-selection.json": {
+    "bytes": 288230,
+    "sha256": "3b550981cc82c7ca0559301a7d62a4b8242deb8bfe9c07aa541b6ee761bd9c25"
+  },
+  "fit1/validation-step-001000.json": {
+    "bytes": 288071,
+    "sha256": "dd56bbd967d910ddbf758e63f6bdfcb4dd60a6698ea174f40458351f5908f00d"
+  },
+  "fit1/validation-step-002000.json": {
+    "bytes": 288009,
+    "sha256": "257d205bba6b843f1ace977d7c9d16dc66827e9a8ed8a108433c7616b7ef7c36"
+  },
+  "fit1/validation-step-003000.json": {
+    "bytes": 288296,
+    "sha256": "8584b9c2070e55273ec0793fe0d85a32917fe6d919349065730eecd20680d224"
+  },
+  "fit1/validation-step-004000.json": {
+    "bytes": 287976,
+    "sha256": "1dc42d83547772725b9793d1b7f2284657a555506f9a4fe705ee7a493286d6b4"
+  },
+  "fit1/validation-step-005000.json": {
+    "bytes": 288196,
+    "sha256": "b516eb23a3805e23fd243f34c28253dac710c2ef0c5b01d9f4f8116aadc479ab"
+  },
+  "fit1/validation-step-006000.json": {
+    "bytes": 288038,
+    "sha256": "8f3a7bc5cef61682fd8bf5553345c74fa5ab8dd06a4b4c5ec6921ff86783729c"
+  },
+  "fit1/validation-step-007000.json": {
+    "bytes": 288395,
+    "sha256": "b51f9507a8c224e7ac901ccbbdb867dea0c92808aed96b639bc5e6d8b52d7d18"
+  },
+  "fit1/validation-step-008000.json": {
+    "bytes": 288566,
+    "sha256": "1819f76d532ddbd9df089819c4ffcc75a1f6b1a22dd24fae7e1da660dfd18a35"
+  },
+  "fit1/validation-step-009000.json": {
+    "bytes": 288062,
+    "sha256": "a1e9a8df4e3638a160598c0635becdc3db08b51caa196fa10b574e6de6a3ee8c"
+  },
+  "fit1/validation-step-010000.json": {
+    "bytes": 288095,
+    "sha256": "2db48043b1bf7fd39b33912b1998aa5b20e701ab8a01d303adae0ae62e37c0af"
+  },
+  "fit1/validation-step-011000.json": {
+    "bytes": 288177,
+    "sha256": "a24120251958ebaee5af043ada173c811e87ac13bc90dc464a7281eb66779fa0"
+  },
+  "fit1/validation-step-012000.json": {
+    "bytes": 288375,
+    "sha256": "d5fc023c0360bd4b340d561384d71858a399688abac6f91b0b6f5ca474d2e0f2"
+  },
+  "fit1/validation-step-013000.json": {
+    "bytes": 288135,
+    "sha256": "d874b0ff839ffacfb7d6ccfea2862370676c5c13c8495cdff91956fd8d636936"
+  },
+  "fit1/weights.pt": {
+    "bytes": 1532441,
+    "sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292"
+  },
+  "source/backend/ignis/ml/spatial_dataset.py": {
+    "bytes": 21506,
+    "sha256": "882c00bada16e86ba6ddba69c22239f06bc199ac66151f7ed9dad8fe9c6629f6"
+  },
+  "source/backend/ignis/ml/spatial_network.py": {
+    "bytes": 19477,
+    "sha256": "d03c25cc2aafd90c437222c83bd432bb227fb2fd53bd4100ceee8137b166f1b7"
+  },
+  "source/backend/ignis/physics/compiler.py": {
+    "bytes": 32297,
+    "sha256": "ea452085ae97276135c71c63171879695e635fbdc83836ccf44d8b8c2fb54a16"
+  },
+  "source/backend/ignis/physics/incidents.py": {
+    "bytes": 13903,
+    "sha256": "5246f76018711f50d353abf317d5fd36a48632d7f8af6134d452ec0b6a9a05d4"
+  },
+  "source/backend/ignis/physics/materials.py": {
+    "bytes": 6656,
+    "sha256": "13b2eaa4eca452bb296f6006f24251670dcce05f9cc53efd2b5bc7e46998ee48"
+  },
+  "source/docs/ISS_POC_VENT_EVALUATION.md": {
+    "bytes": 4471,
+    "sha256": "92ca5a0bf6529bfc2900a6231284e21e3b6f3af4fe14b8bb31b7b3d7f57d3df6"
+  },
+  "source/docs/ISS_POC_VENT_LIMITS.md": {
+    "bytes": 1466,
+    "sha256": "501dbd908c1cc108eb491474b5eb3ddc0c4684d24dabe1b5c7d0b5993d9296fd"
+  },
+  "source/docs/ISS_POC_VENT_MODEL.md": {
+    "bytes": 15764,
+    "sha256": "66a55c4cb63bf341021403b7f7e724b40f5b242570ca75ea7c75b8f7cb5e1382"
+  },
+  "source/tests/test_iss_poc_vent.py": {
+    "bytes": 13384,
+    "sha256": "03a70e3d9913dc0b2e157629adaecaa039fd400d15569f88bdc22d68136aa55b"
+  },
+  "source/tests/test_iss_ventilation_evaluation.py": {
+    "bytes": 7844,
+    "sha256": "cce75822285a0abd338498f6b8b637174d27f8780cbf24d549619d12afcc3aed"
+  },
+  "source/tools/remote/evaluate_iss_ventilation.py": {
+    "bytes": 15606,
+    "sha256": "a8b55f57e1b76c3c27285b8d149410ab9cd0c9fda2eac1e0fe00e41b89890b10"
+  },
+  "source/tools/remote/iss_poc_model.py": {
+    "bytes": 7100,
+    "sha256": "b05cae8191864401ec22d4293e2aeabbab157f1a06030386918f7d1fb49729c2"
+  },
+  "source/tools/remote/train_hotspot_poc.py": {
+    "bytes": 37193,
+    "sha256": "94e480c0f67f766695c8ecd5e55528851b3f44e5d9998869e5dfe842a51204d0"
+  },
+  "source/tools/remote/train_iss_poc.py": {
+    "bytes": 41000,
+    "sha256": "3aa6e48f8139982e8dfaa2dba4cfcea6126501a75945ca92e901903ef0cdf80d"
+  },
+  "source/tools/remote/train_iss_poc_v2.py": {
+    "bytes": 32143,
+    "sha256": "0fbb4383079a35805f8f8d46b4d5bdf92fdd570fbf69ccefd1e470d48d081fd7"
+  },
+  "source/tools/remote/train_iss_poc_vent.py": {
+    "bytes": 33178,
+    "sha256": "ebdcf76451b9a0371dc92a9bef9beca57afe38e251a311a7dbf9f7cec38b6731"
+  },
+  "source/tools/remote/train_spatial.py": {
+    "bytes": 33469,
+    "sha256": "78c51544cec48e41124a2ae2d2a2a14ca35d8c116486875b46b2c3b5408aa32f"
+  },
+  "source/tools/remote/verify_iss_ventilation_export.py": {
+    "bytes": 7967,
+    "sha256": "451f285a106ebdc0dcb65e0556201419cee6543dc9061fa45a8e84aa2f9c7334"
+  },
+  "source/tools/remote/verify_spatial.py": {
+    "bytes": 13169,
+    "sha256": "9f10c4d14927efc2c85cab13c83f3fc38fd6cca0d9013cfe798dd5c260ed0198"
+  }
+}

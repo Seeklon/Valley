@@ -1,0 +1,177 @@
+{
+  "id": "iss-node-v05",
+  "name": "Node · disposition 6",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.744,
+    3.744,
+    3.744
+  ],
+  "geometry_family": "iss-node",
+  "objects": [
+    {
+      "id": "avionics-port",
+      "name": "Avionics Port",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.546,
+        1.092,
+        0.858
+      ],
+      "size_m": [
+        0.78,
+        0.936,
+        1.716
+      ],
+      "thermal_thickness_m": 0.002,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "avionics-starboard",
+      "name": "Avionics Starboard",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        3.198,
+        2.652,
+        0.858
+      ],
+      "size_m": [
+        0.7800000000000002,
+        0.9359999999999999,
+        1.716
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "utility-bay",
+      "name": "Utility Bay",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        0.546,
+        2.964,
+        0.858
+      ],
+      "size_m": [
+        0.78,
+        0.9359999999999999,
+        1.716
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "hatch-baffle",
+      "name": "Hatch Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        1.7160000000000002,
+        3.12,
+        0.546
+      ],
+      "size_m": [
+        0.31200000000000006,
+        0.6240000000000001,
+        1.092
+      ],
+      "thermal_thickness_m": 0.001
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "avionics-port",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.546,
+        1.014,
+        1.716
+      ],
+      "provenance": "synthetic annotated electrical site; no actual ISS equipment specification"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        3.042,
+        2.73,
+        1.716
+      ],
+      "provenance": "synthetic annotated electrical site; no actual ISS equipment specification"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "utility-bay",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        0.546,
+        2.886,
+        1.716
+      ],
+      "provenance": "synthetic annotated electrical site; no actual ISS equipment specification"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        1.872,
+        0.0,
+        2.028
+      ],
+      "size_m": [
+        1.248,
+        0,
+        0.9359999999999999
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        1.872,
+        3.744,
+        2.028
+      ],
+      "size_m": [
+        1.248,
+        0,
+        0.9359999999999999
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.546,
+    1.014,
+    1.716
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not an ISS digital twin or NASA dataset"
+}

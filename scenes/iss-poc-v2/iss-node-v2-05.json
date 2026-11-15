@@ -1,0 +1,195 @@
+{
+  "id": "iss-node-v2-05",
+  "name": "Node · v2 6",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.487584,
+    3.487584,
+    3.487584
+  ],
+  "geometry_family": "iss-node",
+  "objects": [
+    {
+      "id": "avionics-port",
+      "name": "Avionics Port",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        0.435948,
+        1.08987,
+        0.944554
+      ],
+      "size_m": [
+        0.581264,
+        0.72658,
+        1.889108
+      ],
+      "thermal_thickness_m": 0.0018,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "avionics-starboard",
+      "name": "Avionics Starboard",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "glass",
+      "center_m": [
+        2.833662,
+        2.6156879999999996,
+        0.508606
+      ],
+      "size_m": [
+        1.0172119999999998,
+        0.871896,
+        1.017212
+      ],
+      "thermal_thickness_m": 0.003,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "utility-bay",
+      "name": "Utility Bay",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.653922,
+        2.252398,
+        0.72658
+      ],
+      "size_m": [
+        1.017212,
+        0.72658,
+        1.45316
+      ],
+      "thermal_thickness_m": 0.005,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "hatch-baffle",
+      "name": "Hatch Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "aluminium",
+      "center_m": [
+        1.5258180000000001,
+        2.761004,
+        0.653922
+      ],
+      "size_m": [
+        0.145316,
+        0.581264,
+        1.307844
+      ],
+      "thermal_thickness_m": 0.002
+    },
+    {
+      "id": "passage-baffle",
+      "name": "Passage Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        1.8164500000000001,
+        0.653922,
+        0.653922
+      ],
+      "size_m": [
+        0.145316,
+        0.435948,
+        1.307844
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "avionics-port",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.508606,
+        1.235186,
+        1.889108
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        2.833662,
+        2.54303,
+        1.017212
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "utility-bay",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        0.217974,
+        2.54303,
+        1.45316
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        3.487584,
+        1.45316,
+        2.17974
+      ],
+      "size_m": [
+        0.0,
+        1.45316,
+        1.162528
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        0.0,
+        1.743792,
+        2.17974
+      ],
+      "size_m": [
+        0.0,
+        0.871896,
+        1.162528
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.508606,
+    1.235186,
+    1.889108
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

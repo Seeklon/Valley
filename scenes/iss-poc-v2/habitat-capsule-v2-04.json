@@ -1,0 +1,177 @@
+{
+  "id": "habitat-capsule-v2-04",
+  "name": "Habitat-Capsule · v2 5",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.835464,
+    3.835464,
+    3.835464
+  ],
+  "geometry_family": "habitat-capsule",
+  "objects": [
+    {
+      "id": "seat-console-port",
+      "name": "Seat Console Port",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.7990550000000001,
+        0.8789605,
+        0.799055
+      ],
+      "size_m": [
+        0.958866,
+        0.7990550000000001,
+        1.59811
+      ],
+      "thermal_thickness_m": 0.0018,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "seat-console-starboard",
+      "name": "Seat Console Starboard",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        2.9565035,
+        0.7990550000000001,
+        0.799055
+      ],
+      "size_m": [
+        1.118677,
+        0.958866,
+        1.59811
+      ],
+      "thermal_thickness_m": 0.003,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "rear-avionics",
+      "name": "Rear Avionics",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        1.8378264999999998,
+        2.716787,
+        1.0387715
+      ],
+      "size_m": [
+        0.7990549999999998,
+        0.958866,
+        2.077543
+      ],
+      "thermal_thickness_m": 0.005,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "pod-side-panel",
+      "name": "Pod Side Panel",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        0.39952750000000004,
+        2.5569759999999997,
+        0.319622
+      ],
+      "size_m": [
+        0.15981099999999998,
+        0.6392440000000001,
+        0.639244
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "seat-console-port",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.878961,
+        1.038771,
+        1.59811
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "seat-console-starboard",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        3.116315,
+        0.399528,
+        1.59811
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "rear-avionics",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        2.157449,
+        2.47707,
+        2.077543
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        0.0,
+        2.2373540000000003,
+        2.2373540000000003
+      ],
+      "size_m": [
+        0.0,
+        1.278488,
+        0.958866
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        3.835464,
+        1.5981100000000001,
+        2.2373540000000003
+      ],
+      "size_m": [
+        0.0,
+        1.5981100000000001,
+        0.958866
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.878961,
+    1.038771,
+    1.59811
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

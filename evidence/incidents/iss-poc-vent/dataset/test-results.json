@@ -1,0 +1,7 @@
+{
+  "local_pytest": "4 passed, 1 skipped in 7.60s",
+  "skipped_reason": "torch unavailable in local venv; actual encoder separately audited on Windows CPU",
+  "remote_encoder_evidence": "prelaunch-encoder.json",
+  "ruff": "passed",
+  "test_file_sha256": "8d1a326e42f61db1a4d6572a9f03216375b5b9c89a958f60805b08395c62385d"
+}

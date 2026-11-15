@@ -1,0 +1,10 @@
+{
+  "launch_response": {
+    "ProcessId": 20180,
+    "ReturnValue": 0
+  },
+  "wrapper_sha256": "a369caa1fe4d9ab1f684cf1b7fe782690a93c46afce4047f49c290af2c7b9cda",
+  "runtime": "E:/IGNIS-Valley-dev/runtime/iss-poc-v2/20261115",
+  "seconds": 600,
+  "compute_lock": "E:/IGNIS-Valley-dev/runtime/compute.lock"
+}

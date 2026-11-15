@@ -1,0 +1,178 @@
+{
+  "id": "iss-laboratory-v00",
+  "name": "Laboratory · disposition 1",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.384,
+    4.512,
+    2.82
+  ],
+  "geometry_family": "iss-laboratory",
+  "objects": [
+    {
+      "id": "rack-port-front",
+      "name": "Rack Port Front",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.423,
+        0.987,
+        0.7755
+      ],
+      "size_m": [
+        0.564,
+        1.128,
+        1.551
+      ],
+      "thermal_thickness_m": 0.002,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "rack-starboard-front",
+      "name": "Rack Starboard Front",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        2.961,
+        0.987,
+        0.7755
+      ],
+      "size_m": [
+        0.5640000000000001,
+        1.128,
+        1.551
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "rack-port-aft",
+      "name": "Rack Port Aft",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        0.423,
+        3.243,
+        0.7755
+      ],
+      "size_m": [
+        0.564,
+        1.1280000000000001,
+        1.551
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "rack-starboard-aft",
+      "name": "Rack Starboard Aft",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        2.961,
+        3.243,
+        0.7755
+      ],
+      "size_m": [
+        0.5640000000000001,
+        1.1280000000000001,
+        1.551
+      ],
+      "thermal_thickness_m": 0.002,
+      "combustible_material_id": "pmma"
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "rack-port-front",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.4935,
+        1.0575,
+        1.551
+      ],
+      "provenance": "synthetic annotated electrical site; no actual ISS equipment specification"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "rack-starboard-front",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        3.0315,
+        1.0575,
+        1.551
+      ],
+      "provenance": "synthetic annotated electrical site; no actual ISS equipment specification"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "rack-port-aft",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        0.4935,
+        3.3135,
+        1.551
+      ],
+      "provenance": "synthetic annotated electrical site; no actual ISS equipment specification"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        1.692,
+        0.0,
+        1.8329999999999997
+      ],
+      "size_m": [
+        1.128,
+        0,
+        0.8459999999999999
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        1.692,
+        4.512,
+        1.8329999999999997
+      ],
+      "size_m": [
+        1.128,
+        0,
+        0.8459999999999999
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.4935,
+    1.0575,
+    1.551
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not an ISS digital twin or NASA dataset"
+}

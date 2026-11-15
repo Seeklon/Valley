@@ -1,0 +1,2 @@
+{"pid":26916,"launched_utc":"2026-11-15T14:44:56.0988567Z"}
+{"pid": 9012, "started_utc": "2026-11-15T14:44:56.174772+00:00", "generation_budget_s": 1140, "generation_and_audit_budget_s": 1200, "workers": 4, "threads_per_solver": 1, "gpu_training": false}

@@ -1,0 +1,11 @@
+{
+  "total": 379046,
+  "trainable": 376834,
+  "frozen": 2212,
+  "frozen_names": [
+    "global_head.0.weight",
+    "global_head.0.bias",
+    "global_head.2.weight",
+    "global_head.2.bias"
+  ]
+}

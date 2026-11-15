@@ -1,0 +1,1 @@
+{"launched_utc": "2026-11-15T14:46:20.416830+00:00", "result": {"ProcessId": 30404, "ReturnValue": 0}, "reason": "SSH closed Start-Process child; no FDS had begun; use detached WMI process"}

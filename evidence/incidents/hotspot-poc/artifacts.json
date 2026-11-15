@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-11-14T21:39:31.126298+00:00",
+  "selected_run": "fit1",
+  "gpu_compute_seconds_total": 561.625,
+  "gpu_budget_seconds": 1200,
+  "unique_existing_scenarios": 200,
+  "new_fds_scenarios_generated": 0,
+  "training_scenarios": 120,
+  "validation_scenarios": 40,
+  "historical_cases_excluded_from_fitting": 40,
+  "runs": {
+    "fit1": {
+      "archive": "evidence/incidents/hotspot-poc/fit1-complete.zip",
+      "bytes": 140523210,
+      "sha256": "481ab3d248ddbf7374c0052228e2b8c0f9c461ab457c2825b4320429807e0c8a",
+      "total_compute_seconds": 266.70300000000134,
+      "training_seconds": 191.76600000000326,
+      "weights_sha256": "fe4f781dd50f66d27400f87beef91a2ce7c666c3319b143d5cb42c5f577ead60",
+      "validation_balanced_gravity_f1": 0.32498506219177625,
+      "exported_cases": 200,
+      "source_sha256": "710569eb61682a0b4495f479afa1319cd0b342e10b84ffc359e9474eccb9f3e7"
+    },
+    "fit2": {
+      "archive": "evidence/incidents/hotspot-poc/fit2-complete.zip",
+      "bytes": 138585914,
+      "sha256": "b7ab293efff16502f0b61ee1d586188e2300e09256a365a7a56e12d197725d33",
+      "total_compute_seconds": 294.92199999999866,
+      "training_seconds": 205.21899999999732,
+      "weights_sha256": "bd535677469aa9d4ea61806bd211c612bf2413cf3bcfeb571bc817e0f4b354cb",
+      "validation_balanced_gravity_f1": 0.31813892008446826,
+      "exported_cases": 200,
+      "source_sha256": "94e480c0f67f766695c8ecd5e55528851b3f44e5d9998869e5dfe842a51204d0"
+    }
+  },
+  "tests": "17 CPU/tensor tests passed on Windows; Ruff passed; exact reload state matched in each GPU run",
+  "services_modified": false
+}

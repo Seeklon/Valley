@@ -1,0 +1,261 @@
+{
+  "dataset_id": "iss-poc-20261115-v1",
+  "state": "pilot_completed",
+  "elapsed_s": 29.828,
+  "completed_runs": 6,
+  "failed_runs": 0,
+  "training_cases_only": true,
+  "heat_positive": 208,
+  "heat_observed": 243016,
+  "smoke_positive": 542,
+  "smoke_observed": 243016,
+  "zero_power_controls": 1,
+  "cases": [
+    {
+      "id": "iss-laboratory-v00-flame",
+      "config": {
+        "scene_id": "iss-laboratory-v00",
+        "source_model": "coupled_combustion",
+        "ignition_kind": "thermal",
+        "incident_type": "flaming",
+        "component_id": "electrical-00",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.08,
+        "oxygen_percent": 21.0,
+        "ignition_power_w": 1500,
+        "ignition_duration_s": 15,
+        "duration_s": 30,
+        "seed": 2026111501,
+        "material_id": "cellulose",
+        "mesh_cell_m": 0.141,
+        "sample_shape": [
+          12,
+          16,
+          8
+        ],
+        "sample_interval_s": 1,
+        "ambient_temperature_c": 20,
+        "pressure_pa": 101325,
+        "ignition_delay_s": 0
+      },
+      "wall_time_s": 11.469,
+      "solve_parse_archive_s": 14.875,
+      "label_profile": {
+        "heat_observed": 36608,
+        "heat_positive": 92,
+        "smoke_observed": 36608,
+        "smoke_positive": 178,
+        "maximum_temperature_c": 218.8351593017578,
+        "maximum_smoke_kg_m3": 0.0005400134832598269,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      }
+    },
+    {
+      "id": "iss-laboratory-v00-battery",
+      "config": {
+        "scene_id": "iss-laboratory-v00",
+        "source_model": "coupled_combustion",
+        "ignition_kind": "thermal",
+        "incident_type": "battery",
+        "component_id": "electrical-01",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.08,
+        "oxygen_percent": 21.0,
+        "ignition_power_w": 1800,
+        "ignition_duration_s": 20,
+        "duration_s": 30,
+        "seed": 2026111501,
+        "material_id": "cellulose",
+        "mesh_cell_m": 0.141,
+        "sample_shape": [
+          12,
+          16,
+          8
+        ],
+        "sample_interval_s": 1,
+        "ambient_temperature_c": 20,
+        "pressure_pa": 101325,
+        "ignition_delay_s": 0
+      },
+      "wall_time_s": 11.594,
+      "solve_parse_archive_s": 14.827999999999975,
+      "label_profile": {
+        "heat_observed": 36608,
+        "heat_positive": 48,
+        "smoke_observed": 36608,
+        "smoke_positive": 195,
+        "maximum_temperature_c": 291.04364013671875,
+        "maximum_smoke_kg_m3": 0.003037065267562866,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      }
+    },
+    {
+      "id": "iss-node-v00-flame",
+      "config": {
+        "scene_id": "iss-node-v00",
+        "source_model": "coupled_combustion",
+        "ignition_kind": "thermal",
+        "incident_type": "flaming",
+        "component_id": "electrical-00",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.16,
+        "oxygen_percent": 21.0,
+        "ignition_power_w": 1680,
+        "ignition_duration_s": 15,
+        "duration_s": 30,
+        "seed": 2026111511,
+        "material_id": "cellulose",
+        "mesh_cell_m": 0.141,
+        "sample_shape": [
+          12,
+          16,
+          8
+        ],
+        "sample_interval_s": 1,
+        "ambient_temperature_c": 20,
+        "pressure_pa": 101325,
+        "ignition_delay_s": 0
+      },
+      "wall_time_s": 13.234,
+      "solve_parse_archive_s": 15.453000000000088,
+      "label_profile": {
+        "heat_observed": 41580,
+        "heat_positive": 68,
+        "smoke_observed": 41580,
+        "smoke_positive": 121,
+        "maximum_temperature_c": 62.08772659301758,
+        "maximum_smoke_kg_m3": 7.086298865033314e-05,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      }
+    },
+    {
+      "id": "iss-node-v00-thermal",
+      "config": {
+        "scene_id": "iss-node-v00",
+        "source_model": "coupled_combustion",
+        "ignition_kind": "thermal",
+        "incident_type": "arc",
+        "component_id": "electrical-00",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.16,
+        "oxygen_percent": 21.0,
+        "ignition_power_w": 2380,
+        "ignition_duration_s": 1,
+        "duration_s": 30,
+        "seed": 2026111511,
+        "material_id": "cellulose",
+        "mesh_cell_m": 0.141,
+        "sample_shape": [
+          12,
+          16,
+          8
+        ],
+        "sample_interval_s": 1,
+        "ambient_temperature_c": 20,
+        "pressure_pa": 101325,
+        "ignition_delay_s": 0
+      },
+      "wall_time_s": 13.39,
+      "solve_parse_archive_s": 15.297000000000025,
+      "label_profile": {
+        "heat_observed": 41580,
+        "heat_positive": 0,
+        "smoke_observed": 41580,
+        "smoke_positive": 0,
+        "maximum_temperature_c": 20.008163452148438,
+        "maximum_smoke_kg_m3": 0.0,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      }
+    },
+    {
+      "id": "iss-service-v00-smolder",
+      "config": {
+        "scene_id": "iss-service-v00",
+        "source_model": "coupled_combustion",
+        "ignition_kind": "thermal",
+        "incident_type": "smoldering",
+        "component_id": "electrical-02",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.24,
+        "oxygen_percent": 21.0,
+        "ignition_power_w": 450,
+        "ignition_duration_s": 20,
+        "duration_s": 30,
+        "seed": 2026111521,
+        "material_id": "cellulose",
+        "mesh_cell_m": 0.141,
+        "sample_shape": [
+          12,
+          16,
+          8
+        ],
+        "sample_interval_s": 1,
+        "ambient_temperature_c": 20,
+        "pressure_pa": 101325,
+        "ignition_delay_s": 0
+      },
+      "wall_time_s": 12.171,
+      "solve_parse_archive_s": 13.718999999999937,
+      "label_profile": {
+        "heat_observed": 43320,
+        "heat_positive": 0,
+        "smoke_observed": 43320,
+        "smoke_positive": 48,
+        "maximum_temperature_c": 20.061845779418945,
+        "maximum_smoke_kg_m3": 2.9189602628321154e-06,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      }
+    },
+    {
+      "id": "iss-service-v00-control",
+      "config": {
+        "scene_id": "iss-service-v00",
+        "source_model": "coupled_combustion",
+        "ignition_kind": "thermal",
+        "incident_type": "overheating",
+        "component_id": "electrical-00",
+        "gravity_g": 0.0001,
+        "airflow_m_s": 0.24,
+        "oxygen_percent": 21.0,
+        "ignition_power_w": 0,
+        "ignition_duration_s": 0,
+        "duration_s": 30,
+        "seed": 2026111521,
+        "material_id": "cellulose",
+        "mesh_cell_m": 0.141,
+        "sample_shape": [
+          12,
+          16,
+          8
+        ],
+        "sample_interval_s": 1,
+        "ambient_temperature_c": 20,
+        "pressure_pa": 101325,
+        "ignition_delay_s": 0
+      },
+      "wall_time_s": 11.203,
+      "solve_parse_archive_s": 13.422000000000025,
+      "label_profile": {
+        "heat_observed": 43320,
+        "heat_positive": 0,
+        "smoke_observed": 43320,
+        "smoke_positive": 0,
+        "maximum_temperature_c": 20.003665924072266,
+        "maximum_smoke_kg_m3": 0.0,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      }
+    }
+  ]
+}

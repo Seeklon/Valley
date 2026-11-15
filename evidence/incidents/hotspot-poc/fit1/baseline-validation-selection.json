@@ -1,0 +1,1989 @@
+{
+  "threshold": 0.8021838665008545,
+  "selection_metric": "mean_microgravity_earth_f1",
+  "selection_split": "validation",
+  "value": 0.1975825998214058,
+  "metrics": {
+    "tp": 425,
+    "fp": 2215,
+    "fn": 2633,
+    "tn": 1788371,
+    "precision": 0.16098484848484848,
+    "recall": 0.13897972531066055,
+    "iou": 0.08059927934761996,
+    "f1": 0.14917514917514918,
+    "false_positive_rate": 0.0012370251973376314,
+    "n_valid": 1793644,
+    "groups": {
+      "microgravity": {
+        "tp": 392,
+        "fp": 928,
+        "fn": 368,
+        "tn": 894386,
+        "precision": 0.296969696969697,
+        "recall": 0.5157894736842106,
+        "iou": 0.23222748815165878,
+        "f1": 0.3769230769230769,
+        "false_positive_rate": 0.0010365078620461648,
+        "n_valid": 896074
+      },
+      "earth": {
+        "tp": 33,
+        "fp": 1287,
+        "fn": 2265,
+        "tn": 893985,
+        "precision": 0.025,
+        "recall": 0.014360313315926894,
+        "iou": 0.009205020920502092,
+        "f1": 0.01824212271973466,
+        "false_positive_rate": 0.0014375519395222905,
+        "n_valid": 897570
+      },
+      "sample_inactive": {
+        "tp": 0,
+        "fp": 960,
+        "fn": 0,
+        "tn": 806490,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0011889281070035296,
+        "n_valid": 807450
+      },
+      "sample_active": {
+        "tp": 425,
+        "fp": 1255,
+        "fn": 2633,
+        "tn": 981881,
+        "precision": 0.25297619047619047,
+        "recall": 0.13897972531066055,
+        "iou": 0.09853929979132854,
+        "f1": 0.1794005909666526,
+        "false_positive_rate": 0.001276527357354425,
+        "n_valid": 986194
+      },
+      "incident_type": {
+        "arc": {
+          "tp": 0,
+          "fp": 420,
+          "fn": 0,
+          "tn": 359700,
+          "precision": 0.0,
+          "recall": null,
+          "iou": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.0011662779073642118,
+          "n_valid": 360120
+        },
+        "battery": {
+          "tp": 48,
+          "fp": 492,
+          "fn": 23,
+          "tn": 359497,
+          "precision": 0.08888888888888889,
+          "recall": 0.676056338028169,
+          "iou": 0.0852575488454707,
+          "f1": 0.15711947626841244,
+          "false_positive_rate": 0.0013667084272019423,
+          "n_valid": 360060
+        },
+        "flaming": {
+          "tp": 133,
+          "fp": 527,
+          "fn": 392,
+          "tn": 359488,
+          "precision": 0.2015151515151515,
+          "recall": 0.25333333333333335,
+          "iou": 0.12642585551330798,
+          "f1": 0.22447257383966246,
+          "false_positive_rate": 0.0014638278960598865,
+          "n_valid": 360540
+        },
+        "overheating": {
+          "tp": 171,
+          "fp": 369,
+          "fn": 2181,
+          "tn": 352663,
+          "precision": 0.31666666666666665,
+          "recall": 0.07270408163265306,
+          "iou": 0.06284454244762955,
+          "f1": 0.11825726141078838,
+          "false_positive_rate": 0.001045231027215663,
+          "n_valid": 355384
+        },
+        "smoldering": {
+          "tp": 73,
+          "fp": 407,
+          "fn": 37,
+          "tn": 357023,
+          "precision": 0.15208333333333332,
+          "recall": 0.6636363636363637,
+          "iou": 0.14119922630560927,
+          "f1": 0.24745762711864408,
+          "false_positive_rate": 0.0011386844976638783,
+          "n_valid": 357540
+        }
+      }
+    },
+    "case_count": 40,
+    "balanced_gravity_f1": 0.1975825998214058,
+    "active_case_macro_f1": 0.2442058748198859,
+    "sample_inactive_cases": 18,
+    "sample_inactive_cases_with_false_alarm": 14,
+    "cases": [
+      {
+        "id": "procedural-0011-electrical-01-arc-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45420,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45420
+      },
+      {
+        "id": "procedural-0011-electrical-01-arc-earth-c0",
+        "gravity": "earth",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45420,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45420
+      },
+      {
+        "id": "procedural-0044-electrical-02-battery-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "battery",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44910,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44910
+      },
+      {
+        "id": "procedural-0044-electrical-02-battery-earth-c0",
+        "gravity": "earth",
+        "incident_type": "battery",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44910,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44910
+      },
+      {
+        "id": "procedural-0001-electrical-01-overheating-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "overheating",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 0,
+        "fn": 60,
+        "tn": 43324,
+        "precision": null,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "n_valid": 43384
+      },
+      {
+        "id": "procedural-0001-electrical-01-overheating-earth-c0",
+        "gravity": "earth",
+        "incident_type": "overheating",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 0,
+        "fn": 30,
+        "tn": 44850,
+        "precision": null,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "n_valid": 44880
+      },
+      {
+        "id": "procedural-0034-electrical-01-smoldering-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "smoldering",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 30,
+        "fn": 0,
+        "tn": 44700,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0006706908115358819,
+        "n_valid": 44730
+      },
+      {
+        "id": "procedural-0034-electrical-01-smoldering-earth-c0",
+        "gravity": "earth",
+        "incident_type": "smoldering",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 30,
+        "fn": 11,
+        "tn": 44689,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0006708557883673606,
+        "n_valid": 44730
+      },
+      {
+        "id": "procedural-0024-electrical-00-flaming-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 29,
+        "fp": 31,
+        "fn": 12,
+        "tn": 45078,
+        "precision": 0.48333333333333334,
+        "recall": 0.7073170731707317,
+        "iou": 0.4027777777777778,
+        "f1": 0.5742574257425742,
+        "false_positive_rate": 0.0006872242789687203,
+        "n_valid": 45150
+      },
+      {
+        "id": "procedural-0024-electrical-00-flaming-earth-c0",
+        "gravity": "earth",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 60,
+        "fn": 73,
+        "tn": 45017,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0013310557490516229,
+        "n_valid": 45150
+      },
+      {
+        "id": "procedural-0014-electrical-01-arc-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 90,
+        "fn": 0,
+        "tn": 44760,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.002006688963210702,
+        "n_valid": 44850
+      },
+      {
+        "id": "procedural-0014-electrical-01-arc-earth-c0",
+        "gravity": "earth",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 90,
+        "fn": 0,
+        "tn": 44760,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.002006688963210702,
+        "n_valid": 44850
+      },
+      {
+        "id": "procedural-0004-electrical-00-overheating-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "overheating",
+        "sample_inactive": false,
+        "tp": 52,
+        "fp": 8,
+        "fn": 24,
+        "tn": 44946,
+        "precision": 0.8666666666666667,
+        "recall": 0.6842105263157895,
+        "iou": 0.6190476190476191,
+        "f1": 0.7647058823529411,
+        "false_positive_rate": 0.00017795969212973262,
+        "n_valid": 45030
+      },
+      {
+        "id": "procedural-0004-electrical-00-overheating-earth-c0",
+        "gravity": "earth",
+        "incident_type": "overheating",
+        "sample_inactive": false,
+        "tp": 4,
+        "fp": 56,
+        "fn": 1024,
+        "tn": 43946,
+        "precision": 0.06666666666666667,
+        "recall": 0.0038910505836575876,
+        "iou": 0.0036900369003690036,
+        "f1": 0.007352941176470588,
+        "false_positive_rate": 0.0012726694241170856,
+        "n_valid": 45030
+      },
+      {
+        "id": "procedural-0041-electrical-04-battery-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "battery",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 30,
+        "fn": 0,
+        "tn": 45360,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0006609385327164573,
+        "n_valid": 45390
+      },
+      {
+        "id": "procedural-0041-electrical-04-battery-earth-c0",
+        "gravity": "earth",
+        "incident_type": "battery",
+        "sample_inactive": false,
+        "tp": 10,
+        "fp": 20,
+        "fn": 16,
+        "tn": 45344,
+        "precision": 0.3333333333333333,
+        "recall": 0.38461538461538464,
+        "iou": 0.21739130434782608,
+        "f1": 0.35714285714285715,
+        "false_positive_rate": 0.0004408782294330306,
+        "n_valid": 45390
+      },
+      {
+        "id": "procedural-0031-electrical-02-smoldering-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "smoldering",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44640,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0013422818791946308,
+        "n_valid": 44700
+      },
+      {
+        "id": "procedural-0031-electrical-02-smoldering-earth-c0",
+        "gravity": "earth",
+        "incident_type": "smoldering",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44640,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0013422818791946308,
+        "n_valid": 44700
+      },
+      {
+        "id": "procedural-0021-electrical-01-flaming-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 46,
+        "fp": 74,
+        "fn": 25,
+        "tn": 44525,
+        "precision": 0.38333333333333336,
+        "recall": 0.647887323943662,
+        "iou": 0.31724137931034485,
+        "f1": 0.4816753926701571,
+        "false_positive_rate": 0.0016592300275790938,
+        "n_valid": 44670
+      },
+      {
+        "id": "procedural-0021-electrical-01-flaming-earth-c0",
+        "gravity": "earth",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 120,
+        "fn": 47,
+        "tn": 44503,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0026891961544494992,
+        "n_valid": 44670
+      },
+      {
+        "id": "procedural-0061-electrical-04-arc-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44820,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.001336898395721925,
+        "n_valid": 44880
+      },
+      {
+        "id": "procedural-0061-electrical-04-arc-earth-c1",
+        "gravity": "earth",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44820,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.001336898395721925,
+        "n_valid": 44880
+      },
+      {
+        "id": "procedural-0094-electrical-03-battery-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "battery",
+        "sample_inactive": false,
+        "tp": 19,
+        "fp": 41,
+        "fn": 7,
+        "tn": 45083,
+        "precision": 0.31666666666666665,
+        "recall": 0.7307692307692307,
+        "iou": 0.2835820895522388,
+        "f1": 0.4418604651162791,
+        "false_positive_rate": 0.0009086073929616169,
+        "n_valid": 45150
+      },
+      {
+        "id": "procedural-0094-electrical-03-battery-earth-c1",
+        "gravity": "earth",
+        "incident_type": "battery",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 45090,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.00132890365448505,
+        "n_valid": 45150
+      },
+      {
+        "id": "procedural-0051-electrical-04-overheating-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "overheating",
+        "sample_inactive": false,
+        "tp": 106,
+        "fp": 44,
+        "fn": 115,
+        "tn": 44135,
+        "precision": 0.7066666666666667,
+        "recall": 0.4796380090497738,
+        "iou": 0.4,
+        "f1": 0.5714285714285714,
+        "false_positive_rate": 0.0009959483012290907,
+        "n_valid": 44400
+      },
+      {
+        "id": "procedural-0051-electrical-04-overheating-earth-c1",
+        "gravity": "earth",
+        "incident_type": "overheating",
+        "sample_inactive": false,
+        "tp": 9,
+        "fp": 141,
+        "fn": 928,
+        "tn": 43322,
+        "precision": 0.06,
+        "recall": 0.0096051227321238,
+        "iou": 0.008348794063079777,
+        "f1": 0.01655933762649494,
+        "false_positive_rate": 0.003244138692681131,
+        "n_valid": 44400
+      },
+      {
+        "id": "procedural-0084-electrical-01-smoldering-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "smoldering",
+        "sample_inactive": false,
+        "tp": 23,
+        "fp": 37,
+        "fn": 6,
+        "tn": 44694,
+        "precision": 0.38333333333333336,
+        "recall": 0.7931034482758621,
+        "iou": 0.3484848484848485,
+        "f1": 0.5168539325842697,
+        "false_positive_rate": 0.0008271668417875746,
+        "n_valid": 44760
+      },
+      {
+        "id": "procedural-0084-electrical-01-smoldering-earth-c1",
+        "gravity": "earth",
+        "incident_type": "smoldering",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 60,
+        "fn": 1,
+        "tn": 44699,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.001340512522621149,
+        "n_valid": 44760
+      },
+      {
+        "id": "procedural-0074-electrical-01-flaming-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 90,
+        "fn": 65,
+        "tn": 44485,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0020190689848569826,
+        "n_valid": 44640
+      },
+      {
+        "id": "procedural-0074-electrical-01-flaming-earth-c1",
+        "gravity": "earth",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 90,
+        "fn": 69,
+        "tn": 44481,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0020192501850979337,
+        "n_valid": 44640
+      },
+      {
+        "id": "procedural-0064-electrical-01-arc-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44850,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0013360053440213762,
+        "n_valid": 44910
+      },
+      {
+        "id": "procedural-0064-electrical-01-arc-earth-c1",
+        "gravity": "earth",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44850,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0013360053440213762,
+        "n_valid": 44910
+      },
+      {
+        "id": "procedural-0054-electrical-03-overheating-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "overheating",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44070,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0013596193065941536,
+        "n_valid": 44130
+      },
+      {
+        "id": "procedural-0054-electrical-03-overheating-earth-c1",
+        "gravity": "earth",
+        "incident_type": "overheating",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44070,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0013596193065941536,
+        "n_valid": 44130
+      },
+      {
+        "id": "procedural-0091-electrical-04-battery-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "battery",
+        "sample_inactive": false,
+        "tp": 19,
+        "fp": 161,
+        "fn": 0,
+        "tn": 44400,
+        "precision": 0.10555555555555556,
+        "recall": 1.0,
+        "iou": 0.10555555555555556,
+        "f1": 0.19095477386934673,
+        "false_positive_rate": 0.0036130248423509345,
+        "n_valid": 44580
+      },
+      {
+        "id": "procedural-0091-electrical-04-battery-earth-c1",
+        "gravity": "earth",
+        "incident_type": "battery",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 180,
+        "fn": 0,
+        "tn": 44400,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.004037685060565276,
+        "n_valid": 44580
+      },
+      {
+        "id": "procedural-0081-electrical-00-smoldering-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "smoldering",
+        "sample_inactive": false,
+        "tp": 50,
+        "fp": 40,
+        "fn": 15,
+        "tn": 44475,
+        "precision": 0.5555555555555556,
+        "recall": 0.7692307692307693,
+        "iou": 0.47619047619047616,
+        "f1": 0.6451612903225806,
+        "false_positive_rate": 0.0008985735145456587,
+        "n_valid": 44580
+      },
+      {
+        "id": "procedural-0081-electrical-00-smoldering-earth-c1",
+        "gravity": "earth",
+        "incident_type": "smoldering",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 90,
+        "fn": 4,
+        "tn": 44486,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.002019023689877961,
+        "n_valid": 44580
+      },
+      {
+        "id": "procedural-0071-electrical-01-flaming-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 48,
+        "fp": 12,
+        "fn": 39,
+        "tn": 45711,
+        "precision": 0.8,
+        "recall": 0.5517241379310345,
+        "iou": 0.48484848484848486,
+        "f1": 0.6530612244897959,
+        "false_positive_rate": 0.0002624499704743783,
+        "n_valid": 45810
+      },
+      {
+        "id": "procedural-0071-electrical-01-flaming-earth-c1",
+        "gravity": "earth",
+        "incident_type": "flaming",
+        "sample_inactive": false,
+        "tp": 10,
+        "fp": 50,
+        "fn": 62,
+        "tn": 45688,
+        "precision": 0.16666666666666666,
+        "recall": 0.1388888888888889,
+        "iou": 0.08196721311475409,
+        "f1": 0.15151515151515152,
+        "false_positive_rate": 0.0010931829113647296,
+        "n_valid": 45810
+      }
+    ]
+  },
+  "candidate_curve": [
+    {
+      "threshold": 6.144174676592229e-06,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 6.790358838770771e-06,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 7.50450180930784e-06,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 8.293750397569966e-06,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 9.166004019789398e-06,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 1.0129991096619051e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 1.1195359547855332e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 1.2372771379887126e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 1.3674009096575901e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 1.5112095752556343e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 1.6701422282494605e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 1.845789302024059e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 2.0399087588884868e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 2.25444291572785e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 2.4915389076340944e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 2.7535690605873242e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 3.0431556297116913e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 3.3631964470259845e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 3.7168938433751464e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 4.1077866626437753e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 4.539786823443137e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 5.0172166083939373e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 5.544852319872007e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 6.127973756520078e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 6.772414781153202e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 7.484622619813308e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 8.271722617791966e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 9.141587361227721e-05,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00010102919623022899,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00011165333853568882,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00012339458044152707,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00013637033407576382,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00015071035886649042,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00016655806393828243,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00018407190509606153,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00020342697098385543,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00022481677297037095,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00024845509324222803,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.000274578167591244,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0003034470428247005,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.00033535013790242374,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.000370606139767915,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0004095671756658703,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0004526222182903439,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0005002011312171817,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.000552778656128794,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0006108793313615024,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0006750827305950224,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0007460288470610976,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0008244246710091829,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0009110511746257544,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0010067707626149058,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0011125360615551472,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.001229398651048541,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0013585200067609549,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0015011822106316686,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0016588011058047414,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.0018329389858990908,
+      "balanced_gravity_f1": 0.0034011333761885818,
+      "fp": 1790586
+    },
+    {
+      "threshold": 0.002025320427492261,
+      "balanced_gravity_f1": 0.0034012468632936793,
+      "fp": 1790526
+    },
+    {
+      "threshold": 0.002237848471850157,
+      "balanced_gravity_f1": 0.0034012468632936793,
+      "fp": 1790526
+    },
+    {
+      "threshold": 0.0024726232513785362,
+      "balanced_gravity_f1": 0.0034017008874598176,
+      "fp": 1790286
+    },
+    {
+      "threshold": 0.0027319607324898243,
+      "balanced_gravity_f1": 0.0034020414851386937,
+      "fp": 1790106
+    },
+    {
+      "threshold": 0.003018416231498122,
+      "balanced_gravity_f1": 0.0034027228851533494,
+      "fp": 1789746
+    },
+    {
+      "threshold": 0.0033348072320222855,
+      "balanced_gravity_f1": 0.003403859158620009,
+      "fp": 1789146
+    },
+    {
+      "threshold": 0.0036842399276793003,
+      "balanced_gravity_f1": 0.0034060201702337924,
+      "fp": 1788006
+    },
+    {
+      "threshold": 0.00407013762742281,
+      "balanced_gravity_f1": 0.0034080699770249186,
+      "fp": 1786926
+    },
+    {
+      "threshold": 0.004496273119002581,
+      "balanced_gravity_f1": 0.0034051457658714596,
+      "fp": 1784952
+    },
+    {
+      "threshold": 0.00496680149808526,
+      "balanced_gravity_f1": 0.003402443121255297,
+      "fp": 1782858
+    },
+    {
+      "threshold": 0.005486298818141222,
+      "balanced_gravity_f1": 0.003402792312925707,
+      "fp": 1779743
+    },
+    {
+      "threshold": 0.006059801671653986,
+      "balanced_gravity_f1": 0.003397245050998676,
+      "fp": 1775615
+    },
+    {
+      "threshold": 0.006692850962281227,
+      "balanced_gravity_f1": 0.0033885505232072806,
+      "fp": 1770771
+    },
+    {
+      "threshold": 0.007391541264951229,
+      "balanced_gravity_f1": 0.0033910227006843127,
+      "fp": 1764180
+    },
+    {
+      "threshold": 0.008162571117281914,
+      "balanced_gravity_f1": 0.003401370535637608,
+      "fp": 1756444
+    },
+    {
+      "threshold": 0.009013298898935318,
+      "balanced_gravity_f1": 0.0034135873479460652,
+      "fp": 1747209
+    },
+    {
+      "threshold": 0.009951801970601082,
+      "balanced_gravity_f1": 0.003421448347097624,
+      "fp": 1736181
+    },
+    {
+      "threshold": 0.010986942797899246,
+      "balanced_gravity_f1": 0.0034455956269545157,
+      "fp": 1722803
+    },
+    {
+      "threshold": 0.01212843507528305,
+      "balanced_gravity_f1": 0.003466164657469134,
+      "fp": 1707931
+    },
+    {
+      "threshold": 0.013386918231844902,
+      "balanced_gravity_f1": 0.003490655446338039,
+      "fp": 1690181
+    },
+    {
+      "threshold": 0.014774031937122345,
+      "balanced_gravity_f1": 0.0035255285257974815,
+      "fp": 1669428
+    },
+    {
+      "threshold": 0.016302499920129776,
+      "balanced_gravity_f1": 0.0035487566670625316,
+      "fp": 1646649
+    },
+    {
+      "threshold": 0.01798621006309986,
+      "balanced_gravity_f1": 0.0035979194974871905,
+      "fp": 1619058
+    },
+    {
+      "threshold": 0.019840305671095848,
+      "balanced_gravity_f1": 0.003646052794060862,
+      "fp": 1588834
+    },
+    {
+      "threshold": 0.02188127115368843,
+      "balanced_gravity_f1": 0.0037037047559844976,
+      "fp": 1556987
+    },
+    {
+      "threshold": 0.024127021431922913,
+      "balanced_gravity_f1": 0.0037519650888426445,
+      "fp": 1522515
+    },
+    {
+      "threshold": 0.02659699320793152,
+      "balanced_gravity_f1": 0.003808221266417196,
+      "fp": 1486302
+    },
+    {
+      "threshold": 0.02931223064661026,
+      "balanced_gravity_f1": 0.003845716371053979,
+      "fp": 1447891
+    },
+    {
+      "threshold": 0.03229546546936035,
+      "balanced_gravity_f1": 0.003876033770967232,
+      "fp": 1409249
+    },
+    {
+      "threshold": 0.03557118773460388,
+      "balanced_gravity_f1": 0.0039506505096360495,
+      "fp": 1362315
+    },
+    {
+      "threshold": 0.03916572406888008,
+      "balanced_gravity_f1": 0.0040053879006214195,
+      "fp": 1313247
+    },
+    {
+      "threshold": 0.043107256293296814,
+      "balanced_gravity_f1": 0.003913784275940892,
+      "fp": 1261644
+    },
+    {
+      "threshold": 0.04742587357759476,
+      "balanced_gravity_f1": 0.003851336539824585,
+      "fp": 1207698
+    },
+    {
+      "threshold": 0.052153561264276505,
+      "balanced_gravity_f1": 0.0037605559345436183,
+      "fp": 1156465
+    },
+    {
+      "threshold": 0.05732417479157448,
+      "balanced_gravity_f1": 0.003862478953610432,
+      "fp": 1106193
+    },
+    {
+      "threshold": 0.06297335773706436,
+      "balanced_gravity_f1": 0.003947521103066273,
+      "fp": 1051460
+    },
+    {
+      "threshold": 0.06913842260837555,
+      "balanced_gravity_f1": 0.00398299042510341,
+      "fp": 996049
+    },
+    {
+      "threshold": 0.07585818320512772,
+      "balanced_gravity_f1": 0.004013224701421792,
+      "fp": 935914
+    },
+    {
+      "threshold": 0.08317269384860992,
+      "balanced_gravity_f1": 0.00413408910925303,
+      "fp": 880952
+    },
+    {
+      "threshold": 0.09112296253442764,
+      "balanced_gravity_f1": 0.004213178015859558,
+      "fp": 823696
+    },
+    {
+      "threshold": 0.09975048899650574,
+      "balanced_gravity_f1": 0.004381736566686787,
+      "fp": 768207
+    },
+    {
+      "threshold": 0.10909681767225266,
+      "balanced_gravity_f1": 0.004414230984122071,
+      "fp": 710694
+    },
+    {
+      "threshold": 0.11920291930437088,
+      "balanced_gravity_f1": 0.004671951841778979,
+      "fp": 655910
+    },
+    {
+      "threshold": 0.13010847568511963,
+      "balanced_gravity_f1": 0.004746939518485883,
+      "fp": 601505
+    },
+    {
+      "threshold": 0.14185106754302979,
+      "balanced_gravity_f1": 0.004914064051811207,
+      "fp": 552192
+    },
+    {
+      "threshold": 0.15446525812149048,
+      "balanced_gravity_f1": 0.005121383098086293,
+      "fp": 505235
+    },
+    {
+      "threshold": 0.1679816097021103,
+      "balanced_gravity_f1": 0.005489095187287591,
+      "fp": 458101
+    },
+    {
+      "threshold": 0.18242552876472473,
+      "balanced_gravity_f1": 0.005766827738988017,
+      "fp": 416583
+    },
+    {
+      "threshold": 0.19781611859798431,
+      "balanced_gravity_f1": 0.00624601913044918,
+      "fp": 374177
+    },
+    {
+      "threshold": 0.21416501700878143,
+      "balanced_gravity_f1": 0.006834760782745616,
+      "fp": 334664
+    },
+    {
+      "threshold": 0.23147521913051605,
+      "balanced_gravity_f1": 0.0072786838661383765,
+      "fp": 300440
+    },
+    {
+      "threshold": 0.2497399002313614,
+      "balanced_gravity_f1": 0.007900173199352984,
+      "fp": 266271
+    },
+    {
+      "threshold": 0.2689414322376251,
+      "balanced_gravity_f1": 0.008752345014987502,
+      "fp": 235957
+    },
+    {
+      "threshold": 0.28905048966407776,
+      "balanced_gravity_f1": 0.009847765414355522,
+      "fp": 207136
+    },
+    {
+      "threshold": 0.31002551317214966,
+      "balanced_gravity_f1": 0.011374412630301764,
+      "fp": 175943
+    },
+    {
+      "threshold": 0.3318122327327728,
+      "balanced_gravity_f1": 0.012828372235015238,
+      "fp": 155323
+    },
+    {
+      "threshold": 0.3543436825275421,
+      "balanced_gravity_f1": 0.014372866734700007,
+      "fp": 133532
+    },
+    {
+      "threshold": 0.3775406777858734,
+      "balanced_gravity_f1": 0.016191591937468088,
+      "fp": 114691
+    },
+    {
+      "threshold": 0.40131235122680664,
+      "balanced_gravity_f1": 0.019033364044505997,
+      "fp": 96895
+    },
+    {
+      "threshold": 0.4255574941635132,
+      "balanced_gravity_f1": 0.02177979436075565,
+      "fp": 83411
+    },
+    {
+      "threshold": 0.4501660168170929,
+      "balanced_gravity_f1": 0.02534274107431612,
+      "fp": 69887
+    },
+    {
+      "threshold": 0.4750208258628845,
+      "balanced_gravity_f1": 0.029175337549558172,
+      "fp": 59405
+    },
+    {
+      "threshold": 0.5,
+      "balanced_gravity_f1": 0.033804036587904415,
+      "fp": 50421
+    },
+    {
+      "threshold": 0.5249791741371155,
+      "balanced_gravity_f1": 0.038541580530554925,
+      "fp": 42121
+    },
+    {
+      "threshold": 0.5498340129852295,
+      "balanced_gravity_f1": 0.04447665525315637,
+      "fp": 35427
+    },
+    {
+      "threshold": 0.5744425058364868,
+      "balanced_gravity_f1": 0.05227048084190942,
+      "fp": 28270
+    },
+    {
+      "threshold": 0.5986876487731934,
+      "balanced_gravity_f1": 0.061408216673256334,
+      "fp": 23132
+    },
+    {
+      "threshold": 0.622459352016449,
+      "balanced_gravity_f1": 0.07484511505561926,
+      "fp": 18516
+    },
+    {
+      "threshold": 0.6456562876701355,
+      "balanced_gravity_f1": 0.09177977986721998,
+      "fp": 14502
+    },
+    {
+      "threshold": 0.6681877970695496,
+      "balanced_gravity_f1": 0.10864303728467804,
+      "fp": 11640
+    },
+    {
+      "threshold": 0.6899744868278503,
+      "balanced_gravity_f1": 0.12361207425543348,
+      "fp": 9564
+    },
+    {
+      "threshold": 0.7109494805335999,
+      "balanced_gravity_f1": 0.13671341127539258,
+      "fp": 7697
+    },
+    {
+      "threshold": 0.7310585975646973,
+      "balanced_gravity_f1": 0.1445347870125882,
+      "fp": 5880
+    },
+    {
+      "threshold": 0.7502601146697998,
+      "balanced_gravity_f1": 0.15797591912218692,
+      "fp": 4672
+    },
+    {
+      "threshold": 0.7685247659683228,
+      "balanced_gravity_f1": 0.16958643918947863,
+      "fp": 3918
+    },
+    {
+      "threshold": 0.7858349680900574,
+      "balanced_gravity_f1": 0.18479070289640886,
+      "fp": 3109
+    },
+    {
+      "threshold": 0.8021838665008545,
+      "balanced_gravity_f1": 0.1975825998214058,
+      "fp": 2215
+    },
+    {
+      "threshold": 0.8175745010375977,
+      "balanced_gravity_f1": 0.18070941953423705,
+      "fp": 1653
+    },
+    {
+      "threshold": 0.8320183753967285,
+      "balanced_gravity_f1": 0.16404467584135102,
+      "fp": 970
+    },
+    {
+      "threshold": 0.8455347418785095,
+      "balanced_gravity_f1": 0.1482280127267238,
+      "fp": 769
+    },
+    {
+      "threshold": 0.8581489324569702,
+      "balanced_gravity_f1": 0.1482280127267238,
+      "fp": 769
+    },
+    {
+      "threshold": 0.8698915243148804,
+      "balanced_gravity_f1": 0.1482280127267238,
+      "fp": 769
+    },
+    {
+      "threshold": 0.8807970881462097,
+      "balanced_gravity_f1": 0.15563038625110687,
+      "fp": 649
+    },
+    {
+      "threshold": 0.8909031748771667,
+      "balanced_gravity_f1": 0.1638194668386542,
+      "fp": 529
+    },
+    {
+      "threshold": 0.9002494812011719,
+      "balanced_gravity_f1": 0.1512748389438345,
+      "fp": 377
+    },
+    {
+      "threshold": 0.9088770151138306,
+      "balanced_gravity_f1": 0.1512748389438345,
+      "fp": 377
+    },
+    {
+      "threshold": 0.9168273210525513,
+      "balanced_gravity_f1": 0.06924636421936739,
+      "fp": 58
+    },
+    {
+      "threshold": 0.9241418242454529,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9308615922927856,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9370266199111938,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9426758289337158,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9478464126586914,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9525741338729858,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.956892728805542,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.960834264755249,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9644287824630737,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9677045345306396,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.970687747001648,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9734029769897461,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9758729934692383,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9781187176704407,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9801596999168396,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9820137619972229,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9836974740028381,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9852259755134583,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9866130948066711,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9878715872764587,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9890130758285522,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9900481700897217,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.990986704826355,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9918374419212341,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9926084876060486,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9933071732521057,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9939401745796204,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9945136904716492,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9950332045555115,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9955037236213684,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9959298372268677,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9963157773017883,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9966651797294617,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9969815611839294,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.99726802110672,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9975273609161377,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.997762143611908,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.997974693775177,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9981670379638672,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9983412027359009,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.998498797416687,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9986414909362793,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9987705945968628,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9988874793052673,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9989932179450989,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9990889430046082,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9991755485534668,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9992539882659912,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9993249177932739,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.999389111995697,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.999447226524353,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9994997978210449,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9995473623275757,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9995904564857483,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9996293783187866,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9996646642684937,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9996965527534485,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9997254014015198,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9997515678405762,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9997751712799072,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9997965693473816,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9998159408569336,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9998334646224976,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.999849259853363,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9998636245727539,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9998766183853149,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9998883605003357,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9998989701271057,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999085664749146,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999172687530518,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999251365661621,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999322891235352,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999387264251709,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999445676803589,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999498128890991,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999545812606812,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999589323997498,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999628067016602,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999663829803467,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999695420265198,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999724626541138,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999750852584839,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999774694442749,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999796152114868,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999815225601196,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999833106994629,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.999984860420227,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999863505363464,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999876022338867,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999887943267822,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999898672103882,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999908208847046,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999917149543762,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999924898147583,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999932050704956,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 0.9999938607215881,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    },
+    {
+      "threshold": 1.0000009536743164,
+      "balanced_gravity_f1": 0.0,
+      "fp": 0
+    }
+  ]
+}

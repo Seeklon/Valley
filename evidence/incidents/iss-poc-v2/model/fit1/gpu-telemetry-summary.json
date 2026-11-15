@@ -1,0 +1,9 @@
+{
+  "available": true,
+  "sample_count": 509,
+  "interval_s": 1,
+  "utilization_max_percent": 99.0,
+  "utilization_median_percent": 98.0,
+  "fraction_at_least_90_percent": 0.5461689587426326,
+  "scope": "whole bounded run, including dataset verification/evaluation/export; nvidia-smi device-wide measurement"
+}

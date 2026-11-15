@@ -1,0 +1,36 @@
+{
+  "/api/health": {
+    "status": 200,
+    "bytes": 301,
+    "sha256": "0472ecd8251b7f92e8398852048116f8bc018480f0406545230ac78c0be6f342",
+    "health": {
+      "status": "ok",
+      "worker_available": true,
+      "capabilities": {
+        "physics": true,
+        "prediction": false,
+        "campaigns": true,
+        "insights": true,
+        "prevention": true,
+        "incident_prediction": true,
+        "ignition_delay_prediction": false,
+        "source_models": [
+          "prescribed_source",
+          "coupled_combustion"
+        ]
+      },
+      "disk_free_gb": 104.25,
+      "version": "0.1.0"
+    }
+  },
+  "/poc/iss/index.json": {
+    "status": 200,
+    "bytes": 361177,
+    "sha256": "ceb4b63fa73f9da9f645fb1cdf34c70d0927dbddf6d7e51c10cf62dad9985462"
+  },
+  "/poc/hotspots.json": {
+    "status": 200,
+    "bytes": 319678,
+    "sha256": "e671ca2bf68f617d1928507bd8b6522a9b574f530a9298fa2f882641526305f8"
+  }
+}

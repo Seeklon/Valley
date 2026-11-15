@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-11-15T15:13:24.092Z",
+  "base": "http://127.0.0.1:5190",
+  "route": "#iss",
+  "scope": "train-ventilation-quartet",
+  "model_id": "iss-heat-smoke-poc-20261115",
+  "checks": [
+    {
+      "name": "recorded_export_with_heat_smoke_and_provenance",
+      "passed": true,
+      "cases": 5,
+      "model": "iss-heat-smoke-poc-20261115"
+    },
+    {
+      "name": "same_quartet_keeps_camera_and_requested_time_without_interpolation",
+      "passed": true,
+      "group": "iss-laboratory-vent-00-flaming",
+      "split": "train",
+      "target_time_s": 28.7907,
+      "has_distinct_observation_times": true,
+      "observations": [
+        {
+          "id": "iss-laboratory-vent-00-flaming-slow",
+          "state": "slow",
+          "time_s": 28.364421
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-fast",
+          "state": "fast",
+          "time_s": 29.067863
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-reverse",
+          "state": "reverse",
+          "time_s": 29.12989
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-still",
+          "state": "still",
+          "time_s": 28.7907
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-fast",
+          "state": "fast",
+          "time_s": 29.067863
+        }
+      ],
+      "camera_position": [
+        1.81836,
+        1.757748,
+        -0.18
+      ],
+      "camera_direction": [
+        -0.934243,
+        -0.29608,
+        -0.198812
+      ],
+      "overview_camera_position": [
+        4.633849,
+        4.792214,
+        1.257314
+      ],
+      "overview_camera_direction": [
+        -0.483789,
+        -0.604736,
+        -0.632647
+      ],
+      "reset_control": "iss-laboratory-vent-00-control"
+    },
+    {
+      "name": "no_javascript_error_or_compute_submission",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "screenshots": [
+    "iss-ventilation-comparison.png",
+    "iss-ventilation-overview.png"
+  ]
+}

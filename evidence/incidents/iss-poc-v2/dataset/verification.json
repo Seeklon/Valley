@@ -1,0 +1,204 @@
+{
+  "verified_at": "2026-11-15T14:06:33.822623+00:00",
+  "dataset_id": "iss-poc-20261115-v2",
+  "status": "passed",
+  "complete_cases": 384,
+  "layouts": 48,
+  "split_counts": {
+    "train": 240,
+    "validation": 48,
+    "test": 96
+  },
+  "gravity_counts": {
+    "0.0001": 336,
+    "1.0": 48
+  },
+  "planned_zero_power_controls": 48,
+  "train_validation_activity": {
+    "train": {
+      "heat_observed": 9465525,
+      "heat_positive": 30514,
+      "smoke_observed": 9465525,
+      "smoke_positive": 173375,
+      "hot_cases": 193,
+      "smoky_cases": 188
+    },
+    "validation": {
+      "heat_observed": 2056800,
+      "heat_positive": 5606,
+      "smoke_observed": 2056800,
+      "smoke_positive": 36926,
+      "hot_cases": 38,
+      "smoky_cases": 38
+    }
+  },
+  "train_validation_zero_power_controls": {
+    "iss-laboratory-v2-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v2-05-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v2-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v2-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-v2-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-v2-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-v2-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v2-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v2-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v2-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-v2-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-v2-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-v2-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v2-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v2-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v2-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-v2-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-v2-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-v2-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v2-03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v2-03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v2-03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-v2-03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-v2-03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-v2-03-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v2-04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-v2-04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v2-04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-v2-04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-v2-04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-v2-04-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-v2-05-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-v2-05-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-v2-05-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-v2-05-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-v2-05-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    }
+  },
+  "test_label_summary": null,
+  "v1_physical_geometry_overlap": 0,
+  "v1_normalized_geometry_overlap": 0,
+  "preserved_v1_hashes": {
+    "manifest.json": "b119a200985e936ec3d0ff36d878850165bb345c42df5d6be97da653954592fb",
+    "plan.json": "12d0b5b88d206627c38217d5f6cf985b989bc3c7b111d91ce793b1ca04c94139",
+    "index.json": "f4648d1466804a180065e35375edb79027115877ea46371fbea682823b96a670"
+  },
+  "normalized_layouts": 48,
+  "checks": [
+    "immutable plan and frozen index hashes",
+    "all seven artifact hashes of every case",
+    "FDS provenance, coordinates, timestamps and masked observations",
+    "48 unique physical and normalized geometry hashes; no v1 overlap",
+    "train/validation profile recomputation with float64 thresholds",
+    "test label summaries remain absent"
+  ],
+  "manifest_sha256": "6004eb0f27862106230e6f043fd5963b4da3ce28414b0559b94ca35724757a6f",
+  "plan_sha256": "97f77e5111e53f79b2a1392587de2075438ea3ba2e86a6b0b4ef4b09fa3254bd",
+  "frozen_index_sha256": "a2444f2141f858103dd9497726abc0c4540931775871e3b3a48f79f027a27644",
+  "stored_bytes": 1334501546,
+  "campaign_wall_time_s": 1383.453,
+  "sum_case_solver_parse_seconds": 4782.7930000000015
+}

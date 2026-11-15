@@ -1,0 +1,6 @@
+{
+  "first_pilot_start_utc": "2026-11-15T13:40:19.064072+00:00",
+  "hard_wall_deadline_utc": "2026-11-15T14:10:19.064072+00:00",
+  "budget_s": 1800,
+  "scope": "v2 only; STOP flag at deadline; archive can finish safely"
+}

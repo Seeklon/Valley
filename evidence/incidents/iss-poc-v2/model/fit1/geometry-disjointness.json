@@ -1,0 +1,10 @@
+{
+  "previous_dataset_sha256": "886535ae37231e4da51645cbb6590acab8c00a484c5151272e4e8e4657f09e69",
+  "previous_layout_count": 18,
+  "new_layout_count": 48,
+  "new_normalized_geometry_count": 48,
+  "all_v1_partitions_excluded": true,
+  "physical_geometry_overlap": 0,
+  "normalized_geometry_overlap": 0,
+  "normalized_geometry_partition_overlap": 0
+}

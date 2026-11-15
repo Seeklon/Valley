@@ -1,0 +1,136 @@
+{
+  "verified_at": "2026-11-15T15:02:20.730867+00:00",
+  "status": "passed",
+  "dataset_id": "iss-poc-20261115-vent",
+  "complete_cases": 216,
+  "layouts": 24,
+  "paired_quartets": 48,
+  "split_counts": {
+    "train": 108,
+    "validation": 54,
+    "test": 54
+  },
+  "gravity_counts": {
+    "0.0001": 216
+  },
+  "train_validation_activity": {
+    "train": {
+      "heat_observed": 4382364,
+      "heat_positive": 23141,
+      "smoke_observed": 4382364,
+      "smoke_positive": 51470,
+      "hot_cases": 96,
+      "smoky_cases": 96
+    },
+    "validation": {
+      "heat_observed": 2197852,
+      "heat_positive": 13338,
+      "smoke_observed": 2197852,
+      "smoke_positive": 26391,
+      "hot_cases": 47,
+      "smoky_cases": 48
+    }
+  },
+  "train_validation_zero_power_controls": {
+    "iss-laboratory-vent-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-vent-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-vent-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-vent-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-vent-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-vent-00-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-vent-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-vent-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-vent-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-vent-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-vent-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-vent-01-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-laboratory-vent-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-node-vent-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "iss-service-vent-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-cargo-vent-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-capsule-vent-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    },
+    "habitat-central-racks-vent-02-control": {
+      "heat_positive": 0,
+      "smoke_positive": 0
+    }
+  },
+  "test_label_summary": null,
+  "v1_v2_normalized_geometry_overlap": 0,
+  "preserved_previous_dataset_hashes": {
+    "iss-poc-20261115-v1": {
+      "manifest.json": "b119a200985e936ec3d0ff36d878850165bb345c42df5d6be97da653954592fb",
+      "plan.json": "12d0b5b88d206627c38217d5f6cf985b989bc3c7b111d91ce793b1ca04c94139",
+      "index.json": "f4648d1466804a180065e35375edb79027115877ea46371fbea682823b96a670"
+    },
+    "iss-poc-20261115-v2": {
+      "manifest.json": "6004eb0f27862106230e6f043fd5963b4da3ce28414b0559b94ca35724757a6f",
+      "plan.json": "97f77e5111e53f79b2a1392587de2075438ea3ba2e86a6b0b4ef4b09fa3254bd",
+      "index.json": "a2444f2141f858103dd9497726abc0c4540931775871e3b3a48f79f027a27644"
+    }
+  },
+  "manifest_sha256": "04bf8aafb870938c26c93fa475b3ee96394ab4159d79ed3624a4a07852567598",
+  "plan_sha256": "d97230537a88d1e24481465afb31451038fd8340f4f6fea1c90016ddaf86c2c3",
+  "frozen_index_sha256": "ccdfff19ebe738a6f50123905038253e0fb064f3fdb24afe6db6482d8d563540",
+  "stored_bytes": 779737245,
+  "campaign_wall_time_s": 820.984,
+  "sum_case_solver_parse_seconds": 2796.1,
+  "checks": [
+    "all seven artifact hashes of every case",
+    "real effective reversed scenes",
+    "quartet source, solids, sampling and non-airflow conditions held fixed",
+    "24 normalized new layouts, no v1/v2 overlap",
+    "train/validation controls zero",
+    "test label summary remains absent"
+  ]
+}

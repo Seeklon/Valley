@@ -1,0 +1,11 @@
+{
+  "launch_response": {
+    "ProcessId": 27516,
+    "ReturnValue": 0,
+    "PSComputerName": null
+  },
+  "wrapper_sha256": "89b59450eccfc180397c9d1bee3a8bdb9cf07fdfe2ea57d2a381f3eddc11c0b5",
+  "runtime": "E:/IGNIS-Valley-dev/runtime/iss-poc/20261115",
+  "compute_lock": "E:/IGNIS-Valley-dev/runtime/compute.lock",
+  "dataset_manifest_sha256": "b119a200985e936ec3d0ff36d878850165bb345c42df5d6be97da653954592fb"
+}

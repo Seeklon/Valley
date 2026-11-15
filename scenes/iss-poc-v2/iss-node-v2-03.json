@@ -1,0 +1,194 @@
+{
+  "id": "iss-node-v2-03",
+  "name": "Node · v2 4",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.828648,
+    3.828648,
+    3.828648
+  ],
+  "geometry_family": "iss-node",
+  "objects": [
+    {
+      "id": "avionics-port",
+      "name": "Avionics Port",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.478581,
+        0.8773985,
+        0.797635
+      ],
+      "size_m": [
+        0.638108,
+        1.116689,
+        1.59527
+      ],
+      "thermal_thickness_m": 0.0006
+    },
+    {
+      "id": "avionics-starboard",
+      "name": "Avionics Starboard",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        3.350067,
+        3.2703035,
+        0.5583445
+      ],
+      "size_m": [
+        0.6381079999999999,
+        1.116689,
+        1.116689
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "utility-bay",
+      "name": "Utility Bay",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        0.478581,
+        2.4726685,
+        1.0369255
+      ],
+      "size_m": [
+        0.638108,
+        0.7976350000000001,
+        2.073851
+      ],
+      "thermal_thickness_m": 0.0018,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "hatch-baffle",
+      "name": "Hatch Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "aluminium",
+      "center_m": [
+        1.8345604999999998,
+        3.0310129999999997,
+        0.797635
+      ],
+      "size_m": [
+        0.4785809999999999,
+        0.6381080000000003,
+        1.59527
+      ],
+      "thermal_thickness_m": 0.002
+    },
+    {
+      "id": "passage-baffle",
+      "name": "Passage Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        1.914324,
+        0.7178715,
+        0.3988175
+      ],
+      "size_m": [
+        0.31905399999999995,
+        0.478581,
+        0.797635
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "avionics-port",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.558345,
+        0.398817,
+        1.59527
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        3.110777,
+        3.748884,
+        1.116689
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "utility-bay",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        0.239291,
+        2.313141,
+        2.073851
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        0.0,
+        1.754797,
+        2.392905
+      ],
+      "size_m": [
+        0.0,
+        0.9571620000000001,
+        0.638108
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        3.828648,
+        2.073851,
+        2.392905
+      ],
+      "size_m": [
+        0.0,
+        1.276216,
+        0.638108
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.558345,
+    0.398817,
+    1.59527
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

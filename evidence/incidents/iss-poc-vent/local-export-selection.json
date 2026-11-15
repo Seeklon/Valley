@@ -1,0 +1,8 @@
+{
+  "local_only": true,
+  "previous_export": "runtime/iss-poc-v2-public-preserved",
+  "candidate_export": "web/public/poc/iss",
+  "candidate_index_sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e",
+  "previous_index_sha256": "94d4c81e9ec55a9178f3d004ad52ece238d67faf9b6318e88aa17664bd68a5a7",
+  "remote_dev_unchanged": true
+}

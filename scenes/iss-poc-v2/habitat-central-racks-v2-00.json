@@ -1,0 +1,194 @@
+{
+  "id": "habitat-central-racks-v2-00",
+  "name": "Habitat-Central-Racks · v2 1",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.362448,
+    5.043672,
+    2.80204
+  ],
+  "geometry_family": "habitat-central-racks",
+  "objects": [
+    {
+      "id": "central-rack-forward",
+      "name": "Central Rack Forward",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        1.7512750000000001,
+        0.630459,
+        0.910663
+      ],
+      "size_m": [
+        0.9807140000000001,
+        0.9807140000000001,
+        1.821326
+      ],
+      "thermal_thickness_m": 0.0006,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "central-rack-middle",
+      "name": "Central Rack Middle",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        1.821326,
+        2.731989,
+        0.420306
+      ],
+      "size_m": [
+        1.1208159999999998,
+        0.7005100000000004,
+        0.840612
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "central-rack-aft",
+      "name": "Central Rack Aft",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "glass",
+      "center_m": [
+        1.611173,
+        3.9929069999999998,
+        0.770561
+      ],
+      "size_m": [
+        0.70051,
+        0.9807140000000003,
+        1.541122
+      ],
+      "thermal_thickness_m": 0.0018
+    },
+    {
+      "id": "port-divider",
+      "name": "Port Divider",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        0.70051,
+        2.381734,
+        0.630459
+      ],
+      "size_m": [
+        0.280204,
+        0.5604080000000002,
+        1.260918
+      ],
+      "thermal_thickness_m": 0.002
+    },
+    {
+      "id": "starboard-divider",
+      "name": "Starboard Divider",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "aluminium",
+      "center_m": [
+        2.731989,
+        3.7827539999999997,
+        0.420306
+      ],
+      "size_m": [
+        0.14010199999999973,
+        0.5604080000000002,
+        0.840612
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "central-rack-forward",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        1.330969,
+        0.490357,
+        1.821326
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "central-rack-middle",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        1.891377,
+        2.731989,
+        0.840612
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "central-rack-aft",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        1.611173,
+        3.992907,
+        1.541122
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        1.541122,
+        0.0,
+        1.9614280000000002
+      ],
+      "size_m": [
+        0.840612,
+        0.0,
+        0.560408
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        1.40102,
+        5.043672,
+        1.9614280000000002
+      ],
+      "size_m": [
+        1.120816,
+        0.0,
+        0.560408
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    1.330969,
+    0.490357,
+    1.821326
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

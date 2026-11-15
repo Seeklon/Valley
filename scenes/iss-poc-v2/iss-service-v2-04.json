@@ -1,0 +1,177 @@
+{
+  "id": "iss-service-v2-04",
+  "name": "Service · v2 5",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.02014,
+    5.436252,
+    3.624168
+  ],
+  "geometry_family": "iss-service",
+  "objects": [
+    {
+      "id": "power-cabinet",
+      "name": "Power Cabinet",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        0.604028,
+        1.208056,
+        0.5285245
+      ],
+      "size_m": [
+        0.9060419999999999,
+        0.9060419999999999,
+        1.057049
+      ],
+      "thermal_thickness_m": 0.003,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "battery-cabinet",
+      "name": "Battery Cabinet",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "glass",
+      "center_m": [
+        2.4916155,
+        2.567119,
+        0.755035
+      ],
+      "size_m": [
+        0.7550350000000003,
+        0.9060420000000002,
+        1.51007
+      ],
+      "thermal_thickness_m": 0.005,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "cable-bay",
+      "name": "Cable Bay",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.3775175,
+        4.3036995000000005,
+        0.755035
+      ],
+      "size_m": [
+        0.453021,
+        1.0570490000000001,
+        1.51007
+      ],
+      "thermal_thickness_m": 0.0006,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "service-baffle",
+      "name": "Service Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        1.4345664999999999,
+        3.473161,
+        0.6795315
+      ],
+      "size_m": [
+        0.4530209999999999,
+        0.604028,
+        1.359063
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "power-cabinet",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.679531,
+        0.830539,
+        1.057049
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "battery-cabinet",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        2.340609,
+        2.944637,
+        1.51007
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "cable-bay",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        0.377518,
+        3.850678,
+        1.51007
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        3.02014,
+        2.416112,
+        2.1140980000000003
+      ],
+      "size_m": [
+        0.0,
+        1.208056,
+        0.906042
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        0.0,
+        2.718126,
+        2.1140980000000003
+      ],
+      "size_m": [
+        0.0,
+        1.51007,
+        0.906042
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.679531,
+    0.830539,
+    1.057049
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

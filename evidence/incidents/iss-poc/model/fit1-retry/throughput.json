@@ -1,0 +1,37 @@
+{
+  "selected_batch_size": 64,
+  "rows": [
+    {
+      "batch_size": 32,
+      "steps": 15,
+      "warmup_steps": 3,
+      "seconds": 0.28100000000017644,
+      "examples_per_second": 1708.1850533797103,
+      "peak_allocator_bytes": 792624640
+    },
+    {
+      "batch_size": 64,
+      "steps": 15,
+      "warmup_steps": 3,
+      "seconds": 0.15600000000017644,
+      "examples_per_second": 6153.846153839194,
+      "peak_allocator_bytes": 881587712
+    },
+    {
+      "batch_size": 128,
+      "steps": 15,
+      "warmup_steps": 3,
+      "seconds": 0.31300000000010186,
+      "examples_per_second": 6134.18530351238,
+      "peak_allocator_bytes": 1057392128
+    },
+    {
+      "batch_size": 256,
+      "steps": 15,
+      "warmup_steps": 3,
+      "seconds": 0.6559999999999491,
+      "examples_per_second": 5853.65853658582,
+      "peak_allocator_bytes": 1413342720
+    }
+  ]
+}

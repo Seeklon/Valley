@@ -4,6 +4,9 @@
 *.glb binary
 *.png binary
 *.xlsx binary
+*.pt binary
+*.npz binary
+*.gz binary
 
 # Preserve archived source bytes and measured hashes, including Windows CRLF.
 data/sources/*.csv -text -whitespace
@@ -12,6 +15,9 @@ evidence/**/*.json -text -whitespace
 evidence/**/*.jsonl -text -whitespace
 evidence/**/*.xml -text -whitespace
 evidence/**/*.fds -text -whitespace
+evidence/**/*.csv -text -whitespace
+evidence/**/*.txt -text -whitespace
+data/predictions/**/index.json -text -whitespace
 tests/physics/evidence/*.json -text -whitespace
 scenes/catalog.json -text
 scenes/generated/*.manifest.json -text -whitespace

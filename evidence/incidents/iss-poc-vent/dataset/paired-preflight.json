@@ -1,0 +1,345 @@
+{
+  "group_count": 1,
+  "contrast_count": 3,
+  "metrics": {
+    "heat": {
+      "tp": 63,
+      "fp": 1,
+      "fn": 1,
+      "valid_sample_pairs": 25452,
+      "reference_change_count": 64,
+      "predicted_change_count": 64,
+      "centroid_eligible_frames": 18,
+      "centroid_missing_prediction_frames": 0,
+      "centroid_compared_frames": 18,
+      "centroid_error_sum_m": 0.2575514756315714,
+      "precision": 0.984375,
+      "recall": 0.984375,
+      "f1": 0.984375,
+      "centroid_displacement_error_mean_m": 0.014308415312865077,
+      "centroid_prediction_coverage": 1.0,
+      "contrast_count": 3,
+      "no_reference_change_contrasts": 0
+    },
+    "smoke": {
+      "tp": 79,
+      "fp": 0,
+      "fn": 2,
+      "valid_sample_pairs": 25452,
+      "reference_change_count": 81,
+      "predicted_change_count": 79,
+      "centroid_eligible_frames": 18,
+      "centroid_missing_prediction_frames": 0,
+      "centroid_compared_frames": 18,
+      "centroid_error_sum_m": 0.2258875870870288,
+      "precision": 1.0,
+      "recall": 0.9753086419753086,
+      "f1": 0.9875,
+      "centroid_displacement_error_mean_m": 0.012549310393723822,
+      "centroid_prediction_coverage": 1.0,
+      "contrast_count": 3,
+      "no_reference_change_contrasts": 0
+    }
+  },
+  "by_family": {
+    "iss-laboratory": {
+      "heat": {
+        "tp": 63,
+        "fp": 1,
+        "fn": 1,
+        "valid_sample_pairs": 25452,
+        "reference_change_count": 64,
+        "predicted_change_count": 64,
+        "centroid_eligible_frames": 18,
+        "centroid_missing_prediction_frames": 0,
+        "centroid_compared_frames": 18,
+        "centroid_error_sum_m": 0.2575514756315714,
+        "precision": 0.984375,
+        "recall": 0.984375,
+        "f1": 0.984375,
+        "centroid_displacement_error_mean_m": 0.014308415312865077,
+        "centroid_prediction_coverage": 1.0,
+        "contrast_count": 3,
+        "no_reference_change_contrasts": 0
+      },
+      "smoke": {
+        "tp": 79,
+        "fp": 0,
+        "fn": 2,
+        "valid_sample_pairs": 25452,
+        "reference_change_count": 81,
+        "predicted_change_count": 79,
+        "centroid_eligible_frames": 18,
+        "centroid_missing_prediction_frames": 0,
+        "centroid_compared_frames": 18,
+        "centroid_error_sum_m": 0.2258875870870288,
+        "precision": 1.0,
+        "recall": 0.9753086419753086,
+        "f1": 0.9875,
+        "centroid_displacement_error_mean_m": 0.012549310393723822,
+        "centroid_prediction_coverage": 1.0,
+        "contrast_count": 3,
+        "no_reference_change_contrasts": 0
+      }
+    }
+  },
+  "pairs": [
+    {
+      "group_id": "iss-laboratory-vent-00-flaming",
+      "contrast": "still_to_slow",
+      "left_id": "iss-laboratory-vent-00-flaming-still",
+      "right_id": "iss-laboratory-vent-00-flaming-slow",
+      "family": "iss-laboratory",
+      "metrics": {
+        "heat": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 0,
+          "valid_sample_pairs": 8484,
+          "reference_change_count": 9,
+          "predicted_change_count": 9,
+          "centroid_eligible_frames": 6,
+          "centroid_missing_prediction_frames": 0,
+          "centroid_compared_frames": 6,
+          "centroid_error_sum_m": 0.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "centroid_displacement_error_mean_m": 0.0,
+          "centroid_prediction_coverage": 1.0
+        },
+        "smoke": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 1,
+          "valid_sample_pairs": 8484,
+          "reference_change_count": 12,
+          "predicted_change_count": 11,
+          "centroid_eligible_frames": 6,
+          "centroid_missing_prediction_frames": 0,
+          "centroid_compared_frames": 6,
+          "centroid_error_sum_m": 0.1129437935435144,
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348,
+          "centroid_displacement_error_mean_m": 0.018823965590585735,
+          "centroid_prediction_coverage": 1.0
+        }
+      }
+    },
+    {
+      "group_id": "iss-laboratory-vent-00-flaming",
+      "contrast": "still_to_fast",
+      "left_id": "iss-laboratory-vent-00-flaming-still",
+      "right_id": "iss-laboratory-vent-00-flaming-fast",
+      "family": "iss-laboratory",
+      "metrics": {
+        "heat": {
+          "tp": 24,
+          "fp": 1,
+          "fn": 0,
+          "valid_sample_pairs": 8484,
+          "reference_change_count": 24,
+          "predicted_change_count": 25,
+          "centroid_eligible_frames": 6,
+          "centroid_missing_prediction_frames": 0,
+          "centroid_compared_frames": 6,
+          "centroid_error_sum_m": 0.1287757378157857,
+          "precision": 0.96,
+          "recall": 1.0,
+          "f1": 0.9795918367346939,
+          "centroid_displacement_error_mean_m": 0.021462622969297615,
+          "centroid_prediction_coverage": 1.0
+        },
+        "smoke": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 1,
+          "valid_sample_pairs": 8484,
+          "reference_change_count": 30,
+          "predicted_change_count": 29,
+          "centroid_eligible_frames": 6,
+          "centroid_missing_prediction_frames": 0,
+          "centroid_compared_frames": 6,
+          "centroid_error_sum_m": 0.1129437935435144,
+          "precision": 1.0,
+          "recall": 0.9666666666666667,
+          "f1": 0.9830508474576272,
+          "centroid_displacement_error_mean_m": 0.018823965590585735,
+          "centroid_prediction_coverage": 1.0
+        }
+      }
+    },
+    {
+      "group_id": "iss-laboratory-vent-00-flaming",
+      "contrast": "fast_to_reverse",
+      "left_id": "iss-laboratory-vent-00-flaming-fast",
+      "right_id": "iss-laboratory-vent-00-flaming-reverse",
+      "family": "iss-laboratory",
+      "metrics": {
+        "heat": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 1,
+          "valid_sample_pairs": 8484,
+          "reference_change_count": 31,
+          "predicted_change_count": 30,
+          "centroid_eligible_frames": 6,
+          "centroid_missing_prediction_frames": 0,
+          "centroid_compared_frames": 6,
+          "centroid_error_sum_m": 0.1287757378157857,
+          "precision": 1.0,
+          "recall": 0.967741935483871,
+          "f1": 0.9836065573770492,
+          "centroid_displacement_error_mean_m": 0.021462622969297615,
+          "centroid_prediction_coverage": 1.0
+        },
+        "smoke": {
+          "tp": 39,
+          "fp": 0,
+          "fn": 0,
+          "valid_sample_pairs": 8484,
+          "reference_change_count": 39,
+          "predicted_change_count": 39,
+          "centroid_eligible_frames": 6,
+          "centroid_missing_prediction_frames": 0,
+          "centroid_compared_frames": 6,
+          "centroid_error_sum_m": 0.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "centroid_displacement_error_mean_m": 0.0,
+          "centroid_prediction_coverage": 1.0
+        }
+      }
+    }
+  ],
+  "alignment": {
+    "iss-laboratory-vent-00-flaming": {
+      "common_time_s": [
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0
+      ],
+      "out_of_domain_time_s": [],
+      "cases": {
+        "iss-laboratory-vent-00-flaming-still": {
+          "gap_rejected_times_s": [],
+          "valid_sample_channels_by_time": [
+            2828,
+            2828,
+            2828,
+            2828,
+            2828,
+            2828
+          ],
+          "valid_sample_channels": 16968
+        },
+        "iss-laboratory-vent-00-flaming-slow": {
+          "gap_rejected_times_s": [],
+          "valid_sample_channels_by_time": [
+            2828,
+            2828,
+            2828,
+            2828,
+            2828,
+            2828
+          ],
+          "valid_sample_channels": 16968
+        },
+        "iss-laboratory-vent-00-flaming-fast": {
+          "gap_rejected_times_s": [],
+          "valid_sample_channels_by_time": [
+            2828,
+            2828,
+            2828,
+            2828,
+            2828,
+            2828
+          ],
+          "valid_sample_channels": 16968
+        },
+        "iss-laboratory-vent-00-flaming-reverse": {
+          "gap_rejected_times_s": [],
+          "valid_sample_channels_by_time": [
+            2828,
+            2828,
+            2828,
+            2828,
+            2828,
+            2828
+          ],
+          "valid_sample_channels": 16968
+        }
+      }
+    }
+  },
+  "requested_time_s": [
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0,
+    30.0
+  ],
+  "maximum_interpolation_gap_s": 2.5,
+  "semantics": "Signed change of affected sampled regions at common physical times",
+  "resampling": "Approximation: linear physical fields before thresholding and linear class scores; no extrapolation; both bracket masks required unless exact observation",
+  "centroid_semantics": "Binary-region centroid displacement error in meters; missing predictions reported",
+  "prediction_recomputed": false,
+  "checked_at": "2026-11-15T14:51:08.101598+00:00",
+  "split": "train",
+  "score_origin": "ARTIFICIAL plumbing check only: 0.8 * thresholded FDS TRAIN truth + 0.1",
+  "is_model_evaluation": false,
+  "no_training": true,
+  "gpu_used": false,
+  "test_observations_read": false,
+  "original_observation_timing": {
+    "iss-laboratory-vent-00-flaming-still": {
+      "frames": 21,
+      "last_time_s": 30.0,
+      "maximum_gap_s": 1.5153000000000034,
+      "integer_timestamps_only": false
+    },
+    "iss-laboratory-vent-00-flaming-slow": {
+      "frames": 31,
+      "last_time_s": 30.0,
+      "maximum_gap_s": 1.3912078999999995,
+      "integer_timestamps_only": false
+    },
+    "iss-laboratory-vent-00-flaming-fast": {
+      "frames": 31,
+      "last_time_s": 30.0,
+      "maximum_gap_s": 1.1772209999999994,
+      "integer_timestamps_only": false
+    },
+    "iss-laboratory-vent-00-flaming-reverse": {
+      "frames": 31,
+      "last_time_s": 30.0,
+      "maximum_gap_s": 1.0835181,
+      "integer_timestamps_only": false
+    }
+  },
+  "source_hashes": {
+    "iss-laboratory-vent-00-flaming-still": {
+      "fields.npz": "afe2073e20de8966c730e498334f238aa419fecdf37e407f67df373d4ad52cfc",
+      "manifest.json": "39abd665c58e48ebde9947df29448270a7de01beeb07e9724dfe657df0419d97"
+    },
+    "iss-laboratory-vent-00-flaming-slow": {
+      "fields.npz": "80683117e9f6a1705fe56b43674130b553977c810e2fc7a7d80764479805ab14",
+      "manifest.json": "7f104c47a2c69f8803dd8f089b303684c5d19fb282d8ad02ce87400a4b1f1ac2"
+    },
+    "iss-laboratory-vent-00-flaming-fast": {
+      "fields.npz": "2ef49bf6eca4347eed493121479e9289a8028b6014d109a1d3ae88c143ff612d",
+      "manifest.json": "c634d8d4188f20ff9001d9412af2c98ca63bc7ee70cf3551780c90e695ceb3f0"
+    },
+    "iss-laboratory-vent-00-flaming-reverse": {
+      "fields.npz": "b959d07b433bcc2e952de5de9eef38eecdfadd49207ab169fc5dd24ad4e9ea70",
+      "manifest.json": "c6a0dfaa665acee38aa27be65d8fed1349c10d243471274e0e73cc28fa414b9b"
+    }
+  },
+  "helper_sha256": "a8b55f57e1b76c3c27285b8d149410ab9cd0c9fda2eac1e0fe00e41b89890b10"
+}

@@ -1,0 +1,8 @@
+{
+  "case_id": "iss-laboratory-v04-flame",
+  "dataset_id": "iss-poc-20261115-v1",
+  "file_hashes": {
+    "scene.json": "2eca59e5e9cbc61a2d21d6072a5733c2735fb08ae00cb5af7bf5cc03d674b257",
+    "config.json": "48371830c9a4f491f87660b9127c8074543fe2d7241226cc30818fd13fc058cc"
+  }
+}

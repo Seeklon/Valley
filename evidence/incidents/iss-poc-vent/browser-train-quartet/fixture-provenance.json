@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-11-15T15:12:16.582729+00:00",
+  "stage": "/tmp/ignis-iss-vent-ui-20261115-fgya9gyr",
+  "scope": "Five real TRAIN replay files, unchanged bytes; filtered local index with no partition metrics. No publication.",
+  "model_id": "iss-heat-smoke-poc-20261115",
+  "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+  "source_index_sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e",
+  "fixture_index_sha256": "369017cb14cf97f168389637dcd132fa4a2b9b566bb13ff61a57f13e3e9b97f1",
+  "case_sha256": {
+    "iss-laboratory-vent-00-flaming-still": "59220d0624588f775d79438084664498fd2ffd6aab5302bb5cd2db2439285de0",
+    "iss-laboratory-vent-00-flaming-slow": "7e278d50ee0d015af05e20e88749f0d90ed7eb810d33d9818caef0c80427e8de",
+    "iss-laboratory-vent-00-flaming-fast": "b363e2e127a9545f0a6bb29ad8a41b23191e92e1d7a47b5a9175dfd32c159ffb",
+    "iss-laboratory-vent-00-flaming-reverse": "b042f49ee81c093c7c929a0ebed241d04de92d83c1a7b94d7564e961a79a61d4",
+    "iss-laboratory-vent-00-control": "78ce7ddafe268daafd16cf6008ce287105bcc2750723436c03b835b1c8774ef3"
+  },
+  "browser_check_sha256": "9fdccc352bcbbd23c39e3e2a4c3317afa519840fda9780d84ef01561df6c1a8e"
+}

@@ -1,0 +1,7 @@
+{
+  "path": "E:\\IGNIS-Valley-dev\\runtime\\compute.lock",
+  "owner_pid": 7408,
+  "mechanism": "OS-owned exclusive ProcessLock",
+  "scope": "entire verified retraining, evaluation and export",
+  "acquired_before_cuda": true
+}

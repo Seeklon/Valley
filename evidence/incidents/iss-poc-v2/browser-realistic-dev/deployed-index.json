@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-15T14:28:36.679146+00:00",
+  "url": "https://desktop-m4hkr86.tail609f26.ts.net:8444/poc/iss/index.json",
+  "sha256": "94d4c81e9ec55a9178f3d004ad52ece238d67faf9b6318e88aa17664bd68a5a7",
+  "expected_sha256": "94d4c81e9ec55a9178f3d004ad52ece238d67faf9b6318e88aa17664bd68a5a7",
+  "matches": true,
+  "model_id": "iss-heat-smoke-poc-20261115",
+  "cases": 384,
+  "modules": [
+    "habitat-capsule",
+    "habitat-cargo",
+    "habitat-central-racks",
+    "iss-laboratory",
+    "iss-node",
+    "iss-service"
+  ]
+}

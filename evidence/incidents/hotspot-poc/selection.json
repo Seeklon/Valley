@@ -1,0 +1,23 @@
+{
+  "selected_at": "2026-11-14T21:37:28.371629+00:00",
+  "selected_run": "fit1",
+  "criterion": "mean_microgravity_earth_f1",
+  "selection_split": "validation",
+  "selection_threshold": "one common classifier threshold selected on validation",
+  "candidates": {
+    "fit1": {
+      "value": 0.32498506219177625,
+      "step": 4000,
+      "threshold": 0.9478464126586914,
+      "state_sha256": "a7e47b7a18f7ea45f29a115c935c955d13f8fdf7cd4db526643e93e5055e487b"
+    },
+    "fit2": {
+      "value": 0.31813892008446826,
+      "step": 750,
+      "threshold": 0.9820137619972229,
+      "state_sha256": "6fb29daf79c75bca8ff7cfc705ed1cb64773d0fd34efa36d81fde0103eaa9a95"
+    }
+  },
+  "historical_test_metrics_used_for_selection": false,
+  "additional_fits_authorized_after_this_selection": 0
+}

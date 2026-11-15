@@ -1,0 +1,56 @@
+{
+  "source": "E:/IGNIS-WeightSurgery/20261115T143809Z/results/report.json",
+  "source_sha256": "89557b64b741e4afd563089793ed1108ae783167a0960978570826a13d1b3d5d",
+  "scope": "Read-only interpretation of another completed experiment; no re-execution, no new test selection",
+  "selected_intervention": {
+    "id": "vent-scale-075",
+    "kind": "ventilation_scale",
+    "value": 0.75
+  },
+  "deployed": false,
+  "historical_test_microgravity": {
+    "original_recalibrated": {
+      "heat": {
+        "f1": 0.4845147969717825,
+        "precision": 0.45076835515082525,
+        "recall": 0.5237229294098198
+      },
+      "smoke": {
+        "f1": 0.5429775754510201,
+        "precision": 0.4787417494202295,
+        "recall": 0.6271226047670977
+      }
+    },
+    "edited_recalibrated": {
+      "heat": {
+        "f1": 0.49234653621587504,
+        "precision": 0.47094339622641507,
+        "recall": 0.515787733509671
+      },
+      "smoke": {
+        "f1": 0.5404324544160509,
+        "precision": 0.4783417326613871,
+        "recall": 0.6210468920392584
+      }
+    }
+  },
+  "paired_bootstrap": {
+    "heat": {
+      "layout_count": 12,
+      "resamples": 2000,
+      "paired_f1_delta_95_percentile_interval": [
+        -0.004862564448041432,
+        0.02441966277964385
+      ]
+    },
+    "smoke": {
+      "layout_count": 12,
+      "resamples": 2000,
+      "paired_f1_delta_95_percentile_interval": [
+        -0.009289669270117918,
+        0.005356284892398425
+      ]
+    }
+  },
+  "interpretation": "The selected edit did not improve recall in either channel on the historical test. Both F1 change intervals include zero. This does not evaluate the newly proposed targeted channel and local-connection ablations."
+}

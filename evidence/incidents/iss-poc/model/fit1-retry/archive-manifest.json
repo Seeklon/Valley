@@ -1,0 +1,10 @@
+{
+  "archive": "E:\\IGNIS-Valley-dev\\runtime\\iss-poc\\20261115\\fit1-retry.zip",
+  "sha256": "82ac5163789d19938f6968661250ecb54080fff4cdf7a3247e9e546f65261aad",
+  "bytes": 126456840,
+  "fit_file_count": 161,
+  "uncompressed_fit_bytes": 515681806,
+  "model_sha256": "6ab66833116e2b5b1a514a4cf2fa9095e370a38f93a946f9d497fabc4dbd3392",
+  "dataset_sha256": "886535ae37231e4da51645cbb6590acab8c00a484c5151272e4e8e4657f09e69",
+  "source_count": 10
+}

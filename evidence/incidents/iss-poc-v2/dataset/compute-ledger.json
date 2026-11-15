@@ -1,0 +1,23 @@
+{
+  "dataset_id": "iss-poc-20261115-v2",
+  "status": "completed_verified",
+  "pilot_wall_time_s": 49.609,
+  "full_campaign_active_wall_time_s": 1383.453,
+  "total_active_generation_wall_time_s": 1433.062,
+  "first_launch_to_generation_exit_wall_s": 1558.723,
+  "first_launch_to_verified_wall_s": 1574.759,
+  "budget_s": 1800,
+  "wall_budget_exceeded": false,
+  "workers": 4,
+  "threads_per_solver": 1,
+  "execution_device": "CPU FDS",
+  "gpu_training_included": false,
+  "cases": 384,
+  "layouts": 48,
+  "verified_artifacts": 2688,
+  "stored_bytes": 1334501546,
+  "verified_at": "2026-11-15T14:06:33.822623+00:00",
+  "dataset_manifest_sha256": "6004eb0f27862106230e6f043fd5963b4da3ce28414b0559b94ca35724757a6f",
+  "sum_case_solver_parse_seconds": 4782.7930000000015,
+  "test_labels_summarized": false
+}

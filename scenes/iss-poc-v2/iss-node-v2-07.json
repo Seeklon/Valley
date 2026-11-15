@@ -1,0 +1,195 @@
+{
+  "id": "iss-node-v2-07",
+  "name": "Node · v2 8",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.56664,
+    3.56664,
+    3.56664
+  ],
+  "geometry_family": "iss-node",
+  "objects": [
+    {
+      "id": "avionics-port",
+      "name": "Avionics Port",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.6687449999999999,
+        0.965965,
+        0.520135
+      ],
+      "size_m": [
+        1.04027,
+        1.04027,
+        1.04027
+      ],
+      "thermal_thickness_m": 0.005,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "avionics-starboard",
+      "name": "Avionics Starboard",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        2.9722,
+        2.7492850000000004,
+        0.74305
+      ],
+      "size_m": [
+        0.8916599999999999,
+        1.04027,
+        1.4861
+      ],
+      "thermal_thickness_m": 0.0006,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "utility-bay",
+      "name": "Utility Bay",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        0.520135,
+        2.600675,
+        0.520135
+      ],
+      "size_m": [
+        0.74305,
+        1.04027,
+        1.04027
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "hatch-baffle",
+      "name": "Hatch Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "aluminium",
+      "center_m": [
+        1.78332,
+        2.8235900000000003,
+        0.74305
+      ],
+      "size_m": [
+        0.2972199999999998,
+        0.5944400000000001,
+        1.4861
+      ],
+      "thermal_thickness_m": 0.002
+    },
+    {
+      "id": "passage-baffle",
+      "name": "Passage Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        1.857625,
+        0.668745,
+        0.59444
+      ],
+      "size_m": [
+        0.44582999999999995,
+        0.44583,
+        1.18888
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "avionics-port",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.222915,
+        0.520135,
+        1.04027
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        3.195115,
+        3.195115,
+        1.4861
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "utility-bay",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        0.520135,
+        2.749285,
+        1.04027
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        0.0,
+        1.6347099999999999,
+        2.2291499999999997
+      ],
+      "size_m": [
+        0.0,
+        1.18888,
+        0.8916599999999999
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        3.56664,
+        1.7833199999999998,
+        2.2291499999999997
+      ],
+      "size_m": [
+        0.0,
+        1.4861,
+        0.8916599999999999
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.222915,
+    0.520135,
+    1.04027
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

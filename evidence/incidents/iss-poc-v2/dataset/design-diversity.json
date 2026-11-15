@@ -1,0 +1,132 @@
+{
+  "dataset_id": "iss-poc-20261115-v2",
+  "plan_sha256": "97f77e5111e53f79b2a1392587de2075438ea3ba2e86a6b0b4ef4b09fa3254bd",
+  "physical_layouts": 48,
+  "normalized_layouts": 48,
+  "v1_physical_overlap": 0,
+  "v1_normalized_overlap": 0,
+  "layouts_by_family": {
+    "iss-laboratory": 8,
+    "iss-node": 8,
+    "iss-service": 8,
+    "habitat-cargo": 8,
+    "habitat-capsule": 8,
+    "habitat-central-racks": 8
+  },
+  "case_split_counts": {
+    "train": 240,
+    "validation": 48,
+    "test": 96
+  },
+  "electrical_sites": 144,
+  "inlet_directions": [
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "thermal_thicknesses_m": [
+    0.0006,
+    0.001,
+    0.0018,
+    0.002,
+    0.003,
+    0.005
+  ],
+  "support_materials": [
+    "aluminium",
+    "glass",
+    "insulation",
+    "steel"
+  ],
+  "combustible_coatings": [
+    "none",
+    "cellulose",
+    "pmma"
+  ],
+  "airflows_m_s": [
+    0.04,
+    0.06,
+    0.08,
+    0.12,
+    0.16,
+    0.18,
+    0.22,
+    0.28,
+    0.3,
+    0.34
+  ],
+  "source_powers_w": [
+    0,
+    400.0,
+    466.6666666666667,
+    533.3333333333334,
+    666.6666666666666,
+    800.0,
+    866.6666666666666,
+    1066.6666666666667,
+    1200,
+    1266.6666666666667,
+    1333.3333333333333,
+    1400,
+    1466.6666666666667,
+    1600,
+    2000,
+    2400,
+    2600,
+    3200,
+    3800,
+    4000,
+    4400
+  ],
+  "source_durations_s": [
+    0,
+    2,
+    4,
+    6,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28
+  ],
+  "source_delays_s": [
+    0,
+    2,
+    4
+  ],
+  "cell_counts": [
+    13824,
+    15360,
+    17280
+  ],
+  "source_types": {
+    "flaming": 144,
+    "battery": 48,
+    "smoldering": 48,
+    "overheating": 96,
+    "arc": 48
+  },
+  "train_validation_test_labels_read": false
+}

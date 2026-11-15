@@ -1,0 +1,11 @@
+{
+  "selected_at": "2026-11-14T21:29:01.851766+00:00",
+  "step": 4000,
+  "threshold": 0.9478464126586914,
+  "selection_metric": "mean_microgravity_earth_f1",
+  "value": 0.32498506219177625,
+  "selection_split": "validation",
+  "state_sha256": "a7e47b7a18f7ea45f29a115c935c955d13f8fdf7cd4db526643e93e5055e487b",
+  "baseline_threshold": 0.8021838665008545,
+  "test_labels_used_for_selection": false
+}

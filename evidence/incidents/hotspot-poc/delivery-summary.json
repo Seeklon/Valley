@@ -1,0 +1,39 @@
+{
+  "completed_at": "2026-11-14T21:47:34.287169+00:00",
+  "scope": "DEV-only heat hotspot POC",
+  "url": "https://desktop-m4hkr86.tail609f26.ts.net:8444/#poc",
+  "model_id": "hotspot-poc-20261114",
+  "selected_run": "fit1",
+  "gpu_compute_seconds_total": 561.625,
+  "new_fds_scenarios": 0,
+  "tests": {
+    "frontend": 82,
+    "model_windows": 17,
+    "independent_verifier": 8,
+    "browser_checks": 8
+  },
+  "replays_independently_verified": 200,
+  "browser_errors": [],
+  "write_requests_during_demo": [],
+  "records": [
+    "selection.json",
+    "artifacts.json",
+    "review.md",
+    "checks.json",
+    "export-verification.json",
+    "dev-delivery.json",
+    "services-after-delivery.json",
+    "browser/browser-report.json",
+    "browser/presentation-check.json"
+  ],
+  "limitations": [
+    "Synthetic FDS labels, no NASA experimental validation",
+    "Heat class only; source imposed; no ignition probability or ML smoke",
+    "Historical test already consulted",
+    "Not a generalist or operational safety model"
+  ],
+  "presentation_check": {
+    "play_pause_verified": true,
+    "nasa_source_cards": 3
+  }
+}

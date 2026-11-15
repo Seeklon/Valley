@@ -1,0 +1,195 @@
+{
+  "id": "habitat-cargo-v2-02",
+  "name": "Habitat-Cargo · v2 3",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.39552,
+    4.52736,
+    2.8296
+  ],
+  "geometry_family": "habitat-cargo",
+  "objects": [
+    {
+      "id": "cargo-port-forward",
+      "name": "Cargo Port Forward",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        0.63666,
+        0.63666,
+        0.56592
+      ],
+      "size_m": [
+        0.7074,
+        0.9903599999999999,
+        1.13184
+      ],
+      "thermal_thickness_m": 0.003,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "cargo-starboard-forward",
+      "name": "Cargo Starboard Forward",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        2.68812,
+        0.7074,
+        0.56592
+      ],
+      "size_m": [
+        0.8488800000000003,
+        1.13184,
+        1.13184
+      ],
+      "thermal_thickness_m": 0.005,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "cargo-port-aft",
+      "name": "Cargo Port Aft",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "glass",
+      "center_m": [
+        0.77814,
+        3.46626,
+        0.91962
+      ],
+      "size_m": [
+        0.99036,
+        0.9903599999999999,
+        1.83924
+      ],
+      "thermal_thickness_m": 0.0006
+    },
+    {
+      "id": "cargo-starboard-aft",
+      "name": "Cargo Starboard Aft",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        2.61738,
+        3.7492199999999998,
+        0.42444
+      ],
+      "size_m": [
+        0.9903600000000004,
+        0.9903599999999999,
+        0.84888
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "cargo-divider",
+      "name": "Cargo Divider",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        1.4148,
+        2.19294,
+        0.49518
+      ],
+      "size_m": [
+        0.2829600000000001,
+        0.42443999999999993,
+        0.99036
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "cargo-port-forward",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.49518,
+        1.0611,
+        1.13184
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "cargo-starboard-forward",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        2.75886,
+        0.49518,
+        1.13184
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "cargo-port-aft",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        1.0611,
+        3.60774,
+        1.83924
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        1.69776,
+        0.0,
+        1.9807199999999998
+      ],
+      "size_m": [
+        1.4148,
+        0.0,
+        1.13184
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        1.4148,
+        4.52736,
+        1.9807199999999998
+      ],
+      "size_m": [
+        0.84888,
+        0.0,
+        1.13184
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.49518,
+    1.0611,
+    1.13184
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

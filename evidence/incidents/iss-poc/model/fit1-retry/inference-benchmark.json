@@ -1,0 +1,25 @@
+{
+  "case_id": "iss-laboratory-v04-flame",
+  "split": "validation",
+  "frames": 31,
+  "points_per_frame": 1536,
+  "cpu_threads": 4,
+  "cpu_checkpoint_load_seconds": 0.012561900000036985,
+  "cpu_first_trajectory_seconds": 0.10457170000017868,
+  "cpu_warm_trajectory_seconds": [
+    0.08357580000028975,
+    0.08090949999996155,
+    0.08177840000007564
+  ],
+  "gpu_warm_trajectory_seconds": [
+    0.06695529999979044,
+    0.10318300000017189,
+    0.28078709999999774
+  ],
+  "cpu_warm_median_seconds": 0.08177840000007564,
+  "gpu_warm_median_seconds": 0.10318300000017189,
+  "cpu_gpu_max_score_difference": 0.0012293457984924316,
+  "cpu_gpu_class_disagreements": 0,
+  "timing_scope": "full trajectory input preparation and inference; CPU load separate, GPU model already loaded; no FDS runtime included",
+  "fds_comparison": "Compare separately with this case's measured FDS wall time from dataset generation, not its simulated duration."
+}

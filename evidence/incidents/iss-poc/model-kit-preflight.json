@@ -1,0 +1,22 @@
+{
+  "weights_sha256": "6ab66833116e2b5b1a514a4cf2fa9095e370a38f93a946f9d497fabc4dbd3392",
+  "shape": [
+    5,
+    1536,
+    2
+  ],
+  "outputs": [
+    "heat",
+    "smoke"
+  ],
+  "semantics": "uncalibrated_spatial_class_scores",
+  "output": "E:\\IGNIS-Valley-dev\\runtime\\iss-model-kit-20261115T134607Z\\prediction.npz",
+  "checked_at": "20261115T134607Z",
+  "archive_sha256": "486aa0860b75723fd42e07d4f7132b4cdd60819de59e1620c17aafad351c9cc8",
+  "remote_directory": "E:/IGNIS-Valley-dev/runtime/iss-model-kit-20261115T134607Z",
+  "no_training": true,
+  "device": "cpu",
+  "fresh_inference_from_scene_and_conditions": true,
+  "example_case_id": "iss-laboratory-v04-flame",
+  "unseen_geometry_claim": false
+}

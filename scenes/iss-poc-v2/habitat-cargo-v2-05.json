@@ -1,0 +1,195 @@
+{
+  "id": "habitat-cargo-v2-05",
+  "name": "Habitat-Cargo · v2 6",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.843672,
+    5.124896,
+    3.20306
+  ],
+  "geometry_family": "habitat-cargo",
+  "objects": [
+    {
+      "id": "cargo-port-forward",
+      "name": "Cargo Port Forward",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        0.9609179999999999,
+        0.9609179999999999,
+        1.0409945
+      ],
+      "size_m": [
+        1.281224,
+        1.281224,
+        2.081989
+      ],
+      "thermal_thickness_m": 0.001,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "cargo-starboard-forward",
+      "name": "Cargo Starboard Forward",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        3.1229835,
+        0.9609179999999999,
+        1.0409945
+      ],
+      "size_m": [
+        0.8007650000000002,
+        1.281224,
+        2.081989
+      ],
+      "thermal_thickness_m": 0.0018,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "cargo-port-aft",
+      "name": "Cargo Port Aft",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "insulation",
+      "center_m": [
+        0.9609179999999999,
+        4.0839015,
+        0.480459
+      ],
+      "size_m": [
+        1.281224,
+        1.1210709999999997,
+        0.960918
+      ],
+      "thermal_thickness_m": 0.003,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "cargo-starboard-aft",
+      "name": "Cargo Starboard Aft",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "glass",
+      "center_m": [
+        3.042907,
+        4.163978,
+        0.480459
+      ],
+      "size_m": [
+        0.9609180000000004,
+        0.9609179999999999,
+        0.960918
+      ],
+      "thermal_thickness_m": 0.005
+    },
+    {
+      "id": "cargo-divider",
+      "name": "Cargo Divider",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "aluminium",
+      "center_m": [
+        1.60153,
+        2.4823715,
+        0.4003825
+      ],
+      "size_m": [
+        0.3203060000000002,
+        0.4804590000000002,
+        0.800765
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "cargo-port-forward",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        1.201147,
+        0.880841,
+        2.081989
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "cargo-starboard-forward",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        2.802677,
+        0.560535,
+        2.081989
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "cargo-port-aft",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        1.201147,
+        4.404208,
+        0.960918
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        0.0,
+        2.722601,
+        2.4022949999999996
+      ],
+      "size_m": [
+        0.0,
+        1.60153,
+        1.281224
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        3.843672,
+        2.4022949999999996,
+        2.4022949999999996
+      ],
+      "size_m": [
+        0.0,
+        0.9609179999999999,
+        1.281224
+      ],
+      "normal": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    1.201147,
+    0.880841,
+    2.081989
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}

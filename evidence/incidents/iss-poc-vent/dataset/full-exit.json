@@ -1,0 +1,1 @@
+{"pid": 3188, "exit_code": 0, "started_utc": "2026-11-15T14:48:31.607850+00:00", "exited_utc": "2026-11-15T15:02:20.735871+00:00", "elapsed_generation_and_audit_s": 829.125, "absolute_deadline_utc": "2026-11-15T15:07:00.001981+00:00", "lock_wait_s": 123.827209, "elapsed_from_first_launch_s": 1044.561099}

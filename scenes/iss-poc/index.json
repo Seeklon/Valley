@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "dataset_id": "iss-poc-20261115-v1",
+  "provenance": [
+    "Synthetic original simplified compartments, not measured ISS geometry",
+    "Prescribed electrical incident equivalents, not electrical fault or ignition probability",
+    "Coarse FDS and assumed material/soot parameters, not NASA validation"
+  ],
+  "scenes": [
+    {
+      "id": "iss-laboratory-v00",
+      "family": "iss-laboratory",
+      "split": "train",
+      "url": "iss-laboratory-v00.json"
+    },
+    {
+      "id": "iss-node-v00",
+      "family": "iss-node",
+      "split": "train",
+      "url": "iss-node-v00.json"
+    },
+    {
+      "id": "iss-service-v00",
+      "family": "iss-service",
+      "split": "train",
+      "url": "iss-service-v00.json"
+    },
+    {
+      "id": "iss-laboratory-v01",
+      "family": "iss-laboratory",
+      "split": "train",
+      "url": "iss-laboratory-v01.json"
+    },
+    {
+      "id": "iss-node-v01",
+      "family": "iss-node",
+      "split": "train",
+      "url": "iss-node-v01.json"
+    },
+    {
+      "id": "iss-service-v01",
+      "family": "iss-service",
+      "split": "train",
+      "url": "iss-service-v01.json"
+    },
+    {
+      "id": "iss-laboratory-v02",
+      "family": "iss-laboratory",
+      "split": "train",
+      "url": "iss-laboratory-v02.json"
+    },
+    {
+      "id": "iss-node-v02",
+      "family": "iss-node",
+      "split": "train",
+      "url": "iss-node-v02.json"
+    },
+    {
+      "id": "iss-service-v02",
+      "family": "iss-service",
+      "split": "train",
+      "url": "iss-service-v02.json"
+    },
+    {
+      "id": "iss-laboratory-v03",
+      "family": "iss-laboratory",
+      "split": "train",
+      "url": "iss-laboratory-v03.json"
+    },
+    {
+      "id": "iss-node-v03",
+      "family": "iss-node",
+      "split": "train",
+      "url": "iss-node-v03.json"
+    },
+    {
+      "id": "iss-service-v03",
+      "family": "iss-service",
+      "split": "train",
+      "url": "iss-service-v03.json"
+    },
+    {
+      "id": "iss-laboratory-v04",
+      "family": "iss-laboratory",
+      "split": "validation",
+      "url": "iss-laboratory-v04.json"
+    },
+    {
+      "id": "iss-node-v04",
+      "family": "iss-node",
+      "split": "validation",
+      "url": "iss-node-v04.json"
+    },
+    {
+      "id": "iss-service-v04",
+      "family": "iss-service",
+      "split": "validation",
+      "url": "iss-service-v04.json"
+    },
+    {
+      "id": "iss-laboratory-v05",
+      "family": "iss-laboratory",
+      "split": "test",
+      "url": "iss-laboratory-v05.json"
+    },
+    {
+      "id": "iss-node-v05",
+      "family": "iss-node",
+      "split": "test",
+      "url": "iss-node-v05.json"
+    },
+    {
+      "id": "iss-service-v05",
+      "family": "iss-service",
+      "split": "test",
+      "url": "iss-service-v05.json"
+    }
+  ]
+}

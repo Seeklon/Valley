@@ -1,0 +1,27 @@
+{
+  "case_id": "iss-laboratory-v04-thermal",
+  "case_sha256": "ac421a42374694adeb286ac39e6878dc477a0bb6e533dbd30556e5a5991c1ec0",
+  "camera_samples": [
+    {
+      "label": "before",
+      "physical_xyz_m": [
+        1.8,
+        0.18,
+        1.95
+      ],
+      "inside_domain": true,
+      "colliding_proxies_with_0_1m_margin": []
+    },
+    {
+      "label": "after+1000ms",
+      "physical_xyz_m": [
+        1.863186,
+        0.316043,
+        1.95
+      ],
+      "inside_domain": true,
+      "colliding_proxies_with_0_1m_margin": []
+    }
+  ],
+  "movement_observed_m": 0.15000056148228247
+}

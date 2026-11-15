@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "prepared_at_utc": "2026-11-15T14:43:00.203578+00:00",
+  "source_checkpoint": "E:\\IGNIS-Valley-dev\\runtime\\iss-poc-v2\\20261115\\fit1\\weights.pt",
+  "source_sha256": "37bf3e0c5394cbe52fe520ebf85cbf393cd9b4203751d5b1db5c0c79641f987a",
+  "remote_root": "E:\\IGNIS-WeightSurgery\\20261115T143809Z",
+  "dataset": "E:/IGNIS-Valley-dev/datasets/iss-poc-20261115-v2",
+  "shared_compute_lock": "E:/IGNIS-Valley-dev/runtime/compute.lock",
+  "surgeon_compute_lock": "C:/Users/thoma/AppData/Local/WeightSurgeon/jobs/GPU.lock",
+  "max_seconds": 600,
+  "source_hashes": {
+    "app/backend/ignis/__init__.py": "1928a6ef7617d0f1f8a70518902f3208b998606109377177fe703e23214b7706",
+    "app/backend/ignis/api.py": "a37748d31ffbf86e016fc6e0bccf3b8cb1420cb84a9fe46cff4021f6eff3003e",
+    "app/backend/ignis/campaigns.py": "c65346a5af5684bd8fbda9f13286f4f93fb41a071bd6a707ec120aa6dab588d9",
+    "app/backend/ignis/cli.py": "6f188a87b3666739e59deca964adf66724b6761f612fbbeb91c27f713fee5624",
+    "app/backend/ignis/config.py": "241432532e9b172dd6d4284e4dabfa6fb555c4ec1d814d1fffb74d1453ad45a7",
+    "app/backend/ignis/engine.py": "5c714d979c9d8ea2561f0a9ee584335c32231f1c29da86fd71db5723eac20f1f",
+    "app/backend/ignis/incidents.py": "7dff6878e66fa04efe9a1353393da69dbe7053beff38061d21a8eee18fdde313",
+    "app/backend/ignis/knowledge.py": "d329ccace32c9c0cd22b959d60d38e85598cda2a64c7b71258ecb6d4c51b0c9d",
+    "app/backend/ignis/locking.py": "a339661f95b7df226cbc993cd3b7679db5523d1bb11d6aa05e10c74a9ab2fcde",
+    "app/backend/ignis/ml/__init__.py": "1aff313e5ee7056f90e3884c92f316aff0b359f7de304fbe9c5cfca690d10d2f",
+    "app/backend/ignis/ml/features.py": "d6f605fc5f961cae88baf36c66f37787ec4ee8053991037bfa6ada465a37e4ac",
+    "app/backend/ignis/ml/incidents.py": "6a1678f17ff59a034b84f6c67ac7216ea173ba8dfd2eff1a895b3b2cfb136ed4",
+    "app/backend/ignis/ml/registry.py": "64394fe599476d58107609a58194d811b385fb30435d32d17312fa50c7d3ee74",
+    "app/backend/ignis/ml/spatial_dataset.py": "882c00bada16e86ba6ddba69c22239f06bc199ac66151f7ed9dad8fe9c6629f6",
+    "app/backend/ignis/ml/spatial_network.py": "d03c25cc2aafd90c437222c83bd432bb227fb2fd53bd4100ceee8137b166f1b7",
+    "app/backend/ignis/ml/spatial_training.py": "a4db8937de05582a67e9febe224caeef29be46c2022dd11c30ed45e2f6092c73",
+    "app/backend/ignis/ml/surrogate.py": "657f764fa4542b1bbbc1de9df7521d51c4bf6439ce57ede2a3599dac28210051",
+    "app/backend/ignis/physics/__init__.py": "9707ac77ec8ba26fffa4a037b2a65fb1e11816fd201d847e8f0aec67d0df2ab0",
+    "app/backend/ignis/physics/__main__.py": "4c2c5e81bac811359027edc8b09c74a261efd41ec253b56343c2adec93a43f54",
+    "app/backend/ignis/physics/compiler.py": "ea452085ae97276135c71c63171879695e635fbdc83836ccf44d8b8c2fb54a16",
+    "app/backend/ignis/physics/incidents.py": "5246f76018711f50d353abf317d5fd36a48632d7f8af6134d452ec0b6a9a05d4",
+    "app/backend/ignis/physics/materials.py": "13b2eaa4eca452bb296f6006f24251670dcce05f9cc53efd2b5bc7e46998ee48",
+    "app/backend/ignis/physics/parser.py": "7dafe7a1541592eed116a76a9f01e7a485552a1265c7def1e7109f07e7fd8032",
+    "app/backend/ignis/physics/verification.py": "e708c271712f53e3843bf16554801113c0e0693450694e495c61c2852801dfce",
+    "app/backend/ignis/preignition/__init__.py": "e89846e8f4d6ced8f6126e872aaa50f00f6dc8afccc5c7c3b7b4b2d543b92419",
+    "app/backend/ignis/preignition/evidence.py": "baa824ae7c9ae75e1529a6579f1ff6a5ccec4f02ea3f8b22daa3d417ea109938",
+    "app/backend/ignis/preignition/learning.py": "10ff6b01bec29e46f26f4d2ecfa2a3a01d4b767586e4a797796857a8a0857bf6",
+    "app/backend/ignis/preignition/materials.py": "1dc9745461fc22697ee894dfa7359a1815d2a628803b690118f0cf026669cdb9",
+    "app/backend/ignis/preignition/routes.py": "e59f2c732e6c75a326e18ab080a124d2488b013192f4f0d1cd17dd9dc4ec9999",
+    "app/backend/ignis/preignition/schema.py": "05a998c4190776af1ddff08ecceee97788902ed061b4745803554220b051f664",
+    "app/backend/ignis/preignition/service.py": "ab058eaa64cf6612ee3c33c80635859b907a81596868c240a617fa9ccfecab95",
+    "app/backend/ignis/preignition/thermal.py": "1ffc3eaca6e5521adfcbf30e3f301dd6f4707110c802db0dc48fe6d95b4104f6",
+    "app/backend/ignis/preignition/validation.py": "69f6e060b974f6e98c31dcf746de23e71c67fb47850c65940d81ba49bb1bda6a",
+    "app/backend/ignis/provenance.py": "e819aadfd5edc49c8fe79e0ef2f929ed085356dea53629fc2bbd34d6411a7ae2",
+    "app/backend/ignis/schema.py": "f057a45aee50eb4bbf9708a5b31862da0d15ab450886b8b5182035ab22e9252b",
+    "app/backend/ignis/store.py": "ecb2dd282e1984d585e24be755fd05792bc17ed6da4f200ba9593c2b256325d7",
+    "app/backend/ignis/windows_process.py": "7cbfb4c1bda252c21da10b0cb49037e710a94c50558c6af53d7a2bea5c970815",
+    "app/tools/remote/iss_poc_model.py": "b05cae8191864401ec22d4293e2aeabbab157f1a06030386918f7d1fb49729c2",
+    "app/tools/remote/train_hotspot_poc.py": "94e480c0f67f766695c8ecd5e55528851b3f44e5d9998869e5dfe842a51204d0",
+    "app/tools/remote/train_iss_poc.py": "3aa6e48f8139982e8dfaa2dba4cfcea6126501a75945ca92e901903ef0cdf80d",
+    "app/tools/remote/train_iss_poc_v2.py": "0fbb4383079a35805f8f8d46b4d5bdf92fdd570fbf69ccefd1e470d48d081fd7",
+    "app/tools/remote/train_spatial.py": "78c51544cec48e41124a2ae2d2a2a14ca35d8c116486875b46b2c3b5408aa32f",
+    "app/tools/remote/verify_spatial.py": "9f10c4d14927efc2c85cab13c83f3fc38fd6cca0d9013cfe798dd5c260ed0198",
+    "benchmark.py": "678336ca114fc4fb34283f0fc4604ba6ac80d139c97265a706dc16d75a54996c",
+    "dataset-snapshot.json": "32ce68afecd55c2de532dcaa124e09b950efb1c8467fb6c50015b19bcb15e237",
+    "surgeon/src/weight_surgeon/__init__.py": "b56b154b13e821426dda13766dbd19e9e0c76d924bcef7dc4f0c34abcba54b66",
+    "surgeon/src/weight_surgeon/editing.py": "6f86311a868fd689651f6c60654cb84e5279f3e65522bb580e901656ae4578bc",
+    "surgeon/src/weight_surgeon/io.py": "c991446acc0b8d68676cddf4e41203954dc3b79280fa5d891aeaed9fbba12c8c"
+  },
+  "ventilation_channels": [
+    "inlet_area_fraction",
+    "outlet_area_fraction",
+    "boundary_u_scaled",
+    "boundary_v_scaled",
+    "boundary_w_scaled",
+    "airflow_scaled"
+  ],
+  "candidates": [
+    {
+      "id": "vent-scale-075",
+      "kind": "ventilation_scale",
+      "value": 0.75
+    },
+    {
+      "id": "vent-scale-125",
+      "kind": "ventilation_scale",
+      "value": 1.25
+    },
+    {
+      "id": "vent-scale-150",
+      "kind": "ventilation_scale",
+      "value": 1.5
+    },
+    {
+      "id": "magnitude-prune-001",
+      "kind": "magnitude_prune",
+      "value": 0.01
+    },
+    {
+      "id": "magnitude-prune-005",
+      "kind": "magnitude_prune",
+      "value": 0.05
+    },
+    {
+      "id": "spectral-cap-095",
+      "kind": "spectral_cap",
+      "value": 0.95
+    }
+  ],
+  "selection": "Six predeclared edits; best validation-only mean heat/smoke macro-family microgravity F1; zero-power false-alert guard. Freeze before loading test targets.",
+  "validation_gate": "Gain >=0.002 absolute macro F1 and zero zero-power false-positive samples.",
+  "test_policy": "All 96 historical test cases, including 84 microgravity. Compare frozen/recalibrated original and edited thresholds; no test-based reselection.",
+  "execution_status": "NOT_STARTED; primary generation/training takes precedence. No background queue or automatic launch.",
+  "prohibited": [
+    "training",
+    "dataset generation",
+    "checkpoint source overwrite",
+    "deployment",
+    "stopping primary jobs",
+    "deleting existing compute locks"
+  ]
+}

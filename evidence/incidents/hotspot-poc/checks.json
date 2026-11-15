@@ -1,0 +1,33 @@
+{
+  "fit1": {
+    "pytest": "14 passed in 2.38s on Windows, CPU tensors",
+    "ruff": "passed"
+  },
+  "fit2": {
+    "pytest": "17 passed in 6.87s on Windows, CPU tensors",
+    "ruff": "passed"
+  },
+  "gpu_measurement": {
+    "device": "NVIDIA GeForce RTX 4070 Ti",
+    "utc_start": "2026-11-14T21:33:44.918Z",
+    "utc_end": "2026-11-14T21:33:47.560Z",
+    "phase": "optimizer training before validation step250",
+    "samples": 11,
+    "utilization_gpu_percent": [
+      98,
+      98,
+      98,
+      98,
+      98,
+      98,
+      98,
+      98,
+      98,
+      98,
+      98
+    ],
+    "power_w_approx": 157,
+    "total_vram_mib_approx": 3650
+  },
+  "gpu_measurement_method": "nvidia-smi repeated queries at 200 ms requested intervals; actual timestamps retained in tool output; charge dropped at validation250"
+}

@@ -1,0 +1,18 @@
+{
+  "dataset_id": "iss-poc-20261115-vent",
+  "planned_and_completed_cases": 216,
+  "workers": 4,
+  "threads_per_solver": 1,
+  "active_generation_seconds": 820.984,
+  "active_generation_and_audit_seconds": 829.125,
+  "first_launch_to_audit_seconds": 1044.561099,
+  "external_compute_lock_wait_seconds": 123.827209,
+  "first_attempt": "Windows SSH closed non-detached process during preflight; no FDS case generated",
+  "second_attempt": "Detached process respected held compute.lock and exited; no external task interrupted",
+  "successful_attempt": "Detached WMI process with OS compute lock; complete generation and audit",
+  "no_gpu_training_by_dataset_worker": true,
+  "complete_artifact_files": 1512,
+  "stored_bytes": 779737245,
+  "sum_solver_wall_seconds": 2796.1,
+  "test_label_summary": null
+}

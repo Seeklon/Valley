@@ -1,0 +1,350 @@
+{
+  "checked_at": "2026-11-15T15:28:51.050Z",
+  "base": "https://desktop-m4hkr86.tail609f26.ts.net:8444",
+  "route": "#iss",
+  "scope": "full-export",
+  "model_id": "iss-heat-smoke-poc-20261115",
+  "checks": [
+    {
+      "name": "recorded_export_with_heat_smoke_and_provenance",
+      "passed": true,
+      "cases": 216,
+      "model": "iss-heat-smoke-poc-20261115"
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-laboratory",
+      "id": "iss-laboratory-vent-02-flaming-still",
+      "layout": "iss-laboratory-vent-02",
+      "source_ndc": [
+        0,
+        -0.214213,
+        0.968637
+      ],
+      "test_id": "iss-laboratory-vent-03-flaming-still",
+      "rendered": {
+        "calls": 47,
+        "triangles": 8860
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-service",
+      "id": "iss-service-vent-02-flaming-fast",
+      "layout": "iss-service-vent-02",
+      "source_ndc": [
+        0,
+        -0.163605,
+        0.970455
+      ],
+      "test_id": "iss-service-vent-03-flaming-still",
+      "rendered": {
+        "calls": 53,
+        "triangles": 10668
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-node",
+      "id": "iss-node-vent-02-arc-still",
+      "layout": "iss-node-vent-02",
+      "source_ndc": [
+        0,
+        -0.187754,
+        0.967557
+      ],
+      "test_id": "iss-node-vent-03-flaming-still",
+      "rendered": {
+        "calls": 41,
+        "triangles": 7296
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "habitat-cargo",
+      "id": "habitat-cargo-vent-02-smoldering-fast",
+      "layout": "habitat-cargo-vent-02",
+      "source_ndc": [
+        0,
+        -0.215615,
+        0.964691
+      ],
+      "test_id": "habitat-cargo-vent-03-flaming-still",
+      "rendered": {
+        "calls": 52,
+        "triangles": 9754
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "habitat-capsule",
+      "id": "habitat-capsule-vent-02-overheating-still",
+      "layout": "habitat-capsule-vent-02",
+      "source_ndc": [
+        0,
+        -0.235493,
+        0.965481
+      ],
+      "test_id": "habitat-capsule-vent-03-flaming-still",
+      "rendered": {
+        "calls": 36,
+        "triangles": 7000
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "habitat-central-racks",
+      "id": "habitat-central-racks-vent-02-flaming-fast",
+      "layout": "habitat-central-racks-vent-02",
+      "source_ndc": [
+        0,
+        -0.268513,
+        0.958223
+      ],
+      "test_id": "habitat-central-racks-vent-03-flaming-still",
+      "rendered": {
+        "calls": 49,
+        "triangles": 10032
+      }
+    },
+    {
+      "name": "honest_cold_control_accessible",
+      "passed": true,
+      "id": "habitat-capsule-vent-02-control",
+      "metrics": {
+        "heat": {
+          "id": "habitat-capsule-vent-02-control",
+          "module_id": "habitat-capsule",
+          "gravity": "microgravity",
+          "incident_type": "overheating",
+          "sample_inactive": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 44550,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0,
+          "n_valid": 44550
+        },
+        "smoke": {
+          "id": "habitat-capsule-vent-02-control",
+          "module_id": "habitat-capsule",
+          "gravity": "microgravity",
+          "incident_type": "overheating",
+          "sample_inactive": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 44550,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0,
+          "n_valid": 44550
+        }
+      },
+      "time_s": 1.1108399
+    },
+    {
+      "name": "honest_failure_accessible",
+      "passed": true,
+      "id": "habitat-central-racks-vent-02-arc-reverse",
+      "metrics": {
+        "heat": {
+          "id": "habitat-central-racks-vent-02-arc-reverse",
+          "module_id": "habitat-central-racks",
+          "gravity": "microgravity",
+          "incident_type": "arc",
+          "sample_inactive": false,
+          "tp": 0,
+          "fp": 5,
+          "fn": 2,
+          "tn": 43463,
+          "precision": 0,
+          "recall": 0,
+          "iou": 0,
+          "f1": 0,
+          "false_positive_rate": 0.00011502714640655194,
+          "n_valid": 43470
+        },
+        "smoke": {
+          "id": "habitat-central-racks-vent-02-arc-reverse",
+          "module_id": "habitat-central-racks",
+          "gravity": "microgravity",
+          "incident_type": "arc",
+          "sample_inactive": false,
+          "tp": 0,
+          "fp": 159,
+          "fn": 23,
+          "tn": 43288,
+          "precision": 0,
+          "recall": 0,
+          "iou": 0,
+          "f1": 0,
+          "false_positive_rate": 0.0036596312748866434,
+          "n_valid": 43470
+        }
+      },
+      "time_s": 12.195505
+    },
+    {
+      "name": "heldout_partition_accessible",
+      "passed": true,
+      "id": "iss-laboratory-vent-03-flaming-still",
+      "layout_id": "iss-laboratory-vent-03"
+    },
+    {
+      "name": "same_quartet_keeps_camera_and_requested_time_without_interpolation",
+      "passed": true,
+      "group": "iss-laboratory-vent-00-flaming",
+      "split": "train",
+      "target_time_s": 28.7907,
+      "has_distinct_observation_times": true,
+      "observations": [
+        {
+          "id": "iss-laboratory-vent-00-flaming-slow",
+          "state": "slow",
+          "time_s": 28.364421
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-fast",
+          "state": "fast",
+          "time_s": 29.067863
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-reverse",
+          "state": "reverse",
+          "time_s": 29.12989
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-still",
+          "state": "still",
+          "time_s": 28.7907
+        },
+        {
+          "id": "iss-laboratory-vent-00-flaming-fast",
+          "state": "fast",
+          "time_s": 29.067863
+        }
+      ],
+      "camera_position": [
+        1.81836,
+        1.757748,
+        -0.18
+      ],
+      "camera_direction": [
+        -0.934243,
+        -0.29608,
+        -0.198812
+      ],
+      "overview_camera_position": [
+        4.633849,
+        4.792214,
+        1.257314
+      ],
+      "overview_camera_direction": [
+        -0.483789,
+        -0.604736,
+        -0.632647
+      ],
+      "reset_control": "iss-laboratory-vent-00-control"
+    },
+    {
+      "name": "inside_and_overview_cameras",
+      "passed": true,
+      "overviewHash": "c0dacb737772a53f470b13fd3f609cd99f2460879fc87579ed48662e47877a38",
+      "insideHash": "f68b6e8a996e863038c71db079d210adb9595cc895dc51379d6cd0dbecc8a4eb"
+    },
+    {
+      "name": "actual_look_and_walk_interaction",
+      "passed": true,
+      "beforeDirection": [
+        -0.80485,
+        -0.066927,
+        -0.589693
+      ],
+      "afterDirection": [
+        -0.945208,
+        0.013023,
+        -0.32621
+      ],
+      "beforePosition": [
+        1.69776,
+        2.13924,
+        -0.18
+      ],
+      "afterPosition": [
+        1.555967,
+        2.13924,
+        -0.228936
+      ],
+      "movement_observation_timeout_ms": 5000
+    },
+    {
+      "name": "independent_heat_smoke_and_reference_controls",
+      "passed": true
+    },
+    {
+      "name": "timeline_plays_exported_times",
+      "passed": true
+    },
+    {
+      "name": "laptop_layout_and_useful_timeline",
+      "passed": true,
+      "timeline_width": 1066,
+      "slider_width": 787.515625,
+      "speed_width": 64
+    },
+    {
+      "name": "no_javascript_error_or_compute_submission",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "screenshots": [
+    "iss-iss-laboratory.png",
+    "iss-iss-laboratory-overview.png",
+    "iss-iss-laboratory-smoke.png",
+    "iss-iss-laboratory-test.png",
+    "iss-iss-service.png",
+    "iss-iss-service-overview.png",
+    "iss-iss-service-smoke.png",
+    "iss-iss-service-test.png",
+    "iss-iss-node.png",
+    "iss-iss-node-overview.png",
+    "iss-iss-node-smoke.png",
+    "iss-iss-node-test.png",
+    "iss-habitat-cargo.png",
+    "iss-habitat-cargo-overview.png",
+    "iss-habitat-cargo-smoke.png",
+    "iss-habitat-cargo-test.png",
+    "iss-habitat-capsule.png",
+    "iss-habitat-capsule-overview.png",
+    "iss-habitat-capsule-smoke.png",
+    "iss-habitat-capsule-test.png",
+    "iss-habitat-central-racks.png",
+    "iss-habitat-central-racks-overview.png",
+    "iss-habitat-central-racks-smoke.png",
+    "iss-habitat-central-racks-test.png",
+    "iss-cold-control.png",
+    "iss-model-failure.png",
+    "iss-heldout-test.png",
+    "iss-ventilation-comparison.png",
+    "iss-ventilation-overview.png",
+    "iss-smoke-only.png",
+    "iss-heat-only.png",
+    "iss-presentation.png",
+    "iss-laptop.png"
+  ]
+}

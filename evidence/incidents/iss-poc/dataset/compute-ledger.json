@@ -1,0 +1,16 @@
+{
+  "dataset_id": "iss-poc-20261115-v1",
+  "pilot_wall_time_s": 29.828,
+  "resume_wall_time_s": 408.047,
+  "total_generation_wall_time_s": 437.875,
+  "sum_case_solver_parse_seconds": 1416.1480000000001,
+  "budget_s": 1800,
+  "workers": 4,
+  "threads_per_solver": 1,
+  "execution_device": "CPU FDS",
+  "gpu_training_included": false,
+  "cases": 108,
+  "status": "completed_verified",
+  "verified_at": "2026-11-15T13:12:41.634520+00:00",
+  "dataset_manifest_sha256": "b119a200985e936ec3d0ff36d878850165bb345c42df5d6be97da653954592fb"
+}

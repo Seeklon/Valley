@@ -1,0 +1,14 @@
+{
+    "new_campaign_started":  false,
+    "requested_at":  "2026-11-14T20:41:36.7352082Z",
+    "method":  "Stop only the active ablation after verifying an already-written selected checkpoint; runner has no in-process STOP control",
+    "last_completed_validation_step":  9500,
+    "process_ids":  [
+                        15904,
+                        25564
+                    ],
+    "checkpoint_sha256":  "4d14bd8bcd7c7cdc6c63911c894f8e0dd107efb94f448aa00be9339ddae52dc7",
+    "checkpoint":  "E:/IGNIS-Valley-dev/runtime/hotspots/20261114-h1/fit-peak/best-step-009500.pt",
+    "reason":  "Explicit user request to stop training and reframe product",
+    "selected_step":  9500
+}

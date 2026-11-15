@@ -1,0 +1,475 @@
+{
+  "checkpoint_integrity": {
+    "file": "E:\\IGNIS-Valley-dev\\runtime\\hotspots\\20261114-h1\\fit-peak\\best-step-009500.pt",
+    "sha256": "4d14bd8bcd7c7cdc6c63911c894f8e0dd107efb94f448aa00be9339ddae52dc7",
+    "selected_step": 9500,
+    "recipe": "hot_peak",
+    "architecture": {
+      "version": "incident-unet3d-1",
+      "channels": [
+        "x_over_width",
+        "y_over_depth",
+        "z_over_height",
+        "gas_sample",
+        "solid_volume_fraction",
+        "substrate_aluminium",
+        "substrate_cellulose",
+        "substrate_glass",
+        "substrate_insulation",
+        "substrate_pmma",
+        "substrate_steel",
+        "coating_cellulose",
+        "coating_pmma",
+        "density_scaled",
+        "specific_heat_scaled",
+        "conductivity_scaled",
+        "emissivity",
+        "heat_of_combustion_scaled",
+        "soot_yield_scaled",
+        "coating_thickness_scaled",
+        "source_patch_fraction",
+        "source_dx",
+        "source_dy",
+        "source_dz",
+        "source_distance",
+        "inlet_area_fraction",
+        "outlet_area_fraction",
+        "boundary_u_scaled",
+        "boundary_v_scaled",
+        "boundary_w_scaled",
+        "time_scaled",
+        "source_elapsed_scaled",
+        "post_source_time_scaled",
+        "source_ramp_fraction",
+        "power_scaled",
+        "duration_scaled",
+        "gravity_g",
+        "log_gravity_scaled",
+        "oxygen_scaled",
+        "ambient_scaled",
+        "pressure_scaled",
+        "airflow_scaled",
+        "width_scaled",
+        "depth_scaled",
+        "height_scaled",
+        "source_x_scaled",
+        "source_y_scaled",
+        "source_z_scaled",
+        "source_area_scaled",
+        "incident_overheating",
+        "incident_arc",
+        "incident_flaming",
+        "incident_smoldering",
+        "incident_battery"
+      ],
+      "widths": [
+        24,
+        48,
+        96
+      ],
+      "normalization": "fixed physical scales; GroupNorm",
+      "fields": [
+        "temperature_c",
+        "smoke_kg_m3"
+      ],
+      "global_keys": [
+        "temperature_max_c",
+        "temperature_mean_c",
+        "smoke_mean_kg_m3",
+        "heat_release_w"
+      ],
+      "time_conditioning": "direct; no autoregressive rollout",
+      "padding": "replicate to multiple of four; crop predictions to exact sample shape"
+    },
+    "tensor_entries": 46,
+    "parameters": 834486,
+    "all_tensors_finite": true,
+    "strict_state_load": true,
+    "device": "cpu",
+    "cuda_initialized": false,
+    "forward_pass_run": false,
+    "optimizer_or_training_run": false
+  },
+  "dataset_inventory": [
+    {
+      "path": "E:\\IGNIS-Valley-dev\\datasets\\incidents-v1",
+      "manifest_sha256": "b63193ca47b33c61c8467efc15f91a8e2834ca166a4077cdd2cd285dd96e155a",
+      "keys": [
+        "dataset_id",
+        "schema_version",
+        "compiler_version",
+        "created_at",
+        "origin",
+        "nasa_experimental_labels",
+        "expected_runs",
+        "partition",
+        "runs",
+        "completed_runs"
+      ],
+      "list_lengths": {
+        "runs": 60
+      },
+      "scalar_metadata": {
+        "dataset_id": "incidents-v1",
+        "schema_version": 1,
+        "compiler_version": "ignis-incidents-1",
+        "created_at": "2026-11-14T15:35:45.957039+00:00",
+        "origin": "FDS simulations",
+        "nasa_experimental_labels": false,
+        "expected_runs": 60,
+        "partition": "Entire layouts; all crossflow layouts reserved for test; variant2 of other scenes for validation",
+        "completed_runs": 60
+      },
+      "record_array": "runs",
+      "record_keys": [
+        "id",
+        "layout_id",
+        "scene_id",
+        "split",
+        "config",
+        "scene_sha256",
+        "fingerprint",
+        "relative_path",
+        "status",
+        "wall_time_s",
+        "result_sha256"
+      ],
+      "status": {
+        "completed": 60
+      },
+      "split": {
+        "train": 30,
+        "validation": 15,
+        "test": 15
+      }
+    },
+    {
+      "path": "E:\\IGNIS-Valley-dev\\datasets\\incidents-v1-launch-aborted",
+      "manifest_sha256": "792c53a3bb263549ba650bdc9f05dec42584a64ea733fa3e35a1be62a1bac9ee",
+      "keys": [
+        "dataset_id",
+        "schema_version",
+        "compiler_version",
+        "created_at",
+        "origin",
+        "nasa_experimental_labels",
+        "expected_runs",
+        "partition",
+        "runs"
+      ],
+      "list_lengths": {
+        "runs": 1
+      },
+      "scalar_metadata": {
+        "dataset_id": "incidents-v1",
+        "schema_version": 1,
+        "compiler_version": "ignis-incidents-1",
+        "created_at": "2026-11-14T15:31:18.070185+00:00",
+        "origin": "FDS simulations",
+        "nasa_experimental_labels": false,
+        "expected_runs": 60,
+        "partition": "Entire layouts; all crossflow layouts reserved for test; variant2 of other scenes for validation"
+      },
+      "record_array": "runs",
+      "record_keys": [
+        "id",
+        "layout_id",
+        "scene_id",
+        "split",
+        "config",
+        "scene_sha256",
+        "fingerprint",
+        "relative_path",
+        "status",
+        "error"
+      ],
+      "status": {
+        "failed": 1
+      },
+      "split": {
+        "train": 1
+      }
+    },
+    {
+      "path": "E:\\IGNIS-Valley-dev\\datasets\\spatial-compact-200-v1",
+      "manifest_sha256": "ee4026c94a6cd29f6d036262e23f374fe702f2dd9a766cf45172afa9c188cbac",
+      "keys": [
+        "dataset_id",
+        "schema_version",
+        "compiler_version",
+        "material_model_version",
+        "created_at",
+        "origin",
+        "nasa_experimental_labels",
+        "expected_runs",
+        "partition",
+        "plan_sha256",
+        "design_sha256",
+        "record_directory",
+        "runs",
+        "completed_runs",
+        "active_elapsed_s",
+        "frozen_index_sha256"
+      ],
+      "list_lengths": {
+        "runs": 200
+      },
+      "scalar_metadata": {
+        "dataset_id": "spatial-compact-v1",
+        "schema_version": 1,
+        "compiler_version": "ignis-incidents-1",
+        "material_model_version": "ignis-fds-materials-2",
+        "created_at": "2026-11-14T19:14:18.642080+00:00",
+        "origin": "FDS simulations",
+        "nasa_experimental_labels": false,
+        "expected_runs": 200,
+        "partition": "Whole structural families: six train, two validation, two test; both gravity scenarios of every room remain together",
+        "plan_sha256": "f97e89ad5f679ce7489e65a56e181124f0b10d966dc48d93aae2048bd8a662b1",
+        "design_sha256": "24eb39c35e00557e16b2c228b30af489a0af7c125ef265b40bc259452fd9aa18",
+        "record_directory": "records",
+        "completed_runs": 200,
+        "active_elapsed_s": 1110.5,
+        "frozen_index_sha256": "0ab6d06f4bf4b8bb0a231f54400adb36cd347e5cbcdabb8352abbc9e633d7334"
+      },
+      "record_array": "runs",
+      "record_keys": [
+        "id",
+        "layout_id",
+        "scene_id",
+        "split",
+        "condition_id",
+        "config",
+        "structural_family",
+        "scene_sha256",
+        "relative_path",
+        "fingerprint",
+        "status",
+        "attempts",
+        "started_at",
+        "completed_at",
+        "npz_file",
+        "npz_sha256",
+        "result_file",
+        "result_sha256",
+        "result_uncompressed_sha256",
+        "raw_archive_file",
+        "raw_members_sha256",
+        "file_hashes",
+        "stored_bytes",
+        "spatial_schema",
+        "wall_time_s",
+        "reused_from"
+      ],
+      "status": {
+        "completed": 200
+      },
+      "split": {
+        "train": 120,
+        "validation": 40,
+        "test": 40
+      },
+      "structural_family": {
+        "perimeter": 20,
+        "cross-aisle": 20,
+        "baffled": 20,
+        "central-island": 20,
+        "split-bays": 20,
+        "double-island": 20,
+        "parallel-aisles": 20,
+        "staggered": 20,
+        "corner-banks": 20,
+        "radial-clusters": 20
+      }
+    },
+    {
+      "path": "E:\\IGNIS-Valley-dev\\datasets\\spatial-compact-v1",
+      "manifest_sha256": "272ee5c4f6c1095b63fdff14d4b38e3287a73759c1fb9c3929c2ea3d91f9e094",
+      "keys": [
+        "dataset_id",
+        "schema_version",
+        "compiler_version",
+        "material_model_version",
+        "created_at",
+        "origin",
+        "nasa_experimental_labels",
+        "expected_runs",
+        "partition",
+        "plan_sha256",
+        "design_sha256",
+        "record_directory",
+        "runs",
+        "completed_runs",
+        "active_elapsed_s",
+        "frozen_index_sha256"
+      ],
+      "list_lengths": {
+        "runs": 100
+      },
+      "scalar_metadata": {
+        "dataset_id": "spatial-compact-v1",
+        "schema_version": 1,
+        "compiler_version": "ignis-incidents-1",
+        "material_model_version": "ignis-fds-materials-2",
+        "created_at": "2026-11-14T18:53:35.988783+00:00",
+        "origin": "FDS simulations",
+        "nasa_experimental_labels": false,
+        "expected_runs": 100,
+        "partition": "Whole structural families: six train, two validation, two test; both gravity scenarios of every room remain together",
+        "plan_sha256": "7dd11a562f6b59aef235756d7447e5afea5f2c13ebc1243b549a743cf03465c1",
+        "design_sha256": "e710f5793773fbfbed6b0d30a3cce5c52579fff5ce22e5b42ef3013acccdfb36",
+        "record_directory": "records",
+        "completed_runs": 100,
+        "active_elapsed_s": 980.7339999999967,
+        "frozen_index_sha256": "5aff226e66d6887c2a32b1d06220cf22da888cf78a73ee4366b102a2478fb83d"
+      },
+      "record_array": "runs",
+      "record_keys": [
+        "id",
+        "layout_id",
+        "scene_id",
+        "split",
+        "condition_id",
+        "config",
+        "structural_family",
+        "scene_sha256",
+        "relative_path",
+        "fingerprint",
+        "status",
+        "attempts",
+        "started_at",
+        "completed_at",
+        "npz_file",
+        "npz_sha256",
+        "result_file",
+        "result_sha256",
+        "result_uncompressed_sha256",
+        "raw_archive_file",
+        "raw_members_sha256",
+        "file_hashes",
+        "stored_bytes",
+        "spatial_schema",
+        "wall_time_s",
+        "reused_from"
+      ],
+      "status": {
+        "completed": 100
+      },
+      "split": {
+        "train": 60,
+        "validation": 20,
+        "test": 20
+      },
+      "structural_family": {
+        "perimeter": 10,
+        "cross-aisle": 10,
+        "baffled": 10,
+        "central-island": 10,
+        "split-bays": 10,
+        "double-island": 10,
+        "parallel-aisles": 10,
+        "staggered": 10,
+        "corner-banks": 10,
+        "radial-clusters": 10
+      }
+    },
+    {
+      "path": "E:\\IGNIS-Valley-dev\\datasets\\spatial-corpus-v1",
+      "manifest_sha256": "4582cbd74c3669e029f6e52a130734be611723a8dfdaef32bfb5bb790dcbe9d3",
+      "keys": [
+        "dataset_id",
+        "schema_version",
+        "compiler_version",
+        "material_model_version",
+        "created_at",
+        "origin",
+        "nasa_experimental_labels",
+        "expected_runs",
+        "partition",
+        "plan_sha256",
+        "design_sha256",
+        "active_elapsed_s",
+        "completed_runs",
+        "record_directory",
+        "runs"
+      ],
+      "list_lengths": {
+        "runs": 64
+      },
+      "scalar_metadata": {
+        "dataset_id": "spatial-corpus-v1",
+        "schema_version": 1,
+        "compiler_version": "ignis-incidents-1",
+        "material_model_version": "ignis-fds-materials-2",
+        "created_at": "2026-11-14T16:18:48.205421+00:00",
+        "origin": "FDS simulations",
+        "nasa_experimental_labels": false,
+        "expected_runs": 20000,
+        "partition": "Whole structural families: six train, two validation, two test; all 20 scenarios of every room remain together",
+        "plan_sha256": "da78526edfae2550bd220236132c254cd66bd708946c969618f2c46aade361bd",
+        "design_sha256": "6e383599f33fe497399463e37355b05c379eb8be1bd7dd0db57083a808540b60",
+        "active_elapsed_s": 15328.469000000001,
+        "completed_runs": 64,
+        "record_directory": "records"
+      },
+      "record_array": "runs",
+      "record_keys": [
+        "id",
+        "layout_id",
+        "scene_id",
+        "split",
+        "condition_id",
+        "config",
+        "structural_family",
+        "scene_sha256",
+        "relative_path",
+        "fingerprint",
+        "status",
+        "attempts",
+        "started_at",
+        "completed_at",
+        "npz_file",
+        "npz_sha256",
+        "result_file",
+        "result_sha256",
+        "result_uncompressed_sha256",
+        "raw_archive_file",
+        "raw_members_sha256",
+        "file_hashes",
+        "stored_bytes",
+        "spatial_schema",
+        "wall_time_s"
+      ],
+      "status": {
+        "completed": 64
+      },
+      "split": {
+        "train": 24,
+        "validation": 20,
+        "test": 20
+      },
+      "structural_family": {
+        "perimeter": 20,
+        "cross-aisle": 20,
+        "baffled": 20,
+        "central-island": 4
+      }
+    }
+  ],
+  "other_preserved_directories": [
+    {
+      "path": "E:/IGNIS-Valley/runtime/models",
+      "entries": [
+        "field-mlp-v2",
+        "metrics-forest-v2"
+      ]
+    },
+    {
+      "path": "E:/IGNIS-Valley/runtime/prevention",
+      "entries": [
+        "analyses",
+        "datasets",
+        "models"
+      ]
+    }
+  ]
+}

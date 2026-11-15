@@ -1,0 +1,227 @@
+{
+  "checked_at": "2026-11-15T13:58:52.297Z",
+  "base": "http://127.0.0.1:5177",
+  "route": "#iss",
+  "model_id": "iss-heat-smoke-poc-20261115",
+  "checks": [
+    {
+      "name": "recorded_export_with_heat_smoke_and_provenance",
+      "passed": true,
+      "cases": 108,
+      "model": "iss-heat-smoke-poc-20261115"
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-laboratory",
+      "id": "iss-laboratory-v04-battery",
+      "layout": "iss-laboratory-v04",
+      "source_ndc": [
+        0,
+        -0.200212,
+        0.970711
+      ],
+      "test_id": "iss-laboratory-v05-flame",
+      "rendered": {
+        "calls": 43,
+        "triangles": 8956
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-node",
+      "id": "iss-node-v04-smolder",
+      "layout": "iss-node-v04",
+      "source_ndc": [
+        0,
+        -0.200971,
+        0.970336
+      ],
+      "test_id": "iss-node-v05-flame",
+      "rendered": {
+        "calls": 40,
+        "triangles": 7844
+      }
+    },
+    {
+      "name": "module_matches_its_own_geometry_and_replay",
+      "passed": true,
+      "module": "iss-service",
+      "id": "iss-service-v04-battery",
+      "layout": "iss-service-v04",
+      "source_ndc": [
+        0,
+        -0.190433,
+        0.971937
+      ],
+      "test_id": "iss-service-v05-flame",
+      "rendered": {
+        "calls": 41,
+        "triangles": 9132
+      }
+    },
+    {
+      "name": "honest_cold_control_accessible",
+      "passed": true,
+      "id": "iss-laboratory-v04-control",
+      "metrics": {
+        "heat": {
+          "id": "iss-laboratory-v04-control",
+          "module_id": "iss-laboratory",
+          "gravity": "microgravity",
+          "incident_type": "overheating",
+          "sample_inactive": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 41280,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0,
+          "n_valid": 41280
+        },
+        "smoke": {
+          "id": "iss-laboratory-v04-control",
+          "module_id": "iss-laboratory",
+          "gravity": "microgravity",
+          "incident_type": "overheating",
+          "sample_inactive": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 41280,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0,
+          "n_valid": 41280
+        }
+      },
+      "time_s": 3.2036058
+    },
+    {
+      "name": "honest_failure_accessible",
+      "passed": true,
+      "id": "iss-service-v04-smolder",
+      "metrics": {
+        "heat": {
+          "id": "iss-service-v04-smolder",
+          "module_id": "iss-service",
+          "gravity": "microgravity",
+          "incident_type": "smoldering",
+          "sample_inactive": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 33552,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0,
+          "n_valid": 33552
+        },
+        "smoke": {
+          "id": "iss-service-v04-smolder",
+          "module_id": "iss-service",
+          "gravity": "microgravity",
+          "incident_type": "smoldering",
+          "sample_inactive": false,
+          "tp": 17,
+          "fp": 55,
+          "fn": 12,
+          "tn": 33468,
+          "precision": 0.2361111111111111,
+          "recall": 0.5862068965517241,
+          "iou": 0.20238095238095238,
+          "f1": 0.33663366336633666,
+          "false_positive_rate": 0.0016406646183217493,
+          "n_valid": 33552
+        }
+      },
+      "time_s": 30
+    },
+    {
+      "name": "heldout_partition_accessible",
+      "passed": true,
+      "id": "iss-laboratory-v05-flame",
+      "layout_id": "iss-laboratory-v05"
+    },
+    {
+      "name": "inside_and_overview_cameras",
+      "passed": true,
+      "overviewHash": "bfd5d87a79ae31335abe6cef228e01dd8a9ef5faf6db87cd61dc664dd3883994",
+      "insideHash": "c8890939486fa4a5800a7d270562c0c8a8dba8e02915baf1da93d255fb808399"
+    },
+    {
+      "name": "actual_look_and_walk_interaction",
+      "passed": true,
+      "beforeDirection": [
+        0.669258,
+        -0.05949,
+        -0.740645
+      ],
+      "afterDirection": [
+        0.421148,
+        0.020474,
+        -0.906761
+      ],
+      "beforePosition": [
+        1.8,
+        1.95,
+        -0.18
+      ],
+      "afterPosition": [
+        1.663957,
+        1.95,
+        -0.243186
+      ]
+    },
+    {
+      "name": "independent_heat_smoke_and_reference_controls",
+      "passed": true
+    },
+    {
+      "name": "timeline_plays_exported_times",
+      "passed": true
+    },
+    {
+      "name": "laptop_layout_and_useful_timeline",
+      "passed": true,
+      "timeline_width": 1066,
+      "slider_width": 787.515625,
+      "speed_width": 64
+    },
+    {
+      "name": "no_javascript_error_or_compute_submission",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "screenshots": [
+    "iss-iss-laboratory.png",
+    "iss-iss-laboratory-overview.png",
+    "iss-iss-laboratory-smoke.png",
+    "iss-iss-laboratory-test.png",
+    "iss-iss-node.png",
+    "iss-iss-node-overview.png",
+    "iss-iss-node-smoke.png",
+    "iss-iss-node-test.png",
+    "iss-iss-service.png",
+    "iss-iss-service-overview.png",
+    "iss-iss-service-smoke.png",
+    "iss-iss-service-test.png",
+    "iss-cold-control.png",
+    "iss-model-failure.png",
+    "iss-heldout-test.png",
+    "iss-smoke-only.png",
+    "iss-heat-only.png",
+    "iss-presentation.png",
+    "iss-laptop.png"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "selected_at": "2026-11-15T14:14:08.236614+00:00",
+  "step": 1000,
+  "score_thresholds": {
+    "heat": 0.9308615922927856,
+    "smoke": 0.9088770151138306
+  },
+  "selection_metric": "mean_heat_smoke_macro_module_microgravity_f1",
+  "value": 0.5196076555423524,
+  "state_sha256": "12b155793b74fe6e034f1f9c01c8093da94aacb220a049b000a42809125c42f1",
+  "test_labels_used_for_selection": false,
+  "baseline_thresholds": {
+    "heat": 0.7685247659683228,
+    "smoke": 0.7310585975646973
+  },
+  "v1_frozen_thresholds": {
+    "heat": 0.9918374419212341,
+    "smoke": 0.9478464126586914
+  },
+  "v1_recalibrated_thresholds": {
+    "heat": 0.11920291930437088,
+    "smoke": 0.4501660168170929
+  },
+  "v1_recalibrated_validation_value": 0.2909539296113465,
+  "validation_weight_improvement": 0.22865372593100597,
+  "new_weights_selected": true
+}

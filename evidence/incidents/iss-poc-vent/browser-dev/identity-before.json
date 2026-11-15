@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-15T15:22:27.140407+00:00",
+  "base": "https://desktop-m4hkr86.tail609f26.ts.net:8444",
+  "index_sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e",
+  "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+  "dataset_sha256": "2f78251a2265822541373d7ad5233924bb1e79a95f7bcf26868f93245bea9115",
+  "cases": 216,
+  "families": [
+    "habitat-capsule",
+    "habitat-cargo",
+    "habitat-central-racks",
+    "iss-laboratory",
+    "iss-node",
+    "iss-service"
+  ],
+  "script_sha256": "9fdccc352bcbbd23c39e3e2a4c3317afa519840fda9780d84ef01561df6c1a8e"
+}

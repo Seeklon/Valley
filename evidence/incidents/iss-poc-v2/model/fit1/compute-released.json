@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-11-15T14:21:31.9092923Z",
+  "lock": {
+    "shared_compute_lock_available": true,
+    "probe_released_lock": true
+  },
+  "fit_processes": [],
+  "gpu_device_util_percent_memory_mib": "0, 1103"
+}

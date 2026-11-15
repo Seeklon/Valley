@@ -61,3 +61,12 @@ runs/
 .remote-pc.json
 *.blend1
 *.egg-info/
+
+# Reproducible POC inference exports; archived with the model, not source code
+/web/public/poc/hotspots.json
+/web/public/poc/cases/
+/evidence/incidents/hotspot-poc/*-complete.zip
+/web/public/poc/iss/
+/evidence/incidents/iss-poc/*-complete.zip
+/evidence/incidents/iss-poc-v2/*-complete.zip
+/evidence/incidents/iss-poc-vent/*-complete.zip

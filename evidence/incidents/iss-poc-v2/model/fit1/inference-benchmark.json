@@ -1,0 +1,25 @@
+{
+  "case_id": "habitat-cargo-v2-05-flame",
+  "split": "validation",
+  "frames": 31,
+  "points_per_frame": 1536,
+  "cpu_threads": 4,
+  "cpu_checkpoint_load_seconds": 0.012181699999928242,
+  "cpu_first_trajectory_seconds": 0.09002850000069884,
+  "cpu_warm_trajectory_seconds": [
+    0.08108679999986634,
+    0.0879519000000073,
+    0.08465509999950882
+  ],
+  "gpu_warm_trajectory_seconds": [
+    0.052717800000209536,
+    0.053240599999298865,
+    0.051181800000449584
+  ],
+  "cpu_warm_median_seconds": 0.08465509999950882,
+  "gpu_warm_median_seconds": 0.052717800000209536,
+  "cpu_gpu_max_score_difference": 0.0026649534702301025,
+  "cpu_gpu_class_disagreements": 0,
+  "timing_scope": "full trajectory input preparation and inference; CPU load separate, GPU model already loaded; no FDS runtime included",
+  "fds_comparison": "Compare separately with this case's measured FDS wall time from dataset generation, not its simulated duration."
+}

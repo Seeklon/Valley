@@ -1,0 +1,4004 @@
+{
+  "verified": true,
+  "no_inference_or_training": true,
+  "index_sha256": "e671ca2bf68f617d1928507bd8b6522a9b574f530a9298fa2f882641526305f8",
+  "model_id": "hotspot-poc-20261114",
+  "score_threshold": 0.9478464126586914,
+  "heat_delta_c": 5.0,
+  "case_counts": {
+    "train": 120,
+    "validation": 40,
+    "test": 40
+  },
+  "layout_count": 100,
+  "metrics": {
+    "train": {
+      "tp": 8875,
+      "fp": 4687,
+      "fn": 4079,
+      "tn": 5340475,
+      "precision": 0.6544020056038933,
+      "recall": 0.685116566311564,
+      "iou": 0.503089394025282,
+      "f1": 0.6694071503997586,
+      "false_positive_rate": 0.0008768677170121317,
+      "n_valid": 5358116,
+      "groups": {
+        "microgravity": {
+          "tp": 1597,
+          "fp": 1057,
+          "fn": 16,
+          "tn": 2657726,
+          "precision": 0.6017332328560663,
+          "recall": 0.9900805951642901,
+          "iou": 0.59812734082397,
+          "f1": 0.748535270681978,
+          "false_positive_rate": 0.0003975503077911962,
+          "n_valid": 2660396
+        },
+        "earth": {
+          "tp": 7278,
+          "fp": 3630,
+          "fn": 4063,
+          "tn": 2682749,
+          "precision": 0.6672167216721672,
+          "recall": 0.6417423507627193,
+          "iou": 0.4861398704161379,
+          "f1": 0.6542316508607129,
+          "false_positive_rate": 0.001351261307507243,
+          "n_valid": 2697720
+        },
+        "sample_active": {
+          "tp": 8875,
+          "fp": 4687,
+          "fn": 4079,
+          "tn": 3005425,
+          "precision": 0.6544020056038933,
+          "recall": 0.685116566311564,
+          "iou": 0.503089394025282,
+          "f1": 0.6694071503997586,
+          "false_positive_rate": 0.0015570849190993557,
+          "n_valid": 3023066
+        },
+        "sample_inactive": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 2335050,
+          "precision": null,
+          "recall": null,
+          "iou": null,
+          "f1": null,
+          "false_positive_rate": 0.0,
+          "n_valid": 2335050
+        }
+      }
+    },
+    "validation": {
+      "tp": 1095,
+      "fp": 3621,
+      "fn": 1963,
+      "tn": 1786965,
+      "precision": 0.2321882951653944,
+      "recall": 0.35807717462393723,
+      "iou": 0.163946698607576,
+      "f1": 0.28170825829688706,
+      "false_positive_rate": 0.002022242997543821,
+      "n_valid": 1793644,
+      "groups": {
+        "microgravity": {
+          "tp": 301,
+          "fp": 459,
+          "fn": 459,
+          "tn": 894855,
+          "precision": 0.3960526315789474,
+          "recall": 0.3960526315789474,
+          "iou": 0.2469237079573421,
+          "f1": 0.3960526315789474,
+          "false_positive_rate": 0.0005126692981456785,
+          "n_valid": 896074
+        },
+        "earth": {
+          "tp": 794,
+          "fp": 3162,
+          "fn": 1504,
+          "tn": 892110,
+          "precision": 0.20070778564206268,
+          "recall": 0.34551784160139254,
+          "iou": 0.14542124542124543,
+          "f1": 0.25391749280460507,
+          "false_positive_rate": 0.0035318875157494037,
+          "n_valid": 897570
+        },
+        "sample_active": {
+          "tp": 1095,
+          "fp": 3465,
+          "fn": 1963,
+          "tn": 979671,
+          "precision": 0.24013157894736842,
+          "recall": 0.35807717462393723,
+          "iou": 0.16786754560784914,
+          "f1": 0.28747702809136255,
+          "false_positive_rate": 0.0035244360902255637,
+          "n_valid": 986194
+        },
+        "sample_inactive": {
+          "tp": 0,
+          "fp": 156,
+          "fn": 0,
+          "tn": 807294,
+          "precision": 0.0,
+          "recall": null,
+          "iou": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.00019320081738807357,
+          "n_valid": 807450
+        }
+      }
+    },
+    "test": {
+      "tp": 716,
+      "fp": 652,
+      "fn": 4705,
+      "tn": 1790075,
+      "precision": 0.5233918128654971,
+      "recall": 0.1320789522228371,
+      "iou": 0.1178988967561337,
+      "f1": 0.2109294446899396,
+      "false_positive_rate": 0.00036409793340916845,
+      "n_valid": 1796148,
+      "groups": {
+        "microgravity": {
+          "tp": 295,
+          "fp": 269,
+          "fn": 331,
+          "tn": 888113,
+          "precision": 0.5230496453900709,
+          "recall": 0.4712460063897764,
+          "iou": 0.329608938547486,
+          "f1": 0.4957983193277311,
+          "false_positive_rate": 0.0003027976703715294,
+          "n_valid": 889008
+        },
+        "earth": {
+          "tp": 421,
+          "fp": 383,
+          "fn": 4374,
+          "tn": 901962,
+          "precision": 0.5236318407960199,
+          "recall": 0.08779979144942648,
+          "iou": 0.0813055233680958,
+          "f1": 0.15038399714234685,
+          "false_positive_rate": 0.00042444962846804716,
+          "n_valid": 907140
+        },
+        "sample_active": {
+          "tp": 716,
+          "fp": 405,
+          "fn": 4705,
+          "tn": 792030,
+          "precision": 0.6387154326494202,
+          "recall": 0.1320789522228371,
+          "iou": 0.12289735667696533,
+          "f1": 0.21889330479975544,
+          "false_positive_rate": 0.0005110829279373071,
+          "n_valid": 797856
+        },
+        "sample_inactive": {
+          "tp": 0,
+          "fp": 247,
+          "fn": 0,
+          "tn": 998045,
+          "precision": 0.0,
+          "recall": null,
+          "iou": 0.0,
+          "f1": 0.0,
+          "false_positive_rate": 0.00024742259779703737,
+          "n_valid": 998292
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "procedural-0000-electrical-00-overheating-microg-c0",
+      "split": "train",
+      "sha256": "6a273ba3002444f3852ca30553c8f0cb0b9afbce52c1d6d40dd0d1117a965e7c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 19,
+        "fp": 18,
+        "fn": 0,
+        "tn": 45383,
+        "precision": 0.5135135135135135,
+        "recall": 1.0,
+        "iou": 0.5135135135135135,
+        "f1": 0.6785714285714286,
+        "false_positive_rate": 0.0003964670381709654,
+        "n_valid": 45420
+      }
+    },
+    {
+      "id": "procedural-0000-electrical-00-overheating-earth-c0",
+      "split": "train",
+      "sha256": "a97f3faf8299d80f22a268b03d7218acc36ba586f2f2db1ab418bcc01c725ea6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 35,
+        "fp": 69,
+        "fn": 0,
+        "tn": 45316,
+        "precision": 0.33653846153846156,
+        "recall": 1.0,
+        "iou": 0.33653846153846156,
+        "f1": 0.5035971223021583,
+        "false_positive_rate": 0.001520326098931365,
+        "n_valid": 45420
+      }
+    },
+    {
+      "id": "procedural-0033-electrical-03-smoldering-microg-c0",
+      "split": "train",
+      "sha256": "bbe8258c170c786b77d8e36c7e9bf3e704bc35081307abf415e6c91c6c85b5e1",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 33,
+        "fp": 15,
+        "fn": 0,
+        "tn": 44862,
+        "precision": 0.6875,
+        "recall": 1.0,
+        "iou": 0.6875,
+        "f1": 0.8148148148148148,
+        "false_positive_rate": 0.00033424694164048397,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0033-electrical-03-smoldering-earth-c0",
+      "split": "train",
+      "sha256": "42545e1f56457d7f23e41665254a830c22a97c26593a4f2adbf0102535c6a912",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 1,
+        "fp": 20,
+        "fn": 0,
+        "tn": 44889,
+        "precision": 0.047619047619047616,
+        "recall": 1.0,
+        "iou": 0.047619047619047616,
+        "f1": 0.09090909090909091,
+        "false_positive_rate": 0.00044534503106281593,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0023-electrical-03-flaming-microg-c0",
+      "split": "train",
+      "sha256": "39eff35299e2b162879ecfc5917f8411c8109a6ce6d0f2473ffa17e0034bff30",
+      "frames": 25,
+      "positions": 1536,
+      "metrics": {
+        "tp": 1,
+        "fp": 5,
+        "fn": 0,
+        "tn": 36546,
+        "precision": 0.16666666666666666,
+        "recall": 1.0,
+        "iou": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "false_positive_rate": 0.00013679516292303904,
+        "n_valid": 36552
+      }
+    },
+    {
+      "id": "procedural-0023-electrical-03-flaming-earth-c0",
+      "split": "train",
+      "sha256": "f7c7e85fa15eddf648e9f8f3344d52f1bd2de2b09576d9b104db29e78c2fe5c2",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 59,
+        "fp": 16,
+        "fn": 1,
+        "tn": 45614,
+        "precision": 0.7866666666666666,
+        "recall": 0.9833333333333333,
+        "iou": 0.7763157894736842,
+        "f1": 0.8740740740740741,
+        "false_positive_rate": 0.00035064650449265835,
+        "n_valid": 45690
+      }
+    },
+    {
+      "id": "procedural-0013-electrical-00-arc-microg-c0",
+      "split": "train",
+      "sha256": "43289a099093435a60c346642e7572c269e50b7242ad9c0f2a8e7f5d92c3ab84",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44730,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44730
+      }
+    },
+    {
+      "id": "procedural-0013-electrical-00-arc-earth-c0",
+      "split": "train",
+      "sha256": "af648f4c5d2051a800037ffd00366dbe3ae5099419ec7da375482902af36838a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44730,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44730
+      }
+    },
+    {
+      "id": "procedural-0046-electrical-04-battery-microg-c0",
+      "split": "train",
+      "sha256": "574d18b6dfa958946729197a053e402fc92f09a3847783438881e9e45c62e39e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 11,
+        "fp": 11,
+        "fn": 0,
+        "tn": 44918,
+        "precision": 0.5,
+        "recall": 1.0,
+        "iou": 0.5,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0.00024483073293418505,
+        "n_valid": 44940
+      }
+    },
+    {
+      "id": "procedural-0046-electrical-04-battery-earth-c0",
+      "split": "train",
+      "sha256": "3a76c3c833a7183c5aaab0a7079a85b37c1cbbc891ba30e583952999dd7b8074",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44940,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44940
+      }
+    },
+    {
+      "id": "procedural-0003-electrical-03-overheating-microg-c0",
+      "split": "train",
+      "sha256": "67f4a692c737388ea4dbac78afcd8741b511ff06b9e66da0c8b9292d74d99bdf",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 123,
+        "fp": 39,
+        "fn": 0,
+        "tn": 44748,
+        "precision": 0.7592592592592593,
+        "recall": 1.0,
+        "iou": 0.7592592592592593,
+        "f1": 0.8631578947368421,
+        "false_positive_rate": 0.0008707883984191841,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0003-electrical-03-overheating-earth-c0",
+      "split": "train",
+      "sha256": "92474d627385c53acd376c5557879193bd555e7f1165b45eef10a3513cc1f0e9",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 789,
+        "fp": 480,
+        "fn": 420,
+        "tn": 43221,
+        "precision": 0.6217494089834515,
+        "recall": 0.652605459057072,
+        "iou": 0.46714031971580816,
+        "f1": 0.6368038740920097,
+        "false_positive_rate": 0.010983730349419922,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0036-electrical-02-smoldering-microg-c0",
+      "split": "train",
+      "sha256": "2de972b6450a07d5c91331e2243d3ac1ff63016ec47a2a7931d4771805f7d0ef",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 110,
+        "fp": 44,
+        "fn": 2,
+        "tn": 44844,
+        "precision": 0.7142857142857143,
+        "recall": 0.9821428571428571,
+        "iou": 0.7051282051282052,
+        "f1": 0.8270676691729323,
+        "false_positive_rate": 0.0009802174300481198,
+        "n_valid": 45000
+      }
+    },
+    {
+      "id": "procedural-0036-electrical-02-smoldering-earth-c0",
+      "split": "train",
+      "sha256": "9a70a4caa777a6399fa916c10528712d55ad1128c7ea91a2cbb41c7a3c7f1b55",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 4,
+        "fp": 31,
+        "fn": 0,
+        "tn": 44965,
+        "precision": 0.11428571428571428,
+        "recall": 1.0,
+        "iou": 0.11428571428571428,
+        "f1": 0.20512820512820512,
+        "false_positive_rate": 0.0006889501289003467,
+        "n_valid": 45000
+      }
+    },
+    {
+      "id": "procedural-0047-electrical-01-battery-microg-c0",
+      "split": "train",
+      "sha256": "e23f8447685c6a47e4e5b4ba1be59c7901b3ff5f2083e1acffb63c64fe8f3631",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 7,
+        "fp": 9,
+        "fn": 0,
+        "tn": 44384,
+        "precision": 0.4375,
+        "recall": 1.0,
+        "iou": 0.4375,
+        "f1": 0.6086956521739131,
+        "false_positive_rate": 0.00020273466537517175,
+        "n_valid": 44400
+      }
+    },
+    {
+      "id": "procedural-0047-electrical-01-battery-earth-c0",
+      "split": "train",
+      "sha256": "3deffe6091975a18e950617c71e566a1ce778adce02e92a59a76346a82de8a48",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 3,
+        "fp": 31,
+        "fn": 0,
+        "tn": 44366,
+        "precision": 0.08823529411764706,
+        "recall": 1.0,
+        "iou": 0.08823529411764706,
+        "f1": 0.16216216216216217,
+        "false_positive_rate": 0.0006982453769398833,
+        "n_valid": 44400
+      }
+    },
+    {
+      "id": "procedural-0026-electrical-00-flaming-microg-c0",
+      "split": "train",
+      "sha256": "c3526db47f3a8f6bcaaa61801315dded5def6d28d64de775cb31dfb9d276765a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 71,
+        "fp": 60,
+        "fn": 0,
+        "tn": 44959,
+        "precision": 0.5419847328244275,
+        "recall": 1.0,
+        "iou": 0.5419847328244275,
+        "f1": 0.7029702970297029,
+        "false_positive_rate": 0.0013327706079655256,
+        "n_valid": 45090
+      }
+    },
+    {
+      "id": "procedural-0026-electrical-00-flaming-earth-c0",
+      "split": "train",
+      "sha256": "7921949db71d06e9ad2e5b3e4394d7ed3b16bd7cf748a20a202fd77e4fddac4f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 77,
+        "fp": 58,
+        "fn": 2,
+        "tn": 44953,
+        "precision": 0.5703703703703704,
+        "recall": 0.9746835443037974,
+        "iou": 0.5620437956204379,
+        "f1": 0.719626168224299,
+        "false_positive_rate": 0.0012885739041567617,
+        "n_valid": 45090
+      }
+    },
+    {
+      "id": "procedural-0037-electrical-03-smoldering-microg-c0",
+      "split": "train",
+      "sha256": "8eaf0621f15831ee2ef102eefdc97ee386e6c97dab7cd721da4ef682f8485d20",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 11,
+        "fp": 28,
+        "fn": 0,
+        "tn": 44571,
+        "precision": 0.28205128205128205,
+        "recall": 1.0,
+        "iou": 0.28205128205128205,
+        "f1": 0.44,
+        "false_positive_rate": 0.0006278167671920895,
+        "n_valid": 44610
+      }
+    },
+    {
+      "id": "procedural-0037-electrical-03-smoldering-earth-c0",
+      "split": "train",
+      "sha256": "6c125dc93a0506b1c6ba62c872d824e685859dd7626157a821f95ceae5e11665",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 18,
+        "fp": 46,
+        "fn": 0,
+        "tn": 44546,
+        "precision": 0.28125,
+        "recall": 1.0,
+        "iou": 0.28125,
+        "f1": 0.43902439024390244,
+        "false_positive_rate": 0.0010315751704341586,
+        "n_valid": 44610
+      }
+    },
+    {
+      "id": "procedural-0048-electrical-00-battery-microg-c0",
+      "split": "train",
+      "sha256": "7028d0db529838b45e6305e011b37b8c310387febb82bbbb5981709806718dc7",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 33,
+        "fp": 0,
+        "fn": 7,
+        "tn": 45560,
+        "precision": 1.0,
+        "recall": 0.825,
+        "iou": 0.825,
+        "f1": 0.9041095890410958,
+        "false_positive_rate": 0.0,
+        "n_valid": 45600
+      }
+    },
+    {
+      "id": "procedural-0048-electrical-00-battery-earth-c0",
+      "split": "train",
+      "sha256": "d49f70aafe20def07d950d9be26b476dd84f54ce4cd7dfc7e75d44ed72dfd21a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 4,
+        "fp": 19,
+        "fn": 1,
+        "tn": 45576,
+        "precision": 0.17391304347826086,
+        "recall": 0.8,
+        "iou": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "false_positive_rate": 0.0004167123588112732,
+        "n_valid": 45600
+      }
+    },
+    {
+      "id": "procedural-0016-electrical-03-arc-microg-c0",
+      "split": "train",
+      "sha256": "e7c8c9e35c49b1b41a945942a3b2617b0708e82a452c49dcb7324d0b49bbad11",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44340,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44340
+      }
+    },
+    {
+      "id": "procedural-0016-electrical-03-arc-earth-c0",
+      "split": "train",
+      "sha256": "638d5dd6bda249d8cb627835ae5639c3cd989532de682ff6d9cab971b376aa98",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44340,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44340
+      }
+    },
+    {
+      "id": "procedural-0027-electrical-03-flaming-microg-c0",
+      "split": "train",
+      "sha256": "b662382612bcd122d88322c70e7e093157f6c12bc638b3b39f073ae5bc894b6f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 72,
+        "fp": 17,
+        "fn": 2,
+        "tn": 45089,
+        "precision": 0.8089887640449438,
+        "recall": 0.972972972972973,
+        "iou": 0.7912087912087912,
+        "f1": 0.8834355828220859,
+        "false_positive_rate": 0.00037688999246220014,
+        "n_valid": 45180
+      }
+    },
+    {
+      "id": "procedural-0027-electrical-03-flaming-earth-c0",
+      "split": "train",
+      "sha256": "cbf68fcfeca539a9eaa8a82ff1492fffe47f91bfde942e37e0e7fef255f4275d",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 20,
+        "fp": 76,
+        "fn": 0,
+        "tn": 45084,
+        "precision": 0.20833333333333334,
+        "recall": 1.0,
+        "iou": 0.20833333333333334,
+        "f1": 0.3448275862068966,
+        "false_positive_rate": 0.001682905225863596,
+        "n_valid": 45180
+      }
+    },
+    {
+      "id": "procedural-0038-electrical-04-smoldering-microg-c0",
+      "split": "train",
+      "sha256": "87959577ce19bd108d96cbbec14da6987faeb88e3eae6820eef6d2b2a65bba63",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44970,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44970
+      }
+    },
+    {
+      "id": "procedural-0038-electrical-04-smoldering-earth-c0",
+      "split": "train",
+      "sha256": "d6dedadb5543648a06e74d2cfe9a59f7cc19362e1b67dbe7c689d9475e0104ac",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44970,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44970
+      }
+    },
+    {
+      "id": "procedural-0049-electrical-00-battery-microg-c0",
+      "split": "train",
+      "sha256": "e5797f941b96f02d6d5d1ec48236c5c7dbfd744da4b2ffb56ab439fcff19f292",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 4,
+        "fp": 10,
+        "fn": 0,
+        "tn": 44266,
+        "precision": 0.2857142857142857,
+        "recall": 1.0,
+        "iou": 0.2857142857142857,
+        "f1": 0.4444444444444444,
+        "false_positive_rate": 0.00022585599421808656,
+        "n_valid": 44280
+      }
+    },
+    {
+      "id": "procedural-0049-electrical-00-battery-earth-c0",
+      "split": "train",
+      "sha256": "f1d63a6c8f03f48b9998dd73b33e4952318b53ff12d47b85ea27ecb9b3366aa6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44280,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44280
+      }
+    },
+    {
+      "id": "procedural-0006-electrical-01-overheating-microg-c0",
+      "split": "train",
+      "sha256": "07d3277b253c4b98b3e8bf330c14815471fac3fefc6ecbf1737ac8d8b501c847",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 16,
+        "fp": 31,
+        "fn": 0,
+        "tn": 45343,
+        "precision": 0.3404255319148936,
+        "recall": 1.0,
+        "iou": 0.3404255319148936,
+        "f1": 0.5079365079365079,
+        "false_positive_rate": 0.0006832106492705073,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0006-electrical-01-overheating-earth-c0",
+      "split": "train",
+      "sha256": "4bd9ccd7cbebee66bd328e8e4303a81db236331d695d6222e9b03c5428fc9d64",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45390,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0017-electrical-01-arc-microg-c0",
+      "split": "train",
+      "sha256": "68b5b9c67e59fe624d49d4b3c48b78ec8c8a86764ff4b320796926fb4147641d",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45330,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0017-electrical-01-arc-earth-c0",
+      "split": "train",
+      "sha256": "25108b8fd19ff9838b99e3002dc143ad1808f592b63495638860e866c6d4630c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45330,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0028-electrical-02-flaming-microg-c0",
+      "split": "train",
+      "sha256": "74d531760f0b1a9ba2fae04235cc7f5f6ed24a953e2e5dc3650815859599ac70",
+      "frames": 24,
+      "positions": 1536,
+      "metrics": {
+        "tp": 34,
+        "fp": 21,
+        "fn": 0,
+        "tn": 34951,
+        "precision": 0.6181818181818182,
+        "recall": 1.0,
+        "iou": 0.6181818181818182,
+        "f1": 0.7640449438202247,
+        "false_positive_rate": 0.0006004803843074459,
+        "n_valid": 35006
+      }
+    },
+    {
+      "id": "procedural-0028-electrical-02-flaming-earth-c0",
+      "split": "train",
+      "sha256": "87bfcbe58dbdd5a8e113a5f15a5c151e820a8754036896c53c54056debfd8f34",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 53,
+        "fp": 31,
+        "fn": 0,
+        "tn": 45576,
+        "precision": 0.6309523809523809,
+        "recall": 1.0,
+        "iou": 0.6309523809523809,
+        "f1": 0.7737226277372263,
+        "false_positive_rate": 0.0006797202183875282,
+        "n_valid": 45660
+      }
+    },
+    {
+      "id": "procedural-0039-electrical-00-smoldering-microg-c0",
+      "split": "train",
+      "sha256": "8a20ce2ced7035c1ed5708189bd22f895f6c0348648966a56dff1d6c4cc1fc4b",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45750,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45750
+      }
+    },
+    {
+      "id": "procedural-0039-electrical-00-smoldering-earth-c0",
+      "split": "train",
+      "sha256": "93408087eb34f15b96af43977df93a2985c3bed4a3dde2a75a0b407a27bef184",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 18,
+        "fp": 9,
+        "fn": 0,
+        "tn": 45723,
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "iou": 0.6666666666666666,
+        "f1": 0.8,
+        "false_positive_rate": 0.00019679874048806088,
+        "n_valid": 45750
+      }
+    },
+    {
+      "id": "procedural-0040-electrical-00-battery-microg-c0",
+      "split": "train",
+      "sha256": "2953bfc1582ec1761fdf0b2ec7e0836d5f59d1ba04fbf3e1c8fe3e2fd5c1dd79",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44370,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44370
+      }
+    },
+    {
+      "id": "procedural-0040-electrical-00-battery-earth-c0",
+      "split": "train",
+      "sha256": "6fedfb3d3c679aff2783d61b7458638ac806d95b84bb251b11ce0d74d607c821",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44370,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44370
+      }
+    },
+    {
+      "id": "procedural-0007-electrical-01-overheating-microg-c0",
+      "split": "train",
+      "sha256": "658559df04eed2ab9c39f0d81a263f9f570fe2e0e3ca45978ce5947b042760cb",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 19,
+        "fp": 74,
+        "fn": 0,
+        "tn": 45237,
+        "precision": 0.20430107526881722,
+        "recall": 1.0,
+        "iou": 0.20430107526881722,
+        "f1": 0.3392857142857143,
+        "false_positive_rate": 0.0016331575114210677,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0007-electrical-01-overheating-earth-c0",
+      "split": "train",
+      "sha256": "46ee474c790f145f59c95563296b5b3b09d1ca967f525e83be45019f728fc128",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 179,
+        "fp": 196,
+        "fn": 7,
+        "tn": 44948,
+        "precision": 0.47733333333333333,
+        "recall": 0.9623655913978495,
+        "iou": 0.468586387434555,
+        "f1": 0.6381461675579323,
+        "false_positive_rate": 0.004341662236399079,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0018-electrical-02-arc-microg-c0",
+      "split": "train",
+      "sha256": "db9a3c4679f9ffd91e93d54c0dfafd408383625755fba53c31ae9abe8704e6b6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45030,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45030
+      }
+    },
+    {
+      "id": "procedural-0018-electrical-02-arc-earth-c0",
+      "split": "train",
+      "sha256": "9f227695f00fc6f84cd6e056e871d1cb11b5fae3672d0fd46f81ffc472501091",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45030,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45030
+      }
+    },
+    {
+      "id": "procedural-0029-electrical-01-flaming-microg-c0",
+      "split": "train",
+      "sha256": "9d4cc7ca65a577189d90845ab9e874747288eb7f02fe30d78405b126b2d06481",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 74,
+        "fp": 80,
+        "fn": 0,
+        "tn": 44816,
+        "precision": 0.4805194805194805,
+        "recall": 1.0,
+        "iou": 0.4805194805194805,
+        "f1": 0.6491228070175439,
+        "false_positive_rate": 0.001781895937277263,
+        "n_valid": 44970
+      }
+    },
+    {
+      "id": "procedural-0029-electrical-01-flaming-earth-c0",
+      "split": "train",
+      "sha256": "ac5e7e9495ade9d96bf54247026bcb9c28ad6e2f438fdffee0e815297eab5978",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 133,
+        "fp": 33,
+        "fn": 1,
+        "tn": 44803,
+        "precision": 0.8012048192771084,
+        "recall": 0.9925373134328358,
+        "iou": 0.7964071856287425,
+        "f1": 0.8866666666666667,
+        "false_positive_rate": 0.0007360157016683023,
+        "n_valid": 44970
+      }
+    },
+    {
+      "id": "procedural-0030-electrical-01-smoldering-microg-c0",
+      "split": "train",
+      "sha256": "5efcca3b8be67b903b8a30f82949870322f48a1a0ffa77cd8ab0f1724b21bf7a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 4,
+        "fp": 10,
+        "fn": 0,
+        "tn": 45316,
+        "precision": 0.2857142857142857,
+        "recall": 1.0,
+        "iou": 0.2857142857142857,
+        "f1": 0.4444444444444444,
+        "false_positive_rate": 0.00022062392445836826,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0030-electrical-01-smoldering-earth-c0",
+      "split": "train",
+      "sha256": "d47462b0a88276ab81dbce268ecf34d0cda90a03177c55c330f615a247f7ee0b",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45330,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0008-electrical-02-overheating-microg-c0",
+      "split": "train",
+      "sha256": "03761d88942a86105646bbf2111881ecc75112fe45b9680a78f30115ab506121",
+      "frames": 21,
+      "positions": 1536,
+      "metrics": {
+        "tp": 40,
+        "fp": 18,
+        "fn": 0,
+        "tn": 29022,
+        "precision": 0.6896551724137931,
+        "recall": 1.0,
+        "iou": 0.6896551724137931,
+        "f1": 0.8163265306122449,
+        "false_positive_rate": 0.0006198347107438017,
+        "n_valid": 29080
+      }
+    },
+    {
+      "id": "procedural-0008-electrical-02-overheating-earth-c0",
+      "split": "train",
+      "sha256": "41b9f76ebfe2a9fe545342931300f8191a5fe1d8c407c21f393f136e1aa5000e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 26,
+        "fp": 116,
+        "fn": 0,
+        "tn": 43478,
+        "precision": 0.18309859154929578,
+        "recall": 1.0,
+        "iou": 0.18309859154929578,
+        "f1": 0.30952380952380953,
+        "false_positive_rate": 0.002660916639904574,
+        "n_valid": 43620
+      }
+    },
+    {
+      "id": "procedural-0019-electrical-01-arc-microg-c0",
+      "split": "train",
+      "sha256": "feb6aadd7b611388f905aa421531cedb90e4bc06c4101bfa1390cdc2c2eafed4",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44790,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44790
+      }
+    },
+    {
+      "id": "procedural-0019-electrical-01-arc-earth-c0",
+      "split": "train",
+      "sha256": "a2e807efc8bdeba2c9e5cd11127f64422c980d6fd4986bdab1a58b6d1a3f226c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44790,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44790
+      }
+    },
+    {
+      "id": "procedural-0020-electrical-00-flaming-microg-c0",
+      "split": "train",
+      "sha256": "a78de933146f146b20ca95026fe927237760156179a40fcbcb06ee74a4866287",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 34,
+        "fp": 14,
+        "fn": 0,
+        "tn": 45522,
+        "precision": 0.7083333333333334,
+        "recall": 1.0,
+        "iou": 0.7083333333333334,
+        "f1": 0.8292682926829268,
+        "false_positive_rate": 0.00030744905130007026,
+        "n_valid": 45570
+      }
+    },
+    {
+      "id": "procedural-0020-electrical-00-flaming-earth-c0",
+      "split": "train",
+      "sha256": "9a15bd2ed7c90d8cfe1134ca64b68586487e642ffad9ba700c639a4757ecef0f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 3,
+        "fp": 30,
+        "fn": 0,
+        "tn": 45537,
+        "precision": 0.09090909090909091,
+        "recall": 1.0,
+        "iou": 0.09090909090909091,
+        "f1": 0.16666666666666666,
+        "false_positive_rate": 0.0006583711896767397,
+        "n_valid": 45570
+      }
+    },
+    {
+      "id": "procedural-0009-electrical-03-overheating-microg-c0",
+      "split": "train",
+      "sha256": "cec67665651b478a5817c1b13c396d48f077f52dbfeae126ba2b0c8554695efe",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 28,
+        "fp": 25,
+        "fn": 0,
+        "tn": 44917,
+        "precision": 0.5283018867924528,
+        "recall": 1.0,
+        "iou": 0.5283018867924528,
+        "f1": 0.691358024691358,
+        "false_positive_rate": 0.000556272529037426,
+        "n_valid": 44970
+      }
+    },
+    {
+      "id": "procedural-0009-electrical-03-overheating-earth-c0",
+      "split": "train",
+      "sha256": "13c2c3ac3819479ad2b02435f7041dfe7d429329c63fa6292b972767745d29d4",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 45,
+        "fp": 85,
+        "fn": 6,
+        "tn": 44834,
+        "precision": 0.34615384615384615,
+        "recall": 0.8823529411764706,
+        "iou": 0.33088235294117646,
+        "f1": 0.4972375690607735,
+        "false_positive_rate": 0.0018922950199247535,
+        "n_valid": 44970
+      }
+    },
+    {
+      "id": "procedural-0010-electrical-00-arc-microg-c0",
+      "split": "train",
+      "sha256": "831a47189b9f096bebdb0c9cc46e4af728d8f7e0163415740459aecf0702736a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44760,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44760
+      }
+    },
+    {
+      "id": "procedural-0010-electrical-00-arc-earth-c0",
+      "split": "train",
+      "sha256": "eea0ce005f420819d091a6a3b9c25d59b56e13394764fa1e7ecf665f625319a3",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44760,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44760
+      }
+    },
+    {
+      "id": "procedural-0043-electrical-03-battery-microg-c0",
+      "split": "train",
+      "sha256": "5ec3eb1425771291bc152560ee6278dfbbc043e2982087559fde0d12e7eb3349",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44490,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44490
+      }
+    },
+    {
+      "id": "procedural-0043-electrical-03-battery-earth-c0",
+      "split": "train",
+      "sha256": "eac2f0962207376935a51e57305b85b77ac82ac6a52d2434b17bf6e1ce565f47",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44490,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44490
+      }
+    },
+    {
+      "id": "procedural-0050-electrical-03-overheating-microg-c1",
+      "split": "train",
+      "sha256": "dbe05fc87b2c7742e4b2be920809d262e3a11c3f40915fe6b5f2ac95d385bc2f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 139,
+        "fp": 75,
+        "fn": 1,
+        "tn": 44845,
+        "precision": 0.6495327102803738,
+        "recall": 0.9928571428571429,
+        "iou": 0.6465116279069767,
+        "f1": 0.7853107344632768,
+        "false_positive_rate": 0.0016696349065004452,
+        "n_valid": 45060
+      }
+    },
+    {
+      "id": "procedural-0050-electrical-03-overheating-earth-c1",
+      "split": "train",
+      "sha256": "984afc0b42b394a401e978adb008a197e9efa50b83c65e6d8a7389c061bd4623",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 2882,
+        "fp": 518,
+        "fn": 1939,
+        "tn": 39721,
+        "precision": 0.8476470588235294,
+        "recall": 0.5978012860402406,
+        "iou": 0.5398014609477431,
+        "f1": 0.7011312492397519,
+        "false_positive_rate": 0.012873083327120454,
+        "n_valid": 45060
+      }
+    },
+    {
+      "id": "procedural-0083-electrical-02-smoldering-microg-c1",
+      "split": "train",
+      "sha256": "940ffc4fde69f37564c5928edaa7a09f9d100d5c7c4072cdde1fbeb3d4d1c999",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 40,
+        "fp": 4,
+        "fn": 0,
+        "tn": 44236,
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "iou": 0.9090909090909091,
+        "f1": 0.9523809523809523,
+        "false_positive_rate": 9.041591320072333e-05,
+        "n_valid": 44280
+      }
+    },
+    {
+      "id": "procedural-0083-electrical-02-smoldering-earth-c1",
+      "split": "train",
+      "sha256": "0909ccd09497a3bdc3549fc224422e302a474972ab186f37f88b61d1e5ef2a56",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 3,
+        "fp": 7,
+        "fn": 0,
+        "tn": 44270,
+        "precision": 0.3,
+        "recall": 1.0,
+        "iou": 0.3,
+        "f1": 0.46153846153846156,
+        "false_positive_rate": 0.00015809562526819795,
+        "n_valid": 44280
+      }
+    },
+    {
+      "id": "procedural-0073-electrical-00-flaming-microg-c1",
+      "split": "train",
+      "sha256": "549f6e5f8bfa9cc3a58ac9956914fb2dba8f025505a7c83e722c34f48227a508",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 37,
+        "fp": 11,
+        "fn": 0,
+        "tn": 44562,
+        "precision": 0.7708333333333334,
+        "recall": 1.0,
+        "iou": 0.7708333333333334,
+        "f1": 0.8705882352941177,
+        "false_positive_rate": 0.0002467861710003814,
+        "n_valid": 44610
+      }
+    },
+    {
+      "id": "procedural-0073-electrical-00-flaming-earth-c1",
+      "split": "train",
+      "sha256": "09f6779559b56362f95c787bd24756d37c7d54677f39c4494cee98ec040cd0c6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 40,
+        "fp": 37,
+        "fn": 0,
+        "tn": 44533,
+        "precision": 0.5194805194805194,
+        "recall": 1.0,
+        "iou": 0.5194805194805194,
+        "f1": 0.6837606837606838,
+        "false_positive_rate": 0.0008301548126542518,
+        "n_valid": 44610
+      }
+    },
+    {
+      "id": "procedural-0063-electrical-00-arc-microg-c1",
+      "split": "train",
+      "sha256": "c815041f72302096b5b44e4b50116bc74308c16d00dcfa4866d68b22acc63ca0",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45270,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45270
+      }
+    },
+    {
+      "id": "procedural-0063-electrical-00-arc-earth-c1",
+      "split": "train",
+      "sha256": "a3a5fcd03dc15ec3387830df7d421bfa4967771594a330d73e54332a06ca6433",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45270,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45270
+      }
+    },
+    {
+      "id": "procedural-0096-electrical-00-battery-microg-c1",
+      "split": "train",
+      "sha256": "a7c0f5cc0c18ef0913df8e03d084afc74d106959c928d372b9e751efd35566f2",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45390,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0096-electrical-00-battery-earth-c1",
+      "split": "train",
+      "sha256": "c37b1a0c63a7ce94efd1c543cb55c920a24174788aa6c73eed0f8fad5a84c87e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45390,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0053-electrical-02-overheating-microg-c1",
+      "split": "train",
+      "sha256": "8a0d2a31f8e1b5907bd60c97a918bccf19e292aca4ad03171e993fcf6f973c08",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 17,
+        "fp": 31,
+        "fn": 0,
+        "tn": 45282,
+        "precision": 0.3541666666666667,
+        "recall": 1.0,
+        "iou": 0.3541666666666667,
+        "f1": 0.5230769230769231,
+        "false_positive_rate": 0.0006841303820095779,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0053-electrical-02-overheating-earth-c1",
+      "split": "train",
+      "sha256": "48ee7b5132465e7dc72e5fee4d1fb70d3177ef2e70c049e94be497b94cb02e1b",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 13,
+        "fp": 63,
+        "fn": 0,
+        "tn": 45254,
+        "precision": 0.17105263157894737,
+        "recall": 1.0,
+        "iou": 0.17105263157894737,
+        "f1": 0.29213483146067415,
+        "false_positive_rate": 0.0013902067656729263,
+        "n_valid": 45330
+      }
+    },
+    {
+      "id": "procedural-0086-electrical-01-smoldering-microg-c1",
+      "split": "train",
+      "sha256": "76e59dd9c99ca0392c35572eaeadfa64fc822452f61618afe0a1db6a5e1362f6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 17,
+        "fp": 22,
+        "fn": 0,
+        "tn": 45051,
+        "precision": 0.4358974358974359,
+        "recall": 1.0,
+        "iou": 0.4358974358974359,
+        "f1": 0.6071428571428571,
+        "false_positive_rate": 0.00048809708694784015,
+        "n_valid": 45090
+      }
+    },
+    {
+      "id": "procedural-0086-electrical-01-smoldering-earth-c1",
+      "split": "train",
+      "sha256": "73b0f99067c90d959f11d4a15a8e61c857221bb4fafea70ffc5b2881216f12d9",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45090,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45090
+      }
+    },
+    {
+      "id": "procedural-0097-electrical-01-battery-microg-c1",
+      "split": "train",
+      "sha256": "d4e0f9da9a51a0e36c4b9c21aa0929b00279730c6fa837555f158579abaefdcc",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 15,
+        "fp": 0,
+        "fn": 2,
+        "tn": 45103,
+        "precision": 1.0,
+        "recall": 0.8823529411764706,
+        "iou": 0.8823529411764706,
+        "f1": 0.9375,
+        "false_positive_rate": 0.0,
+        "n_valid": 45120
+      }
+    },
+    {
+      "id": "procedural-0097-electrical-01-battery-earth-c1",
+      "split": "train",
+      "sha256": "b1e60625c817a5b711f786362f60c495fd1209619aafd1f81494cdddc7d8236a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45120,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45120
+      }
+    },
+    {
+      "id": "procedural-0076-electrical-00-flaming-microg-c1",
+      "split": "train",
+      "sha256": "a5df3a4def250bd608d19f1a62176cbf2594d54c006e02d792ecca36e778a303",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 79,
+        "fp": 22,
+        "fn": 0,
+        "tn": 43909,
+        "precision": 0.7821782178217822,
+        "recall": 1.0,
+        "iou": 0.7821782178217822,
+        "f1": 0.8777777777777778,
+        "false_positive_rate": 0.0005007853224374587,
+        "n_valid": 44010
+      }
+    },
+    {
+      "id": "procedural-0076-electrical-00-flaming-earth-c1",
+      "split": "train",
+      "sha256": "2033e9dafc05ad7bf157e2b12c01c2c51c6a4e76779e72d798660b83c0feb8f6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 19,
+        "fp": 78,
+        "fn": 1,
+        "tn": 43912,
+        "precision": 0.1958762886597938,
+        "recall": 0.95,
+        "iou": 0.19387755102040816,
+        "f1": 0.3247863247863248,
+        "false_positive_rate": 0.001773130256876563,
+        "n_valid": 44010
+      }
+    },
+    {
+      "id": "procedural-0087-electrical-04-smoldering-microg-c1",
+      "split": "train",
+      "sha256": "88bc48ec141b75f42ef409aed7abdecae93f8db3f118992e1c0ea1271f99dd44",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44490,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44490
+      }
+    },
+    {
+      "id": "procedural-0087-electrical-04-smoldering-earth-c1",
+      "split": "train",
+      "sha256": "86583032b4b30d0f2505241b5bcc028508d0f67c890dac16ae29adb8e5df636d",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44490,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44490
+      }
+    },
+    {
+      "id": "procedural-0098-electrical-05-battery-microg-c1",
+      "split": "train",
+      "sha256": "6df947b85bb2b80981f82c44f07965ef265e02ca4b00f8ff4564dca729eb278c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44460,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44460
+      }
+    },
+    {
+      "id": "procedural-0098-electrical-05-battery-earth-c1",
+      "split": "train",
+      "sha256": "320305aa2c4633772100b6ffd72db3fc5dc7b8a794638b77b6aecd1041a44f42",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44460,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44460
+      }
+    },
+    {
+      "id": "procedural-0066-electrical-04-arc-microg-c1",
+      "split": "train",
+      "sha256": "e951a1601c1756f4461ee0b5f2156e327b9ed18c31c6eb0ab374c3de0f055e10",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45480,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45480
+      }
+    },
+    {
+      "id": "procedural-0066-electrical-04-arc-earth-c1",
+      "split": "train",
+      "sha256": "c2e038f51860baae4da6a7b6e34fc3642bf2b5d78590f599e01590f282d74479",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45480,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45480
+      }
+    },
+    {
+      "id": "procedural-0077-electrical-02-flaming-microg-c1",
+      "split": "train",
+      "sha256": "f8adee8592262504bbc1f71c9abfdaa1df62c4708ccb6e61e48679f2dafa2de3",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 74,
+        "fp": 53,
+        "fn": 0,
+        "tn": 44393,
+        "precision": 0.5826771653543307,
+        "recall": 1.0,
+        "iou": 0.5826771653543307,
+        "f1": 0.736318407960199,
+        "false_positive_rate": 0.0011924582639607614,
+        "n_valid": 44520
+      }
+    },
+    {
+      "id": "procedural-0077-electrical-02-flaming-earth-c1",
+      "split": "train",
+      "sha256": "6968e7dc839a24420a2d7d00a9cd18259a085932f875c4db3fb88e69d535348a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 37,
+        "fp": 134,
+        "fn": 1,
+        "tn": 44348,
+        "precision": 0.21637426900584794,
+        "recall": 0.9736842105263158,
+        "iou": 0.21511627906976744,
+        "f1": 0.35406698564593303,
+        "false_positive_rate": 0.003012454475967807,
+        "n_valid": 44520
+      }
+    },
+    {
+      "id": "procedural-0088-electrical-03-smoldering-microg-c1",
+      "split": "train",
+      "sha256": "4375a4becd16c1edc808faa290d295a8775f97298a64d8e380135efe93108f9d",
+      "frames": 29,
+      "positions": 1536,
+      "metrics": {
+        "tp": 26,
+        "fp": 9,
+        "fn": 1,
+        "tn": 41852,
+        "precision": 0.7428571428571429,
+        "recall": 0.9629629629629629,
+        "iou": 0.7222222222222222,
+        "f1": 0.8387096774193549,
+        "false_positive_rate": 0.0002149972528128807,
+        "n_valid": 41888
+      }
+    },
+    {
+      "id": "procedural-0088-electrical-03-smoldering-earth-c1",
+      "split": "train",
+      "sha256": "3cfeee36bb4f0aa244002b330f2af32be55af5bd7f3e2c6438280ad6187dd4f6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44880,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44880
+      }
+    },
+    {
+      "id": "procedural-0099-electrical-00-battery-microg-c1",
+      "split": "train",
+      "sha256": "03c28eac517e0ce7407468fee553caab51c4be58aa52b6c295ea560219f0212a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 45,
+        "fp": 50,
+        "fn": 0,
+        "tn": 44845,
+        "precision": 0.47368421052631576,
+        "recall": 1.0,
+        "iou": 0.47368421052631576,
+        "f1": 0.6428571428571429,
+        "false_positive_rate": 0.0011137097672346587,
+        "n_valid": 44940
+      }
+    },
+    {
+      "id": "procedural-0099-electrical-00-battery-earth-c1",
+      "split": "train",
+      "sha256": "c6a6224928968e741d8ae2e3dccc6687337866ebd2662592188afd0928631202",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44940,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44940
+      }
+    },
+    {
+      "id": "procedural-0056-electrical-01-overheating-microg-c1",
+      "split": "train",
+      "sha256": "c85b7bf67ac311f50275c5dd9ec5be54baa4270a5a6cda1ce3b850c72202711e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45030,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45030
+      }
+    },
+    {
+      "id": "procedural-0056-electrical-01-overheating-earth-c1",
+      "split": "train",
+      "sha256": "c872054a09e98d63e9967a8cf128d4d003fa1ea88db65d8230288229299a36cf",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45030,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45030
+      }
+    },
+    {
+      "id": "procedural-0067-electrical-01-arc-microg-c1",
+      "split": "train",
+      "sha256": "8e10d673617e8ef22d40843cbb6c5aed2425c4b5c537f9d165e526542b550652",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45480,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45480
+      }
+    },
+    {
+      "id": "procedural-0067-electrical-01-arc-earth-c1",
+      "split": "train",
+      "sha256": "db6c3d091241db40930b334c2c6fec8c314c0d1e2df85c128648f58e54cace91",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45480,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45480
+      }
+    },
+    {
+      "id": "procedural-0078-electrical-02-flaming-microg-c1",
+      "split": "train",
+      "sha256": "b3e9dfd55c4f21e9318571f31f597446e687ff0d721ad5cc380d589b5a0c301d",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 31,
+        "fp": 41,
+        "fn": 0,
+        "tn": 44868,
+        "precision": 0.4305555555555556,
+        "recall": 1.0,
+        "iou": 0.4305555555555556,
+        "f1": 0.6019417475728155,
+        "false_positive_rate": 0.0009129573136787727,
+        "n_valid": 44940
+      }
+    },
+    {
+      "id": "procedural-0078-electrical-02-flaming-earth-c1",
+      "split": "train",
+      "sha256": "8e995a140ed9831580c2178fae37fce5c2c4596eb90e2f49f16bf4f02deaf386",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 70,
+        "fp": 95,
+        "fn": 3,
+        "tn": 44772,
+        "precision": 0.42424242424242425,
+        "recall": 0.958904109589041,
+        "iou": 0.4166666666666667,
+        "f1": 0.5882352941176471,
+        "false_positive_rate": 0.002117369113156663,
+        "n_valid": 44940
+      }
+    },
+    {
+      "id": "procedural-0089-electrical-01-smoldering-microg-c1",
+      "split": "train",
+      "sha256": "99288f3a3a36ac0a937ac9f129ed23f176b815deb98ca64d3e74a3ede3927454",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 18,
+        "fp": 5,
+        "fn": 0,
+        "tn": 45217,
+        "precision": 0.782608695652174,
+        "recall": 1.0,
+        "iou": 0.782608695652174,
+        "f1": 0.8780487804878049,
+        "false_positive_rate": 0.00011056565388527708,
+        "n_valid": 45240
+      }
+    },
+    {
+      "id": "procedural-0089-electrical-01-smoldering-earth-c1",
+      "split": "train",
+      "sha256": "9c6f576fdb65d21272849104a6b4a90866bd94bdae4c8381b36c9901fe87a0d3",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 7,
+        "fp": 24,
+        "fn": 0,
+        "tn": 45209,
+        "precision": 0.22580645161290322,
+        "recall": 1.0,
+        "iou": 0.22580645161290322,
+        "f1": 0.3684210526315789,
+        "false_positive_rate": 0.0005305860765370416,
+        "n_valid": 45240
+      }
+    },
+    {
+      "id": "procedural-0090-electrical-03-battery-microg-c1",
+      "split": "train",
+      "sha256": "7986e7b4c9d46888662d884f7b41b259ef4d7511c663a31bb104b722df0661fc",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44430,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44430
+      }
+    },
+    {
+      "id": "procedural-0090-electrical-03-battery-earth-c1",
+      "split": "train",
+      "sha256": "06cdd5363117fe304c99b1bab5e7ab6432b218da01b8196fc8163363ad6d9abd",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44430,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44430
+      }
+    },
+    {
+      "id": "procedural-0057-electrical-03-overheating-microg-c1",
+      "split": "train",
+      "sha256": "4576d133695f75be963137a782d3a34d2df0899c1a5b13f855487a8b41c8d04a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45240,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45240
+      }
+    },
+    {
+      "id": "procedural-0057-electrical-03-overheating-earth-c1",
+      "split": "train",
+      "sha256": "303d43fabf64e30e84067d807560fedb8905f1c7f3752d26f0adb38c16762ecb",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45240,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45240
+      }
+    },
+    {
+      "id": "procedural-0068-electrical-03-arc-microg-c1",
+      "split": "train",
+      "sha256": "3142880de2e88c7d0564bd56c46e32afc51f11f30f7dfae5ee312ab1267d57e0",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44670,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44670
+      }
+    },
+    {
+      "id": "procedural-0068-electrical-03-arc-earth-c1",
+      "split": "train",
+      "sha256": "7becc1b607ca54100da4968f724d8ba94b40daee851d14acf03991167081b860",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44670,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44670
+      }
+    },
+    {
+      "id": "procedural-0079-electrical-00-flaming-microg-c1",
+      "split": "train",
+      "sha256": "f563e416f2c69b1254956bc302ba38778f6a43a7cc31dc522b43dec31ccd7758",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 6,
+        "fp": 50,
+        "fn": 0,
+        "tn": 45304,
+        "precision": 0.10714285714285714,
+        "recall": 1.0,
+        "iou": 0.10714285714285714,
+        "f1": 0.1935483870967742,
+        "false_positive_rate": 0.0011024385941703046,
+        "n_valid": 45360
+      }
+    },
+    {
+      "id": "procedural-0079-electrical-00-flaming-earth-c1",
+      "split": "train",
+      "sha256": "8e3879ba4ee28e2978f10af18d2aa3dd5c0f6f4617f7af7eeaf42aef827ce340",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 4,
+        "fp": 51,
+        "fn": 0,
+        "tn": 45305,
+        "precision": 0.07272727272727272,
+        "recall": 1.0,
+        "iou": 0.07272727272727272,
+        "f1": 0.13559322033898305,
+        "false_positive_rate": 0.0011244377811094452,
+        "n_valid": 45360
+      }
+    },
+    {
+      "id": "procedural-0080-electrical-03-smoldering-microg-c1",
+      "split": "train",
+      "sha256": "7bd34cf8897239fd87dd56bbb1820af74ccd4f778df9ea4708ba827439a1519e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 12,
+        "fp": 38,
+        "fn": 0,
+        "tn": 44530,
+        "precision": 0.24,
+        "recall": 1.0,
+        "iou": 0.24,
+        "f1": 0.3870967741935484,
+        "false_positive_rate": 0.000852629689463292,
+        "n_valid": 44580
+      }
+    },
+    {
+      "id": "procedural-0080-electrical-03-smoldering-earth-c1",
+      "split": "train",
+      "sha256": "bf5f48a9fa94ec713e5a70c38ffe6dac215514adb41710b518a8ec699eb7e0c7",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 14,
+        "fp": 30,
+        "fn": 0,
+        "tn": 44536,
+        "precision": 0.3181818181818182,
+        "recall": 1.0,
+        "iou": 0.3181818181818182,
+        "f1": 0.4827586206896552,
+        "false_positive_rate": 0.0006731589103801104,
+        "n_valid": 44580
+      }
+    },
+    {
+      "id": "procedural-0058-electrical-02-overheating-microg-c1",
+      "split": "train",
+      "sha256": "8f09deb68ad066b47d5ba9451c25e018cec4d07a02ddf020a199a9f0d94868bd",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 93,
+        "fp": 42,
+        "fn": 0,
+        "tn": 45015,
+        "precision": 0.6888888888888889,
+        "recall": 1.0,
+        "iou": 0.6888888888888889,
+        "f1": 0.8157894736842105,
+        "false_positive_rate": 0.0009321526066981823,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0058-electrical-02-overheating-earth-c1",
+      "split": "train",
+      "sha256": "c2c887758ef36963ae5868ef95c28ca74a8e184f71850fbc4d2a74cda6738718",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 2208,
+        "fp": 839,
+        "fn": 1518,
+        "tn": 40585,
+        "precision": 0.7246471939612734,
+        "recall": 0.5925925925925926,
+        "iou": 0.4836801752464403,
+        "f1": 0.6520005905802451,
+        "false_positive_rate": 0.020253959057551178,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0069-electrical-02-arc-microg-c1",
+      "split": "train",
+      "sha256": "90338a7ce74c8f28502b187fbb7d62375ae03948037ae7bd092072c5ff3fc7c6",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44640,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44640
+      }
+    },
+    {
+      "id": "procedural-0069-electrical-02-arc-earth-c1",
+      "split": "train",
+      "sha256": "383482419104b997e7eefe739818e6e4bc1feda7ff1973132b140de8b5e6d5f0",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44640,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44640
+      }
+    },
+    {
+      "id": "procedural-0070-electrical-03-flaming-microg-c1",
+      "split": "train",
+      "sha256": "a64c1e3a11aca4f832eb0ffe663e1600da975fd60e5162882e1d234b8ed761dd",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 71,
+        "fp": 49,
+        "fn": 0,
+        "tn": 45270,
+        "precision": 0.5916666666666667,
+        "recall": 1.0,
+        "iou": 0.5916666666666667,
+        "f1": 0.743455497382199,
+        "false_positive_rate": 0.0010812242105959972,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0070-electrical-03-flaming-earth-c1",
+      "split": "train",
+      "sha256": "e5432e57782c19bcb3fa5974b4cf3d8cc504bb20b08ab98a555efc850ce82cbf",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 76,
+        "fp": 65,
+        "fn": 4,
+        "tn": 45245,
+        "precision": 0.5390070921985816,
+        "recall": 0.95,
+        "iou": 0.5241379310344828,
+        "f1": 0.6877828054298643,
+        "false_positive_rate": 0.0014345619068638269,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0059-electrical-00-overheating-microg-c1",
+      "split": "train",
+      "sha256": "c9f6b09a62af30debfa9dbe86c168004ff18bc77d9b9419ee18c6b0f72f309d8",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 95,
+        "fp": 25,
+        "fn": 0,
+        "tn": 45420,
+        "precision": 0.7916666666666666,
+        "recall": 1.0,
+        "iou": 0.7916666666666666,
+        "f1": 0.8837209302325582,
+        "false_positive_rate": 0.0005501155242600946,
+        "n_valid": 45540
+      }
+    },
+    {
+      "id": "procedural-0059-electrical-00-overheating-earth-c1",
+      "split": "train",
+      "sha256": "aa47860f3e884882e6958eb88f5569048de0eccf5c3a56b69e2cbf117abff93c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 438,
+        "fp": 343,
+        "fn": 159,
+        "tn": 44600,
+        "precision": 0.5608194622279129,
+        "recall": 0.7336683417085427,
+        "iou": 0.46595744680851064,
+        "f1": 0.6357039187227866,
+        "false_positive_rate": 0.007631889281979396,
+        "n_valid": 45540
+      }
+    },
+    {
+      "id": "procedural-0060-electrical-03-arc-microg-c1",
+      "split": "train",
+      "sha256": "1132890fd8656ecec15eb4a486b1281a7c1856c6ce977be70c8e8a1e63869d14",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44880,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44880
+      }
+    },
+    {
+      "id": "procedural-0060-electrical-03-arc-earth-c1",
+      "split": "train",
+      "sha256": "459b49813e1660149633ef4048549d88b9f717669999cc7abb15363c2bcfb042",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44880,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44880
+      }
+    },
+    {
+      "id": "procedural-0093-electrical-00-battery-microg-c1",
+      "split": "train",
+      "sha256": "aa71630c684983fcdab6c86c7f04ccd5d3a799271200808ba6d611a2090f2c85",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 38,
+        "fp": 1,
+        "fn": 1,
+        "tn": 44750,
+        "precision": 0.9743589743589743,
+        "recall": 0.9743589743589743,
+        "iou": 0.95,
+        "f1": 0.9743589743589743,
+        "false_positive_rate": 2.2345869366047684e-05,
+        "n_valid": 44790
+      }
+    },
+    {
+      "id": "procedural-0093-electrical-00-battery-earth-c1",
+      "split": "train",
+      "sha256": "563aa22482fb69e09693345143130b2cc41fba2b961b731d408120a3eb6df8b3",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44790,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44790
+      }
+    },
+    {
+      "id": "procedural-0011-electrical-01-arc-microg-c0",
+      "split": "validation",
+      "sha256": "a1f7a62b29ac9877edb9cc030515ea17b0febeeb0098790aa080d94a7ec6c797",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45420,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45420
+      }
+    },
+    {
+      "id": "procedural-0011-electrical-01-arc-earth-c0",
+      "split": "validation",
+      "sha256": "8a2be45bfc5f57d869f43c78a3a8c7e7f57fd32efd7892fe7267ecffa54514f4",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45420,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45420
+      }
+    },
+    {
+      "id": "procedural-0044-electrical-02-battery-microg-c0",
+      "split": "validation",
+      "sha256": "421f938c19ad633015247da865890d07802b348c7468373a5de7a20e863b0e01",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44910,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0044-electrical-02-battery-earth-c0",
+      "split": "validation",
+      "sha256": "457cea5e0e46e2cc67c1d4661c4f79227bde1f0e7e36d5c88a336ed160abb967",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44910,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0001-electrical-01-overheating-microg-c0",
+      "split": "validation",
+      "sha256": "fc1a22b8493c07823aa2ef6a8f16e4b4a195a4b839bd125186e3b60307d86aa8",
+      "frames": 30,
+      "positions": 1536,
+      "metrics": {
+        "tp": 60,
+        "fp": 134,
+        "fn": 0,
+        "tn": 43190,
+        "precision": 0.30927835051546393,
+        "recall": 1.0,
+        "iou": 0.30927835051546393,
+        "f1": 0.47244094488188976,
+        "false_positive_rate": 0.003092973871295356,
+        "n_valid": 43384
+      }
+    },
+    {
+      "id": "procedural-0001-electrical-01-overheating-earth-c0",
+      "split": "validation",
+      "sha256": "a5116eaeb4f384888687973eacc79f07e5fee5a9f425f33c931511ea55ae6742",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 12,
+        "fp": 1445,
+        "fn": 18,
+        "tn": 43405,
+        "precision": 0.008236101578586136,
+        "recall": 0.4,
+        "iou": 0.008135593220338983,
+        "f1": 0.01613987895090787,
+        "false_positive_rate": 0.03221850613154961,
+        "n_valid": 44880
+      }
+    },
+    {
+      "id": "procedural-0034-electrical-01-smoldering-microg-c0",
+      "split": "validation",
+      "sha256": "45cc9ced312d71ebd1f742bbb5745a44da9fe99da07e753202c463e49328cad4",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 42,
+        "fn": 0,
+        "tn": 44688,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0009389671361502347,
+        "n_valid": 44730
+      }
+    },
+    {
+      "id": "procedural-0034-electrical-01-smoldering-earth-c0",
+      "split": "validation",
+      "sha256": "105943d5b3cff4bd555269abe3faeb95b39eae0e5619fb57ec82b6fcd425bd6e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 11,
+        "tn": 44719,
+        "precision": null,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "n_valid": 44730
+      }
+    },
+    {
+      "id": "procedural-0024-electrical-00-flaming-microg-c0",
+      "split": "validation",
+      "sha256": "92ce2607a0b4e7a40133feb3d364acc1587ec19dca106b7da6a17688a9aff0ad",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 8,
+        "fp": 30,
+        "fn": 33,
+        "tn": 45079,
+        "precision": 0.21052631578947367,
+        "recall": 0.1951219512195122,
+        "iou": 0.11267605633802817,
+        "f1": 0.20253164556962025,
+        "false_positive_rate": 0.000665055753840697,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0024-electrical-00-flaming-earth-c0",
+      "split": "validation",
+      "sha256": "a8856a548d72d70cef8cddc357434b9b0424b54a4ced7726886d81b774a087d2",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 42,
+        "fp": 40,
+        "fn": 31,
+        "tn": 45037,
+        "precision": 0.5121951219512195,
+        "recall": 0.5753424657534246,
+        "iou": 0.37168141592920356,
+        "f1": 0.5419354838709678,
+        "false_positive_rate": 0.0008873704993677485,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0014-electrical-01-arc-microg-c0",
+      "split": "validation",
+      "sha256": "8cfb0bdc53bdb7fb2d392524494c855776be124167222f7df242af1d7e5c7d98",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44850,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44850
+      }
+    },
+    {
+      "id": "procedural-0014-electrical-01-arc-earth-c0",
+      "split": "validation",
+      "sha256": "0aab70fd3336231aea41598511ab7be2ac5d5c1373cf8fd1b139ea8d6453dbcf",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44850,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44850
+      }
+    },
+    {
+      "id": "procedural-0004-electrical-00-overheating-microg-c0",
+      "split": "validation",
+      "sha256": "5372a5810b03f674a772023f2b34a994ec7348921c0596eb73ad42624f5de623",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 41,
+        "fp": 40,
+        "fn": 35,
+        "tn": 44914,
+        "precision": 0.5061728395061729,
+        "recall": 0.5394736842105263,
+        "iou": 0.35344827586206895,
+        "f1": 0.5222929936305732,
+        "false_positive_rate": 0.0008897984606486631,
+        "n_valid": 45030
+      }
+    },
+    {
+      "id": "procedural-0004-electrical-00-overheating-earth-c0",
+      "split": "validation",
+      "sha256": "7b5399e783763a0dce653a9e7ffaa46b2a7a750ae9c41428cd0ec3d74b7b7a7a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 657,
+        "fp": 1450,
+        "fn": 371,
+        "tn": 42552,
+        "precision": 0.3118177503559563,
+        "recall": 0.6391050583657587,
+        "iou": 0.2651331719128329,
+        "f1": 0.41913875598086126,
+        "false_positive_rate": 0.03295304758874597,
+        "n_valid": 45030
+      }
+    },
+    {
+      "id": "procedural-0041-electrical-04-battery-microg-c0",
+      "split": "validation",
+      "sha256": "cad489f109d21dc8b76143b01d9665f8f1785dccc9fe349ba80ce3ec89e81f7f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0,
+        "tn": 45387,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 6.609385327164574e-05,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0041-electrical-04-battery-earth-c0",
+      "split": "validation",
+      "sha256": "579348acec17d9da39b8a81c869396f7825cbac6f637f92244c4e2335df70093",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 26,
+        "tn": 45364,
+        "precision": null,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0031-electrical-02-smoldering-microg-c0",
+      "split": "validation",
+      "sha256": "2a24dc4590489e265a36f6bc098dbf8d644736ae0a3315ccaac0e3fa324151f1",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 31,
+        "fn": 0,
+        "tn": 44669,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0006935123042505593,
+        "n_valid": 44700
+      }
+    },
+    {
+      "id": "procedural-0031-electrical-02-smoldering-earth-c0",
+      "split": "validation",
+      "sha256": "8e56b7ebd656f2644734ee6738b33eddf6769f7f9485c03017961220e64f8e47",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 31,
+        "fn": 0,
+        "tn": 44669,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0006935123042505593,
+        "n_valid": 44700
+      }
+    },
+    {
+      "id": "procedural-0021-electrical-01-flaming-microg-c0",
+      "split": "validation",
+      "sha256": "6613b99119544cfb35c81c86986733b7440d8bc5ca0d4af9021fafe0767f3f7f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 46,
+        "fp": 16,
+        "fn": 25,
+        "tn": 44583,
+        "precision": 0.7419354838709677,
+        "recall": 0.647887323943662,
+        "iou": 0.5287356321839081,
+        "f1": 0.6917293233082706,
+        "false_positive_rate": 0.00035875243839547975,
+        "n_valid": 44670
+      }
+    },
+    {
+      "id": "procedural-0021-electrical-01-flaming-earth-c0",
+      "split": "validation",
+      "sha256": "530435f62e370be7cfca008ff6f34794e463b6a5cdab6f41a3267672a265f66c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 39,
+        "fp": 34,
+        "fn": 8,
+        "tn": 44589,
+        "precision": 0.5342465753424658,
+        "recall": 0.8297872340425532,
+        "iou": 0.48148148148148145,
+        "f1": 0.65,
+        "false_positive_rate": 0.000761938910427358,
+        "n_valid": 44670
+      }
+    },
+    {
+      "id": "procedural-0061-electrical-04-arc-microg-c1",
+      "split": "validation",
+      "sha256": "9b9264b2072a58c507be693f73eab10f71ad8206a60f6b8bf6c7408be60571e7",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44880,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44880
+      }
+    },
+    {
+      "id": "procedural-0061-electrical-04-arc-earth-c1",
+      "split": "validation",
+      "sha256": "e39113577dad0b3f0aa7cf0ccd1b385355e7e3f6012a3a3cdd46de95257a0ccc",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44880,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44880
+      }
+    },
+    {
+      "id": "procedural-0094-electrical-03-battery-microg-c1",
+      "split": "validation",
+      "sha256": "df68403ff1b777f2cff8b2c56f10d7cb480c8308360ff27f5bcd14f907ae682f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 18,
+        "fn": 26,
+        "tn": 45106,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0003989008066660757,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0094-electrical-03-battery-earth-c1",
+      "split": "validation",
+      "sha256": "46525c04f297fee9a473e91a7ba6c642355ef14999bb284688e498edc5331575",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 16,
+        "fn": 0,
+        "tn": 45134,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.00035437430786268,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0051-electrical-04-overheating-microg-c1",
+      "split": "validation",
+      "sha256": "2616e74c6b6e61130c2055f992e8a2902a3b509e44aab214c5ce624352cae808",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 22,
+        "fp": 4,
+        "fn": 199,
+        "tn": 44175,
+        "precision": 0.8461538461538461,
+        "recall": 0.09954751131221719,
+        "iou": 0.09777777777777778,
+        "f1": 0.17813765182186234,
+        "false_positive_rate": 9.054075465719006e-05,
+        "n_valid": 44400
+      }
+    },
+    {
+      "id": "procedural-0051-electrical-04-overheating-earth-c1",
+      "split": "validation",
+      "sha256": "54ea7276ebc59060ef5893e6b41c3315835f20d375618d901d4d64f20cc48a22",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 2,
+        "fp": 35,
+        "fn": 935,
+        "tn": 43428,
+        "precision": 0.05405405405405406,
+        "recall": 0.0021344717182497333,
+        "iou": 0.00205761316872428,
+        "f1": 0.004106776180698152,
+        "false_positive_rate": 0.0008052826542116283,
+        "n_valid": 44400
+      }
+    },
+    {
+      "id": "procedural-0084-electrical-01-smoldering-microg-c1",
+      "split": "validation",
+      "sha256": "0a65626cf70098ebad91cb0be20befa8bc794dd124c32e874f28ec8ec9f338ad",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 6,
+        "fp": 29,
+        "fn": 23,
+        "tn": 44702,
+        "precision": 0.17142857142857143,
+        "recall": 0.20689655172413793,
+        "iou": 0.10344827586206896,
+        "f1": 0.1875,
+        "false_positive_rate": 0.0006483199570767477,
+        "n_valid": 44760
+      }
+    },
+    {
+      "id": "procedural-0084-electrical-01-smoldering-earth-c1",
+      "split": "validation",
+      "sha256": "f2cc4b068b97e61af8fa18fe4969cbee06b1e2bfe1cf0fc4ba63244914427c62",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 14,
+        "fn": 1,
+        "tn": 44745,
+        "precision": 0.0,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.00031278625527826804,
+        "n_valid": 44760
+      }
+    },
+    {
+      "id": "procedural-0074-electrical-01-flaming-microg-c1",
+      "split": "validation",
+      "sha256": "74abeb993515ef63b9ea78bd4ec7b713930051e4e0cabbf91900639686401f47",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 28,
+        "fp": 21,
+        "fn": 37,
+        "tn": 44554,
+        "precision": 0.5714285714285714,
+        "recall": 0.4307692307692308,
+        "iou": 0.32558139534883723,
+        "f1": 0.49122807017543857,
+        "false_positive_rate": 0.0004711160964666293,
+        "n_valid": 44640
+      }
+    },
+    {
+      "id": "procedural-0074-electrical-01-flaming-earth-c1",
+      "split": "validation",
+      "sha256": "2edb7ae50257203f677a5ccb1c9441c8eef672df315537e44949486c8231d868",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 37,
+        "fp": 25,
+        "fn": 32,
+        "tn": 44546,
+        "precision": 0.5967741935483871,
+        "recall": 0.5362318840579711,
+        "iou": 0.39361702127659576,
+        "f1": 0.5648854961832062,
+        "false_positive_rate": 0.0005609028291938704,
+        "n_valid": 44640
+      }
+    },
+    {
+      "id": "procedural-0064-electrical-01-arc-microg-c1",
+      "split": "validation",
+      "sha256": "1b993d086a73d130b5c3bceadc40c4e9e6ccbe387a931db325699cbcd1e862cd",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44910,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0064-electrical-01-arc-earth-c1",
+      "split": "validation",
+      "sha256": "ac3613ac65b205d596c4273bbdee6a9970af2feaec17a0bc5680dc0436c6c9ce",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44910,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44910
+      }
+    },
+    {
+      "id": "procedural-0054-electrical-03-overheating-microg-c1",
+      "split": "validation",
+      "sha256": "3c3849a2a44baf416f74017185986a625ef8fa2128016e3abcd0aa02a56ad8ef",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 22,
+        "fn": 0,
+        "tn": 44108,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.000498527079084523,
+        "n_valid": 44130
+      }
+    },
+    {
+      "id": "procedural-0054-electrical-03-overheating-earth-c1",
+      "split": "validation",
+      "sha256": "cd50aaee65434b51658e55158ffc97892b16747c15d3e91f201ede1725252794",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 11,
+        "fn": 0,
+        "tn": 44119,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0002492635395422615,
+        "n_valid": 44130
+      }
+    },
+    {
+      "id": "procedural-0091-electrical-04-battery-microg-c1",
+      "split": "validation",
+      "sha256": "b579d6c0c8b1f9eb9775cc98e1ca9efbffecabae1dd454add4c05a62bd2e1d23",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 11,
+        "fp": 11,
+        "fn": 8,
+        "tn": 44550,
+        "precision": 0.5,
+        "recall": 0.5789473684210527,
+        "iou": 0.36666666666666664,
+        "f1": 0.5365853658536586,
+        "false_positive_rate": 0.00024685262898049864,
+        "n_valid": 44580
+      }
+    },
+    {
+      "id": "procedural-0091-electrical-04-battery-earth-c1",
+      "split": "validation",
+      "sha256": "7b755db3864eb71e111f6cf8c8ec1902394b8d0c77b0f9badd506b410399b03c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44580,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44580
+      }
+    },
+    {
+      "id": "procedural-0081-electrical-00-smoldering-microg-c1",
+      "split": "validation",
+      "sha256": "c405caeac21c9e5cf8a227a9041568999f1b0ae784368456af2ed0529e3543af",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 40,
+        "fp": 25,
+        "fn": 25,
+        "tn": 44490,
+        "precision": 0.6153846153846154,
+        "recall": 0.6153846153846154,
+        "iou": 0.4444444444444444,
+        "f1": 0.6153846153846154,
+        "false_positive_rate": 0.0005616084465910367,
+        "n_valid": 44580
+      }
+    },
+    {
+      "id": "procedural-0081-electrical-00-smoldering-earth-c1",
+      "split": "validation",
+      "sha256": "9af1f206abcbdec329c058438805c083982dddd0e9f9babe3ffb51eb4746cb25",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 1,
+        "fp": 12,
+        "fn": 3,
+        "tn": 44564,
+        "precision": 0.07692307692307693,
+        "recall": 0.25,
+        "iou": 0.0625,
+        "f1": 0.11764705882352941,
+        "false_positive_rate": 0.00026920315865039483,
+        "n_valid": 44580
+      }
+    },
+    {
+      "id": "procedural-0071-electrical-01-flaming-microg-c1",
+      "split": "validation",
+      "sha256": "8dca622587fe0cd1db9e82dd1643a61904186b13540b53c10a552db93663d42e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 39,
+        "fp": 33,
+        "fn": 48,
+        "tn": 45690,
+        "precision": 0.5416666666666666,
+        "recall": 0.4482758620689655,
+        "iou": 0.325,
+        "f1": 0.49056603773584906,
+        "false_positive_rate": 0.0007217374188045404,
+        "n_valid": 45810
+      }
+    },
+    {
+      "id": "procedural-0071-electrical-01-flaming-earth-c1",
+      "split": "validation",
+      "sha256": "faa1002ecc14cad2042f8be63b216df74a46a4ea8977ff268606c497109a1e2a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 4,
+        "fp": 49,
+        "fn": 68,
+        "tn": 45689,
+        "precision": 0.07547169811320754,
+        "recall": 0.05555555555555555,
+        "iou": 0.03305785123966942,
+        "f1": 0.064,
+        "false_positive_rate": 0.0010713192531374349,
+        "n_valid": 45810
+      }
+    },
+    {
+      "id": "procedural-0022-electrical-01-flaming-microg-c0",
+      "split": "test",
+      "sha256": "8c65963747fd311b7bcb994c69820e517af85f5aeb933d0955cf345b937eb283",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 22,
+        "fp": 68,
+        "fn": 0,
+        "tn": 45510,
+        "precision": 0.24444444444444444,
+        "recall": 1.0,
+        "iou": 0.24444444444444444,
+        "f1": 0.39285714285714285,
+        "false_positive_rate": 0.0014919478695862038,
+        "n_valid": 45600
+      }
+    },
+    {
+      "id": "procedural-0022-electrical-01-flaming-earth-c0",
+      "split": "test",
+      "sha256": "e1fe179a74aceed2630fdd480fa95c6058f8d62ebd7780b16526f2580775a051",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 59,
+        "fn": 0,
+        "tn": 45541,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.001293859649122807,
+        "n_valid": 45600
+      }
+    },
+    {
+      "id": "procedural-0012-electrical-02-arc-microg-c0",
+      "split": "test",
+      "sha256": "ed9377e0d63620adb6de682f92acea103936459031ebedfae4362d746961df50",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45360,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45360
+      }
+    },
+    {
+      "id": "procedural-0012-electrical-02-arc-earth-c0",
+      "split": "test",
+      "sha256": "eea7b65a7baca3701d811fb7ab6feb846b5325948d3cca7ca93b52759f5be608",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45360,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45360
+      }
+    },
+    {
+      "id": "procedural-0045-electrical-01-battery-microg-c0",
+      "split": "test",
+      "sha256": "b9ab2e95a8e595f49366f3afd30d51bf73e20c9cb69a483e629266cab79dcb3f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45180,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45180
+      }
+    },
+    {
+      "id": "procedural-0045-electrical-01-battery-earth-c0",
+      "split": "test",
+      "sha256": "5624cc1525c8885c5a910fffc5b59b37c2b86044c9c9b680eca92362db35aaf4",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45180,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45180
+      }
+    },
+    {
+      "id": "procedural-0002-electrical-02-overheating-microg-c0",
+      "split": "test",
+      "sha256": "2cd65a859c418c4d594a644dcc7584ffc38dfa7dadaf0c41271ba322ee1d9dea",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 41,
+        "fp": 0,
+        "fn": 46,
+        "tn": 45213,
+        "precision": 1.0,
+        "recall": 0.47126436781609193,
+        "iou": 0.47126436781609193,
+        "f1": 0.640625,
+        "false_positive_rate": 0.0,
+        "n_valid": 45300
+      }
+    },
+    {
+      "id": "procedural-0002-electrical-02-overheating-earth-c0",
+      "split": "test",
+      "sha256": "a233c416b3a40b51e39b766b3d1454d360f5fd246d91634c1df41d324bf01c5f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 77,
+        "fp": 25,
+        "fn": 661,
+        "tn": 44537,
+        "precision": 0.7549019607843137,
+        "recall": 0.1043360433604336,
+        "iou": 0.10091743119266056,
+        "f1": 0.18333333333333332,
+        "false_positive_rate": 0.0005610161123827476,
+        "n_valid": 45300
+      }
+    },
+    {
+      "id": "procedural-0035-electrical-01-smoldering-microg-c0",
+      "split": "test",
+      "sha256": "21fa0aa326492313fe9c2a6696a51146806dc473a8663379c6fbe250854d1d83",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 17,
+        "fn": 0,
+        "tn": 45463,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0003737906772207564,
+        "n_valid": 45480
+      }
+    },
+    {
+      "id": "procedural-0035-electrical-01-smoldering-earth-c0",
+      "split": "test",
+      "sha256": "5757182e77c442c98ef3165dc16a870318ae2bbd03dd583624ad5bffb8691699",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45480,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45480
+      }
+    },
+    {
+      "id": "procedural-0025-electrical-04-flaming-microg-c0",
+      "split": "test",
+      "sha256": "7f968baebe2708c55b9acbda4413b4b2b2f5500e7d9a022e09b875025e81e70d",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 29,
+        "fp": 13,
+        "fn": 19,
+        "tn": 45359,
+        "precision": 0.6904761904761905,
+        "recall": 0.6041666666666666,
+        "iou": 0.47540983606557374,
+        "f1": 0.6444444444444445,
+        "false_positive_rate": 0.0002865203209027594,
+        "n_valid": 45420
+      }
+    },
+    {
+      "id": "procedural-0025-electrical-04-flaming-earth-c0",
+      "split": "test",
+      "sha256": "479a9e2d792ed696d2dc071b9c37148954d212aa4661c77d5b1db4b437becd72",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 30,
+        "fp": 1,
+        "fn": 7,
+        "tn": 45382,
+        "precision": 0.967741935483871,
+        "recall": 0.8108108108108109,
+        "iou": 0.7894736842105263,
+        "f1": 0.8823529411764706,
+        "false_positive_rate": 2.2034682590397284e-05,
+        "n_valid": 45420
+      }
+    },
+    {
+      "id": "procedural-0015-electrical-05-arc-microg-c0",
+      "split": "test",
+      "sha256": "0c2bb5686fee18780e1475c3d17cb034518c9ed292422f5741814f20fd52719c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45390,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0015-electrical-05-arc-earth-c0",
+      "split": "test",
+      "sha256": "f97ab8efc7752028d6eaa68349712e693d339abb7e151663d2da897c04a0bcae",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45390,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0005-electrical-05-overheating-microg-c0",
+      "split": "test",
+      "sha256": "993e1e1062623c216d41985c047deabd993fc44c1f35ed4e97f6db5e42d40319",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 14,
+        "fn": 0,
+        "tn": 45436,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.00030803080308030803,
+        "n_valid": 45450
+      }
+    },
+    {
+      "id": "procedural-0005-electrical-05-overheating-earth-c0",
+      "split": "test",
+      "sha256": "162ff6b60bc441abc78b4c5ebe01ae24e9eca241d364c012d3d11e840da2f95d",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 84,
+        "fn": 0,
+        "tn": 45366,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0018481848184818482,
+        "n_valid": 45450
+      }
+    },
+    {
+      "id": "procedural-0042-electrical-02-battery-microg-c0",
+      "split": "test",
+      "sha256": "7668682817b4ecbbd3fc17ce90c57f5a51646bcf40cc9b65c9d313aae219e4a7",
+      "frames": 30,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 44022,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 44022
+      }
+    },
+    {
+      "id": "procedural-0042-electrical-02-battery-earth-c0",
+      "split": "test",
+      "sha256": "ea4524566dd5283fafc69a55322d8ad12bcc89f097634b75f1040d03587f64f5",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45540,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45540
+      }
+    },
+    {
+      "id": "procedural-0032-electrical-02-smoldering-microg-c0",
+      "split": "test",
+      "sha256": "849f3a20a696e658300250693d8f86d443a54a8c1c4f2f55317f2893a918aa76",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 1,
+        "fp": 13,
+        "fn": 25,
+        "tn": 45111,
+        "precision": 0.07142857142857142,
+        "recall": 0.038461538461538464,
+        "iou": 0.02564102564102564,
+        "f1": 0.05,
+        "false_positive_rate": 0.00028809502703661024,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0032-electrical-02-smoldering-earth-c0",
+      "split": "test",
+      "sha256": "6681420f7e18c3c7816f74f8ac4dca2da984597ced8e30ce02a6a88a76dd9c6b",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 45148,
+        "precision": null,
+        "recall": 0.0,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0072-electrical-05-flaming-microg-c1",
+      "split": "test",
+      "sha256": "28f038a1525f831d32c55a15f5082963f861c520bf50140c5249f556491e55bc",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 5,
+        "fp": 62,
+        "fn": 2,
+        "tn": 44391,
+        "precision": 0.07462686567164178,
+        "recall": 0.7142857142857143,
+        "iou": 0.07246376811594203,
+        "f1": 0.13513513513513514,
+        "false_positive_rate": 0.0013947315141835197,
+        "n_valid": 44460
+      }
+    },
+    {
+      "id": "procedural-0072-electrical-05-flaming-earth-c1",
+      "split": "test",
+      "sha256": "46c3bc24924b01d5adb59210f87ad44b0fc8ad8b10431a8901fa136a06135d0d",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 12,
+        "fp": 37,
+        "fn": 43,
+        "tn": 44368,
+        "precision": 0.24489795918367346,
+        "recall": 0.21818181818181817,
+        "iou": 0.13043478260869565,
+        "f1": 0.23076923076923078,
+        "false_positive_rate": 0.0008332395000563,
+        "n_valid": 44460
+      }
+    },
+    {
+      "id": "procedural-0062-electrical-02-arc-microg-c1",
+      "split": "test",
+      "sha256": "fb16f265c0c2f3962308d363fb9fcfaa728d918ad158322b84a8b48175ef346e",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45540,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45540
+      }
+    },
+    {
+      "id": "procedural-0062-electrical-02-arc-earth-c1",
+      "split": "test",
+      "sha256": "7fbebdb454333e60c1d93066542b4a6e49089fce0dfe0ba5edb51dc97cafc41a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45540,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45540
+      }
+    },
+    {
+      "id": "procedural-0095-electrical-04-battery-microg-c1",
+      "split": "test",
+      "sha256": "bed31d366aff8cfd2447c124e0713b80a91a25c407a6bec9f10819fff93c0392",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 23,
+        "fn": 0,
+        "tn": 45517,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.000505050505050505,
+        "n_valid": 45540
+      }
+    },
+    {
+      "id": "procedural-0095-electrical-04-battery-earth-c1",
+      "split": "test",
+      "sha256": "745092f07f91f4214321cfdcb1b0b46e540fc2f9ceefb41849bf165e30b94958",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 11,
+        "tn": 45522,
+        "precision": 1.0,
+        "recall": 0.3888888888888889,
+        "iou": 0.3888888888888889,
+        "f1": 0.56,
+        "false_positive_rate": 0.0,
+        "n_valid": 45540
+      }
+    },
+    {
+      "id": "procedural-0052-electrical-01-overheating-microg-c1",
+      "split": "test",
+      "sha256": "958a782281202a39f354d9b896c1d08db9185d7e8467c31c14daff1b422faaad",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 74,
+        "fp": 21,
+        "fn": 0,
+        "tn": 45055,
+        "precision": 0.7789473684210526,
+        "recall": 1.0,
+        "iou": 0.7789473684210526,
+        "f1": 0.8757396449704142,
+        "false_positive_rate": 0.0004658798473688881,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0052-electrical-01-overheating-earth-c1",
+      "split": "test",
+      "sha256": "07973e68506a2ba87f9042fa5993fa61a5e0f6b90cc043df47787b99ae61fddc",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 190,
+        "fp": 112,
+        "fn": 400,
+        "tn": 44448,
+        "precision": 0.6291390728476821,
+        "recall": 0.3220338983050847,
+        "iou": 0.2706552706552707,
+        "f1": 0.4260089686098655,
+        "false_positive_rate": 0.0025134649910233393,
+        "n_valid": 45150
+      }
+    },
+    {
+      "id": "procedural-0085-electrical-00-smoldering-microg-c1",
+      "split": "test",
+      "sha256": "82ae3b7b20af94246f399308aeae9e7969d365814e10ba6273155d04aff9ac02",
+      "frames": 22,
+      "positions": 1536,
+      "metrics": {
+        "tp": 8,
+        "fp": 13,
+        "fn": 1,
+        "tn": 31730,
+        "precision": 0.38095238095238093,
+        "recall": 0.8888888888888888,
+        "iou": 0.36363636363636365,
+        "f1": 0.5333333333333333,
+        "false_positive_rate": 0.0004095391109850991,
+        "n_valid": 31752
+      }
+    },
+    {
+      "id": "procedural-0085-electrical-00-smoldering-earth-c1",
+      "split": "test",
+      "sha256": "bb85b4a9e9a48aeccd18cde328c8fb837811ef53eb11cb598196cb5ae3939f51",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 7,
+        "fn": 0,
+        "tn": 45353,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.00015432098765432098,
+        "n_valid": 45360
+      }
+    },
+    {
+      "id": "procedural-0075-electrical-02-flaming-microg-c1",
+      "split": "test",
+      "sha256": "78b036f71a1062c123727e9f2fcc5a22dd787e326643015b22078abda77091f8",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 48,
+        "fp": 12,
+        "fn": 52,
+        "tn": 45278,
+        "precision": 0.8,
+        "recall": 0.48,
+        "iou": 0.42857142857142855,
+        "f1": 0.6,
+        "false_positive_rate": 0.0002649591521307132,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0075-electrical-02-flaming-earth-c1",
+      "split": "test",
+      "sha256": "c6d8076cd675ddb89e7a88c6323d090cc0fd3f298bd9bc184378dd8fb8ea083c",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 14,
+        "fp": 4,
+        "fn": 91,
+        "tn": 45281,
+        "precision": 0.7777777777777778,
+        "recall": 0.13333333333333333,
+        "iou": 0.12844036697247707,
+        "f1": 0.22764227642276422,
+        "false_positive_rate": 8.832946891906813e-05,
+        "n_valid": 45390
+      }
+    },
+    {
+      "id": "procedural-0065-electrical-02-arc-microg-c1",
+      "split": "test",
+      "sha256": "1f1fe38f616733578954e3a5b5faa22dbbe0c7b7a7dba3c8df631c5d7ca314a1",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45720,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45720
+      }
+    },
+    {
+      "id": "procedural-0065-electrical-02-arc-earth-c1",
+      "split": "test",
+      "sha256": "cb4f50acf2df6303e2ca0043a3e549d0b7862a76281b47e6031f807a0353b20f",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45720,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45720
+      }
+    },
+    {
+      "id": "procedural-0055-electrical-02-overheating-microg-c1",
+      "split": "test",
+      "sha256": "4bc12a325fb3b1f7ea18904b76d55a4194a3eee6a1246839cc15fee9bceec54a",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 45,
+        "fp": 0,
+        "fn": 165,
+        "tn": 45360,
+        "precision": 1.0,
+        "recall": 0.21428571428571427,
+        "iou": 0.21428571428571427,
+        "f1": 0.35294117647058826,
+        "false_positive_rate": 0.0,
+        "n_valid": 45570
+      }
+    },
+    {
+      "id": "procedural-0055-electrical-02-overheating-earth-c1",
+      "split": "test",
+      "sha256": "916f73a52d2ef0fb2dee9e0649f7eb05c37b6ad21c7f467cdc39d860df3a06fc",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 91,
+        "fp": 19,
+        "fn": 3159,
+        "tn": 42301,
+        "precision": 0.8272727272727273,
+        "recall": 0.028,
+        "iou": 0.027837259100642397,
+        "f1": 0.05416666666666667,
+        "false_positive_rate": 0.00044896030245746693,
+        "n_valid": 45570
+      }
+    },
+    {
+      "id": "procedural-0092-electrical-05-battery-microg-c1",
+      "split": "test",
+      "sha256": "c84d46891f3b682e44f0498ba4af414f8cd4ee06cb8f9d9e4e8114c4eac74ddb",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 8,
+        "fn": 0,
+        "tn": 45442,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.00017601760176017602,
+        "n_valid": 45450
+      }
+    },
+    {
+      "id": "procedural-0092-electrical-05-battery-earth-c1",
+      "split": "test",
+      "sha256": "9b3c2860287b0ab3b10f7f09287b5d07dbed0a3a409f202ed47bab2b0be8bed8",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45450,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0.0,
+        "n_valid": 45450
+      }
+    },
+    {
+      "id": "procedural-0082-electrical-04-smoldering-microg-c1",
+      "split": "test",
+      "sha256": "6beccff7bc228bf1bb5d01ed225d11663ddcbda2b56ff6f0be19afcf834de28b",
+      "frames": 29,
+      "positions": 1536,
+      "metrics": {
+        "tp": 22,
+        "fp": 5,
+        "fn": 21,
+        "tn": 42036,
+        "precision": 0.8148148148148148,
+        "recall": 0.5116279069767442,
+        "iou": 0.4583333333333333,
+        "f1": 0.6285714285714286,
+        "false_positive_rate": 0.00011893151923122666,
+        "n_valid": 42084
+      }
+    },
+    {
+      "id": "procedural-0082-electrical-04-smoldering-earth-c1",
+      "split": "test",
+      "sha256": "056367980300debad88e30fdddabe9b58ed23d783fca23bcdc6313cdee8bd554",
+      "frames": 31,
+      "positions": 1536,
+      "metrics": {
+        "tp": 0,
+        "fp": 35,
+        "fn": 0,
+        "tn": 45055,
+        "precision": 0.0,
+        "recall": null,
+        "iou": 0.0,
+        "f1": 0.0,
+        "false_positive_rate": 0.0007762253271235307,
+        "n_valid": 45090
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "archive": "E:\\IGNIS-Valley-dev\\runtime\\iss-poc-v2\\20261115\\fit1.zip",
+  "sha256": "33f5b0790480d352652dfa9bed4a2a1fd68f3f7542e8d678cb222c28ae07ca0f",
+  "bytes": 447025097,
+  "fit_file_count": 414,
+  "uncompressed_fit_bytes": 1813004306,
+  "model_sha256": "37bf3e0c5394cbe52fe520ebf85cbf393cd9b4203751d5b1db5c0c79641f987a",
+  "dataset_sha256": "9f941aaf98c914804f21c68bd623fba908ed9fd8df29d816308c6ca4b51e855f",
+  "source_count": 11,
+  "excluded": [
+    "comparison-scores (v1 audit scores kept on Windows; no FDS label NPZ included)"
+  ]
+}

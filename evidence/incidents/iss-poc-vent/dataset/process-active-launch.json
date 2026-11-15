@@ -1,0 +1,10 @@
+{
+  "launch_utc": "2026-11-15T14:48:29.554037+00:00",
+  "result": {
+    "ProcessId": 22436,
+    "ReturnValue": 0
+  },
+  "lock_wait_s": 123.827209,
+  "absolute_deadline_utc": "2026-11-15T15:07:00.001981+00:00",
+  "no_external_process_interrupted": true
+}

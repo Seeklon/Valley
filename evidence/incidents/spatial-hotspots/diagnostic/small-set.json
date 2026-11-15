@@ -1,0 +1,170 @@
+[
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0003-electrical-03-overheating-microg-c0",
+    "layout_id": "procedural-0003",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44910,
+      44910
+    ],
+    "active": [
+      123,
+      233
+    ],
+    "temperature_max_c": 372.0600280761719,
+    "smoke_max_kg_m3": 0.0007810715469531715
+  },
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0029-electrical-01-flaming-microg-c0",
+    "layout_id": "procedural-0029",
+    "incident_type": "flaming",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44970,
+      44970
+    ],
+    "active": [
+      74,
+      156
+    ],
+    "temperature_max_c": 190.0445098876953,
+    "smoke_max_kg_m3": 0.0003725874121300876
+  },
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0099-electrical-00-battery-microg-c1",
+    "layout_id": "procedural-0099",
+    "incident_type": "battery",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44940,
+      44940
+    ],
+    "active": [
+      45,
+      237
+    ],
+    "temperature_max_c": 49.6759033203125,
+    "smoke_max_kg_m3": 0.0005471942131407559
+  },
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0010-electrical-00-arc-microg-c0",
+    "layout_id": "procedural-0010",
+    "incident_type": "arc",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44760,
+      44760
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.043865203857422,
+    "smoke_max_kg_m3": 0.0
+  },
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0059-electrical-00-overheating-earth-c1",
+    "layout_id": "procedural-0059",
+    "incident_type": "overheating",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45540,
+      45540
+    ],
+    "active": [
+      597,
+      6749
+    ],
+    "temperature_max_c": 88.37744140625,
+    "smoke_max_kg_m3": 8.963514119386673e-05
+  },
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0023-electrical-03-flaming-earth-c0",
+    "layout_id": "procedural-0023",
+    "incident_type": "flaming",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45690,
+      45690
+    ],
+    "active": [
+      60,
+      5554
+    ],
+    "temperature_max_c": 81.09121704101562,
+    "smoke_max_kg_m3": 7.081060903146863e-05
+  },
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0048-electrical-00-battery-earth-c0",
+    "layout_id": "procedural-0048",
+    "incident_type": "battery",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      45600,
+      45600
+    ],
+    "active": [
+      5,
+      3601
+    ],
+    "temperature_max_c": 25.714399337768555,
+    "smoke_max_kg_m3": 5.9321340813767165e-05
+  },
+  {
+    "dataset": "spatial-compact-v1",
+    "run_id": "procedural-0010-electrical-00-arc-earth-c0",
+    "layout_id": "procedural-0010",
+    "incident_type": "arc",
+    "sample_shape": [
+      12,
+      16,
+      8
+    ],
+    "observed": [
+      44760,
+      44760
+    ],
+    "active": [
+      0,
+      0
+    ],
+    "temperature_max_c": 20.209983825683594,
+    "smoke_max_kg_m3": 0.0
+  }
+]

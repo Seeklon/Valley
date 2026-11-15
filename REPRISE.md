@@ -1,10 +1,236 @@
 # Reprise — IGNIS 3D / Valley
 
-14 novembre 2026. Application Windows opérationnelle et vérifiée. Sources de
+15 novembre 2026. Sources de
 livraison sur la branche `codex/ignis-3d-lab`. Lors d’une reprise, relire Git
 et `/api/health` pour connaître l’état actuel du code et du service.
 
-## Dernier essai spatial borné — terminé, modèle non activé
+## Priorité actuelle — spécialisation ISS et intégration du 15 novembre
+
+**Nouvelle instruction explicite de Thomas le 15 novembre vers 13:49 Paris :**
+préparer une amélioration ciblée du modèle et son intégration dans la maquette
+pour la présentation à **18 h Paris aujourd'hui**. La maquette sera envoyée ;
+elle conduit de l'espace à une station puis à ses scènes intérieures. Thomas
+confirme des géométries simples proches de l'ISS. Cette autorisation remplace
+la consigne d'arrêt automatique de la livraison d'hier, pour ce lot borné.
+
+**État courant : adaptation ventilation terminée, auditée et livrée sur dev
+le 15 novembre vers 16:22 Paris.** Même réseau : 379 046 paramètres au total,
+376 834 entraînables. 216 nouvelles simulations FDS appariées, 24 dispositions
+et six familles ; 108 train / 54 validation / 54 test. Réentraînement depuis V2
+sur ses 240 anciens cas train et les 108 nouveaux, avec réflexions X/Y sur GPU.
+Génération + audit : 13 min 49 s ; fit, évaluations et export : 7 min 32 s,
+dont une fenêtre entraînement/validation de 5 min 02 s. GPU médian 98 % dans
+cette fenêtre, moyenne 85,27 %, maximum 99 %. Aucun nouvel entraînement lancé
+après l'ouverture du test ; le corpus initial de 20 000 reste en pause.
+
+Sur les 54 nouveaux cas de test, face au V2 recalibré selon la même procédure :
+F1 chaleur 0,388 → 0,553, fumée 0,393 → 0,579 ; rappel chaleur 0,347 → 0,601,
+fumée 0,359 → 0,594. Réponse signée aux variations de ventilation : F1 chaleur
+0,126 → 0,374, fumée 0,127 → 0,448. Les six témoins 0 W sont sans faux positif.
+**Limites :** les faux positifs chaleur augmentent de 3 841 à 4 971 ; légère
+régression chaleur sur les racks centraux. Ces décomptes sont des observations
+de sondes dans le temps, pas des incendies indépendants. Voir
+`docs/ISS_POC_VENT_MODEL.md` et `evidence/incidents/iss-poc-vent/final-review.md`.
+
+Les poids/seuils ont été figés avant le test ; checkpoint 5 000. La contrelecture
+indépendante confirme les gardes de sélection. Les 216 replays, scores archivés,
+comparaisons et références FDS ont été vérifiés indépendamment :
+`evidence/incidents/iss-poc-vent/export-verification.json`.
+Poids SHA256 `ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292` ;
+index SHA256 `7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e`.
+Livraison statique : `evidence/incidents/iss-poc-vent/dev-delivery.json`,
+229 fichiers changés sans redémarrer le backend. V2 locale conservée dans
+`runtime/iss-poc-v2-public-preserved`, sauvegarde dev dans
+`E:/IGNIS-Valley-dev/runtime/iss-backup-20261115T152133Z`.
+
+L'interface propose sans débit / lent / rapide / inversé pour un même quartet,
+en conservant caméra et temps visé. Elle affiche le temps réellement observé
+sans interpoler les relevés. 34 tests frontend, build, non-régression V2 et
+contrôle navigateur du quartet réel passent. Contrôle final du dev terminé
+à 16:30:07 Paris : 17 contrôles, 33 captures, aucune erreur JavaScript ni
+écriture ; index et poids identiques avant/après. Preuves dans
+`evidence/incidents/iss-poc-vent/browser-dev/`.
+L'apprentissage reste une approximation de FDS : aucun champ de vitesse
+intérieur complet en entrée, ni validation expérimentale NASA. La prédiction
+est conditionnelle à une source imposée, pas une probabilité de départ de feu.
+
+**Dernière instruction de Thomas : livrer d'abord le modèle, revenir sur les
+seuils après.** Les poids et seuils sélectionnés sont conservés. Une lecture
+exploratoire des seuils voisins sur les 54 nouvelles validations a été sauvegardée
+dans `validation-threshold-sensitivity.json`, sans sélection ni changement livré.
+Ne pas lancer d'autre entraînement ou ajustement de seuil par anticipation.
+
+Paquet du modèle livré et relu par HTTP :
+<https://desktop-m4hkr86.tail609f26.ts.net:8444/downloads/ignis-model-20261115-vent.zip>.
+Copie locale `runtime/ignis-model-20261115-vent.zip`, 1 798 192 octets, 30 fichiers,
+SHA256 `b7e1da6b6e97f2f4bc4c74fe092acbc5eca19fd27f878a227fb146ea1fb892e7`.
+Poids, code d'inférence Python, dépendances, exemple, métriques et preuves inclus.
+Inférence CPU réelle du paquet exécutée sur Windows : cinq instants × 1 536
+sondes × deux champs, depuis scène et conditions, sans FDS ni apprentissage.
+Preuves : `evidence/incidents/iss-poc-vent/model-delivery.json` et
+`model-kit-verification.json`. Le paquet ne contient pas les gros replays de
+l'interface ; le kit frontend V2 reste disponible en attendant la maquette.
+
+**Étape précédente : réentraînement v2 terminé, contrôlé et livré vers
+15:29 Paris.** Même réseau, 379 046 paramètres au total, 376 834 entraînables.
+384 scénarios nouveaux, 48 dispositions, six familles (dont cargo, cabine et
+racks centraux), 240 train / 48 validation / 96 test. Génération 23 min 53 s,
+fit complet 8 min 32 s ; GPU médian 98 %, maximum 99 %. Compute terminé,
+verrou libéré. **Instruction de Thomas vers 15:32 Paris :** améliorer
+rapidement les zones manquées et l'effet de la ventilation en microgravité.
+La campagne bornée de 216 cas FDS appariés et le réentraînement GPU décrits
+ci-dessus ont répondu à cette demande. Les poids V2 ont été conservés jusqu'à
+mesure de l'amélioration. Les nouvelles dispositions de test sont restées
+réservées jusqu'au gel de la sélection.
+Le FDS installé reste un solveur CPU ; les augmentations et l'apprentissage
+GPU ne sont pas de nouvelles simulations CFD.
+
+Sur les mêmes 84 cas de test microgravité : F1 chaleur **24,6 → 48,5 %**, fumée
+**27,6 → 54,3 %**, face aux poids v1 recalibrés. Poids choisis sur validation
+à l'étape 1 000, puis test ; 14 387 mises à jour effectuées. Les six familles
+gagnent, mais la qualité reste celle d'un POC synthétique. Les géométries sont
+distinctes des partitions v1, pas les familles ni toutes les conditions.
+
+Audit indépendant : `evidence/incidents/iss-poc-v2/export-verification.json`
+(384 replays contre les observations FDS, poids et comparaisons v1 archivées).
+Rapport : `evidence/incidents/iss-poc-v2/model/fit1/report.json`.
+Poids SHA256 `37bf3e0c5394cbe52fe520ebf85cbf393cd9b4203751d5b1db5c0c79641f987a` ;
+index SHA256 `94d4c81e9ec55a9178f3d004ad52ece238d67faf9b6318e88aa17664bd68a5a7`.
+Livraison : `evidence/incidents/iss-poc-v2/dev-delivery.json` (386 fichiers
+changés, exports réutilisés depuis le fit Windows après contrôle des hashes).
+V1 locale conservée dans `runtime/iss-poc-v1-public-preserved`, sauvegarde dev
+dans `E:/IGNIS-Valley-dev/runtime/iss-backup-20261115T142633Z`.
+
+Kit autonome créé : `runtime/ignis-integration-20261115-v2.zip` (476 744 556
+octets, SHA256 `ab73293cf09358d265df995a77d3b88299185f63b8f340b7479854fb611b2550`).
+Il contient la vue React/Three, les 384 exports, les poids et l'inférence CPU.
+Contrôle navigateur dev terminé à 15:34:50 Paris : 16 contrôles, 31 captures,
+six familles, aucune erreur JavaScript ni écriture. Preuve :
+`evidence/incidents/iss-poc-v2/browser-realistic-dev/browser-report.json`.
+Kit autonome : build, trois contrôles navigateur et inférence CPU Windows
+réels réussis (`standalone-kit/` et `model-kit-verification.json` dans le même
+dossier de preuves). Ce kit V2 est conservé ; le dev utilise désormais les
+poids de l'adaptation ventilation indiqués en tête de document.
+
+**Première tranche livrée sur dev le 15 novembre à 14:35 Paris** :
+<https://desktop-m4hkr86.tail609f26.ts.net:8444/#iss>. 108 scénarios FDS vérifiés,
+18 dispositions, 72 train / 18 validation / 18 test. Réseau U-Net 3D identique
+au backbone existant, 379 046 paramètres, deux sorties chaleur/fumée. Poids
+sélectionnés à l'étape 1 000, après validation ; test réservé ensuite.
+F1 test microgravité : chaleur 67,3 %, fumée 67,4 %, contre 36,8 % et 33,5 %
+pour la proximité du foyer. 7 min 18 s de génération, 4 min 55 s pour le fit
+complet ; GPU médian 96 %, maximum 99 %. Lire `docs/ISS_POC.md` pour les
+limites, preuves et parcours. L'interface lit des inférences enregistrées.
+
+Le contrôle indépendant des 108 exports compare toutes les observations,
+masques, géométries et métriques aux données FDS et lie les fichiers aux vrais
+poids et au dataset figé. 18 tests modèle Windows, 16 tests vérificateur,
+94 tests frontend initialement, puis 14 tests ciblés d'interface après les
+correctifs caméra/timeline. Contrôle navigateur réel local réussi sur les
+modules, témoin, échec, test, navigation et chronologie. Preuves sous
+`evidence/incidents/iss-poc/`. Le backend dev reste sur 8766 / HTTPS 8444.
+Le service historique 8765 / 8443 n'a pas été redémarré ; le corpus initial
+reste en pause. L'ancien POC est toujours accessible sur `#poc`.
+
+**Nouvelle instruction utilisateur après cette première tranche :** générer
+plus de scénarios divers, y compris hors ISS, et améliorer le réalisme 3D.
+Thomas précise : réentraîner le même modèle, sans changer d'architecture.
+Campagne v2 distincte terminée : 384 cas / 48 dispositions, six familles
+(laboratoire, nœud, service, cargo, cabine simplifiée, racks centraux), cible
+240 train / 48 validation / 96 test. Budget génération 30 minutes maximum,
+puis fit/évaluation 10 minutes, tous deux respectés. Résultats réels ci-dessus.
+Initialisation depuis v1 déclarée. Comparer v1 figé, v1 seulement recalibré
+sur nouvelle validation, et poids réentraînés sur les mêmes données réservées.
+Aucun résultat test ne doit guider le fit. Pas de reprise des 20 000 anciens cas.
+
+Rendu réaliste livré sur le même dev vers **15:04 Paris** : équipements,
+panneaux, textures locales et lumière aux dimensions des proxies, sans modifier
+les passages d'air ni déplacer les sondes. Les prédictions v2 sont maintenant servies.
+15 tests ciblés, build et 13 contrôles navigateur locaux réussis ; 19 captures
+dans `evidence/incidents/iss-poc/browser-realistic-final/`. Une première passe
+navigateur interrompue reste documentée séparément, cause non établie.
+La maquette externe est toujours attendue ; préparer le paquet
+réutilisable, mais ne pas prétendre l'avoir intégré avant de l'avoir reçue.
+Aucune prétention à une réplique ISS vérifiée, généralisation universelle ou
+validation expérimentale NASA. Les scores ne sont pas des probabilités de
+feu, des températures, ni des concentrations de fumée.
+
+## Livraison précédente — POC ML visuel du 14 novembre
+
+**Nouvelle instruction explicite de Thomas, le 14 novembre vers 22:11 Paris :
+terminer ce soir un entraînement ML simple et démontrer visuellement la
+détection des points chauds pour la présentation du lendemain.** Cette demande
+remplace la limite « proposition uniquement » ci-dessous. Le planning de 4–7
+jours n'est plus celui du rendu. Aucun objectif de modèle généraliste ou de
+validation NASA complète n'est ajouté au POC.
+
+**Calcul terminé et modèle figé le 14 novembre à 22:37 Paris.** Deux essais CUDA,
+9 min 22 s au total, validation/export inclus ; aucune nouvelle génération FDS.
+FIT1 conservé selon validation (F1 moyen des gravités 0,325 contre 0,318 pour
+FIT2). GPU mesuré à 98 % durant FIT2 après optimisation des lots et de la boucle.
+Les poids FIT1 sont conservés malgré cette optimisation du second essai.
+120 cas train / 40 validation / 40 historiques, 100 dispositions. Le test
+historique est déjà connu des essais précédents ; ce n'est pas un test vierge.
+Les deux processus sont terminés, ancien corpus toujours en pause. Aucun
+entraînement ni génération supplémentaire à lancer automatiquement.
+
+POC livré sur la version de développement à **22:41 Paris** :
+`https://desktop-m4hkr86.tail609f26.ts.net:8444/#poc`. Comparaison 3D synchronisée
+FDS/détection ML, chronologie, 200 cas, exemples représentatif/échec/témoin,
+comparaison avec la proximité source et fréquence des fausses alertes par cas.
+Les vues relisent des inférences enregistrées. Les services 8443 et 8444 sont
+sains ; aucun backend redémarré. Copies de sauvegarde de l'interface précédente
+dans `E:/IGNIS-Valley-dev/runtime/hotspot-backup-20261114T214105Z`.
+
+Vérification indépendante des 200 replays réussie : valeurs exactes, masques,
+métriques, groupes et séparation des dispositions. 82 tests frontend et build
+passés ; 17 tests modèle Windows et 8 tests du vérificateur passés. Les résultats
+restent limités : rappel microg 39,6 % validation / 47,1 % historique, Terre
+historique 8,8 % ; fausses alertes dans 7/18 puis 8/22 cas sans dépassement.
+Lire `docs/HOTSPOT_POC.md` pour le pitch et le parcours ; ne pas annoncer de
+probabilité de départ, fumée ML, généralisation fiable ou validation NASA.
+
+Sources nouvelles dans `tools/remote/train_hotspot_poc.py`,
+`web/src/components/HotspotPocView.tsx` et `docs/HOTSPOT_POC*.md`.
+Preuves et captures : `evidence/incidents/hotspot-poc/` ; modèle Windows
+`E:/IGNIS-Valley-dev/runtime/hotspot-poc/20261114-evening/fit1`.
+
+## Historique — recadrage produit et arrêt précédent
+
+**Demande explicite du 14 novembre : ne pas poursuivre la feuille de route ML.
+Livrer une proposition argumentée avant tout nouveau calcul lourd.** Lire
+[la proposition consolidée](docs/RECADRAGE_PRODUIT.md), puis les audits
+[produit](docs/RECADRAGE_ETAT_PRODUIT.md),
+[options](docs/RECADRAGE_OPTIONS.md) et [NASA](docs/RECADRAGE_SOURCES_NASA.md).
+Les étapes proposées dans les sections historiques ci-dessous ne sont pas
+des instructions de reprise automatique.
+
+Vérification Windows du 14 novembre à **20:49 UTC / 21:49 Paris** : aucun
+processus FDS/génération/entraînement actif ; API 8765 et dev 8766 répondent
+`status=ok`. Le générateur initial a traité `STOP` et est **arrêté à 64 cas** ;
+`PAUSE` est conservé. Les 100 cas supplémentaires du lot prospectif n'ont
+**jamais été lancés** ; leur répertoire de sortie n'existe pas. Les scripts
+préparés et listes d'appartenance sont des plans, pas des résultats.
+
+Le fit hors ligne `hot` est terminé : 20 000 mises à jour, checkpoint 7 250,
+577,36 s, 120 train / 40 validation. Rappel thermique de validation 35,81 %,
+précision 28,66 % au seuil ambiance + 5 °C ; de forts pics sont encore manqués.
+L'ablation `hot_peak` a été interrompue à 20:41:36 UTC après vérification du
+checkpoint sauvegardé **9 500**. Le runner n'ayant pas de contrôle STOP, seuls
+ses processus ont été terminés : sortie wrapper −1, pas de finalisation normale.
+Poids rechargés strictement sur CPU, tenseurs finis et SHA-256 vérifié ; aucun
+forward, aucun calcul GPU pour ce contrôle. Ne pas présenter cet essai partiel
+comme comparable à 20 000 mises à jour ni comme un entraînement finalisé.
+
+Preuves dans `evidence/incidents/spatial-hotspots/` : `user-stop.json`,
+`recadrage-runtime-state.json`, `recadrage-artifact-check.json`, `fit/report.json`
+et `fit-peak/validation-step-009500.json`. Poids/logs conservés sur Windows sous
+`E:/IGNIS-Valley-dev/runtime/hotspots/20261114-h1`. Aucun nouveau modèle activé ;
+l'interface incidents utilise toujours l'ancien Extra Trees exploratoire
+`incident-field-v1`. Aucune modification de l'application ni des services
+pour ce recadrage ; seulement contrôles légers, archivage et documentation.
+
+## Historique — essai spatial borné, modèle non activé
 
 Essai du 14 novembre terminé : **44 min 58 s de phases**, **50 min 55 s écoulées**,
 génération et entraînement compris. Ne pas lancer de calcul supplémentaire au
@@ -74,15 +300,16 @@ puis entraînement CUDA `spatial-corpus-v1`. Il refuse un corpus incomplet et
 respecte PAUSE/STOP avant le training ; chaque enfant possède son verrou de
 calcul, aucun verrou de calcul imbriqué. Ne pas relancer un poids existant.
 
-**Campagne initialement lancée, désormais en pause à 64 cas**. Journal détaché :
+**Campagne initialement lancée, mise en pause puis arrêtée à 64 cas**. Journal détaché :
 `E:/IGNIS-Valley-dev/runtime/training/study-735d5f67483b4030ad0140e05de7bb38/worker.log`.
 État léger : `datasets/spatial-corpus-v1/progress.json`, également accessible par
 `GET /api/incidents/campaign`. Le test navigateur a repris les deux premiers
 cas puis vérifié pause après le cas courant et reprise à quatre cas achevés,
 sans erreur JS. Ce compteur est historique ; relire l'état avant de le citer.
-À la reprise, supprimer un éventuel STOP explicitement et utiliser la même
-commande. Une fermeture du PC nécessite de relancer le job ; aucun démarrage
-automatique Windows n'est installé. Ne pas lancer un second orchestrateur.
+Une éventuelle reprise nécessite une nouvelle décision après le recadrage ;
+ne pas retirer STOP/PAUSE au nom de l'ancienne feuille de route. Une fermeture
+du PC nécessite de relancer le job ; aucun démarrage automatique Windows
+n'est installé. Ne pas lancer un second orchestrateur.
 
 Validation de cette tranche : 299 tests Windows, puis 21 tests du trainer après
 l'ajout des empreintes source ; Ruff et vérification du diff réussis. Frontend :

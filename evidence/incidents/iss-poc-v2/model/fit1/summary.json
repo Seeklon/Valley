@@ -1,0 +1,211 @@
+{
+  "model": {
+    "id": "iss-heat-smoke-poc-20261115",
+    "training_version": "heat-smoke-retraining-20261115-v2",
+    "weights_sha256": "37bf3e0c5394cbe52fe520ebf85cbf393cd9b4203751d5b1db5c0c79641f987a",
+    "dataset_sha256": "9f941aaf98c914804f21c68bd623fba908ed9fd8df29d816308c6ca4b51e855f",
+    "state_sha256": "12b155793b74fe6e034f1f9c01c8093da94aacb220a049b000a42809125c42f1",
+    "selected_step": 1000,
+    "optimizer_steps": 14387,
+    "batch_size": 128,
+    "training_seconds": 300.0,
+    "total_compute_seconds": 511.5470000000005,
+    "validation_weight_improvement": 0.22865372593100597
+  },
+  "microgravity": {
+    "validation": {
+      "retrained": {
+        "heat": {
+          "tp": 1742,
+          "fp": 1895,
+          "fn": 1676,
+          "tn": 1794387,
+          "precision": 0.4789661809183393,
+          "recall": 0.5096547688706846,
+          "iou": 0.32787502352719744,
+          "f1": 0.49383416017009213,
+          "false_positive_rate": 0.0010549568497596703,
+          "n_valid": 1799700
+        },
+        "smoke": {
+          "tp": 4228,
+          "fp": 4018,
+          "fn": 2885,
+          "tn": 1788569,
+          "precision": 0.5127334465195246,
+          "recall": 0.59440461127513,
+          "iou": 0.3798400862456203,
+          "f1": 0.5505566768669835,
+          "false_positive_rate": 0.002241453273955462,
+          "n_valid": 1799700
+        }
+      },
+      "v1_frozen": {
+        "heat": {
+          "tp": 195,
+          "fp": 565,
+          "fn": 3223,
+          "tn": 1795717,
+          "precision": 0.2565789473684211,
+          "recall": 0.05705090696313634,
+          "iou": 0.048958071805171983,
+          "f1": 0.09334609861177597,
+          "false_positive_rate": 0.00031453858581224995,
+          "n_valid": 1799700
+        },
+        "smoke": {
+          "tp": 1776,
+          "fp": 3699,
+          "fn": 5337,
+          "tn": 1788888,
+          "precision": 0.32438356164383564,
+          "recall": 0.24968367777309153,
+          "iou": 0.16426193118756938,
+          "f1": 0.28217349857006674,
+          "false_positive_rate": 0.0020634981733104168,
+          "n_valid": 1799700
+        }
+      },
+      "v1_recalibrated": {
+        "heat": {
+          "tp": 1274,
+          "fp": 4189,
+          "fn": 2144,
+          "tn": 1792093,
+          "precision": 0.233205198608823,
+          "recall": 0.3727325921591574,
+          "iou": 0.16747732351781255,
+          "f1": 0.28690462785722326,
+          "false_positive_rate": 0.0023320391787035664,
+          "n_valid": 1799700
+        },
+        "smoke": {
+          "tp": 2566,
+          "fp": 7017,
+          "fn": 4547,
+          "tn": 1785570,
+          "precision": 0.2677658353334029,
+          "recall": 0.36074792633206804,
+          "iou": 0.1815994338287332,
+          "f1": 0.30737901293723047,
+          "false_positive_rate": 0.00391445436121092,
+          "n_valid": 1799700
+        }
+      }
+    },
+    "test": {
+      "retrained": {
+        "heat": {
+          "tp": 3168,
+          "fp": 3860,
+          "fn": 2881,
+          "tn": 3192636,
+          "precision": 0.45076835515082525,
+          "recall": 0.5237229294098198,
+          "iou": 0.31970935513169846,
+          "f1": 0.4845147969717825,
+          "false_positive_rate": 0.001207572291659367,
+          "n_valid": 3202545
+        },
+        "smoke": {
+          "tp": 8051,
+          "fp": 8767,
+          "fn": 4787,
+          "tn": 3180940,
+          "precision": 0.47871328338684743,
+          "recall": 0.6271226047670977,
+          "iou": 0.37264522101365427,
+          "f1": 0.5429592662530348,
+          "false_positive_rate": 0.0027485283131021125,
+          "n_valid": 3202545
+        }
+      },
+      "v1_frozen": {
+        "heat": {
+          "tp": 591,
+          "fp": 1181,
+          "fn": 5458,
+          "tn": 3195315,
+          "precision": 0.3335214446952596,
+          "recall": 0.09770209952058191,
+          "iou": 0.08174273858921162,
+          "f1": 0.15113156885308784,
+          "false_positive_rate": 0.00036946706643774935,
+          "n_valid": 3202545
+        },
+        "smoke": {
+          "tp": 3588,
+          "fp": 7664,
+          "fn": 9250,
+          "tn": 3182043,
+          "precision": 0.3188766441521507,
+          "recall": 0.27948278548060446,
+          "iou": 0.17500731635937958,
+          "f1": 0.2978829389788294,
+          "false_positive_rate": 0.002402728526475943,
+          "n_valid": 3202545
+        }
+      },
+      "v1_recalibrated": {
+        "heat": {
+          "tp": 2170,
+          "fp": 9453,
+          "fn": 3879,
+          "tn": 3187043,
+          "precision": 0.18669878688806676,
+          "recall": 0.3587369813192263,
+          "iou": 0.13998193781447554,
+          "f1": 0.24558623811679492,
+          "false_positive_rate": 0.002957300744315025,
+          "n_valid": 3202545
+        },
+        "smoke": {
+          "tp": 4431,
+          "fp": 14798,
+          "fn": 8407,
+          "tn": 3174909,
+          "precision": 0.2304331998543866,
+          "recall": 0.3451472191930207,
+          "iou": 0.16033434650455927,
+          "f1": 0.27635887360838246,
+          "false_positive_rate": 0.004639297590656446,
+          "n_valid": 3202545
+        }
+      }
+    }
+  },
+  "inference": {
+    "case_id": "habitat-cargo-v2-05-flame",
+    "split": "validation",
+    "frames": 31,
+    "points_per_frame": 1536,
+    "cpu_threads": 4,
+    "cpu_checkpoint_load_seconds": 0.012181699999928242,
+    "cpu_first_trajectory_seconds": 0.09002850000069884,
+    "cpu_warm_trajectory_seconds": [
+      0.08108679999986634,
+      0.0879519000000073,
+      0.08465509999950882
+    ],
+    "gpu_warm_trajectory_seconds": [
+      0.052717800000209536,
+      0.053240599999298865,
+      0.051181800000449584
+    ],
+    "cpu_warm_median_seconds": 0.08465509999950882,
+    "gpu_warm_median_seconds": 0.052717800000209536,
+    "cpu_gpu_max_score_difference": 0.0026649534702301025,
+    "cpu_gpu_class_disagreements": 0,
+    "timing_scope": "full trajectory input preparation and inference; CPU load separate, GPU model already loaded; no FDS runtime included",
+    "fds_comparison": "Compare separately with this case's measured FDS wall time from dataset generation, not its simulated duration."
+  },
+  "gpu": {
+    "available": true,
+    "sample_count": 509,
+    "interval_s": 1,
+    "utilization_max_percent": 99.0,
+    "utilization_median_percent": 98.0,
+    "fraction_at_least_90_percent": 0.5461689587426326,
+    "scope": "whole bounded run, including dataset verification/evaluation/export; nvidia-smi device-wide measurement"
+  }
+}

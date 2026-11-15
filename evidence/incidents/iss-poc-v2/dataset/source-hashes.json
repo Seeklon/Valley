@@ -1,0 +1,6 @@
+{
+  "tools/remote/generate_spatial_corpus.py": "3db6f726e2d857467037d56d4cfeaa7a0c0b12e4ca42afe9e7a67995ad5c4e22",
+  "tools/remote/iss_poc_design.py": "d87d77ddc6f60a9becf0ac4b74516945198ff1fd2b4e3cbc11012af53b10742a",
+  "tools/remote/iss_poc_v2_design.py": "1a8936bd452845c4bb109407444abd8e045776eb07fad03bf02ff09d4ac1bd90",
+  "tools/remote/generate_iss_poc_v2.py": "9c3b357bbb0c0905e9d202c25dbb93d1f4b7904e6eef5d556283a0cb15eca0ab"
+}

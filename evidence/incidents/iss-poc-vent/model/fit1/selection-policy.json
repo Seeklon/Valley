@@ -1,0 +1,10 @@
+{
+  "thresholds": "same macro-family microgravity F1 rule on V2+fresh validation",
+  "checkpoint": "0.75 combined validation macro-family F1 + 0.25 fresh validation macro-family signed ventilation-change F1; equal heat/smoke mass",
+  "old_validation_macro_f1_tolerance": 0.02,
+  "combined_microgravity_precision_tolerance_per_field": 0.03,
+  "combined_microgravity_recall_must_not_decrease_per_field": true,
+  "explicit_zero_power_controls_false_positives": 0,
+  "must_improve_composite_and_paired_over_recalibrated_v2": true,
+  "test_used_for_selection": false
+}

@@ -1,0 +1,147 @@
+{
+  "checked_at": "2026-11-15T15:23:47.378525+00:00",
+  "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+  "index_sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e",
+  "split": "fresh validation only",
+  "case_count": 54,
+  "control_count": 6,
+  "controls": [
+    "iss-laboratory-vent-02-control",
+    "iss-node-vent-02-control",
+    "iss-service-vent-02-control",
+    "habitat-cargo-vent-02-control",
+    "habitat-capsule-vent-02-control",
+    "habitat-central-racks-vent-02-control"
+  ],
+  "test_case_observations_read": false,
+  "inference_recomputed": false,
+  "weights_or_thresholds_changed": false,
+  "selection_performed": false,
+  "scope": "Illustrative pooled precision/recall tradeoff; does not rerun the frozen selection on 102 validation cases or its old-corpus and paired-response guards.",
+  "fields": {
+    "heat": [
+      {
+        "threshold": 0.5,
+        "deployed": false,
+        "tp": 6268,
+        "fp": 9295,
+        "fn": 7070,
+        "tn": 2175219,
+        "control_fp": 0,
+        "precision": 0.40275011244618647,
+        "recall": 0.4699355225671015,
+        "f1": 0.4337566174180824
+      },
+      {
+        "threshold": 0.8088770151138306,
+        "deployed": false,
+        "tp": 5495,
+        "fp": 6494,
+        "fn": 7843,
+        "tn": 2178020,
+        "control_fp": 0,
+        "precision": 0.45833680874134625,
+        "recall": 0.4119808067176488,
+        "f1": 0.43392427054131955
+      },
+      {
+        "threshold": 0.8588770151138305,
+        "deployed": false,
+        "tp": 5335,
+        "fp": 5815,
+        "fn": 8003,
+        "tn": 2178699,
+        "control_fp": 0,
+        "precision": 0.47847533632287,
+        "recall": 0.39998500524816316,
+        "f1": 0.4357236197321137
+      },
+      {
+        "threshold": 0.9088770151138306,
+        "deployed": true,
+        "tp": 5090,
+        "fp": 5006,
+        "fn": 8248,
+        "tn": 2179508,
+        "control_fp": 0,
+        "precision": 0.5041600633914421,
+        "recall": 0.38161643424801317,
+        "f1": 0.4344115387897926
+      },
+      {
+        "threshold": 0.9388770151138306,
+        "deployed": false,
+        "tp": 4851,
+        "fp": 4318,
+        "fn": 8487,
+        "tn": 2180196,
+        "control_fp": 0,
+        "precision": 0.5290653288253899,
+        "recall": 0.36369770580296895,
+        "f1": 0.43106589061180967
+      }
+    ],
+    "smoke": [
+      {
+        "threshold": 0.5,
+        "deployed": false,
+        "tp": 12669,
+        "fp": 15075,
+        "fn": 13722,
+        "tn": 2156386,
+        "control_fp": 0,
+        "precision": 0.45663927335640137,
+        "recall": 0.4800500170512675,
+        "f1": 0.4680520919922416
+      },
+      {
+        "threshold": 0.7320183753967285,
+        "deployed": false,
+        "tp": 11596,
+        "fp": 11768,
+        "fn": 14795,
+        "tn": 2159693,
+        "control_fp": 0,
+        "precision": 0.4963191234377675,
+        "recall": 0.43939221704368914,
+        "f1": 0.4661240076374234
+      },
+      {
+        "threshold": 0.7820183753967285,
+        "deployed": false,
+        "tp": 11308,
+        "fp": 10968,
+        "fn": 15083,
+        "tn": 2160493,
+        "control_fp": 0,
+        "precision": 0.5076315316933022,
+        "recall": 0.42847940585805766,
+        "f1": 0.4647091458277683
+      },
+      {
+        "threshold": 0.8320183753967285,
+        "deployed": true,
+        "tp": 10998,
+        "fp": 10081,
+        "fn": 15393,
+        "tn": 2161380,
+        "control_fp": 0,
+        "precision": 0.5217515062384364,
+        "recall": 0.4167329771513016,
+        "f1": 0.4633663366336634
+      },
+      {
+        "threshold": 0.8620183753967285,
+        "deployed": false,
+        "tp": 10742,
+        "fp": 9456,
+        "fn": 15649,
+        "tn": 2162005,
+        "control_fp": 0,
+        "precision": 0.5318348351321913,
+        "recall": 0.40703270054185137,
+        "f1": 0.4611388954474232
+      }
+    ]
+  }
+}

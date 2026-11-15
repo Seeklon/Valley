@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-11-15T13:52:29.231Z",
+  "completed": false,
+  "error": "locator.click: Target page, context or browser has been closed",
+  "location": "web/tools/iss-poc-check.mjs:214:71",
+  "operation": "Click Ensemble after the per-module, cold-control, failure and heldout checks",
+  "cause": "Undetermined. No JavaScript pageerror was captured before closure. This run must not be counted as a complete browser pass.",
+  "followup": "Explicit WebGL context disposal added on viewer teardown; final rerun stored separately in browser-realistic-final. A successful rerun alone does not establish the original closure cause."
+}

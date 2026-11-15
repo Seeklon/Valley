@@ -1,0 +1,15 @@
+{
+  "frozen_at": "2026-11-15T14:49:47.334278+00:00",
+  "training_started": false,
+  "test_observations_opened": false,
+  "files": {
+    "docs/ISS_POC_VENT_EVALUATION.md": "92ca5a0bf6529bfc2900a6231284e21e3b6f3af4fe14b8bb31b7b3d7f57d3df6",
+    "tools/remote/evaluate_iss_ventilation.py": "a8b55f57e1b76c3c27285b8d149410ab9cd0c9fda2eac1e0fe00e41b89890b10",
+    "tests/test_iss_ventilation_evaluation.py": "cce75822285a0abd338498f6b8b637174d27f8780cbf24d549619d12afcc3aed"
+  },
+  "tests": {
+    "command": ".venv/bin/pytest -q tests/test_iss_ventilation_evaluation.py",
+    "passed": 19,
+    "ruff": "passed"
+  }
+}

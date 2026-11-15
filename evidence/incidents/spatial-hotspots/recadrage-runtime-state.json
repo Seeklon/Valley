@@ -1,0 +1,335 @@
+{
+  "stop": true,
+  "computation_processes": [],
+  "utc": "2026-11-14T20:49:00.7636647Z",
+  "pause": true,
+  "fresh100_exists": false,
+  "health": [
+    {
+      "port": 8765,
+      "ok": true,
+      "response": {
+        "status": "ok",
+        "worker_available": true,
+        "capabilities": {
+          "physics": true,
+          "prediction": true,
+          "campaigns": true,
+          "insights": true,
+          "prevention": true,
+          "ignition_delay_prediction": true,
+          "source_models": [
+            "prescribed_source",
+            "coupled_combustion"
+          ]
+        },
+        "disk_free_gb": 108.74,
+        "version": "0.1.0"
+      }
+    },
+    {
+      "port": 8766,
+      "ok": true,
+      "response": {
+        "status": "ok",
+        "worker_available": true,
+        "capabilities": {
+          "physics": true,
+          "prediction": false,
+          "campaigns": true,
+          "insights": true,
+          "prevention": true,
+          "incident_prediction": true,
+          "ignition_delay_prediction": false,
+          "source_models": [
+            "prescribed_source",
+            "coupled_combustion"
+          ]
+        },
+        "disk_free_gb": 108.74,
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "models": [
+    {
+      "name": "incident-field-v1",
+      "files": [
+        {
+          "Name": "evaluation.json",
+          "Length": 162479
+        },
+        {
+          "Name": "metadata.json",
+          "Length": 265346
+        },
+        {
+          "Name": "weights.joblib",
+          "Length": 12895340
+        }
+      ]
+    },
+    {
+      "name": "spatial-pilot-v1",
+      "files": [
+        {
+          "Name": "dataset-snapshot.json",
+          "Length": 109249
+        },
+        {
+          "Name": "evaluation.json",
+          "Length": 128149
+        },
+        {
+          "Name": "metadata.json",
+          "Length": 149158
+        },
+        {
+          "Name": "weights.pt",
+          "Length": 3353433
+        }
+      ]
+    },
+    {
+      "name": "spatial-recovery-v1",
+      "files": [
+        {
+          "Name": "dataset-snapshot.json",
+          "Length": 1243540
+        },
+        {
+          "Name": "evaluation.json",
+          "Length": 352291
+        },
+        {
+          "Name": "metadata.json",
+          "Length": 396742
+        },
+        {
+          "Name": "weights.pt",
+          "Length": 3353433
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "manifests": [
+        {
+          "Name": "manifest.json",
+          "Length": 55785
+        }
+      ],
+      "name": "incidents-v1"
+    },
+    {
+      "manifests": [
+        {
+          "Name": "manifest.json",
+          "Length": 1181
+        }
+      ],
+      "name": "incidents-v1-launch-aborted"
+    },
+    {
+      "manifests": [
+        {
+          "Name": "index.json",
+          "Length": 605701
+        },
+        {
+          "Name": "manifest.json",
+          "Length": 606119
+        },
+        {
+          "Name": "plan.json",
+          "Length": 1013564
+        },
+        {
+          "Name": "progress.json",
+          "Length": 2801
+        }
+      ],
+      "name": "spatial-compact-200-v1"
+    },
+    {
+      "manifests": [
+        {
+          "Name": "index.json",
+          "Length": 287772
+        },
+        {
+          "Name": "manifest.json",
+          "Length": 288201
+        },
+        {
+          "Name": "plan.json",
+          "Length": 500304
+        },
+        {
+          "Name": "progress.json",
+          "Length": 2690
+        }
+      ],
+      "name": "spatial-compact-v1"
+    },
+    {
+      "manifests": [
+        {
+          "Name": "manifest.json",
+          "Length": 182274
+        },
+        {
+          "Name": "plan.json",
+          "Length": 27297867
+        },
+        {
+          "Name": "progress.json",
+          "Length": 2519
+        }
+      ],
+      "name": "spatial-corpus-v1"
+    }
+  ],
+  "corpus_progress": {
+    "dataset_id": "spatial-corpus-v1",
+    "plan_sha256": "da78526edfae2550bd220236132c254cd66bd708946c969618f2c46aade361bd",
+    "state": "stopped",
+    "updated_at": "2026-11-14T20:43:30.491182+00:00",
+    "total_runs": 20000,
+    "completed_runs": 64,
+    "pending_runs": 19936,
+    "failed_runs": 0,
+    "total_layouts": 1000,
+    "completed_layouts": 3,
+    "total_structural_families": 10,
+    "completed_structural_families": 0,
+    "by_structural_family": {
+      "perimeter": {
+        "planned": 2000,
+        "completed": 20,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 1
+      },
+      "cross-aisle": {
+        "planned": 2000,
+        "completed": 20,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 1
+      },
+      "baffled": {
+        "planned": 2000,
+        "completed": 20,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 1
+      },
+      "central-island": {
+        "planned": 2000,
+        "completed": 4,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 0
+      },
+      "split-bays": {
+        "planned": 2000,
+        "completed": 0,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 0
+      },
+      "double-island": {
+        "planned": 2000,
+        "completed": 0,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 0
+      },
+      "parallel-aisles": {
+        "planned": 2000,
+        "completed": 0,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 0
+      },
+      "staggered": {
+        "planned": 2000,
+        "completed": 0,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 0
+      },
+      "corner-banks": {
+        "planned": 2000,
+        "completed": 0,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 0
+      },
+      "radial-clusters": {
+        "planned": 2000,
+        "completed": 0,
+        "failed": 0,
+        "planned_layouts": 100,
+        "completed_layouts": 0
+      }
+    },
+    "current_run_id": null,
+    "current_run": null,
+    "by_split": {
+      "train": {
+        "planned": 12000,
+        "completed": 24,
+        "failed": 0
+      },
+      "validation": {
+        "planned": 4000,
+        "completed": 20,
+        "failed": 0
+      },
+      "test": {
+        "planned": 4000,
+        "completed": 20,
+        "failed": 0
+      }
+    },
+    "by_incident_type": {
+      "overheating": {
+        "planned": 4000,
+        "completed": 16,
+        "failed": 0
+      },
+      "arc": {
+        "planned": 4000,
+        "completed": 12,
+        "failed": 0
+      },
+      "flaming": {
+        "planned": 4000,
+        "completed": 12,
+        "failed": 0
+      },
+      "smoldering": {
+        "planned": 4000,
+        "completed": 12,
+        "failed": 0
+      },
+      "battery": {
+        "planned": 4000,
+        "completed": 12,
+        "failed": 0
+      }
+    },
+    "elapsed_s": 15328.469,
+    "elapsed_basis": "persisted launcher time including pauses and compute-lock waits; excludes time while launcher stopped",
+    "estimated_remaining_s": 373692.8,
+    "estimate_basis": "completed FDS wall-time mean; excludes future pauses, failures and verification",
+    "mean_completed_run_s": 18.744624999999996,
+    "completed_this_session": 62,
+    "disk_free_gb": 108.741,
+    "disk_reserve_gb": 20,
+    "last_error": null
+  }
+}

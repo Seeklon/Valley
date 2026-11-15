@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "dataset_id": "spatial-compact-v1",
+  "purpose": "prospective-test-only",
+  "runs": [
+    {
+      "id": "procedural-0100-electrical-00-overheating-earth-c0",
+      "layout_id": "procedural-0100",
+      "fingerprint": "f4a6984229598affd1a3c1a508e17728c0b9b595657a2653db6318075e2e7506",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0100-electrical-00-overheating-microg-c0",
+      "layout_id": "procedural-0100",
+      "fingerprint": "83fbba4a2232bc7f99473eeb3897f67b83a2e299dcb41345e3b274bf5e9c5739",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0101-electrical-01-overheating-earth-c0",
+      "layout_id": "procedural-0101",
+      "fingerprint": "85f41ce6970b902128731c3237d90ba0becacaf4173708e11a925b428360f301",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0101-electrical-01-overheating-microg-c0",
+      "layout_id": "procedural-0101",
+      "fingerprint": "d77bb202c11254f0e16299e28e16a012ee2b710ce25dd937c0c5572ad24e179b",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0102-electrical-02-overheating-earth-c0",
+      "layout_id": "procedural-0102",
+      "fingerprint": "50195a5f679f7faa79f3036a0053ceb5f1aad8bccea35f73745c3686c2ff9880",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0102-electrical-02-overheating-microg-c0",
+      "layout_id": "procedural-0102",
+      "fingerprint": "def4d0a9954b69f5e1c7f34ddb429e9689d6733ae0c3b2c61202808acd92823e",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0103-electrical-03-overheating-earth-c0",
+      "layout_id": "procedural-0103",
+      "fingerprint": "96976b0559a7eb2ee21e909d6a467ef65ee5d7c52fc4fe89e3472c9dc64d234c",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0103-electrical-03-overheating-microg-c0",
+      "layout_id": "procedural-0103",
+      "fingerprint": "748a3e0dcc8ff5b27698b5409295b77786cceded15ccb1f8b81e3104d278aed3",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0104-electrical-00-overheating-earth-c0",
+      "layout_id": "procedural-0104",
+      "fingerprint": "9510b3fd471143ea512912f5277643d5f32e61b334c3da66f1ccac9303b20c6a",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0104-electrical-00-overheating-microg-c0",
+      "layout_id": "procedural-0104",
+      "fingerprint": "d2e543908f66469764539d613372fce3ff35fa80bdbad9a605566a249c0ea2db",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0105-electrical-00-overheating-earth-c0",
+      "layout_id": "procedural-0105",
+      "fingerprint": "432501905fadd45d30c9e0e8459a5153d49cdc248b2c8c1799027becd0a06e96",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0105-electrical-00-overheating-microg-c0",
+      "layout_id": "procedural-0105",
+      "fingerprint": "5242f22c8a67e702f202a427a8a1046aa0ecf4f07715e6231ba518eb2fb4e29f",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0106-electrical-01-overheating-earth-c0",
+      "layout_id": "procedural-0106",
+      "fingerprint": "131b5d5dba0070bf354492cf5ee4ab1639b34514011d7033daefad0b3e334599",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0106-electrical-01-overheating-microg-c0",
+      "layout_id": "procedural-0106",
+      "fingerprint": "ca5dc450846ef2af40530de4e89a954bef1519671b8bb2f219e51a9bb57ec67b",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0107-electrical-05-overheating-earth-c0",
+      "layout_id": "procedural-0107",
+      "fingerprint": "3b97f2196b91773b26cb28265ca0561b55c60d3155cc7c8d4c53560c1c56f53a",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0107-electrical-05-overheating-microg-c0",
+      "layout_id": "procedural-0107",
+      "fingerprint": "51fc47f69c2753593c527dba689c741b63abcef5f0599d8704532ecba7797061",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0108-electrical-03-overheating-earth-c0",
+      "layout_id": "procedural-0108",
+      "fingerprint": "fd35710364363e1ed70e74d805e5c5c51d9683a63051712b93ab422771f87732",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0108-electrical-03-overheating-microg-c0",
+      "layout_id": "procedural-0108",
+      "fingerprint": "18ef34dd85eca5f5801aa82b2e3181a71f31a3e465556032afe04a8953e94f83",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0109-electrical-01-overheating-earth-c0",
+      "layout_id": "procedural-0109",
+      "fingerprint": "ecac8c5d903e11d9d6b3da4bc6458b58b6f82ff02dd23f255bed45f99e85d074",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0109-electrical-01-overheating-microg-c0",
+      "layout_id": "procedural-0109",
+      "fingerprint": "9e420a3e7b7eb0a77ab93194631a107d8a4c48477172858165322883dfe17c95",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0110-electrical-04-arc-earth-c0",
+      "layout_id": "procedural-0110",
+      "fingerprint": "f07823299c03217bc39ea5c211b7cd18e87214bf3e9be12557bc8c7c62181c17",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0110-electrical-04-arc-microg-c0",
+      "layout_id": "procedural-0110",
+      "fingerprint": "44daf42891d1f4cd31f9b506973da5cf1d88338ec9df3faf2d3158cf92e877dc",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0111-electrical-01-arc-earth-c0",
+      "layout_id": "procedural-0111",
+      "fingerprint": "c44bb507d3b6bc9be1b0ebac373ccda51d00d32c96dc105e78f31706713f9ea8",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0111-electrical-01-arc-microg-c0",
+      "layout_id": "procedural-0111",
+      "fingerprint": "000511b4efed6afc1615d5d23343c6dd4185107582195f5e9bbb87b8d77399cd",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0112-electrical-00-arc-earth-c0",
+      "layout_id": "procedural-0112",
+      "fingerprint": "4ab30c4f8d51cb37ca12015b863662465b159a3a0dc83b5bc2e7d134b212ae7a",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0112-electrical-00-arc-microg-c0",
+      "layout_id": "procedural-0112",
+      "fingerprint": "548eb34ae6833e791b9ffef637b7e5556d3712a800c832651ac2666a003ea02c",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0113-electrical-00-arc-earth-c0",
+      "layout_id": "procedural-0113",
+      "fingerprint": "8bc9a1d5af89caf8610fda94be81e5202e92384ff297386afccd9b74331b0a60",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0113-electrical-00-arc-microg-c0",
+      "layout_id": "procedural-0113",
+      "fingerprint": "819152c47a5aa40574dc9d77fb6d3085cd74e4f3bb52b918ef5f6bd718f88e7f",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0114-electrical-01-arc-earth-c0",
+      "layout_id": "procedural-0114",
+      "fingerprint": "6961b3dc8a2ac188191c4e1499c4af7ea16d48dc8131156bafea0ab133d0f3ca",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0114-electrical-01-arc-microg-c0",
+      "layout_id": "procedural-0114",
+      "fingerprint": "8247bc8d79635f672b448437f12c4d6c166fa443a551221ef16502defeac6349",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0115-electrical-02-arc-earth-c0",
+      "layout_id": "procedural-0115",
+      "fingerprint": "a3c2fba6a1a00df51f6b1684530a3858d9a72d3df0799554888d34fff2491335",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0115-electrical-02-arc-microg-c0",
+      "layout_id": "procedural-0115",
+      "fingerprint": "b0a07acbdb26b9a5f985e76398772e3b24066a5a51ab2f2d2c18303f8e1d0600",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0116-electrical-04-arc-earth-c0",
+      "layout_id": "procedural-0116",
+      "fingerprint": "700df8488724c0bd832c6fcb12bc4edcc7e8e5c66882a1fe43fd32a258c4d6cd",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0116-electrical-04-arc-microg-c0",
+      "layout_id": "procedural-0116",
+      "fingerprint": "2866902c72a7c1265f7fd592521619788c8b7fc6ae9daa83dbedc19cc1fc6b98",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0117-electrical-05-arc-earth-c0",
+      "layout_id": "procedural-0117",
+      "fingerprint": "829fa25badfc86b74a99be61b51450cd09262a004e6314f567c0288803202cd6",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0117-electrical-05-arc-microg-c0",
+      "layout_id": "procedural-0117",
+      "fingerprint": "253a2fad02b43089f28df22495034b867915377654da05c9e9ececc246be7364",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0118-electrical-00-arc-earth-c0",
+      "layout_id": "procedural-0118",
+      "fingerprint": "8055b2b685546d7fc085826442c1e398cf0fb2afa4a7ae00d64d38c353c9b424",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0118-electrical-00-arc-microg-c0",
+      "layout_id": "procedural-0118",
+      "fingerprint": "4f0f05dd3cead6f114e34e4bd4ba645237d1769ea41f41228593a10d92dbc265",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0119-electrical-01-arc-earth-c0",
+      "layout_id": "procedural-0119",
+      "fingerprint": "5526411db7b19367abfd91cf6ddb11a93113450fb30f40cd63bf2fa8fa35e8b5",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0119-electrical-01-arc-microg-c0",
+      "layout_id": "procedural-0119",
+      "fingerprint": "86134a1e3b00b639884d2eaa4212a5d979ffcf229b6ad22bc62c68835b320c2f",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0120-electrical-00-flaming-earth-c0",
+      "layout_id": "procedural-0120",
+      "fingerprint": "119677dc3a3c3c6f1f7692691fbab655cd14dfea72610768ab35222d1a357ee2",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0120-electrical-00-flaming-microg-c0",
+      "layout_id": "procedural-0120",
+      "fingerprint": "a7c6256628b5d2f52f1913906c100ab7f701e9557dff015e2b284afabefc877c",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0121-electrical-05-flaming-earth-c0",
+      "layout_id": "procedural-0121",
+      "fingerprint": "829f7a8d42bdd48f77e4cc64edee93f86ca120782571a32aa679d4f6aef30e90",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0121-electrical-05-flaming-microg-c0",
+      "layout_id": "procedural-0121",
+      "fingerprint": "3888a60401e86c2fc074138545a902a22a1d131ae1b81d71667e36efa5c8812a",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0122-electrical-02-flaming-earth-c0",
+      "layout_id": "procedural-0122",
+      "fingerprint": "b16bd46d70e8ac3ee2538b624102e975699fe5bc3571bfd9ced3add8218831fe",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0122-electrical-02-flaming-microg-c0",
+      "layout_id": "procedural-0122",
+      "fingerprint": "ed752a0f93df406e914330925e5d720aa2bbb612cebafda033cac265e5b5b85f",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0123-electrical-01-flaming-earth-c0",
+      "layout_id": "procedural-0123",
+      "fingerprint": "ca82e153e7b723751daa798976867e82de36ac13694800fd0daa81f3e78280f5",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0123-electrical-01-flaming-microg-c0",
+      "layout_id": "procedural-0123",
+      "fingerprint": "3765e42b37795fc9bff77bb1c290cd76ae91dd6c6553fc10ce2acdd83b20af1a",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0124-electrical-02-flaming-earth-c0",
+      "layout_id": "procedural-0124",
+      "fingerprint": "bf738a08d579cfa39ea2f936ceb78e302b322dad4a600c087713833e2a957960",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0124-electrical-02-flaming-microg-c0",
+      "layout_id": "procedural-0124",
+      "fingerprint": "9bf0af63ae5b43f0e1c7902a6ca1b9ad08d69fb93d603748986dcfe4a9d3cfd2",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0125-electrical-04-flaming-earth-c0",
+      "layout_id": "procedural-0125",
+      "fingerprint": "0eed984a7bf099231f1abb3ccb32dc0818b2144898d38beb59a7554bc45dea44",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0125-electrical-04-flaming-microg-c0",
+      "layout_id": "procedural-0125",
+      "fingerprint": "d0cd3809d331487ba08783e9948e84887ebd6fb59ef7ce13076353bcc80391fe",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0126-electrical-00-flaming-earth-c0",
+      "layout_id": "procedural-0126",
+      "fingerprint": "6be730a22aa5b245561414162d455534ee447174b0bbc7c02202771c0deba275",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0126-electrical-00-flaming-microg-c0",
+      "layout_id": "procedural-0126",
+      "fingerprint": "4b93cc1b68485c9608dd316675d56f04a0fd7831db8802fe7854aca7c4198d9f",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0127-electrical-03-flaming-earth-c0",
+      "layout_id": "procedural-0127",
+      "fingerprint": "cad82c10d233736876f9551ad5839e759087f2802b6cec09b2a8d04e5e177c08",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0127-electrical-03-flaming-microg-c0",
+      "layout_id": "procedural-0127",
+      "fingerprint": "636935f8360d57fc44365a4de25f359640e3c726eb6444c346ad73a4100333e6",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0128-electrical-00-flaming-earth-c0",
+      "layout_id": "procedural-0128",
+      "fingerprint": "0652f7f618b92c56875eed6629a94151ce21238c184556c8ef9ae1843164db07",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0128-electrical-00-flaming-microg-c0",
+      "layout_id": "procedural-0128",
+      "fingerprint": "6fef3ed5d3b0f4596bc0958b26cdba0eddf2a3f8fe31f29a780d0db8ff891c87",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0129-electrical-01-flaming-earth-c0",
+      "layout_id": "procedural-0129",
+      "fingerprint": "d479af5a866b8490ed5c521be5eb0c0ddf2753e91e85a18170c6c6ab17d1f696",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0129-electrical-01-flaming-microg-c0",
+      "layout_id": "procedural-0129",
+      "fingerprint": "e0598475205f2f22bb1f175aa033a7e77dc8c407587b10c2f671db07f9a8fe5b",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0130-electrical-04-smoldering-earth-c0",
+      "layout_id": "procedural-0130",
+      "fingerprint": "13f5ab52ac9e1532e47d6f3c4b6577110115de2fad8e71963d578a593e12424f",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0130-electrical-04-smoldering-microg-c0",
+      "layout_id": "procedural-0130",
+      "fingerprint": "3d4752fc4edc53bb04156b0f0fcfccc86cc5311356fad21abe064acbd27ec5ea",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0131-electrical-01-smoldering-earth-c0",
+      "layout_id": "procedural-0131",
+      "fingerprint": "ebc4120ad4dc3e1849d68e9120709504a1d222d4b9aee4a71e2922afce5a78b9",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0131-electrical-01-smoldering-microg-c0",
+      "layout_id": "procedural-0131",
+      "fingerprint": "5375148c4b70d64dcac06d49c89586168fe917938df2085eda092041d987fd36",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0132-electrical-00-smoldering-earth-c0",
+      "layout_id": "procedural-0132",
+      "fingerprint": "8f9bffb13b57462a0cd52b53a18daeffae733f9b18a85323478aa57fdac8d3bd",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0132-electrical-00-smoldering-microg-c0",
+      "layout_id": "procedural-0132",
+      "fingerprint": "ecbb5519537195f18b74502474e79caa90e61941ab18d70a8a624df95a3e3767",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0133-electrical-01-smoldering-earth-c0",
+      "layout_id": "procedural-0133",
+      "fingerprint": "9d8ee93d6733f763abb993db62c3067ab08d8296d578026239d249c59049e442",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0133-electrical-01-smoldering-microg-c0",
+      "layout_id": "procedural-0133",
+      "fingerprint": "f615d3610f135925b1f9b0aea49848ed3bb047ccbed59c35c3a7ee80621be04d",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0134-electrical-02-smoldering-earth-c0",
+      "layout_id": "procedural-0134",
+      "fingerprint": "59d3c78f6544d82e1add3ae052e5f5982b5344920ff3c7081ccf4a67f01688d8",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0134-electrical-02-smoldering-microg-c0",
+      "layout_id": "procedural-0134",
+      "fingerprint": "fd212be69750bb4a4ec46e580e27f5b29cda3fdfcb60f130dd93edb1d3e370ee",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0135-electrical-03-smoldering-earth-c0",
+      "layout_id": "procedural-0135",
+      "fingerprint": "4cca7196c051ae5ca185dfed5f299fde051604ba4b735b45f0d5038d5f91f115",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0135-electrical-03-smoldering-microg-c0",
+      "layout_id": "procedural-0135",
+      "fingerprint": "f31447e8cb0a3080a5a9ccbe7e4577b129ed0ce8bf230db73b6290d315e21a56",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0136-electrical-04-smoldering-earth-c0",
+      "layout_id": "procedural-0136",
+      "fingerprint": "1d7b3d910781999c44b118fde11ad7ca9df27b31efdd16e9951ce9ec1a4b24b7",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0136-electrical-04-smoldering-microg-c0",
+      "layout_id": "procedural-0136",
+      "fingerprint": "7a13028ef0549d966bbb32d46cebce25b57fdbc7f039936aca79e1882d630eb4",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0137-electrical-05-smoldering-earth-c0",
+      "layout_id": "procedural-0137",
+      "fingerprint": "4fe1907c366756f68faa787e515910affe744b0ecb4ee7f13c5db67d91a500c5",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0137-electrical-05-smoldering-microg-c0",
+      "layout_id": "procedural-0137",
+      "fingerprint": "57006c6cc86d011e97ce06240adba3099a2e6d36b6118caad522e8cc70fba301",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0138-electrical-00-smoldering-earth-c0",
+      "layout_id": "procedural-0138",
+      "fingerprint": "4d2336a60d1663b9c7f66ddef138cf71c06a7d58799204feef4248a0221cc7a2",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0138-electrical-00-smoldering-microg-c0",
+      "layout_id": "procedural-0138",
+      "fingerprint": "bafa97729e4266faa405e5050668883d5c3b3a22def11c3a844251a3e3f5a760",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0139-electrical-01-smoldering-earth-c0",
+      "layout_id": "procedural-0139",
+      "fingerprint": "a2998f8fb53de9c395fbcbc58c12c2bdf80959030dd0acc54f92a9c13f7adf30",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0139-electrical-01-smoldering-microg-c0",
+      "layout_id": "procedural-0139",
+      "fingerprint": "c70609fb81887e5a4a54320c2d328d535d873e0ad894f26ac2fc1b8708a6743d",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0140-electrical-01-battery-earth-c0",
+      "layout_id": "procedural-0140",
+      "fingerprint": "bea450a9135ed08bf2d5ca8637ca2bd72d6b2949223e0ad751efe0ab119e94a6",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0140-electrical-01-battery-microg-c0",
+      "layout_id": "procedural-0140",
+      "fingerprint": "10910febfe83cb041ccc6084fa8e0b87d7db18987c2a84a2070e6751fd41fc66",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0141-electrical-05-battery-earth-c0",
+      "layout_id": "procedural-0141",
+      "fingerprint": "d760568d453602651d622bece40c90b18838fea869aeb5981a78222335c477ff",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0141-electrical-05-battery-microg-c0",
+      "layout_id": "procedural-0141",
+      "fingerprint": "a66e51ce949a1132f7965e117006ced736d1fd258d562df16d47998ff98ea725",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0142-electrical-00-battery-earth-c0",
+      "layout_id": "procedural-0142",
+      "fingerprint": "51b0fa027e170135b13e82e80709cbdde8985106c218503b3c358acc030e6024",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0142-electrical-00-battery-microg-c0",
+      "layout_id": "procedural-0142",
+      "fingerprint": "e1e53c0c9fd8cec38e2a380f6321fae37968ccfbfd15d71336d0fbb551fcc649",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0143-electrical-01-battery-earth-c0",
+      "layout_id": "procedural-0143",
+      "fingerprint": "a2b2bc06761b4b69df9026ab5c44b83eda8a4282e55bca1715b4abb69f514d28",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0143-electrical-01-battery-microg-c0",
+      "layout_id": "procedural-0143",
+      "fingerprint": "bc451c075e67c7e483746c716b299edf9e651f53702e6f162151264c3a6e44d4",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0144-electrical-02-battery-earth-c0",
+      "layout_id": "procedural-0144",
+      "fingerprint": "38a2ed760ead074f6b47f896914be3329fedf757b507ff34ceeab5b16ab53ebb",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0144-electrical-02-battery-microg-c0",
+      "layout_id": "procedural-0144",
+      "fingerprint": "346d945412a1ffabd9c0f1ad4208861191fafc687ed0f1af07fa075591cee936",
+      "split": "validation"
+    },
+    {
+      "id": "procedural-0145-electrical-03-battery-earth-c0",
+      "layout_id": "procedural-0145",
+      "fingerprint": "a95941c45273c96ad740af45d0903c93d1f9fd160198badb438a0372d868be47",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0145-electrical-03-battery-microg-c0",
+      "layout_id": "procedural-0145",
+      "fingerprint": "774a950cd3021c58a1211fa4a3d3eba27df51b79ed659ac580a5f2c91bfb15aa",
+      "split": "test"
+    },
+    {
+      "id": "procedural-0146-electrical-02-battery-earth-c0",
+      "layout_id": "procedural-0146",
+      "fingerprint": "5a509982770b04a62089b2f64aed1929f30d294f0b7d5cf8e114a4146f75a135",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0146-electrical-02-battery-microg-c0",
+      "layout_id": "procedural-0146",
+      "fingerprint": "db9929a6fea87f29e21fe26e33e08ff9e0556529b296fda78b5e5197e457ec96",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0147-electrical-05-battery-earth-c0",
+      "layout_id": "procedural-0147",
+      "fingerprint": "04e6c7ca2b2f1b49a5557a7f5bbbf4caf31bb0119c5ad7ae2f767c40d172f24f",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0147-electrical-05-battery-microg-c0",
+      "layout_id": "procedural-0147",
+      "fingerprint": "5025a8c444725e2e89fc495b5ba7602369e41f02d083da582cfc894987320a8f",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0148-electrical-01-battery-earth-c0",
+      "layout_id": "procedural-0148",
+      "fingerprint": "c5012fb9eac6de5dfa8f7cd33ce434f6c8e6c791ad53bedfb7dd06a8b7cdc463",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0148-electrical-01-battery-microg-c0",
+      "layout_id": "procedural-0148",
+      "fingerprint": "1195c56e8541f5e47caba6e458020c1f27db146580b165ac7d520bd61dad0c67",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0149-electrical-01-battery-earth-c0",
+      "layout_id": "procedural-0149",
+      "fingerprint": "89246a9d686962e39a927c930a6a02ea381c948bedd561fb5e22afaffd8a0e94",
+      "split": "train"
+    },
+    {
+      "id": "procedural-0149-electrical-01-battery-microg-c0",
+      "layout_id": "procedural-0149",
+      "fingerprint": "de38068e43215dcfd1a7ba2dc2d59717625765dadf5b61400cbc72dffa44c725",
+      "split": "train"
+    }
+  ],
+  "plan_design_sha256": "a4bae632290b17abb758899f3181fd7ac73d7fa9449be5980a2bb21ade4142a0"
+}

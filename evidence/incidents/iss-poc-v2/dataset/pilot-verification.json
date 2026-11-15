@@ -1,0 +1,202 @@
+{
+  "dataset_id": "iss-poc-20261115-v2",
+  "generation_elapsed_s": 49.609,
+  "status": "12 actual FDS cases complete",
+  "plan_sha256": "97f77e5111e53f79b2a1392587de2075438ea3ba2e86a6b0b4ef4b09fa3254bd",
+  "cases": [
+    {
+      "id": "iss-laboratory-v2-00-flame",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 28760,
+        "heat_positive": 33,
+        "smoke_observed": 28760,
+        "smoke_positive": 46,
+        "maximum_temperature_c": 182.966064453125,
+        "maximum_smoke_kg_m3": 0.0002685525978449732,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 8.625
+    },
+    {
+      "id": "iss-laboratory-v2-00-control",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 28760,
+        "heat_positive": 0,
+        "smoke_observed": 28760,
+        "smoke_positive": 0,
+        "maximum_temperature_c": 20.00048065185547,
+        "maximum_smoke_kg_m3": 0.0,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 8.594000000000051
+    },
+    {
+      "id": "iss-node-v2-00-battery",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 41238,
+        "heat_positive": 40,
+        "smoke_observed": 41238,
+        "smoke_positive": 119,
+        "maximum_temperature_c": 393.1039123535156,
+        "maximum_smoke_kg_m3": 0.0039385538548231125,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 9.094000000000051
+    },
+    {
+      "id": "iss-service-v2-00-smolder",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 44280,
+        "heat_positive": 30,
+        "smoke_observed": 44280,
+        "smoke_positive": 132,
+        "maximum_temperature_c": 178.49533081054688,
+        "maximum_smoke_kg_m3": 0.0023030368611216545,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 11.782000000000153
+    },
+    {
+      "id": "habitat-cargo-v2-00-flame",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 40950,
+        "heat_positive": 138,
+        "smoke_observed": 40950,
+        "smoke_positive": 286,
+        "maximum_temperature_c": 256.1830139160156,
+        "maximum_smoke_kg_m3": 0.0007030487176962197,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 14.297000000000025
+    },
+    {
+      "id": "habitat-capsule-v2-00-arc",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 28480,
+        "heat_positive": 0,
+        "smoke_observed": 28480,
+        "smoke_positive": 0,
+        "maximum_temperature_c": 20.249147415161133,
+        "maximum_smoke_kg_m3": 0.0,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 5.936999999999898
+    },
+    {
+      "id": "habitat-central-racks-v2-00-thermal",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 41880,
+        "heat_positive": 275,
+        "smoke_observed": 41880,
+        "smoke_positive": 350,
+        "maximum_temperature_c": 447.8456726074219,
+        "maximum_smoke_kg_m3": 0.0005640924791805446,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 11.702999999999975
+    },
+    {
+      "id": "habitat-central-racks-v2-00-flame-earth",
+      "split": "train",
+      "label_profile": {
+        "heat_observed": 41880,
+        "heat_positive": 106,
+        "smoke_observed": 41880,
+        "smoke_positive": 4182,
+        "maximum_temperature_c": 121.42904663085938,
+        "maximum_smoke_kg_m3": 0.00011068298044847324,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 35.76499999999987
+    },
+    {
+      "id": "habitat-cargo-v2-05-flame",
+      "split": "validation",
+      "label_profile": {
+        "heat_observed": 40560,
+        "heat_positive": 117,
+        "smoke_observed": 40560,
+        "smoke_positive": 173,
+        "maximum_temperature_c": 186.2203369140625,
+        "maximum_smoke_kg_m3": 0.00048303816583938897,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 17.047000000000025
+    },
+    {
+      "id": "habitat-capsule-v2-05-battery",
+      "split": "validation",
+      "label_profile": {
+        "heat_observed": 42480,
+        "heat_positive": 35,
+        "smoke_observed": 42480,
+        "smoke_positive": 187,
+        "maximum_temperature_c": 45.52676010131836,
+        "maximum_smoke_kg_m3": 0.0012847624020650983,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 8.5
+    },
+    {
+      "id": "iss-service-v2-05-smolder",
+      "split": "validation",
+      "label_profile": {
+        "heat_observed": 43920,
+        "heat_positive": 50,
+        "smoke_observed": 43920,
+        "smoke_positive": 276,
+        "maximum_temperature_c": 71.17872619628906,
+        "maximum_smoke_kg_m3": 0.0014819650677964091,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 16.46900000000005
+    },
+    {
+      "id": "iss-node-v2-05-control",
+      "split": "validation",
+      "label_profile": {
+        "heat_observed": 43320,
+        "heat_positive": 0,
+        "smoke_observed": 43320,
+        "smoke_positive": 0,
+        "maximum_temperature_c": 20.001327514648438,
+        "maximum_smoke_kg_m3": 0.0,
+        "heat_threshold": "ambient + 5 C",
+        "smoke_threshold_kg_m3": 1e-06,
+        "excluded": "t=0 and all unobserved gas/solid values"
+      },
+      "solve_parse_archive_s": 9.75
+    }
+  ],
+  "hot_occurrences": 824,
+  "smoke_occurrences": 5751
+}

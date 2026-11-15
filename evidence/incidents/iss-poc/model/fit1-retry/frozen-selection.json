@@ -1,0 +1,16 @@
+{
+  "selected_at": "2026-11-15T13:20:43.164809+00:00",
+  "step": 1000,
+  "score_thresholds": {
+    "heat": 0.9918374419212341,
+    "smoke": 0.9478464126586914
+  },
+  "selection_metric": "mean_heat_smoke_macro_module_microgravity_f1",
+  "value": 0.6046993842871665,
+  "state_sha256": "91cbe3f9d95c057211c7a61307cb56b14fd265882b682f23651a28bf15d13edc",
+  "test_labels_used_for_selection": false,
+  "baseline_thresholds": {
+    "heat": 0.7858349680900574,
+    "smoke": 0.6681877970695496
+  }
+}

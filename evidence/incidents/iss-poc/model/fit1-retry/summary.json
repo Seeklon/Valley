@@ -1,0 +1,219 @@
+{
+  "training_seconds": 234.70299999999997,
+  "total_compute_seconds": 295.21900000000005,
+  "selected_step": 1000,
+  "optimizer_steps": 20000,
+  "batch_size": 64,
+  "weights_sha256": "6ab66833116e2b5b1a514a4cf2fa9095e370a38f93a946f9d497fabc4dbd3392",
+  "dataset_sha256": "886535ae37231e4da51645cbb6590acab8c00a484c5151272e4e8e4657f09e69",
+  "telemetry": {
+    "available": true,
+    "sample_count": 293,
+    "interval_s": 1,
+    "utilization_max_percent": 99.0,
+    "utilization_median_percent": 96.0,
+    "fraction_at_least_90_percent": 0.7133105802047781,
+    "scope": "whole bounded run, including dataset verification/evaluation/export; nvidia-smi device-wide measurement"
+  },
+  "inference": {
+    "case_id": "iss-laboratory-v04-flame",
+    "split": "validation",
+    "frames": 31,
+    "points_per_frame": 1536,
+    "cpu_threads": 4,
+    "cpu_checkpoint_load_seconds": 0.012561900000036985,
+    "cpu_first_trajectory_seconds": 0.10457170000017868,
+    "cpu_warm_trajectory_seconds": [
+      0.08357580000028975,
+      0.08090949999996155,
+      0.08177840000007564
+    ],
+    "gpu_warm_trajectory_seconds": [
+      0.06695529999979044,
+      0.10318300000017189,
+      0.28078709999999774
+    ],
+    "cpu_warm_median_seconds": 0.08177840000007564,
+    "gpu_warm_median_seconds": 0.10318300000017189,
+    "cpu_gpu_max_score_difference": 0.0012293457984924316,
+    "cpu_gpu_class_disagreements": 0,
+    "timing_scope": "full trajectory input preparation and inference; CPU load separate, GPU model already loaded; no FDS runtime included",
+    "fds_comparison": "Compare separately with this case's measured FDS wall time from dataset generation, not its simulated duration."
+  },
+  "partitions": {
+    "train": {
+      "heat": {
+        "model_microgravity": {
+          "tp": 1547,
+          "fp": 305,
+          "fn": 196,
+          "tn": 2370402,
+          "precision": 0.8353131749460043,
+          "recall": 0.8875502008032129,
+          "iou": 0.75537109375,
+          "f1": 0.8606397774687066,
+          "false_positive_rate": 0.00012865360417799415,
+          "n_valid": 2372450
+        },
+        "proximity_microgravity": {
+          "tp": 595,
+          "fp": 1424,
+          "fn": 1148,
+          "tn": 2369283,
+          "precision": 0.29470034670629025,
+          "recall": 0.3413654618473896,
+          "iou": 0.18787496053047048,
+          "f1": 0.31632110579479,
+          "false_positive_rate": 0.0006006646962277498,
+          "n_valid": 2372450
+        },
+        "cold_cases": 33,
+        "cold_cases_with_false_alarm": 0
+      },
+      "smoke": {
+        "model_microgravity": {
+          "tp": 4778,
+          "fp": 1806,
+          "fn": 160,
+          "tn": 2365706,
+          "precision": 0.7256986634264885,
+          "recall": 0.9675982179019846,
+          "iou": 0.7084816132858838,
+          "f1": 0.829369901058844,
+          "false_positive_rate": 0.0007628261229510136,
+          "n_valid": 2372450
+        },
+        "proximity_microgravity": {
+          "tp": 2629,
+          "fp": 6381,
+          "fn": 2309,
+          "tn": 2361131,
+          "precision": 0.2917869034406215,
+          "recall": 0.5324017820980154,
+          "iou": 0.23226433430515064,
+          "f1": 0.37697160883280756,
+          "false_positive_rate": 0.002695234490891704,
+          "n_valid": 2372450
+        },
+        "cold_cases": 19,
+        "cold_cases_with_false_alarm": 0
+      }
+    },
+    "validation": {
+      "heat": {
+        "model_microgravity": {
+          "tp": 288,
+          "fp": 43,
+          "fn": 369,
+          "tn": 576110,
+          "precision": 0.8700906344410876,
+          "recall": 0.4383561643835616,
+          "iou": 0.4114285714285714,
+          "f1": 0.582995951417004,
+          "false_positive_rate": 7.463295339953102e-05,
+          "n_valid": 576810
+        },
+        "proximity_microgravity": {
+          "tp": 279,
+          "fp": 519,
+          "fn": 378,
+          "tn": 575634,
+          "precision": 0.34962406015037595,
+          "recall": 0.4246575342465753,
+          "iou": 0.2372448979591837,
+          "f1": 0.3835051546391753,
+          "false_positive_rate": 0.000900802391031549,
+          "n_valid": 576810
+        },
+        "cold_cases": 9,
+        "cold_cases_with_false_alarm": 0
+      },
+      "smoke": {
+        "model_microgravity": {
+          "tp": 1011,
+          "fp": 595,
+          "fn": 531,
+          "tn": 574673,
+          "precision": 0.6295143212951432,
+          "recall": 0.6556420233463035,
+          "iou": 0.47309312119794106,
+          "f1": 0.6423125794155019,
+          "false_positive_rate": 0.0010343005347073016,
+          "n_valid": 576810
+        },
+        "proximity_microgravity": {
+          "tp": 785,
+          "fp": 1549,
+          "fn": 757,
+          "tn": 573719,
+          "precision": 0.3363324764353042,
+          "recall": 0.5090791180285343,
+          "iou": 0.253963118731802,
+          "f1": 0.40505675954592363,
+          "false_positive_rate": 0.002692658030691782,
+          "n_valid": 576810
+        },
+        "cold_cases": 5,
+        "cold_cases_with_false_alarm": 1
+      }
+    },
+    "test": {
+      "heat": {
+        "model_microgravity": {
+          "tp": 227,
+          "fp": 130,
+          "fn": 91,
+          "tn": 600582,
+          "precision": 0.6358543417366946,
+          "recall": 0.7138364779874213,
+          "iou": 0.5066964285714286,
+          "f1": 0.6725925925925926,
+          "false_positive_rate": 0.00021640986029911171,
+          "n_valid": 601030
+        },
+        "proximity_microgravity": {
+          "tp": 86,
+          "fp": 64,
+          "fn": 232,
+          "tn": 600648,
+          "precision": 0.5733333333333334,
+          "recall": 0.27044025157232704,
+          "iou": 0.225130890052356,
+          "f1": 0.36752136752136755,
+          "false_positive_rate": 0.00010654023891648576,
+          "n_valid": 601030
+        },
+        "cold_cases": 9,
+        "cold_cases_with_false_alarm": 1
+      },
+      "smoke": {
+        "model_microgravity": {
+          "tp": 833,
+          "fp": 592,
+          "fn": 213,
+          "tn": 599392,
+          "precision": 0.584561403508772,
+          "recall": 0.7963671128107075,
+          "iou": 0.5085470085470085,
+          "f1": 0.6742209631728046,
+          "false_positive_rate": 0.0009866929784794261,
+          "n_valid": 601030
+        },
+        "proximity_microgravity": {
+          "tp": 617,
+          "fp": 2017,
+          "fn": 429,
+          "tn": 597967,
+          "precision": 0.23424449506454062,
+          "recall": 0.5898661567877629,
+          "iou": 0.20143650016323866,
+          "f1": 0.3353260869565217,
+          "false_positive_rate": 0.0033617563135016934,
+          "n_valid": 601030
+        },
+        "cold_cases": 5,
+        "cold_cases_with_false_alarm": 0
+      }
+    }
+  }
+}

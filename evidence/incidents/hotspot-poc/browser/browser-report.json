@@ -1,0 +1,175 @@
+{
+  "checked_at": "2026-11-14T21:44:40.259Z",
+  "base": "https://desktop-m4hkr86.tail609f26.ts.net:8444",
+  "model_id": "hotspot-poc-20261114",
+  "checks": [
+    {
+      "name": "real_model_export_and_two_synchronized_views",
+      "passed": true,
+      "model": {
+        "id": "hotspot-poc-20261114",
+        "name": "U-Net 3D — classification chaleur",
+        "trained_at": "2026-11-14T21:29:47.979900+00:00",
+        "device": "NVIDIA GeForce RTX 4070 Ti",
+        "heat_delta_c": 5,
+        "score_threshold": 0.9478464126586914,
+        "score_semantics": "uncalibrated_hotspot_class_score",
+        "training_seconds": 191.76600000000326,
+        "total_compute_seconds": 266.70300000000134,
+        "weights_sha256": "fe4f781dd50f66d27400f87beef91a2ce7c666c3319b143d5cb42c5f577ead60",
+        "state_sha256": "a7e47b7a18f7ea45f29a115c935c955d13f8fdf7cd4db526643e93e5055e487b",
+        "dataset_sha256": "917965d170145c8415145e6290939fb1ec554fde85ac1419d2013b895b6ed4f3",
+        "architecture": {
+          "version": "heat-hotspot-unet3d-1",
+          "feature_version": "incident-voxel-features-1",
+          "input_channels": [
+            "x_over_width",
+            "y_over_depth",
+            "z_over_height",
+            "gas_sample",
+            "solid_volume_fraction",
+            "substrate_aluminium",
+            "substrate_cellulose",
+            "substrate_glass",
+            "substrate_insulation",
+            "substrate_pmma",
+            "substrate_steel",
+            "coating_cellulose",
+            "coating_pmma",
+            "density_scaled",
+            "specific_heat_scaled",
+            "conductivity_scaled",
+            "emissivity",
+            "heat_of_combustion_scaled",
+            "soot_yield_scaled",
+            "coating_thickness_scaled",
+            "source_patch_fraction",
+            "source_dx",
+            "source_dy",
+            "source_dz",
+            "source_distance",
+            "inlet_area_fraction",
+            "outlet_area_fraction",
+            "boundary_u_scaled",
+            "boundary_v_scaled",
+            "boundary_w_scaled",
+            "time_scaled",
+            "source_elapsed_scaled",
+            "post_source_time_scaled",
+            "source_ramp_fraction",
+            "power_scaled",
+            "duration_scaled",
+            "gravity_g",
+            "log_gravity_scaled",
+            "oxygen_scaled",
+            "ambient_scaled",
+            "pressure_scaled",
+            "airflow_scaled",
+            "width_scaled",
+            "depth_scaled",
+            "height_scaled",
+            "source_x_scaled",
+            "source_y_scaled",
+            "source_z_scaled",
+            "source_area_scaled",
+            "incident_overheating",
+            "incident_arc",
+            "incident_flaming",
+            "incident_smoldering",
+            "incident_battery"
+          ],
+          "widths": [
+            16,
+            32,
+            64
+          ],
+          "output": "one heat-class logit per sample",
+          "heat_delta_c": 5,
+          "score_semantics": "uncalibrated_hotspot_class_score",
+          "time_conditioning": "direct, no autoregression"
+        },
+        "selected_step": 4000,
+        "optimizer_steps": 16000,
+        "seed": 20261114,
+        "selection_metric": "mean_microgravity_earth_f1",
+        "selection_split": "validation"
+      },
+      "cases": 200
+    },
+    {
+      "name": "timeline_uses_real_times_and_changes_render",
+      "passed": true,
+      "id": "procedural-0071-electrical-01-flaming-microg-c1",
+      "time_s": 28.044123,
+      "firstHash": "9a60d1fe71baf8c5196358a6e4dceca10ea509928b3b275bf8b5186aa469a6b4",
+      "peakHash": "51ef211e45628829b4a98542e9927d1b256ed7d23dc53509a0e6308bcd6e1744"
+    },
+    {
+      "name": "shared_camera_and_error_layer_work",
+      "passed": true
+    },
+    {
+      "name": "honest_failure_case_accessible",
+      "passed": true,
+      "id": "procedural-0094-electrical-03-battery-microg-c1",
+      "metrics": {
+        "id": "procedural-0094-electrical-03-battery-microg-c1",
+        "gravity": "microgravity",
+        "incident_type": "battery",
+        "sample_inactive": false,
+        "tp": 0,
+        "fp": 18,
+        "fn": 26,
+        "tn": 45106,
+        "precision": 0,
+        "recall": 0,
+        "iou": 0,
+        "f1": 0,
+        "false_positive_rate": 0.0003989008066660757,
+        "n_valid": 45150
+      }
+    },
+    {
+      "name": "honest_cold_control_case_accessible",
+      "passed": true,
+      "id": "procedural-0011-electrical-01-arc-microg-c0",
+      "metrics": {
+        "id": "procedural-0011-electrical-01-arc-microg-c0",
+        "gravity": "microgravity",
+        "incident_type": "arc",
+        "sample_inactive": true,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 45420,
+        "precision": null,
+        "recall": null,
+        "iou": null,
+        "f1": null,
+        "false_positive_rate": 0,
+        "n_valid": 45420
+      }
+    },
+    {
+      "name": "historical_test_is_labeled",
+      "passed": true
+    },
+    {
+      "name": "laptop_layout_fits",
+      "passed": true
+    },
+    {
+      "name": "read_only_demo_without_javascript_errors_or_new_compute",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "screenshots": [
+    "poc-representative.png",
+    "poc-detections.png",
+    "poc-failure.png",
+    "poc-cold-control.png",
+    "poc-laptop.png"
+  ]
+}

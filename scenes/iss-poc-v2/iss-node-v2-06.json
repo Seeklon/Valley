@@ -1,0 +1,194 @@
+{
+  "id": "iss-node-v2-06",
+  "name": "Node · v2 7",
+  "units": "m",
+  "coordinate_system": "right-handed Z-up",
+  "bounds_m": [
+    3.578568,
+    3.578568,
+    3.578568
+  ],
+  "geometry_family": "iss-node",
+  "objects": [
+    {
+      "id": "avionics-port",
+      "name": "Avionics Port",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "glass",
+      "center_m": [
+        0.596428,
+        0.9691955,
+        0.9691955
+      ],
+      "size_m": [
+        0.894642,
+        0.7455350000000001,
+        1.938391
+      ],
+      "thermal_thickness_m": 0.003,
+      "combustible_material_id": "pmma"
+    },
+    {
+      "id": "avionics-starboard",
+      "name": "Avionics Starboard",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "aluminium",
+      "center_m": [
+        2.9075865,
+        2.683926,
+        0.9691955
+      ],
+      "size_m": [
+        1.043749,
+        0.8946420000000002,
+        1.938391
+      ],
+      "thermal_thickness_m": 0.005
+    },
+    {
+      "id": "utility-bay",
+      "name": "Utility Bay",
+      "role": "obstacle",
+      "kind": "equipment",
+      "material_id": "steel",
+      "center_m": [
+        0.6709814999999999,
+        2.6093725,
+        0.9691955
+      ],
+      "size_m": [
+        1.043749,
+        0.7455349999999998,
+        1.938391
+      ],
+      "thermal_thickness_m": 0.0006,
+      "combustible_material_id": "cellulose"
+    },
+    {
+      "id": "hatch-baffle",
+      "name": "Hatch Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "steel",
+      "center_m": [
+        1.7147305,
+        2.8330330000000004,
+        0.5218745
+      ],
+      "size_m": [
+        0.1491070000000001,
+        0.596428,
+        1.043749
+      ],
+      "thermal_thickness_m": 0.002
+    },
+    {
+      "id": "passage-baffle",
+      "name": "Passage Baffle",
+      "role": "obstacle",
+      "kind": "baffle",
+      "material_id": "aluminium",
+      "center_m": [
+        1.5656235,
+        0.6709815,
+        0.298214
+      ],
+      "size_m": [
+        0.1491070000000001,
+        0.447321,
+        0.596428
+      ],
+      "thermal_thickness_m": 0.002
+    }
+  ],
+  "components": [
+    {
+      "id": "electrical-00",
+      "object_id": "avionics-port",
+      "kind": "electrical",
+      "face": 3,
+      "critical": true,
+      "position_m": [
+        0.820088,
+        0.820088,
+        1.938391
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-01",
+      "object_id": "avionics-starboard",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        2.609372,
+        2.758479,
+        1.938391
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    },
+    {
+      "id": "electrical-02",
+      "object_id": "utility-bay",
+      "kind": "electrical",
+      "face": 3,
+      "critical": false,
+      "position_m": [
+        0.820088,
+        2.609372,
+        1.938391
+      ],
+      "provenance": "Synthetic upper-face electrical source; not actual ISS equipment"
+    }
+  ],
+  "vents": [
+    {
+      "id": "inlet",
+      "role": "inlet",
+      "center_m": [
+        1.640177,
+        3.578568,
+        2.087498
+      ],
+      "size_m": [
+        0.8946419999999999,
+        0.0,
+        0.596428
+      ],
+      "normal": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "id": "outlet",
+      "role": "outlet",
+      "center_m": [
+        1.640177,
+        0.0,
+        2.087498
+      ],
+      "size_m": [
+        1.192856,
+        0.0,
+        0.596428
+      ],
+      "normal": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "sensors": [],
+  "source_position_m": [
+    0.820088,
+    0.820088,
+    1.938391
+  ],
+  "provenance": "Original simplified ISS-inspired compartment; not actual ISS plans or NASA observations"
+}
