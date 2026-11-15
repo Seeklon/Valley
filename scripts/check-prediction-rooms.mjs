@@ -39,7 +39,14 @@ async function selected() {
   const bytes = await response.body();
   assert.equal(createHash('sha256').update(bytes).digest('hex'), entry.sha256);
   assert.equal(await root().getAttribute('data-model-sha'), index.model.weights_sha256);
-  return { data: JSON.parse(bytes), entry };
+  const data = JSON.parse(bytes);
+  assert.equal(await root().getAttribute('data-layout-id'), data.layout_id);
+  assert.equal(await root().getAttribute('data-bounds-m'), data.scene.bounds_m.join(','));
+  assert.equal(Number(await root().getAttribute('data-object-count')), data.scene.objects.length);
+  assert.equal(await page.locator('#ml-layout').inputValue(), entry.layout_id);
+  const options = await page.locator('#ml-scenario option').evaluateAll(items => items.map(item => item.value));
+  assert.deepEqual(options.sort(), index.cases.filter(item => item.family === entry.family && item.layout_id === entry.layout_id && item.gravity_g < 0.01).map(item => item.id).sort());
+  return { data, entry };
 }
 async function frameAt(n) {
   await page.locator('#ml-time').evaluate((input, value) => { input.value = String(value); input.dispatchEvent(new Event('input', { bubbles: true })); }, n);
@@ -66,18 +73,16 @@ try {
   await page.goto(`${base}/?nogl&hub&open=prev`, { waitUntil: 'domcontentloaded' });
   await ready('habitat-cargo', false);
   assert.equal(await page.locator('#pars').isVisible(), false);
-  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), false);
+  assert.equal(await page.locator('#panel, #ptab, #tray, #sheet').count(), 0);
   assert.equal(await page.locator('#ml-toggle').getAttribute('aria-expanded'), 'false');
   await shot('00-unobstructed-pov.png');
-  await page.locator('#ptab').click();
-  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), true);
   await page.locator('#ml-toggle').click();
-  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), false);
   assert.equal(await page.locator('#pars').isVisible(), true);
-  record('Investigations and prediction controls start closed and open independently without overlapping');
+  assert.doesNotMatch(await page.locator('#swi').innerText(), /Prevention|Detection|Suppression|Flame physics|SI console/);
+  record('Investigations and mock themes are removed; prediction controls start closed and can be opened');
   await shot('01-site-with-prediction.png');
   const { data } = await selected();
-  record('Original site opens its prevention room with the verified cargo scene', { case: data.id, model: index.model.weights_sha256 });
+  record('Original site opens its cargo compartment with the verified scene', { case: data.id, model: index.model.weights_sha256 });
   for (const display of ['prediction', 'reference', 'errors']) {
     await checkCounts(data, display, 0);
     await checkCounts(data, display, data.frames.length - 1);
@@ -129,6 +134,23 @@ try {
   assert.equal(await root().getAttribute('data-view'), 'pov');
   await page.locator('#ml-toggle').click();
   record('The persistent Exterior view button opens the whole compartment and returns to POV without opening controls');
+  const layouts = [...new Set(index.cases.filter(item => item.family === 'habitat-cargo').map(item => item.layout_id))].sort();
+  assert.equal(await page.locator('#ml-layout option').count(), layouts.length);
+  const geometry = new Set();
+  await page.locator('[data-ml-action="view"]').click();
+  for (const layout of layouts) {
+    await page.selectOption('#ml-layout', layout);
+    await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.state === 'ready' && document.querySelector('#prediction-room').dataset.layoutId === id, layout);
+    const room = await selected();
+    geometry.add(JSON.stringify([room.data.scene.bounds_m, room.data.scene.objects]));
+    await checkCounts(room.data, 'prediction', room.data.frames.length - 1);
+    assert.equal(await root().getAttribute('data-view'), 'exterior');
+    assert.equal(await page.locator('[data-go="prev"]').getAttribute('aria-pressed'), 'true');
+    await shot(`layout-${layout}.png`);
+  }
+  assert.equal(geometry.size, layouts.length);
+  await page.locator('[data-ml-action="view"]').click();
+  record('Every cargo layout changes the actual dimensions/equipment and keeps its own predictions; exterior view is retained', { layouts: layouts.length });
   const rooms = { prev: 'habitat-cargo', det: 'iss-node', sup: 'iss-service', fun: 'iss-laboratory', si: 'habitat-central-racks' };
   for (const [room, family] of Object.entries(rooms)) {
     if (room !== 'prev') { await page.locator(`[data-go="${room}"]`).click(); await ready(family); }
@@ -141,19 +163,34 @@ try {
   }
   await page.selectOption('#ml-family', 'habitat-capsule');
   await ready('habitat-capsule');
+  assert.equal(await page.locator('#swi [aria-pressed="true"]').count(), 0);
   await shot('room-capsule.png');
   const controls = index.cases.filter(entry => entry.family === 'habitat-capsule' && entry.gravity_g < 0.01 && entry.id === index.example_cases.cold_control);
   assert.ok(controls.length);
+  if (await page.locator('#ml-layout').inputValue() !== controls[0].layout_id) {
+    await page.selectOption('#ml-layout', controls[0].layout_id);
+    await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.layoutId === id, controls[0].layout_id);
+  }
+  assert.match(await page.locator('#ml-scenario option').filter({ hasText: 'No-fire control' }).innerText(), /No-fire control/);
   await page.selectOption('#ml-scenario', controls[0].id);
   await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.caseId === id && document.querySelector('#prediction-room').dataset.state === 'ready', controls[0].id);
   const control = await selected();
   assert.equal(control.data.conditions.power_w, 0);
   await checkCounts(control.data, 'prediction', control.data.frames.length - 1);
   record('Sixth geometry and no-fire control use actual model outputs');
+  await page.locator('[data-go="si"]').click();
+  await ready('habitat-central-racks');
+  assert.equal(await page.locator('[data-go="si"]').getAttribute('aria-pressed'), 'true');
+  await page.selectOption('#ml-family', 'iss-node');
+  await ready('iss-node');
+  assert.equal(await page.locator('[data-go="det"]').getAttribute('aria-pressed'), 'true');
+  assert.equal(await page.locator('[data-go="si"]').getAttribute('aria-pressed'), 'false');
+  record('Navigation follows the selected compartment, including returning from the capsule');
   await page.locator('#back').click();
   await page.waitForFunction(() => document.querySelector('#prediction-room').hidden);
   assert.equal(await page.locator('#pars').isVisible(), false);
   await shot('station-preserved.png');
+  assert.doesNotMatch(await page.locator('#tags').textContent(), /Time to smoke alarm|most relevant|Global ranking|Detection/);
   record('Return to the original station and navigation');
   await page.goto(`${base}/?nogl&hub&env=earth&open=det`, { waitUntil: 'domcontentloaded' });
   await ready('iss-node');
@@ -186,9 +223,7 @@ try {
   assert.ok(closeBox && closeBox.y >= 0 && closeBox.y + closeBox.height < 844);
   await page.locator('[data-ml-action="close"]').click();
   assert.equal(await page.locator('#ml-view-toggle').isVisible(), true);
-  await page.locator('#ptab').click();
-  await page.locator('#panel [data-close]').click();
-  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), false);
+  assert.equal(await page.locator('#panel, #ptab, #tray, #sheet').count(), 0);
   await shot('mobile-unobstructed.png');
   record('Mobile preserves navigation and usable controls');
   assert.deepEqual(errors, []); assert.deepEqual(renderErrors, []); assert.deepEqual(writes, []);

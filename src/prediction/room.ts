@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { defaultCase, environmentCases, FAMILY_NAMES, INCIDENT_NAMES, loadCase, loadIndex, ROOM_FAMILY } from './catalog';
+import { defaultCase, environmentCases, FAMILY_NAMES, INCIDENT_NAMES, loadCase, loadIndex, ROOM_FAMILY, roomLayouts, scenarioName } from './catalog';
 import type { Environment, Room } from './catalog';
 import { issInteriorPose, issPeakFrame, issSampleState, issToWorld } from './iss-poc';
 import type { IssCase, IssCaseEntry, IssIndex } from './iss-poc';
@@ -33,7 +33,7 @@ function disposeWorld(world: THREE.Scene) {
   world.clear();
 }
 
-/** Interior-only integration. The original site's exterior and NASA panels own their lifecycle. */
+/** Interior-only integration. The original site's exterior owns its lifecycle. */
 export class PredictionRoom {
   private host = document.createElement('div');
   private status = document.createElement('div');
@@ -67,7 +67,7 @@ export class PredictionRoom {
   private message = 'Loading the verified model export…';
 
   constructor(private app: HTMLElement, private panel: HTMLElement, private panelChanged: () => void,
-    private panelOpened: () => void) {
+    private sceneChanged: (family: string) => void) {
     this.host.id = 'prediction-room';
     this.host.hidden = true;
     this.host.dataset.mode = 'recorded-inference';
@@ -137,7 +137,6 @@ export class PredictionRoom {
     this.panel.hidden = !this.panelOpen;
     this.panelToggle.setAttribute('aria-expanded', String(this.panelOpen));
     this.panelToggle.textContent = this.panelOpen ? 'Hide controls' : 'Prediction controls';
-    if (this.panelOpen) this.panelOpened();
     this.panelChanged();
     if (focus) (this.panelOpen
       ? this.panel.querySelector<HTMLButtonElement>('[data-ml-action="close"]')
@@ -176,6 +175,7 @@ export class PredictionRoom {
     ++this.revision;
     this.controller?.abort();
     this.playing = false;
+    this.overview = false;
     cancelAnimationFrame(this.raf);
     this.releaseScene();
     if (this.controls) this.controls.enabled = false;
@@ -187,7 +187,7 @@ export class PredictionRoom {
     this.setPanelOpen(false);
     this.panelToggle.hidden = true;
     this.toolbar.hidden = true;
-    for (const key of ['caseId', 'modelSha', 'timeS', 'heatCount', 'smokeCount', 'state']) delete this.host.dataset[key];
+    for (const key of ['modelSha', 'state']) delete this.host.dataset[key];
     this.panel.classList.remove('ml-controls');
   }
 
@@ -198,6 +198,7 @@ export class PredictionRoom {
     if (this.station) disposeWorld(this.station.world);
     this.station = undefined;
     this.data = undefined;
+    for (const key of ['caseId', 'layoutId', 'family', 'boundsM', 'objectCount', 'timeS', 'heatCount', 'smokeCount']) delete this.host.dataset[key];
     this.renderer?.clear();
   }
 
@@ -215,7 +216,7 @@ export class PredictionRoom {
     this.drawPanel();
   }
 
-  private async select(id: string) {
+  private async select(id: string, focusId?: string) {
     const entry = this.entries.find(item => item.id === id);
     if (!entry || !this.index) return;
     this.controller?.abort();
@@ -236,17 +237,22 @@ export class PredictionRoom {
       this.station = createIssStationWorld(data);
       this.overlay = createIssPocOverlay(data, this.index.model, data.scene);
       this.station.world.add(this.overlay.group);
-      this.overview = false;
       this.viewToggle.disabled = false;
       this.frameIndex = this.geometryOnly ? 0 : issPeakFrame(data);
       this.configureCamera();
       this.host.dataset.caseId = data.id;
+      this.host.dataset.layoutId = data.layout_id;
+      this.host.dataset.family = entry.family;
+      this.host.dataset.boundsM = data.scene.bounds_m.join(',');
+      this.host.dataset.objectCount = String(data.scene.objects.length);
       this.host.dataset.modelSha = this.index.model.weights_sha256;
       this.host.dataset.geometryOnly = String(this.geometryOnly);
       this.setStatus('');
       this.drawPanel();
       this.resize();
       this.setFrame(this.frameIndex);
+      this.sceneChanged(entry.family);
+      if (focusId && this.panelOpen) this.panel.querySelector<HTMLElement>(`#${focusId}`)?.focus({ preventScroll: true });
       this.animate();
     } catch (error) { this.fail(error, revision); }
   }
@@ -452,7 +458,8 @@ export class PredictionRoom {
     }
     const data = this.data, entry = this.entries.find(item => item.id === data.id)!;
     const families = [...new Set(this.entries.map(item => item.family))];
-    const cases = this.entries.filter(item => item.family === entry.family);
+    const layouts = roomLayouts(this.entries, entry.family);
+    const cases = this.entries.filter(item => item.family === entry.family && item.layout_id === data.layout_id);
     const option = (value: string, label: string, selected: boolean) => `<option value="${escape(value)}"${selected ? ' selected' : ''}>${escape(label)}</option>`;
     const conditions = data.conditions;
     const environmentLabel = this.environment === 'earth' ? 'Earth · 1 g'
@@ -461,7 +468,9 @@ export class PredictionRoom {
       <div class="envl">${environmentLabel}${this.geometryOnly ? ' · predictions unavailable' : ` · ${conditions.oxygen_percent ?? 21}% O₂`}</div>
       ${this.geometryOnly ? '<div class="envn">Interior geometry only. This export has no cases for these gravity conditions; heat and smoke predictions are disabled.</div>' : ''}
       <label for="ml-family">Compartment</label><select id="ml-family">${families.map(family => option(family, FAMILY_NAMES[family] ?? family, family === entry.family)).join('')}</select>
-      <label for="ml-scenario">Recorded scenario</label><select id="ml-scenario">${cases.map(item => option(item.id, `${INCIDENT_NAMES[item.incident_type ?? ''] ?? item.incident_type ?? 'Incident'} · ${((item.airflow_m_s ?? 0) * 100).toFixed(0)} cm/s · ${item.id.replace(item.family + '-', '')} · ${item.split}`, item.id === data.id)).join('')}</select>
+      <label for="ml-layout">Room layout</label><select id="ml-layout">${layouts.map(layout => option(layout.id, layout.name, layout.id === data.layout_id)).join('')}</select>
+      <div id="ml-room-summary" class="ml-room-summary"><b>${data.scene.bounds_m.map(n => n.toFixed(1)).join(' × ')} m</b><span>${data.scene.objects.length} equipment items · ${data.scene.vents.length} vents</span></div>
+      <label for="ml-scenario">Scenario in this room</label><select id="ml-scenario">${cases.map(item => option(item.id, scenarioName(item), item.id === data.id)).join('')}</select>
       <div class="ml-conditions">${escape(conditions.power_w === 0 ? 'No-fire control' : INCIDENT_NAMES[conditions.incident_type] ?? conditions.incident_type)} · ${conditions.power_w ?? 0} W · ${(conditions.airflow_m_s * 100).toFixed(0)} cm/s airflow</div>
       <label for="ml-display">Layer</label><select id="ml-display"${this.geometryOnly ? ' disabled' : ''}>${[['prediction', 'ML prediction'], ['reference', 'FDS reference'], ['errors', 'Misses and false alarms']].map(([value, label]) => option(value, label, this.options.display === value)).join('')}</select>
       <div class="ml-layers"><label><input id="ml-heat" type="checkbox"${this.options.heat ? ' checked' : ''}${this.geometryOnly ? ' disabled' : ''}> Heat</label><label><input id="ml-smoke" type="checkbox"${this.options.smoke ? ' checked' : ''}${this.geometryOnly ? ' disabled' : ''}> Smoke</label></div>
@@ -469,7 +478,7 @@ export class PredictionRoom {
       <div class="ml-actions"><button class="ghost" data-ml-action="play"${this.geometryOnly ? ' disabled' : ''}>Play</button><button class="ghost" data-ml-action="view">Overview</button><button class="ghost" data-ml-action="reset">Reset view</button></div>
       <div class="pred"><span id="ml-legend"></span><b id="ml-counts"></b></div>
       <div class="note">Drag to look · arrows / WASD / ZQSD to move</div>
-      <details><summary>Model &amp; conditions</summary><div class="note">Recorded ML inference, synthetic FDS data. Conditional on the selected electrical source; not ignition probability. Heat and smoke are classified samples, not predicted temperature or density. Geometry is illustrative of spacecraft interiors.<br>Weights: ${escape(this.index.model.weights_sha256.slice(0, 12))}<br>Case: ${escape(data.id)}<br>Gravity: ${conditions.gravity_g} g · ${conditions.ambient_temperature_c} °C<br>Materials: ${escape([...new Set(data.scene.objects.map(object => object.material_id))].join(', '))}<br>Changing scenario may also change source, materials and geometry.</div></details></div>`;
+      <details><summary>Model &amp; conditions</summary><div class="note">Recorded ML inference, synthetic FDS data. Conditional on the selected electrical source; not ignition probability. Heat and smoke are classified samples, not predicted temperature or density. Geometry is illustrative of spacecraft interiors.<br>Weights: ${escape(this.index.model.weights_sha256.slice(0, 12))}<br>Case: ${escape(data.id)}<br>Layout: ${escape(data.layout_id)} · ${escape(entry.split)}<br>Gravity: ${conditions.gravity_g} g · ${conditions.ambient_temperature_c} °C<br>Materials: ${escape([...new Set(data.scene.objects.map(object => object.material_id))].join(', '))}<br>Each scenario loads its recorded geometry, equipment and predictions. Ventilation variants share a layout for comparison.</div></details></div>`;
     this.updateReadout();
     this.panelChanged();
   }
@@ -479,8 +488,14 @@ export class PredictionRoom {
     const input = event.target as HTMLInputElement;
     if (input.id === 'ml-family') {
       const entry = defaultCase(this.index, this.entries, input.value);
-      if (entry) void this.select(entry.id);
-    } else if (input.id === 'ml-scenario') void this.select(input.value);
+      if (entry) void this.select(entry.id, input.id);
+    } else if (input.id === 'ml-layout' && this.data) {
+      const current = this.entries.find(item => item.id === this.data!.id)!;
+      const cases = this.entries.filter(item => item.family === current.family && item.layout_id === input.value);
+      const entry = cases.find(item => item.incident_type === current.incident_type && item.ventilation_state === current.ventilation_state)
+        ?? defaultCase(this.index, cases, current.family);
+      if (entry) void this.select(entry.id, input.id);
+    } else if (input.id === 'ml-scenario') void this.select(input.value, input.id);
     else if (input.id === 'ml-display' && ['prediction', 'reference', 'errors'].includes(input.value)) {
       this.options.display = input.value as IssOverlayOptions['display'];
       this.setFrame(this.frameIndex);

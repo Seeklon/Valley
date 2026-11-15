@@ -3,10 +3,9 @@
 Site de l'équipe **Seeklon Valley** pour le NASA Space Apps Challenge 2026 (Paris), défi
 *Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data*.
 
-Un simulateur en 3D : depuis la Lune, la caméra recule jusqu'à la station en orbite ; on choisit un
-environnement (ISS, base lunaire, Terre), on entre dans une pièce par thème de prédiction (prévention,
-détection, suppression, physique des flammes, console SI), on choisit un scénario de prédiction et on consulte
-les investigations NASA classées pour cet environnement.
+Une exploration en 3D : depuis la Lune, la caméra recule jusqu'à la station en orbite ; on choisit un
+environnement (ISS, base lunaire, Terre), puis un compartiment, une pièce et un scénario électrique.
+Les intérieurs affichent les prédictions enregistrées de chaleur et de fumée du modèle ML.
 
 C'est un **site statique** : Vite + TypeScript, aucune partie serveur.
 
@@ -17,12 +16,12 @@ npm install        # dépendances
 npm run dev        # serveur de développement
 npm run build      # vérification des types puis site statique dans dist/
 npm run preview    # sert dist/ en local
-npm run data:psi   # rafraîchit l'instantané des investigations PSI
+npm run data:psi   # rafraîchit l'archive PSI, hors interface publique
 ```
 
 Le build utilise des chemins relatifs (`base: './'`) : le contenu de `dist/` se dépose tel quel dans
-n'importe quel dossier d'un serveur web (le VPS n'est pas encore fixé). Il pèse environ 100 Mo, presque
-entièrement des images.
+n'importe quel dossier d'un serveur web. La version publique est hébergée sur
+`https://space.in-momentum.fr` ; voir `deploy/space/README.md`. Le poids dépend de l'export ML installé.
 
 ## Organisation
 
@@ -33,27 +32,19 @@ entièrement des images.
 | `src/app.ts` | toute l'expérience : scènes 3D, transitions, pièces, panneaux |
 | `src/styles.css` | styles |
 | `src/data/psi-snapshot.json` | instantané des investigations PSI (généré) |
-| `src/data/investigations.ts` | passage des enregistrements PSI au modèle de l'interface, avec notre classement par thème |
+| `src/data/investigations.ts` | ancienne curation PSI conservée en source, non importée par le site |
 | `scripts/fetch-psi.mjs` | génère l'instantané |
 | `scripts/render-server.py` | sert `dist/` et enregistre les images exportées (voir plus bas) |
 | `public/` | modèle Gateway, textures, images pré-rendues |
 
 ## Données
 
-Les investigations viennent du dépôt **NASA Physical Sciences Informatics** (PSI),
-recherche « combustion ». L'API PSI n'accepte les appels de navigateur que depuis `psi.nasa.gov` : un site
-statique ne peut donc pas l'interroger en direct. `npm run data:psi` enregistre un instantané, intégré au
-build. L'instantané du 15/11/2026 contient 26 enregistrements ; les 24 du domaine « Combustion Science »
-sont affichés.
+Le site charge les scènes et sorties ML du lot vérifié `public/poc/iss/`, construit sur des simulations
+FDS synthétiques. Chaque cas est vérifié par SHA256 avant affichage.
 
-Ce qui vient de PSI : numéro d'accession, titre, plateforme, matériel, objectifs.
-Ce qui est de nous : le thème (prévention, détection, suppression, physique des flammes), le libellé court
-du combustible et des variables, et les indicateurs de pertinence. Ils sont dans
-`src/data/investigations.ts`, table `CURATED`.
-
-**Les scores et les résumés « SI summary » sont des valeurs d'illustration**,
-pas des résultats NASA. L'API de recherche ne fournit pas de DOI : la citation affichée donne le titre et
-l'accession PSI.
+L'instantané du dépôt **NASA Physical Sciences Informatics** (PSI), recherche « combustion », reste
+conservé dans les sources pour sa provenance. Les investigations, comparaisons, scores de pertinence
+et résumés d'illustration ont été retirés de l'interface ; le site n'importe plus ces enregistrements.
 
 ## Deux modes d'affichage
 
@@ -92,16 +83,23 @@ assemblées en planches de 9 images (3 × 3, 3840 × 2160) : `r` intro, `s` stat
 
 ## Pièces POV et prédictions ML
 
-L’introduction, les voyages entre environnements, les marqueurs, les panneaux NASA et la navigation
-restent ceux du site. Seuls les intérieurs et leur panneau de conditions utilisent maintenant les
+L’introduction, les voyages entre environnements et la navigation restent ceux du site.
+Les intérieurs et leur panneau de conditions utilisent les
 scènes IGNIS et les **inférences enregistrées** du réseau chaleur/fumée. Aucun entraînement, aucune
 simulation FDS ni nouvelle inférence n’est lancé dans le navigateur.
 
-Les thèmes de la maquette ouvrent les compartiments suivants : prévention → cargo, détection → nœud,
-suppression → service, physique → laboratoire, console SI → équipements centraux. Le sélecteur permet
-aussi de visiter la capsule. Ces thèmes ne créent pas de nouvelles sorties ML : le modèle classe la
-présence de chaleur et de fumée pour une source électrique donnée. Il ne prédit pas une probabilité de
-départ, un temps d’alarme ou une extinction.
+Les marqueurs et la navigation portent les noms des compartiments : cargo, nœud de jonction,
+service, laboratoire et équipements centraux. Le sélecteur permet aussi de visiter la capsule.
+Les anciens identifiants `prev`, `det`, `sup`, `fun`, `si` restent internes pour conserver les ancres
+du modèle extérieur et les URL. Le modèle classe la présence de chaleur et de fumée pour une source
+électrique donnée ; il ne prédit pas une probabilité de départ, un temps d’alarme ou une extinction.
+
+Le choix suit **Compartment → Room layout → Scenario in this room**. L'export ventilation actuel
+offre 24 pièces, quatre par compartiment, et 216 scénarios. Les numéros de pièce sont stables dans
+chaque compartiment ; dimensions, nombre d'équipements et bouches d'air proviennent du cas chargé.
+Le menu scénario contient seulement les variantes de la pièce choisie et distingue les débits,
+le flux inversé et le témoin sans feu. Les identifiants techniques et partitions train/validation/test
+restent dans « Model & conditions ». La navigation suit la famille effectivement affichée.
 
 Le rendu conserve les dimensions, matériaux et passages d’air de chaque scénario. La conversion
 physique XYZ (Z vertical) vers Three.js est `(x, z, -y)`, commune à la pièce et aux sondes. Les nouvelles
@@ -110,16 +108,17 @@ couches ne sont jamais appliquées aux anciens intérieurs de la maquette.
 Glisser à droite pour regarder à droite, vers le haut pour regarder vers le haut ; flèches / WASD /
 ZQSD pour se déplacer. « Exterior view », toujours accessible en bas de la scène, montre la pièce
 entière en coupe ; « Enter POV » permet d’y revenir. Le retour station est en haut à gauche.
-Investigations et réglages sont fermés à l’entrée. « Prediction controls » ouvre le panneau de
+Les investigations sont retirées. Les réglages sont fermés à l’entrée. « Prediction controls » ouvre le panneau de
 réglages à droite, refermable par sa croix, son bouton ou Échap, sans perdre le scénario ni l’instant.
-Les panneaux d’investigations et de réglages s’ouvrent séparément pour ne pas se superposer.
+Un changement de pièce dans le sélecteur conserve le mode de vue, POV ou extérieur.
 La timeline et les boutons chaleur/fumée lisent les instants exportés, sans interpolation inventée.
 La fumée utilise une texture nuageuse déterministe et les points chauds un halo texturé. Leur
 position et leur rayon restent liés aux sondes ; la texture n’ajoute aucune propagation simulée.
 La couche « FDS reference » montre la cible, « Misses and false alarms » distingue les erreurs.
 Le premier instant affiché est le pic observé par FDS, pas un résultat choisi selon la qualité ML.
-Changer de scénario peut changer plusieurs conditions simultanément : ce n’est pas une expérience
-isolant causalement le débit d’air.
+Chaque scénario reconstruit la géométrie et les équipements de son export et charge ses propres
+sondes. Les variantes de ventilation partagent volontairement une disposition pour la comparaison.
+Changer de pièce ou de type d'incident peut aussi changer la source et les matériaux.
 
 ISS charge uniquement les cas en microgravité ; Terre charge les cas à 1 g lorsqu’ils existent.
 Pour toute gravité absente de l’export, le parcours montre seulement un aperçu de géométrie, avec les
@@ -163,8 +162,10 @@ POV_URL=http://127.0.0.1:5182 npm run test:prediction
 
 Ou fournir `BROWSER_PATH` pour un Chromium existant. Captures et rapport sont dans `artifacts/browser/`.
 Le contrôle suit les cinq pièces, la capsule, les couches et la timeline, un témoin à puissance nulle,
-le retour station, les cas Terre/Lune et le mobile. Il vérifie les panneaux fermés au départ, leur
-ouverture/fermeture, le sens des glissements de caméra et l’accès direct à la vue extérieure.
+le retour station, les cas Terre/Lune et le mobile. Il vérifie l'absence des investigations et des
+anciens thèmes, les réglages fermés au départ, leur ouverture/fermeture, le sens des glissements
+de caméra et l’accès direct à la vue extérieure. Il change aussi les quatre pièces cargo, vérifie
+leurs géométries distinctes, leurs scénarios filtrés et la synchronisation de la navigation.
 Il vérifie les comptes de sondes directement contre
 les masques des fichiers réels et l’absence d’écritures réseau. Les modules de données, le renderer
 et les glyphes proviennent du POC IGNIS du même dépôt ; les adaptations r128 concernent uniquement

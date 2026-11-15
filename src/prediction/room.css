@@ -17,6 +17,8 @@
 .ml-controls select{width:100%;min-height:36px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:6px 8px;font:11px var(--mono)}
 .ml-controls select:focus-visible{outline:2px solid var(--flame)}
 .ml-conditions{font:10.5px var(--mono);color:var(--ink-2);margin:5px 0}
+.ml-room-summary{display:flex;flex-direction:column;gap:3px;padding:8px 10px;margin:2px 0 5px;border-left:2px solid var(--flame);background:var(--panel-2);font:10.5px var(--mono);color:var(--ink-2)}
+.ml-room-summary b{font-weight:500;color:var(--ink)}
 .ml-layers,.ml-actions{display:flex;gap:12px;align-items:center}
 .ml-layers label{display:flex;align-items:center;gap:5px;margin:5px 0}
 .ml-layers input{accent-color:var(--flame)}

@@ -1,44 +1,33 @@
 // @ts-nocheck
 /* Flame in Freefall — the whole experience: landing, the flight to the station, the three environments,
-   the rooms with their test conditions, and the investigations panel.
-   Ported as one module from the validated mock-up; it is not type-checked yet (see README, "Known limits").
-   Investigation records come from the PSI snapshot in ./data. */
+   and the rooms with their recorded predictions.
+   Ported as one module from the validated mock-up; it is not type-checked yet (see README, "Known limits"). */
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { INVESTIGATIONS } from './data/investigations';
 import { PredictionRoom } from './prediction/room';
+import { FAMILY_NAMES, ROOM_FAMILY } from './prediction/catalog';
 
 export function startApp(){
 const $=s=>document.querySelector(s), app=$('#app');
-const prediction = new PredictionRoom(app, $('#pars'), () => requestAnimationFrame(fitBar), () => {S.side=false;drawPanel()});
+const prediction = new PredictionRoom(app, $('#pars'), () => requestAnimationFrame(fitBar), family => {S.family=family;drawSwi()});
 let QS;try{QS=new URLSearchParams(location.search)}catch(e){QS=new URLSearchParams('')}
 const EXPORT=QS.get('export')||'', HOLD=QS.has('hold');
 if(EXPORT||HOLD){const LOG=[];['error','warn'].forEach(k=>{const o=console[k];console[k]=function(){LOG.push(k+': '+[].map.call(arguments,String).join(' ').slice(0,1500));fetch('/?name=log.json',{method:'POST',body:JSON.stringify(LOG.slice(0,12))});o.apply(console,arguments)}});addEventListener('error',e=>{fetch('/?name=err.json',{method:'POST',body:JSON.stringify({m:e.message,l:e.lineno,c:e.colno})})});const w=new Image();w.hidden=true;w.src='/wait?s=170';document.body.appendChild(w)}
-const AX={prev:{n:'Prevention',c:'#f2a93b'},det:{n:'Detection',c:'#3fc9a5'},sup:{n:'Suppression',c:'#5fb0ff'},fun:{n:'Flame physics',c:'#a493ff'}};
-const INV=INVESTIGATIONS;
 const SCEN={iss:{n:'ISS',r:'21 % O\u2082 · 14.7 psi · microgravity'},moon:{n:'Lunar base',r:'34 % O\u2082 · 8.2 psi · 1/6 g'},earth:{n:'Earth',r:'21 % O\u2082 · 14.7 psi · 1 g'}};
-/* each data theme sits on a real Gateway element and has its own room; `node` is the element's name in NASA's model */
+/* Compartment entry points on the original exterior; `node` names belong to NASA's Gateway model. */
 const MODS=[
- {id:'prev',node:'iHAB',n:'I-Hab · Prevention',s:'Material flammability',pred:'Flame spread',f:v=>v.ax==='prev',c:'#f2a93b',seed:11,yaw:-.2},
- {id:'det',node:'NG_HALO',n:'HALO · Detection',s:'Smoke and aerosols',pred:'Time to smoke alarm',f:v=>v.ax==='det',c:'#3fc9a5',seed:23,yaw:-.08},
- {id:'sup',node:'airlock',n:'Airlock · Suppression',s:'Extinguishing agents',pred:'Extinction',f:v=>v.ax==='sup',c:'#5fb0ff',seed:37,yaw:.12},
- {id:'fun',node:'ERMXL',n:'ESPRIT · Flame physics',s:'Fundamental flame behavior',pred:'Flame size and regime',f:v=>v.ax==='fun',c:'#a493ff',seed:41,yaw:-.26},
- {id:'si',node:'Maxar_PPE',n:'PPE · SI console',s:'Global ranking and comparison',pred:'Global ranking',f:()=>true,si:1,c:'#ff7ab8',rc:'#5fb0ff',seed:53,yaw:0}];
-const S={scen:'iss',mod:null,inv:null,filt:null,cmp:new Set(),par:{},side:false};
-const TH={prev:'Prevention',det:'Detection',sup:'Suppression',fun:'Flame physics',si:'SI console'},
- PLACE={iss:{prev:'I-Hab',det:'HALO',sup:'Airlock',fun:'ESPRIT',si:'PPE'},moon:{prev:'Habitat',det:'Command module',sup:'Airlock',fun:'Science lab',si:'Control center'},earth:{prev:'Materials lab',det:'Sensor hall',sup:'Fire test cell',fun:'Drop tower',si:'Data center'}},
- BACK={iss:'the station',moon:'the lunar base',earth:'the campus'},nm=m=>PLACE[S.scen][m.id]+' · '+TH[m.id],sfx=()=>S.scen==='earth'?'e':'';
+ {id:'prev',node:'iHAB',c:'#f2a93b',seed:11,yaw:-.2},
+ {id:'det',node:'NG_HALO',c:'#3fc9a5',seed:23,yaw:-.08},
+ {id:'sup',node:'airlock',c:'#5fb0ff',seed:37,yaw:.12},
+ {id:'fun',node:'ERMXL',c:'#a493ff',seed:41,yaw:-.26},
+ {id:'si',node:'Maxar_PPE',c:'#ff7ab8',rc:'#5fb0ff',seed:53,yaw:0}];
+const S={scen:'iss',mod:null,family:null,par:{}};
+const BACK={iss:'the station',moon:'the lunar base',earth:'the campus'},nm=m=>FAMILY_NAMES[ROOM_FAMILY[m.id]],sfx=()=>S.scen==='earth'?'e':'';
 /* what each place changes: atmosphere set-points and gravity (fraction of Earth's) */
 const ENVP={iss:{o2:21,p:1,g:0},moon:{o2:34,p:.55,g:.165},earth:{o2:21,p:1,g:1}},G=()=>ENVP[S.scen].g,
  ENOTE={iss:{prev:'No buoyancy: only the fan flow feeds the flame.',det:'Smoke does not rise: it only follows the cabin airflow.',sup:'With no buoyant flow the agent stays around the flame.',fun:'Flames are spherical and steady.',si:''},
   moon:{prev:'34 % oxygen and 1/6 g: materials ignite at lower oxygen than on Earth or the ISS.',det:'Weak buoyancy lifts smoke slowly toward the ceiling.',sup:'Oxygen-rich air: more agent is needed.',fun:'1/6 g stretches the flame slightly upward.',si:''},
   earth:{prev:'Buoyancy pulls fresh air into the flame: it spreads fast.',det:'Hot smoke rises straight to the ceiling detectors.',sup:'Buoyant flow keeps feeding the flame with fresh air.',fun:'Buoyancy makes a smaller teardrop flame that flickers.',si:''}};
-function score(v,s){let b={prev:68,det:58,sup:58,fun:40}[v.ax];
- if(s==='iss'){if(v.ax==='det'||v.ax==='sup')b+=22;if(v.big)b+=12}
- else if(s==='earth'){if(v.ax==='det'||v.ax==='sup')b+=14;if(v.ax==='fun')b+=10}
- else{if(v.hi)b+=20;if(v.pg)b+=32;if(v.big)b+=6}
- return Math.max(5,Math.min(98,b))}
-const ranked=f=>INV.filter(f).sort((a,b)=>score(b,S.scen)-score(a,S.scen));
 const modOf=id=>MODS.find(m=>m.id===id);
 
 /* ---------- shot geometry (shared by the live render and the pre-rendered frames) ---------- */
@@ -753,63 +742,35 @@ async function doExport(){R.setSize(1280,720,false);mkRT();cam.aspect=inCam.aspe
 
 /* ---------- UI ---------- */
 function drawSeg(){$('#env').innerHTML=Object.keys(SCEN).map(k=>'<button class="ev" data-s="'+k+'" aria-pressed="'+(S.scen===k)+'"><span class="et"><b>'+SCEN[k].n+'</b><small>'+SCEN[k].r+'</small></span><img src="env/'+k+'.jpg" alt=""></button>').join('')}
-function drawTags(){const best=MODS.filter(m=>!m.si).map(m=>({m:m,s:ranked(m.f)[0]?score(ranked(m.f)[0],S.scen):0})).sort((a,b)=>b.s-a.s)[0];
- $('#tags').innerHTML=MODS.map(m=>'<button class="mk'+(best&&best.m===m?' top':'')+'" data-id="'+m.id+'" style="--c:'+m.c+'" aria-label="'+m.pred+', '+nm(m)+'"><span class="ex">!</span><span class="pv"><img src="rooms/v_'+m.id+sfx()+'.jpg" alt=""><span class="pn"><b>'+m.pred+'</b><span>'+nm(m)+(best&&best.m===m?' · most relevant':'')+'</span></span></span></button>').join('')}
+function drawTags(){
+ $('#tags').innerHTML=MODS.map(m=>'<button class="mk" data-id="'+m.id+'" style="--c:'+m.c+'" aria-label="Enter '+nm(m)+'"><span class="ex" aria-hidden="true">+</span><span class="pv"><img src="rooms/v_'+m.id+sfx()+'.jpg" alt=""><span class="pn"><b>'+nm(m)+'</b><span>Explore interior</span></span></span></button>').join('')}
 /* the conditions panel of the room, and its prediction */
 const fmt=(v,p)=>(p.st?(+v).toFixed(2):Math.round(v))+p.u;
 function upPred(){const m=modOf(S.mod),el=$('#predv');if(m&&PRED[m.id]&&el)el.textContent=PRED[m.id](S.par[m.id])}
 function fitBar(){$('#inbar').style.bottom=app.clientWidth>760?'76px':''}
 function drawPars(){const el=$('#pars');if(state!=='inside'){el.hidden=true;return}prediction.drawPanel();requestAnimationFrame(fitBar)}
 app.addEventListener('input',e=>{const k=e.target.dataset&&e.target.dataset.par;if(!k||!S.mod)return;const p=PARS[S.mod].find(x=>x.k===k);S.par[S.mod][k]=+e.target.value;$('#v-'+k).textContent=fmt(+e.target.value,p);upPred()});
-function card(v,i){const s=score(v,S.scen);return '<button class="card" data-inv="'+v.id+'"><span class="rk">'+(i+1)+'</span><b>'+v.id+'</b><span class="sc">'+s+'<span class="meter"><u style="width:'+s+'%"></u></span></span><span class="meta"><span class="dot" style="background:'+AX[v.ax].c+'"></span>'+AX[v.ax].n+' · '+v.fuel+' · '+v.psi+'</span></button>'+
- '<label class="cmp"><input type="checkbox" id="c-'+v.psi+'" data-cmp="'+v.id+'"'+(S.cmp.has(v.id)?' checked':'')+'> Compare</label>'}
-function why(v){if(v.pg)return 'The electric field mimics partial gravity, the closest available stand-in for lunar or Martian conditions.';if(v.hi)return 'It covers elevated oxygen or large-scale burning, the conditions that make exploration atmospheres more flammable.';
- if(v.ax==='det')return 'Smoke behaves differently without buoyancy, which changes how detectors must be placed and tuned.';if(v.ax==='sup')return 'It measures how well dilution agents put out a flame when there is no buoyant flow.';return 'It supplies flame-behavior data that predictive fire models are built on.'}
-function drawPanel(){const p=$('#panel'),tb=$('#ptab');if(!S.mod||state!=='inside'){p.classList.remove('open');app.classList.remove('has-panel');tb.hidden=true;return}if(!S.side){p.classList.remove('open');app.classList.remove('has-panel');tb.hidden=false;return}tb.hidden=true;const m=modOf(S.mod);
- if(S.inv){const v=INV.find(x=>x.id===S.inv),s=score(v,S.scen);
-  p.innerHTML='<div class="ph"><div><h2>'+v.id+'</h2><p>'+v.name+'</p></div><button class="x" data-close aria-label="Hide this panel">×</button></div><div class="pb">'+
-   '<button class="back" data-back>← '+nm(m)+'</button>'+
-   '<div class="si"><h3>SI summary · sample text</h3>Relevance for '+SCEN[S.scen].n+': <b>'+s+' / 100</b>. '+why(v)+'</div>'+
-   '<dl class="kv"><dt>Objective</dt><dd>'+v.obj+'</dd><dt>Focus</dt><dd><span class="dot" style="background:'+AX[v.ax].c+'"></span>'+AX[v.ax].n+'</dd><dt>Fuel</dt><dd>'+v.fuel+'</dd><dt>Variables</dt><dd>'+v.cond+'</dd><dt>Hardware</dt><dd>'+v.hw+'</dd><dt>Platform</dt><dd>'+v.plat+'</dd></dl>'+
-   '<div><div class="sec">Citation</div><div class="cite">'+v.cite+'</div></div>'+
-   '<a class="link" href="'+v.url+'" target="_blank" rel="noopener">Open in the PSI repository</a></div>'}
- else{const list=ranked(v=>m.f(v)&&(!S.filt||v.ax===S.filt)),axs=Array.from(new Set(INV.filter(m.f).map(v=>v.ax)));
-  p.innerHTML='<div class="ph"><div><h2>'+nm(m)+'</h2><p>'+m.s+' · ranked for '+SCEN[S.scen].n+'</p></div><button class="x" data-close aria-label="Hide this panel">×</button></div><div class="pb">'+
-   (axs.length>1?'<div class="filters">'+axs.map(a=>'<button data-f="'+a+'" aria-pressed="'+(S.filt===a)+'"><span class="dot" style="background:'+AX[a].c+'"></span>'+AX[a].n+'</button>').join('')+'</div>':'')+
-   list.map(card).join('')+'<div class="note">Scores are illustrative. The real ranking comes from the SI pipeline over PSI records.</div></div>'}
- p.classList.add('open');app.classList.add('has-panel')}
 const fade=v=>{$('#fade').style.opacity=v};
 /* go inside a module: fly at it, dip to black, open on its room */
-function enterRoom(id){const m=modOf(id);if(!m||busy||state!=='hub')return;busy=true;app.classList.add('going');S.mod=id;S.inv=null;S.filt=null;S.side=false;drawTags();const w=app.clientWidth,h=app.clientHeight,q=mpos(id,w,h);
+function enterRoom(id){const m=modOf(id);if(!m||busy||state!=='hub')return;busy=true;app.classList.add('going');S.mod=id;S.family=ROOM_FAMILY[id];drawTags();const w=app.clientWidth,h=app.clientHeight,q=mpos(id,w,h);
  if(LIVE){const p=view==='iss'&&anchorPos(id);if(p){lookT.copy(p);camT.copy(P2).sub(p).normalize().multiplyScalar(9).add(p)}else if(view!=='iss')dive={c:view==='moon'?mbCam:ebCam,p:new V().fromArray((view==='moon'?ANCHM:ANCHE)[id]),t0:performance.now()}}
  else if(q){seq.style.transformOrigin=q[0]+'px '+q[1]+'px';seq.style.transition='transform .8s cubic-bezier(.5,0,.9,.5)';seq.style.transform='scale(3.2)'}
  setTimeout(()=>fade(1),430);
  setTimeout(()=>{state='inside';tin=performance.now();yaw=pitch=0;app.classList.add('inside');$('#inbar').hidden=false;drawSwi();dive=null;
   showRoom(id);if(!LIVE){lastKey='';seq.style.transition='none';seq.style.transformOrigin='50% 50%';seq.style.transform='scale(1.14)';requestAnimationFrame(()=>requestAnimationFrame(()=>{seq.style.transition='transform 1.9s cubic-bezier(.2,.7,.2,1)';seq.style.transform='none'}))}
-  drawPanel();drawPars();fade(0);busy=false},800)}
-function leaveRoom(){prediction.close();app.classList.remove('going');state='hub';S.mod=null;S.inv=null;app.classList.remove('inside');$('#inbar').hidden=true;dive=null;drawPanel();drawPars();drawTags();
+  drawPars();fade(0);busy=false},800)}
+function leaveRoom(){prediction.close();app.classList.remove('going');state='hub';S.mod=null;S.family=null;app.classList.remove('inside');$('#inbar').hidden=true;dive=null;drawPars();drawTags();
  if(LIVE){cam.position.copy(P2);look.copy(ST);camT.copy(P2);lookT.copy(ST)}else{lastKey='';seq.style.transition='none';seq.style.transform='none'}}
 function exitRoom(){if(busy||state!=='inside')return;busy=true;fade(1);setTimeout(()=>{leaveRoom();fade(0);busy=false},380)}
-function drawSwi(){$('#back').innerHTML='<span class="ba" aria-hidden="true">←</span><span class="bt"><small>Back to</small><b>'+BACK[S.scen].replace(/^the /,'').replace(/^./,c=>c.toUpperCase())+'</b></span>';$('#swi').innerHTML=MODS.map(m=>'<button class="sw" data-go="'+m.id+'" style="--c:'+m.c+'" aria-pressed="'+(S.mod===m.id)+'" aria-label="'+nm(m)+'"><img src="rooms/v_'+m.id+sfx()+'.jpg" alt=""><span class="sl"><b>'+TH[m.id]+'</b><small>'+PLACE[S.scen][m.id]+'</small></span></button>').join('')}
+function drawSwi(){$('#back').innerHTML='<span class="ba" aria-hidden="true">←</span><span class="bt"><small>Back to</small><b>'+BACK[S.scen].replace(/^the /,'').replace(/^./,c=>c.toUpperCase())+'</b></span>';$('#swi').innerHTML=MODS.map(m=>'<button class="sw" data-go="'+m.id+'" style="--c:'+m.c+'" aria-pressed="'+(S.family===ROOM_FAMILY[m.id])+'" aria-label="'+nm(m)+'"><img src="rooms/v_'+m.id+sfx()+'.jpg" alt=""><span class="sl"><b>'+nm(m)+'</b><small>Explore interior</small></span></button>').join('')}
 /* hop straight from one room to another */
-function switchRoom(id){if(busy||state!=='inside'||id===S.mod||!modOf(id))return;busy=true;fade(1);setTimeout(()=>{S.mod=id;S.inv=null;S.filt=null;tin=performance.now();yaw=pitch=0;showRoom(id);if(!LIVE)lastKey='';drawPanel();drawPars();drawSwi();fade(0);busy=false},380)}
-function drawTray(){const t=$('#tray'),n=S.cmp.size;t.hidden=n<2;t.innerHTML=n+' selected <button data-open-cmp>Compare</button>'}
-function drawSheet(){const vs=INV.filter(v=>S.cmp.has(v.id)),rows=[['Focus',v=>AX[v.ax].n],['Fuel',v=>v.fuel],['Variables',v=>v.cond],['Hardware',v=>v.hw],['Platform',v=>v.plat],['Relevance · '+SCEN[S.scen].n,v=>score(v,S.scen)+' / 100']];
- $('#sheet').innerHTML='<div class="box"><div style="display:flex;align-items:center;gap:10px"><h2 style="margin:0;font-size:16px">Side by side</h2><button class="ghost" style="margin-left:auto" data-close-cmp>Close</button></div><div class="tw" style="margin-top:10px"><table><thead><tr><th></th>'+vs.map(v=>'<th>'+v.id+'</th>').join('')+'</tr></thead><tbody>'+
-  rows.map(r=>'<tr><th>'+r[0]+'</th>'+vs.map(v=>'<td>'+r[1](v)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div></div>';$('#sheet').hidden=false}
+function switchRoom(id){if(busy||state!=='inside'||(id===S.mod&&S.family===ROOM_FAMILY[id])||!modOf(id))return;busy=true;fade(1);setTimeout(()=>{S.mod=id;S.family=ROOM_FAMILY[id];tin=performance.now();yaw=pitch=0;showRoom(id);if(!LIVE)lastKey='';drawPars();drawSwi();fade(0);busy=false},380)}
 app.addEventListener('click',e=>{const t=e.target.closest('button,a,input');if(!t)return;const d=t.dataset;
  if(d.s)setEnv(d.s)
  else if(d.go)switchRoom(d.go)
  else if(d.id){if(matchMedia('(hover: none)').matches&&!t.classList.contains('open')){document.querySelectorAll('.mk.open').forEach(x=>x.classList.remove('open'));t.classList.add('open')}else enterRoom(d.id)}
- else if(d.inv){S.inv=d.inv;drawPanel()}
- else if('back' in d){S.inv=null;drawPanel()}
- else if('close' in d){S.side=false;drawPanel()}
- else if(t.id==='ptab'){prediction.setPanelOpen(false);S.side=true;drawPanel()}
  else if(t.id==='back')exitRoom()
- else if(d.f){S.filt=S.filt===d.f?null:d.f;drawPanel()}
- else if(d.cmp){t.checked?S.cmp.add(d.cmp):S.cmp.delete(d.cmp);drawTray()}
- else if('openCmp' in d)drawSheet()
- else if('closeCmp' in d)$('#sheet').hidden=true});
+});
 
 /* ---------- intro ---------- */
 function enter(fast){const L=$('#landing');L.classList.add('go');setTimeout(()=>{L.hidden=true},fast?0:600);

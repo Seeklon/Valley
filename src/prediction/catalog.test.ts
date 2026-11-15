@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { defaultCase, environmentCases } from './catalog';
+import { defaultCase, environmentCases, roomLayouts, scenarioName } from './catalog';
 import type { IssCaseEntry, IssIndex } from './iss-poc';
 import { metricsFromCounts } from './hotspot-poc';
 
@@ -34,5 +34,29 @@ describe('bind a room to compatible saved predictions', () => {
   });
   it('returns no invented scenario when the export contains no compatible case', () => {
     expect(defaultCase(index, [], 'iss-node')).toBeUndefined();
+  });
+  it('groups ventilation variants under stable rooms without leaking another compartment', () => {
+    const entries = [
+      { ...entry('fast', 0), layout_id: 'layout-10' },
+      { ...entry('still', 0), layout_id: 'layout-2' },
+      { ...entry('reverse', 0), layout_id: 'layout-2' },
+      { ...entry('cargo', 0, 'habitat-cargo'), layout_id: 'layout-1' },
+    ];
+    expect(roomLayouts(entries, 'iss-node')).toEqual([
+      { id: 'layout-2', name: 'Room 01' }, { id: 'layout-10', name: 'Room 02' },
+    ]);
+    expect(roomLayouts(entries.reverse(), 'iss-node')).toEqual([
+      { id: 'layout-2', name: 'Room 01' }, { id: 'layout-10', name: 'Room 02' },
+    ]);
+  });
+  it('identifies the no-fire control even when its incident metadata says overheating', () => {
+    expect(scenarioName({ ...entry('control', 0), incident_type: 'overheating', ventilation_state: 'control', airflow_m_s: 0 }))
+      .toBe('No-fire control · Fans off');
+  });
+  it('distinguishes opposite flow directions at the same speed', () => {
+    const forward = { ...entry('fast', 0), airflow_m_s: 0.36, ventilation_state: 'fast' };
+    expect(scenarioName(forward)).toBe('Electrical fire · High flow 36 cm/s');
+    expect(scenarioName({ ...forward, ventilation_state: 'reverse', reverse_ventilation: true }))
+      .toBe('Electrical fire · Reversed flow 36 cm/s');
   });
 });

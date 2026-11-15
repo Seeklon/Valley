@@ -30,6 +30,8 @@ export interface IssCaseEntry {
   gravity_g: number;
   incident_type?: string;
   airflow_m_s?: number;
+  ventilation_state?: string;
+  reverse_ventilation?: boolean;
   url: string;
   sha256: string;
   metrics: IssMetrics;

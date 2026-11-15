@@ -17,6 +17,25 @@ export const INCIDENT_NAMES: Record<string, string> = {
   smoldering: 'Smouldering', battery: 'Battery incident', none: 'No-fire control',
 };
 
+/** Stable room numbers within a compartment; ventilation variants share a room. */
+export function roomLayouts(entries: IssCaseEntry[], family: string) {
+  return [...new Set(entries.filter(entry => entry.family === family).map(entry => entry.layout_id))]
+    .sort((a, b) => a.localeCompare(b, 'en', { numeric: true }))
+    .map((id, i) => ({ id, name: `Room ${String(i + 1).padStart(2, '0')}` }));
+}
+
+export function scenarioName(entry: IssCaseEntry) {
+  // The ventilation export labels control incidents as overheating, but has no active source.
+  const incident = entry.ventilation_state === 'control' || entry.incident_type === 'none'
+    ? 'No-fire control' : INCIDENT_NAMES[entry.incident_type ?? ''] ?? 'Electrical incident';
+  const speed = entry.airflow_m_s == null ? '' : `${+(entry.airflow_m_s * 100).toFixed(1)} cm/s`;
+  const ventilation = entry.ventilation_state === 'still' || entry.airflow_m_s === 0 ? 'Fans off'
+    : entry.reverse_ventilation || entry.ventilation_state === 'reverse' ? `Reversed flow ${speed}`
+    : entry.ventilation_state === 'slow' ? `Low flow ${speed}`
+    : entry.ventilation_state === 'fast' ? `High flow ${speed}` : speed ? `Airflow ${speed}` : '';
+  return [incident, ventilation].filter(Boolean).join(' · ');
+}
+
 // Do not relabel a microgravity prediction as a lunar or terrestrial prediction.
 export function environmentCases(index: IssIndex, environment: Environment): IssCaseEntry[] {
   return index.cases.filter(entry => environment === 'iss' ? entry.gravity_g < 0.01
