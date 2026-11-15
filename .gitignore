@@ -45,3 +45,11 @@ tools/social_watch.py
 # Python caches (Agentic tools)
 __pycache__/
 *.py[cod]
+
+# Build
+node_modules/
+dist/
+render-out/
+
+# Local preview launcher (Claude desktop app)
+.claude/launch.json
