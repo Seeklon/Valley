@@ -20,12 +20,13 @@ page.on('request', request => { if (!['GET', 'HEAD'].includes(request.method()))
 const record = (name, details = {}) => { checks.push({ name, ...details }); console.log(JSON.stringify({ passed: name, ...details })); };
 const shot = async name => { await page.screenshot({ path: path.join(output, name) }); screenshots.push(name); };
 const root = () => page.locator('#prediction-room');
-async function ready(family) {
+async function ready(family, expand = true) {
   await page.waitForFunction(expected => {
     const el = document.querySelector('#prediction-room');
     return el?.dataset.state === 'ready' && !el.hidden && (!expected || el.dataset.caseId?.startsWith(expected)) && el.dataset.triangles > 0;
   }, family);
   assert.equal(await root().locator('canvas').count(), 1);
+  if (expand && !(await page.locator('#pars').isVisible())) await page.locator('#ml-toggle').click();
 }
 const indexResponse = await page.request.get(`${base}/poc/iss/index.json`);
 assert.ok(indexResponse.ok());
@@ -63,7 +64,17 @@ async function checkCounts(data, display, n) {
 
 try {
   await page.goto(`${base}/?nogl&hub&open=prev`, { waitUntil: 'domcontentloaded' });
-  await ready('habitat-cargo');
+  await ready('habitat-cargo', false);
+  assert.equal(await page.locator('#pars').isVisible(), false);
+  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), false);
+  assert.equal(await page.locator('#ml-toggle').getAttribute('aria-expanded'), 'false');
+  await shot('00-unobstructed-pov.png');
+  await page.locator('#ptab').click();
+  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), true);
+  await page.locator('#ml-toggle').click();
+  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), false);
+  assert.equal(await page.locator('#pars').isVisible(), true);
+  record('Investigations and prediction controls start closed and open independently without overlapping');
   await shot('01-site-with-prediction.png');
   const { data } = await selected();
   record('Original site opens its prevention room with the verified cargo scene', { case: data.id, model: index.model.weights_sha256 });
@@ -84,18 +95,40 @@ try {
   await page.waitForFunction(() => +document.querySelector('#prediction-room').dataset.timeS > 0);
   await page.locator('[data-ml-action="play"]').click();
   record('Layer controls and time playback work');
-  // Close only the NASA panel, using the existing site control.
-  await page.locator('#panel [data-close]').click();
+  const preservedTime = await root().getAttribute('data-time-s');
+  await page.locator('[data-ml-action="close"]').click();
+  assert.equal(await page.locator('#pars').isVisible(), false);
+  await page.locator('#ml-toggle').click();
+  assert.equal(await root().getAttribute('data-time-s'), preservedTime);
+  assert.equal(await root().getAttribute('data-case-id'), data.id);
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('#pars').isVisible(), false);
+  record('Closing and reopening controls preserves the selected scenario and timeline; Escape closes the drawer');
   const canvas = root().locator('canvas');
   const position = await root().getAttribute('data-camera-position');
   await canvas.focus();
   for (const key of ['ArrowUp', 'ArrowRight', 'ArrowDown']) await page.keyboard.press(key);
   await page.waitForFunction(before => document.querySelector('#prediction-room').dataset.cameraPosition !== before, position);
   const direction = await root().getAttribute('data-camera-direction');
-  await page.mouse.move(780, 300); await page.mouse.down(); await page.mouse.move(850, 345, { steps: 5 }); await page.mouse.up();
+  const beforeDirection = direction.split(',').map(Number);
+  await page.mouse.move(780, 300); await page.mouse.down(); await page.mouse.move(840, 300, { steps: 5 }); await page.mouse.up();
   await page.waitForFunction(before => document.querySelector('#prediction-room').dataset.cameraDirection !== before, direction);
+  const afterRight = (await root().getAttribute('data-camera-direction')).split(',').map(Number);
+  assert.ok(afterRight[0] * -beforeDirection[2] + afterRight[2] * beforeDirection[0] > 0.1, 'Dragging right must look right');
+  await page.mouse.move(780, 300); await page.mouse.down(); await page.mouse.move(780, 255, { steps: 5 }); await page.mouse.up();
+  await page.waitForFunction(y => +document.querySelector('#prediction-room').dataset.cameraDirection.split(',')[1] > y + 0.05, afterRight[1]);
+  await page.locator('#ml-toggle').click();
   await page.locator('[data-ml-action="reset"]').click();
-  record('POV looking, collision-aware movement and view reset work');
+  record('POV drag looks right when dragged right and up when dragged up; movement and reset work');
+  await page.locator('[data-ml-action="close"]').click();
+  await page.locator('#ml-view-toggle').click();
+  assert.equal(await root().getAttribute('data-view'), 'exterior');
+  assert.equal(await page.locator('#pars').isVisible(), false);
+  await shot('exterior-without-panels.png');
+  await page.locator('#ml-view-toggle').click();
+  assert.equal(await root().getAttribute('data-view'), 'pov');
+  await page.locator('#ml-toggle').click();
+  record('The persistent Exterior view button opens the whole compartment and returns to POV without opening controls');
   const rooms = { prev: 'habitat-cargo', det: 'iss-node', sup: 'iss-service', fun: 'iss-laboratory', si: 'habitat-central-racks' };
   for (const [room, family] of Object.entries(rooms)) {
     if (room !== 'prev') { await page.locator(`[data-go="${room}"]`).click(); await ready(family); }
@@ -147,9 +180,16 @@ try {
   await shot('moon-geometry-only.png');
   record('Unavailable lunar predictions are not substituted by microgravity predictions');
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.locator('#panel [data-close]').click();
   await shot('mobile.png');
   assert.equal(await page.locator('#pars').isVisible(), true);
+  const closeBox = await page.locator('[data-ml-action="close"]').boundingBox();
+  assert.ok(closeBox && closeBox.y >= 0 && closeBox.y + closeBox.height < 844);
+  await page.locator('[data-ml-action="close"]').click();
+  assert.equal(await page.locator('#ml-view-toggle').isVisible(), true);
+  await page.locator('#ptab').click();
+  await page.locator('#panel [data-close]').click();
+  assert.equal(await page.locator('#panel').evaluate(el => el.classList.contains('open')), false);
+  await shot('mobile-unobstructed.png');
   record('Mobile preserves navigation and usable controls');
   assert.deepEqual(errors, []); assert.deepEqual(renderErrors, []); assert.deepEqual(writes, []);
   record('No JavaScript errors, no writes, no training or simulation jobs');

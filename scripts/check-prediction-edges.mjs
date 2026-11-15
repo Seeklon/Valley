@@ -11,7 +11,10 @@ page.setDefaultTimeout(120_000);
 const errors = [], checks = [], skipped = [];
 page.on('pageerror', error => errors.push(error.message));
 const record = name => { checks.push(name); console.log(JSON.stringify({ passed: name })); };
-const ready = () => page.waitForFunction(() => document.querySelector('#prediction-room')?.dataset.state === 'ready');
+const ready = async () => {
+  await page.waitForFunction(() => document.querySelector('#prediction-room')?.dataset.state === 'ready');
+  if (!(await page.locator('#pars').isVisible())) await page.locator('#ml-toggle').click();
+};
 await mkdir('artifacts/browser-edges', { recursive: true });
 try {
   const base = process.env.POV_URL ?? 'http://127.0.0.1:5182';

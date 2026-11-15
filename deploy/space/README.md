@@ -30,6 +30,11 @@ Les 216 cas sont en microgravité ; Terre et Lune restent en aperçu sans prédi
 
 ## DNS OVH et HTTPS
 
+DNS et HTTPS public vérifiés le 15 novembre 2026 après confirmation de Thomas.
+Certificat gratuit Let’s Encrypt (émetteur YR2), pour `space.in-momentum.fr`,
+valide jusqu’au 13 février 2027. Le résolveur ACME du Traefik existant prend en
+charge son renouvellement ; conserver l’accès aux ports 80/443 et le DNS.
+
 Ajouter cette ligne au contenu existant de la zone `in-momentum.fr`, via
 « Zone DNS → Actions sur ma zone → Modifier en mode textuel ». Ne pas remplacer
 la zone complète. Aucun A, AAAA ou CNAME préexistant pour `space` au contrôle.

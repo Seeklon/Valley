@@ -37,6 +37,10 @@ function disposeWorld(world: THREE.Scene) {
 export class PredictionRoom {
   private host = document.createElement('div');
   private status = document.createElement('div');
+  private panelToggle = document.createElement('button');
+  private viewToggle = document.createElement('button');
+  private toolbar = document.createElement('div');
+  private panelOpen = false;
   private renderer?: THREE.WebGLRenderer;
   private camera = new THREE.PerspectiveCamera(61, 1, 0.025, 250);
   private controls?: OrbitControls;
@@ -62,7 +66,8 @@ export class PredictionRoom {
   private drag?: { x: number; y: number };
   private message = 'Loading the verified model export…';
 
-  constructor(private app: HTMLElement, private panel: HTMLElement, private panelChanged: () => void) {
+  constructor(private app: HTMLElement, private panel: HTMLElement, private panelChanged: () => void,
+    private panelOpened: () => void) {
     this.host.id = 'prediction-room';
     this.host.hidden = true;
     this.host.dataset.mode = 'recorded-inference';
@@ -70,6 +75,35 @@ export class PredictionRoom {
     this.status.setAttribute('role', 'status');
     this.host.append(this.status);
     app.insertBefore(this.host, app.querySelector('#fade'));
+    this.panelToggle.id = 'ml-toggle';
+    this.panelToggle.className = 'ml-toggle';
+    this.panelToggle.type = 'button';
+    this.panelToggle.hidden = true;
+    this.panelToggle.setAttribute('aria-controls', panel.id);
+    this.panelToggle.setAttribute('aria-expanded', 'false');
+    this.panelToggle.textContent = 'Prediction controls';
+    panel.setAttribute('role', 'region');
+    panel.setAttribute('aria-label', 'Prediction controls');
+    this.toolbar.className = 'ml-toolbar';
+    this.toolbar.hidden = true;
+    this.toolbar.setAttribute('role', 'group');
+    this.toolbar.setAttribute('aria-label', 'Scene controls');
+    this.viewToggle.id = 'ml-view-toggle';
+    this.viewToggle.type = 'button';
+    this.viewToggle.className = 'ml-toggle';
+    this.viewToggle.textContent = 'Exterior view';
+    this.viewToggle.disabled = true;
+    this.viewToggle.setAttribute('aria-pressed', 'false');
+    this.toolbar.append(this.panelToggle, this.viewToggle);
+    app.append(this.toolbar);
+    this.viewToggle.addEventListener('click', () => this.toggleView());
+    this.panelToggle.addEventListener('click', () => this.setPanelOpen(!this.panelOpen, true));
+    app.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && this.panelOpen) {
+        event.preventDefault();
+        this.setPanelOpen(false, true);
+      }
+    });
     this.observer = new ResizeObserver(() => this.resize());
     this.observer.observe(app);
     panel.addEventListener('change', event => this.handleChange(event));
@@ -81,7 +115,9 @@ export class PredictionRoom {
     });
     panel.addEventListener('click', event => {
       const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-ml-action]');
-      if (!button || !this.data || this.host.hidden) return;
+      if (!button || this.host.hidden) return;
+      if (button.dataset.mlAction === 'close') { this.setPanelOpen(false, true); return; }
+      if (!this.data) return;
       switch (button.dataset.mlAction) {
         case 'play':
           if (this.geometryOnly) return;
@@ -90,17 +126,31 @@ export class PredictionRoom {
           this.nextFrameAt = performance.now();
           break;
         case 'reset': this.configureCamera(); break;
-        case 'view': this.overview = !this.overview; this.configureCamera(); break;
+        case 'view': this.toggleView(); break;
       }
       this.updateReadout();
     });
+  }
+
+  setPanelOpen(open: boolean, focus = false) {
+    this.panelOpen = open && !this.host.hidden;
+    this.panel.hidden = !this.panelOpen;
+    this.panelToggle.setAttribute('aria-expanded', String(this.panelOpen));
+    this.panelToggle.textContent = this.panelOpen ? 'Hide controls' : 'Prediction controls';
+    if (this.panelOpen) this.panelOpened();
+    this.panelChanged();
+    if (focus) (this.panelOpen
+      ? this.panel.querySelector<HTMLButtonElement>('[data-ml-action="close"]')
+      : this.panelToggle)?.focus({ preventScroll: true });
   }
 
   async open(room: Room, environment: Environment) {
     this.close();
     this.environment = environment;
     this.host.hidden = false;
-    this.panel.hidden = false;
+    this.panelToggle.hidden = false;
+    this.toolbar.hidden = false;
+    this.setPanelOpen(false);
     this.panel.classList.add('ml-controls');
     this.geometryOnly = false;
     this.message = 'Loading the verified model export…';
@@ -134,11 +184,15 @@ export class PredictionRoom {
     this.entries = [];
     this.data = undefined;
     this.host.hidden = true;
+    this.setPanelOpen(false);
+    this.panelToggle.hidden = true;
+    this.toolbar.hidden = true;
     for (const key of ['caseId', 'modelSha', 'timeS', 'heatCount', 'smokeCount', 'state']) delete this.host.dataset[key];
     this.panel.classList.remove('ml-controls');
   }
 
   private releaseScene() {
+    this.viewToggle.disabled = true;
     this.overlay?.dispose();
     this.overlay = undefined;
     if (this.station) disposeWorld(this.station.world);
@@ -183,6 +237,7 @@ export class PredictionRoom {
       this.overlay = createIssPocOverlay(data, this.index.model, data.scene);
       this.station.world.add(this.overlay.group);
       this.overview = false;
+      this.viewToggle.disabled = false;
       this.frameIndex = this.geometryOnly ? 0 : issPeakFrame(data);
       this.configureCamera();
       this.host.dataset.caseId = data.id;
@@ -222,7 +277,7 @@ export class PredictionRoom {
     });
     canvas.addEventListener('pointermove', event => {
       if (!this.drag || this.overview) return;
-      this.yaw -= (event.clientX - this.drag.x) * 0.004;
+      this.yaw += (event.clientX - this.drag.x) * 0.004;
       this.pitch = THREE.MathUtils.clamp(this.pitch - (event.clientY - this.drag.y) * 0.004, -1.35, 1.35);
       this.drag = { x: event.clientX, y: event.clientY };
       this.look();
@@ -245,6 +300,13 @@ export class PredictionRoom {
     const direction = new THREE.Vector3(Math.sin(this.yaw) * Math.cos(this.pitch), Math.sin(this.pitch), -Math.cos(this.yaw) * Math.cos(this.pitch));
     this.camera.lookAt(this.camera.position.clone().add(direction));
     this.dirty = true;
+  }
+
+  private toggleView() {
+    if (!this.data) return;
+    this.overview = !this.overview;
+    this.configureCamera();
+    this.updateReadout();
   }
 
   private configureCamera() {
@@ -357,7 +419,10 @@ export class PredictionRoom {
     const play = this.panel.querySelector('[data-ml-action="play"]');
     if (play) { play.textContent = this.playing ? 'Pause' : 'Play'; play.setAttribute('aria-pressed', String(this.playing)); }
     const view = this.panel.querySelector('[data-ml-action="view"]');
-    if (view) view.textContent = this.overview ? 'POV' : 'Overview';
+    if (view) view.textContent = this.overview ? 'Enter POV' : 'Exterior view';
+    this.viewToggle.textContent = this.overview ? 'Enter POV' : 'Exterior view';
+    this.viewToggle.setAttribute('aria-pressed', String(this.overview));
+    this.host.dataset.view = this.overview ? 'exterior' : 'pov';
     const counts = { heat: 0, smoke: 0 };
     if (!this.geometryOnly) for (const channel of ['heat', 'smoke'] as const) {
       this.data.sample_positions_m.forEach((_, point) => {
@@ -379,8 +444,9 @@ export class PredictionRoom {
   drawPanel() {
     if (this.host.hidden) return;
     this.panel.classList.add('ml-controls');
+    const heading = (title: string) => `<div class="ml-panel-head"><h3>${title}</h3><button type="button" class="ml-close" data-ml-action="close" aria-label="Close prediction controls">×</button></div>`;
     if (!this.data || !this.index) {
-      this.panel.innerHTML = `<h3>Model prediction</h3><div class="envn">${escape(this.message)}</div><div class="note">Saved model outputs · no training in the browser</div>`;
+      this.panel.innerHTML = `${heading('Model prediction')}<div class="ml-panel-body"><div class="envn">${escape(this.message)}</div><div class="note">Saved model outputs · no training in the browser</div></div>`;
       this.panelChanged();
       return;
     }
@@ -391,7 +457,7 @@ export class PredictionRoom {
     const conditions = data.conditions;
     const environmentLabel = this.environment === 'earth' ? 'Earth · 1 g'
       : this.environment === 'moon' ? 'Moon · 0.17 g' : 'Microgravity';
-    this.panel.innerHTML = `<h3>${this.geometryOnly ? 'Geometry preview' : 'Model prediction'}</h3>
+    this.panel.innerHTML = `${heading(this.geometryOnly ? 'Geometry preview' : 'Model prediction')}<div class="ml-panel-body">
       <div class="envl">${environmentLabel}${this.geometryOnly ? ' · predictions unavailable' : ` · ${conditions.oxygen_percent ?? 21}% O₂`}</div>
       ${this.geometryOnly ? '<div class="envn">Interior geometry only. This export has no cases for these gravity conditions; heat and smoke predictions are disabled.</div>' : ''}
       <label for="ml-family">Compartment</label><select id="ml-family">${families.map(family => option(family, FAMILY_NAMES[family] ?? family, family === entry.family)).join('')}</select>
@@ -403,7 +469,7 @@ export class PredictionRoom {
       <div class="ml-actions"><button class="ghost" data-ml-action="play"${this.geometryOnly ? ' disabled' : ''}>Play</button><button class="ghost" data-ml-action="view">Overview</button><button class="ghost" data-ml-action="reset">Reset view</button></div>
       <div class="pred"><span id="ml-legend"></span><b id="ml-counts"></b></div>
       <div class="note">Drag to look · arrows / WASD / ZQSD to move</div>
-      <details><summary>Model &amp; conditions</summary><div class="note">Recorded ML inference, synthetic FDS data. Conditional on the selected electrical source; not ignition probability. Heat and smoke are classified samples, not predicted temperature or density. Geometry is illustrative of spacecraft interiors.<br>Weights: ${escape(this.index.model.weights_sha256.slice(0, 12))}<br>Case: ${escape(data.id)}<br>Gravity: ${conditions.gravity_g} g · ${conditions.ambient_temperature_c} °C<br>Materials: ${escape([...new Set(data.scene.objects.map(object => object.material_id))].join(', '))}<br>Changing scenario may also change source, materials and geometry.</div></details>`;
+      <details><summary>Model &amp; conditions</summary><div class="note">Recorded ML inference, synthetic FDS data. Conditional on the selected electrical source; not ignition probability. Heat and smoke are classified samples, not predicted temperature or density. Geometry is illustrative of spacecraft interiors.<br>Weights: ${escape(this.index.model.weights_sha256.slice(0, 12))}<br>Case: ${escape(data.id)}<br>Gravity: ${conditions.gravity_g} g · ${conditions.ambient_temperature_c} °C<br>Materials: ${escape([...new Set(data.scene.objects.map(object => object.material_id))].join(', '))}<br>Changing scenario may also change source, materials and geometry.</div></details></div>`;
     this.updateReadout();
     this.panelChanged();
   }

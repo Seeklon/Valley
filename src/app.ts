@@ -10,7 +10,7 @@ import { PredictionRoom } from './prediction/room';
 
 export function startApp(){
 const $=s=>document.querySelector(s), app=$('#app');
-const prediction = new PredictionRoom(app, $('#pars'), () => requestAnimationFrame(fitBar));
+const prediction = new PredictionRoom(app, $('#pars'), () => requestAnimationFrame(fitBar), () => {S.side=false;drawPanel()});
 let QS;try{QS=new URLSearchParams(location.search)}catch(e){QS=new URLSearchParams('')}
 const EXPORT=QS.get('export')||'', HOLD=QS.has('hold');
 if(EXPORT||HOLD){const LOG=[];['error','warn'].forEach(k=>{const o=console[k];console[k]=function(){LOG.push(k+': '+[].map.call(arguments,String).join(' ').slice(0,1500));fetch('/?name=log.json',{method:'POST',body:JSON.stringify(LOG.slice(0,12))});o.apply(console,arguments)}});addEventListener('error',e=>{fetch('/?name=err.json',{method:'POST',body:JSON.stringify({m:e.message,l:e.lineno,c:e.colno})})});const w=new Image();w.hidden=true;w.src='/wait?s=170';document.body.appendChild(w)}
@@ -24,7 +24,7 @@ const MODS=[
  {id:'sup',node:'airlock',n:'Airlock · Suppression',s:'Extinguishing agents',pred:'Extinction',f:v=>v.ax==='sup',c:'#5fb0ff',seed:37,yaw:.12},
  {id:'fun',node:'ERMXL',n:'ESPRIT · Flame physics',s:'Fundamental flame behavior',pred:'Flame size and regime',f:v=>v.ax==='fun',c:'#a493ff',seed:41,yaw:-.26},
  {id:'si',node:'Maxar_PPE',n:'PPE · SI console',s:'Global ranking and comparison',pred:'Global ranking',f:()=>true,si:1,c:'#ff7ab8',rc:'#5fb0ff',seed:53,yaw:0}];
-const S={scen:'iss',mod:null,inv:null,filt:null,cmp:new Set(),par:{},side:true};
+const S={scen:'iss',mod:null,inv:null,filt:null,cmp:new Set(),par:{},side:false};
 const TH={prev:'Prevention',det:'Detection',sup:'Suppression',fun:'Flame physics',si:'SI console'},
  PLACE={iss:{prev:'I-Hab',det:'HALO',sup:'Airlock',fun:'ESPRIT',si:'PPE'},moon:{prev:'Habitat',det:'Command module',sup:'Airlock',fun:'Science lab',si:'Control center'},earth:{prev:'Materials lab',det:'Sensor hall',sup:'Fire test cell',fun:'Drop tower',si:'Data center'}},
  BACK={iss:'the station',moon:'the lunar base',earth:'the campus'},nm=m=>PLACE[S.scen][m.id]+' · '+TH[m.id],sfx=()=>S.scen==='earth'?'e':'';
@@ -758,8 +758,8 @@ function drawTags(){const best=MODS.filter(m=>!m.si).map(m=>({m:m,s:ranked(m.f)[
 /* the conditions panel of the room, and its prediction */
 const fmt=(v,p)=>(p.st?(+v).toFixed(2):Math.round(v))+p.u;
 function upPred(){const m=modOf(S.mod),el=$('#predv');if(m&&PRED[m.id]&&el)el.textContent=PRED[m.id](S.par[m.id])}
-function fitBar(){const el=$('#pars'),b=$('#inbar');b.style.bottom=app.clientWidth>760?((el.hidden?0:el.offsetHeight+12)+16)+'px':''}
-function drawPars(){const el=$('#pars');if(state!=='inside'){el.hidden=true;return}el.hidden=false;prediction.drawPanel();requestAnimationFrame(fitBar)}
+function fitBar(){$('#inbar').style.bottom=app.clientWidth>760?'76px':''}
+function drawPars(){const el=$('#pars');if(state!=='inside'){el.hidden=true;return}prediction.drawPanel();requestAnimationFrame(fitBar)}
 app.addEventListener('input',e=>{const k=e.target.dataset&&e.target.dataset.par;if(!k||!S.mod)return;const p=PARS[S.mod].find(x=>x.k===k);S.par[S.mod][k]=+e.target.value;$('#v-'+k).textContent=fmt(+e.target.value,p);upPred()});
 function card(v,i){const s=score(v,S.scen);return '<button class="card" data-inv="'+v.id+'"><span class="rk">'+(i+1)+'</span><b>'+v.id+'</b><span class="sc">'+s+'<span class="meter"><u style="width:'+s+'%"></u></span></span><span class="meta"><span class="dot" style="background:'+AX[v.ax].c+'"></span>'+AX[v.ax].n+' · '+v.fuel+' · '+v.psi+'</span></button>'+
  '<label class="cmp"><input type="checkbox" id="c-'+v.psi+'" data-cmp="'+v.id+'"'+(S.cmp.has(v.id)?' checked':'')+'> Compare</label>'}
@@ -780,7 +780,7 @@ function drawPanel(){const p=$('#panel'),tb=$('#ptab');if(!S.mod||state!=='insid
  p.classList.add('open');app.classList.add('has-panel')}
 const fade=v=>{$('#fade').style.opacity=v};
 /* go inside a module: fly at it, dip to black, open on its room */
-function enterRoom(id){const m=modOf(id);if(!m||busy||state!=='hub')return;busy=true;app.classList.add('going');S.mod=id;S.inv=null;S.filt=null;S.side=true;drawTags();const w=app.clientWidth,h=app.clientHeight,q=mpos(id,w,h);
+function enterRoom(id){const m=modOf(id);if(!m||busy||state!=='hub')return;busy=true;app.classList.add('going');S.mod=id;S.inv=null;S.filt=null;S.side=false;drawTags();const w=app.clientWidth,h=app.clientHeight,q=mpos(id,w,h);
  if(LIVE){const p=view==='iss'&&anchorPos(id);if(p){lookT.copy(p);camT.copy(P2).sub(p).normalize().multiplyScalar(9).add(p)}else if(view!=='iss')dive={c:view==='moon'?mbCam:ebCam,p:new V().fromArray((view==='moon'?ANCHM:ANCHE)[id]),t0:performance.now()}}
  else if(q){seq.style.transformOrigin=q[0]+'px '+q[1]+'px';seq.style.transition='transform .8s cubic-bezier(.5,0,.9,.5)';seq.style.transform='scale(3.2)'}
  setTimeout(()=>fade(1),430);
@@ -804,7 +804,7 @@ app.addEventListener('click',e=>{const t=e.target.closest('button,a,input');if(!
  else if(d.inv){S.inv=d.inv;drawPanel()}
  else if('back' in d){S.inv=null;drawPanel()}
  else if('close' in d){S.side=false;drawPanel()}
- else if(t.id==='ptab'){S.side=true;drawPanel()}
+ else if(t.id==='ptab'){prediction.setPanelOpen(false);S.side=true;drawPanel()}
  else if(t.id==='back')exitRoom()
  else if(d.f){S.filt=S.filt===d.f?null:d.f;drawPanel()}
  else if(d.cmp){t.checked?S.cmp.add(d.cmp):S.cmp.delete(d.cmp);drawTray()}

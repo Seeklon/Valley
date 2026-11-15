@@ -107,8 +107,15 @@ Le rendu conserve les dimensions, matériaux et passages d’air de chaque scén
 physique XYZ (Z vertical) vers Three.js est `(x, z, -y)`, commune à la pièce et aux sondes. Les nouvelles
 couches ne sont jamais appliquées aux anciens intérieurs de la maquette.
 
-Glisser pour regarder, flèches / WASD / ZQSD pour se déplacer. « Overview » montre la pièce en coupe.
+Glisser à droite pour regarder à droite, vers le haut pour regarder vers le haut ; flèches / WASD /
+ZQSD pour se déplacer. « Exterior view », toujours accessible en bas de la scène, montre la pièce
+entière en coupe ; « Enter POV » permet d’y revenir. Le retour station est en haut à gauche.
+Investigations et réglages sont fermés à l’entrée. « Prediction controls » ouvre le panneau de
+réglages à droite, refermable par sa croix, son bouton ou Échap, sans perdre le scénario ni l’instant.
+Les panneaux d’investigations et de réglages s’ouvrent séparément pour ne pas se superposer.
 La timeline et les boutons chaleur/fumée lisent les instants exportés, sans interpolation inventée.
+La fumée utilise une texture nuageuse déterministe et les points chauds un halo texturé. Leur
+position et leur rayon restent liés aux sondes ; la texture n’ajoute aucune propagation simulée.
 La couche « FDS reference » montre la cible, « Misses and false alarms » distingue les erreurs.
 Le premier instant affiché est le pic observé par FDS, pas un résultat choisi selon la qualité ML.
 Changer de scénario peut changer plusieurs conditions simultanément : ce n’est pas une expérience
@@ -156,7 +163,9 @@ POV_URL=http://127.0.0.1:5182 npm run test:prediction
 
 Ou fournir `BROWSER_PATH` pour un Chromium existant. Captures et rapport sont dans `artifacts/browser/`.
 Le contrôle suit les cinq pièces, la capsule, les couches et la timeline, un témoin à puissance nulle,
-le retour station, les cas Terre/Lune et le mobile. Il vérifie les comptes de sondes directement contre
+le retour station, les cas Terre/Lune et le mobile. Il vérifie les panneaux fermés au départ, leur
+ouverture/fermeture, le sens des glissements de caméra et l’accès direct à la vue extérieure.
+Il vérifie les comptes de sondes directement contre
 les masques des fichiers réels et l’absence d’écritures réseau. Les modules de données, le renderer
 et les glyphes proviennent du POC IGNIS du même dépôt ; les adaptations r128 concernent uniquement
 l’API Three.js, les couleurs sRGB et le contrôle de caméra.
