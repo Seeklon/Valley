@@ -1,167 +1,90 @@
-# IGNIS 3D — Valley
+# Flame in Freefall
 
-Application de recherche pour le challenge NASA **Flame in Freefall** : explorer
-des scènes 3D, comparer gravité terrestre et microgravité, générer des simulations
-reproductibles et consulter les observations expérimentales NASA pertinentes.
+Site de l'équipe **Seeklon Valley** pour le NASA Space Apps Challenge 2026 (Paris), défi
+*Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data*.
 
-Le parcours de développement est maintenant **Prédiction IA → Simulation par
-point sensible** : modèle 3D annoté, matériaux, ventilation et incident électrique
-localisé. Le risque affiché décrit les conséquences conditionnelles du départ.
-L’interface et les calculs utilisent le PC Windows ; le VPS conserve le code et
-les preuves légères. Aucun appel à Ollama.
+Un simulateur en 3D : depuis la Lune, la caméra recule jusqu'à la station en orbite ; on choisit un
+environnement (ISS, base lunaire, Terre), on entre dans une pièce par thème de prédiction (prévention,
+détection, suppression, physique des flammes, console SI), on règle les conditions d'essai et on consulte
+les investigations NASA classées pour cet environnement.
 
-## Ouvrir l’application
+C'est un **site statique** : Vite + TypeScript, aucune partie serveur.
 
-- **Développement actuel** : <https://desktop-m4hkr86.tail609f26.ts.net:8444>
-  (sur le PC : <http://127.0.0.1:8766>).
-- Version précédente conservée : <https://desktop-m4hkr86.tail609f26.ts.net:8443>.
-- Le PC doit être allumé, connecté à Tailscale et le service démarré.
-
-Après un redémarrage de Windows, lancer dans PowerShell :
-
-```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File E:/IGNIS-Valley-dev/app/tools/windows/start-ignis.ps1 -Root E:/IGNIS-Valley-dev/app -Runtime E:/IGNIS-Valley-dev/runtime -Port 8766
-```
-
-Le [guide Windows](docs/WINDOWS.md) décrit l’arrêt, les fichiers, la reconstruction,
-les commandes d’entraînement et les vérifications. Il n’y a pas de lancement
-automatique à l’ouverture de session.
-
-## Parcours actuel en développement
-
-- Deux pages centrées sur la scène 3D, avec POV, fumée et chaleur animées.
-- 17 points électriques annotés dans quatre scènes, dont Soyouz.
-- Cinq familles de départ, sources localisées et combustibles voisins réactifs.
-- Un modèle Extra Trees apprend les champs température/suie du pilote FDS, avec
-  évaluation séparée par disposition. Les domaines et inconnus restent visibles.
-- Un U-Net 3D de 834 486 paramètres a réellement été entraîné sur la RTX 4070 Ti
-  avec les 60 calculs pilotes. Ses résultats restent mitigés ; ce prototype
-  est conservé séparément et n'est pas activé dans l'interface.
-- La nouvelle campagne vise 1 000 géométries procédurales distinctes et 20 000
-  calculs FDS. Le compteur affiche uniquement les calculs effectivement achevés.
-- Le bouton **Simuler ce départ** transmet le point et les mêmes conditions à FDS.
-- Les observations NASA restent accessibles directement ; les anciens écrans
-  sont regroupés dans **Outils**.
-
-Voir [le fonctionnement et les limites](docs/INCIDENTS.md),
-[les profils physiques](docs/INCIDENT_PHYSICS.md) et
-[la campagne de scénarios](docs/SPATIAL_CORPUS.md), ainsi que
-[le réseau 3D et ses résultats GPU](docs/SPATIAL_MODEL.md).
-
-## Socle réutilisé et version précédente
-
-- **Vue mission immersive** : accueil dans la cabine Soyouz en POV équipage,
-  fumée volumétrique colorée par température, lecture temporelle, caméras orbitale
-  et de dessus. Champs de simulations enregistrées, légende fixe et réglage
-  d'opacité. Le mode avant allumage conserve les prévisions sur composants.
-- **Prévention avant allumage** : scène sans foyer, composants
-  sélectionnables, délai conditionnel appris sur une expérience de fil NiCr/LDPE,
-  historique thermique et prévision ML distincts, comparaison et export.
-  Les inconnus restent gris ; aucune probabilité de feu n'est fabriquée.
-- **22 conclusions NASA classées** issues de 13 sources archivées, pages,
-  conditions et limites visibles ; étude complémentaire Guo identifiée séparément.
-  Codex explique à partir des preuves figées de l'analyse.
-- **Quatre scènes Blender détaillées** : habitat, cargo, ventilation transversale
-  et capsule inspirée de Soyouz. Fichiers `.blend`, GLB, proxies physiques,
-  matériaux, bouches et capteurs ; [import d’un modèle annoté](docs/SCENES.md).
-- **FDS 6.11.1 exécuté sur CPU** : transport depuis une source prescrite,
-  échauffement et pyrolyse couplés, source thermique ou chauffage électrique
-  résistif I²R. Gravité, ventilation, oxygène, matériau et source sont réglables.
-- **Visualisation interactive** : objets sélectionnables, champs échantillonnés
-  de température, oxygène, suies et vitesse, chronologie, courbes et comparaison.
-- **Campagnes de 2 à 100 scénarios** : graine, plages de paramètres, file persistante,
-  annulation, provenance et exports JSON/CSV/Parquet.
-- **Deux modèles de transport préchargés** : réseau spatial PyTorch et référence Extra Trees.
-  Les poids et les scènes sont contrôlés par empreinte ; les requêtes hors domaine
-  sont refusées. Entraînement CUDA réalisé sur RTX 4070 Ti.
-- **Observations NASA traçables** : tables BASS-II, BASS et Saffire-I archivées,
-  classement selon des critères visibles et interprétation par **Codex** avec
-  citations. IGNIS n’appelle pas Ollama.
-
-![Vue mission : fumée et chaleur dans Soyouz](evidence/mission/mission-orbit-heatmap.png)
-
-La [documentation de la vue mission](docs/MISSION_VIEW.md) décrit navigation,
-lecture, unités, provenance et limites du rendu.
-
-## Résultats des modèles précédents
-
-Prévention : 26 points expérimentaux d'allumage extraits d'une publication
-complémentaire (pas des labels NASA), et 384 trajectoires électrothermiques
-générées sur Windows. Le délai atteint une MAE de **0,157 s** sur 9 observations
-réservées (5 courants). La température future atteint une MAE de **10,05 °C**
-sur 1 940 fenêtres disponibles de 16 familles réservées ; erreur maximale
-**129,30 °C**. Ces fenêtres ne sont pas des essais indépendants.
-Voir [prévention et limites](docs/PREIGNITION.md) et
-[protocole ML](docs/PREVENTION_MODELS.md).
-
-Le pilote comprend **96 simulations FDS et 5 800 instants**, répartis en
-48 calculs d’entraînement, 12 de validation et 36 de test. Les familles complètes
-restent dans une seule partition ; la géométrie crossflow est réservée au test.
-Les données et les poids sont conservés sur Windows, hors Git.
-
-| Mesure sur les 36 calculs de test | Réseau spatial | Extra Trees |
-|---|---:|---:|
-| Erreur absolue moyenne de température maximale | 8,06 °C | 6,65 °C |
-| Erreur absolue moyenne du pic par calcul | 26,53 °C | 21,37 °C |
-| Erreur absolue moyenne de puissance chimique | 150,55 W | 81,71 W |
-
-Les [résultats complets](docs/MODELS.md) publient aussi les erreurs locales,
-par scène et par gravité. Les pics Soyouz en microgravité sont mal reproduits.
-Le réseau peut donner une température moyenne ou locale supérieure à son maximum
-global prédit : il sert à la prévisualisation exploratoire.
-
-![Prédictions et simulations sur deux scénarios de test](evidence/model-comparison.png)
-
-## Portée scientifique
-
-Les deux modèles de transport apprennent à reproduire **les simulations FDS**, avec un maillage
-de 0,20 m dont la convergence n’est pas démontrée. Ils ne sont pas entraînés sur
-des champs de flamme NASA. Les tables NASA importées et la calibration du
-ventilateur BASS-II apportent des références documentaires et instrumentales ;
-elles ne valident pas la combustion simulée.
-
-La prédiction de transport couvre seulement une source prescrite,
-à 10⁻⁴ g ou 1 g, dans les quatre géométries et plages publiées. Le solveur propose
-en plus un mode couplé expérimental. Les matériaux sont génériques ; les arcs
-électriques, le plasma, l’emballement de batteries et les systèmes de ventilation
-fermés d’une capsule réelle restent hors périmètre. Soyouz est une interprétation
-originale, avec une enveloppe physique simplifiée.
-
-Le modèle de délai couvre le protocole restreint de fils de laboratoire sous
-courant constant en microgravité. Il n'est pas validé sur le câblage d'une
-capsule réelle. Les historiques de température sont simulés et leur modèle
-local n'inclut pas l'allumage gazeux. Sans cas sans allumage, fréquence de panne
-et validation indépendante, ni probabilité calibrée ni taux de fausses alertes
-ne peuvent être annoncés. La position 3D ne couple pas encore le fil à un champ
-CFD : l'air local est une hypothèse prescrite.
-
-## Développement et preuves
-
-Python 3.11, FastAPI, React, TypeScript strict et Three.js. Dépendances Python
-épinglées, lockfile npm, contrats JSON, tests, CI et revue indépendante.
-Le [contrat API](docs/CONTRACTS.md) complète le schéma interactif `/docs` du service.
+## Commandes
 
 ```bash
-python -m pip install -e '.[test]'
-ruff check backend tools tests
-pytest -q
-python tools/blender/validate_assets.py --require-all-artifacts
-cd web
-npm ci
-npm test
-npm run format:check
-npm run build
+npm install        # dépendances
+npm run dev        # serveur de développement
+npm run build      # vérification des types puis site statique dans dist/
+npm run preview    # sert dist/ en local
+npm run data:psi   # rafraîchit l'instantané des investigations PSI
 ```
 
-La CI contrôle le code et les assets ; les essais réels FDS, CUDA et Windows
-ont leurs propres preuves archivées :
+Le build utilise des chemins relatifs (`base: './'`) : le contenu de `dist/` se dépose tel quel dans
+n'importe quel dossier d'un serveur web (le VPS n'est pas encore fixé). Il pèse environ 100 Mo, presque
+entièrement des images.
 
-- [Physique et vérifications FDS](docs/PHYSICS.md)
-- [Sources NASA, qualité des données et calibration](docs/NASA.md)
-- [Entraînement, domaines et audit des modèles](docs/MODELS.md)
-- [Vérification réelle de l’application](evidence/application-verification.json)
-- [Preuves de tests et captures navigateur](evidence/README.md)
-- [Vérification Blender et import/export](evidence/blender-verification.json)
-- [Plan et critères de livraison](PLAN.md), [état de reprise](REPRISE.md)
+## Organisation
 
-Challenge : <https://www.spaceappschallenge.org/2026/challenges/flame-in-freefall/?tab=details>.
+| Chemin | Rôle |
+|---|---|
+| `index.html` | structure de la page |
+| `src/main.ts` | point d'entrée |
+| `src/app.ts` | toute l'expérience : scènes 3D, transitions, pièces, panneaux |
+| `src/styles.css` | styles |
+| `src/data/psi-snapshot.json` | instantané des investigations PSI (généré) |
+| `src/data/investigations.ts` | passage des enregistrements PSI au modèle de l'interface, avec notre classement par thème |
+| `scripts/fetch-psi.mjs` | génère l'instantané |
+| `scripts/render-server.py` | sert `dist/` et enregistre les images exportées (voir plus bas) |
+| `public/` | modèle Gateway, textures, images pré-rendues |
+
+## Données
+
+Les investigations viennent du dépôt **NASA Physical Sciences Informatics** (PSI),
+recherche « combustion ». L'API PSI n'accepte les appels de navigateur que depuis `psi.nasa.gov` : un site
+statique ne peut donc pas l'interroger en direct. `npm run data:psi` enregistre un instantané, intégré au
+build. L'instantané du 15/11/2026 contient 26 enregistrements ; les 24 du domaine « Combustion Science »
+sont affichés.
+
+Ce qui vient de PSI : numéro d'accession, titre, plateforme, matériel, objectifs.
+Ce qui est de nous : le thème (prévention, détection, suppression, physique des flammes), le libellé court
+du combustible et des variables, et les indicateurs de pertinence. Ils sont dans
+`src/data/investigations.ts`, table `CURATED`.
+
+**Les scores, les résumés « SI summary » et les prédictions des pièces sont des valeurs d'illustration**,
+pas des résultats NASA. L'API de recherche ne fournit pas de DOI : la citation affichée donne le titre et
+l'accession PSI.
+
+## Deux modes d'affichage
+
+- **3D direct** (WebGL, three.js r128) quand le navigateur le permet.
+- **Images pré-rendues** sinon : séquences dans `public/frames/` et vues fixes dans `public/rooms/`. Le
+  site bascule seul sur ce mode si WebGL est absent, rendu par logiciel, trop lent (moins d'environ
+  18 images par seconde) ou si l'écran d'accueil reste noir.
+
+Paramètres d'URL utiles pour tester : `?nogl` force les images pré-rendues, `?gl` force la 3D,
+`?hub` saute l'intro, `?env=moon|earth` choisit l'environnement, `?open=prev|det|sup|fun|si` ouvre une pièce.
+
+### Re-rendre les images pré-rendues
+
+À refaire après toute modification visuelle d'une scène, sinon les deux modes ne montrent plus la même chose.
+
+```bash
+npm run build
+python3 scripts/render-server.py            # sert dist/ sur le port 8765
+firefox --headless --window-size=1280,720 --screenshot /tmp/x.png "http://127.0.0.1:8765/?export=env"
+```
+
+Les images arrivent dans `render-out/`. Types d'export : `intro` (défaut), `hub`, `env`
+(`&only=moon|earth|x`), `rooms` (`&env=earth` pour les pièces terrestres). Les séquences sont ensuite
+assemblées en planches de 9 images (3 × 3, 3840 × 2160) : `r` intro, `s` station, `ma` Lune, `ea` Terre,
+`xa` Lune ↔ Terre. L'assemblage n'est pas encore scripté dans le dépôt.
+
+## Limites connues
+
+- `src/app.ts` est le portage en un seul module de la maquette validée ; il est exclu de la vérification
+  des types (`@ts-nocheck`). Seuls les modules de données sont typés. Le découpage en modules typés reste à faire.
+- Pas de tests automatisés.
+- Les scènes sont procédurales ; les modèles Blender prévus ne sont pas intégrés.
+- Le modèle Gateway est celui de NASA 3D Resources ; les textures lunaires viennent de Moon Trek (LRO),
+  le relief de LOLA, l'imagerie terrestre de l'USGS National Map. La NASA ne cautionne pas ce projet.

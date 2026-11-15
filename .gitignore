@@ -70,3 +70,7 @@ runs/
 /evidence/incidents/iss-poc/*-complete.zip
 /evidence/incidents/iss-poc-v2/*-complete.zip
 /evidence/incidents/iss-poc-vent/*-complete.zip
+
+# Static site generated files and local preview
+render-out/
+.claude/launch.json
