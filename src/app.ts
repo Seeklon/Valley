@@ -6,9 +6,11 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { INVESTIGATIONS } from './data/investigations';
+import { PredictionRoom } from './prediction/room';
 
 export function startApp(){
 const $=s=>document.querySelector(s), app=$('#app');
+const prediction = new PredictionRoom(app, $('#pars'), () => requestAnimationFrame(fitBar));
 let QS;try{QS=new URLSearchParams(location.search)}catch(e){QS=new URLSearchParams('')}
 const EXPORT=QS.get('export')||'', HOLD=QS.has('hold');
 if(EXPORT||HOLD){const LOG=[];['error','warn'].forEach(k=>{const o=console[k];console[k]=function(){LOG.push(k+': '+[].map.call(arguments,String).join(' ').slice(0,1500));fetch('/?name=log.json',{method:'POST',body:JSON.stringify(LOG.slice(0,12))});o.apply(console,arguments)}});addEventListener('error',e=>{fetch('/?name=err.json',{method:'POST',body:JSON.stringify({m:e.message,l:e.lineno,c:e.colno})})});const w=new Image();w.hidden=true;w.src='/wait?s=170';document.body.appendChild(w)}
@@ -411,7 +413,10 @@ function buildLab(md){const g=new THREE.Group(),st=STYLE[md.id],id=md.id,ac=md.r
   lights([[-.7,HC-.3,-L/2+1,.2,5],[-.7,HC-.3,.3,.2,5],[-.7,HC-.3,L/2-1,.2,5],[-.75,.2,-L/2+.5,.35,5]])}
  const f=new THREE.Group();f.position.z=FZ;g.add(f);FEAT[id](f,g,md);if(g.userData.fl)g.userData.flBase=g.userData.fl.intensity;
  g.traverse(o=>{if(o.isMesh&&o.material.isMeshStandardMaterial&&!o.material.transparent){o.receiveShadow=true;o.castShadow=o.geometry.type!=='PlaneGeometry'&&o.geometry.type!=='CircleGeometry'&&!(o.material.emissiveIntensity>1.15&&!o.material.emissiveMap)}});return g}
-function showRoom(id){if(room)inScene.remove(room);room=(S.scen==='earth'?buildLab:buildRoom)(modOf(id));inScene.add(room)}
+function showRoom(id){
+ if(EXPORT){if(room)inScene.remove(room);room=(S.scen==='earth'?buildLab:buildRoom)(modOf(id));inScene.add(room);return}
+ void prediction.open(id,S.scen);
+}
 function roomPose(now,settled){const k=settled?1:cl((now-tin)/1600),e=1-Math.pow(1-k,3),md=modOf(S.mod),st=STYLE[S.mod],s=settled?0:1;
  inCam.position.set(Math.sin(now/2600)*.02*s,-.08+Math.sin(now/3100)*.015*s,st.cz+1.05*(1-e));inCam.rotation.set(pitch+Math.sin(now/4200)*.006*s,yaw+(md?md.yaw:0)*e,0)}
 /* glows as live sprites */
@@ -708,15 +713,13 @@ if(QS.has('notr')){const st=document.createElement('style');st.textContent='*{tr
 const RAF=QS.has('tick')?f=>setTimeout(()=>f(performance.now()),40):f=>requestAnimationFrame(f);
 function frame(now){RAF(frame);const w=app.clientWidth,h=app.clientHeight;if(EXPORT)return;
  /* a 3D view that cannot hold about 18 images per second is replaced by the pre-rendered one */
- if(LIVE&&!HOLD&&!QS.has('gl')&&ready&&pf.n<90){const dt=now-pf.l;pf.l=now;if(dt<1500){pf.n++;if(pf.n>12){pf.s+=dt;pf.c++}if(pf.n===90&&pf.s/pf.c>55){toSeq();return}}}
+ if(state!=='inside'&&LIVE&&!HOLD&&!QS.has('gl')&&ready&&pf.n<90){const dt=now-pf.l;pf.l=now;if(dt<1500){pf.n++;if(pf.n>12){pf.s+=dt;pf.c++}if(pf.n===90&&pf.s/pf.c>55){toSeq();return}}}
  const sec=state==='landing'?0:(now-t0)/1000;let t=state==='landing'?0:state==='intro'?sec*1000/DUR:1;
  if(state==='intro'&&t>=1){state='hub';look.copy(ST);camT.copy(P2);lookT.copy(ST)}
  if(state==='intro'&&t>.8)app.classList.remove('pre');
  /* the landing is never still: a slow drift of the view, the ground creeping by, twinkling stars */
  const sw=CALM?0:state==='landing'?1:state==='intro'?Math.max(0,1-t*5):0;if(state==='landing'){zl=1+.045*(.5-.5*Math.cos(now/5200))*sw;spin0+=.0005*sw;drawTw(now,w,h)}zoomF=state==='landing'?zl:state==='intro'?1+(zl-1)*sw:1;
- if(state==='inside'){const list=FX[S.mod](S.par[S.mod],now/1000),st=STYLE[S.mod];
-  if(LIVE){setSpin(spin0+spinAt(sec));if(w>760)inCam.setViewOffset(w,h,190,0,w,h);else inCam.clearViewOffset();fxLive(list,st.fz);tick();drawRoom(now)}
-  else{const q=rooms[S.mod+sfx()];if(q&&q.naturalWidth){lastKey='';drawPair({im:q,sx:0,sy:0,key:'room'});fx2d(list,st.fz,w,h)}}return}
+ if(state==='inside')return; // The verified prediction room owns its render loop.
  let env=null,eu=1;if(state==='hub'){if(tr){const st=tr.steps[tr.i];let u=(now-tr.t0)/st.d;if(u>=1){u=1;view=st.to;tr.i++;tr.t0=now;if(tr.i>=tr.steps.length){tr=null;app.classList.remove('going')}}env=st.k;eu=st.rev?1-u:u}else if(view!=='iss'){env=view;eu=1}}
  if(env){if(LIVE){setSpin(spin0+spinAt(sec));renderEnv(env,eu,now)}else{const n=ESH[env][1],q=eu*(n-1),i=Math.floor(q),k=ESH[env][0];drawPair(fr(k,i),fr(k,Math.min(n-1,i+1)),q-i)}}
  else if(LIVE){setSpin(spin0+spinAt(sec));
@@ -756,8 +759,7 @@ function drawTags(){const best=MODS.filter(m=>!m.si).map(m=>({m:m,s:ranked(m.f)[
 const fmt=(v,p)=>(p.st?(+v).toFixed(2):Math.round(v))+p.u;
 function upPred(){const m=modOf(S.mod),el=$('#predv');if(m&&PRED[m.id]&&el)el.textContent=PRED[m.id](S.par[m.id])}
 function fitBar(){const el=$('#pars'),b=$('#inbar');b.style.bottom=app.clientWidth>760?((el.hidden?0:el.offsetHeight+12)+16)+'px':''}
-function drawPars(){const el=$('#pars'),m=modOf(S.mod);requestAnimationFrame(fitBar);setTimeout(fitBar,60);if(state!=='inside'||!m||!PARS[m.id].length){el.hidden=true;return}const P=S.par[m.id];
- el.innerHTML='<h3>Test conditions</h3><div class="envl">'+SCEN[S.scen].n+' · '+SCEN[S.scen].r+'</div><div class="envn">'+ENOTE[S.scen][m.id]+'</div>'+PARS[m.id].map(p=>'<label for="p-'+p.k+'"><span>'+p.n+'</span><b id="v-'+p.k+'">'+fmt(P[p.k],p)+'</b></label><input type="range" id="p-'+p.k+'" data-par="'+p.k+'" min="'+p.a+'" max="'+p.b+'" step="'+(p.st||1)+'" value="'+P[p.k]+'">').join('')+'<div class="pred"><span>Predicted · '+m.pred+'</span><b id="predv"></b></div><div class="note">Illustrative model, not a NASA result</div>';el.hidden=false;upPred()}
+function drawPars(){const el=$('#pars');if(state!=='inside'){el.hidden=true;return}el.hidden=false;prediction.drawPanel();requestAnimationFrame(fitBar)}
 app.addEventListener('input',e=>{const k=e.target.dataset&&e.target.dataset.par;if(!k||!S.mod)return;const p=PARS[S.mod].find(x=>x.k===k);S.par[S.mod][k]=+e.target.value;$('#v-'+k).textContent=fmt(+e.target.value,p);upPred()});
 function card(v,i){const s=score(v,S.scen);return '<button class="card" data-inv="'+v.id+'"><span class="rk">'+(i+1)+'</span><b>'+v.id+'</b><span class="sc">'+s+'<span class="meter"><u style="width:'+s+'%"></u></span></span><span class="meta"><span class="dot" style="background:'+AX[v.ax].c+'"></span>'+AX[v.ax].n+' · '+v.fuel+' · '+v.psi+'</span></button>'+
  '<label class="cmp"><input type="checkbox" id="c-'+v.psi+'" data-cmp="'+v.id+'"'+(S.cmp.has(v.id)?' checked':'')+'> Compare</label>'}
@@ -783,14 +785,14 @@ function enterRoom(id){const m=modOf(id);if(!m||busy||state!=='hub')return;busy=
  else if(q){seq.style.transformOrigin=q[0]+'px '+q[1]+'px';seq.style.transition='transform .8s cubic-bezier(.5,0,.9,.5)';seq.style.transform='scale(3.2)'}
  setTimeout(()=>fade(1),430);
  setTimeout(()=>{state='inside';tin=performance.now();yaw=pitch=0;app.classList.add('inside');$('#inbar').hidden=false;drawSwi();dive=null;
-  if(LIVE)showRoom(id);else{lastKey='';seq.style.transition='none';seq.style.transformOrigin='50% 50%';seq.style.transform='scale(1.14)';requestAnimationFrame(()=>requestAnimationFrame(()=>{seq.style.transition='transform 1.9s cubic-bezier(.2,.7,.2,1)';seq.style.transform='none'}))}
+  showRoom(id);if(!LIVE){lastKey='';seq.style.transition='none';seq.style.transformOrigin='50% 50%';seq.style.transform='scale(1.14)';requestAnimationFrame(()=>requestAnimationFrame(()=>{seq.style.transition='transform 1.9s cubic-bezier(.2,.7,.2,1)';seq.style.transform='none'}))}
   drawPanel();drawPars();fade(0);busy=false},800)}
-function leaveRoom(){app.classList.remove('going');state='hub';S.mod=null;S.inv=null;app.classList.remove('inside');$('#inbar').hidden=true;dive=null;drawPanel();drawPars();drawTags();
+function leaveRoom(){prediction.close();app.classList.remove('going');state='hub';S.mod=null;S.inv=null;app.classList.remove('inside');$('#inbar').hidden=true;dive=null;drawPanel();drawPars();drawTags();
  if(LIVE){cam.position.copy(P2);look.copy(ST);camT.copy(P2);lookT.copy(ST)}else{lastKey='';seq.style.transition='none';seq.style.transform='none'}}
 function exitRoom(){if(busy||state!=='inside')return;busy=true;fade(1);setTimeout(()=>{leaveRoom();fade(0);busy=false},380)}
 function drawSwi(){$('#back').innerHTML='<span class="ba" aria-hidden="true">←</span><span class="bt"><small>Back to</small><b>'+BACK[S.scen].replace(/^the /,'').replace(/^./,c=>c.toUpperCase())+'</b></span>';$('#swi').innerHTML=MODS.map(m=>'<button class="sw" data-go="'+m.id+'" style="--c:'+m.c+'" aria-pressed="'+(S.mod===m.id)+'" aria-label="'+nm(m)+'"><img src="rooms/v_'+m.id+sfx()+'.jpg" alt=""><span class="sl"><b>'+TH[m.id]+'</b><small>'+PLACE[S.scen][m.id]+'</small></span></button>').join('')}
 /* hop straight from one room to another */
-function switchRoom(id){if(busy||state!=='inside'||id===S.mod||!modOf(id))return;busy=true;fade(1);setTimeout(()=>{S.mod=id;S.inv=null;S.filt=null;tin=performance.now();yaw=pitch=0;if(LIVE)showRoom(id);else lastKey='';drawPanel();drawPars();drawSwi();fade(0);busy=false},380)}
+function switchRoom(id){if(busy||state!=='inside'||id===S.mod||!modOf(id))return;busy=true;fade(1);setTimeout(()=>{S.mod=id;S.inv=null;S.filt=null;tin=performance.now();yaw=pitch=0;showRoom(id);if(!LIVE)lastKey='';drawPanel();drawPars();drawSwi();fade(0);busy=false},380)}
 function drawTray(){const t=$('#tray'),n=S.cmp.size;t.hidden=n<2;t.innerHTML=n+' selected <button data-open-cmp>Compare</button>'}
 function drawSheet(){const vs=INV.filter(v=>S.cmp.has(v.id)),rows=[['Focus',v=>AX[v.ax].n],['Fuel',v=>v.fuel],['Variables',v=>v.cond],['Hardware',v=>v.hw],['Platform',v=>v.plat],['Relevance · '+SCEN[S.scen].n,v=>score(v,S.scen)+' / 100']];
  $('#sheet').innerHTML='<div class="box"><div style="display:flex;align-items:center;gap:10px"><h2 style="margin:0;font-size:16px">Side by side</h2><button class="ghost" style="margin-left:auto" data-close-cmp>Close</button></div><div class="tw" style="margin-top:10px"><table><thead><tr><th></th>'+vs.map(v=>'<th>'+v.id+'</th>').join('')+'</tr></thead><tbody>'+

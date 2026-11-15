@@ -1,0 +1,23 @@
+/* Interior controls inherit the existing site's panel, colour and type system. */
+#prediction-room{position:absolute;inset:0;z-index:3;background:#18212b}
+#prediction-room canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab;outline-offset:-3px}
+#prediction-room canvas:active{cursor:grabbing}
+.ml-status{position:absolute;inset:0;display:grid;place-items:center;padding:32px;text-align:center;background:#18212b;color:var(--ink);font-family:var(--mono);font-size:13px}
+.ml-controls{max-height:calc(100% - 110px);overflow-y:auto}
+.ml-controls select{width:100%;min-height:28px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:4px 6px;font:11px var(--mono)}
+.ml-controls select:focus-visible{outline:2px solid var(--flame)}
+.ml-conditions{font:10.5px var(--mono);color:var(--ink-2);margin:5px 0}
+.ml-layers,.ml-actions{display:flex;gap:12px;align-items:center}
+.ml-layers label{display:flex;align-items:center;gap:5px;margin:5px 0}
+.ml-layers input{accent-color:var(--flame)}
+.ml-actions{gap:6px;margin-top:5px}
+.ml-actions .ghost{font-size:11px;padding:4px 9px;white-space:nowrap}
+.ml-actions button:disabled{opacity:.4;cursor:default}
+.ml-controls .pred b{font-size:13px}
+.ml-controls details{font-size:10.5px;margin-top:3px;color:var(--ink-2)}
+.ml-controls details .note{margin-top:5px;overflow-wrap:anywhere}
+.ml-controls summary{cursor:pointer}
+#ml-legend{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
+.ml-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-left:4px}
+.ml-heat{background:#ff8d3a}.ml-smoke{background:#8397a7}.ml-correct{background:#ffb36d}.ml-missed{background:#7cbbea}.ml-false{background:#df83d1}
+@media(max-width:760px){.pars.ml-controls{top:auto;bottom:12px;max-height:48%;width:260px}.has-panel .pars.ml-controls{display:none}.ml-controls .envl{font-size:10px}}

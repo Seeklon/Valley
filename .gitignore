@@ -53,3 +53,8 @@ render-out/
 
 # Local preview launcher (Claude desktop app)
 .claude/launch.json
+
+# Local verified ML exports and browser evidence
+public/poc/iss/
+public/poc/.iss-*/
+artifacts/

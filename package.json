@@ -9,14 +9,21 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "data:psi": "node scripts/fetch-psi.mjs"
+    "data:psi": "node scripts/fetch-psi.mjs",
+    "data:predictions": "node scripts/import-predictions.mjs",
+    "test": "vitest run",
+    "test:prediction": "node scripts/check-prediction-rooms.mjs",
+    "test:prediction:edges": "node scripts/check-prediction-edges.mjs",
+    "data:previews": "node scripts/capture-prediction-previews.mjs"
   },
   "dependencies": {
     "three": "0.128.0"
   },
   "devDependencies": {
     "@types/three": "0.128.0",
+    "playwright": "^1.56.1",
     "typescript": "^5.6.0",
-    "vite": "^5.4.0"
+    "vite": "^5.4.0",
+    "vitest": "^3.2.4"
   }
 }
