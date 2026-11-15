@@ -1,0 +1,8 @@
+{
+  "archive": "ignis-model-20261115-vent.zip",
+  "bytes": 1798192,
+  "sha256": "b7e1da6b6e97f2f4bc4c74fe092acbc5eca19fd27f878a227fb146ea1fb892e7",
+  "files": 30,
+  "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+  "source": "Previously delivered model kit, unchanged bytes"
+}

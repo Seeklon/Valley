@@ -1,0 +1,111 @@
+{
+  "recorded_at": "2026-11-15T19:14:00.577333+00:00",
+  "unit_and_build": {
+    "lab": [
+      {
+        "surface": "lab",
+        "command": "npm run test",
+        "exit_code": 0,
+        "elapsed_s": 6.417,
+        "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/lab-test.log"
+      },
+      {
+        "surface": "lab",
+        "command": "npm run build",
+        "exit_code": 0,
+        "elapsed_s": 83.642,
+        "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/lab-build.log"
+      },
+      {
+        "surface": "lab",
+        "command": "npm run format:check",
+        "exit_code": 143,
+        "elapsed_s": 80.866,
+        "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/lab-format-check.log"
+      }
+    ],
+    "pov": [
+      {
+        "surface": "pov",
+        "command": "npm run test",
+        "exit_code": 0,
+        "elapsed_s": 7.598,
+        "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/pov-test.log"
+      },
+      {
+        "surface": "pov",
+        "command": "npm run build",
+        "exit_code": 0,
+        "elapsed_s": 62.742,
+        "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/pov-build.log"
+      }
+    ]
+  },
+  "browser": {
+    "lab": {
+      "command": "node tools/iss-poc-check.mjs",
+      "exit_code": 0,
+      "elapsed_s": 371.884,
+      "url": "http://127.0.0.1:55713",
+      "browser": "/home/platform-admin/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome"
+    },
+    "pov": {
+      "command": "npm run test:prediction",
+      "exit_code": 0,
+      "elapsed_s": 267.858,
+      "url": "http://127.0.0.1:46111",
+      "browser": "/home/platform-admin/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome"
+    }
+  },
+  "pov_edges": {
+    "command": "node /home/platform-admin/projects/Valley-pov-site/scripts/check-prediction-edges.mjs",
+    "cwd": "/home/platform-admin/projects/Valley/runtime/main-release-checks/pov-edge-run",
+    "exit_code": 0,
+    "elapsed_s": 35.629,
+    "nested_url": "http://127.0.0.1:45861/mission",
+    "browser": "/home/platform-admin/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome",
+    "live_exterior_webgl": false
+  },
+  "browser_reports": {
+    "lab": {
+      "report": "/home/platform-admin/projects/Valley/runtime/main-release-checks/lab-browser/browser-report.json",
+      "passed_checks": 17,
+      "screenshots": 33,
+      "errors": [],
+      "render_errors": [],
+      "writes": [],
+      "skipped": [],
+      "screenshots_on_disk": 33
+    },
+    "pov": {
+      "report": "/home/platform-admin/projects/Valley/runtime/main-release-checks/pov-browser/report.json",
+      "passed_checks": 22,
+      "screenshots": 23,
+      "errors": [],
+      "render_errors": [],
+      "writes": [],
+      "skipped": [],
+      "screenshots_on_disk": 23
+    },
+    "pov_edges": {
+      "report": "/home/platform-admin/projects/Valley/runtime/main-release-checks/pov-edge-run/artifacts/browser-edges/report.json",
+      "passed_checks": 3,
+      "screenshots": null,
+      "errors": [],
+      "render_errors": [],
+      "writes": [],
+      "skipped": [
+        "Forced live exterior WebGL: enable POV_LIVE_WEBGL=1 on a GPU-capable browser."
+      ],
+      "screenshots_on_disk": 1
+    }
+  },
+  "source_format_initial": {
+    "command": "npx prettier --check src tools index.html vite.config.ts tsconfig.json package.json .prettierrc.json",
+    "exit_code": 1,
+    "elapsed_s": 26.354
+  },
+  "format_note": "Initial full-tree check interrupted deliberately while traversing generated replay JSON; source-only check flagged App.tsx. Parent corrected App.tsx and owns final format:check after excluding generated public/poc. No sources modified by this checker.",
+  "coverage_note": "Browser tests use built static sites and genuine 216 replay export, software WebGL; do not validate API-backed computation or GPU inference. Existing services and Windows PC untouched.",
+  "temporary_servers": "All three HTTP server processes terminated in wrapper finally blocks."
+}

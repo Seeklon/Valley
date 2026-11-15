@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Flame in Freefall</title>
-<meta name="description" content="A simulator to predict how fire starts, spreads, is detected and put out where crews live in space, built on NASA microgravity combustion experiments.">
+<meta name="description" content="Explore 3D spacecraft interiors and compare machine-learning heat and smoke predictions across electrical incidents and ventilation conditions.">
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,19 +24,15 @@
   <div class="inbar" id="inbar" hidden><button class="backpill" id="back"></button><div class="swi" id="swi" role="group" aria-label="Go to another room"></div></div>
 
   <div class="pars" id="pars" hidden></div>
-  <aside class="panel" id="panel" aria-live="polite"></aside>
-  <button class="ptab" id="ptab" hidden>Investigations</button>
-  <div class="tray" id="tray" hidden></div>
-  <div class="sheet" id="sheet" hidden></div>
 
   <section id="landing">
     <canvas id="tw" aria-hidden="true"></canvas>
     <div class="hero"><p class="kick">NASA Space Apps Challenge 2026</p><h1>Flame <br>in Freefall</h1><span class="rule"></span>
-      <p class="tagline">A simulator to predict how fire starts, spreads, is detected and put out where crews live in space, built on decades of NASA microgravity combustion experiments.</p></div>
+      <p class="tagline">Explore spacecraft interiors in 3D. See how a machine-learning model predicts heat and smoke across electrical incidents and ventilation conditions.</p></div>
     <button class="ignite" id="ignite" disabled><span id="igl">Loading</span><span class="arr" aria-hidden="true">→</span></button>
   </section>
   <button class="qm" id="qm" aria-label="Legal and credits" aria-expanded="false">?</button>
-  <div class="legal" id="legal" hidden><h3>Legal and credits</h3><p>Seeklon Valley, NASA Space Apps Challenge 2026, Paris.</p><p>Gateway model, Moon mosaic (Lunar Reconnaissance Orbiter) and Earth image (DSCOVR): NASA. Lunar relief: LOLA altimetry, NASA. Aerial imagery of the Florida coast: USGS National Map, public domain. NASA does not endorse this project.</p><p>Investigation records: NASA Physical Sciences Informatics (PSI), snapshot of the public repository. Rankings, summaries and predictions are illustrative values, not NASA results.</p></div>
+  <div class="legal" id="legal" hidden><h3>Legal and credits</h3><p>Seeklon Valley, NASA Space Apps Challenge 2026, Paris.</p><p>Gateway model, Moon mosaic (Lunar Reconnaissance Orbiter) and Earth image (DSCOVR): NASA. Lunar relief: LOLA altimetry, NASA. Aerial imagery of the Florida coast: USGS National Map, public domain. NASA does not endorse this project.</p><p>Interior scenes show recorded machine-learning predictions trained on synthetic FDS simulations. The exterior is an illustrative navigation model; it is not a reconstruction of the simulated rooms. These predictions are not NASA experimental results.</p></div>
 </div>
 
 <script type="module" src="/src/main.ts"></script>

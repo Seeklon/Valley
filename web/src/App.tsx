@@ -62,7 +62,17 @@ import type { Catalog, Field, Health, ModelInfo, Run, RunConfig, Source } from '
 const Viewport = lazy(() => import('./components/Viewport'));
 const HotspotPocView = lazy(() => import('./components/HotspotPocView'));
 const IssPocView = lazy(() => import('./components/IssPocView'));
-type Tab = 'iss' | 'poc' | 'prediction' | 'simulation' | 'mission' | 'prevention' | 'lab' | 'scenes' | 'models' | 'sources';
+type Tab =
+  | 'iss'
+  | 'poc'
+  | 'prediction'
+  | 'simulation'
+  | 'mission'
+  | 'prevention'
+  | 'lab'
+  | 'scenes'
+  | 'models'
+  | 'sources';
 const fields: { id: Field; label: string; icon: typeof Box }[] = [
   { id: 'scene', label: 'Géométrie', icon: Box },
   { id: 'temperature', label: 'Température', icon: Thermometer },
@@ -94,7 +104,7 @@ function saveRunId(id: string): void {
 }
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>(() => window.location.hash === '#poc' ? 'poc' : 'iss');
+  const [tab, setTab] = useState<Tab>(() => (window.location.hash === '#poc' ? 'poc' : 'iss'));
   useEffect(() => {
     const openPoc = () => {
       if (window.location.hash === '#poc') setTab('poc');
@@ -458,7 +468,12 @@ export default function App() {
             <div>
               {(
                 [
-                  { id: 'poc', label: 'POC ML initial', hint: 'Comparaison thermique du 14 novembre', icon: ScanLine },
+                  {
+                    id: 'poc',
+                    label: 'POC ML initial',
+                    hint: 'Comparaison thermique du 14 novembre',
+                    icon: ScanLine,
+                  },
                   { id: 'mission', label: 'Mission', hint: 'Relire les champs enregistrés', icon: Radar },
                   {
                     id: 'lab',
@@ -495,13 +510,21 @@ export default function App() {
         <div className="runtime-status">
           <span className={`connection-dot ${connected ? 'connected' : ''} ${loading ? 'pulse' : ''}`} />
           <div>
-            <strong>{tab === 'poc' || tab === 'iss' ? 'Relecture POC' : loading ? 'Connexion…' : connected ? 'Poste connecté' : 'Poste déconnecté'}</strong>
+            <strong>
+              {tab === 'poc' || tab === 'iss'
+                ? 'Relecture POC'
+                : loading
+                  ? 'Connexion…'
+                  : connected
+                    ? 'Poste connecté'
+                    : 'Poste déconnecté'}
+            </strong>
             <span>
               {tab === 'poc' || tab === 'iss'
                 ? 'Prédictions enregistrées'
                 : connected
-                ? `${loadedModels.length} modèle${loadedModels.length > 1 ? 's' : ''} chargé${loadedModels.length > 1 ? 's' : ''}`
-                : 'Calcul local · Tailscale'}
+                  ? `${loadedModels.length} modèle${loadedModels.length > 1 ? 's' : ''} chargé${loadedModels.length > 1 ? 's' : ''}`
+                  : 'Calcul local · Tailscale'}
             </span>
           </div>
           <button

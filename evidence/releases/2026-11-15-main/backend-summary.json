@@ -1,0 +1,114 @@
+{
+  "status": "passed_available_local_checks",
+  "checks": [
+    {
+      "name": "ruff",
+      "command": [
+        ".venv/bin/ruff",
+        "check",
+        "backend",
+        "tools",
+        "tests"
+      ],
+      "cwd": "/home/platform-admin/projects/Valley",
+      "started_at": "2026-11-15T19:03:21.576746+00:00",
+      "completed_at": "2026-11-15T19:03:22.102176+00:00",
+      "duration_s": 0.525,
+      "exit_code": 0,
+      "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/ruff.log",
+      "environment_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "RUFF_CACHE_DIR": "/home/platform-admin/projects/Valley/runtime/main-release-checks/ruff-cache",
+        "XDG_CACHE_HOME": "/home/platform-admin/projects/Valley/runtime/main-release-checks/cache",
+        "TMPDIR": "/home/platform-admin/projects/Valley/runtime/main-release-checks/tmp"
+      }
+    },
+    {
+      "name": "pytest",
+      "command": [
+        ".venv/bin/pytest",
+        "-q",
+        "-ra",
+        "-o",
+        "cache_dir=runtime/main-release-checks/pytest-cache",
+        "--basetemp=runtime/main-release-checks/pytest-tmp"
+      ],
+      "cwd": "/home/platform-admin/projects/Valley",
+      "started_at": "2026-11-15T19:03:22.102853+00:00",
+      "completed_at": "2026-11-15T19:07:08.970247+00:00",
+      "duration_s": 226.867,
+      "exit_code": 0,
+      "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/pytest.log",
+      "environment_overrides": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "RUFF_CACHE_DIR": "/home/platform-admin/projects/Valley/runtime/main-release-checks/ruff-cache",
+        "XDG_CACHE_HOME": "/home/platform-admin/projects/Valley/runtime/main-release-checks/cache",
+        "TMPDIR": "/home/platform-admin/projects/Valley/runtime/main-release-checks/tmp"
+      }
+    },
+    {
+      "name": "blender-assets",
+      "command": [
+        ".venv/bin/python",
+        "tools/blender/validate_assets.py",
+        "--require-all-artifacts"
+      ],
+      "cwd": "/home/platform-admin/projects/Valley",
+      "started_at": "2026-11-15T19:03:41.669361+00:00",
+      "completed_at": "2026-11-15T19:03:42.573747+00:00",
+      "duration_s": 0.904,
+      "exit_code": 0,
+      "log": "/home/platform-admin/projects/Valley/runtime/main-release-checks/blender-assets.log"
+    }
+  ],
+  "pytest_summary": "367 passed, 97 skipped, 1 warning in 224.58s (0:03:44)",
+  "skips_by_reason": {
+    "could not import 'torch': No module named 'torch'": 90,
+    "Requires Windows PowerShell and WMI": 2,
+    "Requires real Windows Job Objects": 5
+  },
+  "warning": "Starlette testclient uses deprecated anyio.abc.BlockingPortal alias; no test failure",
+  "source_files_changed_since_fingerprint": [],
+  "scope_limits": [
+    "PyTorch unavailable in local .venv: neural tests skipped, no fresh inference executed",
+    "Windows-only lifecycle tests skipped on Linux",
+    "No FDS generation, training, deployment or access to Windows PC",
+    "Blender validation checks artifact structure and hashes, not fresh visual inspection"
+  ],
+  "preexisting_evidence_not_rerun": [
+    {
+      "path": "evidence/incidents/iss-poc-vent/model-kit-verification.json",
+      "preexisting_not_rerun": true,
+      "evidence": {
+        "checked_at": "20261115T152704Z",
+        "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+        "shape": [
+          5,
+          1536,
+          2
+        ],
+        "device": "cpu",
+        "fresh_inference_from_scene_and_conditions": true,
+        "no_training": true
+      }
+    },
+    {
+      "path": "evidence/incidents/iss-poc-vent/export-verification.json",
+      "preexisting_not_rerun": true,
+      "evidence": {
+        "verified": true,
+        "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+        "no_inference_or_training": true,
+        "fds_observations_verified": true,
+        "model_files_verified": true,
+        "prediction_recomputed": false,
+        "layout_count": 24,
+        "case_counts": {
+          "train": 108,
+          "validation": 54,
+          "test": 54
+        }
+      }
+    }
+  ]
+}

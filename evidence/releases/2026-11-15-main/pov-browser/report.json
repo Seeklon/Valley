@@ -1,0 +1,212 @@
+{
+  "url": "http://127.0.0.1:46111",
+  "model": {
+    "id": "iss-heat-smoke-poc-20261115",
+    "name": "U-Net 3D — adaptation ventilation",
+    "training_version": "heat-smoke-ventilation-20261115",
+    "trained_at": "2026-11-15T15:10:47.044976+00:00",
+    "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+    "state_sha256": "edad77f5098e632fa48d2bc32f54b73597cb7a06e9278e5ca4f3e8fa2d28b3bb",
+    "dataset_sha256": "2f78251a2265822541373d7ad5233924bb1e79a95f7bcf26868f93245bea9115",
+    "score_thresholds": {
+      "heat": 0.9088770151138306,
+      "smoke": 0.8320183753967285
+    },
+    "score_semantics": "uncalibrated_spatial_class_scores",
+    "heat_delta_c": 5,
+    "smoke_threshold_kg_m3": 0.000001,
+    "architecture": {
+      "version": "iss-heat-smoke-unet3d-1",
+      "feature_version": "incident-voxel-features-1",
+      "input_channels": [
+        "x_over_width",
+        "y_over_depth",
+        "z_over_height",
+        "gas_sample",
+        "solid_volume_fraction",
+        "substrate_aluminium",
+        "substrate_cellulose",
+        "substrate_glass",
+        "substrate_insulation",
+        "substrate_pmma",
+        "substrate_steel",
+        "coating_cellulose",
+        "coating_pmma",
+        "density_scaled",
+        "specific_heat_scaled",
+        "conductivity_scaled",
+        "emissivity",
+        "heat_of_combustion_scaled",
+        "soot_yield_scaled",
+        "coating_thickness_scaled",
+        "source_patch_fraction",
+        "source_dx",
+        "source_dy",
+        "source_dz",
+        "source_distance",
+        "inlet_area_fraction",
+        "outlet_area_fraction",
+        "boundary_u_scaled",
+        "boundary_v_scaled",
+        "boundary_w_scaled",
+        "time_scaled",
+        "source_elapsed_scaled",
+        "post_source_time_scaled",
+        "source_ramp_fraction",
+        "power_scaled",
+        "duration_scaled",
+        "gravity_g",
+        "log_gravity_scaled",
+        "oxygen_scaled",
+        "ambient_scaled",
+        "pressure_scaled",
+        "airflow_scaled",
+        "width_scaled",
+        "depth_scaled",
+        "height_scaled",
+        "source_x_scaled",
+        "source_y_scaled",
+        "source_z_scaled",
+        "source_area_scaled",
+        "incident_overheating",
+        "incident_arc",
+        "incident_flaming",
+        "incident_smoldering",
+        "incident_battery"
+      ],
+      "widths": [
+        16,
+        32,
+        64
+      ],
+      "output_channels": [
+        "heat",
+        "smoke"
+      ],
+      "output_semantics": "one independent class logit per channel and gas sample",
+      "heat_delta_c": 5,
+      "smoke_threshold_kg_m3": 0.000001,
+      "score_semantics": "uncalibrated_spatial_class_scores",
+      "time_conditioning": "direct; no autoregression and no observed fields as inputs",
+      "zero_power_source": "empty compiled ramp gives an identically zero ramp feature; source manifest unchanged"
+    },
+    "warm_start": {
+      "weights_sha256": "37bf3e0c5394cbe52fe520ebf85cbf393cd9b4203751d5b1db5c0c79641f987a",
+      "dataset_sha256": "9f941aaf98c914804f21c68bd623fba908ed9fd8df29d816308c6ca4b51e855f",
+      "state_sha256": "12b155793b74fe6e034f1f9c01c8093da94aacb220a049b000a42809125c42f1",
+      "optimizer_state_reused": false
+    },
+    "selected_step": 5000,
+    "new_weights_selected": true,
+    "training_seconds": 301.9220000000005,
+    "total_compute_seconds": 452.03100000000086,
+    "optimizer_steps": 13000,
+    "batch_size": 128,
+    "device": "NVIDIA GeForce RTX 4070 Ti",
+    "seed": 2026111503,
+    "selection_split": "validation"
+  },
+  "cases": 216,
+  "checks": [
+    {
+      "name": "Previous and next change scenario directly in the 3D view with the drawer closed"
+    },
+    {
+      "name": "Investigations and mock themes are removed; prediction controls start closed and can be opened"
+    },
+    {
+      "name": "Original site opens its cargo compartment with the verified scene",
+      "case": "habitat-cargo-vent-02-smoldering-fast",
+      "model": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292"
+    },
+    {
+      "name": "Heat and smoke counts match the actual saved masks at both ends of the timeline"
+    },
+    {
+      "name": "Layer controls and time playback work"
+    },
+    {
+      "name": "Closing and reopening controls preserves the selected scenario and timeline; Escape closes the drawer"
+    },
+    {
+      "name": "POV drag looks right when dragged right and up when dragged up; movement and reset work"
+    },
+    {
+      "name": "The persistent Exterior view button opens the whole compartment and returns to POV without opening controls"
+    },
+    {
+      "name": "Every cargo layout changes the actual dimensions/equipment and keeps its own predictions; exterior view is retained",
+      "layouts": 4
+    },
+    {
+      "name": "Room prev uses habitat-cargo and its own predictions"
+    },
+    {
+      "name": "Room det uses iss-node and its own predictions"
+    },
+    {
+      "name": "Room sup uses iss-service and its own predictions"
+    },
+    {
+      "name": "Room fun uses iss-laboratory and its own predictions"
+    },
+    {
+      "name": "Room si uses habitat-central-racks and its own predictions"
+    },
+    {
+      "name": "Sixth geometry and no-fire control use actual model outputs"
+    },
+    {
+      "name": "Navigation follows the selected compartment, including returning from the capsule"
+    },
+    {
+      "name": "Return to the original station and navigation"
+    },
+    {
+      "name": "Unavailable Earth predictions are disabled, with the correct gravity label"
+    },
+    {
+      "name": "Unavailable lunar predictions are not substituted by microgravity predictions"
+    },
+    {
+      "name": "Mobile preserves navigation and usable controls"
+    },
+    {
+      "name": "All transitions/assets and 216 scenarios preload; cached scenarios still open with their network blocked",
+      "assets": 145,
+      "cases": 216,
+      "cached_switch_ms": 918
+    },
+    {
+      "name": "No JavaScript errors, no writes, no training or simulation jobs"
+    }
+  ],
+  "errors": [],
+  "renderErrors": [],
+  "writes": [],
+  "screenshots": [
+    "00-unobstructed-pov.png",
+    "01-site-with-prediction.png",
+    "exterior-without-panels.png",
+    "layout-habitat-cargo-vent-00.png",
+    "layout-habitat-cargo-vent-01.png",
+    "layout-habitat-cargo-vent-02.png",
+    "layout-habitat-cargo-vent-03.png",
+    "room-prev.png",
+    "room-prev-overview.png",
+    "room-det.png",
+    "room-det-overview.png",
+    "room-sup.png",
+    "room-sup-overview.png",
+    "room-fun.png",
+    "room-fun-overview.png",
+    "room-si.png",
+    "room-si-overview.png",
+    "room-capsule.png",
+    "station-preserved.png",
+    "earth-room.png",
+    "moon-geometry-only.png",
+    "mobile.png",
+    "mobile-unobstructed.png"
+  ]
+}

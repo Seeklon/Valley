@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-11-15T19:08:54.784406+00:00",
+  "completed_at": "2026-11-15T19:10:29.315215+00:00",
+  "duration_s": 94.531,
+  "source": "/home/platform-admin/projects/Valley/runtime/iss-vent-verified-export",
+  "destination": "/home/platform-admin/projects/Valley/data/predictions/ignis-20261115-vent",
+  "source_cases_verified": 216,
+  "gzip_round_trips_verified": 216,
+  "all_gzip_headers_have_zero_mtime_and_no_filename": true,
+  "index_byte_identity_verified": true,
+  "source_index_unchanged": true,
+  "index_sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e",
+  "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292",
+  "bundle_sha256": "a0203d46fe5f73daf2a6fca0f7bf5d062daf76b1c9ab758c41e56a338a3db9ef",
+  "total_raw_bytes": 1056511203,
+  "total_gzip_bytes": 276021033,
+  "bundle_metadata_bytes": 70594,
+  "index_bytes": 868891,
+  "total_versionable_bytes": 276960518,
+  "output_file_count": 218,
+  "no_inference_training_or_source_modifications": true
+}

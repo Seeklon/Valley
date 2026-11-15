@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node ../scripts/import-predictions.mjs --ensure --lab",
     "dev": "vite --host 0.0.0.0",
+    "prebuild": "node ../scripts/import-predictions.mjs --ensure --lab",
     "build": "tsc -b && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest run",

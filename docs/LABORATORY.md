@@ -1,4 +1,8 @@
-# IGNIS 3D — Valley
+# IGNIS 3D — laboratoire et API
+
+Le projet consolidé est décrit dans le [README principal](../README.md). Le site
+immersif est à la racine et ce laboratoire React dans `web/` ; ils partagent le
+modèle ventilation livré le 15 novembre et ses 216 scénarios vérifiés.
 
 Application de recherche pour le challenge NASA **Flame in Freefall** : explorer
 des scènes 3D, comparer gravité terrestre et microgravité, générer des simulations
@@ -27,7 +31,20 @@ Le [guide Windows](WINDOWS.md) décrit l’arrêt, les fichiers, la reconstructi
 les commandes d’entraînement et les vérifications. Il n’y a pas de lancement
 automatique à l’ouverture de session.
 
-## Parcours actuel en développement
+## POC courant
+
+La vue `#iss` affiche les prédictions enregistrées de chaleur/fumée du U-Net 3D
+de 379 046 paramètres. Elle compare le réseau et FDS et permet de changer la
+ventilation au sein d'une même disposition. Le modèle et les 216 cas sont
+désormais fournis dans le dépôt. `npm run dev` ou `npm run build`, depuis `web/`,
+restaure et vérifie ces cas automatiquement. Les API de calcul ne sont pas
+requises pour ce parcours de relecture.
+
+Le [rapport courant](ISS_POC_VENT_MODEL.md) décrit les résultats et limites.
+La campagne historique de 20 000 calculs reste en pause ; les anciens réseaux
+ci-dessous sont conservés à titre d'historique et ne sont pas le modèle livré.
+
+## Parcours de recherche précédent
 
 - Deux pages centrées sur la scène 3D, avec POV, fumée et chaleur animées.
 - 17 points électriques annotés dans quatre scènes, dont Soyouz.
@@ -37,8 +54,8 @@ automatique à l’ouverture de session.
 - Un U-Net 3D de 834 486 paramètres a réellement été entraîné sur la RTX 4070 Ti
   avec les 60 calculs pilotes. Ses résultats restent mitigés ; ce prototype
   est conservé séparément et n'est pas activé dans l'interface.
-- La nouvelle campagne vise 1 000 géométries procédurales distinctes et 20 000
-  calculs FDS. Le compteur affiche uniquement les calculs effectivement achevés.
+- La campagne historique visait 1 000 géométries procédurales distinctes et
+  20 000 calculs FDS ; elle est en pause et n'est pas présentée comme achevée.
 - Le bouton **Simuler ce départ** transmet le point et les mêmes conditions à FDS.
 - Les observations NASA restent accessibles directement ; les anciens écrans
   sont regroupés dans **Outils**.

@@ -62,11 +62,12 @@ runs/
 *.blend1
 *.egg-info/
 
-# Reproducible POC inference exports; archived with the model, not source code
+# Generated frontend exports; current compressed predictions are in data/predictions/
 /web/public/poc/hotspots.json
 /web/public/poc/cases/
 /evidence/incidents/hotspot-poc/*-complete.zip
 /web/public/poc/iss/
+/web/public/poc/.iss-*/
 /evidence/incidents/iss-poc/*-complete.zip
 /evidence/incidents/iss-poc-v2/*-complete.zip
 /evidence/incidents/iss-poc-vent/*-complete.zip
@@ -74,3 +75,8 @@ runs/
 # Static site generated files and local preview
 render-out/
 .claude/launch.json
+
+# Local verified ML exports and browser evidence
+public/poc/iss/
+public/poc/.iss-*/
+artifacts/

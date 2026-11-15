@@ -1,0 +1,52 @@
+{
+  "scope": "Consolidation of main website, latest POV branch, full research workbench, model kit and compressed predictions. No service deployment or training.",
+  "backend": {
+    "passed": 367,
+    "skipped": 97,
+    "skip_reasons": {
+      "missing_local_pytorch": 90,
+      "windows_only": 7
+    },
+    "ruff": "passed",
+    "blender_assets": "passed"
+  },
+  "frontends": {
+    "laboratory_unit_tests": 116,
+    "site_unit_tests": 26,
+    "prediction_import_tests": 5,
+    "laboratory_build": "passed",
+    "integrated_site_build": "passed",
+    "laboratory_format": "passed",
+    "browser_checks": {
+      "laboratory": 17,
+      "immersive_site": 22,
+      "nested_path_and_error_recovery": 3,
+      "javascript_errors": 0,
+      "network_writes": 0
+    }
+  },
+  "predictions": {
+    "cases": 216,
+    "source_and_decompressed_hash_checks": "passed",
+    "index_sha256": "7e587516076d6f50abb26dd9cb0119072c64764a26e920a4d8ba179c9bf9246e",
+    "weights_sha256": "ce0ffc80e51d9be2da94fc50f098fc4ac3c223203d09c8908ea8bbd6f4eff292"
+  },
+  "review": {
+    "independent_review": "No remaining blocking findings; 216 replays, model ZIP, file sizes, exclusions, index and source integrity checked",
+    "github_ci": "Not yet observed; local validation recorded here"
+  },
+  "files": {
+    "backend-summary.json": "111341b3fb2d076a9fbc77c9423d6b65286adc916b0b8be86bbcdf5904f40649",
+    "blender-assets.log": "2722c897356eafcbd8b11cf591a0048d6670e8c53e685554af9bbf54c1612161",
+    "final-lab-format.log": "b532b0e874148f68a09f7e7083ab5472b548163656a72dd166f954eda7f84dde",
+    "frontend-summary.json": "f885d4b60df808cdb22ba44123055175a27bee963b6493c765657a1f4115b2d4",
+    "integrated-lab-restore.log": "9c5d06ff50e91b248b1b2a9a2f7412e9a2290664945330c8b2294cef3a571d90",
+    "integrated-site-build.log": "5df45ab98b5a814115cb141fabc18939bfc2c7bef82086af735c69544956403e",
+    "integrated-site-tests.log": "781e49a49964b3115afe5dc58577738ba3bfe4dc5a108e62208c9fbe883f1e01",
+    "pov-browser/report.json": "a42ee4e0f2ada02b3269f49109c888aaea3e085bd2bcab7c15209027c2977e4b",
+    "prediction-bundle-proof.json": "5bdf4cb8b8b7a7f048fe4953980fa94abb9ec0cc23c5d1c7f42329b8afbd9cb9",
+    "pytest.log": "6196e2f64748ee00790cf2865d7ced4143a36d73da06a9e80f9b81c9b416940a",
+    "ruff.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "source-sha256.json": "5fb2907d7ade462575b573132c285e08ff2bbd206608ee08b362a480ab4272b0"
+  }
+}

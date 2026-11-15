@@ -1,8 +1,28 @@
 # Reprise — IGNIS 3D / Valley
 
-15 novembre 2026. Sources de
-livraison sur la branche `codex/ignis-3d-lab`. Lors d’une reprise, relire Git
+15 novembre 2026. Version consolidée pour `main` : moteur IGNIS, modèle ventilation,
+site immersif issu de `codex/valley-pov-site`, tests et preuves. Lors d'une reprise, relire Git
 et `/api/health` pour connaître l’état actuel du code et du service.
+
+## Consolidation du projet dans main
+
+Thomas a demandé explicitement de pousser tout le projet dans `main` : le
+laboratoire, le backend, le site immersif intégré, les scènes, poids, scripts,
+tests et documents sont réunis. Le site racine conserve les cinq commits de
+`codex/valley-pov-site`, jusqu'à `0e7a2d1`. Les sources et preuves du laboratoire
+sont conservées avec leur historique.
+
+Les 216 replays courants sont versionnés, compressés individuellement, sous
+`data/predictions/ignis-20261115-vent/` (276 960 518 octets avec index/manifeste).
+Leur index et les JSON décompressés conservent les empreintes livrées. Les hooks
+`predev`/`prebuild` des deux interfaces restaurent et vérifient les données
+locales ; un import personnalisé explicite reste préservé. Le kit Python déjà
+livré est copié sans changement dans `models/ignis-20261115-vent/`.
+Le [README principal](README.md) décrit le démarrage depuis un clone.
+
+Cette consolidation concerne Git et les vérifications locales ; elle ne
+redémarre ni les services Windows ni le site public et ne lance aucun calcul
+FDS, entraînement ou ajustement du modèle.
 
 ## Priorité actuelle — spécialisation ISS et intégration du 15 novembre
 
