@@ -20,6 +20,9 @@ page.on('request', request => { if (!['GET', 'HEAD'].includes(request.method()))
 const record = (name, details = {}) => { checks.push({ name, ...details }); console.log(JSON.stringify({ passed: name, ...details })); };
 const shot = async name => { await page.screenshot({ path: path.join(output, name) }); screenshots.push(name); };
 const root = () => page.locator('#prediction-room');
+async function roomPicker() {
+  if (!(await page.locator('#ml-room-picker').evaluate(el => el.open))) await page.locator('#ml-room-picker summary').click();
+}
 async function ready(family, expand = true) {
   await page.waitForFunction(expected => {
     const el = document.querySelector('#prediction-room');
@@ -75,9 +78,22 @@ try {
   assert.equal(await page.locator('#pars').isVisible(), false);
   assert.equal(await page.locator('#panel, #ptab, #tray, #sheet').count(), 0);
   assert.equal(await page.locator('#ml-toggle').getAttribute('aria-expanded'), 'false');
+  const initial = await root().getAttribute('data-case-id');
+  const layout = index.cases.find(entry => entry.id === initial).layout_id;
+  const variants = index.cases.filter(entry => entry.layout_id === layout);
+  const initialIndex = variants.findIndex(entry => entry.id === initial);
+  await page.locator('#ml-next').click();
+  await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.caseId === id, variants[(initialIndex + 1) % variants.length].id);
+  assert.equal(await page.locator('#pars').isVisible(), false);
+  await page.locator('#ml-prev').click();
+  await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.caseId === id, initial);
+  record('Previous and next change scenario directly in the 3D view with the drawer closed');
   await shot('00-unobstructed-pov.png');
-  await page.locator('#ml-toggle').click();
+  await page.locator('#ml-scenario-toggle').click();
   assert.equal(await page.locator('#pars').isVisible(), true);
+  assert.equal(await page.locator('#ml-room-picker').evaluate(el => el.open), false);
+  assert.equal(await page.locator('#ml-family').isVisible(), false);
+  assert.equal(await page.locator('#ml-scenario').evaluate(el => el === document.activeElement), true);
   assert.doesNotMatch(await page.locator('#swi').innerText(), /Prevention|Detection|Suppression|Flame physics|SI console/);
   record('Investigations and mock themes are removed; prediction controls start closed and can be opened');
   await shot('01-site-with-prediction.png');
@@ -138,6 +154,7 @@ try {
   assert.equal(await page.locator('#ml-layout option').count(), layouts.length);
   const geometry = new Set();
   await page.locator('[data-ml-action="view"]').click();
+  await roomPicker();
   for (const layout of layouts) {
     await page.selectOption('#ml-layout', layout);
     await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.state === 'ready' && document.querySelector('#prediction-room').dataset.layoutId === id, layout);
@@ -161,6 +178,7 @@ try {
     await page.locator('[data-ml-action="view"]').click();
     record(`Room ${room} uses ${family} and its own predictions`);
   }
+  await roomPicker();
   await page.selectOption('#ml-family', 'habitat-capsule');
   await ready('habitat-capsule');
   assert.equal(await page.locator('#swi [aria-pressed="true"]').count(), 0);
@@ -181,6 +199,7 @@ try {
   await page.locator('[data-go="si"]').click();
   await ready('habitat-central-racks');
   assert.equal(await page.locator('[data-go="si"]').getAttribute('aria-pressed'), 'true');
+  await roomPicker();
   await page.selectOption('#ml-family', 'iss-node');
   await ready('iss-node');
   assert.equal(await page.locator('[data-go="det"]').getAttribute('aria-pressed'), 'true');
@@ -190,6 +209,10 @@ try {
   await page.waitForFunction(() => document.querySelector('#prediction-room').hidden);
   assert.equal(await page.locator('#pars').isVisible(), false);
   await shot('station-preserved.png');
+  for (const environment of ['earth', 'moon']) {
+    assert.equal(await page.locator(`[data-s="${environment}"]`).isEnabled(), true);
+    assert.match(await page.locator(`[data-s="${environment}"]`).innerText(), /ML not ready - Coming soon/);
+  }
   assert.doesNotMatch(await page.locator('#tags').textContent(), /Time to smoke alarm|most relevant|Global ranking|Detection/);
   record('Return to the original station and navigation');
   await page.goto(`${base}/?nogl&hub&env=earth&open=det`, { waitUntil: 'domcontentloaded' });
@@ -223,9 +246,29 @@ try {
   assert.ok(closeBox && closeBox.y >= 0 && closeBox.y + closeBox.height < 844);
   await page.locator('[data-ml-action="close"]').click();
   assert.equal(await page.locator('#ml-view-toggle').isVisible(), true);
+  const nextBox = await page.locator('#ml-next').boundingBox();
+  assert.ok(nextBox && nextBox.x >= 0 && nextBox.x + nextBox.width <= 390 && nextBox.y + nextBox.height <= 844);
+  const mobileCase = await root().getAttribute('data-case-id');
+  await page.locator('#ml-next').click();
+  await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.state === 'ready' && document.querySelector('#prediction-room').dataset.caseId !== id, mobileCase);
   assert.equal(await page.locator('#panel, #ptab, #tray, #sheet').count(), 0);
   await shot('mobile-unobstructed.png');
   record('Mobile preserves navigation and usable controls');
+  await page.waitForFunction(() => ['ready', 'partial'].includes(document.querySelector('#scene-preload')?.dataset.state), null, { timeout: 180_000 });
+  const preload = await page.locator('#scene-preload').evaluate(el => ({ ...el.dataset }));
+  assert.equal(preload.failed, '0'); assert.equal(preload.onDemand, '0');
+  const manifest = await (await page.request.get(`${base}/scene-assets.json`)).json();
+  assert.equal(+preload.loaded, manifest.files.length + index.cases.length);
+  const keys = await page.evaluate(async () => (await (await caches.open('valley-predictions-v1')).keys()).map(request => request.url));
+  for (const entry of index.cases) assert.ok(keys.some(key => key.endsWith(`?verified=${entry.sha256}`)), entry.id);
+  await page.locator('#ml-scenario-toggle').click();
+  const target = await page.locator('#ml-scenario option').first().getAttribute('value');
+  await page.route('**/poc/iss/cases/**', route => route.abort('failed'));
+  const start = Date.now();
+  await page.selectOption('#ml-scenario', target);
+  await page.waitForFunction(id => document.querySelector('#prediction-room').dataset.caseId === id && document.querySelector('#prediction-room').dataset.state === 'ready', target);
+  await page.unroute('**/poc/iss/cases/**');
+  record('All transitions/assets and 216 scenarios preload; cached scenarios still open with their network blocked', { assets: manifest.files.length, cases: index.cases.length, cached_switch_ms: Date.now() - start });
   assert.deepEqual(errors, []); assert.deepEqual(renderErrors, []); assert.deepEqual(writes, []);
   record('No JavaScript errors, no writes, no training or simulation jobs');
 } finally {

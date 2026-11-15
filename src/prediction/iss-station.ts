@@ -31,24 +31,29 @@ class Boxes {
   }
 }
 
-function canvasTexture(draw: (context: CanvasRenderingContext2D, size: number) => void, size = 256) {
-  const canvas = document.createElement('canvas');
-  canvas.width = canvas.height = size;
-  const context = canvas.getContext('2d');
-  if (!context) throw new Error('Le rendu des matériaux nécessite Canvas 2D.');
-  draw(context, size);
+const paintedSurfaces = new Map<string, HTMLCanvasElement>();
+function canvasTexture(draw: (context: CanvasRenderingContext2D, size: number) => void, size = 256, key?: string) {
+  let canvas = key && paintedSurfaces.get(key);
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.width = canvas.height = size;
+    const context = canvas.getContext('2d');
+    if (!context) throw new Error('Le rendu des matériaux nécessite Canvas 2D.');
+    draw(context, size);
+    if (key) paintedSurfaces.set(key, canvas);
+  }
   const texture = new THREE.CanvasTexture(canvas);
   texture.encoding = THREE.sRGBEncoding;
   texture.anisotropy = 4;
   return texture;
 }
 
-function surfaceTexture(kind: 'panel' | 'floor' | 'metal') {
+function surfaceTexture(kind: 'panel' | 'floor' | 'metal' | 'insulation') {
   const texture = canvasTexture((context, size) => {
-    context.fillStyle = kind === 'floor' ? '#a9b1b4' : kind === 'metal' ? '#b9c0c3' : '#e1e4df';
+    context.fillStyle = kind === 'floor' ? '#a9b1b4' : kind === 'metal' ? '#b9c0c3' : kind === 'insulation' ? '#b8b6a4' : '#e1e4df';
     context.fillRect(0, 0, size, size);
     let seed = 4187;
-    for (let i = 0; i < 2300; i++) {
+    for (let i = 0; i < 6000; i++) {
       seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
       const x = seed % size;
       seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
@@ -72,18 +77,40 @@ function surfaceTexture(kind: 'panel' | 'floor' | 'metal') {
         }
     }
     if (kind === 'panel') {
-      context.strokeStyle = '#c6ceca';
-      context.lineWidth = 2;
+      const shade = context.createLinearGradient(0, 0, size, size);
+      shade.addColorStop(0, '#ffffff35'); shade.addColorStop(0.5, '#ffffff00'); shade.addColorStop(1, '#334b5019');
+      context.fillStyle = shade; context.fillRect(0, 0, size, size);
+      context.strokeStyle = '#7b8c8a'; context.lineWidth = 3;
       context.strokeRect(3, 3, size - 6, size - 6);
-      for (const x of [10, size - 10])
-        for (const y of [10, size - 10]) {
-          context.fillStyle = '#a0aaa8';
+      context.strokeStyle = '#f0f2eb'; context.lineWidth = 2;
+      context.strokeRect(7, 7, size - 14, size - 14);
+      context.strokeStyle = '#aebbb5'; context.lineWidth = 1;
+      context.strokeRect(21, 21, size - 42, size - 42);
+      for (const x of [15, size - 15])
+        for (const y of [15, size - 15]) {
+          context.fillStyle = '#7c8a87';
           context.beginPath();
-          context.arc(x, y, 2.2, 0, Math.PI * 2);
+          context.arc(x, y, 4, 0, Math.PI * 2);
           context.fill();
+          context.strokeStyle = '#dae1dc'; context.lineWidth = 1;
+          context.beginPath(); context.moveTo(x - 2, y); context.lineTo(x + 2, y);
+          context.moveTo(x, y - 2); context.lineTo(x, y + 2); context.stroke();
         }
+      context.fillStyle = '#476b75'; context.fillRect(32, size - 38, 46, 4);
+      context.font = '9px monospace'; context.fillStyle = '#778b88';
+      context.fillText('SERVICE PANEL', 88, size - 31);
     }
-  });
+    if (kind === 'insulation') {
+      context.lineWidth = 2;
+      for (let offset = -size; offset < size * 2; offset += 64) {
+        context.strokeStyle = '#8b928366';
+        context.beginPath(); context.moveTo(offset, 0); context.lineTo(offset + size, size); context.stroke();
+        context.beginPath(); context.moveTo(offset, 0); context.lineTo(offset - size, size); context.stroke();
+      }
+      context.setLineDash([3, 4]); context.strokeStyle = '#efecce';
+      context.strokeRect(8, 8, size - 16, size - 16); context.setLineDash([]);
+    }
+  }, 512, `surface:${kind}`);
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
   return texture;
 }
@@ -129,7 +156,7 @@ function labelTexture(title: string, subtitle: string, display = false) {
       context.font = '11px monospace';
       context.fillText('ELEC', 182, 181);
     }
-  });
+  }, 256, `label:${title}:${subtitle}:${display}`);
 }
 
 /** Visual habitat shell and equipment, derived only from the current physical proxies. */
@@ -142,15 +169,23 @@ export function createIssStationWorld(data: IssCase) {
   const panelMap = surfaceTexture('panel');
   const metalMap = surfaceTexture('metal');
   const floorMap = surfaceTexture('floor');
+  const insulationMap = surfaceTexture('insulation');
+  const panelBump = panelMap.clone();
+  panelBump.encoding = THREE.LinearEncoding;
+  panelBump.needsUpdate = true;
   const panel = new THREE.MeshStandardMaterial({
     color: white,
     map: panelMap,
+    bumpMap: panelBump,
+    bumpScale: 0.002,
     roughness: 0.78,
     metalness: 0.04,
   });
   const warmPanel = new THREE.MeshStandardMaterial({
     color: '#adb8b5',
     map: panelMap,
+    bumpMap: panelBump,
+    bumpScale: 0.002,
     roughness: 0.72,
     metalness: 0.06,
   });
@@ -164,6 +199,7 @@ export function createIssStationWorld(data: IssCase) {
     polygonOffsetUnits: -1,
   });
   const dark = new THREE.MeshStandardMaterial({ color: '#243642', roughness: 0.75, metalness: 0.16 });
+  const insulation = new THREE.MeshStandardMaterial({ color: '#cdc9b1', map: insulationMap, roughness: 0.95, metalness: 0.02 });
   const floorMaterial = new THREE.MeshStandardMaterial({
     color: '#536874',
     map: floorMap,
@@ -340,12 +376,14 @@ export function createIssStationWorld(data: IssCase) {
     const coreSize = size.clone();
     if (normal.x) coreSize.x -= 0.045;
     else coreSize.z -= 0.045;
-    boxes.add(warmPanel, center.clone().addScaledVector(normal, -0.0225), coreSize);
+    boxes.add(object.material_id === 'insulation' ? insulation : warmPanel, center.clone().addScaledVector(normal, -0.0225), coreSize);
     const frameWidth = Math.min(0.045, faceWidth * 0.06);
     frontBox(structure, -faceWidth / 2 + frameWidth / 2, 0, frameWidth, size.y, 0.04);
     frontBox(structure, faceWidth / 2 - frameWidth / 2, 0, frameWidth, size.y, 0.04);
     frontBox(structure, 0, size.y / 2 - frameWidth / 2, faceWidth, frameWidth, 0.04);
     frontBox(structure, 0, -size.y / 2 + frameWidth / 2, faceWidth, frameWidth, 0.04);
+    // Flush identification stripe and recessed cable trunk: decoration stays inside the existing AABB.
+    frontBox(teal, 0, size.y / 2 - frameWidth - 0.012, faceWidth * 0.56, 0.014, 0.003, 0.004);
     const rows = Math.max(2, Math.min(5, Math.round(size.y / 0.43)));
     const innerHeight = size.y - frameWidth * 2;
     const rowHeight = innerHeight / rows;
@@ -456,6 +494,10 @@ export function createIssStationWorld(data: IssCase) {
       cable.castShadow = true;
       equipment.add(cable);
     }
+    for (let n = 0; n < 4; n++) {
+      frontBox(n % 2 ? blueCable : black, -innerWidth * 0.31 + n * 0.016,
+        -innerHeight * 0.27, 0.007, rowHeight * 0.46, 0.004, 0.003);
+    }
     // Substrate/coating are actual annotations; visual paint is only an illustration.
     const anchor = new THREE.Object3D();
     anchor.name = object.id;
@@ -555,8 +597,8 @@ export function createIssStationWorld(data: IssCase) {
   fixtures.build(ceilingLights);
   world.add(ceilingLights);
   wallGroups.push({ group: ceilingLights, cut: true });
-  world.add(new THREE.HemisphereLight('#e0eaf2', '#465261', 0.95));
-  const key = new THREE.DirectionalLight('#fff2de', 2.0);
+  world.add(new THREE.HemisphereLight('#dce8f2', '#344550', 0.72));
+  const key = new THREE.DirectionalLight('#fff2de', 1.65);
   key.position.set(width * 0.24, height - 0.1, -depth * 0.18);
   key.target.position.copy(roomCenter);
   world.add(key.target);

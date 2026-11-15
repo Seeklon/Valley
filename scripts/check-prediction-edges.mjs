@@ -38,17 +38,24 @@ try {
   assert.ok(requests.length >= 2);
   assert.ok(requests.every(url => url.startsWith(`${nested}/poc/iss/`)));
   record('Prediction assets load correctly below /mission/');
-  // Inject an unavailable export, never fabricated predictions, to check the failure state.
+  // A new export hash must never fall back to an older cached prediction.
+  await page.route('**/poc/iss/index.json', async route => {
+    const response = await route.fetch(); const value = await response.json();
+    value.cases.forEach(entry => { entry.sha256 = 'f'.repeat(64); });
+    await route.fulfill({ response, json: value });
+  });
   await page.route('**/poc/iss/cases/**', route => route.abort('failed'));
-  await page.selectOption('#ml-family', 'habitat-capsule');
+  await page.locator('[data-go="sup"]').click();
   await page.waitForFunction(() => document.querySelector('#prediction-room').dataset.state === 'error');
   assert.equal(await page.locator('#prediction-room').getAttribute('data-case-id'), null);
   assert.equal(await page.locator('#ml-time').count(), 0);
   await page.screenshot({ path: 'artifacts/browser-edges/unavailable-export.png' });
   await page.unroute('**/poc/iss/cases/**');
+  await page.unroute('**/poc/iss/index.json');
   await page.locator('[data-go="fun"]').click();
   await ready();
   record('An unavailable export clears the previous predictions and a new room recovers');
+  await page.locator('#ml-room-picker summary').click();
   // Supersede one real request immediately: an old response must not overwrite the new room.
   await page.locator('#ml-family').evaluate(select => {
     select.value = 'habitat-cargo'; select.dispatchEvent(new Event('change', { bubbles: true }));

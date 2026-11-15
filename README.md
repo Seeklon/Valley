@@ -94,8 +94,11 @@ Les anciens identifiants `prev`, `det`, `sup`, `fun`, `si` restent internes pour
 du modèle extérieur et les URL. Le modèle classe la présence de chaleur et de fumée pour une source
 électrique donnée ; il ne prédit pas une probabilité de départ, un temps d’alarme ou une extinction.
 
-Le choix suit **Compartment → Room layout → Scenario in this room**. L'export ventilation actuel
-offre 24 pièces, quatre par compartiment, et 216 scénarios. Les numéros de pièce sont stables dans
+Les boutons **précédent / suivant** de la barre inférieure changent directement le scénario dans la
+pièce affichée, même avec les réglages fermés. Ils bouclent sur les variantes de cette pièce. Cliquer
+sur le nom ouvre le seul menu « Scenario ». « Change room », replié par défaut, contient les choix
+du compartiment et de la disposition. L'export ventilation actuel offre 24 pièces, quatre par
+compartiment, et 216 scénarios. Les numéros de pièce sont stables dans
 chaque compartiment ; dimensions, nombre d'équipements et bouches d'air proviennent du cas chargé.
 Le menu scénario contient seulement les variantes de la pièce choisie et distingue les débits,
 le flux inversé et le témoin sans feu. Les identifiants techniques et partitions train/validation/test
@@ -103,7 +106,10 @@ restent dans « Model & conditions ». La navigation suit la famille effectiveme
 
 Le rendu conserve les dimensions, matériaux et passages d’air de chaque scénario. La conversion
 physique XYZ (Z vertical) vers Three.js est `(x, z, -y)`, commune à la pièce et aux sondes. Les nouvelles
-couches ne sont jamais appliquées aux anciens intérieurs de la maquette.
+couches ne sont jamais appliquées aux anciens intérieurs de la maquette. Les panneaux ont des
+jointures, fixations, grain et relief de surface ; les racks des repères et faisceaux supplémentaires.
+Ces détails restent dans les volumes existants. Les lumières sont rééquilibrées et les textures
+procédurales sont réutilisées entre scènes ; la disposition et les annotations physiques restent intactes.
 
 Glisser à droite pour regarder à droite, vers le haut pour regarder vers le haut ; flèches / WASD /
 ZQSD pour se déplacer. « Exterior view », toujours accessible en bas de la scène, montre la pièce
@@ -123,10 +129,28 @@ Changer de pièce ou de type d'incident peut aussi changer la source et les mat�
 ISS charge uniquement les cas en microgravité ; Terre charge les cas à 1 g lorsqu’ils existent.
 Pour toute gravité absente de l’export, le parcours montre seulement un aperçu de géométrie, avec les
 prédictions explicitement désactivées. L’adaptation ventilation du 15 novembre contient 216 cas,
-tous en microgravité : les parcours Terre et Lune restent donc en aperçu de géométrie.
+tous en microgravité : les parcours Terre et Lune restent donc en aperçu de géométrie. Leurs boutons
+et transitions sont actifs ; « ML not ready - Coming soon » concerne seulement les prédictions ML.
 Le mode `?nogl` conserve les images pour l’extérieur ; les
 nouveaux intérieurs nécessitent WebGL et affichent un état d’erreur s’il est indisponible. Les anciens
 exports `?export=rooms` sont les images de la maquette, pas des sorties ML.
+
+### Préchargement dès l'accueil
+
+Le build génère `scene-assets.json` à partir des scènes, textures, vignettes et transitions présentes
+dans `public/` (hors lot ML). Dès l'ouverture, le site charge les six cas d'entrée en priorité,
+puis tous ces assets et le reste des 216 scénarios, avec trois téléchargements de fond simultanés.
+Une progression s'affiche sur l'accueil et la vue extérieure ; le parcours reste utilisable pendant
+le chargement. Aucun tableau de prédictions n'est analysé par le préchargement.
+
+Les fichiers de prédiction sont vérifiés par SHA256, puis conservés via CacheStorage, avec trois
+fichiers récents en mémoire. La clé contient le hash : un nouvel export ne réutilise pas les anciens
+résultats. Les demandes concurrentes d'un même fichier sont partagées, et quitter une pièce ne
+coupe pas le préchargement partagé. Les assets visuels utilisent le cache HTTP du navigateur.
+Si le stockage est indisponible, plein ou si un téléchargement échoue, le site indique le chargement
+à la demande ; il ne prétend pas que tout est prêt. Le lot actuel représente environ 281 Mo de
+JSON compressés sur le réseau, 1,06 Go décompressés en cache, plus les assets visuels.
+Le premier téléchargement et la préparation WebGL dépendent toujours du réseau et du navigateur.
 
 ### Installer les sorties d’un entraînement validé
 
@@ -166,6 +190,9 @@ le retour station, les cas Terre/Lune et le mobile. Il vérifie l'absence des in
 anciens thèmes, les réglages fermés au départ, leur ouverture/fermeture, le sens des glissements
 de caméra et l’accès direct à la vue extérieure. Il change aussi les quatre pièces cargo, vérifie
 leurs géométries distinctes, leurs scénarios filtrés et la synchronisation de la navigation.
+Il vérifie aussi le changement rapide sans panneau, le préchargement complet et l'ouverture d'un
+scénario en cache lorsque ses requêtes réseau sont bloquées. Les tests unitaires couvrent le
+changement de hash, un cache corrompu, les limites de stockage et l'annulation d'un seul lecteur.
 Il vérifie les comptes de sondes directement contre
 les masques des fichiers réels et l’absence d’écritures réseau. Les modules de données, le renderer
 et les glyphes proviennent du POC IGNIS du même dépôt ; les adaptations r128 concernent uniquement

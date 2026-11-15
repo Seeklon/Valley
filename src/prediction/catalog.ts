@@ -1,5 +1,6 @@
 import { decodeIssCase, issCaseUrl, parseIssIndex } from './iss-poc';
 import type { IssCaseEntry, IssIndex } from './iss-poc';
+import { caseBytes } from './case-cache';
 
 export type Environment = 'iss' | 'moon' | 'earth';
 export type Room = 'prev' | 'det' | 'sup' | 'fun' | 'si';
@@ -63,7 +64,7 @@ export async function loadIndex(signal: AbortSignal) {
 }
 
 export async function loadCase(entry: IssCaseEntry, index: IssIndex, signal: AbortSignal) {
-  const response = await fetch(assetUrl(issCaseUrl(entry.url)), { signal, cache: 'no-cache' });
-  if (!response.ok) throw new Error('Scenario unavailable. Reload the complete model export.');
-  return decodeIssCase(await response.arrayBuffer(), entry, index.model);
+  const bytes = await caseBytes(assetUrl(issCaseUrl(entry.url)), entry.sha256, signal);
+  if (signal.aborted) throw new DOMException('Aborted', 'AbortError');
+  return decodeIssCase(bytes, entry, index.model);
 }

@@ -40,6 +40,8 @@ export class PredictionRoom {
   private panelToggle = document.createElement('button');
   private viewToggle = document.createElement('button');
   private toolbar = document.createElement('div');
+  private scenarioNav = document.createElement('div');
+  private roomPickerOpen = false;
   private panelOpen = false;
   private renderer?: THREE.WebGLRenderer;
   private camera = new THREE.PerspectiveCamera(61, 1, 0.025, 250);
@@ -94,7 +96,22 @@ export class PredictionRoom {
     this.viewToggle.textContent = 'Exterior view';
     this.viewToggle.disabled = true;
     this.viewToggle.setAttribute('aria-pressed', 'false');
-    this.toolbar.append(this.panelToggle, this.viewToggle);
+    this.scenarioNav.className = 'ml-scenario-nav';
+    this.scenarioNav.innerHTML = '<button type="button" id="ml-prev" aria-label="Previous scenario" title="Previous scenario" disabled>‹</button><button type="button" id="ml-scenario-toggle" aria-label="Choose scenario" aria-controls="'+panel.id+'" aria-expanded="false" disabled><span id="ml-quick-name">Loading scenarios…</span><small id="ml-quick-room"></small></button><button type="button" id="ml-next" aria-label="Next scenario" title="Next scenario" disabled>›</button>';
+    this.toolbar.append(this.scenarioNav, this.panelToggle, this.viewToggle);
+    this.scenarioNav.addEventListener('click', event => {
+      const id = (event.target as HTMLElement).closest('button')?.id;
+      if (!this.data) return;
+      if (id === 'ml-scenario-toggle') {
+        this.setPanelOpen(true);
+        this.panel.querySelector<HTMLSelectElement>('#ml-scenario')?.focus({ preventScroll: true });
+      } else if (id === 'ml-prev' || id === 'ml-next') {
+        const cases = this.roomCases();
+        const current = cases.findIndex(entry => entry.id === this.data!.id);
+        const next = (current + (id === 'ml-next' ? 1 : -1) + cases.length) % cases.length;
+        if (cases.length > 1) void this.select(cases[next].id, id);
+      }
+    });
     app.append(this.toolbar);
     this.viewToggle.addEventListener('click', () => this.toggleView());
     this.panelToggle.addEventListener('click', () => this.setPanelOpen(!this.panelOpen, true));
@@ -107,6 +124,10 @@ export class PredictionRoom {
     this.observer = new ResizeObserver(() => this.resize());
     this.observer.observe(app);
     panel.addEventListener('change', event => this.handleChange(event));
+    panel.addEventListener('toggle', event => {
+      const details = event.target as HTMLDetailsElement;
+      if (details.id === 'ml-room-picker' && details.isConnected) this.roomPickerOpen = details.open;
+    }, true);
     panel.addEventListener('input', event => {
       const input = event.target as HTMLInputElement;
       if (input.id !== 'ml-time' || !this.data) return;
@@ -136,6 +157,7 @@ export class PredictionRoom {
     this.panelOpen = open && !this.host.hidden;
     this.panel.hidden = !this.panelOpen;
     this.panelToggle.setAttribute('aria-expanded', String(this.panelOpen));
+    this.scenarioNav.querySelector('#ml-scenario-toggle')?.setAttribute('aria-expanded', String(this.panelOpen));
     this.panelToggle.textContent = this.panelOpen ? 'Hide controls' : 'Prediction controls';
     this.panelChanged();
     if (focus) (this.panelOpen
@@ -176,6 +198,7 @@ export class PredictionRoom {
     this.controller?.abort();
     this.playing = false;
     this.overview = false;
+    this.roomPickerOpen = false;
     cancelAnimationFrame(this.raf);
     this.releaseScene();
     if (this.controls) this.controls.enabled = false;
@@ -252,7 +275,7 @@ export class PredictionRoom {
       this.resize();
       this.setFrame(this.frameIndex);
       this.sceneChanged(entry.family);
-      if (focusId && this.panelOpen) this.panel.querySelector<HTMLElement>(`#${focusId}`)?.focus({ preventScroll: true });
+      if (focusId && (this.panelOpen || focusId === 'ml-next' || focusId === 'ml-prev')) this.app.querySelector<HTMLElement>(`#${focusId}`)?.focus({ preventScroll: true });
       this.animate();
     } catch (error) { this.fail(error, revision); }
   }
@@ -447,8 +470,27 @@ export class PredictionRoom {
       : '<i class="ml-dot ml-heat"></i>Heat <i class="ml-dot ml-smoke"></i>Smoke';
   }
 
+  private roomCases() {
+    return this.data ? this.entries.filter(entry => entry.layout_id === this.data!.layout_id && entry.module_id === this.data!.module_id) : [];
+  }
+
+  private updateScenarioNav() {
+    const cases = this.roomCases();
+    this.scenarioNav.querySelectorAll<HTMLButtonElement>('button').forEach(button => {
+      button.disabled = button.id === 'ml-scenario-toggle' ? !this.data : cases.length < 2;
+    });
+    const current = cases.findIndex(entry => entry.id === this.data?.id);
+    const entry = cases[current];
+    this.scenarioNav.querySelector('#ml-quick-name')!.textContent = entry ? scenarioName(entry)
+      : this.host.dataset.state === 'error' ? 'Scenario unavailable' : 'Loading scenarios…';
+    const layout = entry && roomLayouts(this.entries, entry.family).find(item => item.id === entry.layout_id);
+    this.scenarioNav.querySelector('#ml-quick-room')!.textContent = entry
+      ? `${FAMILY_NAMES[entry.family] ?? entry.family} · ${layout?.name ?? ''} · ${current + 1}/${cases.length} ▾` : '';
+  }
+
   drawPanel() {
     if (this.host.hidden) return;
+    this.updateScenarioNav();
     this.panel.classList.add('ml-controls');
     const heading = (title: string) => `<div class="ml-panel-head"><h3>${title}</h3><button type="button" class="ml-close" data-ml-action="close" aria-label="Close prediction controls">×</button></div>`;
     if (!this.data || !this.index) {
@@ -466,12 +508,13 @@ export class PredictionRoom {
       : this.environment === 'moon' ? 'Moon · 0.17 g' : 'Microgravity';
     this.panel.innerHTML = `${heading(this.geometryOnly ? 'Geometry preview' : 'Model prediction')}<div class="ml-panel-body">
       <div class="envl">${environmentLabel}${this.geometryOnly ? ' · predictions unavailable' : ` · ${conditions.oxygen_percent ?? 21}% O₂`}</div>
-      ${this.geometryOnly ? '<div class="envn">Interior geometry only. This export has no cases for these gravity conditions; heat and smoke predictions are disabled.</div>' : ''}
+      ${this.geometryOnly ? '<div class="envn"><b>ML not ready - Coming soon</b><br>Explore the interior in 3D. Heat and smoke predictions are not yet available for this gravity.</div>' : ''}
+      <label for="ml-scenario">Scenario</label><select id="ml-scenario">${cases.map(item => option(item.id, scenarioName(item), item.id === data.id)).join('')}</select>
+      <div class="ml-conditions">${escape(conditions.power_w === 0 ? 'No-fire control' : INCIDENT_NAMES[conditions.incident_type] ?? conditions.incident_type)} · ${conditions.power_w ?? 0} W · ${(conditions.airflow_m_s * 100).toFixed(0)} cm/s airflow</div>
+      <details id="ml-room-picker"${this.roomPickerOpen ? ' open' : ''}><summary>Change room</summary><div class="ml-room-fields">
       <label for="ml-family">Compartment</label><select id="ml-family">${families.map(family => option(family, FAMILY_NAMES[family] ?? family, family === entry.family)).join('')}</select>
       <label for="ml-layout">Room layout</label><select id="ml-layout">${layouts.map(layout => option(layout.id, layout.name, layout.id === data.layout_id)).join('')}</select>
-      <div id="ml-room-summary" class="ml-room-summary"><b>${data.scene.bounds_m.map(n => n.toFixed(1)).join(' × ')} m</b><span>${data.scene.objects.length} equipment items · ${data.scene.vents.length} vents</span></div>
-      <label for="ml-scenario">Scenario in this room</label><select id="ml-scenario">${cases.map(item => option(item.id, scenarioName(item), item.id === data.id)).join('')}</select>
-      <div class="ml-conditions">${escape(conditions.power_w === 0 ? 'No-fire control' : INCIDENT_NAMES[conditions.incident_type] ?? conditions.incident_type)} · ${conditions.power_w ?? 0} W · ${(conditions.airflow_m_s * 100).toFixed(0)} cm/s airflow</div>
+      <div id="ml-room-summary" class="ml-room-summary"><b>${data.scene.bounds_m.map(n => n.toFixed(1)).join(' × ')} m</b><span>${data.scene.objects.length} equipment items · ${data.scene.vents.length} vents</span></div></div></details>
       <label for="ml-display">Layer</label><select id="ml-display"${this.geometryOnly ? ' disabled' : ''}>${[['prediction', 'ML prediction'], ['reference', 'FDS reference'], ['errors', 'Misses and false alarms']].map(([value, label]) => option(value, label, this.options.display === value)).join('')}</select>
       <div class="ml-layers"><label><input id="ml-heat" type="checkbox"${this.options.heat ? ' checked' : ''}${this.geometryOnly ? ' disabled' : ''}> Heat</label><label><input id="ml-smoke" type="checkbox"${this.options.smoke ? ' checked' : ''}${this.geometryOnly ? ' disabled' : ''}> Smoke</label></div>
       <label for="ml-time"><span>Timeline</span><b id="ml-time-label"></b></label><input id="ml-time" type="range" min="0" max="${data.frames.length - 1}" step="1" value="${this.frameIndex}"${this.geometryOnly ? ' disabled' : ''}>

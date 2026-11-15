@@ -741,7 +741,7 @@ async function doExport(){R.setSize(1280,720,false);mkRT();cam.aspect=inCam.aspe
  await fetch('/done')}
 
 /* ---------- UI ---------- */
-function drawSeg(){$('#env').innerHTML=Object.keys(SCEN).map(k=>'<button class="ev" data-s="'+k+'" aria-pressed="'+(S.scen===k)+'"><span class="et"><b>'+SCEN[k].n+'</b><small>'+SCEN[k].r+'</small></span><img src="env/'+k+'.jpg" alt=""></button>').join('')}
+function drawSeg(){$('#env').innerHTML=Object.keys(SCEN).map(k=>'<button class="ev" data-s="'+k+'" aria-pressed="'+(S.scen===k)+'"><span class="et"><b>'+SCEN[k].n+'</b><small>'+SCEN[k].r+'</small>'+(k!=='iss'?'<small class="coming-soon">ML not ready - Coming soon</small>':'')+'</span><img src="env/'+k+'.jpg" alt=""></button>').join('')}
 function drawTags(){
  $('#tags').innerHTML=MODS.map(m=>'<button class="mk" data-id="'+m.id+'" style="--c:'+m.c+'" aria-label="Enter '+nm(m)+'"><span class="ex" aria-hidden="true">+</span><span class="pv"><img src="rooms/v_'+m.id+sfx()+'.jpg" alt=""><span class="pn"><b>'+nm(m)+'</b><span>Explore interior</span></span></span></button>').join('')}
 /* the conditions panel of the room, and its prediction */
